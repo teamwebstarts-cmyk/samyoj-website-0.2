@@ -4946,36 +4946,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .setup-container {
   display: flex;
   gap: 60px;
-  align-items: center;
-  margin-bottom: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 .setup-left-col {
-  flex: 1;
-  max-width: 480px;
+  flex: 1.2;
+  max-width: 560px;
   text-align: left;
 }
-.setup-pill-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: #f4f9f6;
-  color: #00b853;
-  padding: 8px 16px;
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 24px;
-}
-.setup-pill-badge svg {
-  width: 14px;
-  height: 14px;
-}
 .setup-title {
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 800;
   color: #0f172a;
-  line-height: 1.2;
+  line-height: 1.25;
   margin-bottom: 16px;
 }
 .setup-title span {
@@ -5007,11 +4990,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .setup-step-item {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: flex-start;
   position: relative;
   z-index: 2;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 .setup-step-item:last-child {
   margin-bottom: 0;
@@ -5029,6 +5012,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border: 1px solid #d1fae5; /* Inactive: light border */
   transition: all 0.25s ease;
   z-index: 2;
+  margin-top: 0;
 }
 
 /* Active State for Step 2 */
@@ -5050,13 +5034,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   height: 20px;
 }
 .setup-step-content {
-  padding-top: 2px;
+  padding-top: 0;
 }
 .setup-step-content h4 {
   font-size: 18px;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
 }
 .setup-step-content p {
   font-size: 14px;
@@ -5109,20 +5097,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   color: #00b853;
 }
 
-/* Right Column: Dashboard Graphic & Nesting Badges */
+/* Right Column: Dashboard Graphic */
 .setup-right-col {
-  flex: 1.4;
+  flex: 1.3;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .setup-backdrop-blob {
   position: absolute;
   width: 110%;
   height: 110%;
-  max-width: 720px;
-  max-height: 640px;
+  max-width: 760px;
+  max-height: 680px;
   background: radial-gradient(circle, rgba(244,249,246,1) 0%, rgba(220,245,230,0.5) 100%);
   border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
   z-index: 1;
@@ -5138,7 +5126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .setup-dashboard-img {
   width: 100%;
-  max-width: 720px;
+  max-width: 740px;
   height: auto;
   border-radius: 16px;
   filter: drop-shadow(0 20px 40px rgba(15, 23, 42, 0.08));
@@ -5148,24 +5136,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   transform: scale(1.02);
 }
 
-/* Badges Grid styling - Nested under the image */
-.setup-trust-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 24px;
-  margin-top: 32px;
+/* Compact Trust Card — sits below the mockup image inside the right column */
+.setup-trust-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-top: 16px;
   width: 100%;
-  max-width: 680px;
+  max-width: 740px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
 }
 .setup-trust-item {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   text-align: left;
+  flex: 1;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.setup-trust-item:hover {
+  transform: translateY(-2px);
+}
+.setup-trust-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e2e8f0;
+  margin: 0 8px;
+  flex-shrink: 0;
 }
 .setup-trust-icon {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #f4f9f6;
   color: #00b853;
@@ -5175,17 +5181,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   flex-shrink: 0;
 }
 .setup-trust-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 .setup-trust-text h5 {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   color: #0f172a;
-  margin: 0 0 4px 0;
+  margin: 0 0 2px 0;
 }
 .setup-trust-text p {
-  font-size: 13px;
+  font-size: 11px;
   color: #64748b;
   margin: 0;
 }
@@ -5211,10 +5217,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   flex: 1;
 }
 .promo-gift-img {
-  width: 80px;
-  height: 80px;
+  width: 340px;
+  height: 340px;
   object-fit: contain;
   flex-shrink: 0;
+  margin: -130px -50px;
   animation: float-gift 4s ease-in-out infinite;
 }
 @keyframes float-gift {
@@ -5276,6 +5283,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   color: #00b853;
 }
 
+/* Desktop Only Helper */
+.desktop-only {
+  display: block;
+}
+
 /* Responsive details */
 @media (max-width: 1024px) {
   .setup-container {
@@ -5296,9 +5308,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: left;
     max-width: 480px;
   }
-  .setup-trust-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .setup-trust-card {
+    flex-direction: column;
     gap: 24px;
+    padding: 32px 24px;
+  }
+  .setup-trust-divider {
+    display: none;
+  }
+  .setup-trust-item {
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 20px;
   }
   .setup-promo-banner {
     flex-direction: column;
@@ -5311,11 +5332,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: center;
     gap: 20px;
   }
+  .desktop-only {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
-  .setup-trust-grid {
-    grid-template-columns: 1fr;
-  }
   .setup-title {
     font-size: 32px;
   }
@@ -5327,6 +5348,679 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .setup-cta-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+/* --- Social Proof & Onboarding Section --- */
+.sps-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d1d1f;
+}
+.sps-container {
+  max-width: var(--wr-max);
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Header & Title Area */
+.sps-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sps-loved-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #eafbf0;
+  border-radius: 9999px;
+  color: #178a3f;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.sps-loved-badge svg {
+  width: 16px;
+  height: 16px;
+}
+.sps-header h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+.sps-header h2 span {
+  color: #00b853;
+}
+.sps-header p {
+  font-size: 18px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Ratings Row */
+.sps-ratings-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.sps-rating-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #f1f5f9;
+}
+.sps-rating-card > img {
+  height: 36px;
+  object-fit: contain;
+}
+.sps-rating-info {
+  display: flex;
+  flex-direction: column;
+}
+.sps-rating-score {
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.sps-stars-mini {
+  display: inline-flex;
+  gap: 1px;
+  margin-left: 6px;
+}
+.sps-stars {
+  display: flex;
+  gap: 2px;
+}
+.sps-rating-platform {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Testimonials Grid */
+.sps-testimonials-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.sps-testimonials-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+.sps-testimonial-card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #f6fbf8;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e1f2e9;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.sps-testimonial-left {
+  flex-shrink: 0;
+}
+.sps-user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.sps-testimonial-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sps-testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.sps-quote-icon {
+  font-size: 40px;
+  line-height: 1;
+  color: #00b853;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  margin-top: -10px;
+}
+.sps-testimonial-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #334155;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
+}
+.sps-testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.sps-user-info h4 {
+  margin: 0 0 2px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.sps-user-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+.sps-5stars {
+  display: flex;
+  gap: 2px;
+}
+.sps-5stars svg {
+  fill: #00b853;
+  width: 14px;
+  height: 14px;
+}
+.sps-nav-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+.sps-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+.sps-nav-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Avatar Cluster */
+.sps-avatar-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+.sps-avatars {
+  display: flex;
+}
+.sps-avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -12px;
+}
+.sps-avatars img:first-child {
+  margin-left: 0;
+}
+.sps-avatar-cluster p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #475569;
+  margin: 0;
+}
+.sps-avatar-cluster p span {
+  color: #00b853;
+  font-weight: 700;
+}
+
+/* Get Started Banner */
+.sps-gs-banner {
+  background-color: #f6fbf8;
+  border-radius: 24px;
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.sps-gs-left {
+  flex: 0 0 300px;
+}
+.sps-gs-left h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+}
+.sps-gs-left h3 span {
+  color: #00b853;
+}
+.sps-gs-left p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+.btn-green {
+  background-color: #00b853;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-green:hover {
+  background-color: #009945;
+}
+
+/* Horizontal Stepper */
+.sps-gs-right {
+  flex: 1;
+}
+.sps-h-stepper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sps-h-stepper::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background-image: linear-gradient(to right, #00b853 50%, transparent 50%);
+  background-size: 12px 100%;
+  z-index: 1;
+}
+.sps-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 140px;
+  transition: transform 0.3s ease;
+}
+.sps-step:hover {
+  transform: translateY(-4px);
+}
+.sps-step-icon {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  margin-bottom: 12px;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.sps-step:hover .sps-step-icon {
+  border-color: #00b853;
+  box-shadow: 0 8px 24px rgba(0, 184, 83, 0.12);
+  transform: scale(1.06);
+}
+.sps-step-icon svg {
+  transition: transform 0.3s ease;
+}
+.sps-step:hover .sps-step-icon svg {
+  transform: scale(1.05);
+}
+.sps-step-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.sps-step-num {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  background: #00b853;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+.sps-step h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+.sps-step p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Bottom Banners Row */
+.sps-bottom-banners {
+  display: flex;
+  gap: 24px;
+}
+.sps-integrations-banner, .sps-revenue-banner {
+  flex: 1;
+  border-radius: 24px;
+  padding: 32px 40px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.sps-integrations-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+.sps-integrations-banner h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+.sps-integrations-banner h3 span {
+  color: #00b853;
+}
+.sps-integrations-banner p {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0 0 32px 0;
+}
+.sps-integrations-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.sps-int-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  height: 90px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  padding: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sps-int-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+.sps-int-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+.sps-int-icon span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.sps-int-icon.sps-more {
+  background: #ffffff;
+}
+.sps-int-icon.sps-more .dots-icon {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 8px;
+}
+.sps-int-icon.sps-more .dots-icon span {
+  width: 6px;
+  height: 6px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+}
+
+.sps-revenue-banner {
+  background: #f2faf5;
+  display: flex;
+  align-items: center;
+}
+.sps-revenue-text {
+  position: relative;
+  z-index: 2;
+  max-width: 340px;
+}
+.sps-revenue-text h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+.sps-revenue-text h3 span {
+  color: #00b853;
+}
+.sps-revenue-text p {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+.sps-revenue-actions {
+  display: flex;
+  gap: 16px;
+}
+.btn-outline {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #0f172a;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-outline:hover {
+  background: #f8fafc;
+  border-color: #334155;
+}
+.sps-rocket-img {
+  position: absolute;
+  right: -60px;
+  bottom: -80px;
+  width: 440px;
+  height: 440px;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(-5deg);
+}
+.sps-revenue-actions button {
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sps-testimonial-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+  .sps-gs-banner {
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+  }
+  .sps-gs-left {
+    flex: auto;
+    text-align: center;
+  }
+  .sps-bottom-banners {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .sps-header h2 {
+    font-size: 32px;
+  }
+  .sps-testimonial-card {
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 24px;
+  }
+  .sps-testimonial-left {
+    margin-bottom: 4px;
+    flex-shrink: 0;
+  }
+  .sps-testimonial-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sps-testimonial-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  .sps-user-info {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .sps-5stars {
+    justify-content: center;
+  }
+  .sps-gs-banner {
+    padding: 32px 20px;
+    gap: 32px;
+  }
+  .sps-h-stepper {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+  .sps-h-stepper::before {
+    display: none;
+  }
+  .sps-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px 16px;
+    text-align: left;
+    align-items: start;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .sps-step-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0;
+    align-self: start;
+    flex-shrink: 0;
+  }
+  .sps-step h4 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    min-height: auto;
+    display: block;
+    line-height: 1.3;
+  }
+  .sps-step p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.45;
+  }
+  .sps-integrations-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .sps-int-icon {
+    flex: 0 0 calc(33.333% - 8px);
+    height: 84px;
+  }
+  .sps-rocket-img {
+    opacity: 0.12;
+    right: -100px;
+    bottom: -100px;
+    width: 320px;
+    height: 320px;
+  }
+  .sps-revenue-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 580px) {
+  .sps-revenue-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .sps-revenue-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+  .sps-integrations-grid {
+    gap: 8px;
+  }
+  .sps-int-icon {
+    flex: 0 0 calc(50% - 4px);
+    height: 80px;
   }
 }
 </style>
@@ -5872,15 +6566,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       <!-- Left Column: Stepper -->
       <div class="setup-left-col">
-        <div class="setup-pill-badge">
-          <!-- Lightning Icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-          </svg>
-          GET STARTED IN 10 MINUTES
-        </div>
         
-        <h2 class="setup-title">Start WhatsApp Marketing<br>in <span>10 Minutes</span></h2>
+        <h2 class="setup-title">Start WhatsApp Marketing<br class="desktop-only">in <span>10 Minutes</span></h2>
         <p class="setup-subtitle">No coding. No complex setup. Just a few simple steps and you're ready to engage and grow.</p>
         
         <div class="setup-stepper">
@@ -5963,18 +6650,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       
-      <!-- Right Column: Dashboard Mockup & Badges -->
+      <!-- Right Column: Dashboard Mockup -->
       <div class="setup-right-col">
         <div class="setup-backdrop-blob"></div>
         <div class="setup-graphic-wrapper">
-          <img src="../images/deashbboar preive image.png" alt="Zensy Dashboard Mockup" class="setup-dashboard-img" draggable="false">
+          <img src="../images/samyouijrjob .png" alt="Zensy Dashboard Mockup" class="setup-dashboard-img" draggable="false">
           
-          <!-- Trust Badges Grid (Directly Nested Under Mockup Image) -->
-          <div class="setup-trust-grid">
+          <!-- Compact Trust Badges Card — below the mockup image -->
+          <div class="setup-trust-card">
             <!-- Badge 1 -->
             <div class="setup-trust-item">
               <div class="setup-trust-icon">
-                <!-- Shield Check Icon -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                   <path d="m9 11 2 2 4-4"/>
@@ -5985,11 +6671,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>Enterprise Grade Security</p>
               </div>
             </div>
-            
+            <div class="setup-trust-divider"></div>
             <!-- Badge 2 -->
             <div class="setup-trust-item">
               <div class="setup-trust-icon">
-                <!-- Bolt Icon -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                 </svg>
@@ -5999,11 +6684,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>WhatsApp Business API</p>
               </div>
             </div>
-            
+            <div class="setup-trust-divider"></div>
             <!-- Badge 3 -->
             <div class="setup-trust-item">
               <div class="setup-trust-icon">
-                <!-- Headset Icon -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
                   <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
@@ -6014,11 +6698,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>We're here to help</p>
               </div>
             </div>
-            
+            <div class="setup-trust-divider"></div>
             <!-- Badge 4 -->
             <div class="setup-trust-item">
               <div class="setup-trust-icon">
-                <!-- Users Icon -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
@@ -6032,7 +6715,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       
@@ -6041,7 +6723,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Bottom Part: Promo Banner Card -->
     <div class="setup-promo-banner">
       <div class="promo-left">
-        <img src="../images/giftbox.png" alt="Promo Gift Box" class="promo-gift-img" draggable="false">
+        <img src="../images/ChatGPT Image Jul 16, 2026, 12_34_03 PM.png" alt="Promo Gift Box" class="promo-gift-img" draggable="false">
         <div class="promo-text">
           <h3>Ready to grow your business on WhatsApp?</h3>
           <p>Join 10,000+ businesses already using Zensy to engage, convert and grow.</p>
@@ -6065,29 +6747,362 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     
   </div>
-</section><section class="_f42916f9 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_879edb52 umso-marquee" style="--width:undefinedpx;--speed:0.6"><div class="_7c86b9b3"><div class="_7ad32e46" style="position:relative"><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Green Tick Verification</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free WhatsApp Business API</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Onboarding</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Zero Setup fee</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Website Widget</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free QR &amp; Link</span></div></div><div class="_da67444f" aria-hidden="true"><div class="_7ad32e46" style="position:relative"><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Green Tick Verification</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free WhatsApp Business API</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Onboarding</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Zero Setup fee</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Website Widget</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free QR &amp; Link</span></div></div><div class="_7ad32e46" style="position:relative"><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Green Tick Verification</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free WhatsApp Business API</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Onboarding</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Zero Setup fee</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free Website Widget</span></div><div class="_9d9322c0 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:10px"><div class="_9d7ce11d"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 96 960 960" width="1em" class="um-miniIcon"><path d="M378 834 130 586l68-68 180 180 383-383 68 68-451 451Z" fill="currentColor"></path></svg></div><span class="_dc00268a um-text">Free QR &amp; Link</span></div></div></div></div></div></div></section><section class="_5e677c8e theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><header class="_3e31a078" style="position:relative"><h2 class="_9ee78b72 um-text" style="font-size:40px"><p>Top rated WhatsApp Engagement Platform for startups &amp; growing businesses</p></h2></header><div class="_363fce73"><div><div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:20px">
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/r1kfg311hv6iquny.png" alt="G2 Badge 1"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/kid7rwu3jqe1uuxi.png" alt="G2 Badge 2"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/kgv5p793mnxdjn5c.png" alt="G2 Badge 3"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/f4kxb9vxtnakgnf0.png" alt="G2 Badge 4"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/p8taspv7a3c6kc58.png" alt="G2 Badge 5"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/tprxzrfia3yjl9o8.png" alt="G2 Badge 6"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/x39hn037sfpvnbn6.png" alt="G2 Badge 7"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/qseuk7fi4j19yxx5.png" alt="G2 Badge 8"/>
-      <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/zd74bra3d2usm6rq.png" alt="G2 Badge 9"/>
-        <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/8nrgk29vjq88waez.png" alt="G2 Badge 10"/>
-</div>
-</div></div></div></section><section class="_624645b7 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_6a4238c3"><div class="_b4bbe5d3" style="position:relative"><div class="_bef8e2c9" style="position:relative;cursor:default"><img draggable="false" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/qdndgnw992ontzy88946.png?w=160&amp;h=160&amp;dpr=2" class="_12407379" alt="pw.png"/><span class="_d1c89c29 um-text"><p><strong>Priyal Ostwal</strong>  </p></span><span class="_291e638d um-text"><span style="color:var(--color-text-secondary)">Marketing Manager, PhysicsWallah</span>  </span><span class="_f118ad9b um-text"><span style="color:rgb(61, 61, 61)">Samyoj team has shown exceptional professionalism, reliability and a true commitment to customer satisfaction.</span>    </span></div><div class="_bef8e2c9" style="position:relative;cursor:default"><img draggable="false" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/g1e4h3iwqt45n9mk8946.png?w=160&amp;h=160&amp;dpr=2" class="_12407379" alt="cosco.png"/><span class="_d1c89c29 um-text"><strong>Akash Jain</strong>  </span><span class="_291e638d um-text">Business Executive, Cosco</span><span class="_f118ad9b um-text"><span style="color:rgb(61, 61, 61)">Samyoj helped us increase our customer engagement. Our customer engagement increased from </span><span style="color:var(--color-accent-primary)">35% to 90%</span><span style="color:rgb(61, 61, 61)"> with Samyoj&#x27;s Smart Retargeting feature.</span>    </span></div><div class="_bef8e2c9" style="position:relative;cursor:default"><img draggable="false" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/0mvyk0b4akt8smrn8946.png?w=160&amp;h=160&amp;dpr=2" class="_12407379" alt="aevy.png"/><span class="_d1c89c29 um-text"><strong>Achina Mayya</strong>  </span><span class="_291e638d um-text">Founder &amp; CEO, AevyTV</span><span class="_f118ad9b um-text"><span style="color:rgb(29, 28, 29)">Samyoj has been pivotal for us. The personalised interactions and instant responses greatly improved our engagement rates, and more importantly our sales!</span>  </span></div></div></div></div></section><section class="_fbc022e8 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_bdec55d0"><div><div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:20px">
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/r1kfg311hv6iquny.png" alt="G2 Badge 1"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/kid7rwu3jqe1uuxi.png" alt="G2 Badge 2"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/kgv5p793mnxdjn5c.png" alt="G2 Badge 3"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/f4kxb9vxtnakgnf0.png" alt="G2 Badge 4"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/p8taspv7a3c6kc58.png" alt="G2 Badge 5"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/tprxzrfia3yjl9o8.png" alt="G2 Badge 6"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/x39hn037sfpvnbn6.png" alt="G2 Badge 7"/>
-    <img style="width:100px;max-width:20%;height:auto" src="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/qseuk7fi4j19yxx5.png" alt="G2 Badge 8"/>
 
-</div>
+<!-- Social Proof & Onboarding Section -->
+<section class="sps-section">
+  <div class="sps-container">
+    
+    <!-- Header -->
+    <div class="sps-header">
+
+      <h2>Loved by <span>210,000+</span> Businesses</h2>
+      <p>See what founders, marketers and growth teams say about AiSensy</p>
+    </div>
+
+    <!-- Ratings Row -->
+
+        <!-- Testimonials Carousel -->
+    <div class="sps-testimonials-container">
+      <div class="sps-testimonials-row">
+        
+        <!-- Card 1 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=11" alt="Rohit Sharma" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">AiSensy has completely changed the way we engage with our customers. Broadcasts, automations and API - everything just works seamlessly!</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Rohit Sharma</h4>
+                <p>Growth Head, MBA Fundas</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Priya Mehta" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">The best WhatsApp marketing tool we've used. Easy to set up, powerful features and outstanding support from the AiSensy team.</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Priya Mehta</h4>
+                <p>CEO, MomsCo</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=8" alt="Karan Bansal" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">With AiSensy, we increased our conversions by 3X. The automation flows and campaign insights are simply amazing.</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Karan Bansal</h4>
+                <p>Co-founder, EdTechLab</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=33" alt="Akash Jain" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">Samyoj helped us increase our customer engagement from 35% to 90% with their Smart Retargeting feature.</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Akash Jain</h4>
+                <p>Business Executive, Cosco</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=47" alt="Achina Mayya" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">Samyoj has been pivotal for us. The personalised interactions and instant responses greatly improved our sales!</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Achina Mayya</h4>
+                <p>Founder & CEO, AevyTV</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=60" alt="Priyal Ostwal" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">Samyoj team has shown exceptional professionalism, reliability and a true commitment to customer satisfaction.</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Priyal Ostwal</h4>
+                <p>Marketing Manager, PhysicsWallah</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=62" alt="Sameer Sen" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">Setting up our WhatsApp shop took less than 10 minutes. Our order volume doubled in weeks!</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Sameer Sen</h4>
+                <p>Founder, D2C Brands</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="sps-testimonial-card">
+          <div class="sps-testimonial-left">
+            <img src="https://i.pravatar.cc/150?img=65" alt="Neha Gupta" class="sps-user-avatar">
+          </div>
+          <div class="sps-testimonial-right">
+            <div class="sps-testimonial-header">
+              <div class="sps-quote-icon">“</div>
+            </div>
+            <p class="sps-testimonial-text">The Webviews and custom forms have transformed our customer onboarding. User response rates are up by 150%.</p>
+            <div class="sps-testimonial-footer">
+              <div class="sps-user-info">
+                <h4>Neha Gupta</h4>
+                <p>Growth Lead, HealthKart</p>
+              </div>
+              <div class="sps-5stars">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="sps-nav-buttons">
+      <button class="sps-nav-btn sps-prev">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="sps-nav-btn sps-next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div><!-- Avatar Cluster -->
+    
+
+    <!-- Get Started Banner -->
+    <div class="sps-gs-banner">
+      <div class="sps-gs-left">
+        <h3>Get Started in <span>4 Simple Steps</span></h3>
+        <p>Launch your first WhatsApp campaign in under 10 minutes.</p>
+        <button class="btn-green">Start for FREE &rarr;</button>
+      </div>
+      <div class="sps-gs-right">
+        <div class="sps-h-stepper">
+          <div class="sps-step">
+            <div class="sps-step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="8.5" cy="7" r="4"/>
+                <line x1="20" y1="8" x2="20" y2="14"/>
+                <line x1="17" y1="11" x2="23" y2="11"/>
+              </svg>
+              <span class="sps-step-num">1</span>
+            </div>
+            <h4>Sign Up</h4>
+            <p>Create your AiSensy account in less than a minute.</p>
+          </div>
+          <div class="sps-step">
+            <div class="sps-step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              <span class="sps-step-num">2</span>
+            </div>
+            <h4>Connect WhatsApp</h4>
+            <p>Connect your official WhatsApp Business Number.</p>
+          </div>
+          <div class="sps-step">
+            <div class="sps-step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+              <span class="sps-step-num">3</span>
+            </div>
+            <h4>Create Campaign</h4>
+            <p>Choose a template or create your own message.</p>
+          </div>
+          <div class="sps-step">
+            <div class="sps-step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+              <span class="sps-step-num">4</span>
+            </div>
+            <h4>Broadcast & Grow</h4>
+            <p>Send, track and optimize for better conversions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Banners Row -->
+    <div class="sps-bottom-banners">
+      
+      <!-- Integrations Banner -->
+      <div class="sps-integrations-banner">
+        <h3>Seamless <span>Integrations</span> with Your Favorite Tools</h3>
+        <p>Connect AiSensy with the tools you already use.</p>
+        <div class="sps-integrations-grid">
+          <div class="sps-int-icon">
+            <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" onerror="this.src='https://cdn-icons-png.flaticon.com/128/825/825544.png'">
+            <span>Shopify</span>
+          </div>
+
+          <div class="sps-int-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Zapier_logo.svg" alt="Zapier" onerror="this.src='https://cdn-icons-png.flaticon.com/128/3884/3884357.png'">
+            <span>Zapier</span>
+          </div>
+          <div class="sps-int-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Google_Sheets_2020_Logo.svg" alt="Google Sheets" onerror="this.src='https://cdn-icons-png.flaticon.com/128/281/281760.png'">
+            <span>Google Sheets</span>
+          </div>
+          <div class="sps-int-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" alt="HubSpot" onerror="this.src='https://cdn-icons-png.flaticon.com/128/5968/5968846.png'">
+            <span>HubSpot</span>
+          </div>
+          <div class="sps-int-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" onerror="this.src='https://cdn-icons-png.flaticon.com/128/5968/5968880.png'">
+            <span>Salesforce</span>
+          </div>
+          <div class="sps-int-icon sps-more">
+            <div class="dots-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>& more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenue Banner -->
+      <div class="sps-revenue-banner">
+        <div class="sps-revenue-text">
+          <h3>Ready to <span>5X Your Revenue?</span></h3>
+          <p>Join 210,000+ businesses already growing faster with AiSensy on WhatsApp.</p>
+          <div class="sps-revenue-actions">
+            <button class="btn-green" onclick="window.open('https://app.aisensy.com/register')">Start Your FREE Trial &rarr;</button>
+            <button class="btn-outline" onclick="window.open('https://calendly.com/d/3k8-k9q-9r3')">Book a Demo &rarr;</button>
+          </div>
+        </div>
+        <img src="../images/rocket iamge .png" alt="Rocket" class="sps-rocket-img" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </div></div></div></section><section class="_f595e375 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_8664e682"><div><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -6382,6 +7397,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     )
   })()
 </script><script>document.querySelectorAll('.umso-marquee').forEach(e=>{new ResizeObserver(t=>{for(let r of t){const t=parseFloat(e.style.getPropertyValue('--speed'))||1,s=100,i=r.contentRect.width/(s*t);e.style.setProperty('--width',r.contentRect.width+'px'),e.firstChild&&e.firstChild.style&&(e.firstChild.style.animationDuration=i+'s')}}).observe(e.firstChild)});</script><script>!function(){function t(t){const e=t.target.closest('.accordion-trigger');if(!e)return;const c=e.parentElement;c&&c.classList.toggle('open')}document.querySelectorAll('.umso-accordion').forEach(e=>{e.addEventListener('click',t)})}();</script><script>!function(){const e=false;window.SendEvent=function(n){if(!n)return void console.error('error when sending event');const t=JSON.stringify({siteId:'7d0y4zpf54jf3ecr',category:n.category,name:n.name,data:n.data,isPriorBlockingEnabled:e});if(n.asBeacon&&navigator.sendBeacon)return void navigator.sendBeacon('/api/event',t);let o=new XMLHttpRequest;o.open('POST.html','/api/event',!0),o.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8'),o.send(t)}}(); !function(){const e=false,n=new URLSearchParams(window.location.search),t=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];window.PageView=function(){const o={referrer:document.referrer,path:window.location.pathname,isPriorBlockingEnabled:e};t.forEach(function(e){const t=n.get(e);t&&(o[e]=t)});let i=new XMLHttpRequest;i.open('POST.html','/api/view',!0),i.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8'),i.send(JSON.stringify(o))},window.PageView()}(); !function(){const t=document.querySelectorAll('a'),n=new URLSearchParams(window.location.search),e=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];Array.prototype.forEach.call(t,function(t,c){t.addEventListener('click',function(c){const o={url:t.href,btn_id:t.id};e.forEach(function(t){const e=n.get(t);e&&(o[t]=e)}),window.SendEvent({category:'button',name:t.innerText,data:o,asBeacon:!0})})})}();</script><script>/*! smooth-scroll v14.2.1 | (c) 2018 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
-!function(e,t){'function'==typeof define&&define.amd?define([],function(){return t(e)}):'object'==typeof exports?module.exports=t(e):e.SmoothScroll=t(e)}('undefined'!=typeof global?global:'undefined'!=typeof window?window:this,function(e){'use strict';var t={ignore:'[data-scroll-ignore]',header:null,topOnEmptyHash:!0,speed:500,clip:!0,offset:0,easing:'easeInOutCubic',customEasing:null,updateURL:!0,popstate:!0,emitEvents:!0},n=function(){for(var e={},t=0;t<arguments.length;t++)!function(t){for(var n in t)t.hasOwnProperty(n)&&(e[n]=t[n])}(arguments[t]);return e},o=function(t){return parseInt(e.getComputedStyle(t).height,10)},r=function(e){var t;try{t=decodeURIComponent(e)}catch(n){t=e}return t},a=function(e){'#'===e.charAt(0)&&(e=e.substr(1));for(var t,n=String(e),o=n.length,r=-1,a='',i=n.charCodeAt(0);++r<o;){if(0===(t=n.charCodeAt(r)))throw new InvalidCharacterError('Invalid character: the input contains U+0000.');a+=t>=1&&t<=31||127==t||0===r&&t>=48&&t<=57||1===r&&t>=48&&t<=57&&45===i?'\\'+t.toString(16)+' ':t>=128||45===t||95===t||t>=48&&t<=57||t>=65&&t<=90||t>=97&&t<=122?n.charAt(r):'\\'+n.charAt(r)}var c;try{c=decodeURIComponent('#'+a)}catch(e){c='#'+a}return c},i=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},c=function(e){return e?o(e)+e.offsetTop:0},u=function(t,n,o,r){if(n.emitEvents&&'function'==typeof e.CustomEvent){var a=new CustomEvent(t,{bubbles:!0,detail:{anchor:o,toggle:r}});document.dispatchEvent(a)}};return function(o,s){var l,d,f,m,h,p,g={cancelScroll:function(e){cancelAnimationFrame(p),p=null,e||u('scrollCancel',l)}};g.animateScroll=function(o,r,a){var s=n(l||t,a||{}),d='[object Number]'===Object.prototype.toString.call(o),h=d||!o.tagName?null:o;if(d||h){var v=e.pageYOffset;s.header&&!f&&(f=document.querySelector(s.header)),m||(m=c(f));var y,S,E,b=d?o:function(t,n,o,r){var a=0;if(t.offsetParent)do{a+=t.offsetTop,t=t.offsetParent}while(t);return a=Math.max(a-n-o,0),r&&(a=Math.min(a,i()-e.innerHeight)),a}(h,m,parseInt('function'==typeof s.offset?s.offset(o,r):s.offset,10),s.clip),O=b-v,I=i(),w=0,C=function(t,n){var a=e.pageYOffset;if(t==n||a==n||(v<n&&e.innerHeight+a)>=I)return g.cancelScroll(!0),function(t,n,o){0===t&&document.body.focus(),o||(t.focus(),document.activeElement!==t&&(t.setAttribute('tabindex','-1'),t.focus(),t.style.outline='none'),e.scrollTo(0,n))}(o,n,d),u('scrollStop',s,o,r),y=null,p=null,!0},L=function(t){y||(y=t),S=(w+=t-y)/parseInt(s.speed,10),E=v+O*function(e,t){var n;return'easeInQuad'===e.easing&&(n=t*t),'easeOutQuad'===e.easing&&(n=t*(2-t)),'easeInOutQuad'===e.easing&&(n=t<.5?2*t*t:(4-2*t)*t-1),'easeInCubic'===e.easing&&(n=t*t*t),'easeOutCubic'===e.easing&&(n=--t*t*t+1),'easeInOutCubic'===e.easing&&(n=t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),'easeInQuart'===e.easing&&(n=t*t*t*t),'easeOutQuart'===e.easing&&(n=1- --t*t*t*t),'easeInOutQuart'===e.easing&&(n=t<.5?8*t*t*t*t:1-8*--t*t*t*t),'easeInQuint'===e.easing&&(n=t*t*t*t*t),'easeOutQuint'===e.easing&&(n=1+--t*t*t*t*t),'easeInOutQuint'===e.easing&&(n=t<.5?16*t*t*t*t*t:1+16*--t*t*t*t*t),e.customEasing&&(n=e.customEasing(t)),n||t}(s,S=S>1?1:S),e.scrollTo(0,Math.floor(E)),C(E,b)||(p=e.requestAnimationFrame(L),y=t)};0===e.pageYOffset&&e.scrollTo(0,0),function(e,t,n){t||history.pushState&&n.updateURL&&history.pushState({smoothScroll:JSON.stringify(n),anchor:e.id},document.title,e===document.documentElement?'#top':'#'+e.id)}(o,d,s),u('scrollStart',s,o,r),g.cancelScroll(!0),e.requestAnimationFrame(L)}};var v=function(t){if((!('matchMedia'in e)||!e.matchMedia('(prefers-reduced-motion)').matches)&&0===t.button&&!t.metaKey&&!t.ctrlKey&&'closest'in t.target&&(d=t.target.closest(o))&&'a'===d.tagName.toLowerCase()&&!t.target.closest(l.ignore)&&d.hostname===e.location.hostname&&d.pathname===e.location.pathname&&/#/.test(d.href)){var n=a(r(d.hash)),i=l.topOnEmptyHash&&'#'===n?document.documentElement:document.querySelector(n);(i=i||'#top'!==n?i:document.documentElement)&&(t.preventDefault(),g.animateScroll(i,d))}},y=function(e){if(null!==history.state&&history.state.smoothScroll&&history.state.smoothScroll===JSON.stringify(l)&&history.state.anchor){var t=document.querySelector(a(r(history.state.anchor)));t&&g.animateScroll(t,null,{updateURL:!1})}},S=function(e){h||(h=setTimeout(function(){h=null,m=c(f)},66))};return g.destroy=function(){l&&(document.removeEventListener('click',v,!1),e.removeEventListener('resize',S,!1),e.removeEventListener('popstate',y,!1),g.cancelScroll(),l=null,d=null,f=null,m=null,h=null,p=null)},g.init=function(o){if(!('querySelector'in document&&'addEventListener'in e&&'requestAnimationFrame'in e&&'closest'in e.Element.prototype))throw'Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.';g.destroy(),l=n(t,o||{}),f=l.header?document.querySelector(l.header):null,m=c(f),document.addEventListener('click',v,!1),f&&e.addEventListener('resize',S,!1),l.updateURL&&l.popstate&&e.addEventListener('popstate',y,!1)},g.init(s),g}}),new window.SmoothScroll('a[href*="#"]',{offset:0});</script><script><!-- engine v5.0.8 --></script></body>
+!function(e,t){'function'==typeof define&&define.amd?define([],function(){return t(e)}):'object'==typeof exports?module.exports=t(e):e.SmoothScroll=t(e)}('undefined'!=typeof global?global:'undefined'!=typeof window?window:this,function(e){'use strict';var t={ignore:'[data-scroll-ignore]',header:null,topOnEmptyHash:!0,speed:500,clip:!0,offset:0,easing:'easeInOutCubic',customEasing:null,updateURL:!0,popstate:!0,emitEvents:!0},n=function(){for(var e={},t=0;t<arguments.length;t++)!function(t){for(var n in t)t.hasOwnProperty(n)&&(e[n]=t[n])}(arguments[t]);return e},o=function(t){return parseInt(e.getComputedStyle(t).height,10)},r=function(e){var t;try{t=decodeURIComponent(e)}catch(n){t=e}return t},a=function(e){'#'===e.charAt(0)&&(e=e.substr(1));for(var t,n=String(e),o=n.length,r=-1,a='',i=n.charCodeAt(0);++r<o;){if(0===(t=n.charCodeAt(r)))throw new InvalidCharacterError('Invalid character: the input contains U+0000.');a+=t>=1&&t<=31||127==t||0===r&&t>=48&&t<=57||1===r&&t>=48&&t<=57&&45===i?'\\'+t.toString(16)+' ':t>=128||45===t||95===t||t>=48&&t<=57||t>=65&&t<=90||t>=97&&t<=122?n.charAt(r):'\\'+n.charAt(r)}var c;try{c=decodeURIComponent('#'+a)}catch(e){c='#'+a}return c},i=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},c=function(e){return e?o(e)+e.offsetTop:0},u=function(t,n,o,r){if(n.emitEvents&&'function'==typeof e.CustomEvent){var a=new CustomEvent(t,{bubbles:!0,detail:{anchor:o,toggle:r}});document.dispatchEvent(a)}};return function(o,s){var l,d,f,m,h,p,g={cancelScroll:function(e){cancelAnimationFrame(p),p=null,e||u('scrollCancel',l)}};g.animateScroll=function(o,r,a){var s=n(l||t,a||{}),d='[object Number]'===Object.prototype.toString.call(o),h=d||!o.tagName?null:o;if(d||h){var v=e.pageYOffset;s.header&&!f&&(f=document.querySelector(s.header)),m||(m=c(f));var y,S,E,b=d?o:function(t,n,o,r){var a=0;if(t.offsetParent)do{a+=t.offsetTop,t=t.offsetParent}while(t);return a=Math.max(a-n-o,0),r&&(a=Math.min(a,i()-e.innerHeight)),a}(h,m,parseInt('function'==typeof s.offset?s.offset(o,r):s.offset,10),s.clip),O=b-v,I=i(),w=0,C=function(t,n){var a=e.pageYOffset;if(t==n||a==n||(v<n&&e.innerHeight+a)>=I)return g.cancelScroll(!0),function(t,n,o){0===t&&document.body.focus(),o||(t.focus(),document.activeElement!==t&&(t.setAttribute('tabindex','-1'),t.focus(),t.style.outline='none'),e.scrollTo(0,n))}(o,n,d),u('scrollStop',s,o,r),y=null,p=null,!0},L=function(t){y||(y=t),S=(w+=t-y)/parseInt(s.speed,10),E=v+O*function(e,t){var n;return'easeInQuad'===e.easing&&(n=t*t),'easeOutQuad'===e.easing&&(n=t*(2-t)),'easeInOutQuad'===e.easing&&(n=t<.5?2*t*t:(4-2*t)*t-1),'easeInCubic'===e.easing&&(n=t*t*t),'easeOutCubic'===e.easing&&(n=--t*t*t+1),'easeInOutCubic'===e.easing&&(n=t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),'easeInQuart'===e.easing&&(n=t*t*t*t),'easeOutQuart'===e.easing&&(n=1- --t*t*t*t),'easeInOutQuart'===e.easing&&(n=t<.5?8*t*t*t*t:1-8*--t*t*t*t),'easeInQuint'===e.easing&&(n=t*t*t*t*t),'easeOutQuint'===e.easing&&(n=1+--t*t*t*t*t),'easeInOutQuint'===e.easing&&(n=t<.5?16*t*t*t*t*t:1+16*--t*t*t*t*t),e.customEasing&&(n=e.customEasing(t)),n||t}(s,S=S>1?1:S),e.scrollTo(0,Math.floor(E)),C(E,b)||(p=e.requestAnimationFrame(L),y=t)};0===e.pageYOffset&&e.scrollTo(0,0),function(e,t,n){t||history.pushState&&n.updateURL&&history.pushState({smoothScroll:JSON.stringify(n),anchor:e.id},document.title,e===document.documentElement?'#top':'#'+e.id)}(o,d,s),u('scrollStart',s,o,r),g.cancelScroll(!0),e.requestAnimationFrame(L)}};var v=function(t){if((!('matchMedia'in e)||!e.matchMedia('(prefers-reduced-motion)').matches)&&0===t.button&&!t.metaKey&&!t.ctrlKey&&'closest'in t.target&&(d=t.target.closest(o))&&'a'===d.tagName.toLowerCase()&&!t.target.closest(l.ignore)&&d.hostname===e.location.hostname&&d.pathname===e.location.pathname&&/#/.test(d.href)){var n=a(r(d.hash)),i=l.topOnEmptyHash&&'#'===n?document.documentElement:document.querySelector(n);(i=i||'#top'!==n?i:document.documentElement)&&(t.preventDefault(),g.animateScroll(i,d))}},y=function(e){if(null!==history.state&&history.state.smoothScroll&&history.state.smoothScroll===JSON.stringify(l)&&history.state.anchor){var t=document.querySelector(a(r(history.state.anchor)));t&&g.animateScroll(t,null,{updateURL:!1})}},S=function(e){h||(h=setTimeout(function(){h=null,m=c(f)},66))};return g.destroy=function(){l&&(document.removeEventListener('click',v,!1),e.removeEventListener('resize',S,!1),e.removeEventListener('popstate',y,!1),g.cancelScroll(),l=null,d=null,f=null,m=null,h=null,p=null)},g.init=function(o){if(!('querySelector'in document&&'addEventListener'in e&&'requestAnimationFrame'in e&&'closest'in e.Element.prototype))throw'Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.';g.destroy(),l=n(t,o||{}),f=l.header?document.querySelector(l.header):null,m=c(f),document.addEventListener('click',v,!1),f&&e.addEventListener('resize',S,!1),l.updateURL&&l.popstate&&e.addEventListener('popstate',y,!1)},g.init(s),g}}),new window.SmoothScroll('a[href*="#"]',{offset:0});
+// --- Testimonial Carousel Script ---
+document.addEventListener('DOMContentLoaded', function() {
+  const row = document.querySelector('.sps-testimonials-row');
+  const cards = document.querySelectorAll('.sps-testimonial-card');
+  const prevBtn = document.querySelector('.sps-prev');
+  const nextBtn = document.querySelector('.sps-next');
+  
+  if (!row || cards.length === 0 || !prevBtn || !nextBtn) return;
+  
+  let currentIndex = 0;
+  
+  function updateSlider() {
+    let itemsToShow = 3;
+    if (window.innerWidth <= 768) itemsToShow = 1;
+    else if (window.innerWidth <= 1024) itemsToShow = 2;
+    
+    const limit = cards.length - itemsToShow;
+    if (currentIndex > limit) currentIndex = limit;
+    if (currentIndex < 0) currentIndex = 0;
+    
+    const gap = 24; // gap in px
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const offset = currentIndex * (cardWidth + gap);
+    row.style.transform = `translateX(-${offset}px)`;
+    
+    // Enable/disable navigation buttons visually
+    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    prevBtn.style.cursor = currentIndex === 0 ? 'default' : 'pointer';
+    nextBtn.style.opacity = currentIndex >= limit ? '0.5' : '1';
+    nextBtn.style.cursor = currentIndex >= limit ? 'default' : 'pointer';
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    let itemsToShow = 3;
+    if (window.innerWidth <= 768) itemsToShow = 1;
+    else if (window.innerWidth <= 1024) itemsToShow = 2;
+    
+    if (currentIndex < cards.length - itemsToShow) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+  
+  window.addEventListener('resize', updateSlider);
+  // Initial run
+  updateSlider();
+  // Delay a bit to ensure fonts/layout are calculated
+  setTimeout(updateSlider, 250);
+});
+</script><script><!-- engine v5.0.8 --></script></body>
 <!-- Mirrored from aisensy.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2026 17:56:08 GMT -->
 </html>
