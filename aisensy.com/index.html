@@ -4153,17 +4153,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .video-overlay-tint {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(15,23,42,0.15), rgba(15,23,42,0.65));
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
   box-sizing: border-box;
   z-index: 2;
-  transition: opacity 0.25s ease;
+  transition: background-color 0.25s ease;
 }
 .custom-video-column:hover .video-overlay-tint {
-  background: linear-gradient(to bottom, rgba(15,23,42,0.2), rgba(15,23,42,0.75));
+  background-color: rgba(15, 23, 42, 0.45);
 }
 
 /* Video Overlay UI */
@@ -4257,6 +4257,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gap: 14px;
   box-sizing: border-box;
   z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(10px);
+}
+.custom-video-column:hover .video-controls-bar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 .controls-play-btn {
   color: #ffffff;
@@ -6076,28 +6085,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="custom-video-column" id="custom-video-trigger">
         <img class="video-thumb" src="../images/product-demo-preview.png" alt="Meet Samyoj Video Thumbnail" draggable="false">
         <div class="video-overlay-tint">
-          <div class="video-top-row">
-            <div class="video-demo-badge">
-              <span class="badge-dot"></span>
-              <span>PRODUCT DEMO</span>
-            </div>
-          </div>
-          
           <div class="video-play-center">
             <div class="video-play-btn-circle">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z"/>
               </svg>
             </div>
-          </div>
-          
-          <div class="video-bottom-text">
-            <h3 class="video-text-title">
-              Meet Samyoj – Your <span class="highlight-text">AI-Powered WhatsApp Engagement Platform</span>
-            </h3>
-            <p class="video-text-desc">
-              Broadcast, Automate & Engage with your customers where they are most active.
-            </p>
           </div>
         </div>
         
