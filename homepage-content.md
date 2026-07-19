@@ -88,7 +88,7 @@
 - **Resources:** Help Center · Blog · About AiSensy · Careers
 - **FREE Tools:** WhatsApp Button · Generate WhatsApp Link · Download Android app · Download iOS app · Pricing Calculator
 - **Legal:** Privacy Policy · Refund Policy · Terms & Conditions
-- **Contact:** Contact Our Team · Sales +919873940683 · Support +918069158234
+- **Contact:** Contact Our Team · Sales 8839888531 · Support 8305369467
 
 ---
 

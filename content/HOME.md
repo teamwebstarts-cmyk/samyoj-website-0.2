@@ -117,5 +117,5 @@ Start with 2000/day → 10,000/day (after 500+ messages) → 100,000/day (after 
 - Resources: Help Center, Blog, About AiSensy, Careers
 - FREE Tools: WhatsApp Button Generator, WhatsApp Link, Download Android app, Download iOS app, Pricing Calculator
 - Legal: Privacy Policy, Refund Policy, Terms & Conditions
-- Contact Us: Sales +919873940683, Support +918069158234
+- Contact Us: Sales 8839888531, Support 8305369467
 - © 2026 AiSensy Communications Private Limited — Made with ♥ in India

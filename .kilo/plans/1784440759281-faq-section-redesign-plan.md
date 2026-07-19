@@ -1,51 +1,89 @@
-# Redesign FAQ ("Frequently Asked Questions") Section
+# Soft Scroll-Reveal Animations for Landing Page
 
 ## Context
-The homepage (`index.html` and its mirror `aisensy.com/index.html`) has a FAQ section (footer se pehle, ~line 6987) built with Umso's **default accordion** (`umso-accordion _ffe3dff7`). It looks inconsistent with the rest of the page, which uses our custom "ADC" pattern (white cards, `#e2e8f0` borders, `20px` radius, green `#00b853` accent, Inter font, titles `#0f172a`). Goal: redesign the FAQ into a **simple accordion** that matches our custom UI, keeping it minimal and responsive. Keep all 7 existing Q&A (content + the `FAQPage` JSON-LD schema must stay identical for SEO).
+The Samyoj landing page (`index.html` + mirror `aisensy.com/index.html`) currently shows all **custom sections instantly** as you scroll — no scroll-triggered motion. Some Umso-native blocks ("Why Samyoj Runs on WhatsApp", footer) already use Umso's load-time `umso-animated` reveals, but the custom-built sections (hero, stats banner, brand-video block, broadcast, meta-features, FAQ, etc.) do not.
 
-### Current FAQ questions (7, must be preserved verbatim)
-1. What does Samyoj do?
-2. Is Samyoj an Official WhatsApp Marketing Software?
-3. Does Samyoj offer a FREE account?
-4. Is there any WhatsApp Business API procurement fee for a brand/business?
-5. How do you handle Customer Support?
-6. What is the Cost of Broadcasting messages?
-7. How many messages can I Broadcast in a day to my customers?
+Goal: add **very soft, professional scroll-reveal** (subtle fade + small upward slide) to every custom section so the page feels polished as the user scrolls. Decided scope: **all custom sections except the hero** (hero is above the fold and must appear instantly). Already-animated Umso blocks are left untouched.
 
-## Design decisions
-- **Layout:** Vertical accordion (click-to-expand, one open at a time or independent toggles — independent is simpler). Keep it a single column, max-width ~760px, centered.
-- **Per item:** White card, `1px solid #e2e8f0`, `border-radius: 12px`, subtle `box-shadow`. Question row = `font-weight:700; color:#0f172a; font-size:18px`, with a `+`/`−` (or chevron) toggle on the right in green `#00b853`. Answer = `color:#4b5563; font-size:16px; line-height:1.6`.
-- **Accent:** Green `#00b853` for the toggle icon and hover state; light green tint `#eafbf0` background on hover/active optional.
-- **Section heading:** Reuse `.custom-section-title` style ("Frequently Asked Questions" + optional green highlight) and `.custom-section-center` wrapper for consistency with other custom sections.
-- **Responsive:** Already mobile-friendly (single column). Add `@media (max-width:640px)` to drop question font to ~16px and padding to keep it compact — mirror the pattern used in the hero media queries.
-- **Keep simple:** No new JS library. Use a tiny vanilla JS toggle (or `<details>/<summary>` for zero-JS). Recommend `<details>/<summary>` for maximum simplicity and accessibility.
+### Findings from codebase audit
+- No `IntersectionObserver` exists today → reveals are load-time CSS only.
+- `prefers-reduced-motion` is already respected in CSS (lines 246, 3211) → must continue to honor it.
+- A `SmoothScroll` library is bundled but handles anchor jumps, NOT reveals — out of scope unless we also want smooth in-page anchor scrolling (optional, see Open Questions).
+- Custom sections to animate (by id/class):
+  - `#custom-stats-banner` (`.custom-stats-banner`)
+  - `#custom-brand-video-section` (`.custom-section-center` wrapper → contains `.custom-logos-card`, `.custom-grey-box`, `.custom-bottom-banner`)
+  - `#custom-broadcast-section`
+  - `#custom-meta-features-section` (`.card-*` cards inside)
+  - `#custom-faq-section`
+  - Plus any other custom `section`/`div` custom blocks (setup steps, integrations, bottom CTA) — animate their top-level wrapper.
+- Keep Umso `umso-animated` blocks (Why Samyoj, footer) as-is.
+
+## Recommended approach (research-based best practice)
+- **No new dependency.** Use a tiny vanilla **`IntersectionObserver`** + CSS transitions. This is the modern, performant, accessible standard (better than scroll-event listeners which cause layout thrash).
+- **Style:** very soft — `opacity 0 → 1` and `translateY(24px) → 0`, `transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)` (ease-out). Trigger once (`observer.unobserve` after first reveal) so it doesn't replay and feel jittery.
+- **Stagger:** within a section, animate direct child blocks with a small incremental `transition-delay` (e.g. +80–100ms each) for a refined cascade — but keep it subtle.
+- **Threshold:** reveal when ~12–15% of the element is visible (`threshold: 0.12`) with a `rootMargin: '0px 0px -8% 0px'` so it triggers slightly before fully in view.
+- **Accessibility:** wrap everything in `@media (prefers-reduced-motion: no-preference)` so reduced-motion users see content immediately (no transform/opacity animation). JS also no-ops when reduced motion is set. Also: content must be visible if JS fails (start visible, add a `.js-reveal` class to `<html>` via inline script in `<head>` so CSS only hides when JS is active — prevents "blank page if JS breaks").
 
 ## Implementation steps
-1. Locate the FAQ `<section class="_83203361 ...">` block in `index.html` (near line 6987) and the mirror in `aisensy.com/index.html`.
-2. Replace the Umso accordion markup with a custom container:
-   - `<section id="custom-faq-section">` wrapping `.custom-section-center` > `<h2 class="custom-section-title">Frequently Asked <span class="highlight-green">Questions</span></h2>` > `.custom-faq-list`.
-   - Each item: `<details class="custom-faq-item"><summary class="custom-faq-q">Question text <span class="custom-faq-icon">+</span></summary><div class="custom-faq-a"><p>Answer text</p></div></details>`.
-   - Paste all 7 Q&A verbatim from current markup/JSON-LD.
-3. Add CSS (inside the existing `<style>` block, near the other `.custom-*` rules ~line 3864+):
-   - `.custom-faq-section { background:#fff; padding:80px 0; font-family:'Inter',... }`
-   - `.custom-faq-list { max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }`
-   - `.custom-faq-item { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:18px 22px; box-shadow:0 2px 10px rgba(0,0,0,0.02); }`
-   - `.custom-faq-q { display:flex; justify-content:space-between; align-items:center; gap:16px; cursor:pointer; font-size:18px; font-weight:700; color:#0f172a; list-style:none; }`
-   - `.custom-faq-q::-webkit-details-marker { display:none; }`
-   - `.custom-faq-icon { color:#00b853; font-size:22px; font-weight:700; transition:transform .2s; flex-shrink:0; }`
-   - `.custom-faq-item[open] .custom-faq-icon { transform:rotate(45deg); }` (so `+` becomes `×`)
-   - `.custom-faq-a { color:#4b5563; font-size:16px; line-height:1.6; margin-top:12px; }`
-   - Mobile `@media (max-width:640px)`: `.custom-faq-q{font-size:16px} .custom-faq-item{padding:14px 16px}`.
-4. **Preserve SEO:** Keep the existing `FAQPage` JSON-LD `<script type="application/ld+json">` (lines ~6988-7049) unchanged and inside/near the section.
-5. Apply identical changes to BOTH `index.html` and `aisensy.com/index.html`.
+1. **Head guard (both files):** Add an inline script as early as possible in `<head>`:
+   `document.documentElement.classList.add('js-reveal')` — so reveal-hiding CSS only applies when JS runs.
+2. **CSS (both files, inside existing `<style>` near other `.custom-*` rules):**
+   ```css
+   @media (prefers-reduced-motion: no-preference) {
+     html.js-reveal [data-reveal] {
+       opacity: 0;
+       transform: translateY(24px);
+       transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);
+       will-change: opacity, transform;
+     }
+     html.js-reveal [data-reveal].is-visible {
+       opacity: 1;
+       transform: none;
+     }
+   }
+   ```
+   Optional stagger helper: `html.js-reveal [data-reveal][data-reveal-stagger] > * { ... transition-delay via nth-child }` OR set `style="transition-delay"` per child in JS.
+3. **Markup:** Add `data-reveal` attribute to each target custom section wrapper, and `data-reveal` (or a stagger container) to inner cards where a cascade is wanted (e.g. meta-feature cards, FAQ items, stats). Only add to custom sections (not Umso blocks).
+   - Hero: **no** `data-reveal` (instant).
+4. **JS (both files, before `</body>` or in existing script block):**
+   ```js
+   (function(){
+     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+     var els = document.querySelectorAll('[data-reveal]');
+     if (reduce || !('IntersectionObserver' in window) || !els.length) {
+       els.forEach(function(e){ e.classList.add('is-visible'); });
+       return;
+     }
+     var io = new IntersectionObserver(function(entries){
+       entries.forEach(function(en){
+         if (en.isIntersecting) {
+           en.target.classList.add('is-visible');
+           io.unobserve(en.target);
+         }
+       });
+     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+     els.forEach(function(e){ io.observe(e); });
+   })();
+   ```
+5. Apply identical changes to **`index.html`** and **`aisensy.com/index.html`** (keep them in sync, as done for all prior edits).
 
 ## Risks
-- Removing Umso accordion classes may leave orphan CSS/JS hooks (`_ffe3dff7`, `accordion-trigger`, etc.) — harmless if unused; do not delete global Umso CSS.
-- Must keep exact question/answer text + JSON-LD so search rankings and existing content are unaffected.
+- **Blank content if JS errors:** mitigated by the `js-reveal` head guard (CSS hides only when JS active; if the observer script throws, a tiny fallback `try/catch` adds `.is-visible` to all).
+- **Double animation conflict:** Umso `umso-animated` blocks already reveal on load — we do NOT add `data-reveal` to them, so no conflict.
+- **Layout shift:** `translateY` only (no width/height change) → no reflow/CLS.
+- **Reduced motion:** explicitly skipped via media query + JS check.
+- **SEO/Content:** reveal is pure visual; text stays in DOM (good for crawlers/screen readers).
 
 ## Validation
 - Serve locally (`python3 -m http.server 8080`) and open `http://localhost:8080/index.html`.
-- Verify: FAQ renders as white cards, green toggle icons, click expands/collapses, only the clicked item toggles.
-- Resize to mobile width — layout stays single-column and readable.
-- View page source / run an SEO check: `FAQPage` JSON-LD still present and valid.
-- Confirm `aisensy.com/index.html` shows identical result.
+- Scroll slowly: each custom section fades + slides up softly once, does not replay.
+- Hero appears instantly (no animation).
+- Resize to mobile width: reveals still work, no horizontal scroll, no layout break.
+- Toggle OS "reduce motion" (or DevTools rendering emulation): sections show immediately, no transform.
+- Disable JS (or break the script): all content remains visible (no blank page).
+- Confirm `aisensy.com/index.html` mirrors the behavior.
+
+## Open questions (optional, out of scope unless requested)
+- Also enable **smooth in-page anchor scrolling** using the already-bundled `SmoothScroll` lib (currently uninitialized) for nav/CTA links — separate concern from reveals.
+- Whether the FAQ `<details>` items themselves should stagger-reveal (more motion); current plan reveals the whole FAQ block as one unit.

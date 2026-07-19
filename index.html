@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="en">
 <head>
+<script>document.documentElement.classList.add('js-reveal');</script>
 <meta charSet="utf-8"/>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -3709,8 +3710,8 @@ a._d3dec611:hover {
 </section>
 
 <!-- Custom Trust Stats Banner -->
-<div class="custom-stats-banner">
-  <div class="stats-grid">
+<div class="custom-stats-banner" data-reveal>
+  <div class="stats-grid" data-reveal-stagger>
     
     <!-- Stat 1 -->
     <div class="stat-item">
@@ -3964,6 +3965,36 @@ a._d3dec611:hover {
 }
 .custom-faq-a p {
   margin: 0;
+}
+
+/* Soft Scroll-Reveal Animations (custom sections only) */
+@media (prefers-reduced-motion: no-preference) {
+  html.js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  html.js-reveal [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  html.js-reveal [data-reveal-stagger] > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  html.js-reveal [data-reveal-stagger].is-visible > * {
+    opacity: 1;
+    transform: none;
+  }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 90ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 180ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 270ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(5) { transition-delay: 360ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(6) { transition-delay: 450ms; }
+  html.js-reveal [data-reveal-stagger].is-visible > *:nth-child(n+7) { transition-delay: 540ms; }
 }
 
 /* Brand Logos Row Card with Infinite Scroll */
@@ -5969,7 +6000,7 @@ a._d3dec611:hover {
 }
 </style>
 
-<section id="custom-brand-video-section">
+<section id="custom-brand-video-section" data-reveal>
   <div class="custom-section-center">
     
     <!-- Top Pill Badge -->
@@ -6128,7 +6159,7 @@ a._d3dec611:hover {
     </div>
     
     <!-- Bottom CTA Banner -->
-    <div class="custom-bottom-banner">
+    <div class="custom-bottom-banner" data-reveal>
       <div class="banner-left-content">
         <div class="banner-icon-wrapper">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -6238,7 +6269,7 @@ a._d3dec611:hover {
 })();
 </script>
 
-<section id="custom-broadcast-section">
+<section id="custom-broadcast-section" data-reveal>
   <div class="wr">
     <div class="custom-broadcast-container">
       
@@ -6329,7 +6360,7 @@ a._d3dec611:hover {
   </div>
 </section>
 
-<section id="custom-meta-features-section">
+<section id="custom-meta-features-section" data-reveal>
   <div class="wr">
     
     <!-- Part A: Main Header Box -->
@@ -6486,7 +6517,7 @@ a._d3dec611:hover {
       
     </div>
   </div>
-</section><section class="_dbf1af4b theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_450f3d16"><header class="_bb303dea umso-animated" style="--animationName:fade;--animationDuration:600;--animationDelay:0;--animationStagger:0;position:relative"><h2 class="_27cf228f um-text"><strong>Why Samyoj Runs on WhatsApp</strong></h2><div class="_d4183ac2 um-text"><span style="color:rgb(61, 61, 61)">WhatsApp is the one platform that brings together actionable notifications & customer support — and Samyoj makes it work for your business. </span></div></header><div class="_d8f4b6f2" style="position:relative"><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1"><span data-value="98" class="countup">98</span>%</div><span class="_4505c590 um-text">Open Rates</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">45-<span data-value="60" class="countup">60</span>%</div><span class="_4505c590 um-text">Click Rates</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">Free</div><span class="_4505c590 um-text">Forever Plan</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">7<span data-value="" class="countup"></span>%</div><span class="_4505c590 um-text">Engagement Rate</span></div></div></div></div></section><section id="custom-get-started-section">
+</section><section class="_dbf1af4b theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_450f3d16"><header class="_bb303dea umso-animated" style="--animationName:fade;--animationDuration:600;--animationDelay:0;--animationStagger:0;position:relative"><h2 class="_27cf228f um-text"><strong>Why Samyoj Runs on WhatsApp</strong></h2><div class="_d4183ac2 um-text"><span style="color:rgb(61, 61, 61)">WhatsApp is the one platform that brings together actionable notifications & customer support — and Samyoj makes it work for your business. </span></div></header><div class="_d8f4b6f2" style="position:relative"><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1"><span data-value="98" class="countup">98</span>%</div><span class="_4505c590 um-text">Open Rates</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">45-<span data-value="60" class="countup">60</span>%</div><span class="_4505c590 um-text">Click Rates</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">Free</div><span class="_4505c590 um-text">Forever Plan</span></div><div class="_b333d035 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:30;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;--animationFromScale:0.9;position:relative;cursor:default"><div class="_91ecbed1">7<span data-value="" class="countup"></span>%</div><span class="_4505c590 um-text">Engagement Rate</span></div></div></div></div></section><section id="custom-get-started-section" data-reveal>
   <div class="wr">
     
     <!-- Top Part: Timeline & Mockup -->
@@ -6677,7 +6708,7 @@ a._d3dec611:hover {
   </div>
 
 <!-- Social Proof & Onboarding Section -->
-<section class="sps-section">
+<section class="sps-section" data-reveal>
   <div class="sps-container">
 
     <!-- Header -->
@@ -7059,7 +7090,7 @@ a._d3dec611:hover {
     "worstRating": "1"
   }
 }
-</script></div></div></div></section><section id="custom-faq-section" class="custom-faq-section">
+</script></div></div></div></section><section id="custom-faq-section" class="custom-faq-section" data-reveal>
   <div class="custom-section-center">
     <h2 class="custom-section-title">Frequently Asked <span class="highlight-green">Questions</span></h2>
     <div class="custom-faq-list">
@@ -7424,5 +7455,29 @@ document.addEventListener('DOMContentLoaded', function() {
   // Delay a bit to ensure fonts/layout are calculated
   setTimeout(updateSlider, 250);
 });
-</script><script><!-- engine v5.0.8 --></script></body>
+</script><script><!-- engine v5.0.8 --></script><script>
+(function(){
+  try {
+    var root = document.documentElement;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window) || !els.length) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          en.target.classList.add('is-visible');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  } catch (err) {
+    document.querySelectorAll('[data-reveal]').forEach(function(e){ e.classList.add('is-visible'); });
+  }
+})();
+</script>
+</body>
 </html>
