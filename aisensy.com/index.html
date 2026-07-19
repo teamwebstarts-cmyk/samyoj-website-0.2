@@ -3903,6 +3903,69 @@ a._d3dec611:hover {
   color: #00b853;
 }
 
+/* FAQ Section (custom redesign) */
+.custom-faq-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.custom-faq-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.custom-faq-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.015);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.custom-faq-item[open] {
+  border-color: #c9f2d6;
+  box-shadow: 0 4px 16px rgba(0,184,83,0.08);
+}
+.custom-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  list-style: none;
+  margin: 0;
+  text-align: left;
+}
+.custom-faq-q::-webkit-details-marker {
+  display: none;
+}
+.custom-faq-icon {
+  color: #00b853;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.custom-faq-item[open] .custom-faq-icon {
+  transform: rotate(45deg);
+}
+.custom-faq-a {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 12px;
+  text-align: left;
+}
+.custom-faq-a p {
+  margin: 0;
+}
+
 /* Brand Logos Row Card with Infinite Scroll */
 .custom-logos-card {
   background-color: #ffffff;
@@ -4368,6 +4431,18 @@ a._d3dec611:hover {
   .banner-left-content {
     flex-direction: column;
     text-align: center;
+  }
+  .custom-faq-section {
+    padding: 56px 0;
+  }
+  .custom-faq-q {
+    font-size: 16px;
+  }
+  .custom-faq-item {
+    padding: 20px 20px;
+  }
+  .custom-faq-a {
+    font-size: 15px;
   }
 }
 
@@ -6984,7 +7059,49 @@ a._d3dec611:hover {
     "worstRating": "1"
   }
 }
-</script></div></div></div></section><section class="_83203361 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><header class="_eb38d4cb umso-animated" style="--animationName:fade;--animationDuration:600;--animationDelay:0;--animationStagger:0;position:relative"><h2 class="_4c579fd3 um-text">Frequently Asked Questions</h2></header><div class="_e60af728 umso-animated" style="--animationName:toTop;--animationDuration:400;--animationDelay:0;--animationStagger:0;--animationTimingFunction:ease-in-out;--animationSlideDistance:20px;position:relative;cursor:default"><div class="umso-accordion _ffe3dff7"><div class="_5b4b51af" style="position:relative"><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text">What does Samyoj do?</h4><div class="accordion-content _43d62a5b um-text"><p>Samyoj provides businesses with a WhatsApp marketing software they can use to Broadcast &amp; automate messages, run Click to WhatsApp Ads, build Chatbots, showcase catalogues, provide multi-agent Live chat support, collect payments within WhatsApp and much more. </p></div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text"><p>Is Samyoj an Official WhatsApp Marketing Software?</p></h4><div class="accordion-content _43d62a5b um-text">Yes, Samyoj is an Official WhatsApp Business Solution Partner (BSP) built on WhatsApp Business APIs. </div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text">Does Samyoj offer a FREE account?</h4><div class="accordion-content _43d62a5b um-text">Yes. Samyoj offers a FREE forever plan, providing businesses with free access to the WhatsApp Business API.<br/>This plan is perfect for small and medium-sized businesses to start their WhatsApp marketing journey with zero upfront costs.</div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text"><p>Is there any WhatsApp Business API procurement fee for a brand/business?</p></h4><div class="accordion-content _43d62a5b um-text"><p>No. There is no Setup fee, just a subscription fee. Samyoj doesn’t charge a single penny to procure the WhatsApp Business API for a Brand/Business. Businesses can procure the API completely free through Samyoj.</p></div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text"><p>How do you handle Customer Support?</p></h4><div class="accordion-content _43d62a5b um-text"><p>We have a dedicated customer support team available via Live Chat, Email, Phone, and Zoom, ready to assist our customers with any questions or support they may need.</p></div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text"><p>What is the Cost of Broadcasting messages?</p></h4><div class="accordion-content _43d62a5b um-text"><p>WhatsApp charges are ₹1.09/ message for marketing messages &amp; ₹0.145 for utility and authentication messages. You can recharge this from the Samyoj Dashboard itself. Each message is charged separately by Meta. Service conversations(replies to user messages) are free of cost.</p></div></div><div class="_c548125d accordion-item"><h4 class="accordion-trigger _99e70b70 um-text"><p>How many messages can I Broadcast in a day to my customers?</p></h4><div class="accordion-content _43d62a5b um-text"><p>You will start with 2000 Messages/day. As you send 500+ Messages, your limit will be upgraded to 10,000 messages/day and as you send 5000 messages within 7 days, your limit will be upgraded to 100,000 messages/day. Last limit is infinite messages/day which can be enabled by sending 50,000 messages within 7 days. The Limit upgrades happen in 24 hours.</p></div></div></div></div></div></div></section><section class="_468ecac0 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_fb556494"><div><script type="application/ld+json">
+</script></div></div></div></section><section id="custom-faq-section" class="custom-faq-section">
+  <div class="custom-section-center">
+    <h2 class="custom-section-title">Frequently Asked <span class="highlight-green">Questions</span></h2>
+    <div class="custom-faq-list">
+
+      <details class="custom-faq-item" open>
+        <summary class="custom-faq-q">What does Samyoj do? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>Samyoj provides businesses with a WhatsApp marketing software they can use to Broadcast &amp; automate messages, run Click to WhatsApp Ads, build Chatbots, showcase catalogues, provide multi-agent Live chat support, collect payments within WhatsApp and much more.&nbsp;</p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">Is Samyoj an Official WhatsApp Marketing Software? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>Yes, Samyoj is an Official WhatsApp Business Solution Partner (BSP) built on WhatsApp Business APIs. </p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">Does Samyoj offer a FREE account? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>Yes. Samyoj offers a FREE forever plan, providing businesses with free access to the WhatsApp Business API.<br/>This plan is perfect for small and medium-sized businesses to start their WhatsApp marketing journey with zero upfront costs.</p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">Is there any WhatsApp Business API procurement fee for a brand/business? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>No. There is no Setup fee, just a subscription fee. Samyoj doesn’t charge a single penny to procure the WhatsApp Business API for a Brand/Business. Businesses can procure the API completely free through Samyoj.</p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">How do you handle Customer Support? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>We have a dedicated customer support team available via Live Chat, Email, Phone, and Zoom, ready to assist our customers with any questions or support they may need.</p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">What is the Cost of Broadcasting messages? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>WhatsApp charges are ₹1.09/ message for marketing messages &amp; ₹0.145 for utility and authentication messages. You can recharge this from the Samyoj Dashboard itself. Each message is charged separately by Meta. Service conversations (replies to user messages) are free of cost.</p></div>
+      </details>
+
+      <details class="custom-faq-item">
+        <summary class="custom-faq-q">How many messages can I Broadcast in a day to my customers? <span class="custom-faq-icon">+</span></summary>
+        <div class="custom-faq-a"><p>You will start with 2000 Messages/day. As you send 500+ Messages, your limit will be upgraded to 10,000 messages/day and as you send 5000 messages within 7 days, your limit will be upgraded to 100,000 messages/day. Last limit is infinite messages/day which can be enabled by sending 50,000 messages within 7 days. The Limit upgrades happen in 24 hours.</p></div>
+      </details>
+
+    </div>
+  </div>
+</section><section class="_468ecac0 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4"><div class="wr"><div class="_fb556494"><div><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
