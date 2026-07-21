@@ -768,10 +768,16 @@ body:not(.noScript) .umso-animated {
 .um-nav-wrapper.um-links-centered .um-nav-links {
   flex: 1;
   margin: 0 auto;
+  justify-content: center;
 }
 .um-nav-wrapper.um-links-centered .um-nav-children {
   flex: 1;
   margin-right: 20px;
+}
+.um-nav-wrapper.um-links-centered .um-nav-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 .um-nav-wrapper.um-children-centered.um-hidden {
   margin-left: 40px;
@@ -1330,6 +1336,7 @@ body:not(.noScript) .umso-animated {
       font-weight: 600;
       color: #374151;
       text-decoration: none;
+      cursor: default;
       white-space: nowrap;
       flex: 0 0 auto;
       max-width: none;
@@ -1453,6 +1460,7 @@ body:not(.noScript) .umso-animated {
       padding: 22px 20px 16px;
       text-decoration: none;
       color: inherit;
+      cursor: default;
       min-height: 250px;
       box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
       transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
@@ -2817,7 +2825,7 @@ body:not(.noScript) .umso-animated {
         style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
         <div class="_f4c879d8">
           <div class="_592c9c5c wr">
-                        <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-classic um-hidden" style="position:relative">
+                        <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
                 <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="../images/logo.jpeg"
                       alt="Logo_Samyoj.png" style="width:150px" /></a></div>
@@ -2825,32 +2833,7 @@ body:not(.noScript) .umso-animated {
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="partner.html">Partner</a></li>
-                <li>
-                  <div class="um-lang-picker"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="tabler-icon tabler-icon-world ">
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M3.6 9h16.8"></path>
-                        <path d="M3.6 15h16.8"></path>
-                        <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-                        <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-                      </svg>Eng<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-down ">
-                        <path d="M6 9l6 6l6 -6"></path>
-                      </svg></button>
-                    <ul class="">
-                      <li><a href="#" onclick="return false;">Português</a></li>
-                      <li><a href="#" onclick="return false;">Español</a></li>
-                      <li><a href="#" onclick="return false;">हिन्दी, हिंदी</a></li>
-                      <li><a href="#" onclick="return false;">العربية</a></li>
-                      <li><a href="#" onclick="return false;">Deutsch</a></li>
-                      <li><a href="#" onclick="return false;">Français</a></li>
-                    </ul>
-                  </div>
-                </li>
+                <li><a href="industries.html">Industries</a></li>
               </ul>
               <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_k9krbal3oo"
                   class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
@@ -2882,34 +2865,19 @@ body:not(.noScript) .umso-animated {
             </nav><button id="yspyhjboie-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
             <div id="yspyhjboie-drawer" class="_cd1263f2 um-nav-drawer um-hidden">
               <header>
-                <div class="um-lang-picker"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" class="tabler-icon tabler-icon-world ">
-                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                      <path d="M3.6 9h16.8"></path>
-                      <path d="M3.6 15h16.8"></path>
-                      <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-                      <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-                    </svg>Eng<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="tabler-icon tabler-icon-chevron-down ">
-                      <path d="M6 9l6 6l6 -6"></path>
-                    </svg></button>
-                  <ul class="">
-                    <li><a href="#" onclick="return false;">Português</a></li>
-                    <li><a href="#" onclick="return false;">Español</a></li>
-                    <li><a href="#" onclick="return false;">हिन्दी, हिंदी</a></li>
-                    <li><a href="#" onclick="return false;">العربية</a></li>
-                    <li><a href="#" onclick="return false;">Deutsch</a></li>
-                    <li><a href="#" onclick="return false;">Français</a></li>
-                  </ul>
-                </div><button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                <button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="tabler-icon tabler-icon-x ">
                     <path d="M18 6l-12 12"></path>
                     <path d="M6 6l12 12"></path>
                   </svg></button>
-              </header><div class="um-drawer-links"><li><a href="pricing.html">Pricing</a></li><li><button>Product ▾</button><ul><li><a href="whatsapp-business-api.html">WhatsApp Business API</a></li><li><a href="products/whatsapp-marketing.html">WhatsApp Marketing</a></li><li><a href="features/samyoj-meta-ads-manager.html">AI Ads Manager</a></li><li><a href="features/whatsapp-chatbot-flow-builder.html">WhatsApp Chatbots</a></li><li><a href="features/ai-whatsapp-chatbot.html">AI WhatsApp Chatbot</a></li><li><a href="features/whatsapp-payments.html">WhatsApp Payments</a></li><li><a href="features/whatsapp-forms.html">WhatsApp Forms</a></li><li><a href="https://create.samyoj.com/generate-whatsapp-link">WhatsApp Link &amp; QR</a></li><li><a href="products/whatsapp-blue-tick.html">WhatsApp Blue Tick</a></li><li><a href="https://shop.samyoj.com/">Showroom Kit</a></li></ul></li><li><button>Features ▾</button><ul><li><a href="features.html">Features</a></li><li><a href="features/whatsapp-broadcasting.html">WhatsApp Broadcasting</a></li><li><a href="features/whatsapp-ai-agents.html">WhatsApp AI Agents</a></li><li><a href="https://m.samyoj.com/blog/ai-whatsapp-chatbot-guide/">AI WhatsApp Chatbot</a></li><li><a href="features/samyoj-meta-ads-manager.html">Ads Manager</a></li><li><a href="features/whatsapp-chatbot-flow-builder.html">WhatsApp Chatbots</a></li><li><a href="whatsapp-catalogues.html">WhatsApp Catalog</a></li><li><a href="features/whatsapp-payments.html">WhatsApp Payments</a></li><li><a href="features/whatsapp-forms.html">WhatsApp Forms</a></li><li><a href="features/whatsapp-webviews.html">WhatsApp Webviews</a></li><li><a href="features/click-tracking.html">Click Tracking</a></li></ul></li><li><button>Industries ▾</button><ul><li><a href="industries.html">All Industries</a></li><li><a href="industries/education.html">Education</a></li><li><a href="industries/ecommerce.html">E-commerce</a></li><li><a href="industries/finance-insurance.html">Finance &amp; Insurance</a></li><li><a href="industries/healthcare.html">Healthcare</a></li><li><a href="industries/automobile.html">Automobile</a></li><li><a href="industries/real-estate.html">Real Estate</a></li><li><a href="industries/it-services.html">IT Services &amp; Internet</a></li><li><a href="industries/events-webinars.html">Events &amp; Webinar</a></li></ul></li><li><button>Resources ▾</button><ul><li><a href="#" target="blank" rel="noopener noreferrer">Help Center</a></li><li><a href="tutorials.html">Tutorials</a></li><li><a href="https://www.youtube.com/@samyoj_official" target="blank" rel="noopener noreferrer">Youtube</a></li><li><a href="whatsapp-template-message-library.html">Template Library</a></li><li><a href="https://m.samyoj.com/blog/" target="blank" rel="noopener noreferrer">Blog</a></li><li><a href="#api-reference-docs/">Developer APIs</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="https://play.google.com/store/apps/details?id=com.samyoj.mobile">Android App</a></li><li><a href="https://apps.apple.com/in/app/samyoj/id6711351197">iOS App</a></li></ul></li><li><button>Integrations ▾</button><ul><li><a href="integrations.html">Explore all Integrations</a></li><li><a href="integrations/shopify.html">Shopify </a></li><li><a href="integrations/razorpay.html">Razorpay</a></li><li><a href="integrations/shopify.html">Shopify Checkouts</a></li><li><a href="integrations/webengage.html">WebEngage</a></li><li><a href="integrations/leadsquared.html">LeadSquared</a></li><li><a href="integrations/integrately.html">Integrately</a></li><li><a href="https://samyoj.stoplight.io/docs/project-api/56ea5a8f1cc9a-project-webhook">Webhook APIs</a></li></ul></li><li><a href="partner.html">Partner</a></li></div><div class="um-drawer-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_dhptvraq2o" class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow"><path d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z" fill="currentColor"></path></svg></button><script>(function() { 
+              </header>
+                            <div class="um-drawer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="industries.html">Industries</a></li>
+              </div>
+              <div class="um-drawer-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_dhptvraq2o" class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow"><path d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z" fill="currentColor"></path></svg></button><script>(function() { 
   document.getElementById('btn_dhptvraq2o').addEventListener('click', function(e) {(function redirectWithParams() {
   // Get current query string
   const query = window.location.search;
@@ -2926,7 +2894,7 @@ body:not(.noScript) .umso-animated {
   }
 })();
 })
-})()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_qb56n0nwrr" class="_b90406f0 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow"><path d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z" fill="currentColor"></path></svg></a></div></div><script>!function(){const e=document.getElementById('1mdr2l7rkd');if(!e)return;const t=document.querySelector('.umso-header');t&&t.appendChild(document.getElementById('1mdr2l7rkd-drawer'));const n=document.getElementById('1mdr2l7rkd-drawerTrigger'),d=document.getElementById('1mdr2l7rkd-drawer'),s=document.querySelectorAll('.um-lang-picker');s&&s.length>0&&s.forEach(function(e){e.querySelector('button').addEventListener('click',function(){e.querySelector('ul').classList.toggle('um-open')})}),document.addEventListener('click',function(e){d.contains(e.target)||e.target===n||d.classList.add('um-hidden')});const i=d.querySelector('.um-nav-drawerClose'),r=d.querySelectorAll('.um-drawer-links > li > button'),c=e.querySelector('.um-nav-children'),o=e.querySelector('.um-nav-links'),u=e.querySelector('.um-nav-buttons');n.addEventListener('click',function(){d.classList.remove('um-hidden')}),i.addEventListener('click',function(){d.classList.add('um-hidden')}),r.forEach(function(e){e.addEventListener('click',function(){this.parentNode.classList.toggle('um-open')})});let l=0,a=!0;function m(){!1===a&&(l=(c?.offsetWidth||0)+(o?.offsetWidth||0)+(u?.offsetWidth||0)+10),f()}function f(){e.offsetWidth-10<l?(a=!0,e.classList.add('um-hidden'),n.classList.remove('um-hidden')):(a=!1,e.classList.remove('um-hidden'),n.classList.add('um-hidden'),d.classList.add('um-hidden'))}new ResizeObserver(f).observe(document.body),c&&new ResizeObserver(m).observe(c),u&&new ResizeObserver(m).observe(u),o&&new ResizeObserver(m).observe(o),m(),f()}();</script></div></div></div></div></header><section class="_aee52cca theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4" data-reveal>
+})()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_qb56n0nwrr" class="_b90406f0 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow"><path d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z" fill="currentColor"></path></svg></a></div></div><script>!function(){const e=document.getElementById('yspyhjboie');if(!e)return;const t=document.querySelector('.umso-header');t&&t.appendChild(document.getElementById('yspyhjboie-drawer'));const n=document.getElementById('yspyhjboie-drawerTrigger'),d=document.getElementById('yspyhjboie-drawer'),s=document.querySelectorAll('.um-lang-picker');s&&s.length>0&&s.forEach(function(e){e.querySelector('button').addEventListener('click',function(){e.querySelector('ul').classList.toggle('um-open')})}),document.addEventListener('click',function(e){d.contains(e.target)||e.target===n||d.classList.add('um-hidden')});const i=d.querySelector('.um-nav-drawerClose'),r=d.querySelectorAll('.um-drawer-links > li > button'),c=e.querySelector('.um-nav-children'),o=e.querySelector('.um-nav-links'),u=e.querySelector('.um-nav-buttons');n.addEventListener('click',function(){d.classList.remove('um-hidden')}),i.addEventListener('click',function(){d.classList.add('um-hidden')}),r.forEach(function(e){e.addEventListener('click',function(){this.parentNode.classList.toggle('um-open')})});let l=0,a=!0;function m(){!1===a&&(l=(c?.offsetWidth||0)+(o?.offsetWidth||0)+(u?.offsetWidth||0)+10),f()}function f(){e.offsetWidth-10<l?(a=!0,e.classList.add('um-hidden'),n.classList.remove('um-hidden')):(a=!1,e.classList.remove('um-hidden'),n.classList.add('um-hidden'),d.classList.add('um-hidden'))}new ResizeObserver(f).observe(document.body),c&&new ResizeObserver(m).observe(c),u&&new ResizeObserver(m).observe(u),o&&new ResizeObserver(m).observe(o),m(),f()}();</script></div></div></div></div></header><section class="_aee52cca theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4" data-reveal>
   <div class="wr">
     <div class="ind-hero">
       <div class="ind-hero-copy">
@@ -2944,38 +2912,38 @@ body:not(.noScript) .umso-animated {
         </div>
 
         <div class="ind-hero-chips">
-          <a class="ind-chip" href="industries/ecommerce.html">
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L22 7H6"/></svg>
             E-commerce
-          </a>
-          <a class="ind-chip" href="industries/retail.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>
             Retail
-          </a>
-          <a class="ind-chip" href="industries/education.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
             Education
-          </a>
-          <a class="ind-chip" href="industries/real-estate.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
             Real Estate
-          </a>
-          <a class="ind-chip" href="industries/healthcare.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             Healthcare
-          </a>
-          <a class="ind-chip" href="industries/travel-and-tourism.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
             Travel
-          </a>
-          <a class="ind-chip" href="industries/it-services.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
             SaaS
-          </a>
-          <a class="ind-chip" href="industries/marketing-agencies.html">
+          </span>
+          <span class="ind-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
             Professional Services
-          </a>
+          </span>
         </div>
 
         <div class="ind-hero-note">
@@ -2998,102 +2966,102 @@ body:not(.noScript) .umso-animated {
       <h2 class="ind-dir-title">Explore more <span class="ind-accent">Industry-wise</span> WhatsApp Use Cases</h2>
     </header>
     <div class="ind-dir-grid">
-          <a class="ind-dir-card" data-reveal href="industries/ecommerce.html">
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
             <h3>E-commerce & D2C</h3>
             <p class="ind-dir-lead">Turn product questions into confident purchases.</p>
             <p>Guide shoppers with interactive flows, answer faster from a shared inbox, and keep catalog orders connected to the conversation.</p>
             <div class="ind-dir-meta"><span>Shared inbox</span><span>Catalog orders</span><span>Campaigns</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/retail.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg></div>
             <h3>Retail & Stores</h3>
             <p class="ind-dir-lead">One WhatsApp experience across every location.</p>
             <p>Route store enquiries to the right team, share local context, and keep service consistent across every connected number.</p>
             <div class="ind-dir-meta"><span>Multi-number</span><span>Departments</span><span>Reporting</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/education.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
             <h3>Education & Coaching</h3>
             <p class="ind-dir-lead">Guide every admission enquiry to the right counsellor.</p>
             <p>Capture course interest with forms, answer FAQs with AI, qualify intent, and hand off with tags and history ready.</p>
             <div class="ind-dir-meta"><span>Lead capture</span><span>AI FAQs</span><span>Pipeline</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/real-estate.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
             <h3>Real Estate</h3>
             <p class="ind-dir-lead">Respond to property interest while intent is high.</p>
             <p>Qualify budget and location, tag serious buyers, assign agents fast, and move every enquiry through your pipeline.</p>
             <div class="ind-dir-meta"><span>Qualification</span><span>Assignment</span><span>Follow-up</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/healthcare.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon rose"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></div>
             <h3>Healthcare & Clinics</h3>
             <p class="ind-dir-lead">Make non-clinical patient communication easier to manage.</p>
             <p>Organize enquiries, appointment requests, and support conversations with business hours, tickets, and consent controls.</p>
             <div class="ind-dir-meta"><span>Forms</span><span>Tickets</span><span>Consent</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/travel-and-tourism.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon teal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
             <h3>Travel & Hospitality</h3>
             <p class="ind-dir-lead">Help guests get the right answer throughout the journey.</p>
             <p>Use AI, forms, templates, and tickets for bookings, special requests, and post-stay engagement—without losing guest context.</p>
             <div class="ind-dir-meta"><span>AI replies</span><span>Templates</span><span>Tickets</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/it-services.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg></div>
             <h3>SaaS & Technology</h3>
             <p class="ind-dir-lead">Connect product interest, demos, and support.</p>
             <p>Qualify demos with guided flows, answer product questions with knowledge-powered AI, and sync activity through API and webhooks.</p>
             <div class="ind-dir-meta"><span>AI knowledge</span><span>Pipeline</span><span>API</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/marketing-agencies.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div>
             <h3>Professional Services</h3>
             <p class="ind-dir-lead">Give every client conversation a clear owner.</p>
             <p>Standardize intake, collaboration, permissions, and follow-up so agencies and consultancies never restart from scratch.</p>
             <div class="ind-dir-meta"><span>Teams</span><span>Permissions</span><span>Intake</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/finance-insurance.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
             <h3>Financial Services</h3>
             <p class="ind-dir-lead">Organize high-trust customer enquiries.</p>
             <p>Keep templates, consent, permissions, and audit visibility close to daily follow-up—without claiming to replace core banking systems.</p>
             <div class="ind-dir-meta"><span>Consent</span><span>Audit</span><span>Templates</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/automobile.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg></div>
             <h3>Automotive</h3>
             <p class="ind-dir-lead">Move vehicle enquiries and service requests to action.</p>
             <p>Capture model interest, test-drive requests, and service needs, then route sales or workshop work with the right context.</p>
             <div class="ind-dir-meta"><span>Forms</span><span>Routing</span><span>Tickets</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/hr-recruitment.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon teal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg></div>
             <h3>Recruitment & Staffing</h3>
             <p class="ind-dir-lead">Keep candidate and employer conversations moving.</p>
             <p>Collect role interest and availability, assign recruiters, and track the next step with tags, pipeline stages, and templates.</p>
             <div class="ind-dir-meta"><span>Intake</span><span>Pipeline</span><span>SLA</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
-          <a class="ind-dir-card" data-reveal href="industries/restaurants-food-delivery.html">
+          </article>
+          <article class="ind-dir-card" data-reveal>
             <div class="ind-dir-icon rose"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
             <h3>Local Services</h3>
             <p class="ind-dir-lead">Turn urgent messages into assigned work.</p>
             <p>Capture location and timing, route the request to the available teammate, and track resolution with tickets and callbacks.</p>
             <div class="ind-dir-meta"><span>Location</span><span>Tickets</span><span>Callbacks</span></div>
             <span class="ind-dir-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </a>
+          </article>
     </div>
 
     <div class="ind-cta-band" data-reveal>
@@ -3362,43 +3330,53 @@ body:not(.noScript) .umso-animated {
             <ul class="_a1fe80f4" style="position:relative">
               <li class="_171c7314"><a href="features.html" class="_7d179ab3">Features</a></li>
               <li class="_171c7314"><a href="industries.html" class="_7d179ab3">Industries</a></li>
-              <li class="_171c7314"><a href="pricing.html" target="_blank" rel="noopener noreferrer"
+              <li class="_171c7314"><a href="#" onclick="return false;" target="_blank" rel="noopener noreferrer"
                   class="_7d179ab3">Pricing</a></li>
               <li class="_171c7314"><a href="https://calendly.com/d/3k8-k9q-9r3" target="_blank"
                   rel="noopener noreferrer" class="_7d179ab3">Book a Demo</a></li>
-              <li class="_171c7314"><a href="partner.html" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Become a Partner</a></li>
-              <li class="_171c7314"><a href="products/whatsapp-marketing.html" target="_blank" rel="noopener noreferrer"
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Become a Partner</a></li>
+              <li class="_171c7314"><a href="#" onclick="return false;" target="_blank" rel="noopener noreferrer"
                   class="_7d179ab3">WhatsApp Marketing</a></li>
-              <li class="_171c7314"><a href="whatsapp-business-api.html" class="_7d179ab3">WhatsApp Business API</a></li>
+              <li class="_171c7314"><a href="#" onclick="return false;" class="_7d179ab3">WhatsApp Business API</a></li>
             </ul>
           </li>
           <li class="_15091c77">
             <h4 class="_f7277ae9 um-text">Resources</h4>
             <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer" class="_7d179ab3"
-                  onclick="return false;">Help Center</a></li>
-              <li class="_171c7314"><a href="https://m.samyoj.com/blog/" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Blog</a></li>
-              <li class="_171c7314"><a href="about-us.html" target="_blank" rel="noopener noreferrer" class="_7d179ab3">About Samyoj</a></li>
-              <li class="_171c7314"><a href="https://careers.samyoj.com/" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Careers</a></li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Help Center</a></li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Blog</a></li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">About Samyoj</a></li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Careers</a></li>
             </ul>
           </li>
           <li class="_15091c77">
             <h4 class="_f7277ae9 um-text">FREE Tools</h4>
             <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="https://create.samyoj.com/generate-whatsapp-button" target="_blank" rel="noopener noreferrer" class="_7d179ab3">WhatsApp Button</a></li>
-              <li class="_171c7314"><a href="https://create.samyoj.com/generate-whatsapp-link" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Generate WhatsApp Link</a></li>
-              <li class="_171c7314"><a href="https://play.google.com/store/apps/details?id=com.samyoj.mobile" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Download Android app</a></li>
-              <li class="_171c7314"><a href="https://apps.apple.com/in/app/samyoj/id6711351197" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Download iOS app</a></li>
-              <li class="_171c7314"><a href="whatsapp-business-api-pricing-calculator.html" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Pricing Calculator</a></li>
+              <li class="_171c7314"><a href="#" target="_blank"
+                  rel="noopener noreferrer" class="_7d179ab3" onclick="return false;">WhatsApp Button</a></li>
+              <li class="_171c7314"><a href="#" target="_blank"
+                  rel="noopener noreferrer" class="_7d179ab3" onclick="return false;">Generate WhatsApp Link</a></li>
+              <li class="_171c7314"><a href="#"
+                  target="_blank" rel="noopener noreferrer" class="_7d179ab3" onclick="return false;">Download Android app</a></li>
+              <li class="_171c7314"><a href="#" target="_blank"
+                  rel="noopener noreferrer" class="_7d179ab3" onclick="return false;">Download iOS app</a></li>
+              <li class="_171c7314"><a href="#" target="_blank"
+                  rel="noopener noreferrer" class="_7d179ab3" onclick="return false;">Pricing Calculator</a></li>
             </ul>
           </li>
           <li class="_15091c77">
             <h4 class="_f7277ae9 um-text">Legal</h4>
             <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Privacy Policy</a></li>
-              <li class="_171c7314"><a href="refund-policy.html" target="_blank" rel="noopener noreferrer" class="_7d179ab3">Refund Policy</a></li>
-              <li class="_171c7314"><a href="tos.html" class="_7d179ab3">Terms &amp; Conditions</a>
-              </li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Privacy Policy</a></li>
+              <li class="_171c7314"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="_7d179ab3" onclick="return false;">Refund Policy</a></li>
+              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Terms &amp; Conditions</a></li>
             </ul>
           </li>
           <li class="_15091c77">
@@ -3406,9 +3384,9 @@ body:not(.noScript) .umso-animated {
               <p>Contact Us</p>
             </h4>
             <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="contact-us.html" class="_7d179ab3">Contact Our Team</a></li>
-              <li class="_171c7314"><a href="tel:+918839888531" class="_7d179ab3">Sales +918839888531</a></li>
-              <li class="_171c7314"><a href="tel:+918305369467" class="_7d179ab3">Support +918305369467</a></li>
+              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Contact Our Team</a></li>
+              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Sales +918839888531</a></li>
+              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Support +918305369467</a></li>
             </ul>
           </li>
         </ul>

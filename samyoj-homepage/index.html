@@ -914,11 +914,18 @@
     .um-nav-wrapper.um-links-centered .um-nav-links {
       flex: 1;
       margin: 0 auto;
+      justify-content: center;
     }
 
     .um-nav-wrapper.um-links-centered .um-nav-children {
       flex: 1;
       margin-right: 20px;
+    }
+
+    .um-nav-wrapper.um-links-centered .um-nav-buttons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .um-nav-wrapper.um-children-centered.um-hidden {
@@ -4029,7 +4036,7 @@
         style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
         <div class="_f4c879d8">
           <div class="_592c9c5c wr">
-                        <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-classic um-hidden" style="position:relative">
+                        <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
                 <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="../images/logo.jpeg"
                       alt="Logo_Samyoj.png" style="width:150px" /></a></div>
@@ -4037,32 +4044,7 @@
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="#" onclick="return false;">Pricing</a></li>
-                <li><a href="#" onclick="return false;">Partner</a></li>
-                <li>
-                  <div class="um-lang-picker"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="tabler-icon tabler-icon-world ">
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M3.6 9h16.8"></path>
-                        <path d="M3.6 15h16.8"></path>
-                        <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-                        <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-                      </svg>Eng<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-down ">
-                        <path d="M6 9l6 6l6 -6"></path>
-                      </svg></button>
-                    <ul class="">
-                      <li><a href="#" onclick="return false;">Português</a></li>
-                      <li><a href="#" onclick="return false;">Español</a></li>
-                      <li><a href="#" onclick="return false;">हिन्दी, हिंदी</a></li>
-                      <li><a href="#" onclick="return false;">العربية</a></li>
-                      <li><a href="#" onclick="return false;">Deutsch</a></li>
-                      <li><a href="#" onclick="return false;">Français</a></li>
-                    </ul>
-                  </div>
-                </li>
+                <li><a href="industries.html">Industries</a></li>
               </ul>
               <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
                   class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
@@ -4094,39 +4076,17 @@
             </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
             <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer um-hidden">
               <header>
-                <div class="um-lang-picker"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" class="tabler-icon tabler-icon-world ">
-                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                      <path d="M3.6 9h16.8"></path>
-                      <path d="M3.6 15h16.8"></path>
-                      <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-                      <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-                    </svg>Eng<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="tabler-icon tabler-icon-chevron-down ">
-                      <path d="M6 9l6 6l6 -6"></path>
-                    </svg></button>
-                  <ul class="">
-                    <li><a href="#" onclick="return false;">Português</a></li>
-                    <li><a href="#" onclick="return false;">Español</a></li>
-                    <li><a href="#" onclick="return false;">हिन्दी, हिंदी</a></li>
-                    <li><a href="#" onclick="return false;">العربية</a></li>
-                    <li><a href="#" onclick="return false;">Deutsch</a></li>
-                    <li><a href="#" onclick="return false;">Français</a></li>
-                  </ul>
-                </div><button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                <button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="tabler-icon tabler-icon-x ">
                     <path d="M18 6l-12 12"></path>
                     <path d="M6 6l12 12"></path>
                   </svg></button>
               </header>
-              <div class="um-drawer-links">
+                            <div class="um-drawer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="#" onclick="return false;">Pricing</a></li>
-                <li><a href="#" onclick="return false;">Partner</a></li>
+                <li><a href="industries.html">Industries</a></li>
               </div>
               <div class="um-drawer-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_q2wr5r8dmc"
                   class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
