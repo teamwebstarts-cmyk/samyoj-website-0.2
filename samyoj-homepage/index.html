@@ -4128,6 +4128,11 @@
     /* Custom Hero Section Styles */
     #custom-hero-section {
       background-color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
       padding: calc(var(--um-header-height) + 30px) 0 10px 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
@@ -6902,34 +6907,56 @@
       justify-content: center;
       flex: 1;
       min-width: 0;
-      height: 90px;
+      height: 96px;
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
-      padding: 8px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+      padding: 10px 6px;
       box-sizing: border-box;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.25s ease;
     }
 
     .sps-int-icon:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 184, 83, 0.12);
+      border-color: #00b853;
     }
 
-    .sps-int-icon img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      margin-bottom: 6px;
+    .sps-feat-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
     }
+
+    .sps-feat-badge svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .sps-int-icon:hover .sps-feat-badge {
+      transform: scale(1.1);
+    }
+
+    .sps-badge-green  { background: #e6f7ed; border: 1px solid #c2eed5; }
+    .sps-badge-purple { background: #f3e8ff; border: 1px solid #e9d5ff; }
+    .sps-badge-blue   { background: #e0f2fe; border: 1px solid #bae6fd; }
+    .sps-badge-orange { background: #fef3c7; border: 1px solid #fde68a; }
+    .sps-badge-cyan   { background: #e0f2fe; border: 1px solid #bae6fd; }
+    .sps-badge-teal   { background: #dcfce7; border: 1px solid #bbf7d0; }
 
     .sps-int-icon span {
-      font-size: 10px;
-      font-weight: 600;
-      color: #475569;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
@@ -7979,7 +8006,7 @@
         <!-- Ratings Row -->
 
         <!-- Testimonials Carousel -->
-        <div class="sps-testimonials-container" style="display:none">
+        <div class="sps-testimonials-container">
           <div class="sps-testimonials-row">
 
             <!-- Card 1 -->
@@ -8404,45 +8431,77 @@
         <!-- Bottom Banners Row -->
         <div class="sps-bottom-banners">
 
-          <!-- Integrations Banner -->
+          <!-- Features Banner -->
           <div class="sps-integrations-banner">
-            <h3>Seamless <span>Integrations</span> with Your Favorite Tools</h3>
-            <p>Connect Samyoj with the tools you already use.</p>
+            <h3>Powerful <span>Features</span> to Scale Your Business</h3>
+            <p>Everything you need to automate conversations, drive sales, and engage customers on WhatsApp.</p>
             <div class="sps-integrations-grid">
-              <div class="sps-int-icon">
-                <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify"
-                  onerror="this.src='https://cdn-icons-png.flaticon.com/128/825/825544.png'">
-                <span>Shopify</span>
-              </div>
+              <a href="features/whatsapp-broadcasting.html" class="sps-int-icon" title="WhatsApp Broadcasting">
+                <div class="sps-feat-badge sps-badge-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#108548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 2L11 13"></path>
+                    <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                  </svg>
+                </div>
+                <span>Broadcasting</span>
+              </a>
 
-              <div class="sps-int-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Zapier_logo.svg" alt="Zapier"
-                  onerror="this.src='https://cdn-icons-png.flaticon.com/128/3884/3884357.png'">
-                <span>Zapier</span>
-              </div>
-              <div class="sps-int-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Google_Sheets_2020_Logo.svg"
-                  alt="Google Sheets" onerror="this.src='https://cdn-icons-png.flaticon.com/128/281/281760.png'">
-                <span>Google Sheets</span>
-              </div>
-              <div class="sps-int-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" alt="HubSpot"
-                  onerror="this.src='https://cdn-icons-png.flaticon.com/128/5968/5968846.png'">
-                <span>HubSpot</span>
-              </div>
-              <div class="sps-int-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce"
-                  onerror="this.src='https://cdn-icons-png.flaticon.com/128/5968/5968880.png'">
-                <span>Salesforce</span>
-              </div>
-              <div class="sps-int-icon sps-more">
-                <div class="dots-icon">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+              <a href="features/ai-whatsapp-chatbot.html" class="sps-int-icon" title="AI WhatsApp Chatbot">
+                <div class="sps-feat-badge sps-badge-purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                    <circle cx="12" cy="5" r="2"></circle>
+                    <path d="M12 7v4"></path>
+                    <line x1="8" y1="16" x2="8" y2="16"></line>
+                    <line x1="16" y1="16" x2="16" y2="16"></line>
+                  </svg>
+                </div>
+                <span>AI Chatbots</span>
+              </a>
+
+              <a href="features/samyoj-meta-ads-manager.html" class="sps-int-icon" title="Click-to-WhatsApp Ads">
+                <div class="sps-feat-badge sps-badge-blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <span>Meta Ads</span>
+              </a>
+
+              <a href="features/whatsapp-payments.html" class="sps-int-icon" title="WhatsApp Payments">
+                <div class="sps-feat-badge sps-badge-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                  </svg>
+                </div>
+                <span>Payments</span>
+              </a>
+
+              <a href="whatsapp-catalogues.html" class="sps-int-icon" title="WhatsApp Catalogs">
+                <div class="sps-feat-badge sps-badge-cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <span>Catalogs</span>
+              </a>
+
+              <a href="features.html" class="sps-int-icon sps-more" title="Explore All Features">
+                <div class="sps-feat-badge sps-badge-teal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
                 </div>
                 <span>& more</span>
-              </div>
+              </a>
             </div>
           </div>
 
