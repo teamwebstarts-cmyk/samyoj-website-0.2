@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/features", "destination": "/features.html" },
+    { "source": "/industries", "destination": "/industries.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/legal/privacy-policy", "destination": "/legal/privacy-policy.html" },
+    { "source": "/legal/terms-and-conditions", "destination": "/legal/terms-and-conditions.html" },
+    { "source": "/legal/cookie-policy", "destination": "/legal/cookie-policy.html" },
+    { "source": "/legal/refund-cancellation-policy", "destination": "/legal/refund-cancellation-policy.html" },
+    { "source": "/legal/acceptable-use-policy", "destination": "/legal/acceptable-use-policy.html" }
+  ]
+}
