@@ -1,0 +1,153 @@
+/* Samyoj site navigation — matches index.html */
+.sy-nav {
+  --sy-nav-ink: #10231e;
+  --sy-nav-muted: #3d514b;
+  --sy-nav-green: #03cf65;
+  --sy-nav-line: #edf5f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--sy-nav-line);
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.sy-nav *,
+.sy-nav *::before,
+.sy-nav *::after {
+  box-sizing: border-box;
+}
+
+.sy-nav-inner {
+  width: 100%;
+  max-width: var(--wr-max, 1530px);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 40px);
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.sy-nav-brand img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.sy-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sy-nav-links a {
+  color: var(--sy-nav-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.18s ease;
+}
+
+.sy-nav-links a:hover,
+.sy-nav-links a[aria-current="page"] {
+  color: #087a47;
+}
+
+.sy-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sy-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 18px;
+  font: 700 14px "Manrope", system-ui, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.sy-nav-btn-primary {
+  background: var(--sy-nav-green);
+  color: #fff;
+}
+
+.sy-nav-btn-primary:hover {
+  background: #00b859;
+}
+
+.sy-nav-btn-secondary {
+  background: transparent;
+  color: var(--sy-nav-ink);
+  border: 1px solid #d7e4dd;
+}
+
+.sy-nav-btn-secondary:hover {
+  border-color: #b9cdc4;
+  color: #087a47;
+}
+
+.sy-nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d7e4dd;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sy-nav-ink);
+  cursor: pointer;
+}
+
+.sy-nav-drawer {
+  display: none;
+  border-top: 1px solid var(--sy-nav-line);
+  background: #fff;
+  padding: 16px clamp(20px, 3vw, 40px) 24px;
+}
+
+.sy-nav-drawer.is-open {
+  display: block;
+}
+
+.sy-nav-drawer .sy-nav-links {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.sy-nav-drawer .sy-nav-actions {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sy-nav-drawer .sy-nav-btn {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .sy-nav-inner {
+    min-height: 64px;
+  }
+
+  .sy-nav-links,
+  .sy-nav-actions {
+    display: none;
+  }
+
+  .sy-nav-toggle {
+    display: inline-grid;
+    place-items: center;
+  }
+}

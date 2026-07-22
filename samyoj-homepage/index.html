@@ -3779,6 +3779,9 @@
         }
       })();
   </script>
+</style>
+<link rel="stylesheet" href="mobile-buttons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="samyoj-footer.css?v=2">
 </head>
 
 <body class="noScript">
@@ -3968,7 +3971,7 @@
                     '<div class="mb-inner">' +
                     '<span class="mb-pill"><span class="mb-dot"></span>New Launch</span>' +
                     '<span class="mb-title">Build AI Agents on WhatsApp that qualify &amp; convert 24/7</span>' +
-                    '<a class="mb-cta" href="https://app.samyoj.com/" onclick="return false;"><span class="mb-label">Explore More</span>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-label">Explore More</span>' +
                     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
                     '</a>' +
                     '</div>' +
@@ -4471,7 +4474,7 @@
 
       .custom-hero-ctas {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 12px;
         margin-bottom: 24px;
       }
@@ -6094,7 +6097,8 @@
     .setup-cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      gap: 10px;
       background-color: #00b853;
       color: #ffffff !important;
       padding: 20px 36px;
@@ -6102,6 +6106,7 @@
       font-size: 18px;
       font-weight: 800;
       text-decoration: none;
+      white-space: nowrap;
       transition: all 0.25s ease;
       box-shadow: 0 8px 24px rgba(0, 184, 83, 0.3);
     }
@@ -6115,6 +6120,7 @@
     .setup-cta-btn svg {
       width: 20px;
       height: 20px;
+      flex-shrink: 0;
     }
 
     .setup-cta-info {
@@ -6309,6 +6315,7 @@
     .promo-cta-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       background-color: #00b853;
       color: #ffffff !important;
@@ -6317,6 +6324,7 @@
       font-size: 17px;
       font-weight: 800;
       text-decoration: none;
+      white-space: nowrap;
       transition: all 0.25s ease;
       box-shadow: 0 8px 24px rgba(0, 184, 83, 0.3);
     }
@@ -6330,6 +6338,7 @@
     .promo-cta-btn svg {
       width: 18px;
       height: 18px;
+      flex-shrink: 0;
     }
 
     .promo-cta-info {
@@ -6417,13 +6426,29 @@
 
       .setup-cta-block {
         flex-direction: column;
+        align-items: center;
         gap: 16px;
         width: 100%;
       }
 
-      .setup-cta-btn {
+      .setup-cta-btn,
+      .promo-cta-btn {
         width: 100%;
+        max-width: 100%;
         justify-content: center;
+        padding: 16px 20px;
+        font-size: 15px;
+        box-sizing: border-box;
+      }
+
+      .setup-cta-info,
+      .promo-cta-info {
+        justify-content: center;
+      }
+
+      .promo-right {
+        width: 100%;
+        align-items: stretch;
       }
     }
 
@@ -7868,7 +7893,7 @@
           <!-- CTA Block -->
           <div class="setup-cta-block">
             <a href="https://app.samyoj.com/" class="setup-cta-btn">
-              Start 14-Day Free Trial <span class="arrow">→</span>
+              Start 14-Day Free Trial
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
                 stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -7973,7 +7998,7 @@
         </div>
         <div class="promo-right">
           <a href="https://app.samyoj.com/" class="promo-cta-btn">
-            Start 14-Day Free Trial <span class="arrow">→</span>
+            Start 14-Day Free Trial
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
               stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
@@ -8714,85 +8739,71 @@
       </div>
     </div>
   </section>
-  <footer class="_c4b89fde theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4">
-    <div class="wr">
-      <div class="_bea1daea">
-        <div class="_240f2910"><span class="_c0e4633f um-text">
-            <p>© 2026 Samyoj<br /><br />Made with ♥️ in India</p>
-          </span>
-          <div class="_a6d0f97b" style="--scale:0.5"><img draggable="false" src="../images/download.png"
-              class="_9fc8f72f" alt="Business partner" style="max-width:160px;height:auto;margin-bottom:12px" /></div>
-          <div class="_4dba2c1d" style="position:relative"><a href="https://www.linkedin.com/company/samyoj/"
-              target="_blank" rel="noopener noreferrer" class="_3d4606c5">
-              <div class="um-icon _317000c4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 20 20">
-                  <path fill="currentColor"
-                    d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973 0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355-.537 0-.856.371-.997.728-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01 1.279 0 2.238.857 2.238 2.699v3.699z">
-                  </path>
-                </svg></div>
-            </a><a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer"
-              class="_3d4606c5">
-              <div class="um-icon _317000c4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24"
-                  height="24">
-                  <path fill="currentColor"
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                  </path>
-                </svg></div>
-            </a><a href="#" target="_blank"
-              rel="noopener noreferrer" class="_3d4606c5" onclick="return false;">
-              <div class="um-icon _317000c4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 20 20">
-                  <path fill="currentColor"
-                    d="M4.943 18.05l7.666-4.327-1.646-1.823-6.02 6.15zm-2.8-15.927c-.089.158-.143.34-.143.542V17.79c0 .28.105.52.263.71L9.89 10.71 2.142 2.123zM17.48 9.482l-2.673-1.509-2.722 2.781 1.951 2.163 3.444-1.943a.946.946 0 0 0 .52-.746.946.946 0 0 0-.52-.746zm-4.115-2.323l-9.22-5.204 6.866 7.61 2.354-2.406z">
-                  </path>
-                </svg></div>
-            </a><a href="#" target="_blank" rel="noopener noreferrer"
-              class="_3d4606c5" onclick="return false;">
-              <div class="um-icon _317000c4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 20 20">
-                  <path fill="currentColor"
-                    d="M17.564 13.862c-.413.916-.612 1.325-1.144 2.135-.742 1.13-1.79 2.538-3.087 2.55-1.152.01-1.448-.75-3.013-.741-1.564.008-1.89.755-3.043.744-1.297-.012-2.29-1.283-3.033-2.414-2.077-3.16-2.294-6.87-1.013-8.843.91-1.401 2.347-2.221 3.697-2.221 1.375 0 2.24.754 3.376.754 1.103 0 1.775-.756 3.365-.756 1.2 0 2.474.655 3.381 1.785-2.972 1.629-2.49 5.873.514 7.007zM12.463 3.808c.577-.742 1.016-1.788.857-2.858-.944.065-2.047.665-2.692 1.448-.584.71-1.067 1.763-.88 2.787 1.03.031 2.096-.584 2.715-1.377z">
-                  </path>
-                </svg></div>
-            </a></div>
-          <div class="_370825cf umsoPluginTarget"></div>
+  <footer class="sy-footer" aria-label="Site footer">
+  <div class="sy-footer-inner">
+    <div class="sy-footer-grid">
+      <div class="sy-footer-brand">
+        <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
+          <img src="../images/logo.jpeg" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56" loading="lazy" decoding="async" />
+        </a>
+        <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale, backed by reliability.</p>
+        <div class="sy-footer-partner">
+          <img src="../images/download.png" alt="Meta Tech Provider" width="160" height="89" loading="lazy" decoding="async" />
         </div>
-       
-        <ul class="_6d77f4ac" style="position:relative">
-          <li class="_15091c77">
-            <h4 class="_f7277ae9 um-text">Platform</h4>
-            <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="features.html" class="_7d179ab3">Features</a></li>
-              <li class="_171c7314"><a href="industries.html" class="_7d179ab3">Industries</a></li>
-              <li class="_171c7314"><a href="contact.html" class="_7d179ab3">Contact</a></li>
-              <li class="_171c7314"><a href="https://calendly.com/d/3k8-k9q-9r3" target="_blank"
-                  rel="noopener noreferrer" class="_7d179ab3">Book a Demo</a></li>
-            </ul>
-          </li>
-          <li class="_15091c77">
-            <h4 class="_f7277ae9 um-text">Legal</h4>
-            <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="legal/privacy-policy.html" class="_7d179ab3">Privacy Policy</a></li>
-              <li class="_171c7314"><a href="legal/refund-cancellation-policy.html" class="_7d179ab3">Refund Policy</a></li>
-              <li class="_171c7314"><a href="legal/terms-and-conditions.html" class="_7d179ab3">Terms &amp; Conditions</a></li>
-              <li class="_171c7314"><a href="legal/acceptable-use-policy.html" class="_7d179ab3">Acceptable Use</a></li>
-              <li class="_171c7314"><a href="legal/cookie-policy.html" class="_7d179ab3">Cookie Policy</a></li>
-            </ul>
-          </li>
-          <li class="_15091c77">
-            <h4 class="_f7277ae9 um-text">
-              <p>Contact Us</p>
-            </h4>
-            <ul class="_a1fe80f4" style="position:relative">
-              <li class="_171c7314"><a href="contact.html" class="_7d179ab3">Contact Our Team</a></li>
-              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Sales +918839888531</a></li>
-              <li class="_171c7314"><a href="#" class="_7d179ab3" onclick="return false;">Support +918305369467</a></li>
-            </ul>
-          </li>
+        <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e11d48" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> in India</p>
+        <div class="sy-footer-social" aria-label="Social links">
+          <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+          <a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 2.2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.27 1.3.62 1.8 1.18.57.56.92 1.15 1.19 1.84.25.66.42 1.4.47 2.5.05 1.07.06 1.38.06 4.08s-.01 3.01-.06 4.08c-.05 1.1-.22 1.84-.47 2.5a4.9 4.9 0 0 1-1.19 1.84 4.9 4.9 0 0 1-1.84 1.19c-.66.25-1.4.42-2.5.47-1.07.05-1.38.06-4.08.06s-3.01-.01-4.08-.06c-1.1-.05-1.84-.22-2.5-.47a4.9 4.9 0 0 1-1.84-1.19 4.9 4.9 0 0 1-1.19-1.84c-.25-.66-.42-1.4-.47-2.5C2.21 15.01 2.2 14.7 2.2 12s.01-3.01.06-4.08c.05-1.1.22-1.84.47-2.5.27-.69.62-1.28 1.19-1.84A4.9 4.9 0 0 1 5.76 2.73c.66-.25 1.4-.42 2.5-.47C9.33 2.21 9.64 2.2 12 2.2M12 0C9.28 0 8.94 0 7.86.05 6.77.1 6.02.28 5.37.53A7.08 7.08 0 0 0 2.8 2.8 7.08 7.08 0 0 0 .53 5.37C.28 6.02.1 6.77.05 7.86 0 8.94 0 9.28 0 12s0 3.06.05 4.14c.05 1.09.23 1.84.48 2.49a7.08 7.08 0 0 0 2.27 2.57 7.08 7.08 0 0 0 2.57 2.27c.65.25 1.4.43 2.49.48C8.94 24 9.28 24 12 24s3.06 0 4.14-.05c1.09-.05 1.84-.23 2.49-.48a7.08 7.08 0 0 0 2.57-2.27 7.08 7.08 0 0 0 2.27-2.57c.25-.65.43-1.4.48-2.49C24 15.06 24 14.72 24 12s0-3.06-.05-4.14c-.05-1.09-.23-1.84-.48-2.49a7.08 7.08 0 0 0-2.27-2.57A7.08 7.08 0 0 0 18.63.53C17.98.28 17.23.1 16.14.05 15.06 0 14.72 0 12 0z"/></svg></a>
+          <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z"/></svg></a>
+          <a href="https://play.google.com/store/apps/details?id=com.samyoj.mobile" target="_blank" rel="noopener noreferrer" aria-label="Google Play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18.5A1.2 1.2 0 0 0 2 1.6v20.8a1.2 1.2 0 0 0 1.18 1.1c.16 0 .32-.04.46-.12L15.5 12.6 3.64.62A1.2 1.2 0 0 0 3.18.5zm12.7 8.1-2.4 2.4 2.4 2.4 3.6-2.1c.7-.4.7-1.4 0-1.8l-3.6-1.9zM4.1 21.9 12.4 13.6 10 11.2 3.4 19.6c.14.8.5 1.6.7 2.3zm.7-19.8C4.6 2.8 4.24 3.6 4.1 4.4L10 12.8l2.4-2.4L4.8 2.1z"/></svg></a>
+          <a href="https://apps.apple.com/in/app/samyoj/id6711351197" target="_blank" rel="noopener noreferrer" aria-label="App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="sy-footer-col" aria-label="Platform">
+        <h4>Platform</h4>
+        <ul class="sy-footer-links">
+          <li><a href="features.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.2 5.4L20 10l-4.5 3.5L16.8 20 12 16.8 7.2 20l1.3-6.5L4 10l5.8-1.6L12 3z"/></svg>Features</a></li>
+          <li><a href="industries.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>Industries</a></li>
+          <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><path d="M9 14v-2a3 3 0 0 1 6 0v2"/></svg>Contact Us</a></li>
+          <li><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <nav class="sy-footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul class="sy-footer-links">
+          <li><a href="legal/privacy-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Privacy Policy</a></li>
+          <li><a href="legal/refund-cancellation-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/><circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="1.2" fill="currentColor" stroke="none"/></svg>Refund Policy</a></li>
+          <li><a href="legal/terms-and-conditions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M9 12h6M9 16h4"/></svg>Terms &amp; Conditions</a></li>
+          <li><a href="legal/acceptable-use-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v6c0 4.4-3.4 7.7-8 8-4.6-.3-8-3.6-8-8V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Acceptable Use Policy</a></li>
+                  <li><a href="legal/cookie-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>Cookie Policy</a></li>
+        </ul>
+      </nav>
+
+      <div class="sy-footer-col" aria-label="Contact Us">
+        <h4>Contact Us</h4>
+        <ul class="sy-footer-contact">
+          <li><a href="tel:+918839888531"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.3 9 9 0 0 0 2.8.5 1.4 1.4 0 0 1 1.4 1.4V20a1.4 1.4 0 0 1-1.4 1.4A17.4 17.4 0 0 1 2.6 4.4 1.4 1.4 0 0 1 4 3h3.2A1.4 1.4 0 0 1 8.6 4.4a9 9 0 0 0 .5 2.8 1.4 1.4 0 0 1-.3 1.4L6.6 10.8z"/></svg></span>Sales: +91 8839888531</a></li>
+          <li><a href="tel:+918305369467"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><path d="M9 14v-2a3 3 0 0 1 6 0v2"/></svg></span>Support: +91 8305369467</a></li>
+          <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>hello@samyoj.com</a></li>
+          <li><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Samyoj<br>Indore, Madhya Pradesh, India</span></li>
         </ul>
       </div>
     </div>
-  </footer>
+
+    <div class="sy-footer-bottom">
+      <p class="sy-footer-copy">© 2026 Samyoj. All rights reserved.</p>
+      <div class="sy-footer-legal">
+        <a href="legal/privacy-policy.html">Privacy Policy</a><span aria-hidden="true"></span>
+        <a href="legal/refund-cancellation-policy.html">Refund Policy</a><span aria-hidden="true"></span>
+        <a href="legal/terms-and-conditions.html">Terms &amp; Conditions</a><span aria-hidden="true"></span>
+        <a href="legal/cookie-policy.html">Cookie Policy</a><span aria-hidden="true"></span>
+        <a href="legal/acceptable-use-policy.html">Acceptable Use Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
   <script>!function () { const t = document.querySelectorAll('.umso-animated'); const e = new IntersectionObserver((t, e) => { t.forEach((t, n) => { const o = t.target, a = function (t) { const e = t.getBoundingClientRect(), n = window.innerHeight; let o = .3 / (e.height / n + .2); return o = o > .1 ? Math.round(10 * o) / 10 : Math.round(20 * o) / 20, o > 1 && (o = 1), o }(o); t.isIntersecting && t.intersectionRatio >= a && (!function (t, e) { const n = parseFloat(t.style.getPropertyValue('--animationStagger')) || 0, o = parseFloat(t.style.getPropertyValue('--animationDelay')) || 0; t.style.animationDelay = `${o + n * e}ms` }(o, n), o.classList.add('umso-animating'), e.unobserve(o)) }) }, { threshold: [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1] }); setTimeout(() => { t.forEach(t => e.observe(t)) }, 50) }();</script>
   <script>window.OpenModal = function (o) { const e = document.querySelector('#' + o + '.umsoModalWrapper'); if (!e) return; const n = e.querySelector('.umsoModalOverlay'); e && n ? (e.style.display = 'block', n.addEventListener('click', () => { window.CloseModal(o) }, { once: !0 })) : console.error('modal not found ', o) }, window.CloseModal = function (o) { const e = document.querySelector('#' + o + '.umsoModalWrapper'); e ? e.style.display = 'none' : console.error('modal not found', o) };</script>
   <script>

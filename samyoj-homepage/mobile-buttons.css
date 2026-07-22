@@ -1,0 +1,165 @@
+/* Shared mobile button & CTA responsiveness across main pages */
+
+/* Use one announcement bar — hide legacy Umso banner when custom bar is active */
+body:has(#aisensy-magic-bar) #um-header-banner,
+body:has(#samyoj-magic-bar) #um-header-banner {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 900px) {
+  ._592c9c5c.wr {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .um-nav-wrapper {
+    display: flex !important;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto !important;
+    max-width: calc(100% - 3.5em);
+  }
+
+  .um-nav-wrapper .um-nav-links,
+  .um-nav-wrapper .um-nav-buttons,
+  .um-nav-wrapper.um-hidden .um-nav-links,
+  .um-nav-wrapper.um-hidden .um-nav-buttons,
+  .um-nav-wrapper:not(.um-hidden) .um-nav-links,
+  .um-nav-wrapper:not(.um-hidden) .um-nav-buttons {
+    display: none !important;
+  }
+
+  .um-nav-wrapper .um-nav-children {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: 0;
+  }
+
+  .um-nav-wrapper .um-nav-children img {
+    max-width: 130px;
+    height: auto;
+  }
+
+  .um-nav-drawerTrigger,
+  .um-nav-drawerTrigger.um-hidden {
+    display: block !important;
+    flex: 0 0 3em;
+    flex-shrink: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .um-drawer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px 20px;
+    box-sizing: border-box;
+  }
+
+  .um-drawer-buttons .btn,
+  .um-drawer-buttons button,
+  .um-drawer-buttons a.btn {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .hero-cta-row,
+  .ind-hero-ctas,
+  .custom-hero-ctas,
+  .ind-cta-actions,
+  .pf-cta-right,
+  .sps-revenue-actions,
+  .setup-cta-block,
+  .promo-right {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta-row > a,
+  .hero-cta-row > button,
+  .ind-hero-ctas > a,
+  .ind-hero-ctas > button,
+  .custom-hero-ctas > a,
+  .custom-hero-ctas > button,
+  .ind-cta-actions > a,
+  .ind-cta-actions > button,
+  .pf-cta-right > a,
+  .pf-cta-right > button,
+  .sps-revenue-actions > a,
+  .sps-revenue-actions > button,
+  .setup-cta-block > .setup-cta-btn,
+  .promo-right > .promo-cta-btn {
+    width: 100% !important;
+    max-width: 100%;
+    justify-content: center !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .setup-cta-info,
+  .promo-cta-info {
+    width: auto !important;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn-green,
+  .btn-outline,
+  .btn-primary-green,
+  .feat-cta-btn,
+  .demo-cta-btn,
+  .ind-cta-secondary,
+  .hero-btn-secondary,
+  .custom-btn-primary,
+  .custom-btn-secondary,
+  .pf-cta-btn,
+  .setup-cta-btn,
+  .promo-cta-btn,
+  ._bb883e3c.btn.primary,
+  .ind-hero-ctas .btn.primary,
+  .ind-cta-actions .btn.primary {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
+  .demo-cta-wrap {
+    display: block;
+    width: 100%;
+  }
+
+  .sps-gs-left .btn-green {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .buttons-btn_nob6m8rpy4 .btn {
+    min-height: 44px;
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .setup-cta-btn,
+  .promo-cta-btn {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+}
