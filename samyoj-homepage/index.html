@@ -3769,7 +3769,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="samyoj-footer.css?v=4">
+  <link rel="stylesheet" href="samyoj-footer.css?v=6">
 </head>
 
 <body class="noScript">
@@ -4891,86 +4891,6 @@
     }
 
 
-    /* Brand Logos Row Card with Infinite Scroll */
-    .custom-logos-card {
-      background-color: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 24px 0;
-      margin-bottom: 54px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
-
-    /* Side Gradient Fades */
-    .custom-logos-card::before,
-    .custom-logos-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 120px;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .custom-logos-card::before {
-      left: 0;
-      background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0));
-    }
-
-    .custom-logos-card::after {
-      right: 0;
-      background: linear-gradient(to left, #ffffff 10%, rgba(255, 255, 255, 0));
-    }
-
-    .logos-marquee-track {
-      display: flex;
-      width: max-content;
-      gap: 80px;
-      align-items: center;
-      animation: logo-scroll 30s linear infinite;
-    }
-
-    .logos-marquee-track:hover {
-      animation-play-state: paused;
-    }
-
-    .logo-item-wrapper {
-      flex: 0 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60px;
-    }
-
-    .logo-item-wrapper img {
-      max-height: 52px;
-      /* Increased logo size for better visibility */
-      width: auto;
-      object-fit: contain;
-      filter: grayscale(10%) contrast(95%);
-      transition: filter 0.2s ease, transform 0.2s ease;
-      image-rendering: -webkit-optimize-contrast;
-    }
-
-    .logo-item-wrapper img:hover {
-      filter: grayscale(0%) contrast(100%);
-      transform: scale(1.05);
-    }
-
-    @keyframes logo-scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
     /* Video & Features Box */
     .custom-grey-box {
       background-color: #f6f9f7;
@@ -5373,24 +5293,6 @@
         margin-bottom: 24px;
       }
 
-      .custom-logos-card {
-        padding: 20px 0;
-        margin-bottom: 40px;
-      }
-
-      .logos-marquee-track {
-        gap: 50px;
-        animation-duration: 20s;
-      }
-
-      .logo-item-wrapper {
-        height: 50px;
-      }
-
-      .logo-item-wrapper img {
-        max-height: 36px;
-      }
-
       .custom-grey-box {
         flex-direction: column;
         padding: 30px;
@@ -5443,23 +5345,6 @@
 
       .custom-section-title {
         font-size: 28px;
-      }
-
-      .custom-logos-card {
-        padding: 16px 0;
-      }
-
-      .logos-marquee-track {
-        gap: 36px;
-        animation-duration: 15s;
-      }
-
-      .logo-item-wrapper {
-        height: 40px;
-      }
-
-      .logo-item-wrapper img {
-        max-height: 28px;
       }
 
       .custom-grey-box {
@@ -7280,37 +7165,6 @@
         Watch How <span class="highlight-green">Samyoj Automates Your Business</span>
       </h2>
 
-
-      <!-- Logos Card Wrapper with Infinite Auto-Scroll -->
-      <div class="custom-logos-card">
-        <div class="logos-marquee-track">
-          <!-- Set 1 -->
-          <div class="logo-item-wrapper"><img src="../images/logo-hindalco.png" alt="Hindalco customer logo" draggable="false" loading="lazy">
-          </div>
-          <div class="logo-item-wrapper"><img src="../images/logo-wipro.png" alt="Wipro customer logo" draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper"><img src="../images/logo-fortune.png" alt="Fortune Foods customer logo"
-              draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper"><img src="../images/logo-croma.png" alt="Croma customer logo" draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper"><img src="../images/logo-digio.png" alt="Digio customer logo" draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper"><img src="../images/logo-lenskart.png" alt="Lenskart customer logo"  draggable="false" loading="lazy">
-          </div>
-          <div class="logo-item-wrapper"><img src="../images/logo-bajaj.png" alt="Bajaj Finserv customer logo"  draggable="false" loading="lazy">
-          </div>
-          <!-- Set 2 (for seamless looping) -->
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-hindalco.png" alt="" draggable="false" loading="lazy">
-          </div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-wipro.png" alt=""  draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-fortune.png" alt="" 
-              draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-croma.png" alt=""   draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-digio.png" alt=""  draggable="false" loading="lazy"></div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-lenskart.png" alt="" draggable="false" loading="lazy">
-          </div>
-          <div class="logo-item-wrapper" aria-hidden="true"><img src="../images/logo-bajaj.png" alt="" draggable="false" loading="lazy">
-          </div>
-        </div>
-      </div>
-
       <!-- Main Gray Box -->
       <div class="custom-grey-box">
 
@@ -7572,7 +7426,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
 
           <!-- Headline -->
           <h2 class="broadcast-title">
-            Reach Thousands with <span class="highlight-green">WhatsApp</span> Broadcasts
+            Reach Thousands with <span class="highlight-green">WhatsApp Broadcasts</span>
           </h2>
           <p class="broadcast-subtitle">
            Send bulk WhatsApp messages easily with a secure WhatsApp Business API solution.
@@ -7668,10 +7522,10 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             <span>NEW</span>
           </div>
           <h2 class="broadcast-title">
-            Get Started with <span class="highlight-green">Forms, Payments</span> & Click to WhatsApp Ads
+            Get Started with <span class="highlight-green">Forms, Payments</span> & Click to <span class="highlight-green">WhatsApp Ads</span>
           </h2>
           <p class="broadcast-subtitle">
-            Samyoj launches Meta's WhatsApp API and AI Features at Pricing that grows with your business 🚀
+            Samyoj launches Meta's WhatsApp API and AI Features at Pricing that grows with your business
           </p>
           <a href="#" onclick="return false;" class="btn-primary-green">
             Explore
@@ -8504,7 +8358,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
 
           <!-- Features Banner -->
           <div class="sps-integrations-banner">
-            <h3>Powerful <span>Features</span> to Scale Your Business</h3>
+            <h3>Powerful <span>Features</span> to Scale <span>Your Business</span></h3>
             <p>Everything you need to automate conversations, drive sales, and engage customers on WhatsApp.</p>
             <div class="sps-integrations-grid">
               <a href="features/whatsapp-broadcasting.html" class="sps-int-icon" title="WhatsApp Broadcasting">
@@ -8824,17 +8678,6 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
               aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z" />
-              </svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.samyoj.mobile" target="_blank"
-              rel="noopener noreferrer" aria-label="Google Play"><svg viewBox="0 0 24 24" fill="currentColor"
-                aria-hidden="true">
-                <path
-                  d="M3.18.5A1.2 1.2 0 0 0 2 1.6v20.8a1.2 1.2 0 0 0 1.18 1.1c.16 0 .32-.04.46-.12L15.5 12.6 3.64.62A1.2 1.2 0 0 0 3.18.5zm12.7 8.1-2.4 2.4 2.4 2.4 3.6-2.1c.7-.4.7-1.4 0-1.8l-3.6-1.9zM4.1 21.9 12.4 13.6 10 11.2 3.4 19.6c.14.8.5 1.6.7 2.3zm.7-19.8C4.6 2.8 4.24 3.6 4.1 4.4L10 12.8l2.4-2.4L4.8 2.1z" />
-              </svg></a>
-            <a href="https://apps.apple.com/in/app/samyoj/id6711351197" target="_blank" rel="noopener noreferrer"
-              aria-label="App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
               </svg></a>
           </div>
         </div>
