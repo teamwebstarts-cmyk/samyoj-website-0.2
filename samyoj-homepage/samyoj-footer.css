@@ -1,4 +1,4 @@
-/* Samyoj site footer — matches shared design mock */
+/* Samyoj site footer — compact shared design */
 .sy-footer {
   --sy-ink: #1a2e28;
   --sy-muted: #6b7a74;
@@ -9,7 +9,7 @@
   --sy-icon-bg: #eaf8f0;
   --sy-social-bg: #f3f5f4;
   --sy-social-icon: #4a5a54;
-  --sy-link-icon: 18px;
+  --sy-link-icon: 14px;
   background: #fff;
   color: var(--sy-ink);
   font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -35,53 +35,53 @@
   width: 100%;
   max-width: var(--wr-max, 1530px);
   margin: 0 auto;
-  padding: 56px clamp(20px, 3vw, 40px) 28px;
+  padding: 32px clamp(20px, 3vw, 40px) 16px;
   box-sizing: border-box;
 }
 
 .sy-footer-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 1.45fr) repeat(2, minmax(160px, 0.85fr)) minmax(260px, 1.2fr);
-  gap: 40px clamp(24px, 3vw, 56px);
+  grid-template-columns: minmax(220px, 1.35fr) repeat(2, minmax(140px, 0.8fr)) minmax(220px, 1.1fr);
+  gap: 20px clamp(16px, 2.2vw, 36px);
   align-items: start;
   width: 100%;
 }
 
 .sy-footer-brand {
-  padding-right: 8px;
+  padding-right: 4px;
   min-width: 0;
 }
 
 .sy-footer-logo {
   display: inline-block;
   line-height: 0;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .sy-footer-logo img {
   display: block;
-  width: min(210px, 100%);
+  width: min(160px, 100%);
   height: auto;
 }
 
 .sy-footer-desc {
-  margin: 0 0 20px;
-  max-width: 380px;
+  margin: 0 0 12px;
+  max-width: 340px;
   color: var(--sy-muted);
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 13.5px;
+  line-height: 1.5;
   font-weight: 500;
 }
 
 .sy-footer-partner {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   line-height: 0;
 }
 
 .sy-footer-partner img {
   display: block;
-  width: 160px;
+  width: 120px;
   max-width: 100%;
   height: auto;
 }
@@ -89,28 +89,28 @@
 .sy-footer-made {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin: 0 0 18px;
+  gap: 5px;
+  margin: 0 0 10px;
   color: var(--sy-muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
 .sy-footer-made svg {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   flex: 0 0 auto;
 }
 
 .sy-footer-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .sy-footer-social a {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--sy-social-bg);
   color: var(--sy-social-icon);
@@ -126,15 +126,15 @@
 }
 
 .sy-footer-social svg {
-  width: 17px;
-  height: 17px;
+  width: 14px;
+  height: 14px;
   display: block;
 }
 
 .sy-footer-col {
   position: relative;
   min-height: 1px;
-  padding-left: 28px;
+  padding-left: 20px;
   min-width: 0;
 }
 
@@ -142,16 +142,16 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 4px;
-  bottom: 4px;
+  top: 2px;
+  bottom: 2px;
   width: 1px;
   background: var(--sy-line);
 }
 
 .sy-footer-col h4 {
-  margin: 0 0 14px;
+  margin: 0 0 6px;
   color: var(--sy-heading);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -160,9 +160,9 @@
 .sy-footer-col h4::after {
   content: "";
   display: block;
-  width: 28px;
-  height: 3px;
-  margin-top: 8px;
+  width: 20px;
+  height: 2px;
+  margin-top: 4px;
   border-radius: 2px;
   background: var(--sy-green);
 }
@@ -172,7 +172,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 8px;
+  gap: 0;
 }
 
 .sy-footer-links li {
@@ -183,13 +183,15 @@
 .sy-footer-links a {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
   width: 100%;
   max-width: 100%;
   color: #2f3f39;
-  font-size: 14.5px;
+  font-size: 12.5px;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.25;
+  padding: 3px 0;
+  min-height: 0;
   transition: color 0.18s ease;
   word-break: normal;
   overflow-wrap: break-word;
@@ -215,7 +217,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 2px;
 }
 
 .sy-footer-contact li {
@@ -226,16 +228,22 @@
 .sy-footer-contact li,
 .sy-footer-contact a {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 8px;
   width: 100%;
   max-width: 100%;
   color: #2f3f39;
-  font-size: 14.5px;
+  font-size: 12.5px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.3;
+  padding: 2px 0;
+  min-height: 0;
   word-break: normal;
   overflow-wrap: break-word;
+}
+
+.sy-footer-contact li:last-child {
+  align-items: flex-start;
 }
 
 .sy-footer-contact a:hover {
@@ -243,31 +251,31 @@
 }
 
 .sy-footer-contact-icon {
-  width: 34px;
-  height: 34px;
-  min-width: 34px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
   border-radius: 50%;
   background: var(--sy-icon-bg);
   color: var(--sy-green);
   display: grid;
   place-items: center;
-  flex: 0 0 34px;
+  flex: 0 0 24px;
 }
 
 .sy-footer-contact-icon svg {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   display: block;
 }
 
 .sy-footer-bottom {
-  margin-top: 44px;
-  padding-top: 18px;
+  margin-top: 22px;
+  padding-top: 12px;
   border-top: 1px solid var(--sy-line);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px 32px;
+  gap: 12px 24px;
   flex-wrap: nowrap;
   width: 100%;
 }
@@ -275,7 +283,7 @@
 .sy-footer-copy {
   margin: 0;
   color: #7a8a84;
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 500;
   flex: 0 1 auto;
 }
@@ -290,9 +298,9 @@
 
 .sy-footer-legal a {
   color: #7a8a84;
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 600;
-  padding: 0 12px;
+  padding: 0 10px;
   transition: color 0.18s ease;
   white-space: nowrap;
 }
@@ -307,7 +315,7 @@
 
 .sy-footer-legal span {
   width: 1px;
-  height: 12px;
+  height: 11px;
   background: #cfd8d3;
   display: inline-block;
   flex: 0 0 1px;
@@ -316,7 +324,7 @@
 @media (max-width: 1100px) {
   .sy-footer-grid {
     grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 36px 28px;
+    gap: 20px 20px;
   }
 
   .sy-footer-brand {
@@ -337,12 +345,12 @@
   .sy-footer-inner {
     width: 100%;
     max-width: none;
-    padding: 40px 20px 24px;
+    padding: 28px 20px 16px;
   }
 
   .sy-footer-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 18px;
   }
 
   .sy-footer-desc {
@@ -352,6 +360,7 @@
   .sy-footer-bottom {
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-top: 18px;
   }
 
   .sy-footer-legal {
@@ -361,34 +370,38 @@
 
 @media (max-width: 560px) {
   .sy-footer-inner {
-    padding: 32px 16px 20px;
+    padding: 24px 16px 14px;
   }
 
   .sy-footer-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 16px;
   }
 
   .sy-footer-logo {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
+  }
+
+  .sy-footer-logo img {
+    width: min(140px, 100%);
   }
 
   .sy-footer-desc {
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 1.55;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.45;
   }
 
   .sy-footer-partner {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .sy-footer-partner img {
-    width: 140px;
+    width: 110px;
   }
 
   .sy-footer-made {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .sy-footer-col {
@@ -397,24 +410,24 @@
   }
 
   .sy-footer-col h4 {
-    margin: 0 0 10px;
-    font-size: 16px;
+    margin: 0 0 6px;
+    font-size: 14px;
   }
 
   .sy-footer-col h4::after {
-    margin-top: 6px;
+    margin-top: 4px;
   }
 
   .sy-footer-links {
-    gap: 2px;
+    gap: 0;
   }
 
   .sy-footer-links a {
-    gap: 12px;
-    min-height: 36px;
-    padding: 4px 0;
-    font-size: 15px;
-    line-height: 1.3;
+    gap: 7px;
+    min-height: 0;
+    padding: 3px 0;
+    font-size: 12.5px;
+    line-height: 1.25;
   }
 
   .sy-footer-links svg {
@@ -426,15 +439,15 @@
   }
 
   .sy-footer-contact {
-    gap: 6px;
+    gap: 2px;
   }
 
   .sy-footer-contact li,
   .sy-footer-contact a {
-    gap: 12px;
-    min-height: 36px;
+    gap: 8px;
+    min-height: 0;
     padding: 2px 0;
-    font-size: 15px;
+    font-size: 12.5px;
     align-items: center;
   }
 
@@ -443,24 +456,24 @@
   }
 
   .sy-footer-contact-icon {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    flex: 0 0 32px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    flex: 0 0 24px;
   }
 
   .sy-footer-bottom {
-    margin-top: 24px;
-    padding-top: 14px;
+    margin-top: 16px;
+    padding-top: 10px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
   }
 
   .sy-footer-legal {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2px;
+    gap: 0;
     width: 100%;
   }
 
@@ -469,7 +482,7 @@
   }
 
   .sy-footer-legal a {
-    padding: 6px 0;
+    padding: 4px 0;
     white-space: normal;
   }
 
@@ -478,11 +491,11 @@
   }
 
   .sy-footer-social {
-    gap: 8px;
+    gap: 6px;
   }
 
   .sy-footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
   }
 }
