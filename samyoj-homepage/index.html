@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script>document.documentElement.classList.add('js-reveal');</script>
   <meta charSet="utf-8" />
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Samyoj | AI-Powered WhatsApp CRM</title>
-  <meta name="description" content="Samyoj is an AI-powered WhatsApp CRM that helps businesses automate conversations, send broadcasts, collect payments, and grow faster with AI automation.">
+  <meta name="description"
+    content="Samyoj is an AI-powered WhatsApp CRM that helps businesses automate conversations, send broadcasts, collect payments, and grow faster with AI automation.">
   <meta name="keywords"
     content="WhatsApp CRM, WhatsApp marketing, WhatsApp Business API, AI automation, WhatsApp broadcasts, Click to WhatsApp Ads, WhatsApp payments, no-code workflows, official WhatsApp BSP, Samyoj" />
   <meta name="author" content="Samyoj" />
@@ -18,8 +20,7 @@
   <meta property="og:description"
     content="Samyoj is an AI-powered WhatsApp CRM that helps businesses automate conversations, send broadcasts, collect payments, and grow faster with AI automation." />
   <meta property="og:url" content="https://samyoj.com/" />
-  <meta property="og:image"
-    content="https://samyoj.com/images/hero-section-image.webp" />
+  <meta property="og:image" content="https://samyoj.com/images/hero-section-image.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_IN" />
@@ -27,14 +28,13 @@
   <meta name="twitter:title" content="Samyoj | AI-Powered WhatsApp CRM" />
   <meta name="twitter:description"
     content="Samyoj is an AI-powered WhatsApp CRM that helps businesses automate conversations, send broadcasts, collect payments, and grow faster with AI automation." />
-  <meta name="twitter:image"
-    content="https://samyoj.com/images/hero-section-image.webp" />
+  <meta name="twitter:image" content="https://samyoj.com/images/hero-section-image.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <link rel="alternate" hrefLang="en" href="https://samyoj.com/" />
   <meta name="thesmartware-site-verification" content="a04113a0940ddd36ff0d3ec5839ee715" />
- 
+
   <style>
     body {
       margin: 0;
@@ -1154,6 +1154,42 @@
     .um-nav-drawerTrigger.um-hidden {
       display: none;
     }
+
+    /* Stable nav: CSS breakpoint instead of Umso width-math (fixes desktop hamburger + flicker) */
+    .um-nav-drawerTrigger {
+      z-index: 95;
+      pointer-events: auto;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper.um-hidden .um-nav-links {
+        display: flex !important;
+      }
+
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
+        display: flex !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper .um-nav-buttons {
+        display: none !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: block !important;
+      }
+    }
+
 
     @keyframes keyframes-navbar {
       0% {
@@ -3705,10 +3741,9 @@
   </style>
   <style id="umso-cssmanager"></style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
   <script>
     ; (function (src) {
       var script = document.createElement('script');
@@ -3761,7 +3796,7 @@
           window.addEventListener("DOMContentLoaded", function () {
             var banner = document.createElement("div");
             banner.style.cssText = "position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;font-family:sans-serif;font-size:14px;";
-            banner.innerHTML = text + ' <a href="#" style="color:#4CAF50;margin-left:8px;text-decoration:underline;" onclick="return false;">Switch ΓåÆ</a>';
+            banner.innerHTML = text + ' <a href="#" style="color:#4CAF50;margin-left:8px;text-decoration:underline;" onclick="return false;">Switch &rarr;</a>';
             document.body.appendChild(banner);
           });
         }
@@ -3773,6 +3808,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
 </head>
 
 <body class="noScript">
@@ -3789,12 +3825,13 @@
         <div class="wr"
           style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
           <span class="_071afc96 um-text">
-            <p><strong>NEW</strong> ┬╖ Smarter conversations start with <strong>AI Agents</strong> ┬╖ <strong>Explore</strong></p>
+            <p><strong>NEW</strong> ┬╖ Smarter conversations start with <strong>AI Agents</strong> ┬╖
+              <strong>Explore</strong></p>
             <!-- -->
             <style>
               @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;display=swap');
 
-              
+
               #aisensy-magic-bar {
                 position: fixed;
                 top: 0;
@@ -3803,9 +3840,9 @@
                 z-index: 900;
                 font-family: 'Manrope', system-ui, -apple-system, sans-serif;
                 background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
-                border-bottom: 1px solid rgba(31, 165, 72, .16);
-                box-shadow: 0 2px 12px rgba(16, 58, 32, .10);
-                padding: 8px 12px;
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
                 pointer-events: none;
               }
 
@@ -3818,6 +3855,7 @@
                 background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
                 border-bottom: none !important;
               }
+
               #um-header-banner .wr {
                 opacity: 0 !important;
                 pointer-events: none !important;
@@ -3827,7 +3865,7 @@
                 pointer-events: auto;
                 max-width: 1100px;
                 margin: 0 auto;
-                padding: 8px 16px;
+                padding: 10px 16px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -3835,10 +3873,10 @@
                 text-align: left;
                 position: relative;
                 overflow: hidden;
-                background: #eef8ea;
-                border: 1px solid rgba(31, 165, 72, .14);
-                border-radius: 999px;
-                box-shadow: 0 4px 14px rgba(16, 58, 32, .08);
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
               }
 
               #aisensy-magic-bar .mb-seg {
@@ -3850,7 +3888,7 @@
 
               #aisensy-magic-bar .mb-divider {
                 width: 1px;
-                height: 26px;
+                height: 22px;
                 background: rgba(15, 46, 32, .14);
                 flex: 0 0 1px;
               }
@@ -3927,7 +3965,7 @@
                 display: none;
               }
 
-              
+
               @media (max-width:720px) {
                 #aisensy-magic-bar {
                   padding: 0;
@@ -3944,9 +3982,8 @@
                   align-items: center;
                   border-radius: 0;
                   border: none;
-                  border-bottom: 1px solid rgba(31, 165, 72, .16);
                   box-shadow: none;
-                  background: #eef8ea;
+                  background: transparent;
                 }
 
                 #aisensy-magic-bar .mb-divider {
@@ -3985,6 +4022,10 @@
                   padding: 4px 8px;
                   gap: 4px;
                   flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
                 }
 
                 #aisensy-magic-bar .mb-spark {
@@ -4014,7 +4055,7 @@
                   display: none;
                 }
               }
-</style>
+            </style>
             <script>
               (function () {
                 function init() {
@@ -4095,8 +4136,8 @@
           <div class="_592c9c5c wr">
             <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
-                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img src="./images/logo.webp"
-                      alt="Samyoj AI-powered WhatsApp CRM logo" width="150" /></a></div>
+                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="./images/logo.webp" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" /></a></div>
               </div>
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -4123,33 +4164,29 @@
                   }
                 })();
               })
-            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_a5nqj6swnc"
-                  class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
-                    xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></a>
               </div>
             </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
-            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer um-hidden">
-              <header>
-                <button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="tabler-icon tabler-icon-x ">
-                    <path d="M18 6l-12 12"></path>
-                    <path d="M6 6l12 12"></path>
-                  </svg></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
               </header>
-              <div class="um-drawer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </div>
-              <div class="um-drawer-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_q2wr5r8dmc"
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="index.html" aria-current="page"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z"/></svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="features.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z"/><path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/><path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z"/></svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l7-4 2 1.2V5h7v15"/><path d="M4 20h16"/><path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1"/></svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/><path d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z"/></svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+              </ul>
+              <div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_q2wr5r8dmc"
                   class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
-                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
@@ -4166,16 +4203,23 @@
                   }
                 })();
               })
-            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_drawer_login_idx"
-                  class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
-                    xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_drawer_login_idx" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></a>
               </div>
+              <div class="sy-drawer-foot">
+                <span class="sy-drawer-wa" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.75 13.94c-.24.68-1.4 1.24-1.93 1.32-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.78-4.18-4.93-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1.01-2.41.26-.28.58-.35.77-.35h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.3.02.49-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.32.07.12.07.68-.17 1.36z"/></svg></span>
+                <div class="sy-drawer-foot-copy">
+                  <p class="sy-drawer-foot-title">Built for WhatsApp Business</p>
+                  <p class="sy-drawer-foot-sub"><span class="sy-drawer-bolt" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 10-14h-7l0-6z"/></svg></span> AI Powered CRM</p>
+                </div>
+              </div>
             </div>
-            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('985hzqm8a3-drawer')); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'), s = document.querySelectorAll('.um-lang-picker'); s && s.length > 0 && s.forEach(function (e) { e.querySelector('button').addEventListener('click', function () { e.querySelector('ul').classList.toggle('um-open') }) }), document.addEventListener('click', function (e) { d.contains(e.target) || e.target === n || d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'), c = e.querySelector('.um-nav-children'), o = e.querySelector('.um-nav-links'), u = e.querySelector('.um-nav-buttons'); n.addEventListener('click', function () { d.classList.remove('um-hidden') }), i.addEventListener('click', function () { d.classList.add('um-hidden') }); let l = 0, a = !0; function m() { !1 === a && (l = (c?.offsetWidth || 0) + (o?.offsetWidth || 0) + (u?.offsetWidth || 0) + 10), f() } function f() { e.offsetWidth - 10 < l ? (a = !0, e.classList.add('um-hidden'), n.classList.remove('um-hidden')) : (a = !1, e.classList.remove('um-hidden'), n.classList.add('um-hidden'), d.classList.add('um-hidden')) } new ResizeObserver(f).observe(document.body), c && new ResizeObserver(m).observe(c), u && new ResizeObserver(m).observe(u), o && new ResizeObserver(m).observe(o), m(), f() }();</script>
+            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('985hzqm8a3-drawer')); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'), s = document.querySelectorAll('.um-lang-picker'); s && s.length > 0 && s.forEach(function (e) { e.querySelector('button').addEventListener('click', function () { e.querySelector('ul').classList.toggle('um-open') }) }), document.addEventListener('click', function (e) { if (d.contains(e.target) || n.contains(e.target) || e.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'), c = e.querySelector('.um-nav-children'), o = e.querySelector('.um-nav-links'), u = e.querySelector('.um-nav-buttons'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }), i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
           </div>
         </div>
       </div>
@@ -4450,7 +4494,9 @@
     /* Responsive Styles */
     @media (max-width: 1024px) {
       #custom-hero-section {
-        padding: calc(var(--um-header-height) + 16px) 0 32px 0;
+        min-height: auto;
+        justify-content: flex-start;
+        padding: calc(var(--um-header-height) + 20px) 0 28px 0;
       }
 
       .custom-hero-container {
@@ -4560,7 +4606,7 @@
       <div class="custom-hero-left">
         <!-- Headline -->
         <h1 class="custom-hero-title">
-            AI-Powered WhatsApp CRM That Works While You
+          AI-Powered WhatsApp CRM That Works While You
           <span class="scribble-wrapper">
             <span class="highlight-green">Don't</span>.
             <svg class="scribble-underline" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
@@ -4573,17 +4619,17 @@
         <!-- Subheading -->
         <p class="custom-hero-subtitle">
           Automate conversations, manage customers & grow your business with the AI-powered WhatsApp CRM. Powered by
-          Official WhatsApp APIs ΓÜí
+          Official WhatsApp APIs &trade;
         </p>
 
         <!-- Buttons -->
         <div class="custom-hero-ctas">
           <a href="https://app.samyoj.com/?utm_source=pages&amp;utm_medium=website+pages&amp;utm_campaign=homepage_button2"
             class="custom-btn-primary">
-            Start 14-Day FREE Trial <span class="arrow">ΓåÆ</span>
+            Start 14-Day FREE Trial <span class="arrow">&rarr;</span>
           </a>
           <button class="custom-btn-secondary" id="custom_btn_demo">
-            Join Live Demo <span class="arrow">ΓåÆ</span>
+            Join Live Demo <span class="arrow">&rarr;</span>
           </button>
         </div>
 
@@ -4597,14 +4643,14 @@
             <span>AI-Powered</span>
           </div>
           <div class="trust-item">
-            <svg  aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5">
               <circle cx="12" cy="12" r="10" stroke="#a3e8b4" stroke-width="2" />
               <polyline points="8 12 11 15 16 10" />
             </svg>
             <span>Secure & Reliable</span>
           </div>
           <div class="trust-item">
-            <svg  aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5">
               <circle cx="12" cy="12" r="10" stroke="#a3e8b4" stroke-width="2" />
               <polyline points="8 12 11 15 16 10" />
             </svg>
@@ -4735,7 +4781,7 @@
             });
 
             var closeBtn = document.createElement("button");
-            closeBtn.innerHTML = "├ù";
+            closeBtn.innerHTML = "&times;";
             Object.assign(closeBtn.style, {
               position: "fixed",
               top: "14px",
@@ -6120,7 +6166,7 @@
       transform: scale(1.02);
     }
 
-    /* Compact Trust Card ΓÇö sits below the mockup image inside the right column */
+    /* Compact Trust Card &mdash; sits below the mockup image inside the right column */
     .setup-trust-card {
       display: flex;
       align-items: center;
@@ -6554,14 +6600,37 @@
       user-select: none;
     }
 
-    .sps-avatar-rs { background: #108548; }
-    .sps-avatar-pm { background: #2563eb; }
-    .sps-avatar-kb { background: #7c3aed; }
-    .sps-avatar-aj { background: #dc2626; }
-    .sps-avatar-am { background: #d97706; }
-    .sps-avatar-po { background: #0891b2; }
-    .sps-avatar-ss { background: #4338ca; }
-    .sps-avatar-ng { background: #be185d; }
+    .sps-avatar-rs {
+      background: #108548;
+    }
+
+    .sps-avatar-pm {
+      background: #2563eb;
+    }
+
+    .sps-avatar-kb {
+      background: #7c3aed;
+    }
+
+    .sps-avatar-aj {
+      background: #dc2626;
+    }
+
+    .sps-avatar-am {
+      background: #d97706;
+    }
+
+    .sps-avatar-po {
+      background: #0891b2;
+    }
+
+    .sps-avatar-ss {
+      background: #4338ca;
+    }
+
+    .sps-avatar-ng {
+      background: #be185d;
+    }
 
     .sps-testimonial-right {
       flex: 1;
@@ -7282,8 +7351,8 @@
 
         <!-- Left Column: Video player - Styled with fallback product-demo-preview.webp -->
         <div class="custom-video-column" id="custom-video-trigger">
-          <img class="video-thumb" src="./images/product-demo-preview.webp" alt="Samyoj WhatsApp CRM product demo video preview"
-            draggable="false" loading="lazy">
+          <img class="video-thumb" src="./images/product-demo-preview.webp"
+            alt="Samyoj WhatsApp CRM product demo video preview" draggable="false" loading="lazy">
           <div class="video-overlay-tint">
             <div class="video-play-center">
               <div class="video-play-btn-circle">
@@ -7352,8 +7421,8 @@
             <div class="feature-card-content">
               <h3 class="feature-card-title">Broadcast in Bulk</h3>
               <p class="feature-card-desc">
-Send bulk WhatsApp messages, updates, offers, and notifications to thousands of customers in seconds.
-</p>
+                Send bulk WhatsApp messages, updates, offers, and notifications to thousands of customers in seconds.
+              </p>
             </div>
           </div>
 
@@ -7370,8 +7439,9 @@ Send bulk WhatsApp messages, updates, offers, and notifications to thousands of 
             <div class="feature-card-content">
               <h3 class="feature-card-title">Automate Conversations</h3>
               <p class="feature-card-desc">
-Automate WhatsApp conversations with smart workflows and AI-powered auto-replies to save time and improve customer engagement.
-</p>
+                Automate WhatsApp conversations with smart workflows and AI-powered auto-replies to save time and
+                improve customer engagement.
+              </p>
             </div>
           </div>
 
@@ -7387,7 +7457,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             </div>
             <div class="feature-card-content">
               <h3 class="feature-card-title">Drive More Sales</h3>
-              <p class="feature-card-desc">Convert WhatsApp chats into customers with personalized journeys and quick actions.</p>
+              <p class="feature-card-desc">Convert WhatsApp chats into customers with personalized journeys and quick
+                actions.</p>
             </div>
           </div>
 
@@ -7401,7 +7472,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             </div>
             <div class="feature-card-content">
               <h3 class="feature-card-title">Official WhatsApp API</h3>
-              <p class="feature-card-desc">Use the official WhatsApp API for secure, compliant, and reliable business messaging.</p>
+              <p class="feature-card-desc">Use the official WhatsApp API for secure, compliant, and reliable business
+                messaging.</p>
             </div>
           </div>
 
@@ -7417,7 +7489,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
           </div>
-          <span class="banner-text">See how Samyoj helps businesses automate WhatsApp conversations, engage customers, and grow sales.</span>
+          <span class="banner-text">See how Samyoj helps businesses automate WhatsApp conversations, engage customers,
+            and grow sales.</span>
         </div>
         <a href="https://app.samyoj.com/" class="banner-btn-primary">
           Start Your Free Trial
@@ -7529,8 +7602,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
           <!-- Top Pill Badge -->
           <div class="custom-badge-pill">
             <!-- Green checkmark icon -->
-            <svg  aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-              stroke-linejoin="round">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
             <span>Official WhatsApp Business Solution</span>
@@ -7541,7 +7614,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             Reach Thousands with <span class="highlight-green">WhatsApp Broadcasts</span>
           </h2>
           <p class="broadcast-subtitle">
-           Send bulk WhatsApp messages easily with a secure WhatsApp Business API solution.
+            Send bulk WhatsApp messages easily with a secure WhatsApp Business API solution.
           </p>
 
           <!-- List Items -->
@@ -7550,8 +7623,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             <li class="broadcast-list-item">
               <div class="broadcast-list-icon">
                 <!-- Megaphone SVG -->
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M11 5L6 9H2v6h4l5 4V5z" />
                   <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
@@ -7559,7 +7632,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
               </div>
               <div class="broadcast-list-content">
                 <h4 class="broadcast-list-title">Promotions, Offers, Reminders & More</h4>
-                <p class="broadcast-list-desc">Send WhatsApp promotions, offers, coupon codes, and reminders to customers with reliable business messaging.
+                <p class="broadcast-list-desc">Send WhatsApp promotions, offers, coupon codes, and reminders to
+                  customers with reliable business messaging.
                 </p>
               </div>
             </li>
@@ -7574,7 +7648,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
               </div>
               <div class="broadcast-list-content">
                 <h4 class="broadcast-list-title">Add CTAs. Drive 3x Conversions</h4>
-                <p class="broadcast-list-desc">Increase customer engagement with WhatsApp CTAs and quick reply buttons that improve conversions.</p>
+                <p class="broadcast-list-desc">Increase customer engagement with WhatsApp CTAs and quick reply buttons
+                  that improve conversions.</p>
               </div>
             </li>
 
@@ -7591,7 +7666,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
               </div>
               <div class="broadcast-list-content">
                 <h4 class="broadcast-list-title">Schedule your WhatsApp messages</h4>
-                <p class="broadcast-list-desc">Schedule WhatsApp broadcasts and messages in advance to automate customer communication.</p>
+                <p class="broadcast-list-desc">Schedule WhatsApp broadcasts and messages in advance to automate customer
+                  communication.</p>
               </div>
             </li>
 
@@ -7609,8 +7685,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
 
         <!-- Right Column: Graphic -->
         <div class="broadcast-right-col">
-          <img src="images/broadcast-image.png" alt="WhatsApp Broadcast with WhatsApp Business API"
-            draggable="false" loading="lazy">
+          <img src="images/broadcast-image.png" alt="WhatsApp Broadcast with WhatsApp Business API" draggable="false"
+            loading="lazy">
         </div>
 
       </div>
@@ -7634,7 +7710,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             <span>NEW</span>
           </div>
           <h2 class="broadcast-title">
-            Get Started with <span class="highlight-green">Forms, Payments</span> & Click to <span class="highlight-green">WhatsApp Ads</span>
+            Get Started with <span class="highlight-green">Forms, Payments</span> & Click to <span
+              class="highlight-green">WhatsApp Ads</span>
           </h2>
           <p class="broadcast-subtitle">
             Samyoj launches Meta's WhatsApp API and AI Features at Pricing that grows with your business
@@ -7650,7 +7727,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
 
         <!-- Middle: Flow Graphic -->
         <div class="meta-graphic-col">
-          <img src="images/new-image-of-it.png" alt="Facebook Ad to WhatsApp Brochure Flow" draggable="false" loading="lazy">
+          <img src="images/new-image-of-it.png" alt="Facebook Ad to WhatsApp Brochure Flow" draggable="false"
+            loading="lazy">
         </div>
 
         <!-- Right: List -->
@@ -7774,15 +7852,15 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             </ul>
             <a href="#" onclick="return false;" class="card-footer-link">
               Explore
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"  aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
           </div>
           <div class="card-right-col">
-            <img src="images/run-click-to-whatsapp-ads-cropped.png" alt="Run Click to WhatsApp Ads campaigns with Samyoj CRM"
-              draggable="false" loading="lazy">
+            <img src="images/run-click-to-whatsapp-ads-cropped.png"
+              alt="Run Click to WhatsApp Ads campaigns with Samyoj CRM" draggable="false" loading="lazy">
           </div>
         </div>
 
@@ -7796,7 +7874,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
           style="--animationName:fade;--animationDuration:600;--animationDelay:0;--animationStagger:0;position:relative">
           <h2 class="_27cf228f um-text"><strong>Why Samyoj Runs on WhatsApp</strong></h2>
           <div class="_d4183ac2 um-text"><span style="color:rgb(61, 61, 61)">WhatsApp is the one platform that brings
-              together actionable notifications & customer support ΓÇö and Samyoj makes it work for your business. </span>
+              together actionable notifications & customer support &mdash; and Samyoj makes it work for your business.
+            </span>
           </div>
         </header>
         <div class="_d8f4b6f2" style="position:relative">
@@ -7929,7 +8008,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
             <img src="images/samyouijrjob.png" alt="Samyoj WhatsApp CRM dashboard interface" class="setup-dashboard-img"
               draggable="false" loading="lazy">
 
-            <!-- Compact Trust Badges Card ΓÇö below the mockup image -->
+            <!-- Compact Trust Badges Card &mdash; below the mockup image -->
             <div class="setup-trust-card">
               <!-- Badge 1 -->
               <div class="setup-trust-item">
@@ -8037,7 +8116,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
         <div class="sps-header">
 
           <h2>Grow Your Business on <span>WhatsApp</span></h2>
-          <p>Launch your first campaign in under 10 minutes ΓÇö no code, no complexity.</p>
+          <p>Launch your first campaign in under 10 minutes &mdash; no code, no complexity.</p>
         </div>
 
         <!-- Ratings Row -->
@@ -8583,7 +8662,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
   "@type": ["Product", "SoftwareApplication"],
   "@id": "https://samyoj.com/#samyoj-platform",
   "name": "Samyoj WhatsApp Engagement Platform",
-  "description": "India's best WhatsApp Engagement Platform, built on the official WhatsApp Business API ΓÇö send broadcasts, automate campaigns, run chatbots, build AI Agents and drive sales. Plans start at Γé╣1500/month.",
+  "description": "India's best WhatsApp Engagement Platform, built on the official WhatsApp Business API &mdash; send broadcasts, automate campaigns, run chatbots, build AI Agents and drive sales. Plans start at &#8377;1500/month.",
   "image": "https://samyoj.com/images/hero-section-image.webp",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
@@ -8665,7 +8744,8 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
           <summary class="custom-faq-q">What is the Cost of Broadcasting messages? <span
               class="custom-faq-icon">+</span></summary>
           <div class="custom-faq-a">
-            <p>WhatsApp charges are Γé╣1.09/ message for marketing messages &amp; Γé╣0.145 for utility and authentication
+            <p>WhatsApp charges are &#8377;1.09/ message for marketing messages &amp; &#8377;0.145 for utility and
+              authentication
               messages. You can recharge this from the Samyoj Dashboard itself. Each message is charged separately by
               Meta. Service conversations (replies to user messages) are free of cost.</p>
           </div>
@@ -8739,7 +8819,7 @@ Automate WhatsApp conversations with smart workflows and AI-powered auto-replies
       "name": "What is the Cost of Broadcasting messages?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "WhatsApp charges are Γé╣1.09/ message for marketing messages & Γé╣0.145 for utility and authentication messages. You can recharge this from the Samyoj Dashboard itself. Each message is charged separately by Meta. Service conversations (replies to user messages) are free of cost."
+        "text": "WhatsApp charges are &#8377;1.09/ message for marketing messages & &#8377;0.145 for utility and authentication messages. You can recharge this from the Samyoj Dashboard itself. Each message is charged separately by Meta. Service conversations (replies to user messages) are free of cost."
       }
     },
     {

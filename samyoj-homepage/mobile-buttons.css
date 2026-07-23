@@ -90,20 +90,20 @@ body:has(#samyoj-magic-bar) #um-header-banner {
     gap: 12px;
   }
 
-  .hero-cta-row > a,
-  .hero-cta-row > button,
-  .ind-hero-ctas > a,
-  .ind-hero-ctas > button,
-  .custom-hero-ctas > a,
-  .custom-hero-ctas > button,
-  .ind-cta-actions > a,
-  .ind-cta-actions > button,
-  .pf-cta-right > a,
-  .pf-cta-right > button,
-  .sps-revenue-actions > a,
-  .sps-revenue-actions > button,
-  .setup-cta-block > .setup-cta-btn,
-  .promo-right > .promo-cta-btn {
+  .hero-cta-row>a,
+  .hero-cta-row>button,
+  .ind-hero-ctas>a,
+  .ind-hero-ctas>button,
+  .custom-hero-ctas>a,
+  .custom-hero-ctas>button,
+  .ind-cta-actions>a,
+  .ind-cta-actions>button,
+  .pf-cta-right>a,
+  .pf-cta-right>button,
+  .sps-revenue-actions>a,
+  .sps-revenue-actions>button,
+  .setup-cta-block>.setup-cta-btn,
+  .promo-right>.promo-cta-btn {
     width: 100% !important;
     max-width: 100%;
     justify-content: center !important;

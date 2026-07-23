@@ -1,0 +1,338 @@
+/* Samyoj mobile nav drawer — matches sidebar design mock */
+.um-nav-drawer.sy-drawer {
+  --sy-d-green: #03cf65;
+  --sy-d-green-dark: #00b859;
+  --sy-d-ink: #1a1a1a;
+  --sy-d-muted: #5c6670;
+  --sy-d-line: #ededed;
+  --sy-d-active-bg: #e8f9f0;
+  --sy-d-foot-bg: #f4f6f5;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: min(300px, 88vw) !important;
+  max-width: 300px !important;
+  z-index: 999 !important;
+  position: fixed !important;
+  display: none;
+  flex-direction: column !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box !important;
+  padding: 18px 18px 20px !important;
+  color: var(--sy-d-ink) !important;
+  background: #fff !important;
+  border-radius: 24px 0 0 24px !important;
+  box-shadow: -8px 0 40px rgba(16, 24, 20, 0.18) !important;
+  font-size: 15px !important;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+}
+
+.um-nav-drawer.sy-drawer:not(.um-hidden) {
+  display: flex !important;
+  animation: sy-drawer-in 220ms ease-out;
+  transform-origin: 100% 50%;
+}
+
+.um-nav-drawer.sy-drawer.um-hidden {
+  display: none !important;
+}
+
+@keyframes sy-drawer-in {
+  from {
+    opacity: 0.6;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.um-nav-drawer.sy-drawer *,
+.um-nav-drawer.sy-drawer *::before,
+.um-nav-drawer.sy-drawer *::after {
+  box-sizing: border-box;
+}
+
+/* Header: logo + close */
+.um-nav-drawer.sy-drawer > header,
+.um-nav-drawer.sy-drawer .sy-drawer-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px;
+  padding: 2px 2px 16px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--sy-d-line) !important;
+}
+
+.sy-drawer-brand {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.sy-drawer-brand img {
+  display: block;
+  width: 132px;
+  height: auto;
+  max-width: 100%;
+}
+
+.um-nav-drawer.sy-drawer header .um-nav-drawerClose,
+.sy-drawer-head .um-nav-drawerClose {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--sy-d-ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.um-nav-drawer.sy-drawer header .um-nav-drawerClose:hover,
+.sy-drawer-head .um-nav-drawerClose:hover {
+  background: #f3f5f4;
+}
+
+.um-nav-drawer.sy-drawer header .um-nav-drawerClose svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Nav links */
+.um-nav-drawer.sy-drawer .um-drawer-links,
+.um-nav-drawer.sy-drawer .sy-drawer-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 14px 0 14px !important;
+  border-bottom: 1px solid var(--sy-d-line) !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-links > li {
+  border-bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-links > li > a,
+.um-nav-drawer.sy-drawer .sy-drawer-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 12px 12px !important;
+  border-radius: 12px !important;
+  color: var(--sy-d-ink) !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sy-drawer-ico {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sy-d-green);
+}
+
+.sy-drawer-ico svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.sy-drawer-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.sy-drawer-chev {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: #9aa3ab;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sy-drawer-chev svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-links > li > a:hover,
+.um-nav-drawer.sy-drawer .sy-drawer-link:hover {
+  background: #f6faf7 !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-links > li > a[aria-current="page"],
+.um-nav-drawer.sy-drawer .sy-drawer-link[aria-current="page"] {
+  background: var(--sy-d-active-bg) !important;
+  color: var(--sy-d-green) !important;
+  font-weight: 700 !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-links > li > a[aria-current="page"] .sy-drawer-chev,
+.um-nav-drawer.sy-drawer .sy-drawer-link[aria-current="page"] .sy-drawer-chev {
+  color: var(--sy-d-green) !important;
+}
+
+/* CTAs */
+.um-nav-drawer.sy-drawer .um-drawer-buttons,
+.um-nav-drawer.sy-drawer .sy-drawer-btns {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 16px 0 16px !important;
+  border-bottom: 1px solid var(--sy-d-line) !important;
+  justify-content: stretch !important;
+  flex-wrap: nowrap !important;
+  position: relative;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons > button,
+.um-nav-drawer.sy-drawer .um-drawer-buttons > a,
+.um-nav-drawer.sy-drawer .sy-drawer-btns > button,
+.um-nav-drawer.sy-drawer .sy-drawer-btns > a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100% !important;
+  margin: 0 !important;
+  min-height: 48px;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  font-family: inherit;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons > button.primary,
+.um-nav-drawer.sy-drawer .um-drawer-buttons > a.primary,
+.um-nav-drawer.sy-drawer .sy-drawer-btns > button.primary {
+  background: var(--sy-d-green) !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons > button.primary:hover,
+.um-nav-drawer.sy-drawer .sy-drawer-btns > button.primary:hover {
+  background: var(--sy-d-green-dark) !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons > a.btn:not(.primary),
+.um-nav-drawer.sy-drawer .sy-drawer-btns > a.btn:not(.primary) {
+  background: #fff !important;
+  color: var(--sy-d-ink) !important;
+  border: 1.5px solid var(--sy-d-ink) !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons > a.btn:not(.primary):hover,
+.um-nav-drawer.sy-drawer .sy-drawer-btns > a.btn:not(.primary):hover {
+  background: #f7f7f7 !important;
+}
+
+.um-nav-drawer.sy-drawer .um-drawer-buttons .um-arrow,
+.um-nav-drawer.sy-drawer .sy-drawer-btns .um-arrow {
+  width: 14px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Footer badge */
+.sy-drawer-foot {
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 14px;
+  margin-top: auto;
+  background: var(--sy-d-foot-bg);
+  border-radius: 14px;
+}
+
+.sy-drawer-wa {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.sy-drawer-wa svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.sy-drawer-foot-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sy-drawer-foot-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sy-d-ink);
+  line-height: 1.25;
+}
+
+.sy-drawer-foot-sub {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sy-d-muted);
+  line-height: 1.2;
+}
+
+.sy-drawer-bolt {
+  color: var(--sy-d-green);
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.sy-drawer-bolt svg {
+  width: 11px;
+  height: 11px;
+  display: block;
+}
