@@ -1,0 +1,59 @@
+# Samyoj - AI-Powered WhatsApp CRM
+
+> Samyoj is an Official WhatsApp Business Solution Partner (BSP) that helps businesses automate WhatsApp conversations, send broadcasts, collect payments, and grow with AI automation.
+
+## About Samyoj
+
+Samyoj provides businesses with a WhatsApp marketing software they can use to Broadcast & automate messages, run Click to WhatsApp Ads, build Chatbots, showcase catalogues, provide multi-agent Live chat support, collect payments within WhatsApp and much more.
+
+## Pages
+
+- [Home](https://samyoj.com/) - Main landing page
+- [Features](https://samyoj.com/features) - Platform features
+- [Industries](https://samyoj.com/industries) - Industry use cases
+- [Contact](https://samyoj.com/contact) - Talk to experts / sales
+- [Privacy Policy](https://samyoj.com/legal/privacy-policy) - Privacy policy
+- [Terms & Conditions](https://samyoj.com/legal/terms-and-conditions) - Terms
+- [Cookie Policy](https://samyoj.com/legal/cookie-policy) - Cookies
+- [Refund Policy](https://samyoj.com/legal/refund-cancellation-policy) - Refunds
+- [Acceptable Use](https://samyoj.com/legal/acceptable-use-policy) - Acceptable use
+
+## Key Features
+
+- **Broadcast Messages**: Start with 2000 messages/day, scale to unlimited
+- **AI Chatbots**: Build no-code chatbots for 24/7 automation
+- **WhatsApp Payments**: Collect payments directly within WhatsApp
+- **Live Chat**: Multi-agent support with team collaboration
+- **Click to WhatsApp Ads**: Run targeted advertising campaigns
+- **Catalogs**: Showcase products directly in WhatsApp
+- **API Access**: Full WhatsApp Business API integration
+
+## Pricing
+
+- **Free Forever Plan**: Zero upfront costs, perfect for SMBs
+- **Paid Plans**: Starting from competitive pricing (plans from ₹1500/month)
+- **No Setup Fee**: WhatsApp Business API procurement is completely free through Samyoj
+- **Pay-per-Message**: WhatsApp charges ₹1.09/message for marketing, ₹0.145 for utility/auth messages
+
+## Customer Success Stories
+
+- **MBA Fundas**: "Samyoj has completely changed the way we engage with our customers. Broadcasts, automations and API - everything just works seamlessly!"
+- **MomsCo**: "The best WhatsApp marketing tool we've used. Easy to set up, powerful features and outstanding support."
+- **EdTechLab**: "With Samyoj, we increased our conversions by 3X. The automation flows and campaign insights are simply amazing."
+- **Cosco**: "Samyoj helped us increase our customer engagement from 35% to 90% with their Smart Retargeting feature."
+- **AevyTV**: "Samyoj has been pivotal for us. The personalised interactions and instant responses greatly improved our sales!"
+- **PhysicsWallah**: "Samyoj team has shown exceptional professionalism, reliability and a true commitment to customer satisfaction."
+- **D2C Brands**: "Setting up our WhatsApp shop took less than 10 minutes. Our order volume doubled in weeks!"
+- **HealthKart**: "The Webviews and custom forms have transformed our customer onboarding. User response rates are up by 150%."
+
+## Contact Information
+
+- **Sales**: +91 8839888531
+- **Support**: +91 8305369467
+- **Email**: hello@samyoj.com
+- **Location**: Indore, Madhya Pradesh, India
+- **App**: https://app.samyoj.com/
+
+## Optional
+
+- [Sitemap](https://samyoj.com/sitemap.xml)

@@ -172,7 +172,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0;
+  gap: 18px;
 }
 
 .sy-footer-links li {
@@ -183,14 +183,14 @@
 .sy-footer-links a {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
   width: 100%;
   max-width: 100%;
   color: #2f3f39;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.25;
-  padding: 3px 0;
+  line-height: 1.35;
+  padding: 0;
   min-height: 0;
   transition: color 0.18s ease;
   word-break: normal;
@@ -202,12 +202,16 @@
 }
 
 .sy-footer-links svg {
-  width: var(--sy-link-icon);
-  height: var(--sy-link-icon);
-  min-width: var(--sy-link-icon);
-  max-width: var(--sy-link-icon);
-  color: #7a8a84;
-  flex: 0 0 var(--sy-link-icon);
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  max-width: 12px;
+  padding: 6px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  background: var(--sy-icon-bg);
+  color: var(--sy-green);
+  flex: 0 0 auto;
   display: block;
   align-self: center;
 }
@@ -217,7 +221,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 2px;
+  gap: 18px;
 }
 
 .sy-footer-contact li {
@@ -229,14 +233,14 @@
 .sy-footer-contact a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   width: 100%;
   max-width: 100%;
   color: #2f3f39;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.3;
-  padding: 2px 0;
+  line-height: 1.4;
+  padding: 0;
   min-height: 0;
   word-break: normal;
   overflow-wrap: break-word;
@@ -419,35 +423,40 @@
   }
 
   .sy-footer-links {
-    gap: 0;
+    gap: 14px;
   }
 
   .sy-footer-links a {
-    gap: 7px;
+    gap: 10px;
     min-height: 0;
-    padding: 3px 0;
-    font-size: 12.5px;
-    line-height: 1.25;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.35;
   }
 
   .sy-footer-links svg {
-    width: var(--sy-link-icon);
-    height: var(--sy-link-icon);
-    min-width: var(--sy-link-icon);
-    max-width: var(--sy-link-icon);
-    flex: 0 0 var(--sy-link-icon);
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    max-width: 12px;
+    padding: 6px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background: var(--sy-icon-bg);
+    color: var(--sy-green);
+    flex: 0 0 auto;
   }
 
   .sy-footer-contact {
-    gap: 2px;
+    gap: 14px;
   }
 
   .sy-footer-contact li,
   .sy-footer-contact a {
-    gap: 8px;
+    gap: 12px;
     min-height: 0;
-    padding: 2px 0;
-    font-size: 12.5px;
+    padding: 0;
+    font-size: 14px;
     align-items: center;
   }
 

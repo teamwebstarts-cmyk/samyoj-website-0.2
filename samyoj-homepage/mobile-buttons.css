@@ -11,6 +11,21 @@ body:has(#samyoj-magic-bar) #um-header-banner {
 }
 
 @media (max-width: 900px) {
+  /* Roomier mobile header bar (logo + hamburger) */
+  body {
+    --um-header-height: calc(76px + var(--um-banner-height, 0px)) !important;
+  }
+
+  .umso-header._37ad9200,
+  ._37ad9200 {
+    height: 76px !important;
+  }
+
+  ._f4c879d8 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
   ._592c9c5c.wr {
     display: flex !important;
     align-items: center;
@@ -18,6 +33,7 @@ body:has(#samyoj-magic-bar) #um-header-banner {
     gap: 8px;
     width: 100%;
     flex-wrap: nowrap;
+    min-height: 100%;
   }
 
   .um-nav-wrapper {
@@ -90,20 +106,20 @@ body:has(#samyoj-magic-bar) #um-header-banner {
     gap: 12px;
   }
 
-  .hero-cta-row > a,
-  .hero-cta-row > button,
-  .ind-hero-ctas > a,
-  .ind-hero-ctas > button,
-  .custom-hero-ctas > a,
-  .custom-hero-ctas > button,
-  .ind-cta-actions > a,
-  .ind-cta-actions > button,
-  .pf-cta-right > a,
-  .pf-cta-right > button,
-  .sps-revenue-actions > a,
-  .sps-revenue-actions > button,
-  .setup-cta-block > .setup-cta-btn,
-  .promo-right > .promo-cta-btn {
+  .hero-cta-row>a,
+  .hero-cta-row>button,
+  .ind-hero-ctas>a,
+  .ind-hero-ctas>button,
+  .custom-hero-ctas>a,
+  .custom-hero-ctas>button,
+  .ind-cta-actions>a,
+  .ind-cta-actions>button,
+  .pf-cta-right>a,
+  .pf-cta-right>button,
+  .sps-revenue-actions>a,
+  .sps-revenue-actions>button,
+  .setup-cta-block>.setup-cta-btn,
+  .promo-right>.promo-cta-btn {
     width: 100% !important;
     max-width: 100%;
     justify-content: center !important;

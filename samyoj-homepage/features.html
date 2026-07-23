@@ -20,8 +20,7 @@
   <meta property="og:description"
     content="Shared inbox, visual automations, AI chatbot, broadcasts, CRM and analytics — everything your WhatsApp operation needs in one Samyoj workspace." />
   <meta property="og:url" content="https://samyoj.com/features" />
-  <meta property="og:image"
-    content="https://umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/psugh9h16vbov6xh.webp?w=1200&amp;dpr=2" />
+  <meta property="og:image" content="https://samyoj.com/images/feat-illu-01.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_IN" />
@@ -29,11 +28,12 @@
   <meta name="twitter:title" content="Samyoj Platform Features | WhatsApp CRM, Automations &amp; AI" />
   <meta name="twitter:description"
     content="Shared inbox, visual automations, AI chatbot, broadcasts, CRM and analytics — everything your WhatsApp operation needs in one Samyoj workspace." />
-  <meta name="twitter:image"
-    content="https://umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/psugh9h16vbov6xh.webp?w=1200&amp;dpr=2" />
+  <meta name="twitter:image" content="https://samyoj.com/images/feat-illu-01.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <link rel="icon" href="../umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/jwg34iopx09r1yvkc436.png?w=32&amp;h=32" />
+  <link rel="icon" href="images/favicon.webp" type="image/webp" sizes="32x32" />
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180" />
   <link rel="alternate" hrefLang="en" href="https://samyoj.com/features" />
   <link rel="alternate" hrefLang="x-default" href="https://samyoj.com/features" />
   <meta name="thesmartware-site-verification" content="a04113a0940ddd36ff0d3ec5839ee715" />
@@ -1157,6 +1157,41 @@
       display: none;
     }
 
+    /* Stable nav: CSS breakpoint instead of Umso width-math (fixes desktop hamburger + flicker) */
+    .um-nav-drawerTrigger {
+      z-index: 95;
+      pointer-events: auto;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper.um-hidden .um-nav-links {
+        display: flex !important;
+      }
+
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
+        display: flex !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper .um-nav-buttons {
+        display: none !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: block !important;
+      }
+    }
+
     @keyframes keyframes-navbar {
       0% {
         opacity: 0;
@@ -1470,6 +1505,14 @@
       padding-bottom: 36px;
     }
 
+    @media (max-width: 760px) {
+      ._5de7520e {
+        padding-top: 20px;
+        --paddingTop: 20px;
+        padding-bottom: 28px;
+      }
+    }
+
     ._299cb117 {
       display: flex;
     }
@@ -1488,27 +1531,7 @@
       flex-direction: column;
     }
 
-    .alignItems {
-      0: f;
-      1: l;
-      2: e;
-      3: x;
-      4: -;
-      5: s;
-      6: t;
-      7: a;
-      8: r;
-      9: t;
-    }
-
-    .textAlign {
-      0: l;
-      1: e;
-      2: f;
-      3: t;
-    }
-
-    ._ecbee37c {
+._ecbee37c {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -1597,10 +1620,19 @@
 
     ._ba1fa94a {
       display: block;
-      width: 90%;
+      width: 100%;
       max-width: 100%;
+      height: auto;
       margin: 0 auto;
+      object-fit: contain;
       border-radius: calc(var(--card-borderRadius)/2);
+    }
+
+    /* Only cap height on mobile so the tall illustration doesn't dominate */
+    @media (max-width: 750px) {
+      ._ba1fa94a {
+        max-height: min(420px, 55vh);
+      }
     }
 
     /* ── Hero redesign: checklist, CTAs, stats ── */
@@ -1774,7 +1806,7 @@
         gap: 12px;
       }
 
-      .hero-cta-row > * {
+      .hero-cta-row>* {
         width: 100%;
         justify-content: center;
         box-sizing: border-box;
@@ -1838,25 +1870,7 @@
       padding-bottom: 0px;
     }
 
-    .alignItems {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    .textAlign {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    ._8cfaaed6 {
+._8cfaaed6 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -2242,25 +2256,7 @@
       padding-bottom: 0;
     }
 
-    .alignItems {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    .textAlign {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    ._db78ab11 {
+._db78ab11 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -2330,25 +2326,7 @@
       padding-bottom: 50px;
     }
 
-    .alignItems {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    .textAlign {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    ._65ef41dc {
+._65ef41dc {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -2553,13 +2531,11 @@
     .feat-hero-band {
       position: relative;
       text-align: center;
-      min-height: calc(100vh - 80px);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       box-sizing: border-box;
-      padding: 56px 24px 48px;
+      padding: 40px 24px 36px;
       overflow: hidden;
     }
 
@@ -2886,7 +2862,7 @@
     /* ── Layer 4: Bottom stats bar ── */
     .feat-stats-bar {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
       background: #fff;
       border: 1px solid var(--feat-border);
@@ -2999,14 +2975,14 @@
       }
 
       .feat-stats-bar {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .feat-stat:nth-child(2n) {
+      .feat-stat:nth-child(3n) {
         border-right: none;
       }
 
-      .feat-stat:nth-child(n+3) {
+      .feat-stat:nth-child(n+4) {
         border-top: 1px solid #eef0f2;
       }
     }
@@ -3198,10 +3174,25 @@
       stroke-width: 2;
     }
 
-    .ai-fi-green { background: #E8F8EE; color: #108548; }
-    .ai-fi-purple { background: #F3E8FF; color: #7C3AED; }
-    .ai-fi-blue { background: #E8F1FF; color: #2563EB; }
-    .ai-fi-orange { background: #FFF4E6; color: #EA580C; }
+    .ai-fi-green {
+      background: #E8F8EE;
+      color: #108548;
+    }
+
+    .ai-fi-purple {
+      background: #F3E8FF;
+      color: #7C3AED;
+    }
+
+    .ai-fi-blue {
+      background: #E8F1FF;
+      color: #2563EB;
+    }
+
+    .ai-fi-orange {
+      background: #FFF4E6;
+      color: #EA580C;
+    }
 
     .ai-feature-title {
       font: var(--font-title);
@@ -3289,10 +3280,25 @@
       stroke-width: 2;
     }
 
-    .ai-si-green { background: #E8F8EE; color: #108548; }
-    .ai-si-purple { background: #F3E8FF; color: #7C3AED; }
-    .ai-si-blue { background: #E8F1FF; color: #2563EB; }
-    .ai-si-orange { background: #FFF4E6; color: #EA580C; }
+    .ai-si-green {
+      background: #E8F8EE;
+      color: #108548;
+    }
+
+    .ai-si-purple {
+      background: #F3E8FF;
+      color: #7C3AED;
+    }
+
+    .ai-si-blue {
+      background: #E8F1FF;
+      color: #2563EB;
+    }
+
+    .ai-si-orange {
+      background: #FFF4E6;
+      color: #EA580C;
+    }
 
     .ai-stat-val {
       font: var(--font-title);
@@ -3476,9 +3482,17 @@
         transform: none;
       }
 
-      html.js-reveal [data-reveal][data-reveal-delay="1"] { transition-delay: 0.08s; }
-      html.js-reveal [data-reveal][data-reveal-delay="2"] { transition-delay: 0.16s; }
-      html.js-reveal [data-reveal][data-reveal-delay="3"] { transition-delay: 0.24s; }
+      html.js-reveal [data-reveal][data-reveal-delay="1"] {
+        transition-delay: 0.08s;
+      }
+
+      html.js-reveal [data-reveal][data-reveal-delay="2"] {
+        transition-delay: 0.16s;
+      }
+
+      html.js-reveal [data-reveal][data-reveal-delay="3"] {
+        transition-delay: 0.24s;
+      }
 
       .ai-stat,
       .hero-stat,
@@ -3560,25 +3574,7 @@
       flex-direction: column;
     }
 
-    .alignItems {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    .textAlign {
-      0: c;
-      1: e;
-      2: n;
-      3: t;
-      4: e;
-      5: r;
-    }
-
-    ._e769e945 {
+._e769e945 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -3739,27 +3735,7 @@
       }
     }
 
-    .alignItems {
-      0: f;
-      1: l;
-      2: e;
-      3: x;
-      4: -;
-      5: s;
-      6: t;
-      7: a;
-      8: r;
-      9: t;
-    }
-
-    .textAlign {
-      0: l;
-      1: e;
-      2: f;
-      3: t;
-    }
-
-    ._22e950e2 {
+._22e950e2 {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -3817,27 +3793,7 @@
       padding-bottom: 50px;
     }
 
-    .alignItems {
-      0: f;
-      1: l;
-      2: e;
-      3: x;
-      4: -;
-      5: s;
-      6: t;
-      7: a;
-      8: r;
-      9: t;
-    }
-
-    .textAlign {
-      0: l;
-      1: e;
-      2: f;
-      3: t;
-    }
-
-    ._e7e6584f {
+._e7e6584f {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -4113,7 +4069,7 @@
     }
   </style>
   <style id="umso-cssmanager"></style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&amp;display=block"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&amp;display=swap"
     rel="stylesheet" />
   <script>
     ; (function (src) {
@@ -4460,7 +4416,11 @@
     }
   </style>
   <link rel="stylesheet" href="mobile-buttons.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="samyoj-footer.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
 </head>
 
 <body class="noScript">
@@ -4477,12 +4437,11 @@
         <div class="wr"
           style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
           <span class="_071afc96 um-text">
-            <p><strong>New Launch | Build AI Agents on WhatsApp that qualify &amp; convert 24/7</strong> ·
-              <strong>Explore More</strong>
-            </p>
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
             <!-- -->
             <style>
-              @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;display=swap');
+              /* Manrope already loaded via <link> — skip duplicate @import */
 
               #samyoj-magic-bar {
                 position: fixed;
@@ -4490,155 +4449,220 @@
                 left: 0;
                 right: 0;
                 z-index: 900;
-                /* was 2147483000 — kept below Umso drawer (999) */
                 font-family: 'Manrope', system-ui, -apple-system, sans-serif;
-                background: linear-gradient(90deg, #cfeccb 0%, #eef6cf 35%, #f3f6d6 50%, #e3f1c9 70%, #cfeccb 100%);
-                border-bottom: 1px solid rgba(31, 165, 72, .18);
-                box-shadow: 0 2px 12px rgba(16, 58, 32, .10);
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
               }
 
               #samyoj-magic-bar.mb-menu-open {
                 display: none !important;
               }
 
-              /* hide while mobile menu is open */
+              /* Hide native Umso banner text; magic bar covers the top fully */
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
               #samyoj-magic-bar .mb-inner {
-                max-width: 1280px;
+                pointer-events: auto;
+                max-width: 1100px;
                 margin: 0 auto;
-                padding: 10px 24px;
+                padding: 10px 16px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-wrap: wrap;
-                gap: 6px 14px;
-                text-align: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #samyoj-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #samyoj-magic-bar .mb-divider {
+                width: 1px;
+                height: 26px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
               }
 
               #samyoj-magic-bar .mb-pill {
                 display: inline-flex;
                 align-items: center;
-                gap: 7px;
-                background: linear-gradient(135deg, #38c46a 0%, #1fa548 100%);
+                gap: 6px;
+                background: #146b3a;
                 color: #fff;
-                font-size: 11.5px;
+                font-size: 11px;
                 font-weight: 800;
-                letter-spacing: .06em;
+                letter-spacing: .08em;
                 text-transform: uppercase;
-                padding: 5px 12px;
+                padding: 6px 12px;
                 border-radius: 999px;
                 white-space: nowrap;
-                box-shadow: 0 3px 9px rgba(31, 165, 72, .28);
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
               }
 
-              #samyoj-magic-bar .mb-dot {
-                width: 7px;
-                height: 7px;
-                border-radius: 50%;
-                background: #d8ffe6;
-                box-shadow: 0 0 0 0 rgba(216, 255, 230, .8);
-                animation: mbPulse 1.8s infinite;
+              #samyoj-magic-bar .mb-spark {
+                width: 12px;
+                height: 12px;
+                display: block;
+                flex: 0 0 auto;
               }
 
-              @keyframes mbPulse {
-                0% {
-                  box-shadow: 0 0 0 0 rgba(216, 255, 230, .7)
-                }
-
-                70% {
-                  box-shadow: 0 0 0 7px rgba(216, 255, 230, 0)
-                }
-
-                100% {
-                  box-shadow: 0 0 0 0 rgba(216, 255, 230, 0)
-                }
+              #samyoj-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
               }
 
               #samyoj-magic-bar .mb-title {
-                color: #0f2e20;
-                font-size: 18px;
-                font-weight: 800;
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
                 letter-spacing: -.01em;
-                line-height: 1.25;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #samyoj-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
               }
 
               #samyoj-magic-bar .mb-cta {
                 display: inline-flex;
                 align-items: center;
-                gap: 6px;
+                gap: 5px;
                 text-decoration: none;
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 800;
-              }
-
-              #samyoj-magic-bar .mb-cta .mb-label {
-                background: linear-gradient(100deg, #1fa548 0%, #1fa548 38%, #9ff7bf 50%, #1fa548 62%, #1fa548 100%);
-                background-size: 220% 100%;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                color: transparent;
-                animation: mbShimmer 2.4s linear infinite;
-              }
-
-              @keyframes mbShimmer {
-                0% {
-                  background-position: 220% 0
-                }
-
-                100% {
-                  background-position: -220% 0
-                }
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
               }
 
               #samyoj-magic-bar .mb-cta svg {
-                width: 17px;
-                height: 17px;
+                width: 16px;
+                height: 16px;
                 color: #1fa548;
                 transition: transform .18s ease;
               }
 
               #samyoj-magic-bar .mb-cta:hover svg {
-                transform: translateX(4px);
+                transform: translateX(3px);
               }
 
-              @media (max-width:600px) {
+              #samyoj-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #samyoj-magic-bar {
+                  padding: 0;
+                }
+
                 #samyoj-magic-bar .mb-inner {
-                  padding: 8px 14px;
-                  gap: 5px 9px;
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
                 }
 
-                #samyoj-magic-bar .mb-pill {
-                  font-size: 10px;
-                  padding: 4px 10px;
+                #samyoj-magic-bar .mb-divider {
+                  display: none;
                 }
 
-                #samyoj-magic-bar .mb-dot {
-                  width: 6px;
-                  height: 6px;
+                #samyoj-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #samyoj-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
                 }
 
                 #samyoj-magic-bar .mb-title {
-                  font-size: 14px;
-                  line-height: 1.2;
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #samyoj-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #samyoj-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #samyoj-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #samyoj-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
                 }
 
                 #samyoj-magic-bar .mb-cta {
-                  font-size: 13.5px;
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
                 }
 
                 #samyoj-magic-bar .mb-cta svg {
-                  width: 15px;
-                  height: 15px;
+                  width: 14px;
+                  height: 14px;
                 }
               }
 
-              @media (prefers-reduced-motion:reduce) {
-                #samyoj-magic-bar .mb-dot {
-                  animation: none;
+              @media (max-width:380px) {
+                #samyoj-magic-bar .mb-title {
+                  font-size: 11.5px;
                 }
 
-                #samyoj-magic-bar .mb-cta .mb-label {
-                  animation: none;
+                #samyoj-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
                 }
               }
             </style>
@@ -4649,11 +4673,11 @@
                   var html =
                     '<div id="samyoj-magic-bar" role="region" aria-label="Announcement">' +
                     '<div class="mb-inner">' +
-                    '<span class="mb-pill"><span class="mb-dot"></span>New Launch</span>' +
-                    '<span class="mb-title">Build AI Agents on WhatsApp that qualify &amp; convert 24/7</span>' +
-                    '<a class="mb-cta" href="https://app.samyoj.com/"><span class="mb-label">Explore More</span>' +
-                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
-                    '</a>' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2l1.1 5.2L18 8.2l-4.2 2.8L15 16.4 12 13.7 9 16.4l1.2-5.4L6 8.2l4.9-.8L12 2.2z"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
                     '</div>' +
                     '</div>';
                   document.body.insertAdjacentHTML('afterbegin', html);
@@ -4720,10 +4744,10 @@
         style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
         <div class="_f4c879d8">
           <div class="_592c9c5c wr">
-                        <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
+            <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
-                <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="images/logo.jpeg"
-                      alt="Logo_Samyoj.png" style="width:150px" /></a></div>
+                <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="images/logo.webp"
+                      alt="Logo_Samyoj.png" style="width:150px"  width="150" height="43" /></a></div>
               </div>
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -4739,18 +4763,18 @@
                       fill="currentColor"></path>
                   </svg></button>
                 <script>(function () {
-    document.getElementById('btn_k9krbal3oo').addEventListener('click', function (e) {
-      (function redirectWithParams() {
-        const query = window.location.search;
-        const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
-        if (query) {
-          window.location.href = targetUrl + query;
-        } else {
-          window.location.href = targetUrl;
-        }
-      })();
-    })
-  })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_dosrxyyz2l"
+              document.getElementById('btn_k9krbal3oo').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_dosrxyyz2l"
                   class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
                     xmlns="http://www.w3.org/2000/svg" class="um-arrow">
                     <path
@@ -4759,50 +4783,54 @@
                   </svg></a>
               </div>
             </nav><button id="yspyhjboie-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
-            <div id="yspyhjboie-drawer" class="_cd1263f2 um-nav-drawer um-hidden">
-              <header>
-                <button class="um-nav-drawerClose"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="tabler-icon tabler-icon-x ">
-                    <path d="M18 6l-12 12"></path>
-                    <path d="M6 6l12 12"></path>
-                  </svg></button>
+            <div id="yspyhjboie-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
               </header>
-                            <div class="um-drawer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </div>
-              <div class="um-drawer-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_yuh8ig11er"
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z"/></svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="features.html" aria-current="page"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z"/><path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/><path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z"/></svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l7-4 2 1.2V5h7v15"/><path d="M4 20h16"/><path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1"/></svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/><path d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z"/></svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+              </ul>
+<div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_yuh8ig11er"
                   class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
-                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></button>
                 <script>(function () {
-    document.getElementById('btn_yuh8ig11er').addEventListener('click', function (e) {
-      (function redirectWithParams() {
-        const query = window.location.search;
-        const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
-        if (query) {
-          window.location.href = targetUrl + query;
-        } else {
-          window.location.href = targetUrl;
-        }
-      })();
-    })
-  })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_x7ccd1lcf9"
+              document.getElementById('btn_yuh8ig11er').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_x7ccd1lcf9"
                   class="_b90406f0 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
-                    xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></a>
               </div>
+            
+              <div class="sy-drawer-foot">
+                <span class="sy-drawer-wa" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.75 13.94c-.24.68-1.4 1.24-1.93 1.32-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.78-4.18-4.93-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1.01-2.41.26-.28.58-.35.77-.35h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.3.02.49-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.32.07.12.07.68-.17 1.36z"/></svg></span>
+                <div class="sy-drawer-foot-copy">
+                  <p class="sy-drawer-foot-title">Built for WhatsApp Business</p>
+                  <p class="sy-drawer-foot-sub"><span class="sy-drawer-bolt" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 10-14h-7l0-6z"/></svg></span> AI Powered CRM</p>
+                </div>
+              </div>
             </div>
-            <script>!function () { const e = document.getElementById('yspyhjboie'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('yspyhjboie-drawer')); const n = document.getElementById('yspyhjboie-drawerTrigger'), d = document.getElementById('yspyhjboie-drawer'), s = document.querySelectorAll('.um-lang-picker'); s && s.length > 0 && s.forEach(function (e) { e.querySelector('button').addEventListener('click', function () { e.querySelector('ul').classList.toggle('um-open') }) }), document.addEventListener('click', function (e) { d.contains(e.target) || e.target === n || d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'), c = e.querySelector('.um-nav-children'), o = e.querySelector('.um-nav-links'), u = e.querySelector('.um-nav-buttons'); n.addEventListener('click', function () { d.classList.remove('um-hidden') }), i.addEventListener('click', function () { d.classList.add('um-hidden') }); let l = 0, a = !0; function m() { !1 === a && (l = (c?.offsetWidth || 0) + (o?.offsetWidth || 0) + (u?.offsetWidth || 0) + 10), f() } function f() { e.offsetWidth - 10 < l ? (a = !0, e.classList.add('um-hidden'), n.classList.remove('um-hidden')) : (a = !1, e.classList.remove('um-hidden'), n.classList.add('um-hidden'), d.classList.add('um-hidden')) } new ResizeObserver(f).observe(document.body), c && new ResizeObserver(m).observe(c), u && new ResizeObserver(m).observe(u), o && new ResizeObserver(m).observe(o), m(), f() }();</script>
+            <script>!function () { const e = document.getElementById('yspyhjboie'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('yspyhjboie-drawer')); const n = document.getElementById('yspyhjboie-drawerTrigger'), d = document.getElementById('yspyhjboie-drawer'), s = document.querySelectorAll('.um-lang-picker'); s && s.length > 0 && s.forEach(function (e) { e.querySelector('button').addEventListener('click', function () { e.querySelector('ul').classList.toggle('um-open') }) }), document.addEventListener('click', function (e) { if (d.contains(e.target) || n.contains(e.target) || e.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'), c = e.querySelector('.um-nav-children'), o = e.querySelector('.um-nav-links'), u = e.querySelector('.um-nav-buttons'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }), i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
           </div>
         </div>
       </div>
@@ -4814,9 +4842,9 @@
         <div class="_6ae479cf">
           <header class="_ecbee37c" style="position:relative">
             <h1 class="_23da6a61 um-text">
-              <p>Turn every WhatsApp<br />conversation into<br /><span style="color:var(--color-accent-primary)">a
-                  faster
-                  path to revenue.</span></p>
+              <p>Turn every WhatsApp<br />Conversation into<br /><span style="color:var(--color-accent-primary)">A
+                  Faster
+                  Path to Revenue.</span></p>
             </h1>
             <div class="_da94c09a um-text"><span style="color:rgb(61, 61, 61)">SAMYOJ brings your WhatsApp
                 conversations,
@@ -4867,82 +4895,9 @@
             <span>Built for teams using the WhatsApp Business Cloud API.</span>
           </div>
         </div>
-        <div class="_10af011a"><img draggable="false" src="images/ChatGPT Image Jul 20, 2026, 03_03_00 PM.png"
-            class="_ba1fa94a" alt="SAMYOJ WhatsApp workspace"
-            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)" /></div>
-      </div>
-
-      <div class="hero-stat-bar">
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">200M+</div>
-          <div class="hero-stat-lbl">Active Businesses</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
-              <path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">180+</div>
-          <div class="hero-stat-lbl">Countries Supported</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"
-                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">2.2B+</div>
-          <div class="hero-stat-lbl">Messages Daily</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M7 15l3-4 3 3 4-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">98%</div>
-          <div class="hero-stat-lbl">Avg. Open Rate</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" />
-              <path d="M3 9h18M8 4v5M16 4v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              <path d="M12 13v3M9.5 14.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">5M+</div>
-          <div class="hero-stat-lbl">API Users Globally</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-icon hero-stat-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2"
-                stroke-linejoin="round" />
-              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="hero-stat-val">Secure &amp; Compliant</div>
-          <div class="hero-stat-lbl">&nbsp;</div>
-        </div>
+        <div class="_10af011a"><img draggable="false" src="images/feat-illu-01.png" class="_ba1fa94a"
+            alt="SAMYOJ WhatsApp workspace"
+            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)"  width="1343" height="1171" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -5046,8 +5001,7 @@
 
         <div class="pf-center">
           <div class="pf-dash">
-            <img draggable="false" src="images/ChatGPT Image Jul 20, 2026, 04_22_27 PM.png" class="pf-dash-img"
-              alt="SAMYOJ platform dashboard" />
+            <img draggable="false" src="images/feat-illu-02.png" class="pf-dash-img" alt="SAMYOJ platform dashboard"  width="1448" height="1086" loading="lazy" decoding="async" />
           </div>
           <div class="pf-trust">
             <div class="pf-trust-item">
@@ -5205,7 +5159,9 @@
         <div class="demo-content">
           <div class="demo-badge">
             <span class="demo-badge-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </span>
             See It In Action
           </div>
@@ -5219,7 +5175,10 @@
           <div class="demo-features">
             <div class="demo-feature">
               <div class="demo-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
               </div>
               <div>
                 <p class="demo-feature-title">Live Product Tour</p>
@@ -5228,7 +5187,9 @@
             </div>
             <div class="demo-feature">
               <div class="demo-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
               </div>
               <div>
                 <p class="demo-feature-title">In Just 5 Minutes</p>
@@ -5237,7 +5198,10 @@
             </div>
             <div class="demo-feature">
               <div class="demo-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
               </div>
               <div>
                 <p class="demo-feature-title">Real Use Cases</p>
@@ -5248,7 +5212,9 @@
 
           <div class="demo-cta-wrap">
             <button type="button" class="demo-cta-btn" id="demo-watch-btn" aria-label="Watch demo video">
-              <span class="demo-cta-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="demo-cta-play" aria-hidden="true"><svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></span>
               Watch Demo
             </button>
           </div>
@@ -5259,8 +5225,7 @@
           <div class="demo-motion" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="demo-video-frame" id="demo-video-frame" role="button" tabindex="0"
             aria-label="Play Samyoj product demo video">
-            <img class="demo-video-thumb" src="images/ChatGPT Image Jul 20, 2026, 04_22_27 PM.png"
-              alt="Samyoj dashboard preview" loading="lazy" />
+            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" width="1448" height="1086" loading="lazy" decoding="async" />
             <div class="demo-video-overlay">
               <button type="button" class="demo-play-btn" id="demo-play-btn" aria-label="Play video">
                 <svg viewBox="0 0 24 24">
@@ -5647,60 +5612,10 @@
             <p class="feat-cta-desc">Simplify conversations. Delight customers. Grow your business.</p>
             <a href="#" class="feat-cta-btn" onclick="return false;">Start Your Free Trial →</a>
           </div>
-          <img src="images/rocket iamge .png" alt="" class="feat-cta-rocket" aria-hidden="true" loading="lazy"
-            onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'">
+          <img src="images/rocket-image.png" alt="rocket image" class="feat-cta-rocket" aria-hidden="true"
+            loading="lazy" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'" width="1536" height="1024">
         </div>
 
-      </div>
-
-      <!-- Layer 4: Bottom stats bar -->
-      <div class="feat-stats-bar">
-        <div class="feat-stat">
-          <div class="feat-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <div class="feat-stat-val">200M+</div>
-          <div class="feat-stat-lbl">Active Businesses</div>
-        </div>
-        <div class="feat-stat">
-          <div class="feat-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
-          <div class="feat-stat-val">2.2B+</div>
-          <div class="feat-stat-lbl">Messages Daily</div>
-        </div>
-        <div class="feat-stat">
-          <div class="feat-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-          </div>
-          <div class="feat-stat-val">180+</div>
-          <div class="feat-stat-lbl">Countries Supported</div>
-        </div>
-        <div class="feat-stat">
-          <div class="feat-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
-            </svg>
-          </div>
-          <div class="feat-stat-val">5M+</div>
-          <div class="feat-stat-lbl">API Users Globally</div>
-        </div>
       </div>
 
     </div>
@@ -5713,7 +5628,8 @@
         <div class="ai-copy">
           <div class="ai-badge">✨ AI POWERED SUPPORT</div>
           <h2 class="ai-title"><span>AI Chatbot</span><br />Understands &amp; answers.<br />Converts.</h2>
-          <p class="ai-sub">Deliver instant, accurate answers 24/7 with AI. Capture leads, solve queries, and hand off to your team when it matters most.</p>
+          <p class="ai-sub">Deliver instant, accurate answers 24/7 with AI. Capture leads, solve queries, and hand off
+            to your team when it matters most.</p>
           <div class="ai-features">
             <div class="ai-feature">
               <div class="ai-feature-icon ai-fi-green">
@@ -5780,71 +5696,10 @@
         </div>
         <div class="ai-visual-col">
           <div class="ai-visual">
-            <img draggable="false"
-              src="images/ChatGPT Image Jul 20, 2026, 04_39_47 PM.png"
+            <img draggable="false" src="images/feat-illu-03.png"
               alt="AI Assistant chat interface with knowledge base, query resolution, and agent handoff"
-              loading="lazy" />
+              width="1448" height="1086" loading="lazy" decoding="async" />
           </div>
-        </div>
-      </div>
-
-      <div class="ai-stats">
-        <div class="ai-stat">
-          <div class="ai-stat-icon ai-si-green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-            </svg>
-          </div>
-          <div class="ai-stat-val">98%</div>
-          <div class="ai-stat-lbl">Query Resolution</div>
-        </div>
-        <div class="ai-stat">
-          <div class="ai-stat-icon ai-si-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
-          <div class="ai-stat-val">3.2s</div>
-          <div class="ai-stat-lbl">Avg. Response Time</div>
-        </div>
-        <div class="ai-stat">
-          <div class="ai-stat-icon ai-si-blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 3v16a2 2 0 0 0 2 2h16" />
-              <path d="M18 17V9" />
-              <path d="M13 17V5" />
-              <path d="M8 17v-3" />
-            </svg>
-          </div>
-          <div class="ai-stat-val">85%</div>
-          <div class="ai-stat-lbl">Customer Satisfaction</div>
-        </div>
-        <div class="ai-stat">
-          <div class="ai-stat-icon ai-si-orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <div class="ai-stat-val">2.5M+</div>
-          <div class="ai-stat-lbl">Queries Handled</div>
-        </div>
-        <div class="ai-stat">
-          <div class="ai-stat-icon ai-si-green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-              <polyline points="16 7 22 7 22 13" />
-            </svg>
-          </div>
-          <div class="ai-stat-val">40%</div>
-          <div class="ai-stat-lbl">Increase in Conversions</div>
         </div>
       </div>
     </div>
@@ -5877,7 +5732,8 @@
 
         <details class="custom-faq-item">
           <summary class="custom-faq-q">How is Samyoj&#x27;s broadcasting different from regular WhatsApp forwarding?
-            <span class="custom-faq-icon">+</span></summary>
+            <span class="custom-faq-icon">+</span>
+          </summary>
           <div class="custom-faq-a">
             <p>Regular WhatsApp forwarding is manual, limited to 256 contacts, and can get your account flagged. Samyoj
               uses the WhatsApp Business Cloud API with approved templates, consent-aware audiences, personalization,
@@ -5987,7 +5843,7 @@
   "@id": "https://samyoj.com/features#samyoj-platform",
   "name": "Samyoj WhatsApp Engagement Platform",
   "description": "Samyoj is a WhatsApp CRM and automation platform for shared inbox, visual flows, AI chatbot, broadcasts, contacts, tickets, templates, forms and analytics — built on the WhatsApp Business Cloud API.",
-  "image": "https://umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/psugh9h16vbov6xh.webp?w=1200&dpr=2",
+  "image": "https://samyoj.com/images/feat-illu-01.png",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "brand": { "@type": "Brand", "name": "Samyoj" },
@@ -6078,70 +5934,142 @@
     </div>
   </section>
   <footer class="sy-footer" aria-label="Site footer">
-  <div class="sy-footer-inner">
-    <div class="sy-footer-grid">
-      <div class="sy-footer-brand">
-        <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
-          <img src="images/logo.jpeg" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56" loading="lazy" decoding="async" />
-        </a>
-        <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale, backed by reliability.</p>
-        <div class="sy-footer-partner">
-          <img src="images/download.png" alt="Meta Tech Provider" width="160" height="89" loading="lazy" decoding="async" />
+    <div class="sy-footer-inner">
+      <div class="sy-footer-grid">
+        <div class="sy-footer-brand">
+          <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
+            <img src="images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56"
+              loading="lazy" decoding="async" />
+          </a>
+          <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale,
+            backed by reliability.</p>
+          <div class="sy-footer-partner">
+            <img src="images/download.png" alt="Meta Tech Provider" width="160" height="89" loading="lazy"
+              decoding="async" />
+          </div>
+          <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#e11d48"
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg> in India</p>
+          <div class="sy-footer-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+              </svg></a>
+            <a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 2.2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.27 1.3.62 1.8 1.18.57.56.92 1.15 1.19 1.84.25.66.42 1.4.47 2.5.05 1.07.06 1.38.06 4.08s-.01 3.01-.06 4.08c-.05 1.1-.22 1.84-.47 2.5a4.9 4.9 0 0 1-1.19 1.84 4.9 4.9 0 0 1-1.84 1.19c-.66.25-1.4.42-2.5.47-1.07.05-1.38.06-4.08.06s-3.01-.01-4.08-.06c-1.1-.05-1.84-.22-2.5-.47a4.9 4.9 0 0 1-1.84-1.19 4.9 4.9 0 0 1-1.19-1.84c-.25-.66-.42-1.4-.47-2.5C2.21 15.01 2.2 14.7 2.2 12s.01-3.01.06-4.08c.05-1.1.22-1.84.47-2.5.27-.69.62-1.28 1.19-1.84A4.9 4.9 0 0 1 5.76 2.73c.66-.25 1.4-.42 2.5-.47C9.33 2.21 9.64 2.2 12 2.2M12 0C9.28 0 8.94 0 7.86.05 6.77.1 6.02.28 5.37.53A7.08 7.08 0 0 0 2.8 2.8 7.08 7.08 0 0 0 .53 5.37C.28 6.02.1 6.77.05 7.86 0 8.94 0 9.28 0 12s0 3.06.05 4.14c.05 1.09.23 1.84.48 2.49a7.08 7.08 0 0 0 2.27 2.57 7.08 7.08 0 0 0 2.57 2.27c.65.25 1.4.43 2.49.48C8.94 24 9.28 24 12 24s3.06 0 4.14-.05c1.09-.05 1.84-.23 2.49-.48a7.08 7.08 0 0 0 2.57-2.27 7.08 7.08 0 0 0 2.27-2.57c.25-.65.43-1.4.48-2.49C24 15.06 24 14.72 24 12s0-3.06-.05-4.14c-.05-1.09-.23-1.84-.48-2.49a7.08 7.08 0 0 0-2.27-2.57A7.08 7.08 0 0 0 18.63.53C17.98.28 17.23.1 16.14.05 15.06 0 14.72 0 12 0z" />
+              </svg></a>
+            <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer"
+              aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z" />
+              </svg></a>
+          </div>
         </div>
-        <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#e11d48" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> in India</p>
-        <div class="sy-footer-social" aria-label="Social links">
-          <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-          <a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 2.2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.27 1.3.62 1.8 1.18.57.56.92 1.15 1.19 1.84.25.66.42 1.4.47 2.5.05 1.07.06 1.38.06 4.08s-.01 3.01-.06 4.08c-.05 1.1-.22 1.84-.47 2.5a4.9 4.9 0 0 1-1.19 1.84 4.9 4.9 0 0 1-1.84 1.19c-.66.25-1.4.42-2.5.47-1.07.05-1.38.06-4.08.06s-3.01-.01-4.08-.06c-1.1-.05-1.84-.22-2.5-.47a4.9 4.9 0 0 1-1.84-1.19 4.9 4.9 0 0 1-1.19-1.84c-.25-.66-.42-1.4-.47-2.5C2.21 15.01 2.2 14.7 2.2 12s.01-3.01.06-4.08c.05-1.1.22-1.84.47-2.5.27-.69.62-1.28 1.19-1.84A4.9 4.9 0 0 1 5.76 2.73c.66-.25 1.4-.42 2.5-.47C9.33 2.21 9.64 2.2 12 2.2M12 0C9.28 0 8.94 0 7.86.05 6.77.1 6.02.28 5.37.53A7.08 7.08 0 0 0 2.8 2.8 7.08 7.08 0 0 0 .53 5.37C.28 6.02.1 6.77.05 7.86 0 8.94 0 9.28 0 12s0 3.06.05 4.14c.05 1.09.23 1.84.48 2.49a7.08 7.08 0 0 0 2.27 2.57 7.08 7.08 0 0 0 2.57 2.27c.65.25 1.4.43 2.49.48C8.94 24 9.28 24 12 24s3.06 0 4.14-.05c1.09-.05 1.84-.23 2.49-.48a7.08 7.08 0 0 0 2.57-2.27 7.08 7.08 0 0 0 2.27-2.57c.25-.65.43-1.4.48-2.49C24 15.06 24 14.72 24 12s0-3.06-.05-4.14c-.05-1.09-.23-1.84-.48-2.49a7.08 7.08 0 0 0-2.27-2.57A7.08 7.08 0 0 0 18.63.53C17.98.28 17.23.1 16.14.05 15.06 0 14.72 0 12 0z"/></svg></a>
-          <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z"/></svg></a>
-          <a href="https://play.google.com/store/apps/details?id=com.samyoj.mobile" target="_blank" rel="noopener noreferrer" aria-label="Google Play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18.5A1.2 1.2 0 0 0 2 1.6v20.8a1.2 1.2 0 0 0 1.18 1.1c.16 0 .32-.04.46-.12L15.5 12.6 3.64.62A1.2 1.2 0 0 0 3.18.5zm12.7 8.1-2.4 2.4 2.4 2.4 3.6-2.1c.7-.4.7-1.4 0-1.8l-3.6-1.9zM4.1 21.9 12.4 13.6 10 11.2 3.4 19.6c.14.8.5 1.6.7 2.3zm.7-19.8C4.6 2.8 4.24 3.6 4.1 4.4L10 12.8l2.4-2.4L4.8 2.1z"/></svg></a>
-          <a href="https://apps.apple.com/in/app/samyoj/id6711351197" target="_blank" rel="noopener noreferrer" aria-label="App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></a>
+
+        <nav class="sy-footer-col" aria-label="Platform">
+          <h4>Platform</h4>
+          <ul class="sy-footer-links">
+            <li><a href="features.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path d="M12 3l2.2 5.4L20 10l-4.5 3.5L16.8 20 12 16.8 7.2 20l1.3-6.5L4 10l5.8-1.6L12 3z" />
+                </svg>Features</a></li>
+            <li><a href="industries.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6" />
+                </svg>Industries</a></li>
+            <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path
+                    d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                  <path d="M9 14v-2a3 3 0 0 1 6 0v2" />
+                </svg>Contact Us</a></li>
+            <li><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <nav class="sy-footer-col" aria-label="Company">
+          <h4>Company</h4>
+          <ul class="sy-footer-links">
+            <li><a href="legal/privacy-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                  <path d="M14 3v5h5M9 13h6M9 17h6" />
+                </svg>Privacy Policy</a></li>
+            <li><a href="legal/refund-cancellation-policy.html"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M3 7h18M3 12h18M3 17h18" />
+                  <circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="12" r="1.2" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="17" r="1.2" fill="currentColor" stroke="none" />
+                </svg>Refund Policy</a></li>
+            <li><a href="legal/terms-and-conditions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                  <path d="M14 3v5h5M9 12h6M9 16h4" />
+                </svg>Terms &amp; Conditions</a></li>
+            <li><a href="legal/acceptable-use-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 3l8 4v6c0 4.4-3.4 7.7-8 8-4.6-.3-8-3.6-8-8V7l8-4z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>Acceptable Use Policy</a></li>
+            <li><a href="legal/cookie-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 8v4l2.5 1.5" />
+                </svg>Cookie Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="sy-footer-col" aria-label="Contact Us">
+          <h4>Contact Us</h4>
+          <ul class="sy-footer-contact">
+            <li><a href="tel:+918839888531"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.3 9 9 0 0 0 2.8.5 1.4 1.4 0 0 1 1.4 1.4V20a1.4 1.4 0 0 1-1.4 1.4A17.4 17.4 0 0 1 2.6 4.4 1.4 1.4 0 0 1 4 3h3.2A1.4 1.4 0 0 1 8.6 4.4a9 9 0 0 0 .5 2.8 1.4 1.4 0 0 1-.3 1.4L6.6 10.8z" />
+                  </svg></span>Sales: +91 8839888531</a></li>
+            <li><a href="tel:+918305369467"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                    <path d="M9 14v-2a3 3 0 0 1 6 0v2" />
+                  </svg></span>Support: +91 8305369467</a></li>
+            <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m4 7 8 6 8-6" />
+                  </svg></span>hello@samyoj.com</a></li>
+            <li><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg></span><span>Samyoj<br>Indore, Madhya Pradesh, India</span></li>
+          </ul>
         </div>
       </div>
 
-      <nav class="sy-footer-col" aria-label="Platform">
-        <h4>Platform</h4>
-        <ul class="sy-footer-links">
-          <li><a href="features.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.2 5.4L20 10l-4.5 3.5L16.8 20 12 16.8 7.2 20l1.3-6.5L4 10l5.8-1.6L12 3z"/></svg>Features</a></li>
-          <li><a href="industries.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>Industries</a></li>
-          <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><path d="M9 14v-2a3 3 0 0 1 6 0v2"/></svg>Contact Us</a></li>
-          <li><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a></li>
-        </ul>
-      </nav>
-
-      <nav class="sy-footer-col" aria-label="Company">
-        <h4>Company</h4>
-        <ul class="sy-footer-links">
-          <li><a href="legal/privacy-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Privacy Policy</a></li>
-          <li><a href="legal/refund-cancellation-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/><circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="1.2" fill="currentColor" stroke="none"/></svg>Refund Policy</a></li>
-          <li><a href="legal/terms-and-conditions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M9 12h6M9 16h4"/></svg>Terms &amp; Conditions</a></li>
-          <li><a href="legal/acceptable-use-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v6c0 4.4-3.4 7.7-8 8-4.6-.3-8-3.6-8-8V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Acceptable Use Policy</a></li>
-                  <li><a href="legal/cookie-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>Cookie Policy</a></li>
-        </ul>
-      </nav>
-
-      <div class="sy-footer-col" aria-label="Contact Us">
-        <h4>Contact Us</h4>
-        <ul class="sy-footer-contact">
-          <li><a href="tel:+918839888531"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.3 9 9 0 0 0 2.8.5 1.4 1.4 0 0 1 1.4 1.4V20a1.4 1.4 0 0 1-1.4 1.4A17.4 17.4 0 0 1 2.6 4.4 1.4 1.4 0 0 1 4 3h3.2A1.4 1.4 0 0 1 8.6 4.4a9 9 0 0 0 .5 2.8 1.4 1.4 0 0 1-.3 1.4L6.6 10.8z"/></svg></span>Sales: +91 8839888531</a></li>
-          <li><a href="tel:+918305369467"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><path d="M9 14v-2a3 3 0 0 1 6 0v2"/></svg></span>Support: +91 8305369467</a></li>
-          <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>hello@samyoj.com</a></li>
-          <li><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Samyoj<br>Indore, Madhya Pradesh, India</span></li>
-        </ul>
+      <div class="sy-footer-bottom">
+        <p class="sy-footer-copy">© 2026 Samyoj. All rights reserved.</p>
+        <div class="sy-footer-legal">
+          <a href="legal/privacy-policy.html">Privacy Policy</a><span aria-hidden="true"></span>
+          <a href="legal/refund-cancellation-policy.html">Refund Policy</a><span aria-hidden="true"></span>
+          <a href="legal/terms-and-conditions.html">Terms &amp; Conditions</a><span aria-hidden="true"></span>
+          <a href="legal/cookie-policy.html">Cookie Policy</a><span aria-hidden="true"></span>
+          <a href="legal/acceptable-use-policy.html">Acceptable Use Policy</a>
+        </div>
       </div>
     </div>
-
-    <div class="sy-footer-bottom">
-      <p class="sy-footer-copy">© 2026 Samyoj. All rights reserved.</p>
-      <div class="sy-footer-legal">
-        <a href="legal/privacy-policy.html">Privacy Policy</a><span aria-hidden="true"></span>
-        <a href="legal/refund-cancellation-policy.html">Refund Policy</a><span aria-hidden="true"></span>
-        <a href="legal/terms-and-conditions.html">Terms &amp; Conditions</a><span aria-hidden="true"></span>
-        <a href="legal/cookie-policy.html">Cookie Policy</a><span aria-hidden="true"></span>
-        <a href="legal/acceptable-use-policy.html">Acceptable Use Policy</a>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
   <script>!function () { const t = document.querySelectorAll('.umso-animated'); const e = new IntersectionObserver((t, e) => { t.forEach((t, n) => { const o = t.target, a = function (t) { const e = t.getBoundingClientRect(), n = window.innerHeight; let o = .3 / (e.height / n + .2); return o = o > .1 ? Math.round(10 * o) / 10 : Math.round(20 * o) / 20, o > 1 && (o = 1), o }(o); t.isIntersecting && t.intersectionRatio >= a && (!function (t, e) { const n = parseFloat(t.style.getPropertyValue('--animationStagger')) || 0, o = parseFloat(t.style.getPropertyValue('--animationDelay')) || 0; t.style.animationDelay = `${o + n * e}ms` }(o, n), o.classList.add('umso-animating'), e.unobserve(o)) }) }, { threshold: [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1] }); setTimeout(() => { t.forEach(t => e.observe(t)) }, 50) }();</script>
   <script>window.OpenModal = function (o) { const e = document.querySelector('#' + o + '.umsoModalWrapper'); if (!e) return; const n = e.querySelector('.umsoModalOverlay'); e && n ? (e.style.display = 'block', n.addEventListener('click', () => { window.CloseModal(o) }, { once: !0 })) : console.error('modal not found ', o) }, window.CloseModal = function (o) { const e = document.querySelector('#' + o + '.umsoModalWrapper'); e ? e.style.display = 'none' : console.error('modal not found', o) };</script>
   <script>// Umso video SendEvent tracking script removed (called window.SendEvent which no longer exists; not needed on a static page).</script>
