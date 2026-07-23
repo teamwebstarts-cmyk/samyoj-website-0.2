@@ -11,7 +11,7 @@ const ENV_PATH = path.join(ROOT, ".env");
 
 /** @type {{ listen: string, port: number, active: string, profiles: Record<string, any> }} */
 let config = loadConfig();
-loadEnvFile(ENV_PATH);
+loadEnvFile(ENV_PATH, { override: true });
 
 const recent = [];
 const MAX_RECENT = 30;
@@ -20,17 +20,67 @@ function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
 
-function saveActive(profileId) {
-  config = loadConfig();
-  if (!config.profiles[profileId]) {
-    throw new Error(`Unknown profile: ${profileId}`);
-  }
-  config.active = profileId;
+function saveConfig(next) {
+  config = next;
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2) + "\n");
 }
 
-function loadEnvFile(filePath) {
-  if (!fs.existsSync(filePath)) return;
+function reloadConfig() {
+  config = loadConfig();
+  return config;
+}
+
+function slugify(input) {
+  return String(input || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_|_$/g, "")
+    .slice(0, 40) || `provider_${Date.now()}`;
+}
+
+function envKeyName(profileId) {
+  return `${slugify(profileId).toUpperCase()}_API_KEY`;
+}
+
+function parseModelsInput(raw, defaultModel) {
+  const models = {};
+  if (Array.isArray(raw)) {
+    for (const item of raw) {
+      if (!item) continue;
+      if (typeof item === "string") {
+        const id = item.trim();
+        if (id) models[id] = id;
+      } else if (item.alias && item.id) {
+        models[String(item.alias).trim()] = String(item.id).trim();
+        models[String(item.id).trim()] = String(item.id).trim();
+      }
+    }
+  } else if (typeof raw === "string") {
+    for (const part of raw.split(/[\n,]+/)) {
+      const bit = part.trim();
+      if (!bit) continue;
+      if (bit.includes("=")) {
+        const [alias, id] = bit.split("=").map((s) => s.trim());
+        if (alias && id) {
+          models[alias] = id;
+          models[id] = id;
+        }
+      } else {
+        models[bit] = bit;
+      }
+    }
+  } else if (raw && typeof raw === "object") {
+    Object.assign(models, raw);
+  }
+  if (defaultModel) {
+    models[defaultModel] = defaultModel;
+  }
+  return models;
+}
+
+function loadEnvFile(filePath, { override = false } = {}) {
+  if (!fs.existsSync(filePath)) return {};
+  const map = {};
   const text = fs.readFileSync(filePath, "utf8");
   for (const line of text.split(/\r?\n/)) {
     const trimmed = line.trim();
@@ -45,8 +95,49 @@ function loadEnvFile(filePath) {
     ) {
       value = value.slice(1, -1);
     }
-    if (!(key in process.env)) process.env[key] = value;
+    map[key] = value;
+    if (override || !(key in process.env)) process.env[key] = value;
   }
+  return map;
+}
+
+function readEnvMap() {
+  return loadEnvFile(ENV_PATH, { override: false });
+}
+
+function writeEnvMap(map) {
+  const lines = [
+    "# Managed by Cursor Provider Switch UI. Do not commit.",
+    "",
+  ];
+  for (const [k, v] of Object.entries(map)) {
+    if (!k) continue;
+    const safe = String(v ?? "").replace(/\r?\n/g, "");
+    lines.push(`${k}=${safe}`);
+  }
+  fs.writeFileSync(ENV_PATH, lines.join("\n") + "\n");
+  for (const [k, v] of Object.entries(map)) {
+    process.env[k] = String(v ?? "");
+  }
+}
+
+function setEnvKey(envName, value) {
+  const map = { ...readEnvMap(), ...loadEnvFile(ENV_PATH) };
+  // merge current file values properly
+  const current = {};
+  if (fs.existsSync(ENV_PATH)) {
+    const text = fs.readFileSync(ENV_PATH, "utf8");
+    for (const line of text.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const eq = trimmed.indexOf("=");
+      if (eq === -1) continue;
+      current[trimmed.slice(0, eq).trim()] = trimmed.slice(eq + 1).trim();
+    }
+  }
+  current[envName] = value;
+  writeEnvMap(current);
+  process.env[envName] = value;
 }
 
 function activeProfile() {
@@ -60,7 +151,7 @@ function resolveApiKey(profile) {
   const key = process.env[profile.apiKeyEnv];
   if (!key) {
     throw new Error(
-      `Missing env ${profile.apiKeyEnv}. Copy .env.example → .env and set your key.`
+      `Missing API key for ${profile.apiKeyEnv}. Add it in the UI.`
     );
   }
   return key;
@@ -95,6 +186,16 @@ function readBody(req) {
   });
 }
 
+async function readJson(req) {
+  const raw = await readBody(req);
+  if (!raw.length) return {};
+  try {
+    return JSON.parse(raw.toString("utf8"));
+  } catch {
+    throw Object.assign(new Error("Invalid JSON"), { statusCode: 400 });
+  }
+}
+
 function contentType(filePath) {
   const ext = path.extname(filePath).toLowerCase();
   return (
@@ -126,9 +227,77 @@ function serveStatic(req, res, urlPath) {
   fs.createReadStream(filePath).pipe(res);
 }
 
-function statusPayload() {
+function maskKey(key) {
+  if (!key) return null;
+  if (key.length <= 10) return "••••••••";
+  return `${key.slice(0, 6)}…${key.slice(-4)}`;
+}
+
+async function detectPublicTunnel() {
+  // ngrok local inspector
+  try {
+    const r = await fetch("http://127.0.0.1:4040/api/tunnels");
+    if (r.ok) {
+      const data = await r.json();
+      const https = (data.tunnels || []).find(
+        (t) => String(t.public_url || "").startsWith("https://")
+      );
+      if (https?.public_url) {
+        return { provider: "ngrok", publicUrl: https.public_url.replace(/\/$/, "") };
+      }
+    }
+  } catch {
+    /* ignore */
+  }
+  // optional file written by tunnel.js (cloudflared / ngrok)
+  const tunnelFile = path.join(ROOT, "tunnel-url.json");
+  if (fs.existsSync(tunnelFile)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(tunnelFile, "utf8"));
+      if (data.publicUrl) {
+        return {
+          provider: data.provider || "tunnel",
+          publicUrl: String(data.publicUrl).replace(/\/$/, ""),
+        };
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+  return null;
+}
+
+function proxySecret() {
+  return (process.env.PROXY_SECRET || "").trim();
+}
+
+function checkProxyAuth(req) {
+  const secret = proxySecret();
+  if (!secret) return { ok: true, warned: true };
+  const header = req.headers.authorization || "";
+  const token = header.toLowerCase().startsWith("bearer ")
+    ? header.slice(7).trim()
+    : (req.headers["x-api-key"] || "").trim();
+  if (!token || token !== secret) {
+    return {
+      ok: false,
+      error: "Invalid proxy secret. Set Cursor OpenAI API Key to PROXY_SECRET from .env",
+    };
+  }
+  return { ok: true };
+}
+
+async function statusPayload() {
+  reloadConfig();
+  loadEnvFile(ENV_PATH, { override: true });
   const { id, profile } = activeProfile();
   const hasKey = Boolean(process.env[profile.apiKeyEnv]);
+  const tunnel = await detectPublicTunnel();
+  const secret = proxySecret();
+  const localBase = `http://${config.listen}:${config.port}`;
+  const cursorBase = tunnel
+    ? `${tunnel.publicUrl}/v1`
+    : `${localBase}/v1`;
   return {
     ok: true,
     active: id,
@@ -139,7 +308,14 @@ function statusPayload() {
     models: Object.keys(profile.models || {}),
     hasKey,
     apiKeyEnv: profile.apiKeyEnv,
-    listen: `http://${config.listen}:${config.port}`,
+    apiKeyPreview: maskKey(process.env[profile.apiKeyEnv]),
+    listen: localBase,
+    tunnel,
+    cursorBaseUrl: cursorBase,
+    proxySecretSet: Boolean(secret),
+    proxySecretPreview: maskKey(secret),
+    privateNetworkBlocked:
+      "Cursor blocks 127.0.0.1 / localhost. Use a public HTTPS tunnel URL in Override OpenAI Base URL.",
     profiles: Object.fromEntries(
       Object.entries(config.profiles).map(([pid, p]) => [
         pid,
@@ -151,6 +327,7 @@ function statusPayload() {
           models: Object.keys(p.models || {}),
           hasKey: Boolean(process.env[p.apiKeyEnv]),
           apiKeyEnv: p.apiKeyEnv,
+          apiKeyPreview: maskKey(process.env[p.apiKeyEnv]),
         },
       ])
     ),
@@ -158,14 +335,17 @@ function statusPayload() {
   };
 }
 
-async function handleSwitch(req, res) {
-  const raw = await readBody(req);
-  let body = {};
-  try {
-    body = raw.length ? JSON.parse(raw.toString("utf8")) : {};
-  } catch {
-    return json(res, 400, { error: "Invalid JSON" });
+function saveActive(profileId) {
+  reloadConfig();
+  if (!config.profiles[profileId]) {
+    throw new Error(`Unknown profile: ${profileId}`);
   }
+  config.active = profileId;
+  saveConfig(config);
+}
+
+async function handleSwitch(req, res) {
+  const body = await readJson(req);
   const profileId = body.profile || body.id;
   if (!profileId || !config.profiles[profileId]) {
     return json(res, 400, {
@@ -174,15 +354,108 @@ async function handleSwitch(req, res) {
     });
   }
   saveActive(profileId);
-  return json(res, 200, statusPayload());
+  return json(res, 200, await statusPayload());
+}
+
+async function handleSaveKey(req, res) {
+  const body = await readJson(req);
+  const profileId = body.profile || body.id;
+  const apiKey = String(body.apiKey || body.key || "").trim();
+  reloadConfig();
+  if (!profileId || !config.profiles[profileId]) {
+    return json(res, 400, { error: "Unknown profile" });
+  }
+  if (!apiKey) {
+    return json(res, 400, { error: "apiKey is required" });
+  }
+  const envName = config.profiles[profileId].apiKeyEnv || envKeyName(profileId);
+  config.profiles[profileId].apiKeyEnv = envName;
+  saveConfig(config);
+  setEnvKey(envName, apiKey);
+  pushRecent({
+    kind: "key",
+    profile: profileId,
+    ok: true,
+    preview: maskKey(apiKey),
+  });
+  return json(res, 200, await statusPayload());
+}
+
+async function handleUpsertProfile(req, res) {
+  const body = await readJson(req);
+  reloadConfig();
+
+  const id = slugify(body.id || body.label);
+  if (!id) return json(res, 400, { error: "id/label required" });
+
+  const label = String(body.label || id).trim();
+  let baseURL = String(body.baseURL || body.url || "").trim();
+  if (!baseURL) return json(res, 400, { error: "baseURL required" });
+  baseURL = baseURL.replace(/\/$/, "");
+  if (baseURL.endsWith("/chat/completions")) {
+    baseURL = baseURL.replace(/\/chat\/completions$/, "");
+  }
+
+  const defaultModel = String(body.defaultModel || "").trim();
+  if (!defaultModel) return json(res, 400, { error: "defaultModel required" });
+
+  const existing = config.profiles[id];
+  const apiKeyEnv = existing?.apiKeyEnv || body.apiKeyEnv || envKeyName(id);
+  const models = parseModelsInput(body.models, defaultModel);
+
+  config.profiles[id] = {
+    label,
+    baseURL,
+    apiKeyEnv,
+    color: body.color || existing?.color || "#8b5cf6",
+    models,
+    defaultModel,
+    testPrompt: body.testPrompt || existing?.testPrompt || "Reply with exactly: OK",
+  };
+  saveConfig(config);
+
+  const apiKey = String(body.apiKey || body.key || "").trim();
+  if (apiKey) setEnvKey(apiKeyEnv, apiKey);
+
+  pushRecent({
+    kind: "profile",
+    profile: id,
+    ok: true,
+    preview: label,
+  });
+
+  return json(res, 200, await statusPayload());
+}
+
+async function handleDeleteProfile(req, res) {
+  const body = await readJson(req);
+  const profileId = body.profile || body.id;
+  reloadConfig();
+  if (!profileId || !config.profiles[profileId]) {
+    return json(res, 400, { error: "Unknown profile" });
+  }
+  if (Object.keys(config.profiles).length <= 1) {
+    return json(res, 400, { error: "Cannot delete the last provider" });
+  }
+  delete config.profiles[profileId];
+  if (config.active === profileId) {
+    config.active = Object.keys(config.profiles)[0];
+  }
+  saveConfig(config);
+  pushRecent({ kind: "delete", profile: profileId, ok: true });
+  return json(res, 200, await statusPayload());
 }
 
 async function handleTest(req, res) {
   const started = Date.now();
   try {
+    const body = await readJson(req).catch(() => ({}));
+    if (body.profile && config.profiles[body.profile]) {
+      saveActive(body.profile);
+    }
     const { id, profile } = activeProfile();
     const apiKey = resolveApiKey(profile);
-    const model = mapModel(profile, profile.defaultModel);
+    const model = mapModel(profile, body.model || profile.defaultModel);
     const upstream = `${profile.baseURL.replace(/\/$/, "")}/chat/completions`;
     const r = await fetch(upstream, {
       method: "POST",
@@ -214,7 +487,9 @@ async function handleTest(req, res) {
       ms,
       ok: r.ok,
       preview: content ? String(content).slice(0, 120) : null,
-      error: r.ok ? null : parsed?.error?.message || text.slice(0, 200),
+      error: r.ok
+        ? null
+        : parsed?.error?.message || parsed?.error || text.slice(0, 200),
     };
     pushRecent(entry);
     return json(res, r.ok ? 200 : 502, { ...entry, body: parsed });
@@ -237,6 +512,12 @@ async function proxyChatCompletions(req, res) {
   const started = Date.now();
   let modelSent = null;
   try {
+    const auth = checkProxyAuth(req);
+    if (!auth.ok) {
+      return json(res, 401, {
+        error: { message: auth.error, type: "authentication_error" },
+      });
+    }
     const { id, profile } = activeProfile();
     const apiKey = resolveApiKey(profile);
     const raw = await readBody(req);
@@ -278,17 +559,14 @@ async function proxyChatCompletions(req, res) {
       stream: Boolean(body.stream),
     });
 
-    const outHeaders = {
-      "Access-Control-Allow-Origin": "*",
-    };
+    const outHeaders = { "Access-Control-Allow-Origin": "*" };
     const ct = upstreamRes.headers.get("content-type");
     if (ct) outHeaders["Content-Type"] = ct;
 
     res.writeHead(upstreamRes.status, outHeaders);
 
     if (!upstreamRes.body) {
-      const t = await upstreamRes.text();
-      res.end(t);
+      res.end(await upstreamRes.text());
       return;
     }
 
@@ -329,7 +607,13 @@ function proxyModels(req, res) {
   try {
     const { id, profile } = activeProfile();
     const aliases = Object.keys(profile.models || {});
-    const unique = [...new Set([profile.defaultModel, ...Object.values(profile.models || {}), ...aliases])];
+    const unique = [
+      ...new Set([
+        profile.defaultModel,
+        ...Object.values(profile.models || {}),
+        ...aliases,
+      ]),
+    ];
     const data = unique.map((mid, i) => ({
       id: mid,
       object: "model",
@@ -349,7 +633,7 @@ const server = http.createServer(async (req, res) => {
   if (method === "OPTIONS") {
     res.writeHead(204, {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+      "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS",
       "Access-Control-Allow-Headers": "Authorization, Content-Type",
     });
     res.end();
@@ -358,10 +642,22 @@ const server = http.createServer(async (req, res) => {
 
   try {
     if (method === "GET" && url.pathname === "/status") {
-      return json(res, 200, statusPayload());
+      return json(res, 200, await statusPayload());
     }
     if (method === "POST" && url.pathname === "/switch") {
       return await handleSwitch(req, res);
+    }
+    if (method === "POST" && (url.pathname === "/api/keys" || url.pathname === "/keys")) {
+      return await handleSaveKey(req, res);
+    }
+    if (method === "POST" && (url.pathname === "/api/profiles" || url.pathname === "/profiles")) {
+      return await handleUpsertProfile(req, res);
+    }
+    if (
+      method === "DELETE" &&
+      (url.pathname === "/api/profiles" || url.pathname === "/profiles")
+    ) {
+      return await handleDeleteProfile(req, res);
     }
     if (method === "POST" && (url.pathname === "/test" || url.pathname === "/api/test")) {
       return await handleTest(req, res);
@@ -378,7 +674,7 @@ const server = http.createServer(async (req, res) => {
     json(res, 404, { error: "Not found", path: url.pathname });
   } catch (err) {
     console.error(err);
-    json(res, 500, { error: err.message });
+    json(res, err.statusCode || 500, { error: err.message });
   }
 });
 

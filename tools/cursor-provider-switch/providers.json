@@ -1,7 +1,7 @@
 {
   "listen": "127.0.0.1",
   "port": 8787,
-  "active": "commandcode",
+  "active": "zyloo",
   "profiles": {
     "commandcode": {
       "label": "Command Code",

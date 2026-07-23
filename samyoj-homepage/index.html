@@ -6893,16 +6893,18 @@
       justify-content: center;
       flex: 1;
       min-width: 0;
-      height: 96px;
+      min-height: 104px;
+      height: auto;
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
-      padding: 10px 6px;
+      padding: 12px 8px;
       box-sizing: border-box;
       text-decoration: none;
       color: inherit;
       transition: all 0.25s ease;
+      gap: 6px;
     }
 
     .sps-int-icon:hover {
@@ -6967,10 +6969,14 @@
       font-weight: 700;
       color: #0f172a;
       text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
       width: 100%;
+      line-height: 1.25;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .sps-int-icon.sps-more {
@@ -7200,7 +7206,18 @@
 
       .sps-int-icon {
         flex: 0 0 calc(33.333% - 8px);
-        height: 84px;
+        min-height: 96px;
+        height: auto;
+        padding: 12px 6px;
+      }
+
+      .sps-feat-badge {
+        width: 36px;
+        height: 36px;
+      }
+
+      .sps-int-icon span {
+        font-size: 11px;
       }
 
       .sps-rocket-img {
@@ -7234,7 +7251,9 @@
 
       .sps-int-icon {
         flex: 0 0 calc(50% - 4px);
-        height: 80px;
+        min-height: 92px;
+        height: auto;
+        padding: 10px 6px;
       }
     }
   </style>

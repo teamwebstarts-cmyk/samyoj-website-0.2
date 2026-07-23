@@ -25,16 +25,30 @@ Open **http://127.0.0.1:8787/** → click a provider → **Test active provider*
    - `claude-sonnet-free` (alias → Zyloo Sonnet free)
 5. Keep `npm start` running while you chat in Cursor
 
-## Switch providers
+## Switch / manage from UI
 
-- UI: http://127.0.0.1:8787/
-- Or API:
+Open **http://127.0.0.1:8787/**
+
+- **Use** — activate a provider
+- **Save key** — paste API key on the card (writes `.env`)
+- **Test** — ping that provider
+- **Add / update provider** form — new Base URL + models + key
+- **Delete** — remove a provider (keeps at least one)
+
+Or API:
 
 ```powershell
+# Switch
 Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8787/switch -ContentType application/json -Body '{"profile":"zyloo"}'
+
+# Save key
+Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8787/api/keys -ContentType application/json -Body '{"profile":"zyloo","apiKey":"sk-zy-..."}'
+
+# Add provider
+Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8787/api/profiles -ContentType application/json -Body '{"id":"openrouter","label":"OpenRouter","baseURL":"https://openrouter.ai/api/v1","defaultModel":"openai/gpt-4o-mini","apiKey":"sk-or-...","models":"openai/gpt-4o-mini"}'
 ```
 
-Profiles live in `providers.json` (`active` is updated when you switch).
+Profiles → `providers.json`. Keys → `.env` (gitignored).
 
 ## Endpoints
 
@@ -42,7 +56,10 @@ Profiles live in `providers.json` (`active` is updated when you switch).
 |------|---------|
 | `GET /` | Switcher UI |
 | `GET /status` | Active profile + key presence |
-| `POST /switch` | `{ "profile": "commandcode" \| "zyloo" }` |
+| `POST /switch` | `{ "profile": "…" }` |
+| `POST /api/keys` | `{ "profile", "apiKey" }` |
+| `POST /api/profiles` | Add/update provider |
+| `DELETE /api/profiles` | `{ "profile" }` |
 | `POST /test` | Ping active upstream |
 | `POST /v1/chat/completions` | Cursor / OpenAI clients |
 | `GET /v1/models` | Model list for active profile |

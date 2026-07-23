@@ -24,7 +24,7 @@
       min-height: 100vh;
     }
     main {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 32px 20px 64px;
     }
@@ -36,7 +36,7 @@
     }
     .sub {
       color: var(--muted);
-      margin: 0 0 28px;
+      margin: 0 0 24px;
       font-size: 0.95rem;
       line-height: 1.45;
     }
@@ -49,7 +49,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       background: var(--panel);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .dot {
       width: 10px;
@@ -58,26 +58,21 @@
       background: var(--accent);
       box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
     }
-    .banner strong { font-weight: 650; }
     .meta { color: var(--muted); font-size: 0.85rem; font-family: ui-monospace, Consolas, monospace; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 14px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .card {
       border: 1px solid var(--border);
       border-radius: 14px;
       background: var(--panel);
       padding: 16px;
-      cursor: pointer;
-      transition: border-color .15s, transform .12s;
       text-align: left;
       color: inherit;
-      width: 100%;
     }
-    .card:hover { border-color: #445; transform: translateY(-1px); }
     .card.active {
       border-color: color-mix(in srgb, var(--card-color, var(--accent)) 70%, #fff);
       box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-color, var(--accent)) 40%, transparent);
@@ -88,6 +83,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
     }
     .pill {
       font-size: 0.7rem;
@@ -97,14 +93,14 @@
       color: #fff;
       font-weight: 600;
     }
-    .card p {
+    .card .url {
       margin: 0 0 10px;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       word-break: break-all;
       font-family: ui-monospace, Consolas, monospace;
     }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
     .tag {
       font-size: 0.72rem;
       padding: 3px 7px;
@@ -112,32 +108,57 @@
       background: #222833;
       color: #c5ccd8;
     }
-    .warn {
-      color: #fbbf24;
-      font-size: 0.78rem;
-      margin-top: 10px;
-    }
-    .actions {
+    .warn { color: #fbbf24; font-size: 0.78rem; margin-bottom: 8px; }
+    .oktext { color: var(--ok); font-size: 0.78rem; margin-bottom: 8px; }
+    .row {
       display: flex;
+      gap: 8px;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 24px;
+      margin-top: 8px;
     }
-    button.primary, button.ghost {
+    input, textarea, select {
+      width: 100%;
+      background: #0f131a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 9px 10px;
+      font-size: 0.88rem;
+    }
+    textarea { min-height: 72px; resize: vertical; font-family: ui-monospace, Consolas, monospace; }
+    label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 10px 0 5px;
+    }
+    button.primary, button.ghost, button.danger, button.small {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 10px 14px;
-      font-size: 0.9rem;
+      padding: 9px 12px;
+      font-size: 0.86rem;
       cursor: pointer;
       color: var(--text);
       background: #222833;
     }
+    button.small { padding: 6px 10px; font-size: 0.8rem; }
     button.primary {
       background: var(--accent);
       border-color: transparent;
       font-weight: 600;
     }
+    button.danger {
+      background: #3a1717;
+      border-color: #5c2626;
+      color: #fecaca;
+    }
     button:disabled { opacity: 0.5; cursor: wait; }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
     .panel {
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -149,6 +170,15 @@
       margin: 0 0 10px;
       font-size: 0.95rem;
     }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 14px;
+    }
+    @media (max-width: 700px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+    .span2 { grid-column: 1 / -1; }
     pre {
       margin: 0;
       white-space: pre-wrap;
@@ -174,12 +204,13 @@
       border-radius: 4px;
       font-size: 0.82rem;
     }
+    .hint { color: var(--muted); font-size: 0.8rem; margin-top: 8px; }
   </style>
 </head>
 <body>
   <main>
     <h1>Cursor Provider Switch</h1>
-    <p class="sub">Click a provider to route Cursor through it. Keep this process running while you use Cursor BYOK.</p>
+    <p class="sub">Click a provider to activate it. Add API keys and new providers here — no Settings copy-paste for each switch.</p>
 
     <div class="banner" id="banner">
       <span class="dot" id="dot"></span>
@@ -197,17 +228,55 @@
     </div>
 
     <div class="panel">
-      <h3>Last test / activity</h3>
+      <h3>Add / update provider</h3>
+      <form id="addForm" class="form-grid">
+        <div>
+          <label>Provider id (slug)</label>
+          <input name="id" placeholder="openrouter" required />
+        </div>
+        <div>
+          <label>Label</label>
+          <input name="label" placeholder="OpenRouter" required />
+        </div>
+        <div class="span2">
+          <label>Base URL (OpenAI-compatible, usually ends with /v1)</label>
+          <input name="baseURL" placeholder="https://api.example.com/v1" required />
+        </div>
+        <div>
+          <label>Default model id</label>
+          <input name="defaultModel" placeholder="provider/model-name" required />
+        </div>
+        <div>
+          <label>Color</label>
+          <input name="color" type="color" value="#8b5cf6" />
+        </div>
+        <div class="span2">
+          <label>Models (one per line). Optional alias: <code>short-name=full/model-id</code></label>
+          <textarea name="models" placeholder="full/model-id&#10;alias=full/model-id"></textarea>
+        </div>
+        <div class="span2">
+          <label>API key (saved to local .env)</label>
+          <input name="apiKey" type="password" placeholder="sk-… or user_…" autocomplete="off" />
+        </div>
+        <div class="span2 row">
+          <button class="primary" type="submit">Save provider</button>
+        </div>
+      </form>
+      <p class="hint">Same id update karega existing provider ko. Keys sirf is machine ke `.env` mein save hoti hain.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Last activity</h3>
       <pre id="log">No activity yet.</pre>
     </div>
 
     <div class="panel">
       <h3>Cursor setup (one time)</h3>
       <ol class="setup">
-        <li>Settings → Models → enable <strong>OpenAI API Key</strong>, set key to <code>local</code></li>
-        <li>Enable <strong>Override OpenAI Base URL</strong> → <code id="baseUrlHint">http://127.0.0.1:8787/v1</code></li>
-        <li>Add custom models that match the active profile (aliases or full ids)</li>
-        <li>Pick that model in chat; switch providers here anytime</li>
+        <li>Settings → Models → OpenAI API Key = <code>local</code></li>
+        <li>Override OpenAI Base URL = <code id="baseUrlHint">http://127.0.0.1:8787/v1</code></li>
+        <li>Add custom models matching the active profile</li>
+        <li>Yahan se provider switch karo; Cursor URL same rahe</li>
       </ol>
     </div>
   </main>
@@ -221,55 +290,11 @@
         ...opts,
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok && data.error && typeof data.error === "string") {
-        throw new Error(data.error);
+      if (!res.ok) {
+        const msg = data.error?.message || data.error || res.statusText;
+        throw new Error(typeof msg === "string" ? msg : JSON.stringify(msg));
       }
-      return { res, data };
-    }
-
-    function render() {
-      if (!state) return;
-      $("activeLabel").textContent = state.label + (state.hasKey ? "" : " — missing API key");
-      $("activeMeta").textContent = state.baseURL + " · default " + state.defaultModel;
-      $("dot").style.background = state.color || "#3b82f6";
-      $("baseUrlHint").textContent = state.listen.replace(/\/$/, "") + "/v1";
-
-      const cards = $("cards");
-      cards.innerHTML = "";
-      for (const [id, p] of Object.entries(state.profiles)) {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "card" + (id === state.active ? " active" : "");
-        btn.style.setProperty("--card-color", p.color || "#3b82f6");
-        btn.innerHTML = `
-          <h2>${escapeHtml(p.label)}${id === state.active ? '<span class="pill">ACTIVE</span>' : ""}</h2>
-          <p>${escapeHtml(p.baseURL)}</p>
-          <div class="tags">${(p.models || []).slice(0, 6).map((m) => `<span class="tag">${escapeHtml(m)}</span>`).join("")}</div>
-          ${p.hasKey ? "" : `<div class="warn">Set ${escapeHtml(p.apiKeyEnv)} in .env</div>`}
-        `;
-        btn.addEventListener("click", () => switchTo(id));
-        cards.appendChild(btn);
-      }
-
-      if (state.recent?.length) {
-        const last = state.recent[0];
-        $("log").innerHTML = formatEntry(last);
-      }
-    }
-
-    function formatEntry(e) {
-      const cls = e.ok ? "ok" : "bad";
-      const bits = [
-        `<span class="${cls}">${e.ok ? "OK" : "FAIL"}</span>`,
-        e.kind,
-        e.profile,
-        e.model || "",
-        e.ms != null ? e.ms + "ms" : "",
-        e.status ? "HTTP " + e.status : "",
-        e.preview ? JSON.stringify(e.preview) : "",
-        e.error || "",
-      ].filter(Boolean);
-      return bits.join(" · ");
+      return data;
     }
 
     function escapeHtml(s) {
@@ -280,34 +305,91 @@
         .replaceAll('"', "&quot;");
     }
 
+    function formatEntry(e) {
+      const cls = e.ok ? "ok" : "bad";
+      return [
+        `<span class="${cls}">${e.ok ? "OK" : "FAIL"}</span>`,
+        e.kind,
+        e.profile,
+        e.model || "",
+        e.ms != null ? e.ms + "ms" : "",
+        e.status ? "HTTP " + e.status : "",
+        e.preview ? escapeHtml(JSON.stringify(e.preview)) : "",
+        e.error ? escapeHtml(String(e.error)) : "",
+      ].filter(Boolean).join(" · ");
+    }
+
+    function render() {
+      if (!state) return;
+      $("activeLabel").textContent = state.label + (state.hasKey ? "" : " — missing API key");
+      $("activeMeta").textContent =
+        state.baseURL + " · " + state.defaultModel +
+        (state.apiKeyPreview ? " · key " + state.apiKeyPreview : "");
+      $("dot").style.background = state.color || "#3b82f6";
+      $("baseUrlHint").textContent = state.listen.replace(/\/$/, "") + "/v1";
+
+      const cards = $("cards");
+      cards.innerHTML = "";
+      for (const [id, p] of Object.entries(state.profiles)) {
+        const card = document.createElement("div");
+        card.className = "card" + (id === state.active ? " active" : "");
+        card.style.setProperty("--card-color", p.color || "#3b82f6");
+        card.innerHTML = `
+          <h2>${escapeHtml(p.label)}${id === state.active ? '<span class="pill">ACTIVE</span>' : ""}</h2>
+          <div class="url">${escapeHtml(p.baseURL)}</div>
+          <div class="tags">${(p.models || []).slice(0, 8).map((m) => `<span class="tag">${escapeHtml(m)}</span>`).join("")}</div>
+          ${p.hasKey
+            ? `<div class="oktext">Key saved ${escapeHtml(p.apiKeyPreview || "")}</div>`
+            : `<div class="warn">API key missing — paste below</div>`}
+          <label>API key</label>
+          <input class="keyInput" type="password" placeholder="Paste key for ${escapeHtml(id)}" autocomplete="off" />
+          <div class="row">
+            <button class="small primary useBtn" type="button" data-id="${escapeHtml(id)}">Use</button>
+            <button class="small saveKeyBtn" type="button" data-id="${escapeHtml(id)}">Save key</button>
+            <button class="small testOneBtn" type="button" data-id="${escapeHtml(id)}">Test</button>
+            <button class="small danger delBtn" type="button" data-id="${escapeHtml(id)}">Delete</button>
+          </div>
+        `;
+        cards.appendChild(card);
+      }
+
+      if (state.recent?.length) {
+        $("log").innerHTML = formatEntry(state.recent[0]);
+      }
+    }
+
     async function refresh() {
-      const { data } = await api("/status");
-      state = data;
+      state = await api("/status");
       render();
     }
 
     async function switchTo(id) {
-      $("testBtn").disabled = true;
-      try {
-        const { data } = await api("/switch", {
-          method: "POST",
-          body: JSON.stringify({ profile: id }),
-        });
-        state = data;
-        render();
-        $("log").textContent = "Switched to " + data.label;
-      } catch (err) {
-        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
-      } finally {
-        $("testBtn").disabled = false;
-      }
+      state = await api("/switch", {
+        method: "POST",
+        body: JSON.stringify({ profile: id }),
+      });
+      render();
+      $("log").textContent = "Switched to " + state.label;
     }
 
-    async function runTest() {
+    async function saveKey(id, apiKey) {
+      if (!apiKey?.trim()) throw new Error("Paste an API key first");
+      state = await api("/api/keys", {
+        method: "POST",
+        body: JSON.stringify({ profile: id, apiKey: apiKey.trim() }),
+      });
+      render();
+      $("log").innerHTML = formatEntry(state.recent[0] || { ok: true, kind: "key", profile: id });
+    }
+
+    async function runTest(profile) {
       $("testBtn").disabled = true;
       $("log").textContent = "Testing…";
       try {
-        const { data } = await api("/test", { method: "POST", body: "{}" });
+        const data = await api("/test", {
+          method: "POST",
+          body: JSON.stringify(profile ? { profile } : {}),
+        });
         $("log").innerHTML = formatEntry(data);
         await refresh();
       } catch (err) {
@@ -317,10 +399,61 @@
       }
     }
 
-    $("testBtn").addEventListener("click", runTest);
-    $("refreshBtn").addEventListener("click", () => refresh().catch((e) => {
-      $("log").innerHTML = `<span class="bad">${escapeHtml(e.message)}</span>`;
-    }));
+    $("cards").addEventListener("click", async (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const card = btn.closest(".card");
+      const keyInput = card?.querySelector(".keyInput");
+      try {
+        if (btn.classList.contains("useBtn")) await switchTo(id);
+        if (btn.classList.contains("saveKeyBtn")) await saveKey(id, keyInput?.value);
+        if (btn.classList.contains("testOneBtn")) await runTest(id);
+        if (btn.classList.contains("delBtn")) {
+          if (!confirm("Delete provider " + id + "?")) return;
+          state = await api("/api/profiles", {
+            method: "DELETE",
+            body: JSON.stringify({ profile: id }),
+          });
+          render();
+        }
+      } catch (err) {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
+      }
+    });
+
+    $("addForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const payload = {
+        id: fd.get("id"),
+        label: fd.get("label"),
+        baseURL: fd.get("baseURL"),
+        defaultModel: fd.get("defaultModel"),
+        color: fd.get("color"),
+        models: fd.get("models"),
+        apiKey: fd.get("apiKey"),
+      };
+      try {
+        state = await api("/api/profiles", {
+          method: "POST",
+          body: JSON.stringify(payload),
+        });
+        render();
+        e.target.reset();
+        e.target.color.value = "#8b5cf6";
+        $("log").textContent = "Saved provider " + payload.id;
+      } catch (err) {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
+      }
+    });
+
+    $("testBtn").addEventListener("click", () => runTest());
+    $("refreshBtn").addEventListener("click", () =>
+      refresh().catch((e) => {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(e.message)}</span>`;
+      })
+    );
 
     refresh().catch((e) => {
       $("activeLabel").textContent = "Proxy not reachable";
