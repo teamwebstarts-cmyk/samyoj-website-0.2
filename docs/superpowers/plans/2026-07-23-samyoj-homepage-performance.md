@@ -145,7 +145,7 @@ Verify the announcement bar appears correctly on all four pages.
 - Consumes: The 240-line CountUp library embedded in index.html (lines 8944-9184)
 - Produces: A 20-line native counter implementation
 
-- [ ] **Step 1: Replace CountUp with native implementation**
+- [x] **Step 1: Replace CountUp with native implementation**
 
 Replace the entire CountUp library (lines 8944-9184 in index.html) with:
 
@@ -185,7 +185,7 @@ Replace the entire CountUp library (lines 8944-9184 in index.html) with:
 })();
 ```
 
-- [ ] **Step 2: Remove the old IntersectionObserver scroll spy**
+- [x] **Step 2: Remove the old IntersectionObserver scroll spy**
 
 The existing scroll spy script (lines 8935-8943) can be simplified since the native counter handles its own scroll detection.
 
@@ -318,9 +318,9 @@ Ensure the font loads with `font-display: swap` for FOIT prevention.
 
 Find all `<img>` tags missing `width` and `height` attributes.
 
-- [ ] **Step 2: Add dimensions**
+- [x] **Step 1: Add dimensions**
 
-Add `width` and `height` attributes to prevent layout shift (CLS).
+Add `width` and `height` attributes to prevent layout shift (CLS). (Homepage critical images done.)
 
 ---
 
@@ -371,7 +371,7 @@ Replace each repeated SVG with:
 - Consumes: The existing Product/SoftwareApplication schema
 - Produces: Complete Organization + Review schema
 
-- [ ] **Step 1: Add Organization schema to homepage**
+- [x] **Step 1: Add Organization schema to homepage**
 
 ```html
 <script type="application/ld+json">
@@ -396,7 +396,7 @@ Replace each repeated SVG with:
 </script>
 ```
 
-- [ ] **Step 2: Add Review schema for testimonials**
+- [x] **Step 2: Add Review schema for testimonials**
 
 Add Review schema for each testimonial to improve rich results.
 
@@ -411,7 +411,7 @@ Add Review schema for each testimonial to improve rich results.
 - Consumes: Knowledge of AI crawler user agents
 - Produces: robots.txt allowing AI crawlers
 
-- [ ] **Step 1: Create robots.txt**
+- [x] **Step 1: Create robots.txt**
 
 ```
 User-agent: *
@@ -444,7 +444,7 @@ Sitemap: https://samyoj.com/sitemap.xml
 - Consumes: The existing llms.txt content
 - Produces: Updated llms.txt with full site structure
 
-- [ ] **Step 1: Update llms.txt**
+- [x] **Step 1: Update llms.txt**
 
 Add full site structure including all pages:
 

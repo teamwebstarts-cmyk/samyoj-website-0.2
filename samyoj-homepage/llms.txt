@@ -6,6 +6,18 @@
 
 Samyoj provides businesses with a WhatsApp marketing software they can use to Broadcast & automate messages, run Click to WhatsApp Ads, build Chatbots, showcase catalogues, provide multi-agent Live chat support, collect payments within WhatsApp and much more.
 
+## Pages
+
+- [Home](https://samyoj.com/) - Main landing page
+- [Features](https://samyoj.com/features) - Platform features
+- [Industries](https://samyoj.com/industries) - Industry use cases
+- [Contact](https://samyoj.com/contact) - Talk to experts / sales
+- [Privacy Policy](https://samyoj.com/legal/privacy-policy) - Privacy policy
+- [Terms & Conditions](https://samyoj.com/legal/terms-and-conditions) - Terms
+- [Cookie Policy](https://samyoj.com/legal/cookie-policy) - Cookies
+- [Refund Policy](https://samyoj.com/legal/refund-cancellation-policy) - Refunds
+- [Acceptable Use](https://samyoj.com/legal/acceptable-use-policy) - Acceptable use
+
 ## Key Features
 
 - **Broadcast Messages**: Start with 2000 messages/day, scale to unlimited
@@ -19,7 +31,7 @@ Samyoj provides businesses with a WhatsApp marketing software they can use to Br
 ## Pricing
 
 - **Free Forever Plan**: Zero upfront costs, perfect for SMBs
-- **Paid Plans**: Starting from competitive pricing
+- **Paid Plans**: Starting from competitive pricing (plans from ₹1500/month)
 - **No Setup Fee**: WhatsApp Business API procurement is completely free through Samyoj
 - **Pay-per-Message**: WhatsApp charges ₹1.09/message for marketing, ₹0.145 for utility/auth messages
 
@@ -40,12 +52,8 @@ Samyoj provides businesses with a WhatsApp marketing software they can use to Br
 - **Support**: +91 8305369467
 - **Email**: hello@samyoj.com
 - **Location**: Indore, Madhya Pradesh, India
+- **App**: https://app.samyoj.com/
 
-## Resources
+## Optional
 
-- [Features](https://samyoj.com/features.html)
-- [Industries](https://samyoj.com/industries.html)
-- [Contact](https://samyoj.com/contact.html)
-- [Privacy Policy](https://samyoj.com/legal/privacy-policy.html)
-- [Terms & Conditions](https://samyoj.com/legal/terms-and-conditions.html)
-- [Cookie Policy](https://samyoj.com/legal/cookie-policy.html)
+- [Sitemap](https://samyoj.com/sitemap.xml)

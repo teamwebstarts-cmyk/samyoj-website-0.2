@@ -1639,10 +1639,19 @@
 
     ._ba1fa94a {
       display: block;
-      width: 90%;
+      width: 100%;
       max-width: 100%;
+      height: auto;
       margin: 0 auto;
+      object-fit: contain;
       border-radius: calc(var(--card-borderRadius)/2);
+    }
+
+    /* Only cap height on mobile so the tall illustration doesn't dominate */
+    @media (max-width: 750px) {
+      ._ba1fa94a {
+        max-height: min(420px, 55vh);
+      }
     }
 
     /* ── Hero redesign: checklist, CTAs, stats ── */
@@ -4191,7 +4200,7 @@
     }
   </style>
   <style id="umso-cssmanager"></style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&amp;display=block"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600&amp;display=swap"
     rel="stylesheet" />
   <script>
     ; (function (src) {
@@ -4563,7 +4572,7 @@
               <strong>Explore</strong></p>
             <!-- -->
             <style>
-              @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;display=swap');
+              /* Manrope already loaded via <link> — skip duplicate @import */
 
 
               #samyoj-magic-bar {
@@ -4871,7 +4880,7 @@
             <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
                 <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="images/logo.webp"
-                      alt="Logo_Samyoj.png" style="width:150px" /></a></div>
+                      alt="Logo_Samyoj.png" style="width:150px"  width="150" height="43" /></a></div>
               </div>
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -5021,7 +5030,7 @@
         </div>
         <div class="_10af011a"><img draggable="false" src="images/feat-illu-01.png" class="_ba1fa94a"
             alt="SAMYOJ WhatsApp workspace"
-            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)" /></div>
+            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)"  width="1343" height="1171" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -5125,7 +5134,7 @@
 
         <div class="pf-center">
           <div class="pf-dash">
-            <img draggable="false" src="images/feat-illu-02.png" class="pf-dash-img" alt="SAMYOJ platform dashboard" />
+            <img draggable="false" src="images/feat-illu-02.png" class="pf-dash-img" alt="SAMYOJ platform dashboard"  width="1448" height="1086" loading="lazy" decoding="async" />
           </div>
           <div class="pf-trust">
             <div class="pf-trust-item">
@@ -5349,7 +5358,7 @@
           <div class="demo-motion" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="demo-video-frame" id="demo-video-frame" role="button" tabindex="0"
             aria-label="Play Samyoj product demo video">
-            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" loading="lazy" />
+            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" loading="lazy"  width="1448" height="1086" loading="lazy" decoding="async" />
             <div class="demo-video-overlay">
               <button type="button" class="demo-play-btn" id="demo-play-btn" aria-label="Play video">
                 <svg viewBox="0 0 24 24">
@@ -5737,7 +5746,7 @@
             <a href="#" class="feat-cta-btn" onclick="return false;">Start Your Free Trial →</a>
           </div>
           <img src="images/rocket-image.png" alt="rocket image" class="feat-cta-rocket" aria-hidden="true"
-            loading="lazy" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'">
+            loading="lazy" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'" width="1536" height="1024">
         </div>
 
       </div>
@@ -5822,7 +5831,7 @@
           <div class="ai-visual">
             <img draggable="false" src="images/feat-illu-03.png"
               alt="AI Assistant chat interface with knowledge base, query resolution, and agent handoff"
-              loading="lazy" />
+              loading="lazy"  width="1448" height="1086" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

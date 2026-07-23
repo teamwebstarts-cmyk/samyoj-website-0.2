@@ -106,11 +106,11 @@ Queries like "best WhatsApp CRM India", "Interakt alternative", "WhatsApp CRM pr
 ## 30-Day Action Plan
 
 ### Week 1 — Technical GEO
-- [ ] Deploy llms.txt
-- [ ] Update robots.txt for AI bots
-- [ ] Add Organization schema
-- [ ] Add SoftwareApplication schema
-- [ ] Add Review schema for testimonials
+- [x] Deploy llms.txt
+- [x] Update robots.txt for AI bots
+- [x] Add Organization schema
+- [x] Add SoftwareApplication schema
+- [x] Add Review schema for testimonials
 
 ### Week 2 — Money pages
 - [ ] Pricing page
