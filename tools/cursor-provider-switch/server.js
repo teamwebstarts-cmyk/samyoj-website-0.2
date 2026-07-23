@@ -641,8 +641,19 @@ const server = http.createServer(async (req, res) => {
   }
 
   try {
-    if (method === "GET" && url.pathname === "/status") {
-      return json(res, 200, await statusPayload());
+    if (method === "GET" && url.pathname === "/api/proxy-secret") {
+      const ip = req.socket.remoteAddress || "";
+      const local =
+        ip === "127.0.0.1" ||
+        ip === "::1" ||
+        ip === "::ffff:127.0.0.1";
+      if (!local) {
+        return json(res, 403, { error: "Only available from localhost UI" });
+      }
+      loadEnvFile(ENV_PATH, { override: true });
+      const secret = proxySecret();
+      if (!secret) return json(res, 404, { error: "PROXY_SECRET not set in .env" });
+      return json(res, 200, { proxySecret: secret });
     }
     if (method === "POST" && url.pathname === "/switch") {
       return await handleSwitch(req, res);

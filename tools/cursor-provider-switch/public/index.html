@@ -220,6 +220,20 @@
       </div>
     </div>
 
+    <div class="panel" id="cursorPanel" style="border-color:#854d0e;background:#1a160c">
+      <h3>Cursor needs a public HTTPS URL</h3>
+      <p class="sub" style="margin:0 0 12px">
+        Error <code>Access to private networks is forbidden</code> = Cursor cloud
+        cannot call <code>127.0.0.1</code>. Run a tunnel, then paste the public URL below into Cursor.
+      </p>
+      <div class="meta" id="tunnelStatus">Checking tunnel…</div>
+      <div class="row" style="margin-top:12px">
+        <button class="small primary" type="button" id="copyBaseBtn">Copy Base URL for Cursor</button>
+        <button class="small" type="button" id="copySecretBtn">Copy PROXY_SECRET</button>
+      </div>
+      <pre id="cursorSetup" style="margin-top:12px"></pre>
+    </div>
+
     <div class="grid" id="cards"></div>
 
     <div class="actions">
@@ -273,10 +287,11 @@
     <div class="panel">
       <h3>Cursor setup (one time)</h3>
       <ol class="setup">
-        <li>Settings → Models → OpenAI API Key = <code>local</code></li>
-        <li>Override OpenAI Base URL = <code id="baseUrlHint">http://127.0.0.1:8787/v1</code></li>
-        <li>Add custom models matching the active profile</li>
-        <li>Yahan se provider switch karo; Cursor URL same rahe</li>
+        <li>Keep <code>npm start</code> running</li>
+        <li>Another terminal: <code>npm run tunnel</code> (needs cloudflared or ngrok)</li>
+        <li>Cursor → OpenAI API Key = <strong>PROXY_SECRET</strong> (Copy button above)</li>
+        <li>Override Base URL = public <code>https://…/v1</code> from tunnel (not 127.0.0.1)</li>
+        <li>Add custom models; switch providers on this page anytime</li>
       </ol>
     </div>
   </main>
@@ -326,7 +341,24 @@
         state.baseURL + " · " + state.defaultModel +
         (state.apiKeyPreview ? " · key " + state.apiKeyPreview : "");
       $("dot").style.background = state.color || "#3b82f6";
-      $("baseUrlHint").textContent = state.listen.replace(/\/$/, "") + "/v1";
+      $("baseUrlHint").textContent = state.cursorBaseUrl || (state.listen.replace(/\/$/, "") + "/v1");
+
+      if (state.tunnel?.publicUrl) {
+        $("tunnelStatus").innerHTML =
+          `<span class="ok">Tunnel up (${escapeHtml(state.tunnel.provider)})</span> · ` +
+          `<code>${escapeHtml(state.cursorBaseUrl)}</code>`;
+      } else {
+        $("tunnelStatus").innerHTML =
+          `<span class="bad">No public tunnel</span> · run in another terminal: ` +
+          `<code>cd tools/cursor-provider-switch && npm run tunnel</code>`;
+      }
+      $("cursorSetup").textContent =
+        "Cursor Settings → Models\n" +
+        "1) OpenAI API Key = PROXY_SECRET from .env" +
+        (state.proxySecretPreview ? ` (now ${state.proxySecretPreview})` : " (not set)") + "\n" +
+        "2) Override OpenAI Base URL =\n   " + (state.cursorBaseUrl || "(start tunnel first)") + "\n" +
+        "3) Add custom models from the active provider card\n" +
+        "\nDo NOT use http://127.0.0.1 — Cursor blocks private networks.";
 
       const cards = $("cards");
       cards.innerHTML = "";
@@ -357,6 +389,27 @@
         $("log").innerHTML = formatEntry(state.recent[0]);
       }
     }
+
+    async function copyText(text) {
+      await navigator.clipboard.writeText(text);
+      $("log").textContent = "Copied: " + text;
+    }
+
+    $("copyBaseBtn").addEventListener("click", () => {
+      if (!state?.cursorBaseUrl || !state.tunnel) {
+        $("log").innerHTML = `<span class="bad">Start tunnel first: npm run tunnel</span>`;
+        return;
+      }
+      copyText(state.cursorBaseUrl);
+    });
+    $("copySecretBtn").addEventListener("click", async () => {
+      try {
+        const data = await api("/api/proxy-secret");
+        await copyText(data.proxySecret);
+      } catch (err) {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
+      }
+    });
 
     async function refresh() {
       state = await api("/status");
