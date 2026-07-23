@@ -1,0 +1,14 @@
+{
+  "name": "cursor-provider-switch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local OpenAI-compatible proxy + UI to switch Cursor providers (Command Code, Zyloo, …)",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursor Provider Switch</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --border: #2a2f3a;
+      --text: #e8eaed;
+      --muted: #9aa3b2;
+      --ok: #22c55e;
+      --bad: #ef4444;
+      --accent: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2336 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    h1 {
+      font-size: 1.45rem;
+      font-weight: 650;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      margin: 0 0 28px;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+    .banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel);
+      margin-bottom: 24px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+    .banner strong { font-weight: 650; }
+    .meta { color: var(--muted); font-size: 0.85rem; font-family: ui-monospace, Consolas, monospace; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 16px;
+      cursor: pointer;
+      transition: border-color .15s, transform .12s;
+      text-align: left;
+      color: inherit;
+      width: 100%;
+    }
+    .card:hover { border-color: #445; transform: translateY(-1px); }
+    .card.active {
+      border-color: color-mix(in srgb, var(--card-color, var(--accent)) 70%, #fff);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-color, var(--accent)) 40%, transparent);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--card-color, var(--accent)) 25%, transparent);
+      color: #fff;
+      font-weight: 600;
+    }
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      word-break: break-all;
+      font-family: ui-monospace, Consolas, monospace;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 0.72rem;
+      padding: 3px 7px;
+      border-radius: 6px;
+      background: #222833;
+      color: #c5ccd8;
+    }
+    .warn {
+      color: #fbbf24;
+      font-size: 0.78rem;
+      margin-top: 10px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    button.primary, button.ghost {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text);
+      background: #222833;
+    }
+    button.primary {
+      background: var(--accent);
+      border-color: transparent;
+      font-weight: 600;
+    }
+    button:disabled { opacity: 0.5; cursor: wait; }
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .panel h3 {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.8rem;
+      color: #c9d1d9;
+      font-family: ui-monospace, Consolas, monospace;
+      line-height: 1.45;
+    }
+    .ok { color: var(--ok); }
+    .bad { color: var(--bad); }
+    ol.setup {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    ol.setup code {
+      color: #dbe4ff;
+      background: #222833;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Cursor Provider Switch</h1>
+    <p class="sub">Click a provider to route Cursor through it. Keep this process running while you use Cursor BYOK.</p>
+
+    <div class="banner" id="banner">
+      <span class="dot" id="dot"></span>
+      <div>
+        <div><strong id="activeLabel">Loading…</strong></div>
+        <div class="meta" id="activeMeta"></div>
+      </div>
+    </div>
+
+    <div class="grid" id="cards"></div>
+
+    <div class="actions">
+      <button class="primary" id="testBtn" type="button">Test active provider</button>
+      <button class="ghost" id="refreshBtn" type="button">Refresh</button>
+    </div>
+
+    <div class="panel">
+      <h3>Last test / activity</h3>
+      <pre id="log">No activity yet.</pre>
+    </div>
+
+    <div class="panel">
+      <h3>Cursor setup (one time)</h3>
+      <ol class="setup">
+        <li>Settings → Models → enable <strong>OpenAI API Key</strong>, set key to <code>local</code></li>
+        <li>Enable <strong>Override OpenAI Base URL</strong> → <code id="baseUrlHint">http://127.0.0.1:8787/v1</code></li>
+        <li>Add custom models that match the active profile (aliases or full ids)</li>
+        <li>Pick that model in chat; switch providers here anytime</li>
+      </ol>
+    </div>
+  </main>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    let state = null;
+
+    async function api(path, opts) {
+      const res = await fetch(path, {
+        headers: { "Content-Type": "application/json", ...(opts?.headers || {}) },
+        ...opts,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok && data.error && typeof data.error === "string") {
+        throw new Error(data.error);
+      }
+      return { res, data };
+    }
+
+    function render() {
+      if (!state) return;
+      $("activeLabel").textContent = state.label + (state.hasKey ? "" : " — missing API key");
+      $("activeMeta").textContent = state.baseURL + " · default " + state.defaultModel;
+      $("dot").style.background = state.color || "#3b82f6";
+      $("baseUrlHint").textContent = state.listen.replace(/\/$/, "") + "/v1";
+
+      const cards = $("cards");
+      cards.innerHTML = "";
+      for (const [id, p] of Object.entries(state.profiles)) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "card" + (id === state.active ? " active" : "");
+        btn.style.setProperty("--card-color", p.color || "#3b82f6");
+        btn.innerHTML = `
+          <h2>${escapeHtml(p.label)}${id === state.active ? '<span class="pill">ACTIVE</span>' : ""}</h2>
+          <p>${escapeHtml(p.baseURL)}</p>
+          <div class="tags">${(p.models || []).slice(0, 6).map((m) => `<span class="tag">${escapeHtml(m)}</span>`).join("")}</div>
+          ${p.hasKey ? "" : `<div class="warn">Set ${escapeHtml(p.apiKeyEnv)} in .env</div>`}
+        `;
+        btn.addEventListener("click", () => switchTo(id));
+        cards.appendChild(btn);
+      }
+
+      if (state.recent?.length) {
+        const last = state.recent[0];
+        $("log").innerHTML = formatEntry(last);
+      }
+    }
+
+    function formatEntry(e) {
+      const cls = e.ok ? "ok" : "bad";
+      const bits = [
+        `<span class="${cls}">${e.ok ? "OK" : "FAIL"}</span>`,
+        e.kind,
+        e.profile,
+        e.model || "",
+        e.ms != null ? e.ms + "ms" : "",
+        e.status ? "HTTP " + e.status : "",
+        e.preview ? JSON.stringify(e.preview) : "",
+        e.error || "",
+      ].filter(Boolean);
+      return bits.join(" · ");
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+
+    async function refresh() {
+      const { data } = await api("/status");
+      state = data;
+      render();
+    }
+
+    async function switchTo(id) {
+      $("testBtn").disabled = true;
+      try {
+        const { data } = await api("/switch", {
+          method: "POST",
+          body: JSON.stringify({ profile: id }),
+        });
+        state = data;
+        render();
+        $("log").textContent = "Switched to " + data.label;
+      } catch (err) {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
+      } finally {
+        $("testBtn").disabled = false;
+      }
+    }
+
+    async function runTest() {
+      $("testBtn").disabled = true;
+      $("log").textContent = "Testing…";
+      try {
+        const { data } = await api("/test", { method: "POST", body: "{}" });
+        $("log").innerHTML = formatEntry(data);
+        await refresh();
+      } catch (err) {
+        $("log").innerHTML = `<span class="bad">${escapeHtml(err.message)}</span>`;
+      } finally {
+        $("testBtn").disabled = false;
+      }
+    }
+
+    $("testBtn").addEventListener("click", runTest);
+    $("refreshBtn").addEventListener("click", () => refresh().catch((e) => {
+      $("log").innerHTML = `<span class="bad">${escapeHtml(e.message)}</span>`;
+    }));
+
+    refresh().catch((e) => {
+      $("activeLabel").textContent = "Proxy not reachable";
+      $("log").innerHTML = `<span class="bad">${escapeHtml(e.message)}</span>`;
+    });
+  </script>
+</body>
+</html>
