@@ -1,0 +1,1457 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-192x192.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog | Samyoj — WhatsApp CRM Insights & Resources</title>
+  <meta name="description" content="Practical guides, product updates, and WhatsApp marketing strategies to help you connect, engage and grow your business with Samyoj.">
+  <meta name="keywords" content="WhatsApp marketing blog, WhatsApp CRM tips, WhatsApp automation guide, AI chatbots, business growth, Samyoj blog">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://samyoj.com/blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samyoj.com/blog" />
+  <meta property="og:title" content="Blog | Samyoj — WhatsApp CRM Insights & Resources" />
+  <meta property="og:description" content="Practical guides, product updates, and WhatsApp marketing strategies to help you connect, engage and grow." />
+  <meta property="og:image" content="https://samyoj.com/images/logo.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog | Samyoj — WhatsApp CRM Insights & Resources" />
+  <meta name="twitter:description" content="Practical guides, product updates, and WhatsApp marketing strategies to help you connect, engage and grow." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="samyoj-nav.css">
+  <link rel="stylesheet" href="samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="mobile-buttons.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #10231e;
+      -webkit-font-smoothing: antialiased;
+      --wr-max: 1530px;
+      --green: #03cf65;
+      --green-deep: #087a47;
+      --green-dark: #00b859;
+      --ink: #10231e;
+      --muted: #6b7a74;
+      --light-bg: #f8faf9;
+      --green-tint: #f0faf4;
+      --card-border: #edf3f0;
+      --font-head: 'Manrope', system-ui, sans-serif;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── PAGE WRAPPER ─── */
+    .blog-wrap {
+      width: 100%;
+      max-width: var(--wr-max);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 3.5vw, 56px);
+    }
+
+    /* ─── BREADCRUMB ─── */
+    .blog-breadcrumb {
+      padding: 20px 0 10px;
+      font-size: 13.5px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .blog-breadcrumb a { color: var(--muted); transition: color .18s; }
+    .blog-breadcrumb a:hover { color: var(--green-deep); }
+    .blog-breadcrumb span { margin: 0 8px; color: #b5c4be; }
+
+    /* ─── HERO SECTION ─── */
+    .blog-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 30px 0 50px;
+    }
+
+    .blog-hero-left { max-width: 540px; }
+
+    .blog-hero-left h1 {
+      font-family: var(--font-head);
+      font-size: clamp(38px, 4.8vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--ink);
+      margin: 0 0 20px;
+      letter-spacing: -0.035em;
+    }
+    .blog-hero-left h1 .green-word {
+      color: var(--green);
+    }
+
+    .blog-hero-subtitle {
+      font-size: 16.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 32px;
+      font-weight: 500;
+      max-width: 440px;
+    }
+
+    .blog-subscribe-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 4px 18px rgba(3,207,101,.22);
+    }
+    .blog-subscribe-btn:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(3,207,101,.32);
+    }
+    .blog-subscribe-btn svg { width: 17px; height: 17px; flex-shrink: 0; fill: currentColor; }
+
+    /* Hero right — 3D Image Visual */
+    .blog-hero-right {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .blog-hero-img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,.08);
+      background: #f8faf9;
+    }
+    .blog-hero-img-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* ─── TOPIC TABS ─── */
+    .blog-tabs-section {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0;
+      margin-bottom: 48px;
+    }
+
+    .blog-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .blog-tabs::-webkit-scrollbar { display: none; }
+
+    .blog-tab {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      cursor: pointer;
+      border: 1px solid var(--card-border);
+      background: #ffffff;
+      color: var(--muted);
+      white-space: nowrap;
+      transition: all .2s ease;
+    }
+
+    .blog-tab:hover {
+      background: #f4faf6;
+      border-color: #cde6d8;
+      color: var(--green-deep);
+    }
+
+    .blog-tab.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* ─── SECTION HEADER ─── */
+    .blog-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .blog-section-title {
+      font-family: var(--font-head);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0;
+      letter-spacing: -0.025em;
+    }
+
+    .blog-view-all {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-deep);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap .2s ease;
+      font-family: var(--font-head);
+    }
+    .blog-view-all:hover { gap: 9px; }
+
+    /* ─── FEATURED ARTICLES SECTION ─── */
+    .blog-featured-section {
+      margin-bottom: 60px;
+    }
+
+    .blog-featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px 300px;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /* Main Featured Card (Left) */
+    .blog-featured-main {
+      background: #f4faf6;
+      border: 1px solid #e1f0e7;
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: box-shadow .25s ease, transform .25s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .blog-featured-main:hover {
+      box-shadow: 0 16px 40px rgba(3,207,101,.12);
+      transform: translateY(-3px);
+    }
+
+    .blog-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-family: var(--font-head);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .blog-tag.green { color: var(--green); }
+    .blog-tag.blue { color: #2563eb; }
+    .blog-tag.purple { color: #7c3aed; }
+    .blog-tag.orange { color: #d97706; }
+
+    .blog-featured-main-title {
+      font-family: var(--font-head);
+      font-size: clamp(22px, 2.4vw, 28px);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--ink);
+      margin: 0 0 12px;
+      letter-spacing: -0.025em;
+    }
+
+    .blog-featured-main-desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+
+    .blog-featured-img-box {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 14px;
+      aspect-ratio: 16/10;
+    }
+    .blog-featured-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .blog-author-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--green-deep));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .blog-author-meta {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .blog-author-meta strong { color: var(--ink); font-weight: 700; }
+
+    /* Middle Column (3 Stacked Cards) */
+    .blog-featured-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .blog-stack-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow .2s ease, transform .2s ease;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      align-items: center;
+    }
+    .blog-stack-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+
+    .blog-stack-thumb {
+      width: 100px;
+      height: 100%;
+      min-height: 95px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .blog-stack-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-stack-content {
+      padding: 14px 16px;
+    }
+
+    .blog-stack-title {
+      font-family: var(--font-head);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      margin: 4px 0 6px;
+    }
+
+    .blog-meta {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Right Column (Sidebar) */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Search Box */
+    .blog-search {
+      position: relative;
+    }
+    .blog-search input {
+      width: 100%;
+      padding: 12px 42px 12px 18px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--ink);
+      background: #fdfdfd;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .blog-search input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3.5px rgba(3,207,101,.14);
+      background: #fff;
+    }
+    .blog-search input::placeholder { color: #9bb0a7; }
+    .blog-search-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Popular Posts Card */
+    .blog-sidebar-box {
+      background: #fdfdfd;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px 20px 16px;
+    }
+
+    .blog-sidebar-box h3 {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .blog-popular-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .blog-popular-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      cursor: pointer;
+      transition: opacity .18s;
+    }
+    .blog-popular-item:hover { opacity: .75; }
+
+    .blog-popular-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #e8f7ee;
+      color: var(--green-deep);
+      font-size: 12px;
+      font-weight: 800;
+      font-family: var(--font-head);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .blog-popular-text { flex: 1; }
+    .blog-popular-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 2px;
+      font-family: var(--font-head);
+    }
+    .blog-popular-date {
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Categories List */
+    .blog-categories-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .blog-cat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #edf3f0;
+      cursor: pointer;
+      transition: color .18s;
+    }
+    .blog-cat-item:last-child { border-bottom: none; }
+    .blog-cat-item:hover .blog-cat-name { color: var(--green-deep); }
+
+    .blog-cat-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .blog-cat-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #e8f7ee;
+      color: var(--green-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .blog-cat-icon svg { width: 15px; height: 15px; fill: currentColor; }
+    .blog-cat-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      transition: color .18s;
+    }
+    .blog-cat-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      font-family: var(--font-head);
+    }
+
+    /* ─── LATEST ARTICLES SECTION ─── */
+    .blog-latest-section {
+      margin-bottom: 60px;
+    }
+
+    .blog-latest-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow .25s ease, transform .25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,.09);
+      transform: translateY(-4px);
+    }
+
+    .blog-card-thumb {
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: #f4faf6;
+    }
+    .blog-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .blog-card:hover .blog-card-thumb img {
+      transform: scale(1.04);
+    }
+
+    .blog-card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .blog-card-title {
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+      margin: 6px 0 10px;
+    }
+
+    .blog-card-meta {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: auto;
+    }
+
+    /* ─── NEWSLETTER BANNER ─── */
+    .blog-newsletter {
+      background: #f0faf4;
+      border: 1px solid #d4ede0;
+      border-radius: 20px;
+      padding: 36px 44px;
+      display: grid;
+      grid-template-columns: 84px 1fr auto;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-newsletter-img {
+      width: 84px;
+      height: 84px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(3,207,101,.22);
+      flex-shrink: 0;
+    }
+    .blog-newsletter-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-newsletter-text h2 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .blog-newsletter-text p {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .blog-newsletter-form { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+    .blog-newsletter-row {
+      display: flex;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    }
+    .blog-newsletter-input {
+      width: 250px;
+      padding: 13px 18px;
+      border: 1px solid #cce5d7;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      background: #ffffff;
+      color: var(--ink);
+    }
+    .blog-newsletter-input::placeholder { color: #a2b8ad; }
+    .blog-newsletter-btn {
+      padding: 13px 24px;
+      background: var(--green);
+      color: #ffffff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 14.5px;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: background .2s ease;
+    }
+    .blog-newsletter-btn:hover { background: var(--green-dark); }
+    .blog-newsletter-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+    .blog-newsletter-fine {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ─── TOPIC EXPLORE ─── */
+    .blog-explore-section {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .blog-explore-section h2 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .blog-explore-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .blog-explore-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      color: var(--ink);
+      cursor: pointer;
+      transition: border-color .2s ease, background .2s ease, color .2s ease, transform .18s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,.03);
+    }
+    .blog-explore-chip:hover {
+      border-color: var(--green);
+      background: #f0faf4;
+      color: var(--green-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(3,207,101,.12);
+    }
+    .blog-explore-chip svg {
+      width: 16px;
+      height: 16px;
+      color: var(--green-deep);
+    }
+
+    /* ─── FOOTER OVERRIDE ─── */
+    .blog-footer-grid-custom {
+      display: grid;
+      grid-template-columns: minmax(220px,1.35fr) repeat(3,minmax(120px,0.8fr)) minmax(210px,1fr);
+      gap: 18px clamp(14px, 2vw, 32px);
+      align-items: start;
+      width: 100%;
+    }
+
+    .blog-footer-demo {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.03);
+    }
+
+    .blog-footer-demo h4 {
+      font-family: var(--font-head);
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .blog-footer-demo p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      line-height: 1.5;
+    }
+    .blog-footer-demo-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 11.5px 18px;
+      border: 1.5px solid var(--ink);
+      border-radius: 8px;
+      background: transparent;
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s ease;
+    }
+    .blog-footer-demo-btn:hover {
+      border-color: var(--green);
+      background: var(--green);
+      color: #ffffff;
+    }
+    .blog-footer-demo-btn svg { width: 14px; height: 14px; }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .blog-featured-grid { grid-template-columns: 1fr 280px; }
+      .blog-sidebar { display: none; }
+      .blog-latest-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-newsletter { grid-template-columns: 70px 1fr; }
+      .blog-newsletter-form { grid-column: 1/-1; align-items: stretch; }
+      .blog-newsletter-row { width: 100%; }
+      .blog-newsletter-input { flex: 1; }
+    }
+
+    @media (max-width: 900px) {
+      .blog-hero { grid-template-columns: 1fr; }
+      .blog-hero-right { display: none; }
+      .blog-featured-grid { grid-template-columns: 1fr; }
+      .blog-featured-stack { display: grid; grid-template-columns: 1fr 1fr; }
+      .blog-footer-grid-custom { grid-template-columns: 1fr 1fr !important; }
+    }
+
+    @media (max-width: 600px) {
+      .blog-latest-grid { grid-template-columns: 1fr; }
+      .blog-featured-stack { grid-template-columns: 1fr; }
+      .blog-newsletter { grid-template-columns: 1fr; padding: 24px 20px; }
+      .blog-newsletter-img { display: none; }
+      .blog-newsletter-row { flex-direction: column; border-radius: 8px; }
+      .blog-newsletter-input { width: 100%; border-right: 1px solid #cce5d7; border-bottom: none; border-radius: 8px 8px 0 0; }
+      .blog-newsletter-btn { border-radius: 0 0 8px 8px; justify-content: center; }
+      .blog-explore-chips { gap: 8px; }
+      .blog-footer-grid-custom { grid-template-columns: 1fr !important; }
+    }
+
+    .blog-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .blog-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER NAVIGATION
+════════════════════════════════════════════════════════ -->
+<header class="sy-nav" aria-label="Site navigation">
+  <div class="sy-nav-inner">
+    <a class="sy-nav-brand" href="index.html" aria-label="Samyoj home">
+      <img src="images/logo.webp" alt="Samyoj" width="150" height="40" decoding="async" />
+    </a>
+    <nav aria-label="Primary">
+      <ul class="sy-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="blog.html" aria-current="page">Resources ▾</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sy-nav-actions">
+      <button type="button" class="sy-nav-btn sy-nav-btn-primary" data-sy-signup>
+        Start for FREE
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <a class="sy-nav-btn sy-nav-btn-secondary" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">
+        Login
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <button class="sy-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-sy-nav-toggle>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="sy-nav-drawer" data-sy-nav-drawer>
+    <nav aria-label="Mobile primary">
+      <ul class="sy-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="blog.html" aria-current="page">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sy-nav-actions">
+      <button type="button" class="sy-nav-btn sy-nav-btn-primary" data-sy-signup>Start for FREE</button>
+      <a class="sy-nav-btn sy-nav-btn-secondary" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Login</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="blog-wrap">
+
+    <!-- Breadcrumb -->
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">&gt;</span>
+      <span aria-current="page">Blog</span>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════════════════ -->
+    <section class="blog-hero" aria-label="Blog hero">
+      <div class="blog-hero-left">
+        <h1>
+          Insights to help you<br>
+          <span class="green-word">connect</span>, engage<br>
+          and grow
+        </h1>
+        <p class="blog-hero-subtitle">
+          Practical guides, product updates, and WhatsApp marketing strategies to grow your business.
+        </p>
+        <button class="blog-subscribe-btn" type="button" id="hero-subscribe-btn" aria-label="Subscribe to blog updates">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C8.64 5.36 7 7.92 7 11v5l-2 2v1h14v-1l-2-2z"/>
+          </svg>
+          Subscribe to Updates
+        </button>
+      </div>
+
+      <!-- Hero 3D Graphic Image -->
+      <div class="blog-hero-right">
+        <div class="blog-hero-img-wrap">
+          <img src="images/blog_hero_dashboard_3d.jpg" alt="Campaign Performance Dashboard with WhatsApp Analytics" width="580" height="326" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         TOPIC FILTER TABS
+    ════════════════════════════════════════════════════════ -->
+    <div class="blog-tabs-section blog-animate">
+      <div class="blog-tabs" role="tablist" aria-label="Filter articles by topic">
+        <button class="blog-tab active" role="tab" aria-selected="true" data-tab="all">All Topics</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="wa-marketing">WhatsApp Marketing</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="automation">Automation</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="product-updates">Product Updates</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="ai-chatbots">AI &amp; Chatbots</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="crm">CRM</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="growth-tips">Growth Tips</button>
+        <button class="blog-tab" role="tab" aria-selected="false" data-tab="integrations">Integrations</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FEATURED ARTICLES
+    ════════════════════════════════════════════════════════ -->
+    <section class="blog-featured-section blog-animate" aria-label="Featured articles">
+      <div class="blog-section-header">
+        <h2 class="blog-section-title">Featured Articles</h2>
+        <a class="blog-view-all" href="#">
+          View all articles
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="blog-featured-grid">
+
+        <!-- Main Featured Card (Left) -->
+        <article class="blog-featured-main" aria-label="Featured article">
+          <div>
+            <span class="blog-tag green">WhatsApp Marketing</span>
+            <h3 class="blog-featured-main-title">WhatsApp Marketing in 2026: Trends, Strategies &amp; Growth Opportunities</h3>
+            <p class="blog-featured-main-desc">Discover the top WhatsApp marketing trends for 2026 and how businesses can use automation to drive growth.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar" aria-hidden="true">ST</div>
+              <div class="blog-author-meta">
+                <strong>Samyoj Team</strong> · July 18, 2026 · 8 min read
+              </div>
+            </div>
+          </div>
+          <div class="blog-featured-img-box">
+            <img src="images/blog_featured_wa_marketing_3d.jpg" alt="WhatsApp Marketing 2026 3D Illustration" width="480" height="300" />
+          </div>
+        </article>
+
+        <!-- Middle Column (3 Stacked Cards) -->
+        <div class="blog-featured-stack">
+
+          <article class="blog-stack-card" aria-label="Article: 7 WhatsApp Automation Workflows">
+            <div class="blog-stack-thumb">
+              <img src="images/blog_automation_robot_3d.jpg" alt="Automation Workflows" width="100" height="100" />
+            </div>
+            <div class="blog-stack-content">
+              <span class="blog-tag green">Automation</span>
+              <h3 class="blog-stack-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</h3>
+              <p class="blog-meta">July 15, 2026 · 6 min read</p>
+            </div>
+          </article>
+
+          <article class="blog-stack-card" aria-label="Article: How AI Agents Can Improve Customer Support">
+            <div class="blog-stack-thumb">
+              <img src="images/blog_ai_agent_3d.jpg" alt="AI Support Agents" width="100" height="100" />
+            </div>
+            <div class="blog-stack-content">
+              <span class="blog-tag blue">AI &amp; Chatbots</span>
+              <h3 class="blog-stack-title">How AI Agents Can Improve Customer Support on WhatsApp</h3>
+              <p class="blog-meta">July 11, 2026 · 7 min read</p>
+            </div>
+          </article>
+
+          <article class="blog-stack-card" aria-label="Article: What's New in Samyoj June 2026">
+            <div class="blog-stack-thumb">
+              <img src="images/blog_gift_box_3d.jpg" alt="Product Updates" width="100" height="100" />
+            </div>
+            <div class="blog-stack-content">
+              <span class="blog-tag green">Product Updates</span>
+              <h3 class="blog-stack-title">What's New in Samyoj: June 2026 Product Roundup</h3>
+              <p class="blog-meta">July 8, 2026 · 5 min read</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sidebar (Right) -->
+        <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+          <!-- Search Input -->
+          <div class="blog-search">
+            <label for="blog-search-input" class="sr-only">Search articles</label>
+            <input type="search" id="blog-search-input" placeholder="Search articles..." aria-label="Search articles">
+            <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </div>
+
+          <!-- Popular Posts -->
+          <div class="blog-sidebar-box">
+            <h3>Popular Posts</h3>
+            <ol class="blog-popular-list" aria-label="Popular posts">
+              <li class="blog-popular-item">
+                <div class="blog-popular-num" aria-hidden="true">1</div>
+                <div class="blog-popular-text">
+                  <div class="blog-popular-title">WhatsApp Business API: A Complete Guide for Businesses in 2026</div>
+                  <div class="blog-popular-date">July 10, 2026</div>
+                </div>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num" aria-hidden="true">2</div>
+                <div class="blog-popular-text">
+                  <div class="blog-popular-title">How to Increase Response Rate on WhatsApp</div>
+                  <div class="blog-popular-date">July 6, 2026</div>
+                </div>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num" aria-hidden="true">3</div>
+                <div class="blog-popular-text">
+                  <div class="blog-popular-title">WhatsApp Template Messages: Best Practices &amp; Examples</div>
+                  <div class="blog-popular-date">July 1, 2026</div>
+                </div>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num" aria-hidden="true">4</div>
+                <div class="blog-popular-text">
+                  <div class="blog-popular-title">A Beginner's Guide to CRM for Small Businesses</div>
+                  <div class="blog-popular-date">June 28, 2026</div>
+                </div>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num" aria-hidden="true">5</div>
+                <div class="blog-popular-text">
+                  <div class="blog-popular-title">How to Segment Your Audience on WhatsApp Like a Pro</div>
+                  <div class="blog-popular-date">June 25, 2026</div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Categories -->
+          <div class="blog-sidebar-box">
+            <h3>Categories</h3>
+            <ul class="blog-categories-list" aria-label="Article categories">
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">WhatsApp Marketing</span>
+                </div>
+                <span class="blog-cat-count">18</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">Automation</span>
+                </div>
+                <span class="blog-cat-count">14</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5.72C10.4 5.38 10 4.74 10 4a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 5h6v1.5H9V16z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">AI &amp; Chatbots</span>
+                </div>
+                <span class="blog-cat-count">12</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">Product Updates</span>
+                </div>
+                <span class="blog-cat-count">10</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">CRM</span>
+                </div>
+                <span class="blog-cat-count">08</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">Growth Tips</span>
+                </div>
+                <span class="blog-cat-count">09</span>
+              </li>
+              <li class="blog-cat-item">
+                <div class="blog-cat-left">
+                  <div class="blog-cat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a3.001 3.001 0 0 0 0-4.24 3.001 3.001 0 0 0-4.24 0l-3.53 3.53a3.001 3.001 0 0 0 0 4.24zm2.82-2.82c-.41-.39-.41-1.03 0-1.42.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.42l-.47.48a3.001 3.001 0 0 0 0 4.24 3.001 3.001 0 0 0 4.24 0l3.53-3.53a3.001 3.001 0 0 0 0-4.24z"/></svg>
+                  </div>
+                  <span class="blog-cat-name">Integrations</span>
+                </div>
+                <span class="blog-cat-count">07</span>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         LATEST ARTICLES GRID
+    ════════════════════════════════════════════════════════ -->
+    <section class="blog-latest-section blog-animate" aria-label="Latest articles">
+      <div class="blog-section-header">
+        <h2 class="blog-section-title">Latest Articles</h2>
+        <a class="blog-view-all" href="#">
+          View all articles
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="blog-latest-grid">
+
+        <article class="blog-card" aria-label="Article: 5 Proven Ways to Generate More Leads on WhatsApp">
+          <div class="blog-card-thumb">
+            <img src="images/blog_leads_3d.jpg" alt="5 Proven Ways to Generate More Leads" width="300" height="180" />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag green">WhatsApp Marketing</span>
+            <h3 class="blog-card-title">5 Proven Ways to Generate More Leads on WhatsApp</h3>
+            <p class="blog-card-meta">July 16, 2026 · 6 min read</p>
+          </div>
+        </article>
+
+        <article class="blog-card" aria-label="Article: Building Customer Loyalty Through WhatsApp">
+          <div class="blog-card-thumb">
+            <img src="images/blog_loyalty_3d.jpg" alt="Building Customer Loyalty" width="300" height="180" />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag green">Growth Tips</span>
+            <h3 class="blog-card-title">Building Customer Loyalty Through WhatsApp</h3>
+            <p class="blog-card-meta">July 13, 2026 · 5 min read</p>
+          </div>
+        </article>
+
+        <article class="blog-card" aria-label="Article: How to Automate FAQs and Save 80% Support Time">
+          <div class="blog-card-thumb">
+            <img src="images/blog_faq_robot_3d.jpg" alt="Automate FAQs on WhatsApp" width="300" height="180" />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag blue">Automation</span>
+            <h3 class="blog-card-title">How to Automate FAQs and Save 80% Support Time</h3>
+            <p class="blog-card-meta">July 9, 2026 · 6 min read</p>
+          </div>
+        </article>
+
+        <article class="blog-card" aria-label="Article: Connect Samyoj with Google Sheets, Zapier & More">
+          <div class="blog-card-thumb">
+            <img src="images/blog_integrations_3d.jpg" alt="Integrations with Google Sheets and Zapier" width="300" height="180" />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag green">Integrations</span>
+            <h3 class="blog-card-title">Connect Samyoj with Google Sheets, Zapier &amp; More</h3>
+            <p class="blog-card-meta">July 5, 2026 · 4 min read</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         NEWSLETTER SUBSCRIBE BANNER
+    ════════════════════════════════════════════════════════ -->
+    <section class="blog-newsletter blog-animate" aria-label="Subscribe to newsletter">
+      <div class="blog-newsletter-img">
+        <img src="images/blog_newsletter_envelope_3d.jpg" alt="Newsletter Subscription 3D Illustration" width="84" height="84" />
+      </div>
+      <div class="blog-newsletter-text">
+        <h2>Stay updated with the latest insights</h2>
+        <p>Get the best WhatsApp marketing tips, product updates, and growth strategies straight to your inbox.</p>
+      </div>
+      <div class="blog-newsletter-form">
+        <div class="blog-newsletter-row">
+          <label for="newsletter-email" class="sr-only">Enter your email</label>
+          <input class="blog-newsletter-input" type="email" id="newsletter-email" placeholder="Enter your email" autocomplete="email">
+          <button class="blog-newsletter-btn" type="button" id="newsletter-subscribe-btn" aria-label="Subscribe to newsletter">
+            Subscribe
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p class="blog-newsletter-fine">No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         EXPLORE TOPICS BANNER
+    ════════════════════════════════════════════════════════ -->
+    <section class="blog-explore-section blog-animate" aria-label="Explore topics">
+      <h2>Explore topics that matter</h2>
+      <div class="blog-explore-chips" role="list">
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          WhatsApp Tips
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6-3.6z"/></svg>
+          Automation Ideas
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5.72C10.4 5.38 10 4.74 10 4a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 5h6v1.5H9V16z"/></svg>
+          AI &amp; Chatbots
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          CRM Strategies
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+          Product Updates
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a3.001 3.001 0 0 0 0-4.24 3.001 3.001 0 0 0-4.24 0l-3.53 3.53a3.001 3.001 0 0 0 0 4.24zm2.82-2.82c-.41-.39-.41-1.03 0-1.42.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.42l-.47.48a3.001 3.001 0 0 0 0 4.24 3.001 3.001 0 0 0 4.24 0l3.53-3.53a3.001 3.001 0 0 0 0-4.24z"/></svg>
+          Integrations
+        </div>
+        <div class="blog-explore-chip" role="listitem" tabindex="0">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+          Business Growth
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER SECTION
+════════════════════════════════════════════════════════ -->
+<footer class="sy-footer" aria-label="Site footer">
+  <div class="sy-footer-inner">
+    <div class="blog-footer-grid-custom">
+
+      <!-- Brand column -->
+      <div class="sy-footer-brand">
+        <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
+          <img src="images/logo.webp" alt="Samyoj — WhatsApp Automation &amp; CRM" width="160" height="43" loading="lazy" decoding="async" />
+        </a>
+        <p class="sy-footer-desc">The all-in-one WhatsApp automation and CRM platform for modern businesses.</p>
+        <div class="sy-footer-social" aria-label="Social links">
+          <a href="https://www.facebook.com/samyoj" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.23 0-1.61.76-1.61 1.54V12h2.72l-.43 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+          </a>
+          <a href="https://twitter.com/samyoj_" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product column -->
+      <nav class="sy-footer-col" aria-label="Product" style="padding-left:20px;position:relative;">
+        <h4>Product</h4>
+        <ul class="sy-footer-links">
+          <li><a href="features.html">Features</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </nav>
+
+      <!-- Resources column -->
+      <nav class="sy-footer-col" aria-label="Resources" style="padding-left:20px;position:relative;">
+        <h4>Resources</h4>
+        <ul class="sy-footer-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Webinars</a></li>
+          <li><a href="#">API Docs</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company column -->
+      <nav class="sy-footer-col" aria-label="Company" style="padding-left:20px;position:relative;">
+        <h4>Company</h4>
+        <ul class="sy-footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="legal/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms-and-conditions.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+
+      <!-- Book a Demo Card -->
+      <div style="padding-left:20px;position:relative;">
+        <div class="blog-footer-demo">
+          <h4>Book a Demo</h4>
+          <p>See Samyoj in action and discover how we can help you grow.</p>
+          <a class="blog-footer-demo-btn" href="contact.html" aria-label="Book a free demo">
+            Book a Free Demo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sy-footer-bottom">
+      <p class="sy-footer-copy">© 2026 Samyoj. All rights reserved.</p>
+      <div class="sy-footer-legal">
+        <a href="legal/privacy-policy.html">Privacy Policy</a><span aria-hidden="true"></span>
+        <a href="legal/refund-cancellation-policy.html">Refund Policy</a><span aria-hidden="true"></span>
+        <a href="legal/terms-and-conditions.html">Terms &amp; Conditions</a><span aria-hidden="true"></span>
+        <a href="legal/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+  .sy-footer-col::before {
+    content: ''; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background: #e6ece9;
+  }
+</style>
+
+<script>
+(function () {
+  var targetUrl = "https://app.samyoj.com/?utm_source=organic&utm_term=blogsignupbutton";
+  document.querySelectorAll("[data-sy-signup]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var query = window.location.search;
+      window.location.href = query ? targetUrl + query : targetUrl;
+    });
+  });
+
+  var toggle = document.querySelector("[data-sy-nav-toggle]");
+  var drawer = document.querySelector("[data-sy-nav-drawer]");
+  if (toggle && drawer) {
+    toggle.addEventListener("click", function () {
+      var open = drawer.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  var tabs = document.querySelectorAll(".blog-tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+    });
+  });
+
+  var animEls = document.querySelectorAll(".blog-animate");
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animEls.forEach(function (el) {
+    observer.observe(el);
+  });
+
+  var newsletterBtn = document.getElementById("newsletter-subscribe-btn");
+  if (newsletterBtn) {
+    newsletterBtn.addEventListener("click", function () {
+      var emailInput = document.getElementById("newsletter-email");
+      if (emailInput && emailInput.value) {
+        newsletterBtn.textContent = "✓ Subscribed!";
+        newsletterBtn.style.background = "#087a47";
+        newsletterBtn.disabled = true;
+        emailInput.value = "";
+      } else {
+        emailInput && emailInput.focus();
+      }
+    });
+  }
+
+  var heroBtn = document.getElementById("hero-subscribe-btn");
+  if (heroBtn) {
+    heroBtn.addEventListener("click", function () {
+      var nlSection = document.querySelector(".blog-newsletter");
+      if (nlSection) {
+        nlSection.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(function () {
+          var emailInput = document.getElementById("newsletter-email");
+          if (emailInput) emailInput.focus();
+        }, 500);
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
