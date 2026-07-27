@@ -8,5 +8,16 @@
     { "source": "/legal/cookie-policy", "destination": "/legal/cookie-policy.html" },
     { "source": "/legal/refund-cancellation-policy", "destination": "/legal/refund-cancellation-policy.html" },
     { "source": "/legal/acceptable-use-policy", "destination": "/legal/acceptable-use-policy.html" }
+  ],
+   "headers": [
+    {
+      "source": "/(.*)\\.(css|js|png|jpg|jpeg|webp|svg|woff2)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }

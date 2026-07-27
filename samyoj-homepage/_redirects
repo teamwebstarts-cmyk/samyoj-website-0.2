@@ -6,13 +6,15 @@
 /blog       /blog.html     200
 /blog/      /blog.html     200
 /blog/:slug /blog/:slug.html 200
+
 /legal/privacy-policy /legal/privacy-policy.html  200
 /legal/terms-and-conditions /legal/terms-and-conditions.html  200
 /legal/cookie-policy /legal/cookie-policy.html  200
 /legal/refund-cancellation-policy /legal/refund-cancellation-policy.html  200
 /legal/acceptable-use-policy /legal/acceptable-use-policy.html  200
-/privacy-policy /legal/privacy-policy.html  200
-/terms-and-conditions /legal/terms-and-conditions.html  200
-/cookie-policy /legal/cookie-policy.html  200
-/refund-cancellation-policy /legal/refund-cancellation-policy.html  200
-/acceptable-use-policy /legal/acceptable-use-policy.html  200
+
+/privacy-policy /legal/privacy-policy 301
+/terms-and-conditions /legal/terms-and-conditions 301
+/cookie-policy /legal/cookie-policy 301
+/refund-cancellation-policy /legal/refund-cancellation-policy 301
+/acceptable-use-policy /legal/acceptable-use-policy 301
