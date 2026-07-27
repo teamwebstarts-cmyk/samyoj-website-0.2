@@ -158,12 +158,29 @@
       max-width: 320px;
     }
 
-    /* Main Grid Layout */
+    /* Main Grid Layout - Enhanced spacing & separation */
     .blog-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 48px;
+      gap: 64px; /* Increased gap for better column separation */
       align-items: start;
+    }
+
+    /* Left article column styling */
+    .blog-main-content {
+      padding-right: 16px;
+      border-right: 1px solid #f1f5f9; /* Subtle divider line */
+    }
+
+    @media (max-width: 1024px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .blog-main-content {
+        padding-right: 0;
+        border-right: none;
+      }
     }
 
     @media (max-width: 992px) {
@@ -477,16 +494,23 @@
       }
     }
     .pc-box {
-      background: #f8fafc;
-      border: 1px solid #f1f5f9;
-      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
       padding: 24px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .pc-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+      border-color: #cbd5e1;
     }
     .pc-box.pros {
-      border-top: 4px solid var(--sy-green);
+      border-left: 4px solid var(--sy-green);
     }
     .pc-box.cons {
-      border-top: 4px solid #ef4444;
+      border-left: 4px solid #ef4444;
     }
     .pc-title {
       font-size: 16px;
@@ -622,6 +646,173 @@
 
     .blog-nav-link:hover .blog-nav-title {
       color: var(--sy-green-hover);
+    }
+
+
+    /* ─── POST SIDEBAR: Search / Popular / Categories ─── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .blog-search {
+      position: relative;
+    }
+    .blog-search input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 42px 12px 18px;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #0f172a;
+      background: #fdfdfd;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .blog-search input:focus {
+      border-color: #03cf65;
+      box-shadow: 0 0 0 3.5px rgba(3, 207, 101, .14);
+      background: #fff;
+    }
+    .blog-search input::placeholder { color: #94a3b8; }
+    .blog-search-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    .blog-sidebar-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 22px 20px 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+    .blog-sidebar-box h3 {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .blog-popular-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .blog-popular-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .blog-popular-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #eafbf0;
+      color: #087a47;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .blog-popular-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.4;
+      display: block;
+      text-decoration: none;
+      transition: color .18s;
+    }
+    .blog-popular-title:hover { color: #00b853; }
+    .blog-popular-date {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .blog-categories-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .blog-cat-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 8px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background .18s;
+    }
+    .blog-cat-link:hover { background: #f8fafc; }
+    .blog-cat-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .blog-cat-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #eafbf0;
+      color: #00b853;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .blog-cat-icon svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+    .blog-cat-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .blog-cat-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748b;
+      background: #f1f5f9;
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+
+    @media (max-width: 992px) {
+      .blog-sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+      }
     }
 
     /* ─── SIDEBAR WIDGETS ─── */
@@ -865,7 +1056,96 @@
       text-align: center;
     }
   </style>
-  <link rel="stylesheet" href="../samyoj-nav.css">
+  
+  <link rel="stylesheet" href="../samyoj-nav.css?v=11">
+
+  <!-- JSON-LD Structured Data Schema (GEO & SEO Optimized) -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://samyoj.com/blog/top-7-whatsapp-business-api-providers#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://samyoj.com/blog/top-7-whatsapp-business-api-providers"
+      },
+      "headline": "Top 7 WhatsApp Business API Providers in 2026",
+      "description": "Compare the top 7 WhatsApp Business API providers for 2026. See how Samyoj, Wati, Interakt, Twilio, and others stack up in pricing, AI features, and ROI.",
+      "image": "https://samyoj.com/images/blog_top_7_whatsapp_api_providers.jpg",
+      "datePublished": "2026-07-27T08:00:00+05:30",
+      "dateModified": "2026-07-27T08:00:00+05:30",
+      "author": {
+        "@type": "Organization",
+        "name": "Samyoj Growth Team",
+        "url": "https://samyoj.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Samyoj",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://samyoj.com/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://samyoj.com/blog/top-7-whatsapp-business-api-providers"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://samyoj.com/blog/top-7-whatsapp-business-api-providers#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samyoj.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://samyoj.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Top 7 WhatsApp Business API Providers in 2026",
+          "item": "https://samyoj.com/blog/top-7-whatsapp-business-api-providers"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://samyoj.com/#organization",
+      "name": "Samyoj",
+      "url": "https://samyoj.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://samyoj.com/images/logo.webp"
+      },
+      "description": "Samyoj is a leading official WhatsApp Business API platform providing support automation, marketing campaigns, AI agents, and transparent pricing with zero per-message markups.",
+      "sameAs": [
+        "https://www.linkedin.com/company/samyoj",
+        "https://twitter.com/samyoj",
+        "https://github.com/samyoj"
+      ],
+      "knowsAbout": [
+        "WhatsApp Business API",
+        "WhatsApp Marketing",
+        "AI Chatbots",
+        "Customer Support Automation",
+        "Shopify WhatsApp Automation",
+        "Conversational Commerce"
+      ]
+    }
+  ]
+}
+  </script>
+
 </head>
 
 <body class="noScript">
@@ -1606,184 +1886,138 @@
           </div>
 
           <!-- Bottom Pagination Links -->
-          <div class="blog-post-nav">
-            <a href="#" class="blog-nav-link">
+          
+          <!-- Brand Connection & Trust Section (SEO/GEO Optimized) -->
+          <div class="samyoj-brand-callout" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; margin: 40px 0; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); font-family: 'Inter', sans-serif;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+              <span style="background: #eafbf0; color: #00b853; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid #b7efc5;">Official Meta Partner</span>
+            </div>
+            <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0 0 12px 0; line-height: 1.3; font-family: 'Manrope', sans-serif;">Scale Your WhatsApp Marketing with Samyoj</h3>
+            <p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0 0 24px 0;">
+              Samyoj is India's most reliable, transparent, and feature-rich WhatsApp Business API platform. Built specifically for growing brands, we help you automate customer support, run targeted broadcast campaigns, and recover lost revenue with zero per-message markup fees.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 28px;">
+              <div style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Zero Message Markups</strong>
+                  <span style="font-size: 12px; color: #64748b;">Pay Meta's official charges directly with absolute transparency.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Flat ₹1,499/mo Plan</strong>
+                  <span style="font-size: 12px; color: #64748b;">Get unlimited agent seats, shared team inbox, and advanced flows.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Built-in AI Agents</strong>
+                  <span style="font-size: 12px; color: #64748b;">Automate up to 80% of customer queries instantly, 24/7.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Guided Onboarding</strong>
+                  <span style="font-size: 12px; color: #64748b;">Free green tick verification and dedicated support to get you live.</span>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="https://app.samyoj.com" class="btn primary" style="padding: 12px 24px; font-size: 14.5px; font-weight: 700; border-radius: 8px; background: #00b853; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0, 184, 83, 0.25); transition: all 0.2s;">
+                Start Free Trial
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="../contact.html" style="font-size: 14px; font-weight: 700; color: #475569; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 12px 16px; transition: color 0.2s;" onmouseover="this.style.color='#00b853'" onmouseout="this.style.color='#475569'">
+                Talk to an Expert →
+              </a>
+            </div>
+          </div>
+
+<div class="blog-post-nav">
+            <a href="what-is-whatsapp-crm.html" class="blog-nav-link">
               <span class="blog-nav-dir">← Previous Article</span>
-              <span class="blog-nav-title">WhatsApp Marketing in 2026: Trends, Strategies & Growth Opportunities</span>
+              <span class="blog-nav-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</span>
             </a>
-            <a href="#" class="blog-nav-link next">
+            <a href="whatsapp-marketing-2026-trends.html" class="blog-nav-link next">
               <span class="blog-nav-dir">Next Article →</span>
-              <span class="blog-nav-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
+              <span class="blog-nav-title">WhatsApp Marketing in 2026: Trends, Strategies & Growth</span>
             </a>
           </div>
 
         </article>
 
-        <!-- Right Sidebar Column (~32%) -->
-        <aside class="blog-sidebar">
-
-          <!-- Widget 1: About the Author -->
-          <div class="sidebar-widget">
-            <div class="widget-author">
-              <div class="widget-author-head">
-                <div class="widget-author-avatar">S</div>
-                <div>
-                  <div class="widget-author-name">
-                    Samyoj Team
-                    <svg viewBox="0 0 20 20" fill="#03cf65" width="16" height="16">
-                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <p class="widget-author-bio">
-                We're a team of WhatsApp marketing experts passionate about helping businesses automate conversations, improve engagement, and grow.
-              </p>
-              <a href="../blog.html" class="btn-outline-sm">View all posts →</a>
-            </div>
+        <!-- Right Sidebar: Search + Popular + Categories -->
+        <aside class="blog-sidebar" aria-label="Blog sidebar">
+          <div class="blog-search">
+            <label for="blog-search-input" class="sr-only">Search articles</label>
+            <input type="search" id="blog-search-input" placeholder="Search articles..." aria-label="Search articles">
+            <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
           </div>
 
-          <!-- Widget 2: Related Articles -->
-          <div class="sidebar-widget">
-            <h3 class="sidebar-widget-title">Related Articles</h3>
-            <div class="related-list">
-
-              <a href="#" class="related-item">
-                <img src="../images/blog_automation_robot_3d.jpg" alt="Automation Thumbnail" class="related-thumb" />
-                <div class="related-info">
-                  <span class="related-cat">AUTOMATION</span>
-                  <span class="related-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
-                  <span class="related-meta">July 15, 2026 · 6 min read</span>
+          <div class="blog-sidebar-box">
+            <h3>Popular Posts</h3>
+            <ol class="blog-popular-list">
+              <li class="blog-popular-item">
+                <div class="blog-popular-num">1</div>
+                <div class="blog-popular-text">
+                  <a href="what-is-whatsapp-crm.html" class="blog-popular-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</a>
+                  <div class="blog-popular-date">July 27, 2026</div>
                 </div>
-              </a>
-
-              <a href="#" class="related-item">
-                <img src="../images/blog_ai_agent_3d.jpg" alt="AI Agent Thumbnail" class="related-thumb" />
-                <div class="related-info">
-                  <span class="related-cat">AI &amp; CHATBOTS</span>
-                  <span class="related-title">How AI Agents Can Improve Customer Support on WhatsApp</span>
-                  <span class="related-meta">July 11, 2026 · 7 min read</span>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num">2</div>
+                <div class="blog-popular-text">
+                  <a href="top-7-whatsapp-business-api-providers.html" class="blog-popular-title">Top 7 WhatsApp Business API Providers (Samyoj vs. Alternatives)</a>
+                  <div class="blog-popular-date">July 27, 2026</div>
                 </div>
-              </a>
-
-              <a href="#" class="related-item">
-                <img src="../images/blog_gift_box_3d.jpg" alt="Product Roundup Thumbnail" class="related-thumb" />
-                <div class="related-info">
-                  <span class="related-cat">PRODUCT UPDATES</span>
-                  <span class="related-title">What's New in Samyoj: June 2026 Product Roundup</span>
-                  <span class="related-meta">July 8, 2026 · 5 min read</span>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num">3</div>
+                <div class="blog-popular-text">
+                  <a href="whatsapp-marketing-2026-trends.html" class="blog-popular-title">WhatsApp Marketing Trends in 2026: What Every Marketer Needs to Know</a>
+                  <div class="blog-popular-date">July 27, 2026</div>
                 </div>
-              </a>
-
-              <a href="#" class="related-item">
-                <img src="../images/blog_leads_3d.jpg" alt="Leads Thumbnail" class="related-thumb" />
-                <div class="related-info">
-                  <span class="related-cat">WHATSAPP MARKETING</span>
-                  <span class="related-title">5 Proven Ways to Generate More Leads on WhatsApp</span>
-                  <span class="related-meta">July 2, 2026 · 6 min read</span>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num">4</div>
+                <div class="blog-popular-text">
+                  <a href="automating-whatsapp-broadcasts.html" class="blog-popular-title">Automating WhatsApp Broadcasts: A Step-by-Step Guide</a>
+                  <div class="blog-popular-date">July 27, 2026</div>
                 </div>
-              </a>
-
-              <a href="#" class="related-item">
-                <img src="../images/blog_loyalty_3d.jpg" alt="Loyalty Thumbnail" class="related-thumb" />
-                <div class="related-info">
-                  <span class="related-cat">GROWTH TIPS</span>
-                  <span class="related-title">Building Customer Loyalty Through WhatsApp</span>
-                  <span class="related-meta">June 30, 2026 · 5 min read</span>
+              </li>
+              <li class="blog-popular-item">
+                <div class="blog-popular-num">5</div>
+                <div class="blog-popular-text">
+                  <a href="how-to-set-up-click-to-whatsapp-ads.html" class="blog-popular-title">How to Set Up Click-to-WhatsApp Ads for Maximum ROI</a>
+                  <div class="blog-popular-date">July 27, 2026</div>
                 </div>
-              </a>
-
-            </div>
+              </li>
+            </ol>
           </div>
 
-          <!-- Widget 3: Categories -->
-          <div class="sidebar-widget">
-            <h3 class="sidebar-widget-title">Categories</h3>
-            <ul class="cat-list">
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                    WhatsApp Marketing
-                  </span>
-                  <span class="cat-count">18</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                    Automation
-                  </span>
-                  <span class="cat-count">14</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
-                    AI &amp; Chatbots
-                  </span>
-                  <span class="cat-count">12</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                    Product Updates
-                  </span>
-                  <span class="cat-count">10</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    CRM
-                  </span>
-                  <span class="cat-count">08</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                    Growth Tips
-                  </span>
-                  <span class="cat-count">09</span>
-                </a>
-              </li>
-              <li class="cat-item">
-                <a href="../blog.html">
-                  <span class="cat-left">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
-                    Integrations
-                  </span>
-                  <span class="cat-count">07</span>
-                </a>
-              </li>
+          <div class="blog-sidebar-box">
+            <h3>Categories</h3>
+            <ul class="blog-categories-list" aria-label="Article categories">
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></div><span class="blog-cat-name">WhatsApp Marketing</span></div><span class="blog-cat-count">3</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6-3.6z"/></svg></div><span class="blog-cat-name">Automation</span></div><span class="blog-cat-count">3</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5.72C10.4 5.38 10 4.74 10 4a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 5h6v1.5H9V16z"/></svg></div><span class="blog-cat-name">AI &amp; Chatbots</span></div><span class="blog-cat-count">2</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg></div><span class="blog-cat-name">Comparisons</span></div><span class="blog-cat-count">2</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div><span class="blog-cat-name">E-commerce</span></div><span class="blog-cat-count">2</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div><span class="blog-cat-name">Growth Tips</span></div><span class="blog-cat-count">2</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div><span class="blog-cat-name">Ads</span></div><span class="blog-cat-count">2</span></a></li>
+              <li class="blog-cat-item"><a href="../blog.html" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div><span class="blog-cat-name">Payments</span></div><span class="blog-cat-count">1</span></a></li>
             </ul>
-            <a href="../blog.html" style="font-size:13.5px; font-weight:700; color:#03cf65; text-decoration:none;">View all categories →</a>
           </div>
-
-          <!-- Widget 4: Newsletter Box -->
-          <div class="sidebar-widget widget-newsletter">
-            <h3 class="sidebar-widget-title">Stay updated</h3>
-            <p style="font-size:13.5px; color:#475569; line-height:1.55; margin:0 0 16px;">
-              Get the latest WhatsApp marketing tips, product updates, and growth strategies straight to your inbox.
-            </p>
-            <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Samyoj updates!');">
-              <input type="email" placeholder="Enter your email" required class="newsletter-input" />
-              <button type="submit" class="btn-full-green">Subscribe →</button>
-            </form>
-            <div class="newsletter-note">No spam. Unsubscribe anytime.</div>
-          </div>
-
         </aside>
+      </div><!-- end .blog-grid -->
+    </div><!-- end .blog-post-container -->
 
-      </div>
-    </div>
   </main>
 
   <!-- Site Footer Component -->

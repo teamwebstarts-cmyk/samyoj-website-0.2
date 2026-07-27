@@ -11,7 +11,6 @@
   <title>Transparent Pricing Plans & Cost Estimator | Samyoj WhatsApp CRM</title>
 
   <link rel="canonical" href="https://samyoj.com/pricing.html" />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://samyoj.com/pricing.html" />
   <meta property="og:title" content="Simple, Transparent Pricing | Samyoj WhatsApp Business API" />
   <meta property="og:description"
@@ -255,9 +254,6 @@
 
     .hero-pricing-img {
       display: none;
-    }
-      object-fit: contain;
-      object-position: right center;
     }
 
     .mockup-inner-dash {
@@ -1510,6 +1506,87 @@
 
     .floating-wa-btn-global:hover {
       transform: scale(1.08);
+    }
+
+    /* ─── GLOBAL MOBILE RESPONSIVE ENHANCEMENTS ─── */
+    @media (max-width: 991px) {
+      .hero-pricing-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+      .hero-pricing-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-pricing-actions {
+        justify-content: center;
+      }
+      .hero-trust-list {
+        justify-content: center;
+      }
+      .hero-mockup-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .annual-banner-bar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        gap: 16px;
+      }
+      .annual-banner-bar .annual-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+      }
+      .annual-banner-bar .btn-primary-sy {
+        width: 100%;
+      }
+      .cta-questions-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 16px;
+      }
+      .cta-questions-inner .btn-primary-sy,
+      .cta-questions-inner .btn-outline-sy {
+        width: 100%;
+      }
+      .why-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .breakdown-cards-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .breakdown-card {
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-pricing-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-pricing-actions .btn-primary-sy,
+      .hero-pricing-actions .btn-outline-sy {
+        width: 100%;
+      }
+      .why-grid-5 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 <style id="shared-site-chrome">
