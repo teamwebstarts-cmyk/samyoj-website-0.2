@@ -11,7 +11,6 @@
   <title>Transparent Pricing Plans & Cost Estimator | Samyoj WhatsApp CRM</title>
 
   <link rel="canonical" href="https://samyoj.com/pricing.html" />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://samyoj.com/pricing.html" />
   <meta property="og:title" content="Simple, Transparent Pricing | Samyoj WhatsApp Business API" />
   <meta property="og:description"
@@ -256,9 +255,6 @@
     .hero-pricing-img {
       display: none;
     }
-      object-fit: contain;
-      object-position: right center;
-    }
 
     .mockup-inner-dash {
       background: #f8fafc;
@@ -460,9 +456,9 @@
     .cards-grid-4 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 18px;
       align-items: stretch;
-      max-width: 1080px;
+      max-width: 1280px;
       margin: 0 auto;
     }
 
@@ -482,13 +478,14 @@
       background: #ffffff;
       border: 1px solid #e8eef2;
       border-radius: 18px;
-      padding: 32px 26px 28px;
+      padding: 22px 22px 20px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 28px;
-      min-height: 280px;
+      gap: 16px;
+      min-height: 0;
+      height: auto;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
@@ -625,10 +622,10 @@
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
-      padding: 18px 14px;
+      padding: 26px 18px;
       flex: 1;
-      min-width: 160px;
-      max-width: 180px;
+      min-width: 180px;
+      max-width: 210px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
@@ -639,22 +636,22 @@
     }
 
     .breakdown-icon-circle {
-      width: 56px;
-      height: 56px;
+      width: 68px;
+      height: 68px;
       background: transparent;
       border-radius: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: #00b853;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       border: none;
       overflow: visible;
     }
 
     .breakdown-icon-circle img {
-      width: 56px;
-      height: 56px;
+      width: 68px;
+      height: 68px;
       object-fit: contain;
       display: block;
     }
@@ -711,7 +708,7 @@
     /* Section 5: Compare Plans Table */
     .compare-section {
       padding: 80px 0;
-      background: #ffffff;
+      background: #f8fafc; /* Soft background to separate sections */
     }
 
     .section-center-head {
@@ -736,10 +733,10 @@
 
     .compare-table-wrapper {
       overflow-x: auto;
-      border: 1px solid #e8ece9;
-      border-radius: 16px;
-      background: #fff;
-      box-shadow: none;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
     }
 
     .compare-table {
@@ -751,12 +748,12 @@
     }
 
     .compare-table th {
-      background: #f8fafc;
-      padding: 20px 16px;
+      background: #ffffff;
+      padding: 24px 20px;
       font-size: 15px;
       font-weight: 800;
       color: #0f172a;
-      border-bottom: 1px solid #e8ece9;
+      border-bottom: 2px solid #f1f5f9;
       letter-spacing: -0.01em;
       vertical-align: bottom;
     }
@@ -767,22 +764,23 @@
       font-weight: 700;
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
+      background: #fafcfd;
     }
 
     .compare-table .plan-th-name {
       display: block;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .compare-table .plan-th-price {
       display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: #64748b;
+      font-size: 14px;
+      font-weight: 700;
+      color: #00b853; /* Highlight price with brand green */
     }
 
     .compare-table .plan-th-popular {
@@ -800,12 +798,13 @@
     }
 
     .compare-table td {
-      padding: 16px 16px;
+      padding: 18px 20px;
       font-size: 14px;
       font-weight: 600;
       color: #334155;
       border-bottom: 1px solid #f1f5f9;
       vertical-align: middle;
+      transition: background-color 0.15s ease;
     }
 
     .compare-table td:first-child {
@@ -813,6 +812,8 @@
       font-weight: 700;
       color: #0f172a;
       font-size: 14px;
+      background: #fafcfd; /* Subtle highlight for feature column */
+      border-right: 1px solid #f1f5f9;
     }
 
     .compare-table tr:last-child td {
@@ -823,12 +824,16 @@
       background-color: #f8fafc;
     }
 
+    .compare-table tbody tr:hover td:first-child {
+      background-color: #f1f5f9;
+    }
+
     .compare-table .check-yes {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       background: #eafbf0;
       color: #00b853;
@@ -836,6 +841,8 @@
 
     .compare-table .check-yes svg {
       display: block;
+      width: 14px;
+      height: 14px;
     }
 
     .compare-table .val-unlimited {
@@ -844,6 +851,7 @@
     }
 
     /* Section 6: Cost Estimator — match mockup */
+    /* Section 6: Cost Estimator — match mockup */
     .estimator-section {
       padding: 80px 0;
       background: #ffffff;
@@ -851,22 +859,26 @@
 
     .estimator-shell {
       border: 1px solid #e2e8f0;
-      border-radius: 20px;
+      border-radius: 24px;
       background: #ffffff;
-      padding: 28px 28px 20px;
-      box-shadow: 0 8px 32px rgba(15, 23, 42, 0.04);
+      padding: 40px 40px 32px;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.04);
     }
 
     .estimator-grid {
       display: grid;
-      grid-template-columns: 0.95fr 1.2fr 0.95fr;
-      gap: 24px;
+      grid-template-columns: 1fr 1.25fr 1.05fr;
+      gap: 36px;
       align-items: start;
     }
 
     @media (max-width: 1024px) {
       .estimator-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .estimator-shell {
+        padding: 24px 20px;
       }
     }
 
@@ -917,11 +929,15 @@
 
     .slider-group {
       background: transparent;
-      padding: 0 0 10px;
+      padding: 0 0 12px;
       border-radius: 0;
       border: none;
-      margin-bottom: 2px;
+      margin-bottom: 20px;
       box-shadow: none;
+    }
+
+    .slider-group:last-of-type {
+      margin-bottom: 0;
     }
 
     .slider-group:hover {
@@ -933,12 +949,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       gap: 10px;
     }
 
     .slider-label {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       color: #0f172a;
       display: flex;
@@ -965,16 +981,16 @@
     }
 
     .slider-val-box {
-      background: #ffffff;
-      padding: 4px 10px;
-      border-radius: 7px;
+      background: #f8fafc;
+      padding: 5px 12px;
+      border-radius: 8px;
       font-size: 13px;
       font-weight: 800;
-      color: #0f172a;
+      color: #00b853;
       letter-spacing: -0.01em;
-      min-width: 64px;
+      min-width: 68px;
       text-align: center;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #cbd5e1;
       box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
     }
 
@@ -982,7 +998,7 @@
       -webkit-appearance: none;
       appearance: none;
       width: 100%;
-      height: 5px;
+      height: 6px;
       background: linear-gradient(to right, #00b853 0%, #00b853 var(--pct, 0%), #e2e8f0 var(--pct, 0%), #e2e8f0 100%);
       border-radius: 999px;
       outline: none;
@@ -992,32 +1008,32 @@
     .custom-range-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: #ffffff;
-      border: 2.5px solid #00b853;
-      box-shadow: 0 1px 4px rgba(0, 184, 83, 0.25);
+      border: 3px solid #00b853;
+      box-shadow: 0 2px 6px rgba(0, 184, 83, 0.3);
       cursor: pointer;
       transition: transform 0.15s ease;
     }
 
     .custom-range-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
 
     .custom-range-slider::-moz-range-thumb {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: #ffffff;
-      border: 2.5px solid #00b853;
-      box-shadow: 0 1px 4px rgba(0, 184, 83, 0.25);
+      border: 3px solid #00b853;
+      box-shadow: 0 2px 6px rgba(0, 184, 83, 0.3);
       cursor: pointer;
     }
 
     .custom-range-slider::-moz-range-track {
-      height: 5px;
+      height: 6px;
       background: #e2e8f0;
       border-radius: 999px;
     }
@@ -1027,16 +1043,16 @@
       justify-content: space-between;
       font-size: 10px;
       color: #94a3b8;
-      margin-top: 4px;
+      margin-top: 6px;
       font-weight: 600;
     }
 
     .cost-summary-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px 18px 0;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      border-radius: 18px;
+      padding: 24px 24px 0;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
       overflow: hidden;
     }
 
@@ -1044,13 +1060,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .cost-card-top .est-label {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      color: #00b853;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .gst-tag {
@@ -1064,16 +1082,16 @@
     }
 
     .est-total-num {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 800;
       color: #0f172a;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
       letter-spacing: -0.03em;
     }
 
     .est-total-num .per-mo {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       color: #64748b;
       margin-left: 4px;
@@ -1083,11 +1101,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 12px;
+      font-size: 13px;
       color: #475569;
-      padding: 6px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #f1f5f9;
-      gap: 10px;
+      gap: 12px;
     }
 
     .est-break-row strong {
@@ -1098,10 +1116,10 @@
     .est-total-final {
       display: flex;
       justify-content: space-between;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800;
       color: #0f172a;
-      padding: 10px 0 12px;
+      padding: 14px 0 16px;
       margin-top: 0;
       border-top: 1px solid #e2e8f0;
     }
@@ -1111,8 +1129,8 @@
       align-items: center;
       gap: 8px;
       background: #eafbf0;
-      margin: 0 -18px;
-      padding: 10px 16px;
+      margin: 0 -24px;
+      padding: 12px 24px;
       border-top: 1px solid #b7efc5;
       color: #166534;
       font-size: 11px;
@@ -1280,46 +1298,55 @@
     .testimonial-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 24px;
+      border-radius: 16px;
+      padding: 28px 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: #c9f2d6;
+      box-shadow: 0 10px 30px rgba(0, 184, 83, 0.06);
     }
 
     .quote-icon {
-      font-size: 28px;
+      font-size: 32px;
       color: #00b853;
       font-weight: 800;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .testimonial-text {
-      font-size: 13px;
+      font-size: 13.5px;
       color: #334155;
-      line-height: 1.6;
-      margin-bottom: 16px;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
 
     .metric-badge-pill {
       background: #eafbf0;
-      border: 1px solid var(--sy-green-border);
+      border: 1px solid #b7efc5;
       border-radius: 20px;
-      padding: 8px 14px;
-      margin-bottom: 18px;
+      padding: 10px 14px;
+      margin-bottom: 20px;
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
     }
 
     .metric-val {
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 800;
       color: #00b853;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .metric-val svg {
@@ -1329,8 +1356,10 @@
     }
 
     .metric-sub {
-      font-size: 10px;
-      color: #64748b;
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+      padding-left: 22px; /* aligns with text after svg */
     }
 
     .author-info-flex {
@@ -1477,6 +1506,87 @@
 
     .floating-wa-btn-global:hover {
       transform: scale(1.08);
+    }
+
+    /* ─── GLOBAL MOBILE RESPONSIVE ENHANCEMENTS ─── */
+    @media (max-width: 991px) {
+      .hero-pricing-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+      .hero-pricing-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-pricing-actions {
+        justify-content: center;
+      }
+      .hero-trust-list {
+        justify-content: center;
+      }
+      .hero-mockup-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .annual-banner-bar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        gap: 16px;
+      }
+      .annual-banner-bar .annual-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+      }
+      .annual-banner-bar .btn-primary-sy {
+        width: 100%;
+      }
+      .cta-questions-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 16px;
+      }
+      .cta-questions-inner .btn-primary-sy,
+      .cta-questions-inner .btn-outline-sy {
+        width: 100%;
+      }
+      .why-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .breakdown-cards-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .breakdown-card {
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-pricing-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-pricing-actions .btn-primary-sy,
+      .hero-pricing-actions .btn-outline-sy {
+        width: 100%;
+      }
+      .why-grid-5 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 <style id="shared-site-chrome">
@@ -3673,7 +3783,6 @@
     <section class="compare-section">
       <div class="wr">
         <div class="section-center-head">
-          <div class="custom-badge-pill">COMPARE PLANS</div>
           <h2 class="section-title-large">Everything you need to <span class="highlight-green">grow</span></h2>
           <p class="section-desc">All plans include core features. Higher plans unlock unlimited power.</p>
         </div>
@@ -3918,10 +4027,6 @@
             <p class="why-card-desc">From startups to enterprises, Samyoj grows with you.</p>
           </div>
         </div>
-
-        <div style="text-align:center;">
-          <a href="features.html" class="why-explore-link">Explore all features →</a>
-        </div>
       </div>
     </section>
 
@@ -4014,7 +4119,6 @@
     <section id="custom-faq-section" class="custom-faq-section" data-reveal itemscope itemtype="https://schema.org/FAQPage">
       <div class="wr">
         <div class="section-center-head">
-          <div class="custom-badge-pill">FAQ</div>
           <h2 class="section-title-large">Frequently asked <span class="highlight-green">questions</span></h2>
         </div>
 
@@ -4031,7 +4135,7 @@
             </div>
           </details>
 
-          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="custom-faq-q">
               <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
                 Do you offer onboarding and support?
@@ -4043,7 +4147,7 @@
             </div>
           </details>
 
-          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="custom-faq-q">
               <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
                 Can I change or upgrade my plan later?
@@ -4055,7 +4159,7 @@
             </div>
           </details>
 
-          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="custom-faq-q">
               <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
                 How does the AI & Voice billing work?
@@ -4067,7 +4171,7 @@
             </div>
           </details>
 
-          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="custom-faq-q">
               <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
                 Is there a setup or procurement fee?
@@ -4079,7 +4183,7 @@
             </div>
           </details>
 
-          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <summary class="custom-faq-q">
               <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
                 How does annual billing save money?

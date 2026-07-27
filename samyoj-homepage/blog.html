@@ -104,7 +104,7 @@
       height: 480px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0,0,0,.08);
+      box-shadow: none; /* Removed shadow */
       background: #f8faf9;
       position: relative;
     }
@@ -240,13 +240,46 @@
     .blog-main-layout {
       display: grid;
       grid-template-columns: 1fr 300px;
-      gap: 32px;
+      gap: 48px; /* Increased gap for better spacing */
       align-items: start;
       margin-bottom: 60px;
     }
 
     .blog-content-area {
       min-width: 0;
+      padding-right: 24px;
+      border-right: 1px solid #edf3f0; /* Subtle vertical divider line */
+    }
+
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 110px; /* Adjusted to prevent overlap with header */
+      align-self: start;
+      max-height: calc(100vh - 130px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    @media (max-width: 1200px) {
+      .blog-main-layout { grid-template-columns: 1fr 280px; gap: 32px; }
+      .blog-content-area { padding-right: 16px; }
+      .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
+      .blog-featured-img-box { width: 240px; height: 180px; flex-basis: 240px; }
+    }
+
+    @media (max-width: 992px) {
+      .blog-main-layout { grid-template-columns: 1fr; }
+      .blog-content-area { padding-right: 0; border-right: none; }
+      .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
+      .blog-latest-left-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-newsletter { grid-template-columns: 70px 1fr; }
+      .blog-newsletter-form { grid-column: 1/-1; align-items: stretch; }
+      .blog-newsletter-row { width: 100%; }
+      .blog-newsletter-input { flex: 1; }
     }
 
     /* ─── FEATURED ARTICLES SECTION ─── */
@@ -869,13 +902,11 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1200px) {
-      .blog-main-layout { grid-template-columns: 1fr 240px; gap: 24px; }
       .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
       .blog-featured-img-box { width: 240px; height: 180px; flex-basis: 240px; }
     }
 
     @media (max-width: 992px) {
-      .blog-main-layout { grid-template-columns: 1fr; }
       .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
       .blog-latest-left-grid { grid-template-columns: repeat(2, 1fr); }
       .blog-newsletter { grid-template-columns: 70px 1fr; }
