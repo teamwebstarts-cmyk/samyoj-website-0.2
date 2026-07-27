@@ -1,7 +1,11 @@
 /           /index.html  200
 /features   /features.html  200
+/pricing    /pricing.html   200
 /industries /industries.html  200
 /contact    /contact.html  200
+/blog       /blog.html     200
+/blog/      /blog.html     200
+/blog/:slug /blog/:slug.html 200
 /legal/privacy-policy /legal/privacy-policy.html  200
 /legal/terms-and-conditions /legal/terms-and-conditions.html  200
 /legal/cookie-policy /legal/cookie-policy.html  200

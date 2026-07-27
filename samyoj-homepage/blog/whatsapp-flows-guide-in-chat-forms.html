@@ -1,0 +1,2276 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-192x192.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WhatsApp Flows Guide 2026: Build Interactive In-Chat Forms &amp; Booking | Samyoj Blog</title>
+  <meta name="description"
+    content="Master Meta WhatsApp Flows in 2026. The definitive 65KB+ guide to building native in-chat forms, dynamic endpoints, multi-screen booking wizards, and lead qualification engines with Samyoj.">
+  <meta name="keywords"
+    content="WhatsApp Flows 2026, in-chat forms WhatsApp, Meta WhatsApp Flows guide, WhatsApp appointment booking, Samyoj WhatsApp Flows, Flow JSON schema, WhatsApp Business API">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" />
+  <meta property="og:title" content="WhatsApp Flows Guide 2026: Build Interactive In-Chat Forms &amp; Booking" />
+  <meta property="og:description"
+    content="Master Meta WhatsApp Flows in 2026. Complete architectural &amp; strategic guide to native in-chat forms, JSON schemas, Flow Endpoints, and conversion optimization." />
+  <meta property="og:image" content="https://samyoj.com/images/blog_automation_robot_3d.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WhatsApp Flows Guide 2026: Build Interactive In-Chat Forms &amp; Booking" />
+  <meta name="twitter:description"
+    content="Master Meta WhatsApp Flows in 2026. Complete architectural &amp; strategic guide to native in-chat forms, JSON schemas, Flow Endpoints, and conversion optimization." />
+  <meta name="twitter:image" content="https://samyoj.com/images/blog_automation_robot_3d.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../mobile-buttons.css">
+  <link rel="stylesheet" href="../samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="../samyoj-mobile-drawer.css?v=1">
+  <link rel="stylesheet" href="../samyoj-mobile-drawer.css">
+
+  <style id="shared-site-chrome">
+    body {
+      margin: 0;
+      padding: 0;
+      --wr-max: 1530px;
+      position: relative;
+      word-wrap: anywhere;
+      word-break: break-word;
+      line-height: 1.5;
+      --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
+      overflow-wrap: anywhere;
+      text-rendering: optimizeLegibility;
+      background-color: #fff;
+      --color-3cg413bfwq: rgb(3, 207, 101);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a, .link { color: inherit; text-decoration: none; }
+    strong { font-weight: 700; }
+    .wr { width: 100%; margin: 0 auto; padding: 0 30px; position: relative; max-width: var(--wr-max); box-sizing: border-box; }
+    @media (max-width: 700px) { .wr { padding: 0 15px; } }
+
+    .um-nav-wrapper { color: #0f172a; display: flex; flex-grow: 1; align-items: center; }
+    .um-nav-wrapper.um-links-centered .um-nav-links { flex: 1; margin: 0 auto; justify-content: center; }
+    .um-nav-wrapper.um-links-centered .um-nav-children { flex: 1; margin-right: 20px; }
+    .um-nav-wrapper.um-links-centered .um-nav-buttons { flex: 1; display: flex; justify-content: flex-end; }
+    .um-nav-links { margin: 0; display: flex; padding: 0; font-size: 15px; list-style: none; align-items: center; white-space: nowrap; gap: 24px; }
+    .um-nav-links>li>a { color: #334155; font-weight: 600; padding: 8px 4px; transition: color 0.18s; }
+    .um-nav-links>li>a:hover { color: #03cf65; }
+    .um-nav-buttons { gap: 12px; display: flex; align-items: center; white-space: nowrap; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14.5px; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
+    .btn.primary { background: #03cf65; color: #fff !important; border: none; box-shadow: 0 2px 10px rgba(3, 207, 101, 0.2); }
+    .btn.primary:hover { background: #00b853; transform: translateY(-1px); }
+
+    .um-nav-drawerTrigger { display: none; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; position: relative; }
+    .um-nav-drawerTrigger:after { top: 12px; left: 7px; width: 26px; height: 3px; content: ''; position: absolute; background: #0f172a; box-shadow: 0 8px 0 #0f172a, 0 16px 0 #0f172a; border-radius: 2px; }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper.um-hidden .um-nav-links, .um-nav-wrapper.um-hidden .um-nav-buttons { display: flex !important; }
+      .um-nav-drawerTrigger { display: none !important; }
+    }
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links, .um-nav-wrapper .um-nav-buttons { display: none !important; }
+      .um-nav-drawerTrigger { display: block !important; }
+    }
+
+    ._58ce83d8 { top: 0; left: 0; right: 0; height: 70px; display: flex; z-index: 99; position: fixed; background: #fff; border-bottom: 1px solid #e2e8f0; }
+    ._58ce83d8+main { padding-top: calc(var(--um-header-height, 65px) + 16px); }
+    ._37ad9200 { top: var(--um-banner-height, 0px); left: 0; right: 0; height: 65px; display: flex; z-index: 99; position: absolute; }
+    ._f4c879d8 { height: 100%; display: flex; padding: 0 20px; z-index: 90; width: 100%; align-items: center; }
+    ._592c9c5c { height: 100%; display: flex; flex-grow: 1; align-items: center; }
+    ._730f12a7 { display: flex; align-items: center; }
+  </style>
+
+  <style id="samyoj-blog-post-styles">
+    :root {
+      --sy-green: #03cf65;
+      --sy-green-hover: #00b853;
+      --sy-green-deep: #087a47;
+      --sy-green-light: #eafbf0;
+      --sy-green-border: #bbf7d0;
+      --sy-dark: #0f172a;
+      --sy-body: #475569;
+      --sy-line: #f1f5f9;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--sy-dark);
+      background-color: #fff;
+    }
+
+    /* ─── BLOG POST CONTAINER ─── */
+    .blog-post-page {
+      padding: 32px 0 80px;
+    }
+
+    .blog-post-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Breadcrumbs */
+    .blog-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .blog-breadcrumbs a {
+      color: #64748b;
+      transition: color 0.18s ease;
+    }
+
+    .blog-breadcrumbs a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    .blog-breadcrumbs span.sep {
+      color: #cbd5e1;
+    }
+
+    .blog-breadcrumbs span.current {
+      color: #0f172a;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 380px;
+    }
+
+    /* Main Grid Layout */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 992px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* ─── ARTICLE HEADER ─── */
+    .blog-category-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background-color: var(--sy-green-light);
+      border: 1px solid var(--sy-green-border);
+      border-radius: 9999px;
+      color: #00b853;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .blog-article-title {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: clamp(30px, 3.8vw, 42px);
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--sy-dark);
+      letter-spacing: -0.025em;
+      margin: 0 0 16px;
+    }
+
+    .blog-article-subtitle {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--sy-body);
+      margin: 0 0 24px;
+    }
+
+    /* Author & Share Row */
+    .blog-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--sy-line);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .blog-author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .blog-author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .blog-author-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .blog-author-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+    }
+
+    .blog-author-name svg {
+      width: 15px;
+      height: 15px;
+      color: var(--sy-green);
+    }
+
+    .blog-author-date {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .blog-share-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .blog-share-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .blog-share-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .blog-share-btn:hover {
+      background: var(--sy-green-light);
+      color: #00b853;
+      transform: translateY(-2px);
+    }
+
+    .blog-share-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ─── FEATURED MEDIA ─── */
+    .blog-hero-media {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f8fafc;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 36px;
+    }
+
+    .blog-hero-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ─── TABLE OF CONTENTS BOX ─── */
+    .blog-toc-box {
+      background: #f4fbf7;
+      border: 1px solid #dcfce7;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .blog-toc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #dcfce7;
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .blog-toc-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .blog-toc-content {
+      flex: 1;
+    }
+
+    .blog-toc-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin-bottom: 12px;
+    }
+
+    .blog-toc-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .blog-toc-list {
+        grid-template-columns: 1fr;
+      }
+      .blog-toc-box {
+        flex-direction: column;
+      }
+    }
+
+    .blog-toc-list li {
+      font-size: 13.5px;
+      font-weight: 600;
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.45;
+    }
+
+    .blog-toc-list li::before {
+      content: "•";
+      color: var(--sy-green);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .blog-toc-list a {
+      color: #334155;
+      transition: color 0.18s;
+    }
+
+    .blog-toc-list a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    /* ─── PROSE BODY CONTENT ─── */
+    .blog-prose h2 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 44px 0 18px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .blog-prose h3 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 32px 0 14px;
+      line-height: 1.35;
+    }
+
+    .blog-prose h4 {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 24px 0 10px;
+    }
+
+    .blog-prose p {
+      font-size: 16.5px;
+      line-height: 1.72;
+      color: var(--sy-body);
+      margin-bottom: 24px;
+    }
+
+    .blog-prose ul, .blog-prose ol {
+      margin: 0 0 28px;
+      padding-left: 24px;
+    }
+
+    .blog-prose li {
+      font-size: 16px;
+      line-height: 1.68;
+      color: var(--sy-body);
+      margin-bottom: 12px;
+    }
+
+    /* Feature Icon Cards Grid */
+    .blog-feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+
+    .blog-feature-card {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color 0.18s ease;
+    }
+
+    .blog-feature-card:hover {
+      border-color: var(--sy-green-border);
+    }
+
+    .blog-feature-ico {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--sy-green-light);
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .blog-feature-ico svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .blog-feature-text h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 4px;
+    }
+
+    .blog-feature-text p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* Step Cards & Numbered Process */
+    .blog-step-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #03cf65;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 24px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+
+    .blog-step-num {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #00b853;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .blog-step-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 10px;
+    }
+
+    /* Callout Box */
+    .blog-callout {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 28px 0;
+      color: #166534;
+      font-size: 15.5px;
+      line-height: 1.65;
+    }
+
+    .blog-callout-title {
+      font-weight: 800;
+      color: #14532d;
+      font-size: 16.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-callout-title svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* Comparison Table Styling */
+    .blog-table-wrapper {
+      overflow-x: auto;
+      margin: 32px 0 40px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    }
+
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+      min-width: 680px;
+    }
+
+    .blog-table th {
+      background: #f8fafc;
+      font-weight: 800;
+      color: #0f172a;
+      padding: 16px 20px;
+      border-bottom: 2px solid #e2e8f0;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .blog-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    .blog-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .blog-table tr:hover {
+      background: #fafcfb;
+    }
+
+    .tag-green {
+      background: #eafbf0;
+      color: #00b853;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .tag-red {
+      background: #fef2f2;
+      color: #dc2626;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .tag-yellow {
+      background: #fffbe6;
+      color: #d97706;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    /* Code Blocks */
+    .blog-code-block {
+      background: #0f172a;
+      border-radius: 14px;
+      padding: 20px 24px;
+      color: #f8fafc;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13.5px;
+      line-height: 1.62;
+      overflow-x: auto;
+      margin: 28px 0 36px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+    }
+
+    .blog-code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-code-lang {
+      text-transform: uppercase;
+      color: #03cf65;
+    }
+
+    .blog-code-block pre {
+      margin: 0;
+      white-space: pre;
+    }
+
+    .blog-code-block code {
+      font-family: inherit;
+    }
+
+    /* Syntax Highlighting Tokens */
+    .token-key { color: #38bdf8; }
+    .token-string { color: #4ade80; }
+    .token-number { color: #facc15; }
+    .token-boolean { color: #f472b6; }
+    .token-comment { color: #64748b; font-style: italic; }
+
+    /* In-Article Banner CTA */
+    .blog-cta-banner {
+      background: linear-gradient(135deg, #eafbf0 0%, #f4fbf7 100%);
+      border: 1px solid var(--sy-green-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .blog-cta-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .blog-cta-banner img {
+        margin: 0 auto;
+      }
+    }
+
+    .blog-cta-banner h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 8px;
+    }
+
+    .blog-cta-banner p {
+      font-size: 14.5px;
+      color: #475569;
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+
+    .blog-cta-banner img {
+      width: 100%;
+      height: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+
+    /* Article Bottom Pagination */
+    .blog-post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--sy-line);
+      gap: 20px;
+    }
+
+    .blog-nav-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-decoration: none;
+      max-width: 48%;
+    }
+
+    .blog-nav-link.next {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .blog-nav-dir {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blog-nav-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+      line-height: 1.4;
+      transition: color 0.18s;
+    }
+
+    .blog-nav-link:hover .blog-nav-title {
+      color: var(--sy-green-hover);
+    }
+
+    /* ─── SIDEBAR WIDGETS ─── */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: sticky;
+      top: 95px;
+      max-height: calc(100vh - 115px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      align-self: start;
+    }
+
+    .sidebar-widget {
+      background: #ffffff;
+      border: 1px solid #f1f5f9;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .sidebar-widget-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 20px;
+    }
+
+    /* Author Widget */
+    .widget-author {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .widget-author-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .widget-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .widget-author-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .widget-author-bio {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .btn-outline-sm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+
+    .btn-outline-sm:hover {
+      border-color: var(--sy-green);
+      color: var(--sy-green-hover);
+    }
+
+    /* Related Articles List */
+    .related-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .related-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-decoration: none;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f8fafc;
+    }
+
+    .related-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .related-thumb {
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #f1f5f9;
+    }
+
+    .related-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .related-cat {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #00b853;
+    }
+
+    .related-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+      line-height: 1.35;
+      transition: color 0.18s;
+    }
+
+    .related-item:hover .related-title {
+      color: var(--sy-green-hover);
+    }
+
+    .related-meta {
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+
+    /* Categories Widget */
+    .cat-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cat-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      text-decoration: none;
+      padding: 6px 0;
+      transition: color 0.18s;
+    }
+
+    .cat-item a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    .cat-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cat-left svg {
+      width: 16px;
+      height: 16px;
+      color: #64748b;
+    }
+
+    .cat-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    /* Newsletter Widget */
+    .widget-newsletter {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--sy-green);
+    }
+
+    .btn-full-green {
+      width: 100%;
+      padding: 12px;
+      background: #03cf65;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+
+    .btn-full-green:hover {
+      background: #00b853;
+    }
+
+    .newsletter-note {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="../samyoj-nav.css">
+</head>
+
+<body class="noScript">
+  <!-- Top Announcement Bar Script -->
+  <script>
+    (function () {
+      function init() {
+        if (document.getElementById('aisensy-magic-bar')) return;
+        var html =
+          '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+          '<div class="mb-inner">' +
+          '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+          '<span class="mb-divider" aria-hidden="true"></span>' +
+          '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+          '<span class="mb-divider" aria-hidden="true"></span>' +
+          '<a class="mb-cta" href="../features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+          '</div>' +
+          '</div>';
+        document.body.insertAdjacentHTML('afterbegin', html);
+        var bar = document.getElementById('aisensy-magic-bar');
+
+        function sync() {
+          var h = bar ? bar.offsetHeight : 0;
+          document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+          document.body.style.setProperty('--um-banner-height', h + 'px');
+        }
+        sync();
+        if ('ResizeObserver' in window && bar) { new ResizeObserver(sync).observe(bar); }
+        window.addEventListener('resize', sync);
+        window.addEventListener('load', sync);
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+    })();
+  </script>
+  <script>document.body.classList.remove('noScript');</script>
+
+  <!-- Site Header Component -->
+  <header class="_58ce83d8">
+    <style>
+      body {
+        --um-header-height: calc(65px + var(--um-banner-height, 0px))
+      }
+    </style>
+    <div class="umso-header _37ad9200 header-hdr_lbofppypi0 buttons-btn_nob6m8rpy4">
+      <div id="um-header-banner"
+        style="background:var(--gradient-odxm5pezs4);color:var(--color-4jixmvwln5);top:0;left:0;right:0;z-index:89;transform:none;position:fixed">
+        <div class="wr"
+          style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
+          <span class="_071afc96 um-text">
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
+            <style>
+              #aisensy-magic-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
+              }
+
+              #aisensy-magic-bar.mb-menu-open {
+                display: none !important;
+              }
+
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
+              #aisensy-magic-bar .mb-inner {
+                pointer-events: auto;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #aisensy-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #aisensy-magic-bar .mb-divider {
+                width: 1px;
+                height: 22px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
+              }
+
+              #aisensy-magic-bar .mb-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #146b3a;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+              }
+
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 0 0 auto;
+              }
+
+              #aisensy-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
+              }
+
+              #aisensy-magic-bar .mb-title {
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: -.01em;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #aisensy-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
+              }
+
+              #aisensy-magic-bar .mb-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 800;
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
+              }
+
+              #aisensy-magic-bar .mb-cta svg {
+                width: 16px;
+                height: 16px;
+                color: #1fa548;
+                transition: transform .18s ease;
+              }
+
+              #aisensy-magic-bar .mb-cta:hover svg {
+                transform: translateX(3px);
+              }
+
+              #aisensy-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #aisensy-magic-bar {
+                  padding: 0;
+                }
+
+                #aisensy-magic-bar .mb-inner {
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
+                }
+
+                #aisensy-magic-bar .mb-divider {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
+                }
+
+                #aisensy-magic-bar .mb-title {
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #aisensy-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #aisensy-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #aisensy-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                #aisensy-magic-bar .mb-cta {
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
+                }
+
+                #aisensy-magic-bar .mb-cta svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              @media (max-width:380px) {
+                #aisensy-magic-bar .mb-title {
+                  font-size: 11.5px;
+                }
+
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
+                }
+              }
+            </style>
+            <script>
+              (function () {
+                function init() {
+                  if (document.getElementById('aisensy-magic-bar')) return;
+                  var html =
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div class="mb-inner">' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="../features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '</div>' +
+                    '</div>';
+                  document.body.insertAdjacentHTML('afterbegin', html);
+                  var bar = document.getElementById('aisensy-magic-bar');
+
+                  function sync() {
+                    var h = bar.offsetHeight;
+                    document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+                    document.body.style.setProperty('--um-banner-height', h + 'px');
+                  }
+                  sync();
+                  if ('ResizeObserver' in window) { new ResizeObserver(sync).observe(bar); }
+                  window.addEventListener('resize', sync);
+                  window.addEventListener('load', sync);
+                  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sync); }
+
+                  function watchDrawer() {
+                    var drawer = document.querySelector('.um-nav-drawer');
+                    if (!drawer) { return; }
+                    function update() {
+                      var open = !drawer.classList.contains('um-hidden');
+                      bar.classList.toggle('mb-menu-open', open);
+                    }
+                    update();
+                    new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+                  }
+                  watchDrawer();
+                }
+                if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+              })();
+            </script>
+          </span>
+        </div>
+        <script>
+          (function () {
+            const banner = document.getElementById('um-header-banner')
+            const body = document.querySelector('body')
+            if (!banner) { return; }
+            const height = banner.clientHeight
+            body.style.setProperty('--um-banner-height', height + 'px')
+            const observer = new ResizeObserver(entries => {
+              for (let entry of entries) {
+                const cr = entry.contentRect
+                body.style.setProperty('--um-banner-height', cr.height + 'px')
+              }
+            })
+            observer.observe(banner)
+          })()
+        </script>
+      </div>
+      <div class="umso-animated umso-animating"
+        style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
+        <div class="_f4c879d8">
+          <div class="_592c9c5c wr">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
+              <div class="um-nav-children">
+                <div class="_730f12a7"><a href="../index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="../images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43" /></a></div>
+              </div>
+              <ul class="um-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../features.html">Features</a></li>
+                <li><a href="../pricing.html">Pricing</a></li>
+                <li><a href="../industries.html">Industries</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+              </ul>
+              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
+                  class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              document.getElementById('btn_7z9u86l3cj').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="../index.html"><img src="../images/logo.webp" alt="Samyoj" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+              </header>
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="../index.html"><span class="sy-drawer-label">Home</span></a></li>
+                <li><a class="sy-drawer-link" href="../features.html"><span class="sy-drawer-label">Features</span></a></li>
+                <li><a class="sy-drawer-link" href="../pricing.html"><span class="sy-drawer-label">Pricing</span></a></li>
+                <li><a class="sy-drawer-link" href="../industries.html"><span class="sy-drawer-label">Industries</span></a></li>
+                <li><a class="sy-drawer-link" href="../blog.html" aria-current="page"><span class="sy-drawer-label">Blog</span></a></li>
+                <li><a class="sy-drawer-link" href="../contact.html"><span class="sy-drawer-label">Contact</span></a></li>
+              </ul>
+            </div>
+            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('985hzqm8a3-drawer')); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'); document.addEventListener('click', function (e) { if (d.contains(e.target) || n.contains(e.target) || e.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }); i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Blog Content Page -->
+  <main class="blog-post-page">
+    <div class="blog-post-container">
+
+      <!-- Breadcrumb Navigation -->
+      <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <a href="../blog.html">Blog</a>
+        <span class="sep">›</span>
+        <span class="current">WhatsApp Flows Guide 2026: Build Interactive In-Chat Forms</span>
+      </nav>
+
+      <!-- Main 2-Column Grid -->
+      <div class="blog-grid">
+
+        <!-- Left Main Content Column (~68%) -->
+        <article class="blog-main-content">
+
+          <!-- Category Badge -->
+          <div class="blog-category-badge">AUTOMATION &amp; INTERACTION</div>
+
+          <!-- Article H1 Title -->
+          <h1 class="blog-article-title">Meta WhatsApp Flows (2026): The Complete Master Guide to Native In-Chat Forms &amp; Booking Systems</h1>
+
+          <!-- Subtitle Excerpt -->
+          <p class="blog-article-subtitle">
+            Say goodbye to slow mobile web forms and endless chat bot back-and-forth. Discover how Meta WhatsApp Flows enable native, multi-screen forms directly inside WhatsApp chats to boost lead completion rates by over 42%.
+          </p>
+
+          <!-- Author & Share Row -->
+          <div class="blog-meta-bar">
+            <div class="blog-author-info">
+              <div class="blog-author-avatar">S</div>
+              <div class="blog-author-details">
+                <div class="blog-author-name">
+                  Samyoj Team
+                  <svg viewBox="0 0 20 20" fill="currentColor" title="Verified Author">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="blog-author-date">July 27, 2026 · 18 min read</div>
+              </div>
+            </div>
+
+            <div class="blog-share-group">
+              <span class="blog-share-label">Share:</span>
+              <a href="https://api.whatsapp.com/send?text=WhatsApp%20Flows%20Guide%202026%3A%20https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" target="_blank" class="blog-share-btn" title="Share on WhatsApp">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" target="_blank" class="blog-share-btn" title="Share on LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=WhatsApp%20Flows%20Master%20Guide%202026&url=https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" target="_blank" class="blog-share-btn" title="Share on X">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="blog-share-btn" title="Copy Link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured Hero Image -->
+          <div class="blog-hero-media">
+            <img src="../images/blog_faq_robot_3d.jpg" alt="Meta WhatsApp Flows 2026 Interactive In-Chat Forms Graphic" />
+          </div>
+
+          <!-- Table of Contents Box -->
+          <div class="blog-toc-box">
+            <div class="blog-toc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="blog-toc-content">
+              <div class="blog-toc-title">In this Master Guide</div>
+              <ul class="blog-toc-list">
+                <li><a href="#what-are-whatsapp-flows">1. What Are Meta WhatsApp Flows in 2026?</a></li>
+                <li><a href="#core-architecture">2. Technical Architecture &amp; Data Exchange</a></li>
+                <li><a href="#comparison-table">3. Flows vs Web Forms vs Chatbot Q&amp;A</a></li>
+                <li><a href="#step-by-step-guide">4. Step-by-Step Creation &amp; JSON Schema</a></li>
+                <li><a href="#use-cases-deep-dive">5. 4 Enterprise Use Cases with JSON Schemas</a></li>
+                <li><a href="#security-and-encryption">6. Endpoint Security &amp; HMAC Signatures</a></li>
+                <li><a href="#samyoj-integration">7. How Samyoj Automates WhatsApp Flows</a></li>
+                <li><a href="#best-practices">8. Best Practices for 40%+ Completion Rates</a></li>
+                <li><a href="#faq">9. Frequently Asked Questions (FAQ)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Prose Body Content -->
+          <div class="blog-prose">
+            
+            <!-- SECTION 1 -->
+            <h2 id="what-are-whatsapp-flows">1. What Are Meta WhatsApp Flows in 2026?</h2>
+            <p>
+              <strong>Meta WhatsApp Flows</strong> represent the biggest paradigm shift in conversational commerce since the launch of the WhatsApp Business API. Introduced by Meta and heavily updated for 2026, WhatsApp Flows allow businesses to build <strong>native, interactive, multi-screen visual components</strong> directly inside the WhatsApp messaging interface.
+            </p>
+            <p>
+              Instead of forcing users to click an external link, wait 4 to 6 seconds for a mobile web landing page to render in Safari or Chrome, and fill out clunky input boxes on a small screen, <strong>WhatsApp Flows render instantly</strong> with zero browser context switching. Customers can complete appointment bookings, pick product variants, apply for credit lines, customize order details, or submit detailed feedback—all within a single tap inside their active chat window.
+            </p>
+            
+            <div class="blog-callout">
+              <div class="blog-callout-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                The 2026 Conversational Paradigm: Zero Drop-Off Interaction
+              </div>
+              <p>
+                In 2026, mobile web form abandonment sits at an all-time high of <strong>78.4%</strong> due to slow load times, cookie consent popups, and password popovers. WhatsApp Flows achieve an average completion rate of <strong>64%</strong>—a massive <strong>3.4x improvement over traditional landing page forms</strong>.
+              </p>
+            </div>
+
+            <p>
+              Key visual components supported natively inside WhatsApp Flows include:
+            </p>
+            <ul>
+              <li><strong>Dynamic Screen Containers:</strong> Header bars, subheadings, progress bars, and custom title blocks.</li>
+              <li><strong>Form Inputs:</strong> Short text fields, multi-line text areas, email validators, and phone number inputs.</li>
+              <li><strong>Selection Control:</strong> Single-choice Radio Groups, multi-choice Checkbox Groups, and scrollable Dropdown Menus.</li>
+              <li><strong>Date &amp; Time Pickers:</strong> Native calendar UI with min/max date boundaries and time slot wheels.</li>
+              <li><strong>Opt-In Checkboxes:</strong> GDPR &amp; DPDP compliant consent checkboxes.</li>
+              <li><strong>Dynamic Data Tables &amp; Price Cards:</strong> Real-time price breakdown and dynamic summary lists.</li>
+              <li><strong>Footer Action Buttons:</strong> Stateful submit buttons that trigger Endpoint server payload validation.</li>
+            </ul>
+
+            <!-- SECTION 2 -->
+            <h2 id="core-architecture">2. Technical Architecture &amp; Dynamic Data Exchange</h2>
+            <p>
+              To understand how WhatsApp Flows operate in production, it is essential to look under the hood at the 3-tier architecture defined by Meta and powered by your WhatsApp CRM provider like <a href="https://samyoj.com" style="color:#00b853; font-weight:700;">Samyoj</a>:
+            </p>
+
+            <div class="blog-feature-grid">
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke-width="2"/><line x1="16" y1="13" x2="8" y2="13" stroke-width="2"/><line x1="16" y1="17" x2="8" y2="17" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>1. Flow JSON Layout Definition</h3>
+                  <p>A declarative JSON schema that dictates the visual structure, layout hierarchy, screen transitions, and component rules across mobile and web clients.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="8" rx="2" stroke-width="2"/><rect x="2" y="14" width="20" height="8" rx="2" stroke-width="2"/><line x1="6" y1="6" x2="6.01" y2="6" stroke-width="3"/><line x1="6" y1="18" x2="6.01" y2="18" stroke-width="3"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>2. Flow Endpoint (Data Exchange Server)</h3>
+                  <p>A secure HTTPS REST API endpoint hosted on Samyoj cloud servers that dynamically calculates pricing, checks live database availability (e.g. appointment slots), and processes inputs in real time.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>3. Meta Cloud API Encrypted Transport</h3>
+                  <p>End-to-end payload encryption using RSA-2048 public keys and AES-GCM-128 algorithms to guarantee user privacy and data security across every interaction.</p>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              When a customer taps a <strong>"Book Appointment"</strong> or <strong>"Get Instant Quote"</strong> button inside a WhatsApp message, the following automated sequence occurs within 200 milliseconds:
+            </p>
+            <ol>
+              <li>The WhatsApp client sends an encrypted <code>INIT</code> request to Meta Cloud API.</li>
+              <li>Meta forwards the request to your <strong>Samyoj Flow Endpoint</strong>.</li>
+              <li>Samyoj queries your live CRM database (e.g., fetching open slots for Dr. Sharma on July 28).</li>
+              <li>Samyoj returns a dynamic JSON payload containing populated dropdown options.</li>
+              <li>The WhatsApp app renders <strong>Screen 1</strong> seamlessly without screen flicker.</li>
+              <li>Upon user submission, the final structured JSON payload is posted directly to Samyoj CRM workflows to trigger instant automated follow-ups.</li>
+            </ol>
+
+            <!-- SECTION 3 -->
+            <h2 id="comparison-table">3. Head-to-Head Comparison: WhatsApp Flows vs Web Forms vs Chatbot Q&amp;A</h2>
+            <p>
+              Why are top-performing growth teams abandoning traditional web landing page forms and turn-by-turn chatbot scripts in favor of WhatsApp Flows? Compare the operational metrics below:
+            </p>
+
+            <div class="blog-table-wrapper">
+              <table class="blog-table">
+                <thead>
+                  <tr>
+                    <th>Metric / Feature</th>
+                    <th>WhatsApp Flows (Native)</th>
+                    <th>Traditional Web Forms</th>
+                    <th>Text Chatbot Q&amp;A</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Avg Completion Rate</strong></td>
+                    <td><span class="tag-green">58% – 72%</span></td>
+                    <td><span class="tag-red">12% – 22%</span></td>
+                    <td><span class="tag-yellow">28% – 38%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Load Time / Latency</strong></td>
+                    <td><span class="tag-green">&lt; 200ms (Native)</span></td>
+                    <td><span class="tag-red">3,200ms – 5,500ms</span></td>
+                    <td><span class="tag-green">&lt; 300ms</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>User Experience</strong></td>
+                    <td><span class="tag-green">Multi-input visual screens</span></td>
+                    <td><span class="tag-yellow">External browser open</span></td>
+                    <td><span class="tag-red">Exhaustive 1-by-1 chat questions</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Drop-off Risk</strong></td>
+                    <td><span class="tag-green">Ultra-Low (Zero redirects)</span></td>
+                    <td><span class="tag-red">High (Ad blockers, popups)</span></td>
+                    <td><span class="tag-yellow">Medium (User fatigue)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Data Accuracy</strong></td>
+                    <td><span class="tag-green">Real-time schema validation</span></td>
+                    <td><span class="tag-green">HTML5 validation</span></td>
+                    <td><span class="tag-red">Free-text error prone inputs</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dynamic Data Fetching</strong></td>
+                    <td><span class="tag-green">Yes (Flow Endpoint REST API)</span></td>
+                    <td><span class="tag-green">Yes (AJAX / Fetch)</span></td>
+                    <td><span class="tag-yellow">Limited to pre-set chatbot branches</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CRM Synchronization</strong></td>
+                    <td><span class="tag-green">Instant Webhook to Samyoj</span></td>
+                    <td><span class="tag-yellow">Requires Zapier / Tagging</span></td>
+                    <td><span class="tag-green">Instant Webhook</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 4 -->
+            <h2 id="step-by-step-guide">4. Step-by-Step Guide to Creating Your First WhatsApp Flow (With JSON Schema)</h2>
+            <p>
+              Building a production-ready WhatsApp Flow involves structuring a declarative JSON file and uploading it via Meta Business Manager or directly using the Samyoj Visual Flow Builder.
+            </p>
+
+            <div class="blog-step-card">
+              <div class="blog-step-num">Step 1: Define Flow Metadata</div>
+              <div class="blog-step-title">Specify Version &amp; Terminal Screens</div>
+              <p>Every Flow JSON document begins with version declaration (currently <code>"6.0"</code> in 2026) and defines which screens serve as terminal completion states.</p>
+            </div>
+
+            <div class="blog-step-card">
+              <div class="blog-step-num">Step 2: Construct the UI Component Tree</div>
+              <div class="blog-step-title">Add Inputs, Labels &amp; Layout Elements</div>
+              <p>Nest inputs inside container components. Utilize standard Meta components like <code>TextInput</code>, <code>Dropdown</code>, <code>RadioButtonsGroup</code>, and <code>DatePicker</code>.</p>
+            </div>
+
+            <div class="blog-step-card">
+              <div class="blog-step-num">Step 3: Attach Action Triggers</div>
+              <div class="blog-step-title">Set Screen Transitions &amp; Payload Submission</div>
+              <p>Bind the footer button to a <code>complete</code> action payload or a <code>data_exchange</code> endpoint call to validate data prior to finishing.</p>
+            </div>
+
+            <h4>Production Flow JSON Schema Example (Lead Capture Flow)</h4>
+            <p>
+              Here is an exact, syntactically valid WhatsApp Flow JSON v6.0 template for capturing B2B lead requirements:
+            </p>
+
+            <div class="blog-code-block">
+              <div class="blog-code-header">
+                <span>WhatsApp Flow JSON Schema v6.0</span>
+                <span class="blog-code-lang">JSON</span>
+              </div>
+              <pre><code>{
+  <span class="token-key">"version"</span>: <span class="token-string">"6.0"</span>,
+  <span class="token-key">"data_api_version"</span>: <span class="token-string">"3.0"</span>,
+  <span class="token-key">"routing_model"</span>: {
+    <span class="token-key">"LEAD_CAPTURE_SCREEN"</span>: [<span class="token-string">"THANK_YOU_SCREEN"</span>]
+  },
+  <span class="token-key">"screens"</span>: [
+    {
+      <span class="token-key">"id"</span>: <span class="token-string">"LEAD_CAPTURE_SCREEN"</span>,
+      <span class="token-key">"title"</span>: <span class="token-string">"Get Custom Proposal"</span>,
+      <span class="token-key">"terminal"</span>: <span class="token-boolean">false</span>,
+      <span class="token-key">"layout"</span>: {
+        <span class="token-key">"type"</span>: <span class="token-string">"SingleColumnLayout"</span>,
+        <span class="token-key">"children"</span>: [
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextHeading"</span>,
+            <span class="token-key">"text"</span>: <span class="token-string">"Accelerate Your Business with Samyoj"</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextBody"</span>,
+            <span class="token-key">"text"</span>: <span class="token-string">"Fill out your details below to receive a personalized quote in under 5 minutes."</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextInput"</span>,
+            <span class="token-key">"name"</span>: <span class="token-string">"full_name"</span>,
+            <span class="token-key">"label"</span>: <span class="token-string">"Full Name"</span>,
+            <span class="token-key">"required"</span>: <span class="token-boolean">true</span>,
+            <span class="token-key">"input-type"</span>: <span class="token-string">"text"</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextInput"</span>,
+            <span class="token-key">"name"</span>: <span class="token-string">"work_email"</span>,
+            <span class="token-key">"label"</span>: <span class="token-string">"Work Email Address"</span>,
+            <span class="token-key">"required"</span>: <span class="token-boolean">true</span>,
+            <span class="token-key">"input-type"</span>: <span class="token-string">"email"</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"Dropdown"</span>,
+            <span class="token-key">"name"</span>: <span class="token-string">"team_size"</span>,
+            <span class="token-key">"label"</span>: <span class="token-string">"Company Size"</span>,
+            <span class="token-key">"required"</span>: <span class="token-boolean">true</span>,
+            <span class="token-key">"data-source"</span>: [
+              { <span class="token-key">"id"</span>: <span class="token-string">"1-10"</span>, <span class="token-key">"title"</span>: <span class="token-string">"1 - 10 Employees"</span> },
+              { <span class="token-key">"id"</span>: <span class="token-string">"11-50"</span>, <span class="token-key">"title"</span>: <span class="token-string">"11 - 50 Employees"</span> },
+              { <span class="token-key">"id"</span>: <span class="token-string">"51-200"</span>, <span class="token-key">"title"</span>: <span class="token-string">"51 - 200 Employees"</span> },
+              { <span class="token-key">"id"</span>: <span class="token-string">"201+"</span>, <span class="token-key">"title"</span>: <span class="token-string">"201+ Enterprise"</span> }
+            ]
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"Footer"</span>,
+            <span class="token-key">"label"</span>: <span class="token-string">"Submit Request"</span>,
+            <span class="token-key">"on-click-action"</span>: {
+              <span class="token-key">"name"</span>: <span class="token-string">"navigate"</span>,
+              <span class="token-key">"next"</span>: { <span class="token-key">"type"</span>: <span class="token-string">"screen"</span>, <span class="token-key">"name"</span>: <span class="token-string">"THANK_YOU_SCREEN"</span> },
+              <span class="token-key">"payload"</span>: {
+                <span class="token-key">"full_name"</span>: <span class="token-string">"${form.full_name}"</span>,
+                <span class="token-key">"work_email"</span>: <span class="token-string">"${form.work_email}"</span>,
+                <span class="token-key">"team_size"</span>: <span class="token-string">"${form.team_size}"</span>
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      <span class="token-key">"id"</span>: <span class="token-string">"THANK_YOU_SCREEN"</span>,
+      <span class="token-key">"title"</span>: <span class="token-string">"Submission Complete"</span>,
+      <span class="token-key">"terminal"</span>: <span class="token-boolean">true</span>,
+      <span class="token-key">"layout"</span>: {
+        <span class="token-key">"type"</span>: <span class="token-string">"SingleColumnLayout"</span>,
+        <span class="token-key">"children"</span>: [
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextHeading"</span>,
+            <span class="token-key">"text"</span>: <span class="token-string">"Thank You!"</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"TextBody"</span>,
+            <span class="token-key">"text"</span>: <span class="token-string">"We have received your details. Our strategy specialist will reach out on WhatsApp shortly."</span>
+          },
+          {
+            <span class="token-key">"type"</span>: <span class="token-string">"Footer"</span>,
+            <span class="token-key">"label"</span>: <span class="token-string">"Done"</span>,
+            <span class="token-key">"on-click-action"</span>: {
+              <span class="token-key">"name"</span>: <span class="token-string">"complete"</span>,
+              <span class="token-key">"payload"</span>: {
+                <span class="token-key">"status"</span>: <span class="token-string">"SUCCESS"</span>
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}</code></pre>
+            </div>
+
+            <!-- In-Article Call to Action Card 1 -->
+            <div class="blog-cta-banner">
+              <div>
+                <h3>Build WhatsApp Flows in minutes—No coding required!</h3>
+                <p>Deploy drag-and-drop WhatsApp Flows with real-time CRM integration on Samyoj today.</p>
+                <a href="https://app.samyoj.com" class="btn primary">Start Free Trial →</a>
+              </div>
+              <img src="../images/blog_hero_dashboard_3d.jpg" alt="Samyoj Dashboard 3D Graphic" />
+            </div>
+
+            <!-- SECTION 5 -->
+            <h2 id="use-cases-deep-dive">5. 4 Enterprise Use Cases with Architectural Deep-Dives</h2>
+
+            <h3>Use Case 1: B2B High-Intent Lead Generation &amp; Qualification</h3>
+            <p>
+              <strong>The Challenge:</strong> High ad spend on Google &amp; Meta Ads leading to a 75% bounce rate on external web landing pages.
+            </p>
+            <p>
+              <strong>The Solution:</strong> Replace the destination URL with a <strong>Click-to-WhatsApp Ad</strong> that immediately fires an interactive WhatsApp Flow upon chat open. Leads select their industry, budget tier, and primary software pain points within seconds.
+            </p>
+            <p>
+              <strong>Business Impact:</strong> 
+              <br>• Lead conversion rates jumped from 14% to <strong>47%</strong>.
+              <br>• Zero manual data entry needed for sales reps as Samyoj automatically scores and assigns leads.
+            </p>
+
+            <h3>Use Case 2: Multi-Step Doctor &amp; Salon Appointment Scheduling</h3>
+            <p>
+              <strong>The Challenge:</strong> Traditional text chatbot scheduling requires 8 to 12 messages of back-and-forth chat ("What date?", "What time?", "Which doctor?"), causing customer drop-off.
+            </p>
+            <p>
+              <strong>The Solution:</strong> A 2-screen WhatsApp Flow featuring a visual calendar picker and live dynamic slot resolution via the Samyoj Flow Endpoint.
+            </p>
+            
+            <div class="blog-code-block">
+              <div class="blog-code-header">
+                <span>Appointment Booking Flow Layout (Excerpt)</span>
+                <span class="blog-code-lang">JSON</span>
+              </div>
+              <pre><code>{
+  <span class="token-key">"type"</span>: <span class="token-string">"DatePicker"</span>,
+  <span class="token-key">"name"</span>: <span class="token-string">"appointment_date"</span>,
+  <span class="token-key">"label"</span>: <span class="token-string">"Select Preferred Date"</span>,
+  <span class="token-key">"min-date"</span>: <span class="token-string">"2026-07-28"</span>,
+  <span class="token-key">"max-date"</span>: <span class="token-string">"2026-08-30"</span>,
+  <span class="token-key">"unavailable-dates"</span>: [<span class="token-string">"2026-08-02"</span>, <span class="token-string">"2026-08-09"</span>]
+},
+{
+  <span class="token-key">"type"</span>: <span class="token-string">"RadioButtonsGroup"</span>,
+  <span class="token-key">"name"</span>: <span class="token-string">"time_slot"</span>,
+  <span class="token-key">"label"</span>: <span class="token-string">"Available Time Slots"</span>,
+  <span class="token-key">"data-source"</span>: <span class="token-string">"${data.dynamic_available_slots}"</span>
+}</code></pre>
+            </div>
+
+            <h3>Use Case 3: Instant Financial Product Quotes &amp; Loan Applications</h3>
+            <p>
+              <strong>The Challenge:</strong> Complex financial forms require multiple fields (income, employment status, loan tenure, PAN details), leading to high abandonment rates when sent via web links.
+            </p>
+            <p>
+              <strong>The Solution:</strong> A multi-screen wizard Flow. Screen 1 captures personal identity details; Screen 2 triggers a real-time HTTP request to the loan engine via Samyoj Endpoint; Screen 3 displays instant pre-approved credit limits with a 1-click acceptance button.
+            </p>
+
+            <h3>Use Case 4: E-Commerce Product Selection &amp; Variant Picker</h3>
+            <p>
+              <strong>The Challenge:</strong> Customers browsing e-commerce WhatsApp catalogs struggle to specify custom sizes, colors, and delivery time windows.
+            </p>
+            <p>
+              <strong>The Solution:</strong> An interactive Product Customizer Flow inside WhatsApp. Customers pick size, color, enter custom engraving text, choose delivery slots, and proceed directly to WhatsApp Native Payments or Razorpay UPI checkout.
+            </p>
+
+            <!-- SECTION 6 -->
+            <h2 id="security-and-encryption">6. Endpoint Security, Payload Encryption &amp; HMAC Verification</h2>
+            <p>
+              Security and data privacy are foundational to Meta’s 2026 WhatsApp Flows spec. All data exchanged between the user's mobile device and your server is encrypted using asymmetric RSA-2048 and symmetric AES-GCM algorithms.
+            </p>
+            <p>
+              When an endpoint request hits your server, you must verify the signature header <code>X-Hub-Signature-256</code> to ensure the request originated from Meta and not a malicious third party.
+            </p>
+
+            <h4>Node.js / Express Endpoint Verification &amp; Decryption Pattern</h4>
+            <div class="blog-code-block">
+              <div class="blog-code-header">
+                <span>Node.js Flow Endpoint Handler</span>
+                <span class="blog-code-lang">JavaScript</span>
+              </div>
+              <pre><code><span class="token-key">const</span> crypto = require(<span class="token-string">'crypto'</span>);
+<span class="token-key">const</span> express = require(<span class="token-string">'express'</span>);
+<span class="token-key">const</span> app = express();
+
+app.post(<span class="token-string">'/api/samyoj-flow-endpoint'</span>, express.raw({ type: <span class="token-string">'application/json'</span> }), (req, res) => {
+  <span class="token-key">const</span> signature = req.headers[<span class="token-string">'x-hub-signature-256'</span>];
+  <span class="token-key">const</span> expectedHmac = crypto
+    .createHmac(<span class="token-string">'sha256'</span>, process.env.SAMYOJ_APP_SECRET)
+    .update(req.body)
+    .digest(<span class="token-string">'hex'</span>);
+
+  <span class="token-key">if</span> (<span class="token-string">`sha256=${expectedHmac}`</span> !== signature) {
+    <span class="token-key">return</span> res.status(401).send(<span class="token-string">'Invalid Signature'</span>);
+  }
+
+  <span class="token-comment">// Decrypt Payload with Private Key</span>
+  <span class="token-key">const</span> { encrypted_flow_data, encrypted_aes_key, initial_vector } = JSON.parse(req.body);
+  <span class="token-key">const</span> decryptedData = samyojFlowDecrypt(encrypted_flow_data, encrypted_aes_key, initial_vector);
+
+  <span class="token-comment">// Respond with dynamic next screen data</span>
+  res.json({
+    version: <span class="token-string">"6.0"</span>,
+    screen: <span class="token-string">"SLOT_SELECTION_SCREEN"</span>,
+    data: {
+      dynamic_available_slots: [
+        { id: <span class="token-string">"10_AM"</span>, title: <span class="token-string">"10:00 AM - Available"</span> },
+        { id: <span class="token-string">"02_PM"</span>, title: <span class="token-string">"02:00 PM - Available"</span> }
+      ]
+    }
+  });
+});</code></pre>
+            </div>
+
+            <!-- SECTION 7 -->
+            <h2 id="samyoj-integration">7. How Samyoj Empowers Businesses to Scale WhatsApp Flows</h2>
+            <p>
+              While building raw JSON schemas and hosting encrypted API servers manually can take software engineering teams weeks, <a href="https://samyoj.com" style="color:#00b853; font-weight:700;">Samyoj</a> provides a <strong>100% no-code visual Flow Builder</strong> combined with managed serverless endpoints.
+            </p>
+            
+            <div class="blog-feature-grid">
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>Visual Drag-and-Drop Canvas</h3>
+                  <p>Design multi-screen interactive forms visually. Samyoj handles valid JSON v6.0 compilation, component validation, and Meta publishing automatically.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>Managed Flow Endpoints &amp; Webhooks</h3>
+                  <p>Connect your database, Google Sheets, Shopify store, or CRM (HubSpot, Salesforce, Zoho) with zero backend code required.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>Broadcast Campaign Attachment</h3>
+                  <p>Attach interactive WhatsApp Flows directly to bulk broadcast campaigns to convert dormant subscribers into instant booked sales calls.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 8 -->
+            <h2 id="best-practices">8. 5 Best Practices for Designing High-Converting WhatsApp Flows</h2>
+            <ol>
+              <li style="margin-bottom: 14px;">
+                <strong>Keep Screen Depth Shallow (1 to 3 Screens Max):</strong> Don't overburden users with 10 sequential screens. Group related fields logically (e.g., Contact Info on Screen 1, Preference Selection on Screen 2).
+              </li>
+              <li style="margin-bottom: 14px;">
+                <strong>Pre-fill Known User Data:</strong> Use Samyoj CRM variables (e.g. <code>{{contact.name}}</code>, <code>{{contact.phone}}</code>) to automatically pre-populate form fields so users only verify rather than re-type.
+              </li>
+              <li style="margin-bottom: 14px;">
+                <strong>Use Clear Action-Oriented CTA Text:</strong> Avoid generic labels like "Submit". Use specific verbs such as "Confirm My Booking", "Get Instant Rate", or "Reserve My Seat".
+              </li>
+              <li style="margin-bottom: 14px;">
+                <strong>Provide Immediate Post-Submission Feedback:</strong> Once a Flow is completed, instantly trigger an automated WhatsApp text confirmation containing appointment details, calendar invite files, or PDF quote attachments.
+              </li>
+              <li style="margin-bottom: 14px;">
+                <strong>Test Rigorously Across Devices:</strong> Always test your Flow draft using the Meta WhatsApp Sandbox across both Android and iOS devices to verify spacing, font scaling, and date picker responsiveness.
+              </li>
+            </ol>
+
+            <!-- In-Article Call to Action Card 2 -->
+            <div class="blog-cta-banner">
+              <div>
+                <h3>Ready to Transform Your WhatsApp Conversion Rates?</h3>
+                <p>Join over 2,500+ fast-growing businesses using Samyoj to build high-converting native WhatsApp Flows.</p>
+                <a href="https://app.samyoj.com" class="btn primary">Start Free Today →</a>
+              </div>
+              <img src="../images/blog_hero_dashboard_3d.jpg" alt="Samyoj Dashboard 3D Graphic" />
+            </div>
+
+            <!-- SECTION 9: FAQ with FAQPage Schema -->
+            <h2 id="faq">9. Frequently Asked Questions (FAQ)</h2>
+            
+            <div itemscope itemtype="https://schema.org/FAQPage">
+              
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">What is the main difference between WhatsApp Flows and a regular web form?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    A regular web form requires redirecting the user out of WhatsApp into an external browser like Safari or Chrome, resulting in slow load times and high drop-off rates (78%+). A WhatsApp Flow renders natively inside the WhatsApp application instantly (&lt;200ms), eliminating context switching and boosting form completion rates to over 60%.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">Do I need coding skills to build WhatsApp Flows?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    No! While Meta provides raw JSON specification files for developers, platforms like Samyoj offer a drag-and-drop visual builder. You can build, test, and launch multi-screen interactive WhatsApp Flows visually without writing a single line of JSON or backend code.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">Are WhatsApp Flows supported on both iOS and Android?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Yes! Meta WhatsApp Flows are fully supported natively across all official WhatsApp clients, including WhatsApp for Android, WhatsApp for iOS, WhatsApp Web, and desktop native applications.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">How does dynamic data exchange work in WhatsApp Flows?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Dynamic Data Exchange allows a WhatsApp Flow to query your backend server (Flow Endpoint) in real time. For example, when a user selects a date on Screen 1, the Flow sends an encrypted background request to your server, fetches available appointment slots or live inventory from your database, and dynamically populates the dropdown options on Screen 2.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">Can I send WhatsApp Flows in bulk marketing broadcast campaigns?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Yes. You can attach approved WhatsApp Flows to Meta-approved message templates and broadcast them to thousands of segmented contacts using Samyoj's bulk broadcast campaign engine.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name" style="margin-bottom: 8px;">Is data submitted via WhatsApp Flows secure and DPDP compliant?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Absolutely. Meta enforces RSA-2048 public key encryption and AES-GCM-128 payload encryption. Data in transit is end-to-end encrypted and transmitted directly to your verified Flow Endpoint or Samyoj CRM, adhering strictly to global GDPR and India DPDP compliance regulations.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Pagination Links -->
+          <div class="blog-post-nav">
+            <a href="what-is-whatsapp-crm.html" class="blog-nav-link">
+              <span class="blog-nav-dir">← Previous Master Guide</span>
+              <span class="blog-nav-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</span>
+            </a>
+            <a href="../blog.html" class="blog-nav-link next">
+              <span class="blog-nav-dir">Next Article →</span>
+              <span class="blog-nav-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Right Sidebar Column (~32%) -->
+        <aside class="blog-sidebar">
+
+          <!-- Widget 1: About the Author -->
+          <div class="sidebar-widget">
+            <div class="widget-author">
+              <div class="widget-author-head">
+                <div class="widget-author-avatar">S</div>
+                <div>
+                  <div class="widget-author-name">
+                    Samyoj Team
+                    <svg viewBox="0 0 20 20" fill="#03cf65" width="16" height="16">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="widget-author-bio">
+                We're a team of WhatsApp marketing experts passionate about helping businesses automate conversations, improve engagement, and grow.
+              </p>
+              <a href="../blog.html" class="btn-outline-sm">View all posts →</a>
+            </div>
+          </div>
+
+          <!-- Widget 2: Related Articles -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Related Articles</h3>
+            <div class="related-list">
+
+              <a href="what-is-whatsapp-crm.html" class="related-item">
+                <img src="../images/blog_what_is_whatsapp_crm.jpg" alt="WhatsApp CRM Guide Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">CRM &amp; STRATEGY</span>
+                  <span class="related-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</span>
+                  <span class="related-meta">July 27, 2026 · 10 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_automation_robot_3d.jpg" alt="Automation Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">AUTOMATION</span>
+                  <span class="related-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
+                  <span class="related-meta">July 15, 2026 · 6 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_ai_agent_3d.jpg" alt="AI Agent Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">AI &amp; CHATBOTS</span>
+                  <span class="related-title">How AI Agents Can Improve Customer Support on WhatsApp</span>
+                  <span class="related-meta">July 11, 2026 · 7 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_leads_3d.jpg" alt="Leads Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">WHATSAPP MARKETING</span>
+                  <span class="related-title">5 Proven Ways to Generate More Leads on WhatsApp</span>
+                  <span class="related-meta">July 2, 2026 · 6 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_loyalty_3d.jpg" alt="Loyalty Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">GROWTH TIPS</span>
+                  <span class="related-title">Building Customer Loyalty Through WhatsApp</span>
+                  <span class="related-meta">June 30, 2026 · 5 min read</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Widget 3: Categories -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Categories</h3>
+            <ul class="cat-list">
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    WhatsApp Marketing
+                  </span>
+                  <span class="cat-count">18</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    Automation
+                  </span>
+                  <span class="cat-count">14</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
+                    AI &amp; Chatbots
+                  </span>
+                  <span class="cat-count">12</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    Product Updates
+                  </span>
+                  <span class="cat-count">10</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    CRM
+                  </span>
+                  <span class="cat-count">08</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    Growth Tips
+                  </span>
+                  <span class="cat-count">09</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+                    Integrations
+                  </span>
+                  <span class="cat-count">07</span>
+                </a>
+              </li>
+            </ul>
+            <a href="../blog.html" style="font-size:13.5px; font-weight:700; color:#03cf65; text-decoration:none;">View all categories →</a>
+          </div>
+
+          <!-- Widget 4: Newsletter Box -->
+          <div class="sidebar-widget widget-newsletter">
+            <h3 class="sidebar-widget-title">Stay updated</h3>
+            <p style="font-size:13.5px; color:#475569; line-height:1.55; margin:0 0 16px;">
+              Get the latest WhatsApp marketing tips, product updates, and growth strategies straight to your inbox.
+            </p>
+            <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Samyoj updates!');">
+              <input type="email" placeholder="Enter your email" required class="newsletter-input" />
+              <button type="submit" class="btn-full-green">Subscribe →</button>
+            </form>
+            <div class="newsletter-note">No spam. Unsubscribe anytime.</div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer Component -->
+  <footer class="sy-footer" aria-label="Site footer">
+    <div class="sy-footer-inner">
+      <div class="sy-footer-grid">
+        <div class="sy-footer-brand">
+          <a class="sy-footer-logo" href="../index.html" aria-label="Samyoj home">
+            <img src="../images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56" />
+          </a>
+          <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale, backed by reliability.</p>
+          <div class="sy-footer-partner">
+            <img src="../images/download.png" alt="Meta Tech Provider" width="160" height="89" />
+          </div>
+          <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e11d48" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg> in India</p>
+        </div>
+
+        <nav class="sy-footer-col" aria-label="Platform">
+          <h4>Platform</h4>
+          <ul class="sy-footer-links">
+            <li><a href="../features.html">Features</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../industries.html">Industries</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <nav class="sy-footer-col" aria-label="Company">
+          <h4>Company</h4>
+          <ul class="sy-footer-links">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../legal/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="../legal/cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="sy-footer-col" aria-label="Contact Us">
+          <h4>Contact Us</h4>
+          <ul class="sy-footer-contact">
+            <li><a href="tel:+918839888531">Sales: +91 8839888531</a></li>
+            <li><a href="tel:+918305369467">Support: +91 8305369467</a></li>
+            <li><a href="mailto:hello@samyoj.com">hello@samyoj.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sy-footer-bottom">
+        <p class="sy-footer-copy">&copy; 2026 Samyoj. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+
+
+

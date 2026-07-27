@@ -1,0 +1,365 @@
+<header class="_58ce83d8">
+    <style>
+      body {
+        --um-header-height: calc(65px + var(--um-banner-height, 0px))
+      }
+    </style>
+    <div class="umso-header _37ad9200 header-hdr_lbofppypi0 buttons-btn_nob6m8rpy4">
+      <div id="um-header-banner"
+        style="background:var(--gradient-odxm5pezs4);color:var(--color-4jixmvwln5);top:0;left:0;right:0;z-index:89;transform:none;position:fixed">
+        <div class="wr"
+          style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
+          <span class="_071afc96 um-text">
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
+            <!-- -->
+            <style>
+              /* Manrope already loaded via <link> in head */
+
+              #aisensy-magic-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
+              }
+
+              #aisensy-magic-bar.mb-menu-open {
+                display: none !important;
+              }
+
+              /* Hide native Umso banner text; magic bar covers the top fully */
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
+              #aisensy-magic-bar .mb-inner {
+                pointer-events: auto;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #aisensy-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #aisensy-magic-bar .mb-divider {
+                width: 1px;
+                height: 22px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
+              }
+
+              #aisensy-magic-bar .mb-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #146b3a;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+              }
+
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 0 0 auto;
+              }
+
+              #aisensy-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
+              }
+
+              #aisensy-magic-bar .mb-title {
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: -.01em;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #aisensy-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
+              }
+
+              #aisensy-magic-bar .mb-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 800;
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
+              }
+
+              #aisensy-magic-bar .mb-cta svg {
+                width: 16px;
+                height: 16px;
+                color: #1fa548;
+                transition: transform .18s ease;
+              }
+
+              #aisensy-magic-bar .mb-cta:hover svg {
+                transform: translateX(3px);
+              }
+
+              #aisensy-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #aisensy-magic-bar {
+                  padding: 0;
+                }
+
+                #aisensy-magic-bar .mb-inner {
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
+                }
+
+                #aisensy-magic-bar .mb-divider {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
+                }
+
+                #aisensy-magic-bar .mb-title {
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #aisensy-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #aisensy-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #aisensy-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                #aisensy-magic-bar .mb-cta {
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
+                }
+
+                #aisensy-magic-bar .mb-cta svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              @media (max-width:380px) {
+                #aisensy-magic-bar .mb-title {
+                  font-size: 11.5px;
+                }
+
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
+                }
+              }
+            </style>
+            <script>
+              (function () {
+                function init() {
+                  if (document.getElementById('aisensy-magic-bar')) return;
+                  var html =
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div class="mb-inner">' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '</div>' +
+                    '</div>';
+                  document.body.insertAdjacentHTML('afterbegin', html);
+                  var bar = document.getElementById('aisensy-magic-bar');
+
+                  // Feed our real height into Umso's native banner variable so the navbar + content shift down.
+                  function sync() {
+                    var h = bar.offsetHeight;
+                    document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+                    document.body.style.setProperty('--um-banner-height', h + 'px');
+                  }
+                  sync();
+                  if ('ResizeObserver' in window) { new ResizeObserver(sync).observe(bar); }
+                  window.addEventListener('resize', sync);
+                  window.addEventListener('load', sync);
+                  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sync); }
+
+                  // Safety net: hide the banner whenever Umso's mobile menu drawer is open,
+                  // so it can never overlap the menu links (Pricing, etc.). Umso toggles the
+                  // 'um-hidden' class on .um-nav-drawer when the menu opens/closes.
+                  function watchDrawer() {
+                    var drawer = document.querySelector('.um-nav-drawer');
+                    if (!drawer) { return; }
+                    function update() {
+                      var open = !drawer.classList.contains('um-hidden');
+                      bar.classList.toggle('mb-menu-open', open);
+                    }
+                    update();
+                    new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+                  }
+                  watchDrawer();
+                }
+                if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+              })();
+            </script>
+          </span>
+        </div>
+        <script>
+          (function () {
+
+            const banner = document.getElementById('um-header-banner')
+            const body = document.querySelector('body')
+
+            if (!banner) {
+              return
+            }
+
+            const height = banner.clientHeight
+            body.style.setProperty('--um-banner-height', height + 'px')
+
+            const observer = new ResizeObserver(entries => {
+              for (let entry of entries) {
+                const cr = entry.contentRect
+                body.style.setProperty('--um-banner-height', cr.height + 'px')
+              }
+            })
+
+            observer.observe(banner)
+          }
+          )()
+        </script>
+      </div>
+      <div class="umso-animated umso-animating"
+        style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
+        <div class="_f4c879d8">
+          <div class="_592c9c5c wr">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
+              <div class="um-nav-children">
+                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="./images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43" /></a></div>
+              </div>
+              <ul class="um-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
+                  class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              document.getElementById('btn_7z9u86l3cj').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+              </header>

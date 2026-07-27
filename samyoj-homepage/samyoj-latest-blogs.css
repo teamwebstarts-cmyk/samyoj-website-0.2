@@ -1,0 +1,126 @@
+/* Latest Blogs Section */
+.home-latest-blogs {
+  padding: 80px 24px;
+  background-color: var(--surface);
+  text-align: center;
+}
+
+.home-latest-blogs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-latest-blogs h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+/* Stacked Cards Layout from blog.html */
+.blog-featured-stack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.blog-stack-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow .2s ease, transform .2s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.blog-stack-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+  transform: translateY(-2px);
+}
+
+.blog-stack-thumb {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.blog-stack-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-stack-content {
+  padding: 18px 20px;
+}
+
+.blog-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-family: var(--font-head);
+  margin: 0 0 10px;
+  display: inline-block;
+}
+
+.blog-tag.green { color: var(--green); }
+.blog-tag.purple { color: #7c3aed; }
+.blog-tag.orange { color: #d97706; }
+
+.blog-stack-title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin: 8px 0 10px;
+}
+
+.blog-meta {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+.home-latest-blogs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background-color: var(--ink);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.home-latest-blogs-btn:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .blog-featured-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-featured-stack {
+    grid-template-columns: 1fr;
+  }
+}

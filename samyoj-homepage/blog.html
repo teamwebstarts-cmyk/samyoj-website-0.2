@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="samyoj-nav.css">
+  <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
   <link rel="stylesheet" href="samyoj-footer.css?v=6">
   <link rel="stylesheet" href="mobile-buttons.css">
 
@@ -71,16 +71,50 @@
     .blog-breadcrumb a:hover { color: var(--green-deep); }
     .blog-breadcrumb span { margin: 0 8px; color: #b5c4be; }
 
-    /* ─── HERO SECTION ─── */
     .blog-hero {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 40px;
-      align-items: center;
-      padding: 30px 0 50px;
+      background-color: #ffffff;
+      padding: 40px 0 60px;
     }
 
-    .blog-hero-left { max-width: 540px; }
+    .blog-hero-inner {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .blog-hero-left {
+      max-width: 540px;
+    }
+
+    .blog-hero-right {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      min-height: 326px;
+      overflow: hidden;
+    }
+
+    .blog-hero-img-wrap {
+      width: 100%;
+      max-width: 800px;
+      height: 480px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,.08);
+      background: #f8faf9;
+      position: relative;
+    }
+
+    .blog-hero-img-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .blog-hero-left h1 {
       font-family: var(--font-head);
@@ -126,30 +160,6 @@
       box-shadow: 0 8px 24px rgba(3,207,101,.32);
     }
     .blog-subscribe-btn svg { width: 17px; height: 17px; flex-shrink: 0; fill: currentColor; }
-
-    /* Hero right — 3D Image Visual */
-    .blog-hero-right {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .blog-hero-img-wrap {
-      position: relative;
-      width: 100%;
-      max-width: 580px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0,0,0,.08);
-      background: #f8faf9;
-    }
-    .blog-hero-img-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
 
     /* ─── TOPIC TABS ─── */
     .blog-tabs-section {
@@ -226,34 +236,52 @@
     }
     .blog-view-all:hover { gap: 9px; }
 
-    /* ─── FEATURED ARTICLES SECTION ─── */
-    .blog-featured-section {
+    /* ─── TWO-COLUMN MAIN LAYOUT ─── */
+    .blog-main-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 32px;
+      align-items: start;
       margin-bottom: 60px;
     }
 
-    .blog-featured-grid {
-      display: grid;
-      grid-template-columns: 1fr 340px 300px;
-      gap: 24px;
-      align-items: stretch;
+    .blog-content-area {
+      min-width: 0;
     }
 
-    /* Main Featured Card (Left) */
+    /* ─── FEATURED ARTICLES SECTION ─── */
+    .blog-featured-section {
+      margin-bottom: 36px;
+    }
+
+    /* Featured: left col = main card + right col = 3 stack cards */
+    .blog-featured-left-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Main Featured Card — text LEFT + image RIGHT (matching mockup) */
     .blog-featured-main {
       background: #f4faf6;
       border: 1px solid #e1f0e7;
       border-radius: 20px;
-      padding: 32px;
+      padding: 28px 32px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-direction: row;
+      gap: 28px;
+      justify-content: flex-start;
+      align-items: flex-start;
       cursor: pointer;
       transition: box-shadow .25s ease, transform .25s ease;
       overflow: hidden;
       position: relative;
+      width: 100%;
+      box-sizing: border-box;
     }
     .blog-featured-main:hover {
-      box-shadow: 0 16px 40px rgba(3,207,101,.12);
+      box-shadow: 0 16px 40px rgba(3,207,101,.14);
       transform: translateY(-3px);
     }
 
@@ -263,7 +291,7 @@
       letter-spacing: .08em;
       text-transform: uppercase;
       font-family: var(--font-head);
-      margin-bottom: 12px;
+      margin: 0 0 10px;
       display: inline-block;
     }
     .blog-tag.green { color: var(--green); }
@@ -273,32 +301,59 @@
 
     .blog-featured-main-title {
       font-family: var(--font-head);
-      font-size: clamp(22px, 2.4vw, 28px);
+      font-size: clamp(20px, 2.2vw, 26px);
       font-weight: 800;
-      line-height: 1.25;
+      line-height: 1.3;
       color: var(--ink);
       margin: 0 0 12px;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.02em;
+      text-align: left;
     }
 
     .blog-featured-main-desc {
-      font-size: 14.5px;
+      font-size: 14px;
       color: var(--muted);
       line-height: 1.6;
-      margin: 0 0 20px;
+      margin: 0 0 18px;
+      text-align: left;
     }
 
-    .blog-featured-img-box {
+    /* Text section of featured main card — top-left aligned */
+    .blog-featured-main-text {
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      padding-top: 4px;
+    }
+
+    .blog-featured-main-text .blog-tag,
+    .blog-featured-main-text .blog-featured-main-title,
+    .blog-featured-main-text .blog-featured-main-desc,
+    .blog-featured-main-text .blog-author {
+      align-self: flex-start;
       width: 100%;
-      border-radius: 14px;
+    }
+
+    /* Image on right side inside featured main card */
+    .blog-featured-img-box {
+      width: 280px;
+      height: 210px;
+      flex: 0 0 280px;
+      border-radius: 16px;
       overflow: hidden;
-      margin-top: 14px;
-      aspect-ratio: 16/10;
+      background: transparent;
+      margin-left: auto;
     }
     .blog-featured-img-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
     }
 
@@ -330,21 +385,20 @@
 
     /* Middle Column (3 Stacked Cards) */
     .blog-featured-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .blog-stack-card {
       background: #ffffff;
       border: 1px solid var(--card-border);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       cursor: pointer;
       transition: box-shadow .2s ease, transform .2s ease;
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
     .blog-stack-card:hover {
       box-shadow: 0 8px 28px rgba(0,0,0,.08);
@@ -352,9 +406,8 @@
     }
 
     .blog-stack-thumb {
-      width: 100px;
-      height: 100%;
-      min-height: 95px;
+      width: 100%;
+      height: 200px;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -366,20 +419,20 @@
     }
 
     .blog-stack-content {
-      padding: 14px 16px;
+      padding: 18px 20px;
     }
 
     .blog-stack-title {
       font-family: var(--font-head);
-      font-size: 13.5px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--ink);
-      line-height: 1.35;
-      margin: 4px 0 6px;
+      line-height: 1.4;
+      margin: 8px 0 10px;
     }
 
     .blog-meta {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
       font-weight: 500;
     }
@@ -389,6 +442,16 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+      position: sticky;
+      top: 90px;
+      align-self: start;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .blog-sidebar::-webkit-scrollbar {
+      display: none;
     }
 
     /* Search Box */
@@ -543,19 +606,20 @@
 
     /* ─── LATEST ARTICLES SECTION ─── */
     .blog-latest-section {
-      margin-bottom: 60px;
+      margin-bottom: 0;
     }
 
-    .blog-latest-grid {
+    /* 4-card grid WITHIN the left content area */
+    .blog-latest-left-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 16px;
     }
 
     .blog-card {
       background: #ffffff;
       border: 1px solid var(--card-border);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       cursor: pointer;
       transition: box-shadow .25s ease, transform .25s ease;
@@ -569,7 +633,7 @@
 
     .blog-card-thumb {
       width: 100%;
-      aspect-ratio: 16/10;
+      aspect-ratio: 4/3;
       overflow: hidden;
       background: #f4faf6;
     }
@@ -585,7 +649,7 @@
     }
 
     .blog-card-body {
-      padding: 18px;
+      padding: 14px 14px 16px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -594,11 +658,11 @@
 
     .blog-card-title {
       font-family: var(--font-head);
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--ink);
       line-height: 1.4;
-      margin: 6px 0 10px;
+      margin: 5px 0 8px;
     }
 
     .blog-card-meta {
@@ -803,27 +867,40 @@
     }
     .blog-footer-demo-btn svg { width: 14px; height: 14px; }
 
-    /* Responsive */
-    @media (max-width: 1100px) {
-      .blog-featured-grid { grid-template-columns: 1fr 280px; }
-      .blog-sidebar { display: none; }
-      .blog-latest-grid { grid-template-columns: repeat(2, 1fr); }
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1200px) {
+      .blog-main-layout { grid-template-columns: 1fr 240px; gap: 24px; }
+      .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
+      .blog-featured-img-box { width: 240px; height: 180px; flex-basis: 240px; }
+    }
+
+    @media (max-width: 992px) {
+      .blog-main-layout { grid-template-columns: 1fr; }
+      .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
+      .blog-latest-left-grid { grid-template-columns: repeat(2, 1fr); }
       .blog-newsletter { grid-template-columns: 70px 1fr; }
       .blog-newsletter-form { grid-column: 1/-1; align-items: stretch; }
       .blog-newsletter-row { width: 100%; }
       .blog-newsletter-input { flex: 1; }
     }
 
-    @media (max-width: 900px) {
-      .blog-hero { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
+      .blog-hero-inner { grid-template-columns: 1fr; }
       .blog-hero-right { display: none; }
-      .blog-featured-grid { grid-template-columns: 1fr; }
+      .blog-featured-left-grid { grid-template-columns: 1fr; }
+      .blog-featured-main { flex-direction: column; }
+      .blog-featured-img-box { width: 100%; height: 200px; }
       .blog-featured-stack { display: grid; grid-template-columns: 1fr 1fr; }
-      .blog-footer-grid-custom { grid-template-columns: 1fr 1fr !important; }
+    }
+
+    @media (max-width: 480px) {
+      .blog-featured-main { padding: 24px 20px; }
+      .blog-featured-main-title { font-size: 18px; }
+      .blog-featured-img-box { height: 180px; }
     }
 
     @media (max-width: 600px) {
-      .blog-latest-grid { grid-template-columns: 1fr; }
+      .blog-latest-left-grid { grid-template-columns: 1fr; }
       .blog-featured-stack { grid-template-columns: 1fr; }
       .blog-newsletter { grid-template-columns: 1fr; padding: 24px 20px; }
       .blog-newsletter-img { display: none; }
@@ -831,7 +908,6 @@
       .blog-newsletter-input { width: 100%; border-right: 1px solid #cce5d7; border-bottom: none; border-radius: 8px 8px 0 0; }
       .blog-newsletter-btn { border-radius: 0 0 8px 8px; justify-content: center; }
       .blog-explore-chips { gap: 8px; }
-      .blog-footer-grid-custom { grid-template-columns: 1fr !important; }
     }
 
     .blog-animate {
@@ -843,95 +919,592 @@
       opacity: 1;
       transform: translateY(0);
     }
-  </style>
-</head>
-<body>
 
-<!-- ═══════════════════════════════════════════════════════
-     HEADER NAVIGATION
-════════════════════════════════════════════════════════ -->
-<header class="sy-nav" aria-label="Site navigation">
-  <div class="sy-nav-inner">
-    <a class="sy-nav-brand" href="index.html" aria-label="Samyoj home">
-      <img src="images/logo.webp" alt="Samyoj" width="150" height="40" decoding="async" />
-    </a>
-    <nav aria-label="Primary">
-      <ul class="sy-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="industries.html">Industries</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="blog.html" aria-current="page">Resources ▾</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="sy-nav-actions">
-      <button type="button" class="sy-nav-btn sy-nav-btn-primary" data-sy-signup>
-        Start for FREE
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-      <a class="sy-nav-btn sy-nav-btn-secondary" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">
-        Login
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+    /* ─── Site header chrome (required for umso nav) ─── */
+    .wr {
+      width: 100%;
+      max-width: var(--wr-max, 1530px);
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    ._58ce83d8 {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--um-header-height, calc(65px + var(--um-banner-height, 0px)));
+      min-height: var(--um-header-height, calc(65px + var(--um-banner-height, 0px)));
+      display: flex;
+      z-index: 99;
+      position: fixed;
+      overflow: visible;
+    }
+
+    ._37ad9200 {
+      top: var(--um-banner-height, 0px);
+      left: 0;
+      right: 0;
+      height: 65px;
+      display: flex;
+      z-index: 99;
+      --wr-max: 1600px;
+      position: fixed;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e8ece9;
+      box-sizing: border-box;
+    }
+
+    ._f4c879d8 {
+      font: 400 16px 'Inter', system-ui, sans-serif;
+      color: #696969;
+      height: 100%;
+      display: flex;
+      padding: 0 20px;
+      z-index: 90;
+      position: relative;
+      flex-grow: 1;
+      background: #ffffff;
+      box-sizing: border-box;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    ._592c9c5c {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-hdr_lbofppypi0 {
+      --color-text-primary: #000;
+      --color-text-secondary: #696969;
+      --header-bg: #fff;
+      --header-fontSize-primary: 16px;
+    }
+
+    .btn {
+      gap: 0.5em;
+      font: 600 14px 'Inter', system-ui, sans-serif;
+      color: #0f172a;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      display: inline-flex;
+      padding: 0.65em 1em;
+      background: #eee;
+      box-sizing: border-box;
+      align-items: center;
+      border-radius: 6px;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn.primary {
+      color: #fff;
+      background: #03cf65;
+      border: none;
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn:not(.primary) {
+      background: #fff;
+      color: #0f172a;
+      border: 1.5px solid #e2e8f0;
+    }
+
+    .um-nav-drawerTrigger {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2'%3E%3Cpath d='M3 12h18M3 6h18M3 18h18'/%3E%3C/svg%3E") center/24px no-repeat;
+      cursor: pointer;
+      z-index: 95;
+    }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+      }
+
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper.um-hidden .um-nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 4px;
+      }
+
+      .um-nav-wrapper .um-nav-buttons,
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 10px !important;
+        margin-left: auto;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: none !important;
+      }
+
+      .umso-header > .umso-animated.umso-animating {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper .um-nav-buttons {
+        display: none !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: block !important;
+      }
+    }
+
+    /* main offset: samyoj-nav.css */
+
+    .um-nav-links a[aria-current="page"] {
+      color: #087a47 !important;
+      font-weight: 600;
+    }
+  </style>
+  <link rel="stylesheet" href="samyoj-nav.css?v=11">
+</head>
+<body class="noScript">
+<script>document.body.classList.remove('noScript');</script>
+<header class="_58ce83d8">
+    <style>
+      body {
+        --um-header-height: calc(65px + var(--um-banner-height, 0px))
+      }
+    </style>
+    <div class="umso-header _37ad9200 header-hdr_lbofppypi0 buttons-btn_nob6m8rpy4">
+      <div id="um-header-banner"
+        style="background:var(--gradient-odxm5pezs4);color:var(--color-4jixmvwln5);top:0;left:0;right:0;z-index:89;transform:none;position:fixed">
+        <div class="wr"
+          style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
+          <span class="_071afc96 um-text">
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
+            <!-- -->
+            <style>
+              /* Manrope already loaded via <link> in head */
+
+              #aisensy-magic-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
+              }
+
+              #aisensy-magic-bar.mb-menu-open {
+                display: none !important;
+              }
+
+              /* Hide native Umso banner text; magic bar covers the top fully */
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
+              #aisensy-magic-bar .mb-inner {
+                pointer-events: auto;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #aisensy-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #aisensy-magic-bar .mb-divider {
+                width: 1px;
+                height: 22px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
+              }
+
+              #aisensy-magic-bar .mb-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #146b3a;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+              }
+
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 0 0 auto;
+              }
+
+              #aisensy-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
+              }
+
+              #aisensy-magic-bar .mb-title {
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: -.01em;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #aisensy-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
+              }
+
+              #aisensy-magic-bar .mb-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 800;
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
+              }
+
+              #aisensy-magic-bar .mb-cta svg {
+                width: 16px;
+                height: 16px;
+                color: #1fa548;
+                transition: transform .18s ease;
+              }
+
+              #aisensy-magic-bar .mb-cta:hover svg {
+                transform: translateX(3px);
+              }
+
+              #aisensy-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #aisensy-magic-bar {
+                  padding: 0;
+                }
+
+                #aisensy-magic-bar .mb-inner {
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
+                }
+
+                #aisensy-magic-bar .mb-divider {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
+                }
+
+                #aisensy-magic-bar .mb-title {
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #aisensy-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #aisensy-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #aisensy-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                #aisensy-magic-bar .mb-cta {
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
+                }
+
+                #aisensy-magic-bar .mb-cta svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              @media (max-width:380px) {
+                #aisensy-magic-bar .mb-title {
+                  font-size: 11.5px;
+                }
+
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
+                }
+              }
+            </style>
+            <script>
+              (function () {
+                function init() {
+                  if (document.getElementById('aisensy-magic-bar')) return;
+                  var html =
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div class="mb-inner">' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '</div>' +
+                    '</div>';
+                  document.body.insertAdjacentHTML('afterbegin', html);
+                  var bar = document.getElementById('aisensy-magic-bar');
+
+                  // Feed our real height into Umso's native banner variable so the navbar + content shift down.
+                  function sync() {
+                    var h = bar.offsetHeight;
+                    document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+                    document.body.style.setProperty('--um-banner-height', h + 'px');
+                  }
+                  sync();
+                  if ('ResizeObserver' in window) { new ResizeObserver(sync).observe(bar); }
+                  window.addEventListener('resize', sync);
+                  window.addEventListener('load', sync);
+                  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sync); }
+
+                  // Safety net: hide the banner whenever Umso's mobile menu drawer is open,
+                  // so it can never overlap the menu links (Pricing, etc.). Umso toggles the
+                  // 'um-hidden' class on .um-nav-drawer when the menu opens/closes.
+                  function watchDrawer() {
+                    var drawer = document.querySelector('.um-nav-drawer');
+                    if (!drawer) { return; }
+                    function update() {
+                      var open = !drawer.classList.contains('um-hidden');
+                      bar.classList.toggle('mb-menu-open', open);
+                    }
+                    update();
+                    new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+                  }
+                  watchDrawer();
+                }
+                if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+              })();
+            </script>
+          </span>
+        </div>
+        <script>
+          (function () {
+            function syncBannerHeight() {
+              var magic = document.getElementById('aisensy-magic-bar');
+              var body = document.body;
+              if (magic && !magic.classList.contains('mb-menu-open')) {
+                var mh = magic.offsetHeight || 50;
+                body.style.setProperty('--um-banner-height', mh + 'px');
+                document.documentElement.style.setProperty('--um-banner-height', mh + 'px');
+                return;
+              }
+              var banner = document.getElementById('um-header-banner');
+              if (!banner) return;
+              var h = banner.clientHeight;
+              if (h > 0) {
+                body.style.setProperty('--um-banner-height', h + 'px');
+                document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+              }
+            }
+            syncBannerHeight();
+            var magic = document.getElementById('aisensy-magic-bar');
+            var banner = document.getElementById('um-header-banner');
+            if (typeof ResizeObserver !== 'undefined') {
+              var ro = new ResizeObserver(syncBannerHeight);
+              if (magic) ro.observe(magic);
+              if (banner) ro.observe(banner);
+            }
+            window.addEventListener('resize', syncBannerHeight);
+          })();
+        </script>
+      </div>
+      <div class="umso-animated umso-animating"
+        style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
+        <div class="_f4c879d8">
+          <div class="_592c9c5c wr">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered" style="position:relative">
+              <div class="um-nav-children">
+                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="./images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43" /></a></div>
+              </div>
+              <ul class="um-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="um-nav-buttons"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
+                  class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              var btn = document.getElementById('btn_7z9u86l3cj');
+              if (!btn) return;
+              btn.addEventListener('click', function () {
+                var query = window.location.search;
+                var targetUrl = "https://app.samyoj.com/?utm_source=organic&utm_term=homepagesignupbutton";
+                window.location.href = query ? targetUrl + query : targetUrl;
+              });
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu" aria-label="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logoSamyoj.jpeg" alt="Samyoj" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+              </header>
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-label">Home</span></a></li>
+                <li><a class="sy-drawer-link" href="features.html"><span class="sy-drawer-label">Features</span></a></li>
+                <li><a class="sy-drawer-link" href="pricing.html"><span class="sy-drawer-label">Pricing</span></a></li>
+                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-label">Industries</span></a></li>
+                <li><a class="sy-drawer-link" href="blog.html" aria-current="page"><span class="sy-drawer-label">Blog</span></a></li>
+                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-label">Contact</span></a></li>
+              </ul>
+              <div class="um-drawer-buttons sy-drawer-btns">
+                <a href="https://app.samyoj.com/?utm_source=organic&utm_term=homepagesignupbutton" target="_blank" rel="noopener noreferrer" class="btn primary">Start for FREE</a>
+                <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="btn">Login</a>
+              </div>
+            </div>
+            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); const drawer = document.getElementById('985hzqm8a3-drawer'); t && drawer && t.appendChild(drawer); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'); if (!n || !d) return; document.addEventListener('click', function (ev) { if (d.contains(ev.target) || n.contains(ev.target) || ev.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }); if (i) i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="sy-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-sy-nav-toggle>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-  </div>
-  <div class="sy-nav-drawer" data-sy-nav-drawer>
-    <nav aria-label="Mobile primary">
-      <ul class="sy-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="industries.html">Industries</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="blog.html" aria-current="page">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="sy-nav-actions">
-      <button type="button" class="sy-nav-btn sy-nav-btn-primary" data-sy-signup>Start for FREE</button>
-      <a class="sy-nav-btn sy-nav-btn-secondary" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Login</a>
-    </div>
-  </div>
-</header>
+  </header>
 
 <main>
   <div class="blog-wrap">
 
-    <!-- Breadcrumb -->
-    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&gt;</span>
-      <span aria-current="page">Blog</span>
-    </nav>
 
     <!-- ═══════════════════════════════════════════════════════
          HERO SECTION
     ════════════════════════════════════════════════════════ -->
     <section class="blog-hero" aria-label="Blog hero">
-      <div class="blog-hero-left">
-        <h1>
-          Insights to help you<br>
-          <span class="green-word">connect</span>, engage<br>
-          and grow
-        </h1>
-        <p class="blog-hero-subtitle">
-          Practical guides, product updates, and WhatsApp marketing strategies to grow your business.
-        </p>
-        <button class="blog-subscribe-btn" type="button" id="hero-subscribe-btn" aria-label="Subscribe to blog updates">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C8.64 5.36 7 7.92 7 11v5l-2 2v1h14v-1l-2-2z"/>
-          </svg>
-          Subscribe to Updates
-        </button>
-      </div>
+      <div class="blog-hero-inner">
+        <div class="blog-hero-left">
+          <h1>
+            Insights to help you<br>
+            <span class="green-word">connect</span>, engage<br>
+            and grow with Samyoj
+          </h1>
+          <p class="blog-hero-subtitle">
+            Discover practical guides, product updates, and advanced WhatsApp marketing strategies. Master AI-powered automation and elevate your brand's conversational CRM to the next level.
+          </p>
+          <button class="blog-subscribe-btn" type="button" id="hero-subscribe-btn" aria-label="Subscribe to blog updates">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C8.64 5.36 7 7.92 7 11v5l-2 2v1h14v-1l-2-2z"/>
+            </svg>
+            Subscribe to Updates
+          </button>
+        </div>
 
-      <!-- Hero 3D Graphic Image -->
-      <div class="blog-hero-right">
-        <div class="blog-hero-img-wrap">
-          <img src="images/blog_hero_dashboard_3d.jpg" alt="Campaign Performance Dashboard with WhatsApp Analytics" width="580" height="326" />
+        <!-- Hero 3D Graphic Image -->
+        <div class="blog-hero-right">
+            <div class="blog-hero-img-wrap">
+              <img src="images/ChatGPT Image Jul 27, 2026, 12_53_21 PM.png" alt="WhatsApp Marketing 3D Illustration" />
+            </div>
         </div>
       </div>
     </section>
@@ -953,264 +1526,256 @@
     </div>
 
     <!-- ═══════════════════════════════════════════════════════
-         FEATURED ARTICLES
-    ════════════════════════════════════════════════════════ -->
-    <section class="blog-featured-section blog-animate" aria-label="Featured articles">
-      <div class="blog-section-header">
-        <h2 class="blog-section-title">Featured Articles</h2>
-        <a class="blog-view-all" href="#">
-          View all articles
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+    <!-- MAIN LAYOUT: LEFT CONTENT + RIGHT SIDEBAR -->
+    <div class="blog-main-layout">
 
-      <div class="blog-featured-grid">
+      <!-- Left: Content Area -->
+      <div class="blog-content-area">
 
-        <!-- Main Featured Card (Left) -->
-        <article class="blog-featured-main" aria-label="Featured article">
-          <div>
-            <span class="blog-tag green">WhatsApp Marketing</span>
-            <h3 class="blog-featured-main-title">WhatsApp Marketing in 2026: Trends, Strategies &amp; Growth Opportunities</h3>
-            <p class="blog-featured-main-desc">Discover the top WhatsApp marketing trends for 2026 and how businesses can use automation to drive growth.</p>
-            <div class="blog-author">
-              <div class="blog-author-avatar" aria-hidden="true">ST</div>
-              <div class="blog-author-meta">
-                <strong>Samyoj Team</strong> · July 18, 2026 · 8 min read
+        <!-- FEATURED ARTICLES -->
+        <section class="blog-featured-section blog-animate" aria-label="Featured articles">
+          <div class="blog-section-header">
+            <h2 class="blog-section-title">Featured Articles</h2>
+            <a class="blog-view-all" href="#">
+              View all articles
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="blog-featured-left-grid">
+
+            <!-- Main Featured Card: text LEFT + image RIGHT -->
+            <a href="blog/what-is-whatsapp-crm.html" class="blog-featured-main" aria-label="Featured article: What is a WhatsApp CRM?">
+              <div class="blog-featured-main-text">
+                <span class="blog-tag green">CRM</span>
+                <h3 class="blog-featured-main-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</h3>
+                <p class="blog-featured-main-desc">Discover the complete guide to WhatsApp CRMs, how they work, and why they are absolutely essential for scaling your business in 2026.</p>
+                <div class="blog-author">
+                  <div class="blog-author-avatar" aria-hidden="true">S</div>
+                  <div class="blog-author-meta">
+                    <strong>Samyoj Team</strong> &middot; July 27, 2026 &middot; 8 min read
+                  </div>
+                </div>
               </div>
+              <div class="blog-featured-img-box">
+                <img src="images/blog_what_is_whatsapp_crm.jpg" alt="WhatsApp CRM Guide" width="280" height="210" style="object-fit: cover;" />
+              </div>
+            </a>
+
+            <!-- 3 Stacked Cards -->
+            <div class="blog-featured-stack">
+
+              <a href="blog/top-7-whatsapp-business-api-providers.html" class="blog-stack-card">
+                <div class="blog-stack-thumb">
+                  <img src="images/blog_top_7_whatsapp_api_providers.jpg" alt="WhatsApp API Providers" width="100" height="100" style="object-fit: cover;" />
+                </div>
+                <div class="blog-stack-content">
+                  <span class="blog-tag purple">Comparisons</span>
+                  <h3 class="blog-stack-title">Top 7 WhatsApp Business API Providers (Samyoj vs. Alternatives)</h3>
+                  <p class="blog-meta">July 27, 2026 &middot; 7 min read</p>
+                </div>
+              </a>
+
+              <a href="blog/how-to-set-up-click-to-whatsapp-ads.html" class="blog-stack-card">
+                <div class="blog-stack-thumb">
+                  <img src="images/blog_click_to_whatsapp_ads.jpg" alt="Click-to-WhatsApp Ads" width="100" height="100" style="object-fit: cover;" />
+                </div>
+                <div class="blog-stack-content">
+                  <span class="blog-tag orange">Ads</span>
+                  <h3 class="blog-stack-title">How to Set Up Click-to-WhatsApp Ads for Maximum ROI</h3>
+                  <p class="blog-meta">July 27, 2026 &middot; 6 min read</p>
+                </div>
+              </a>
+
+              <a href="blog/automating-whatsapp-broadcasts.html" class="blog-stack-card">
+                <div class="blog-stack-thumb">
+                  <img src="images/blog_automating_whatsapp_broadcasts.jpg" alt="Automating Broadcasts" width="100" height="100" style="object-fit: cover;" />
+                </div>
+                <div class="blog-stack-content">
+                  <span class="blog-tag green">Automation</span>
+                  <h3 class="blog-stack-title">Automating WhatsApp Broadcasts: A Step-by-Step Guide</h3>
+                  <p class="blog-meta">July 27, 2026 &middot; 5 min read</p>
+                </div>
+              </a>
+
             </div>
+
           </div>
-          <div class="blog-featured-img-box">
-            <img src="images/blog_featured_wa_marketing_3d.jpg" alt="WhatsApp Marketing 2026 3D Illustration" width="480" height="300" />
+        </section>
+
+        <!-- LATEST ARTICLES -->
+        <section class="blog-latest-section blog-animate" aria-label="Latest articles">
+          <div class="blog-section-header">
+            <h2 class="blog-section-title">Latest Articles</h2>
+            <a class="blog-view-all" href="#">
+              View all articles
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
           </div>
-        </article>
 
-        <!-- Middle Column (3 Stacked Cards) -->
-        <div class="blog-featured-stack">
+          <div class="blog-latest-left-grid">
 
-          <article class="blog-stack-card" aria-label="Article: 7 WhatsApp Automation Workflows">
-            <div class="blog-stack-thumb">
-              <img src="images/blog_automation_robot_3d.jpg" alt="Automation Workflows" width="100" height="100" />
-            </div>
-            <div class="blog-stack-content">
-              <span class="blog-tag green">Automation</span>
-              <h3 class="blog-stack-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</h3>
-              <p class="blog-meta">July 15, 2026 · 6 min read</p>
-            </div>
-          </article>
+            <a href="blog/whatsapp-conversational-commerce.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_whatsapp_conversational_commerce.jpg" alt="Conversational Commerce" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag orange">E-commerce</span>
+                <h3 class="blog-card-title">WhatsApp Conversational Commerce: The Future of Checkout</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 6 min read</p>
+              </div>
+            </a>
 
-          <article class="blog-stack-card" aria-label="Article: How AI Agents Can Improve Customer Support">
-            <div class="blog-stack-thumb">
-              <img src="images/blog_ai_agent_3d.jpg" alt="AI Support Agents" width="100" height="100" />
-            </div>
-            <div class="blog-stack-content">
-              <span class="blog-tag blue">AI &amp; Chatbots</span>
-              <h3 class="blog-stack-title">How AI Agents Can Improve Customer Support on WhatsApp</h3>
-              <p class="blog-meta">July 11, 2026 · 7 min read</p>
-            </div>
-          </article>
+            <a href="blog/ai-agents-in-whatsapp.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_ai_agents_in_whatsapp.jpg" alt="AI Agents" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag blue">AI &amp; Chatbots</span>
+                <h3 class="blog-card-title">AI Agents in WhatsApp: Transforming Customer Support</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 7 min read</p>
+              </div>
+            </a>
 
-          <article class="blog-stack-card" aria-label="Article: What's New in Samyoj June 2026">
-            <div class="blog-stack-thumb">
-              <img src="images/blog_gift_box_3d.jpg" alt="Product Updates" width="100" height="100" />
-            </div>
-            <div class="blog-stack-content">
-              <span class="blog-tag green">Product Updates</span>
-              <h3 class="blog-stack-title">What's New in Samyoj: June 2026 Product Roundup</h3>
-              <p class="blog-meta">July 8, 2026 · 5 min read</p>
-            </div>
-          </article>
+            <a href="blog/how-to-collect-payments-on-whatsapp.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_whatsapp_payments.jpg" alt="WhatsApp Payments" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Payments</span>
+                <h3 class="blog-card-title">How to Collect Payments Directly on WhatsApp</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 5 min read</p>
+              </div>
+            </a>
 
+            <a href="blog/whatsapp-lead-generation-strategies.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_whatsapp_lead_generation.jpg" alt="Lead Generation" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag purple">Growth Tips</span>
+                <h3 class="blog-card-title">WhatsApp Lead Generation Strategies for D2C Brands</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 8 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-automation-examples.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_whatsapp_automation_examples.jpg" alt="Automation Examples" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Automation</span>
+                <h3 class="blog-card-title">5 WhatsApp Automation Examples That Boost Sales by 300%</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 6 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/ultimate-whatsapp-marketing-strategy-2026.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_ultimate_whatsapp_marketing_strategy_2026.jpg" alt="WhatsApp Marketing Strategy" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">WhatsApp Marketing</span>
+                <h3 class="blog-card-title">The Ultimate WhatsApp Marketing Strategy for 2026</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 10 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-marketing-2026-trends.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_hero_dashboard_3d.jpg" alt="WhatsApp Marketing 2026 Trends" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Trends</span>
+                <h3 class="blog-card-title">WhatsApp Marketing Trends in 2026: What Every Marketer Needs to Know</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 7 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-flows-guide-in-chat-forms.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_faq_robot_3d.jpg" alt="WhatsApp Flows Guide 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Automation</span>
+                <h3 class="blog-card-title">WhatsApp Flows Guide: How to Build Interactive In-Chat Forms &amp; Booking in 2026</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 8 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-business-calling-voice-ai.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_loyalty_3d.jpg" alt="WhatsApp Business Calling 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag blue">AI &amp; Chatbots</span>
+                <h3 class="blog-card-title">WhatsApp Business Calling &amp; Voice AI: Combining Voice + Text in 2026</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 7 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/meta-whatsapp-api-pricing-2026-guide.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_gift_box_3d.jpg" alt="Meta WhatsApp API Pricing 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag purple">Comparisons</span>
+                <h3 class="blog-card-title">Meta WhatsApp API Pricing 2026: Cost Optimization &amp; Category Playbook</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 6 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-click-to-chat-ads-vs-landing-pages.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/wa_marketing_hero_3d.jpg" alt="Click to WhatsApp Ads Benchmark 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag orange">Ads</span>
+                <h3 class="blog-card-title">Click-to-WhatsApp Ads vs. Traditional Landing Pages: 2026 ROI Benchmark Report</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 6 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/how-to-avoid-whatsapp-account-bans-quality-score.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_featured_wa_marketing_3d.jpg" alt="Avoid WhatsApp Account Bans 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Growth Tips</span>
+                <h3 class="blog-card-title">How to Avoid WhatsApp Account Bans &amp; Maintain a 100% Quality Score in 2026</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 7 min read</p>
+              </div>
+            </a>
+
+            <a href="blog/whatsapp-crm-for-shopify-ecommerce-automation.html" class="blog-card">
+              <div class="blog-card-thumb"><img src="images/blog_integrations_3d.jpg" alt="Shopify WhatsApp CRM 2026" width="300" height="180" style="object-fit: cover;" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag green">Integrations</span>
+                <h3 class="blog-card-title">WhatsApp CRM for Shopify &amp; E-commerce: Automated Abandoned Cart &amp; COD Verification</h3>
+                <p class="blog-card-meta">July 27, 2026 &middot; 8 min read</p>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+      </div><!-- end .blog-content-area -->
+
+      <!-- Right: Sidebar -->
+      <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+        <div class="blog-search">
+          <label for="blog-search-input" class="sr-only">Search articles</label>
+          <input type="search" id="blog-search-input" placeholder="Search articles..." aria-label="Search articles">
+          <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
         </div>
 
-        <!-- Sidebar (Right) -->
-        <aside class="blog-sidebar" aria-label="Blog sidebar">
+        <div class="blog-sidebar-box">
+          <h3>Popular Posts</h3>
+          <ol class="blog-popular-list">
+            <li class="blog-popular-item"><div class="blog-popular-num">1</div><div class="blog-popular-text"><a href="blog/what-is-whatsapp-crm.html" class="blog-popular-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</a><div class="blog-popular-date">July 27, 2026</div></div></li>
+            <li class="blog-popular-item"><div class="blog-popular-num">2</div><div class="blog-popular-text"><a href="blog/top-7-whatsapp-business-api-providers.html" class="blog-popular-title">Top 7 WhatsApp Business API Providers (Samyoj vs. Alternatives)</a><div class="blog-popular-date">July 27, 2026</div></div></li>
+            <li class="blog-popular-item"><div class="blog-popular-num">3</div><div class="blog-popular-text"><a href="blog/whatsapp-marketing-2026-trends.html" class="blog-popular-title">WhatsApp Marketing Trends in 2026: What Every Marketer Needs to Know</a><div class="blog-popular-date">July 27, 2026</div></div></li>
+            <li class="blog-popular-item"><div class="blog-popular-num">4</div><div class="blog-popular-text"><a href="blog/automating-whatsapp-broadcasts.html" class="blog-popular-title">Automating WhatsApp Broadcasts: A Step-by-Step Guide</a><div class="blog-popular-date">July 27, 2026</div></div></li>
+            <li class="blog-popular-item"><div class="blog-popular-num">5</div><div class="blog-popular-text"><a href="blog/how-to-set-up-click-to-whatsapp-ads.html" class="blog-popular-title">How to Set Up Click-to-WhatsApp Ads for Maximum ROI</a><div class="blog-popular-date">July 27, 2026</div></div></li>
+          </ol>
+        </div>
 
-          <!-- Search Input -->
-          <div class="blog-search">
-            <label for="blog-search-input" class="sr-only">Search articles</label>
-            <input type="search" id="blog-search-input" placeholder="Search articles..." aria-label="Search articles">
-            <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-            </svg>
-          </div>
+        <div class="blog-sidebar-box">
+          <h3>Categories</h3>
+          <ul class="blog-categories-list" aria-label="Article categories">
+            <li class="blog-cat-item" data-cat="wa-marketing"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></div><span class="blog-cat-name">WhatsApp Marketing</span></div><span class="blog-cat-count">3</span></a></li>
+            <li class="blog-cat-item" data-cat="automation"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6-3.6z"/></svg></div><span class="blog-cat-name">Automation</span></div><span class="blog-cat-count">3</span></a></li>
+            <li class="blog-cat-item" data-cat="ai-chatbots"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5.72C10.4 5.38 10 4.74 10 4a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 5h6v1.5H9V16z"/></svg></div><span class="blog-cat-name">AI &amp; Chatbots</span></div><span class="blog-cat-count">2</span></a></li>
+            <li class="blog-cat-item" data-cat="comparisons"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg></div><span class="blog-cat-name">Comparisons</span></div><span class="blog-cat-count">2</span></a></li>
+            <li class="blog-cat-item" data-cat="ecommerce"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div><span class="blog-cat-name">E-commerce</span></div><span class="blog-cat-count">2</span></a></li>
+            <li class="blog-cat-item" data-cat="growth-tips"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div><span class="blog-cat-name">Growth Tips</span></div><span class="blog-cat-count">2</span></a></li>
+            <li class="blog-cat-item" data-cat="ads"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div><span class="blog-cat-name">Ads</span></div><span class="blog-cat-count">2</span></a></li>
+            <li class="blog-cat-item" data-cat="payments"><a href="javascript:void(0)" class="blog-cat-link"><div class="blog-cat-left"><div class="blog-cat-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div><span class="blog-cat-name">Payments</span></div><span class="blog-cat-count">1</span></a></li>
+          </ul>
+        </div>
 
-          <!-- Popular Posts -->
-          <div class="blog-sidebar-box">
-            <h3>Popular Posts</h3>
-            <ol class="blog-popular-list" aria-label="Popular posts">
-              <li class="blog-popular-item">
-                <div class="blog-popular-num" aria-hidden="true">1</div>
-                <div class="blog-popular-text">
-                  <div class="blog-popular-title">WhatsApp Business API: A Complete Guide for Businesses in 2026</div>
-                  <div class="blog-popular-date">July 10, 2026</div>
-                </div>
-              </li>
-              <li class="blog-popular-item">
-                <div class="blog-popular-num" aria-hidden="true">2</div>
-                <div class="blog-popular-text">
-                  <div class="blog-popular-title">How to Increase Response Rate on WhatsApp</div>
-                  <div class="blog-popular-date">July 6, 2026</div>
-                </div>
-              </li>
-              <li class="blog-popular-item">
-                <div class="blog-popular-num" aria-hidden="true">3</div>
-                <div class="blog-popular-text">
-                  <div class="blog-popular-title">WhatsApp Template Messages: Best Practices &amp; Examples</div>
-                  <div class="blog-popular-date">July 1, 2026</div>
-                </div>
-              </li>
-              <li class="blog-popular-item">
-                <div class="blog-popular-num" aria-hidden="true">4</div>
-                <div class="blog-popular-text">
-                  <div class="blog-popular-title">A Beginner's Guide to CRM for Small Businesses</div>
-                  <div class="blog-popular-date">June 28, 2026</div>
-                </div>
-              </li>
-              <li class="blog-popular-item">
-                <div class="blog-popular-num" aria-hidden="true">5</div>
-                <div class="blog-popular-text">
-                  <div class="blog-popular-title">How to Segment Your Audience on WhatsApp Like a Pro</div>
-                  <div class="blog-popular-date">June 25, 2026</div>
-                </div>
-              </li>
-            </ol>
-          </div>
+      </aside><!-- end .blog-sidebar -->
 
-          <!-- Categories -->
-          <div class="blog-sidebar-box">
-            <h3>Categories</h3>
-            <ul class="blog-categories-list" aria-label="Article categories">
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">WhatsApp Marketing</span>
-                </div>
-                <span class="blog-cat-count">18</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">Automation</span>
-                </div>
-                <span class="blog-cat-count">14</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5.72C10.4 5.38 10 4.74 10 4a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 5h6v1.5H9V16z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">AI &amp; Chatbots</span>
-                </div>
-                <span class="blog-cat-count">12</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">Product Updates</span>
-                </div>
-                <span class="blog-cat-count">10</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">CRM</span>
-                </div>
-                <span class="blog-cat-count">08</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">Growth Tips</span>
-                </div>
-                <span class="blog-cat-count">09</span>
-              </li>
-              <li class="blog-cat-item">
-                <div class="blog-cat-left">
-                  <div class="blog-cat-icon">
-                    <svg viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a3.001 3.001 0 0 0 0-4.24 3.001 3.001 0 0 0-4.24 0l-3.53 3.53a3.001 3.001 0 0 0 0 4.24zm2.82-2.82c-.41-.39-.41-1.03 0-1.42.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.42l-.47.48a3.001 3.001 0 0 0 0 4.24 3.001 3.001 0 0 0 4.24 0l3.53-3.53a3.001 3.001 0 0 0 0-4.24z"/></svg>
-                  </div>
-                  <span class="blog-cat-name">Integrations</span>
-                </div>
-                <span class="blog-cat-count">07</span>
-              </li>
-            </ul>
-          </div>
-
-        </aside>
-
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         LATEST ARTICLES GRID
-    ════════════════════════════════════════════════════════ -->
-    <section class="blog-latest-section blog-animate" aria-label="Latest articles">
-      <div class="blog-section-header">
-        <h2 class="blog-section-title">Latest Articles</h2>
-        <a class="blog-view-all" href="#">
-          View all articles
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-      <div class="blog-latest-grid">
-
-        <article class="blog-card" aria-label="Article: 5 Proven Ways to Generate More Leads on WhatsApp">
-          <div class="blog-card-thumb">
-            <img src="images/blog_leads_3d.jpg" alt="5 Proven Ways to Generate More Leads" width="300" height="180" />
-          </div>
-          <div class="blog-card-body">
-            <span class="blog-tag green">WhatsApp Marketing</span>
-            <h3 class="blog-card-title">5 Proven Ways to Generate More Leads on WhatsApp</h3>
-            <p class="blog-card-meta">July 16, 2026 · 6 min read</p>
-          </div>
-        </article>
-
-        <article class="blog-card" aria-label="Article: Building Customer Loyalty Through WhatsApp">
-          <div class="blog-card-thumb">
-            <img src="images/blog_loyalty_3d.jpg" alt="Building Customer Loyalty" width="300" height="180" />
-          </div>
-          <div class="blog-card-body">
-            <span class="blog-tag green">Growth Tips</span>
-            <h3 class="blog-card-title">Building Customer Loyalty Through WhatsApp</h3>
-            <p class="blog-card-meta">July 13, 2026 · 5 min read</p>
-          </div>
-        </article>
-
-        <article class="blog-card" aria-label="Article: How to Automate FAQs and Save 80% Support Time">
-          <div class="blog-card-thumb">
-            <img src="images/blog_faq_robot_3d.jpg" alt="Automate FAQs on WhatsApp" width="300" height="180" />
-          </div>
-          <div class="blog-card-body">
-            <span class="blog-tag blue">Automation</span>
-            <h3 class="blog-card-title">How to Automate FAQs and Save 80% Support Time</h3>
-            <p class="blog-card-meta">July 9, 2026 · 6 min read</p>
-          </div>
-        </article>
-
-        <article class="blog-card" aria-label="Article: Connect Samyoj with Google Sheets, Zapier & More">
-          <div class="blog-card-thumb">
-            <img src="images/blog_integrations_3d.jpg" alt="Integrations with Google Sheets and Zapier" width="300" height="180" />
-          </div>
-          <div class="blog-card-body">
-            <span class="blog-tag green">Integrations</span>
-            <h3 class="blog-card-title">Connect Samyoj with Google Sheets, Zapier &amp; More</h3>
-            <p class="blog-card-meta">July 5, 2026 · 4 min read</p>
-          </div>
-        </article>
-
-      </div>
-    </section>
+    </div><!-- end .blog-main-layout -->
 
     <!-- ═══════════════════════════════════════════════════════
          NEWSLETTER SUBSCRIBE BANNER
@@ -1281,51 +1846,36 @@
 ════════════════════════════════════════════════════════ -->
 <footer class="sy-footer" aria-label="Site footer">
   <div class="sy-footer-inner">
-    <div class="blog-footer-grid-custom">
+    <div class="sy-footer-grid">
 
       <!-- Brand column -->
       <div class="sy-footer-brand">
         <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
-          <img src="images/logo.webp" alt="Samyoj — WhatsApp Automation &amp; CRM" width="160" height="43" loading="lazy" decoding="async" />
+          <img src="images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56" loading="lazy" decoding="async" />
         </a>
-        <p class="sy-footer-desc">The all-in-one WhatsApp automation and CRM platform for modern businesses.</p>
+        <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale, backed by reliability.</p>
+        <div class="sy-footer-partner">
+          <img src="images/download.png" alt="Meta Tech Provider" width="160" height="89" loading="lazy" decoding="async" />
+        </div>
+        <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="#e11d48" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg> in India</p>
         <div class="sy-footer-social" aria-label="Social links">
-          <a href="https://www.facebook.com/samyoj" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.23 0-1.61.76-1.61 1.54V12h2.72l-.43 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
-          </a>
-          <a href="https://twitter.com/samyoj_" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z"/></svg>
-          </a>
+          <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+          <a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 2.2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.27 1.3.62 1.8 1.18.57.56.92 1.15 1.19 1.84.25.66.42 1.4.47 2.5.05 1.07.06 1.38.06 4.08s-.01 3.01-.06 4.08c-.05 1.1-.22 1.84-.47 2.5a4.9 4.9 0 0 1-1.19 1.84 4.9 4.9 0 0 1-1.84 1.19c-.66.25-1.4.42-2.5.47-1.07.05-1.38.06-4.08.06s-3.01-.01-4.08-.06c-1.1-.05-1.84-.22-2.5-.47a4.9 4.9 0 0 1-1.84-1.19 4.9 4.9 0 0 1-1.19-1.84c-.25-.66-.42-1.4-.47-2.5C2.21 15.01 2.2 14.7 2.2 12s.01-3.01.06-4.08c.05-1.1.22-1.84.47-2.5.27-.69.62-1.28 1.19-1.84A4.9 4.9 0 0 1 5.76 2.73c.66-.25 1.4-.42 2.5-.47C9.33 2.21 9.64 2.2 12 2.2M12 0C9.28 0 8.94 0 7.86.05 6.77.1 6.02.28 5.37.53A7.08 7.08 0 0 0 2.8 2.8 7.08 7.08 0 0 0 .53 5.37C.28 6.02.1 6.77.05 7.86 0 8.94 0 9.28 0 12s0 3.06.05 4.14c.05 1.09.23 1.84.48 2.49a7.08 7.08 0 0 0 2.27 2.57 7.08 7.08 0 0 0 2.57 2.27c.65.25 1.4.43 2.49.48C8.94 24 9.28 24 12 24s3.06 0 4.14-.05c1.09-.05 1.84-.23 2.49-.48a7.08 7.08 0 0 0 2.57-2.27 7.08 7.08 0 0 0 2.27-2.57c.25-.65.43-1.4.48-2.49C24 15.06 24 14.72 24 12s0-3.06-.05-4.14c-.05-1.09-.23-1.84-.48-2.49a7.08 7.08 0 0 0-2.27-2.57A7.08 7.08 0 0 0 18.63.53C17.98.28 17.23.1 16.14.05 15.06 0 14.72 0 12 0z"/></svg></a>
+          <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z"/></svg></a>
         </div>
       </div>
 
-      <!-- Product column -->
-      <nav class="sy-footer-col" aria-label="Product" style="padding-left:20px;position:relative;">
-        <h4>Product</h4>
+      <!-- Platform column -->
+      <nav class="sy-footer-col" aria-label="Platform">
+        <h4>Platform</h4>
         <ul class="sy-footer-links">
-          <li><a href="features.html">Features</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="#">Integrations</a></li>
-          <li><a href="#">Changelog</a></li>
-        </ul>
-      </nav>
-
-      <!-- Resources column -->
-      <nav class="sy-footer-col" aria-label="Resources" style="padding-left:20px;position:relative;">
-        <h4>Resources</h4>
-        <ul class="sy-footer-links">
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Guides</a></li>
-          <li><a href="#">Webinars</a></li>
-          <li><a href="#">API Docs</a></li>
+          <li><a href="features.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.2 5.4L20 10l-4.5 3.5L16.8 20 12 16.8 7.2 20l1.3-6.5L4 10l5.8-1.6L12 3z"/></svg>Features</a></li>
+          <li><a href="industries.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>Industries</a></li>
+          <li><a href="blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a></li>
+          <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><path d="M9 14v-2a3 3 0 0 1 6 0v2"/></svg>Contact Us</a></li>
+          <li><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a></li>
         </ul>
       </nav>
 
@@ -1396,17 +1946,65 @@
     });
   }
 
+  // Category & Tab Filtering
   var tabs = document.querySelectorAll(".blog-tab");
+  var cards = document.querySelectorAll(".blog-card, .blog-featured-main, .blog-stack-card");
+  var catLinks = document.querySelectorAll(".blog-cat-item");
+
+  function filterCategory(catKey) {
+    if (!catKey) catKey = "all";
+    
+    // Update active state on top filter tabs
+    tabs.forEach(function (t) {
+      var matches = t.getAttribute("data-tab") === catKey || (catKey === "all" && t.getAttribute("data-tab") === "all");
+      t.classList.toggle("active", matches);
+      t.setAttribute("aria-selected", matches ? "true" : "false");
+    });
+
+    // Update active state on sidebar items
+    catLinks.forEach(function (item) {
+      var itemCat = item.getAttribute("data-cat");
+      item.classList.toggle("active", itemCat === catKey);
+    });
+
+    // Filter article cards
+    cards.forEach(function (card) {
+      var cardCat = (card.querySelector(".blog-tag") ? card.querySelector(".blog-tag").textContent.trim().toLowerCase() : "");
+      if (catKey === "all" || catKey === "all topics") {
+        card.style.display = "";
+      } else {
+        var keyClean = catKey.replace("-", "").replace(" ", "");
+        var catClean = cardCat.replace("-", "").replace(" ", "").replace("&", "");
+        if (catClean.indexOf(keyClean) !== -1 || keyClean.indexOf(catClean) !== -1) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      }
+    });
+  }
+
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
-      tabs.forEach(function (t) {
-        t.classList.remove("active");
-        t.setAttribute("aria-selected", "false");
-      });
-      tab.classList.add("active");
-      tab.setAttribute("aria-selected", "true");
+      var catKey = tab.getAttribute("data-tab");
+      filterCategory(catKey);
     });
   });
+
+  catLinks.forEach(function (item) {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      var catKey = item.getAttribute("data-cat");
+      filterCategory(catKey);
+    });
+  });
+
+  // Check URL query parameters (e.g. ?category=automation)
+  var urlParams = new URLSearchParams(window.location.search);
+  var initialCat = urlParams.get("category") || urlParams.get("tab");
+  if (initialCat) {
+    filterCategory(initialCat.toLowerCase());
+  }
 
   var animEls = document.querySelectorAll(".blog-animate");
   var observer = new IntersectionObserver(function (entries) {

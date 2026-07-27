@@ -1,0 +1,4365 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-192x192.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Transparent Pricing Plans & Cost Estimator | Samyoj WhatsApp CRM</title>
+
+  <link rel="canonical" href="https://samyoj.com/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samyoj.com/pricing.html" />
+  <meta property="og:title" content="Simple, Transparent Pricing | Samyoj WhatsApp Business API" />
+  <meta property="og:description"
+    content="Flexible pricing plans for businesses of all sizes. Pay only for what you use with zero hidden markups on WhatsApp Meta charges." />
+  <meta property="og:image" content="https://samyoj.com/images/logo.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samyoj Pricing | Official WhatsApp API CRM" />
+  <meta name="twitter:description"
+    content="Compare Samyoj Launch, Growth, Scale and Enterprise plans. Calculate your custom monthly cost live." />
+
+  <meta name="description"
+    content="Transparent Samyoj pricing plans starting from ₹1,499/mo. Calculate your monthly WhatsApp API, Meta template, and AI agent cost with our live cost estimator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="mobile-buttons.css">
+  <link rel="stylesheet" href="samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="samyoj-mobile-drawer.css">
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <style id="pricing-custom-styles">
+    :root {
+      --sy-green: #03cf65;
+      --sy-green-hover: #00b853;
+      --sy-green-deep: #087a47;
+      --sy-green-light: #eafbf0;
+      --sy-green-border: #bbf7d0;
+      --sy-dark: #0f172a;
+      --sy-body: #64748b;
+      --sy-line: #e6ece9;
+      --wr-max: 1530px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--sy-dark);
+      background-color: #fff;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wr {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      max-width: var(--wr-max);
+    }
+
+    @media (max-width: 768px) {
+      .wr {
+        padding: 0 16px;
+      }
+    }
+
+    /* Common Custom Badge Pill */
+    .custom-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background-color: var(--sy-green-light);
+      border: 1px solid var(--sy-green-border);
+      border-radius: 9999px;
+      color: #00b853;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .custom-badge-pill svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .highlight-green {
+      color: #00b853;
+    }
+
+    .btn-primary-sy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--sy-green);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(3, 207, 101, 0.25);
+    }
+
+    .btn-primary-sy:hover {
+      background-color: var(--sy-green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-sy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--sy-dark);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1.5px solid #d1d5db;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-sy:hover {
+      background-color: #f9fafb;
+      border-color: #9ca3af;
+    }
+
+    /* Hero Section */
+    .hero-pricing-section {
+      padding: 48px 0 50px 0;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .hero-pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 991px) {
+      .hero-pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-pricing-title {
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin: 0 0 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-pricing-title {
+        font-size: 36px;
+      }
+    }
+
+    .hero-pricing-sub {
+      font-size: 16px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .hero-pricing-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-trust-list {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-trust-item svg {
+      width: 16px;
+      height: 16px;
+      color: #00b853;
+    }
+
+    /* Mockup Showcase Card */
+    .hero-mockup-wrapper {
+      position: relative;
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 720px;
+      height: 520px;
+      margin-left: auto;
+      background-image: url('images/ChatGPT Image Jul 27, 2026, 03_23_31 PM.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 991px) {
+      .hero-mockup-wrapper {
+        height: 400px;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-mockup-wrapper {
+        height: 300px;
+      }
+    }
+
+    .hero-pricing-img {
+      display: none;
+    }
+      object-fit: contain;
+      object-position: right center;
+    }
+
+    .mockup-inner-dash {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #edf2f7;
+    }
+
+    .dash-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .dash-logo-text {
+      font-weight: 800;
+      font-size: 16px;
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dash-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .dash-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .dash-stat-card {
+      background: #ffffff;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .dash-stat-label {
+      font-size: 10px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .dash-stat-val {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .dash-stat-pct {
+      font-size: 10px;
+      color: #00b853;
+      font-weight: 600;
+    }
+
+    .dash-chart-card {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .floating-wa-badge {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      background: #25D366;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      color: #fff;
+    }
+
+    .floating-ai-agent-card {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffff;
+      padding: 10px 16px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ai-agent-icon-bg {
+      width: 36px;
+      height: 36px;
+      background: #eafbf0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00b853;
+    }
+
+    .trusted-title strong {
+      color: #00b853;
+      font-weight: 800;
+    }
+
+    .logo-strip-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+
+    .logo-item {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: #334155;
+      opacity: 0.85;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Section 3: Pricing Cards */
+    .pricing-cards-section {
+      padding: 70px 0;
+      background: #ffffff;
+    }
+
+    .billing-toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .toggle-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .toggle-label.active {
+      color: #0f172a;
+      font-weight: 800;
+    }
+
+    .switch-btn {
+      position: relative;
+      width: 52px;
+      height: 28px;
+      background-color: #cbd5e1;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      border: none;
+      padding: 2px;
+    }
+
+    .switch-btn.active {
+      background-color: var(--sy-green);
+    }
+
+    .switch-thumb {
+      width: 24px;
+      height: 24px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.25s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .switch-btn.active .switch-thumb {
+      transform: translateX(24px);
+    }
+
+    .discount-pill {
+      background: var(--sy-green-light);
+      color: #00b853;
+      border: 1px solid var(--sy-green-border);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .cards-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid #e8eef2;
+      border-radius: 18px;
+      padding: 32px 26px 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      min-height: 280px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+    }
+
+    .pricing-card.popular {
+      border: 2px solid #03cf65;
+      box-shadow: 0 14px 36px rgba(3, 207, 101, 0.16);
+    }
+
+    .popular-badge-top {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #03cf65;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .price-main {
+      margin: 8px 0 4px;
+      font-size: 34px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+    }
+
+    .price-val {
+      font-size: 34px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+    }
+
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .plan-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 4px 0;
+    }
+
+    .plan-desc {
+      font-size: 13px;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 16px;
+    }
+
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 16px;
+    }
+
+    .plan-illustration {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      border-radius: 0;
+      object-fit: contain;
+      background: transparent;
+      box-shadow: none;
+      display: block;
+    }
+
+    .plan-illustration img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .price-period {
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+
+    /* Section 4: Transparent Pricing Breakdown */
+    .transparent-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .transparent-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 991px) {
+      .transparent-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .breakdown-cards-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .breakdown-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 14px;
+      flex: 1;
+      min-width: 160px;
+      max-width: 180px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .breakdown-card.total-card {
+      background: #eafbf0;
+      border: 1px solid var(--sy-green-border);
+    }
+
+    .breakdown-icon-circle {
+      width: 56px;
+      height: 56px;
+      background: transparent;
+      border-radius: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #00b853;
+      margin-bottom: 10px;
+      border: none;
+      overflow: visible;
+    }
+
+    .breakdown-icon-circle img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .breakdown-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .breakdown-sub {
+      font-size: 11px;
+      color: #64748b;
+      margin-bottom: 12px;
+      min-height: 28px;
+    }
+
+    .breakdown-val {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .breakdown-val.green {
+      color: #00b853;
+    }
+
+    .math-operator {
+      font-size: 20px;
+      font-weight: 800;
+      color: #00b853;
+    }
+
+    .meta-note-bar {
+      margin-top: 20px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .meta-note-bar a {
+      color: #00b853;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* Section 5: Compare Plans Table */
+    .compare-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .section-center-head {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 40px auto;
+    }
+
+    .section-title-large {
+      font-size: 36px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .compare-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid #e8ece9;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      min-width: 720px;
+      font-family: 'Manrope', system-ui, sans-serif;
+    }
+
+    .compare-table th {
+      background: #f8fafc;
+      padding: 20px 16px;
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 1px solid #e8ece9;
+      letter-spacing: -0.01em;
+      vertical-align: bottom;
+    }
+
+    .compare-table th:first-child {
+      text-align: left;
+      color: #64748b;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .compare-table .plan-th-name {
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .compare-table .plan-th-price {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .compare-table .plan-th-popular {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #00b853;
+      background: #eafbf0;
+      border: 1px solid #b7efc5;
+      border-radius: 999px;
+      padding: 2px 8px;
+      vertical-align: middle;
+    }
+
+    .compare-table td {
+      padding: 16px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+
+    .compare-table td:first-child {
+      text-align: left;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 14px;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table tbody tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    .compare-table .check-yes {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #eafbf0;
+      color: #00b853;
+    }
+
+    .compare-table .check-yes svg {
+      display: block;
+    }
+
+    .compare-table .val-unlimited {
+      color: #00b853;
+      font-weight: 800;
+    }
+
+    /* Section 6: Cost Estimator — match mockup */
+    .estimator-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .estimator-shell {
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      background: #ffffff;
+      padding: 28px 28px 20px;
+      box-shadow: 0 8px 32px rgba(15, 23, 42, 0.04);
+    }
+
+    .estimator-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.2fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .estimator-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .estimator-left .section-title-large {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    .info-how-box {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: #eafbf0;
+      border: 1px solid #b7efc5;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 16px;
+    }
+
+    .info-how-box .how-bulb {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fff;
+      color: #00b853;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid #b7efc5;
+    }
+
+    .how-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #00b853;
+      margin-bottom: 2px;
+    }
+
+    .how-desc {
+      font-size: 12px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .slider-group {
+      background: transparent;
+      padding: 0 0 10px;
+      border-radius: 0;
+      border: none;
+      margin-bottom: 2px;
+      box-shadow: none;
+    }
+
+    .slider-group:hover {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    .slider-top-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 10px;
+    }
+
+    .slider-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slider-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: transparent;
+      color: #00b853;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .slider-icon svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+
+    .slider-val-box {
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+      min-width: 64px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    .custom-range-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #00b853 0%, #00b853 var(--pct, 0%), #e2e8f0 var(--pct, 0%), #e2e8f0 100%);
+      border-radius: 999px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .custom-range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2.5px solid #00b853;
+      box-shadow: 0 1px 4px rgba(0, 184, 83, 0.25);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .custom-range-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.08);
+    }
+
+    .custom-range-slider::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2.5px solid #00b853;
+      box-shadow: 0 1px 4px rgba(0, 184, 83, 0.25);
+      cursor: pointer;
+    }
+
+    .custom-range-slider::-moz-range-track {
+      height: 5px;
+      background: #e2e8f0;
+      border-radius: 999px;
+    }
+
+    .slider-marks-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .cost-summary-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 18px 0;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .cost-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .cost-card-top .est-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #00b853;
+    }
+
+    .gst-tag {
+      background: #eafbf0;
+      color: #00b853;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 7px;
+      border-radius: 6px;
+      border: 1px solid #b7efc5;
+    }
+
+    .est-total-num {
+      font-size: 34px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .est-total-num .per-mo {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+      margin-left: 4px;
+    }
+
+    .est-break-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #475569;
+      padding: 6px 0;
+      border-bottom: 1px solid #f1f5f9;
+      gap: 10px;
+    }
+
+    .est-break-row strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .est-total-final {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      padding: 10px 0 12px;
+      margin-top: 0;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .cost-card-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #eafbf0;
+      margin: 0 -18px;
+      padding: 10px 16px;
+      border-top: 1px solid #b7efc5;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .cost-card-footer svg {
+      flex-shrink: 0;
+      color: #00b853;
+      width: 16px;
+      height: 16px;
+    }
+
+    .annual-banner-bar {
+      margin-top: 18px;
+      background: #eafbf0;
+      border: 1px solid #b7efc5;
+      border-radius: 12px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .annual-banner-bar .annual-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .annual-banner-bar .annual-tag {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #fff;
+      color: #00b853;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #b7efc5;
+      flex-shrink: 0;
+    }
+
+    /* Section 7: Why Samyoj — match mockup */
+    .why-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .why-section .section-center-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px auto;
+    }
+
+    .why-section .section-center-head .custom-badge-pill {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .why-section .section-title-large {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .why-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .why-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .why-grid-5 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .why-card {
+      background: #ffffff;
+      border: 1px solid #e8ece9;
+      border-radius: 16px;
+      padding: 28px 18px 24px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .why-card:hover {
+      border-color: #b7efc5;
+      box-shadow: 0 8px 24px rgba(0, 184, 83, 0.08);
+    }
+
+    .why-icon-img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 16px auto;
+    }
+
+    .why-card-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .why-card-desc {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .why-explore-link {
+      display: inline-block;
+      color: #00b853;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 15px;
+      border-bottom: 2px solid #00b853;
+      padding-bottom: 2px;
+    }
+
+    .why-explore-link:hover {
+      color: #059669;
+      border-bottom-color: #059669;
+    }
+
+    /* Section 8: Customer Stories */
+    .testimonials-section {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+
+    .testimonials-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .testimonials-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .quote-icon {
+      font-size: 28px;
+      color: #00b853;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .metric-badge-pill {
+      background: #eafbf0;
+      border: 1px solid var(--sy-green-border);
+      border-radius: 20px;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .metric-val {
+      font-size: 12px;
+      font-weight: 800;
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .metric-val svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .metric-sub {
+      font-size: 10px;
+      color: #64748b;
+    }
+
+    .author-info-flex {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .author-title {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* Section 9: FAQ Accordion */
+    /* FAQ Section (matches index.html) */
+    .custom-faq-section {
+      background-color: #ffffff;
+      padding: 80px 0;
+    }
+
+    .custom-faq-list {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .custom-faq-item {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      text-align: left;
+    }
+
+    .custom-faq-item[open] {
+      border-color: #c9f2d6;
+      box-shadow: 0 4px 16px rgba(0, 184, 83, 0.08);
+    }
+
+    .custom-faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      list-style: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    .custom-faq-q::-webkit-details-marker {
+      display: none;
+    }
+
+    .custom-faq-icon {
+      color: #00b853;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .custom-faq-item[open] .custom-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .custom-faq-a {
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 12px;
+      text-align: left;
+    }
+
+    .custom-faq-a p {
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .custom-faq-item {
+        padding: 18px 20px;
+      }
+
+      .custom-faq-q {
+        font-size: 16px;
+      }
+
+      .custom-faq-a {
+        font-size: 14px;
+      }
+    }
+
+    /* Section 10: Still Questions CTA Bar */
+    .cta-questions-bar {
+      padding: 40px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .cta-questions-inner {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa-btn-global {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .floating-wa-btn-global:hover {
+      transform: scale(1.08);
+    }
+  </style>
+<style id="shared-site-chrome">
+    body {
+      margin: 0;
+      padding: 0;
+      --wr-max: 1530px;
+      position: relative;
+      word-wrap: anywhere;
+      word-break: break-word;
+      line-height: 1.5;
+      --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
+      overflow-wrap: anywhere;
+      text-rendering: optimizeLegibility;
+      background-color: #fff;
+      --color-0j9q5wzxu4: rgb(35, 110, 52);
+      --color-19vuazmlrx: rgb(244, 194, 28);
+      --color-3cg413bfwq: rgb(3, 207, 101);
+      --color-3d8oqq7pn0: rgb(247, 247, 247);
+      --color-3i6zt6y015: rgb(234, 255, 212);
+      --color-4jixmvwln5: rgb(255, 255, 255);
+      --color-4quw8nw0c3: rgb(255, 255, 255);
+      --color-6u3ujrz93m: rgb(226, 64, 64);
+      --color-6x7yajbzq8: rgb(241, 255, 254);
+      --color-78gpl7a6pk: rgb(0, 0, 255);
+      --color-7e2r07l3zy: rgb(97, 180, 127);
+      --color-8wh7a0o1tk: rgb(193, 251, 215);
+      --color-98jhuztu1o: rgb(255, 255, 255);
+      --color-aydeg2r5l1: rgb(0, 158, 70);
+      --color-but7warbsy: rgb(245, 245, 245);
+      --color-clnscucmfv: rgb(245, 245, 245);
+      --color-d96et765k8: rgb(255, 255, 255);
+      --color-ec193fft96: rgb(245, 245, 245);
+      --color-fyvphquklg: rgb(43, 184, 23);
+      --color-h4d8xr3b5c: rgb(9, 3, 21);
+      --color-h6kg3sf4dy: rgb(0, 158, 70);
+      --color-hu5l99jqa9: rgb(216, 252, 213);
+      --color-i0t6osn9l8: rgb(66, 189, 97);
+      --color-iu4m8xz7bm: rgb(37, 211, 102);
+      --color-kvo1e9oddg: rgb(232, 248, 247);
+      --color-lmyqc39b9l: rgb(191, 246, 212);
+      --color-m5m75wuwcg: rgb(228, 228, 228);
+      --color-mj3vqzzoqr: rgb(64, 182, 94);
+      --color-mn62zg2f0e: rgb(31, 203, 158);
+      --color-n47wl2uaqz: rgb(38, 10, 10);
+      --color-n74cyk9sjw: rgb(48, 193, 102);
+      --color-o1pft3cns8: rgb(66, 184, 96);
+      --color-oplvrk0a1u: rgb(255, 220, 220);
+      --color-oy2auwq2wj: rgb(230, 255, 243);
+      --color-pbc0wg5aw4: rgb(225, 248, 246);
+      --color-pecg2paryr: rgb(252, 252, 190);
+      --color-pl7p7s5fxy: rgb(202, 37, 220);
+      --color-pm2z8ahclw: rgb(10, 62, 66);
+      --color-qqag09z9tx: rgb(230, 255, 232);
+      --color-rcold81an2: rgb(14, 169, 102);
+      --color-s3zw9us4rj: rgb(215, 233, 255);
+      --color-stv0grl7zs: rgb(255, 27, 27);
+      --color-tt2sijzlku: rgb(255, 255, 255);
+      --color-uitpwgrxcf: rgb(244, 244, 244);
+      --color-vtu49zc5x9: rgb(55, 115, 206);
+      --color-xiteay6278: rgb(255, 255, 255);
+      --color-xko1pcmhhx: rgb(10, 62, 66);
+      --color-zm0o52sbyx: rgb(185, 185, 185);
+      --gradient-4j5rl3o43s: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+      --gradient-8qt0qiqn7q: linear-gradient(45deg, rgb(116, 214, 172) 0%, rgb(0, 55, 31) 100%);
+      --gradient-9r0pw2mwet: linear-gradient(45deg, rgb(46, 125, 50) 0%, #495057 100%);
+      --gradient-amq8lxdisy: linear-gradient(45deg, rgb(217, 253, 205) 0%, rgb(247, 255, 214) 100%);
+      --gradient-bratipf0ig: linear-gradient(45deg, rgb(46, 125, 50) 0%, rgb(46, 125, 50) 100%);
+      --gradient-c346x9e8ts: linear-gradient(45deg, rgb(46, 125, 50) 0%, rgb(102, 187, 106) 100%);
+      --gradient-dvc81nyy1o: linear-gradient(45deg, rgb(163, 188, 213) 0%, #495057 100%);
+      --gradient-jqrrxq8qda: linear-gradient(45deg, rgb(35, 110, 52) 0%, rgb(35, 110, 52) 100%);
+      --gradient-kie94mozyx: linear-gradient(45deg, #212529 0%, rgb(46, 54, 63) 100%);
+      --gradient-o27yx5fkz8: linear-gradient(45deg, rgb(11, 187, 131) 0%, rgb(23, 27, 31) 100%);
+      --gradient-odxm5pezs4: linear-gradient(45deg, rgb(12, 173, 122) 0%, rgb(0, 36, 24) 100%);
+      --gradient-r1lbo5ssip: linear-gradient(45deg, rgb(191, 245, 177) 0%, rgb(225, 255, 238) 100%);
+      --gradient-vub2itsvad: linear-gradient(45deg, #212529 0%, rgb(112, 133, 151) 100%);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    a,
+    .link {
+      color: var(--color-text-link);
+      font-weight: var(--fontWeight-text-medium);
+      text-decoration: none;
+    }
+
+    a:not(.btn):hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      font-weight: var(--fontWeight-text-heavy);
+    }
+
+    #measure-layer {
+      z-index: -1;
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .theme-sub_wf76sy1ski {
+      font: normal normal 400 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      color: rgb(105, 105, 105);
+      font-size: max(calc(12px * var(--fontScaleFactor)), 16px);
+      --color-bg: rgb(255, 255, 255);
+      background: rgb(255, 255, 255);
+      --font-hero: normal normal 600 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --font-text: normal normal 400 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      --font-title: normal normal 600 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --border-width: 1px;
+      --font-subtitle: normal normal 400 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --fontSize-hero: calc(56px * var(--fontScaleFactor));
+      --fontSize-text: max(calc(12px * var(--fontScaleFactor)), 16px);
+      --fontSize-title: calc(48px * var(--fontScaleFactor));
+      --color-text-link: rgb(3, 207, 101);
+      --font-subheading: normal normal 400 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --fontScaleFactor: 1;
+      --lineHeight-hero: normal;
+      --lineHeight-title: normal;
+      --fontSize-subtitle: calc(20px * var(--fontScaleFactor));
+      --color-text-primary: rgb(0, 0, 0);
+      --color-border-normal: rgb(229, 229, 229);
+      --fontSize-subheading: calc(18px * var(--fontScaleFactor));
+      --fontWeight-subtitle: 400;
+      --lineHeight-subtitle: inherit;
+      --color-accent-primary: rgb(2, 221, 108);
+      --color-text-secondary: rgb(105, 105, 105);
+      --fontWeight-text-heavy: 600;
+      --lineHeight-subheading: inherit;
+      --fontWeight-text-medium: 500;
+    }
+
+    @media (max-width: 768px) {
+      .theme-sub_wf76sy1ski {
+        --fontSize-hero: calc(56px * var(--fontScaleFactor));
+        --fontSize-title: max(calc(48px * var(--fontScaleFactor)), 20px);
+        --fontScaleFactor: 0.75;
+        --fontSize-subtitle: max(calc(20px * var(--fontScaleFactor)), 16px);
+        --fontSize-subheading: max(calc(18px * var(--fontScaleFactor)), 16px);
+      }
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn {
+      font: normal normal 500 1em 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      background: rgb(253, 253, 253);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+      border-color: rgb(0, 0, 0);
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn.primary {
+      color: rgb(253, 253, 253);
+      background: rgb(3, 207, 101);
+      border-style: solid;
+      border-width: 0;
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn:hover {
+      color: rgb(0, 0, 0);
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+    }
+
+    .buttons-btn_nob6m8rpy4 .btn.primary:hover {
+      color: rgb(255, 254, 254);
+      background: rgb(66, 184, 96);
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards-card_6lmqy9qaws {
+      --card-bg: rgb(255, 255, 255);
+      --card-boxShadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --card-borderColor: rgb(224, 224, 224);
+      --card-borderWidth: 1px;
+      --card-borderRadius: 10px;
+      --card-textColorPrimary: rgb(0, 0, 0);
+      --card-textColorSecondary: rgb(121, 121, 121);
+    }
+
+    .cards-card_ls36se86i4_custom {
+      --card-boxShadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --card-borderColor: rgb(224, 224, 224);
+      --card-borderWidth: 1px;
+      --card-borderRadius: 10px;
+      --card-textColorPrimary: rgb(0, 0, 0);
+      --card-textColorSecondary: rgb(121, 121, 121);
+    }
+
+    .cards-card_nokvo4hc93_custom {
+      --card-bg: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(216, 255, 210) 100%);
+      --card-boxShadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --card-borderColor: rgb(224, 224, 224);
+      --card-borderWidth: 1px;
+      --card-borderRadius: 10px;
+      --card-textColorPrimary: rgb(0, 0, 0);
+      --card-textColorSecondary: rgb(121, 121, 121);
+    }
+
+    .cards-card_ryf0xpoxtm_custom {
+      --card-bg: rgb(255, 255, 255);
+      --card-boxShadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --card-borderColor: rgb(224, 224, 224);
+      --card-borderWidth: 1px;
+      --card-borderRadius: 10px;
+      --card-textColorPrimary: rgb(0, 0, 0);
+      --card-textColorSecondary: rgb(121, 121, 121);
+    }
+
+    .header-hdr_lbofppypi0 {
+      font: normal normal 400 16px 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --font-text: normal normal 400 16px 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      --header-bg: rgb(255, 255, 255);
+      --nav-menu-bg: rgb(255, 255, 255);
+      --nav-drawer-bg: rgb(255, 255, 255);
+      --color-text-primary: rgb(0, 0, 0);
+      --header-borderColor: rgb(229, 229, 229);
+      --header-borderWidth: 1;
+      --header-borderRadius: 10px;
+      --color-text-secondary: rgb(105, 105, 105);
+      --header-fontSize-primary: 16;
+      --header-fontSize-secondary: 16;
+    }
+
+  /* Scroll-reveal only in page content — never hide header nav */
+    body:not(.noScript) main .umso-animated,
+    body:not(.noScript) section .umso-animated {
+      opacity: 0;
+    }
+
+    .umso-animating {
+      animation-name: var(--animationName);
+      animation-delay: calc(var(--animationDelay) * 1ms + var(--listItem-index, 0) * var(--animationStagger) * 1ms);
+      animation-duration: calc(var(--animationDuration, 0) * 1ms);
+      animation-fill-mode: both;
+      animation-timing-function: var(--animationTimingFunction, ease);
+    }
+
+    @media (prefers-reduced-motion) {
+      .umso-animating {
+        animation-name: none;
+      }
+
+      .umso-animated {
+        opacity: initial !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .umso-animating {
+        animation-delay: calc(var(--animationDelay) * 1ms);
+      }
+    }
+
+    @keyframes toTop {
+      0% {
+        opacity: 0;
+        transform: translateY(var(--animationSlideDistance, 10%));
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes toBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(calc(var(--animationSlideDistance, 10%) * -1));
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes toRight {
+      0% {
+        opacity: 0;
+        transform: translateX(calc(var(--animationSlideDistance, 10%) * -1));
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes toLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(var(--animationSlideDistance, 10%));
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: var(--animationFromOpacity, 0);
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scale {
+      0% {
+        opacity: 0;
+        transform: scale(var(--animationFromScale, 0.9));
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .wr {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      max-width: var(--wr-max);
+      box-sizing: border-box;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .wr {
+        padding: 0 15px;
+      }
+    }
+
+    .um-backdrop {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      position: absolute;
+    }
+
+    .um-backdrop>video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .um-backdrop>.overlay {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .madeWithUmso {
+      left: 50%;
+      color: rgb(43, 43, 43) !important;
+      bottom: 10px !important;
+      height: 30px;
+      display: flex !important;
+      padding: 0 9px;
+      z-index: 100;
+      position: fixed !important;
+      animation: keyframes-badgeFade;
+      font-size: 13px;
+      background: #fff !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 6px 13px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-right: -70px !important;
+      border-radius: 6px;
+      text-decoration: none !important;
+      transform-origin: 50% 50%;
+      animation-duration: 1.3s;
+      transition-property: background color;
+    }
+
+    .madeWithUmso svg {
+      color: rgb(43, 43, 43);
+      width: 66px;
+      margin-top: 0;
+      transition: filter 0.2s ease-in-out;
+      margin-left: 6px;
+    }
+
+    .madeWithUmso:hover {
+      color: #fff !important;
+      background: #000000 !important;
+    }
+
+    .madeWithUmso.badge--left {
+      left: initial;
+      margin-left: 10px;
+    }
+
+    .madeWithUmso.badge--right {
+      left: 100%;
+      margin-left: -165px;
+    }
+
+    .madeWithUmso.badge--center {
+      left: 50%;
+      margin-left: -70px;
+    }
+
+    @media (max-width: 750px) {
+      .madeWithUmso.footerBadge {
+        left: 50%;
+        margin-left: -70px;
+      }
+    }
+
+    .madeWithUmso:hover svg {
+      filter: invert(1) saturate(0);
+    }
+
+    @keyframes keyframes-badgeFade {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translate(0, 10px);
+      }
+
+      80% {
+        opacity: 0;
+        transform: scale(0.8) translate(0, 10px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+      }
+    }
+
+    .__umsoEditorHighlight:after {
+      top: 0;
+      left: 0;
+      right: 0;
+      border: 1px dashed #845ef7;
+      bottom: 0;
+      content: "";
+      z-index: 9999;
+      position: absolute;
+      box-shadow: inset 0 0 15px var(--boxShadow-color);
+      border-radius: 5px;
+      animation-name: keyframes-editorHighlight;
+      pointer-events: none;
+      --boxShadow-color: rgba(132, 94, 247, 0.29);
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+
+    @keyframes keyframes-editorHighlight {
+      0% {
+        opacity: 0;
+      }
+
+      45% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .um-gradient-text {
+      background: -webkit-linear-gradient(var(--angle), var(--from), var(--to));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .um-dl-adder {
+      width: 0;
+      z-index: 8;
+      position: relative;
+    }
+
+    .um-dl-adder:before {
+      top: 0;
+      left: -1px;
+      width: 2px;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      border-radius: 2px;
+    }
+
+    .um-dl-adder button {
+      all: unset;
+      top: 50%;
+      left: -10px;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      margin: 0 !important;
+      position: absolute;
+      font-size: 20px;
+      transform: translate(0, -50%);
+      background: var(--eddy-accent);
+      text-align: center;
+      line-height: 20px;
+      border-radius: 50%;
+    }
+
+    .um-droppable {
+      width: 2px;
+      background: var(--eddy-accent);
+      border-radius: 2px;
+    }
+
+    .um-first-section {
+      padding-top: calc(var(--um-header-height) + 10px) !important;
+    }
+
+    .um-hidden-section {
+      gap: 10px;
+      color: #464646;
+      display: flex;
+      padding: 10px 30px;
+      z-index: 1;
+      position: relative;
+      font-size: 13px;
+      box-shadow: 0 0 0 1px #eee;
+      align-items: center;
+      font-family: var(--font-system);
+      font-weight: 400;
+      background-size: 10px 10px;
+      background-image: repeating-linear-gradient(45deg, #eee 0, #eee 1px, #fafafa 0, #fafafa 50%);
+      background-repeat: repeat;
+    }
+
+    @media (max-width: 700px) {
+      .um-hidden-section {
+        text-align: center;
+        flex-direction: column;
+      }
+    }
+
+    .um-hidden-section.um-hideOnDesktop {
+      display: none;
+    }
+
+    .um-hidden-section.um-hideOnTablet {
+      display: none;
+    }
+
+    .um-hidden-section.um-hideOnMobile {
+      display: none;
+    }
+
+    .um-hidden-section svg {
+      flex-shrink: 0;
+    }
+
+    .um-hidden-section strong {
+      font-weight: 500;
+    }
+
+    .um-hidden-section button {
+      all: unset;
+      color: #222;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 12px;
+      background: #eaeaea;
+      flex-shrink: 0;
+      font-weight: 500;
+      border-radius: 3px;
+    }
+
+    .um-hidden-section button:hover {
+      background: #dcdcdc;
+    }
+
+    @media (max-width: 500px) {
+      .um-hidden-section.um-hideOnMobile {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 501px) and (max-width: 769px) {
+      .um-hidden-section.um-hideOnTablet {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 770px) {
+      .um-hidden-section.um-hideOnDesktop {
+        display: flex;
+      }
+    }
+
+    .um-icon {
+      display: flex;
+      position: relative;
+      box-sizing: border-box;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: center;
+    }
+
+    .um-icon:not(svg):not(img) {
+      padding: 0.4em;
+    }
+
+    .um-iconimg {
+      object-fit: contain;
+    }
+
+    .um-icon svg {
+      display: block;
+      position: relative;
+    }
+
+    .um-miniIcon {
+      display: block;
+    }
+
+    .umso-cms-pagination {
+      gap: 10px;
+      margin: 0;
+      display: flex;
+      padding: 0;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .umso-cms-pagination li {
+      display: block;
+    }
+
+    .umso-cms-pagination li.active a {
+      background: color-mix(in srgb, var(--color-text-link), transparent 90%);
+      font-weight: 500;
+      border-color: color-mix(in srgb, var(--color-text-link), transparent 20%);
+    }
+
+    .umso-cms-pagination li a {
+      border: 1px solid var(--color-border-normal);
+      height: 40px;
+      display: block;
+      min-width: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .umso-cms-pagination li a svg {
+      margin-top: 8px;
+    }
+
+    .um-text p {
+      margin: 0;
+    }
+
+    @supports (height: 1lh) {
+      .um-text p:empty {
+        height: 1lh;
+      }
+    }
+
+    @supports not (height: 1lh) {
+      .um-text p:empty:after {
+        content: "\00a0";
+      }
+    }
+
+    .btn {
+      gap: 0.6em;
+      font: normal normal 500 1em var(--font-system), -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+      color: var(--color-text-primary);
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      display: inline-flex;
+      outline: none;
+      padding: 0.7em 0.8em;
+      position: relative;
+      background: #eee;
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+      align-items: center;
+      border-radius: 3px;
+      justify-content: center;
+      text-decoration: none;
+      transition-property: background, color, border, box-shadow;
+    }
+
+    .btn.um-dragging {
+      transition: none;
+    }
+
+    .btn span {
+      text-decoration: none;
+    }
+
+    .btn--large {
+      font-size: 1.2em;
+    }
+
+    .btn--clear {
+      border: none !important;
+      outline: none !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+
+    .btn--wireframe {
+      color: #bbb;
+      background: #f3f3f3;
+      box-shadow: none;
+      border-color: #f3f3f3;
+    }
+
+    .btn svg:not(.um-arrow),
+    .btn img {
+      width: initial;
+      height: 1.2em;
+      margin: -0.1em;
+    }
+
+    .btn--loading {
+      cursor: wait;
+      pointer-events: none;
+    }
+
+    .btn--loading:after {
+      width: 12px;
+      border: 2px solid rgba(125, 125, 125, 0.3);
+      height: 12px;
+      content: '';
+      display: inline-block;
+      animation: keyframes-buttonLoading;
+      margin-left: 0.6em;
+      border-radius: 50%;
+      animation-duration: 0.8s;
+      border-right-color: var(--color-text-secondary);
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .btn--error {
+      color: #fff !important;
+      background: #c92a2a !important;
+    }
+
+    .btn--error:after {
+      float: right;
+      content: '⚠';
+      padding-left: 9px;
+    }
+
+    .btn--success {
+      color: #fff !important;
+      background: #2f9e44 !important;
+    }
+
+    .btn--success:after {
+      float: right;
+      content: '✓';
+      padding-left: 9px;
+    }
+
+    .btn--success:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      position: absolute;
+      box-shadow: 0 0 0 0 #2f9e443b;
+      border-radius: inherit;
+      animation-name: keyframes-buttonSuccess;
+      pointer-events: none;
+      animation-duration: 0.4s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
+    }
+
+    .btn .um-icon {
+      padding: 0;
+    }
+
+    .btn.btn--icon svg,
+    .btn.btn--icon img {
+      width: initial;
+      height: 1.2em;
+      margin: -0.1em;
+    }
+
+    .btn:hover,
+    .btn:hover span {
+      text-decoration: none;
+    }
+
+    @keyframes keyframes-buttonSuccess {
+      from {
+        box-shadow: 0 0 0 0 rgba(47, 158, 68, 0);
+      }
+
+      to {
+        box-shadow: 0 0 0 5px rgba(47, 158, 68, 0.3);
+      }
+    }
+
+    @keyframes keyframes-buttonLoading {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .um-nav-wrapper {
+      color: var(--color-text-primary);
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    .um-nav-wrapper .um-nav-children {
+      flex-shrink: 0;
+    }
+
+    .um-nav-wrapper.um-children-centered {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .um-nav-wrapper .um-nav-drawerTrigger {
+      display: none;
+    }
+
+    .um-nav-wrapper.um-space-between .um-nav-links {
+      margin-right: auto;
+      padding-left: 20px;
+    }
+
+    .um-nav-wrapper.um-links-centered .um-nav-links {
+      flex: 1;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .um-nav-wrapper.um-links-centered .um-nav-children {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .um-nav-wrapper.um-links-centered .um-nav-buttons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .um-nav-wrapper.um-children-centered.um-hidden {
+      margin-left: 40px;
+    }
+
+    .um-nav-wrapper.um-children-centered>div:not(.um-nav-children) {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .um-nav-wrapper.um-children-centered .um-nav-links {
+      padding-right: 20px;
+      justify-content: flex-start;
+    }
+
+    .um-nav-wrapper.um-children-centered .um-nav-buttons {
+      justify-content: flex-end;
+    }
+
+    .um-nav-wrapper.um-children-centered>div:not(.um-nav-children):first-child {
+      justify-content: flex-start;
+    }
+
+    .um-nav-wrapper.um-children-centered>div:not(.um-nav-children):last-child {
+      justify-content: flex-end;
+    }
+
+    .um-nav-wrapper.um-classic .um-nav-children {
+      margin-right: auto;
+    }
+
+    .um-nav-wrapper.um-hidden .um-nav-links {
+      display: none;
+    }
+
+    .um-nav-wrapper.um-hidden .um-nav-buttons {
+      display: none;
+    }
+
+    .um-nav-wrapper.um-hidden .um-lang-picker {
+      display: none;
+    }
+
+    .um-nav-links {
+      margin: 0;
+      display: flex;
+      padding: 0;
+      font-size: 15px;
+      list-style: none;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .um-nav-links>li {
+      position: relative;
+    }
+
+    .um-nav-links>li>button {
+      font: inherit;
+      color: inherit;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: var(--header-fontSize-primary, inherit);
+      background: transparent;
+    }
+
+    .um-nav-links>li>a {
+      font: inherit;
+      color: inherit;
+      padding: 10px 10px;
+      font-size: var(--header-fontSize-primary, inherit);
+      white-space: nowrap;
+    }
+
+    .um-nav-links>li:hover .um-nav-flyout {
+      display: flex;
+    }
+
+    .um-nav-flyout {
+      top: 100%;
+      left: 50%;
+      width: 250px;
+      display: none;
+      padding: 10px;
+      position: absolute;
+      max-width: 250px;
+      min-width: 120px;
+      transform: translate(-50%);
+      background: var(--nav-menu-bg, var(--nav-overlay-bg, var(--nav-flyout-bg)));
+      box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+      ;
+      border-radius: 5px;
+    }
+
+    .um-nav-flyout ul {
+      margin: 0;
+      display: flex;
+      padding: 0;
+      flex-grow: 1;
+      list-style: none;
+      flex-direction: column;
+    }
+
+    .um-nav-item {
+      color: var(--color-text-primary);
+      display: flex;
+      padding: 8px 12px;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    .um-nav-item:hover {
+      background: rgba(141, 141, 141, 0.09);
+      text-decoration: none !important;
+    }
+
+    .um-nav-item div {
+      display: flex;
+      max-width: 230px;
+      word-wrap: break-word;
+      white-space: wrap;
+      overflow-wrap: break-word;
+      flex-direction: column;
+    }
+
+    .um-nav-item span {
+      font: var(--font-text);
+      color: var(--color-text-secondary);
+      display: block;
+      font-size: var(--header-fontSize-secondary, 0.9em);
+      max-width: 230px;
+      word-wrap: break-word;
+      font-weight: 400;
+      white-space: wrap;
+      overflow-wrap: break-word;
+      text-decoration: none;
+    }
+
+    .um-nav-item .um-icon {
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+
+    .um-nav-buttons {
+      gap: 10px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      white-space: nowrap;
+      padding-left: 20px;
+    }
+
+    .um-nav-buttons>button,
+    .um-nav-buttons>a {
+      font-size: 15px;
+    }
+
+    .um-lang-picker {
+      position: relative;
+      margin-left: 5px;
+    }
+
+    .um-lang-picker button {
+      gap: 5px;
+      font: inherit;
+      color: var(--color-text-primary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      font-size: 15px;
+      background: transparent;
+      align-items: center;
+    }
+
+    .um-lang-picker ul {
+      display: none;
+    }
+
+    .um-lang-picker ul.um-open {
+      top: calc(100% + 5px);
+      right: 0;
+      margin: 0;
+      display: flex;
+      padding: 0;
+      z-index: 1000;
+      position: absolute;
+      min-width: 150px;
+      background: var(--nav-menu-bg, var(--nav-overlay-bg, var(--nav-flyout-bg)));
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      border-radius: 5px;
+      flex-direction: column;
+    }
+
+    .um-lang-picker ul.um-open li {
+      font-size: 14px;
+      font-family: var(--system-font);
+    }
+
+    .um-lang-picker ul.um-open li a {
+      color: inherit;
+      display: block;
+      padding: 10px 15px;
+    }
+
+    .um-lang-picker ul.um-open li a:hover {
+      background: var(--color-bg-secondary);
+    }
+
+    .um-lang-picker button svg {
+      color: var(--color-text-primary);
+    }
+
+    .um-nav-drawerTrigger {
+      width: 3em;
+      border: none;
+      height: 3em;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      background: transparent;
+      border-radius: 4px;
+    }
+
+    .um-nav-drawerTrigger:after {
+      top: 9px;
+      left: 7px;
+      width: 26px;
+      height: 4px;
+      content: '';
+      opacity: 0.8;
+      position: absolute;
+      background: var(--color-text-secondary);
+      box-shadow: 0 8px 0 var(--color-text-secondary), 0 16px 0 var(--color-text-secondary);
+      border-radius: 2px;
+    }
+
+    .um-nav-drawerTrigger.um-hidden {
+      display: none;
+    }
+
+    /* Stable nav: CSS breakpoint instead of Umso width-math (fixes desktop hamburger + flicker) */
+    .um-nav-drawerTrigger {
+      z-index: 95;
+      pointer-events: auto;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper.um-hidden .um-nav-links {
+        display: flex !important;
+      }
+
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
+        display: flex !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper .um-nav-buttons {
+        display: none !important;
+      }
+
+      .um-nav-drawerTrigger,
+      .um-nav-drawerTrigger.um-hidden {
+        display: block !important;
+      }
+    }
+
+
+    @keyframes keyframes-navbar {
+      0% {
+        opacity: 0;
+        transform: scale(1) translate(10px, 0px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+      }
+    }
+
+    .um-nav-drawer {
+      top: 0;
+      color: var(--color-text-primary);
+      right: 0;
+      width: 90%;
+      bottom: 0;
+      z-index: 999;
+      overflow: scroll;
+      position: fixed;
+      font-size: 15px;
+      max-width: 300px;
+      background: var(--nav-drawer-bg, var(--nav-overlay-bg, var(--nav-flyout-bg)));
+      box-shadow: 0px 10px 50px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+      border-radius: 0;
+    }
+
+    .um-nav-drawer.um-hidden {
+      display: none;
+    }
+
+    .um-nav-drawer:not(.um-hidden) {
+      animation: keyframes-navbar;
+      transform-origin: 100% 0;
+      animation-duration: 200ms;
+    }
+
+    .um-nav-drawer header {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      border-bottom: 1px solid var(--color-border-normal);
+      justify-content: flex-end;
+    }
+
+    .um-nav-drawer .um-drawer-buttons {
+      margin: 25px;
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .um-nav-drawer .um-drawer-links {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+    }
+
+    .um-nav-drawer .um-drawer-links>li {
+      border-bottom: 1px solid var(--color-border-normal);
+    }
+
+    .um-nav-drawer .um-drawer-links>li>button {
+      all: unset;
+      font: inherit;
+      width: 100%;
+      cursor: pointer;
+      padding: 12px 20px;
+      position: relative;
+      font-size: 1em;
+      box-sizing: border-box;
+      font-weight: var(--fontWeight-text-medium);
+    }
+
+    .um-nav-drawer .um-drawer-links>li>a {
+      font: inherit;
+      color: inherit;
+      display: block;
+      padding: 12px 20px;
+      font-size: 1em;
+    }
+
+    .um-nav-drawer .um-drawer-links>li>ul {
+      margin: 0;
+      display: none;
+      list-style: none;
+      margin-top: -5px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      flex-direction: column;
+    }
+
+    .um-nav-drawer .um-drawer-links>li>ul>li>a {
+      font: inherit;
+      color: inherit;
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+
+    .um-nav-drawer .um-drawer-links li.um-open>ul {
+      display: flex;
+    }
+
+    .um-nav-drawer .um-drawer-links li.um-open button {
+      font: inherit;
+      color: var(--color-text-secondary);
+      opacity: 0.7;
+    }
+
+    .um-nav-drawer .um-drawer-links li.um-open button:before {
+      top: calc(50% - 2px);
+      transform: rotate(135deg);
+    }
+
+    .um-nav-drawer .um-drawer-links>li>button:before {
+      top: calc(50% - 6px);
+      right: 20px;
+      width: 7px;
+      border: 2px solid var(--color-text-secondary);
+      height: 7px;
+      content: "";
+      opacity: 0.6;
+      position: absolute;
+      transform: rotate(-45deg);
+      border-top-width: 0;
+      border-right-width: 0;
+      border-bottom-left-radius: 2px;
+    }
+
+    .um-nav-drawer .um-drawer-buttons button {
+      width: 100%;
+      flex-grow: 1;
+      font-size: 15px !important;
+      margin-bottom: 10px;
+    }
+
+    .um-nav-drawer .um-drawer-buttons button:last-child {
+      margin-bottom: 0;
+    }
+
+    .um-nav-drawer .um-drawer-buttons a {
+      width: 100%;
+      flex-grow: 1;
+      font-size: 15px !important;
+      margin-bottom: 10px;
+    }
+
+    .um-nav-drawer .um-drawer-buttons a:last-child {
+      margin-bottom: 0;
+    }
+
+    .um-nav-drawer header .um-lang-picker {
+      margin-right: auto;
+    }
+
+    .um-nav-drawer header .um-nav-drawerClose {
+      all: unset;
+      width: 40px;
+      border: none;
+      cursor: pointer;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      font-size: 30px;
+      background: transparent;
+      text-align: center;
+    }
+
+    .um-nav-drawer header .um-nav-drawerClose svg {
+      display: inline-block;
+    }
+
+    .um-nav-drawer header .um-lang-picker ul {
+      left: 0;
+      right: initial;
+    }
+
+    .umsoModal {
+      top: 50%;
+      left: 50%;
+      color: black;
+      display: block;
+      padding: 40px;
+      z-index: 10001;
+      position: fixed;
+      min-width: 500px;
+      transform: translate(-50%, -50%);
+      background: white;
+      box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
+      min-height: 300px;
+      overflow-y: initial !important;
+      border-radius: 10px;
+    }
+
+    .umsoModalOverlay {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 10000;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.44);
+    }
+
+    .umsoModalWrapper {
+      display: none;
+    }
+
+    .umsoModalWrapper.umsoModalOpen {
+      display: block;
+    }
+
+    /* Site header shell: samyoj-nav.css (below #aisensy-magic-bar) */
+
+    ._58ce83d8+section,
+    ._58ce83d8+iframe+section {
+      padding-top: calc(var(--um-header-height) + var(--paddingTop));
+    }
+
+    ._58ce83d8 .wr {
+      height: 100%;
+    }
+
+    /* Header bar: samyoj-nav.css (fixed white nav below magic bar) */
+
+    ._37ad9200>.wr {
+      height: 100%;
+    }
+
+    ._f4c879d8 {
+      font: var(--header-fontPrimary, var(--font-system));
+      color: var(--color-text-secondary);
+      height: 100%;
+      display: flex;
+      padding: 0 20px;
+      z-index: 90;
+      position: relative;
+      flex-grow: 1;
+      background: var(--header-bg, transparent);
+      box-shadow: none !important;
+      box-sizing: border-box;
+      align-items: center;
+      border-color: var(--header-borderColor);
+      border-style: solid;
+      border-width: var(--header-borderWidth, 0px);
+      border-radius: 0;
+      flex-direction: row;
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+    ._f4c879d8>a:not(.btn) {
+      color: var(--header-textColorLink);
+    }
+
+    ._592c9c5c {
+      height: 100%;
+      display: flex;
+      position: relative;
+      flex-grow: 1;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    ._730f12a7 {
+      margin: 0;
+      display: flex;
+    }
+
+    ._730f12a7>a,
+    ._730f12a7>span {
+      display: flex;
+      align-items: center;
+    }
+
+    ._730f12a7>a:hover,
+    ._730f12a7>span:hover {
+      text-decoration: none;
+    }
+
+    /* main offset handled in samyoj-nav.css */
+
+    /* Active nav link */
+    .um-nav-links a[aria-current="page"],
+    .um-drawer-links a[aria-current="page"] {
+      color: #087a47 !important;
+      font-weight: 600;
+    }
+
+    /* Hard fix: keep desktop nav horizontal + CTAs styled */
+    @media (min-width: 961px) {
+      .um-nav-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+      }
+
+      .um-nav-wrapper .um-nav-links,
+      .um-nav-wrapper.um-hidden .um-nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 4px;
+      }
+
+      .um-nav-wrapper .um-nav-buttons,
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 10px !important;
+        margin-left: auto;
+      }
+
+      .um-nav-buttons .btn,
+      .um-nav-buttons .btn.primary {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.5em;
+        padding: 0.65em 1em !important;
+        border-radius: 6px !important;
+        text-decoration: none !important;
+        white-space: nowrap;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        border: none !important;
+        cursor: pointer;
+      }
+
+      .um-nav-buttons .btn.primary {
+        background: #03cf65 !important;
+        color: #fff !important;
+      }
+
+      .um-nav-buttons .btn:not(.primary) {
+        background: #fff !important;
+        color: #0f172a !important;
+        border: 1.5px solid #e2e8f0 !important;
+      }
+
+    }
+  </style>
+  <link rel="stylesheet" href="samyoj-nav.css?v=11">
+  <script>
+    (function () {
+      function syncUmBannerHeight() {
+        var bar = document.getElementById('aisensy-magic-bar');
+        var h = (bar && bar.offsetHeight) || 50;
+        document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+        document.body.style.setProperty('--um-banner-height', h + 'px');
+      }
+      syncUmBannerHeight();
+      document.addEventListener('DOMContentLoaded', syncUmBannerHeight);
+      window.addEventListener('load', syncUmBannerHeight);
+      window.addEventListener('resize', syncUmBannerHeight);
+      if (typeof ResizeObserver !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', function () {
+          var bar = document.getElementById('aisensy-magic-bar');
+          if (bar) new ResizeObserver(syncUmBannerHeight).observe(bar);
+        });
+      }
+    })();
+  </script>
+</head>
+
+<body class="noScript">
+  <script>document.body.classList.remove('noScript');</script>
+  <script>
+    (function () {
+      function init() {
+        if (document.getElementById('aisensy-magic-bar')) return;
+        if (!document.getElementById('aisensy-magic-bar-css')) {
+          var st = document.createElement('style');
+          st.id = 'aisensy-magic-bar-css';
+          st.textContent = '#aisensy-magic-bar{position:fixed;top:0;left:0;right:0;z-index:900;font-family:Manrope,system-ui,sans-serif;background:linear-gradient(90deg,#d8f0d4 0%,#eef6cf 40%,#f2f7d8 55%,#e4f2cc 75%,#d8f0d4 100%);border-bottom:1px solid rgba(31,165,72,.12);pointer-events:none}#aisensy-magic-bar .mb-inner{pointer-events:auto;max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:14px}#aisensy-magic-bar .mb-seg{display:inline-flex;align-items:center;gap:10px;min-width:0}#aisensy-magic-bar .mb-divider{width:1px;height:22px;background:rgba(15,46,32,.14);flex:0 0 1px}#aisensy-magic-bar .mb-pill{display:inline-flex;align-items:center;gap:6px;background:#146b3a;color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}#aisensy-magic-bar .mb-spark{width:18px;height:18px;flex:0 0 auto}#aisensy-magic-bar .mb-icon{width:22px;height:22px;color:#1fa548;flex:0 0 auto}#aisensy-magic-bar .mb-title{color:#24362d;font-size:15px;font-weight:600;white-space:nowrap}#aisensy-magic-bar .mb-title strong{color:#1fa548;font-weight:800}#aisensy-magic-bar .mb-cta{display:inline-flex;align-items:center;gap:5px;text-decoration:none;font-size:15px;font-weight:800;color:#1fa548}#aisensy-magic-bar .mb-title-short{display:none}@media(max-width:720px){#aisensy-magic-bar .mb-divider,#aisensy-magic-bar .mb-icon{display:none}#aisensy-magic-bar .mb-title-full{display:none}#aisensy-magic-bar .mb-title-short{display:inline}#aisensy-magic-bar .mb-title{font-size:12.5px;overflow:hidden;text-overflow:ellipsis}#aisensy-magic-bar .mb-cta{margin-left:auto}}';
+          document.head.appendChild(st);
+        }
+        var html = '<div id="aisensy-magic-bar" role="region" aria-label="Announcement"><div class="mb-inner"><div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div><span class="mb-divider" aria-hidden="true"></span><div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div><span class="mb-divider" aria-hidden="true"></span><a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>';
+        document.body.insertAdjacentHTML('afterbegin', html);
+        var bar = document.getElementById('aisensy-magic-bar');
+        function sync() {
+          if (!bar) return;
+          var h = bar.offsetHeight || 50;
+          document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+          document.body.style.setProperty('--um-banner-height', h + 'px');
+        }
+        sync();
+        window.addEventListener('resize', sync);
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+    })();
+  </script>
+
+  <!-- Top Announcement Bar & Header Nav (Matches index.html) -->
+  <header class="_58ce83d8">
+    <style>
+      body {
+        --um-header-height: calc(65px + var(--um-banner-height, 0px))
+      }
+    </style>
+    <div class="umso-header _37ad9200 header-hdr_lbofppypi0 buttons-btn_nob6m8rpy4">
+      <div id="um-header-banner"
+        style="background:var(--gradient-odxm5pezs4);color:var(--color-4jixmvwln5);top:0;left:0;right:0;z-index:89;transform:none;position:fixed">
+        <div class="wr"
+          style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
+          <span class="_071afc96 um-text">
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
+            <!-- -->
+            <style>
+              /* Manrope already loaded via <link> in head */
+
+              #aisensy-magic-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
+              }
+
+              #aisensy-magic-bar.mb-menu-open {
+                display: none !important;
+              }
+
+              /* Hide native Umso banner text; magic bar covers the top fully */
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
+              #aisensy-magic-bar .mb-inner {
+                pointer-events: auto;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #aisensy-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #aisensy-magic-bar .mb-divider {
+                width: 1px;
+                height: 22px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
+              }
+
+              #aisensy-magic-bar .mb-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #146b3a;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+              }
+
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 0 0 auto;
+              }
+
+              #aisensy-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
+              }
+
+              #aisensy-magic-bar .mb-title {
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: -.01em;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #aisensy-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
+              }
+
+              #aisensy-magic-bar .mb-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 800;
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
+              }
+
+              #aisensy-magic-bar .mb-cta svg {
+                width: 16px;
+                height: 16px;
+                color: #1fa548;
+                transition: transform .18s ease;
+              }
+
+              #aisensy-magic-bar .mb-cta:hover svg {
+                transform: translateX(3px);
+              }
+
+              #aisensy-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #aisensy-magic-bar {
+                  padding: 0;
+                }
+
+                #aisensy-magic-bar .mb-inner {
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
+                }
+
+                #aisensy-magic-bar .mb-divider {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
+                }
+
+                #aisensy-magic-bar .mb-title {
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #aisensy-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #aisensy-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #aisensy-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                #aisensy-magic-bar .mb-cta {
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
+                }
+
+                #aisensy-magic-bar .mb-cta svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              @media (max-width:380px) {
+                #aisensy-magic-bar .mb-title {
+                  font-size: 11.5px;
+                }
+
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
+                }
+              }
+            </style>
+            <script>
+              (function () {
+                function init() {
+                  if (document.getElementById('aisensy-magic-bar')) return;
+                  var html =
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div class="mb-inner">' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '</div>' +
+                    '</div>';
+                  document.body.insertAdjacentHTML('afterbegin', html);
+                  var bar = document.getElementById('aisensy-magic-bar');
+
+                  // Feed our real height into Umso's native banner variable so the navbar + content shift down.
+                  function sync() {
+                    var h = bar.offsetHeight;
+                    document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+                    document.body.style.setProperty('--um-banner-height', h + 'px');
+                  }
+                  sync();
+                  if ('ResizeObserver' in window) { new ResizeObserver(sync).observe(bar); }
+                  window.addEventListener('resize', sync);
+                  window.addEventListener('load', sync);
+                  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sync); }
+
+                  // Safety net: hide the banner whenever Umso's mobile menu drawer is open,
+                  // so it can never overlap the menu links (Pricing, etc.). Umso toggles the
+                  // 'um-hidden' class on .um-nav-drawer when the menu opens/closes.
+                  function watchDrawer() {
+                    var drawer = document.querySelector('.um-nav-drawer');
+                    if (!drawer) { return; }
+                    function update() {
+                      var open = !drawer.classList.contains('um-hidden');
+                      bar.classList.toggle('mb-menu-open', open);
+                    }
+                    update();
+                    new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+                  }
+                  watchDrawer();
+                }
+                if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+              })();
+            </script>
+          </span>
+        </div>
+        <script>
+          (function () {
+            function syncBannerHeight() {
+              var magic = document.getElementById('aisensy-magic-bar');
+              var body = document.body;
+              if (magic && !magic.classList.contains('mb-menu-open')) {
+                var mh = magic.offsetHeight || 50;
+                body.style.setProperty('--um-banner-height', mh + 'px');
+                document.documentElement.style.setProperty('--um-banner-height', mh + 'px');
+                return;
+              }
+              var banner = document.getElementById('um-header-banner');
+              if (!banner) return;
+              var h = banner.clientHeight;
+              if (h > 0) {
+                body.style.setProperty('--um-banner-height', h + 'px');
+                document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+              }
+            }
+            syncBannerHeight();
+            var magic = document.getElementById('aisensy-magic-bar');
+            var banner = document.getElementById('um-header-banner');
+            if (typeof ResizeObserver !== 'undefined') {
+              var ro = new ResizeObserver(syncBannerHeight);
+              if (magic) ro.observe(magic);
+              if (banner) ro.observe(banner);
+            }
+            window.addEventListener('resize', syncBannerHeight);
+          })();
+        </script>
+      </div>
+      <div class="umso-animated umso-animating"
+        style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
+        <div class="_f4c879d8">
+          <div class="_592c9c5c wr">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered" style="position:relative">
+              <div class="um-nav-children">
+                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="./images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43" /></a></div>
+              </div>
+              <ul class="um-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
+                  class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              document.getElementById('btn_7z9u86l3cj').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+              </header>
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z"/></svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="features.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z"/><path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/><path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z"/></svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="pricing.html" aria-current="page"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="sy-drawer-label">Pricing</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l7-4 2 1.2V5h7v15"/><path d="M4 20h16"/><path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1"/></svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="blog.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span><span class="sy-drawer-label">Blog</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/><path d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z"/></svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+              </ul>
+              <div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_q2wr5r8dmc"
+                  class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              document.getElementById('btn_q2wr5r8dmc').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_drawer_login_idx" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+              <div class="sy-drawer-foot">
+                <span class="sy-drawer-wa" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.75 13.94c-.24.68-1.4 1.24-1.93 1.32-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.78-4.18-4.93-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1.01-2.41.26-.28.58-.35.77-.35h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.3.02.49-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.32.07.12.07.68-.17 1.36z"/></svg></span>
+                <div class="sy-drawer-foot-copy">
+                  <p class="sy-drawer-foot-title">Built for WhatsApp Business</p>
+                  <p class="sy-drawer-foot-sub"><span class="sy-drawer-bolt" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 10-14h-7l0-6z"/></svg></span> AI Powered CRM</p>
+                </div>
+              </div>
+            </div>
+            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('985hzqm8a3-drawer')); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'), s = document.querySelectorAll('.um-lang-picker'); s && s.length > 0 && s.forEach(function (e) { e.querySelector('button').addEventListener('click', function () { e.querySelector('ul').classList.toggle('um-open') }) }), document.addEventListener('click', function (e) { if (d.contains(e.target) || n.contains(e.target) || e.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'), c = e.querySelector('.um-nav-children'), o = e.querySelector('.um-nav-links'), u = e.querySelector('.um-nav-buttons'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }), i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero Section -->
+    <section class="hero-pricing-section">
+      <div class="wr hero-pricing-grid">
+        <div>
+          <div class="custom-badge-pill">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            PRICING
+          </div>
+          <h1 class="hero-pricing-title">
+            Simple, transparent pricing <span class="highlight-green">that grows</span> with your business
+          </h1>
+          <p class="hero-pricing-sub">
+            Pay only for what you use. Transparent platform pricing, separate WhatsApp charges, and flexible plans for
+            businesses of every size.
+          </p>
+          <div class="hero-pricing-actions">
+            <a href="https://app.samyoj.com" class="btn-primary-sy">Start for FREE →</a>
+            <a href="contact.html" class="btn-outline-sy">Book a Demo →</a>
+          </div>
+          <div class="hero-trust-list">
+            <span class="hero-trust-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              14-Day Free Trial
+            </span>
+            <span>|</span>
+            <span class="hero-trust-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              No Credit Card
+            </span>
+            <span>|</span>
+            <span class="hero-trust-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              Cancel Anytime
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-mockup-wrapper"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: Pricing Cards -->
+    <section class="pricing-cards-section" id="pricing-cards-section">
+      <div class="wr">
+        <div class="billing-toggle-container">
+          <span class="toggle-label active" id="monthly-text">Monthly</span>
+          <button class="switch-btn" id="billing-toggle" aria-label="Toggle Billing Period" aria-pressed="false">
+            <div class="switch-thumb"></div>
+          </button>
+          <span class="toggle-label" id="annual-text">Annual</span>
+          <span class="discount-pill">Save 20%</span>
+        </div>
+
+        <div class="cards-grid-4">
+          <!-- Launch Card -->
+          <div class="pricing-card">
+            <div>
+              <div class="card-header-flex">
+                <div>
+                  <h3 class="plan-name">Launch</h3>
+                  <p class="plan-desc">Everything you need to get started</p>
+                </div>
+                <img class="plan-illustration" src="images/plan-icon-launch.png" alt="" width="72" height="72" loading="lazy" />
+              </div>
+              <div class="price-main">
+                <span class="price-val" data-monthly="₹1,499" data-annual="₹1,199">₹1,499</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Card (Highlighted) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge-top">MOST POPULAR</div>
+            <div>
+              <div class="card-header-flex">
+                <div>
+                  <h3 class="plan-name">Growth</h3>
+                  <p class="plan-desc">Advanced tools to grow faster</p>
+                </div>
+                <img class="plan-illustration" src="images/plan-icon-growth.png" alt="" width="72" height="72" loading="lazy" />
+              </div>
+              <div class="price-main">
+                <span class="price-val" data-monthly="₹3,999" data-annual="₹3,199">₹3,999</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scale Card -->
+          <div class="pricing-card">
+            <div>
+              <div class="card-header-flex">
+                <div>
+                  <h3 class="plan-name">Scale</h3>
+                  <p class="plan-desc">For scaling businesses & teams</p>
+                </div>
+                <img class="plan-illustration" src="images/plan-icon-scale.png" alt="" width="72" height="72" loading="lazy" />
+              </div>
+              <div class="price-main">
+                <span class="price-val" data-monthly="₹8,999" data-annual="₹7,199">₹8,999</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enterprise Card -->
+          <div class="pricing-card">
+            <div>
+              <div class="card-header-flex">
+                <div>
+                  <h3 class="plan-name">Enterprise</h3>
+                  <p class="plan-desc">Custom solutions for large teams</p>
+                </div>
+                <img class="plan-illustration" src="images/plan-icon-enterprise.png" alt="" width="72" height="72" loading="lazy" />
+              </div>
+              <div class="price-main">Custom</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Transparent Pricing Breakdown -->
+    <section class="transparent-section">
+      <div class="wr transparent-grid">
+        <div>
+          <h2 class="section-title-large">
+            No hidden charges. <span class="highlight-green">Just clear,</span> honest pricing.
+          </h2>
+          <p class="section-desc" style="margin-bottom: 24px;">
+            We believe in complete transparency. Your bill is simple and consists of three parts.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pay only for what you use
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Separate platform & usage charges
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No surprises, ever
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="breakdown-cards-row">
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-platform.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">1. Platform Fee</div>
+              <div class="breakdown-sub">Pay for the plan you choose</div>
+              <div class="breakdown-val">₹3,999/mo</div>
+            </div>
+            <div class="math-operator">+</div>
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-meta.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">2. Meta Charges</div>
+              <div class="breakdown-sub">Pay WhatsApp template charges at actuals</div>
+              <div class="breakdown-val green">Pass-through</div>
+            </div>
+            <div class="math-operator">+</div>
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-ai.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">3. AI & Voice</div>
+              <div class="breakdown-sub">Pay for AI tokens & voice minutes</div>
+              <div class="breakdown-val green">Metered</div>
+            </div>
+            <div class="math-operator">=</div>
+            <div class="breakdown-card total-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-total.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">Total Cost</div>
+              <div class="breakdown-sub">Transparent bill for everything</div>
+              <div class="breakdown-val green">Pay Only Consumption</div>
+            </div>
+          </div>
+
+          <div class="meta-note-bar">
+            <span>ⓘ Meta charges are at actuals. We do not markup your WhatsApp usage.</span>
+            <a href="contact.html">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Compare Plans -->
+    <section class="compare-section">
+      <div class="wr">
+        <div class="section-center-head">
+          <div class="custom-badge-pill">COMPARE PLANS</div>
+          <h2 class="section-title-large">Everything you need to <span class="highlight-green">grow</span></h2>
+          <p class="section-desc">All plans include core features. Higher plans unlock unlimited power.</p>
+        </div>
+
+        <div class="compare-table-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>
+                  <span class="plan-th-name">Launch</span>
+                  <span class="plan-th-price">₹1,499/mo</span>
+                </th>
+                <th>
+                  <span class="plan-th-name">Growth <span class="plan-th-popular">POPULAR</span></span>
+                  <span class="plan-th-price">₹3,999/mo</span>
+                </th>
+                <th>
+                  <span class="plan-th-name">Scale</span>
+                  <span class="plan-th-price">₹8,999/mo</span>
+                </th>
+                <th>
+                  <span class="plan-th-name">Enterprise</span>
+                  <span class="plan-th-price">Custom</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>WhatsApp Numbers</td>
+                <td>1 Number</td>
+                <td>3 Numbers</td>
+                <td>10 Numbers</td>
+                <td><span class="val-unlimited">Unlimited</span></td>
+              </tr>
+              <tr>
+                <td>Active Contacts</td>
+                <td>5,000</td>
+                <td>25,000</td>
+                <td>100,000</td>
+                <td><span class="val-unlimited">Unlimited</span></td>
+              </tr>
+              <tr>
+                <td>Broadcast Messages / mo</td>
+                <td>25,000</td>
+                <td>100,000</td>
+                <td>500,000</td>
+                <td><span class="val-unlimited">Unlimited</span></td>
+              </tr>
+              <tr>
+                <td>Team Members</td>
+                <td>2 Members</td>
+                <td>10 Members</td>
+                <td>25 Members</td>
+                <td>Custom</td>
+              </tr>
+              <tr>
+                <td>AI Agent Resolution</td>
+                <td>Basic</td>
+                <td>Advanced 24/7</td>
+                <td>Custom Trained</td>
+                <td>Dedicated LLM</td>
+              </tr>
+              <tr>
+                <td>API & Webhooks</td>
+                <td><span class="check-yes" aria-label="Included"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+                <td><span class="check-yes" aria-label="Included"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+                <td><span class="check-yes" aria-label="Included"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+                <td><span class="check-yes" aria-label="Included"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Cost Estimator -->
+    <section class="estimator-section">
+      <div class="wr">
+        <div class="estimator-shell">
+        <div class="estimator-grid">
+          <div class="estimator-left">
+            <div class="custom-badge-pill">COST ESTIMATOR</div>
+            <h2 class="section-title-large">Estimate your monthly cost <span class="highlight-green">in just a few
+                clicks</span></h2>
+            <p class="section-desc">Adjust your usage and see your estimated monthly cost instantly. Simple,
+              transparent, and accurate.</p>
+            <div class="info-how-box">
+              <span class="how-bulb" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+              </span>
+              <div>
+                <div class="how-title">How it works?</div>
+                <p class="how-desc">Move the sliders based on your expected monthly usage. We'll show you an estimate
+                  based on our transparent pricing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="slider-group">
+              <div class="slider-top-flex">
+                <div class="slider-label">
+                  <span class="slider-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </span>
+                  Active Contacts
+                </div>
+                <div class="slider-val-box" id="val-contacts">10,000</div>
+              </div>
+              <input type="range" class="custom-range-slider" id="slider-contacts" min="1000" max="100000" step="1000"
+                value="10000" aria-label="Active Contacts">
+              <div class="slider-marks-row"><span>1K</span><span>25K</span><span>50K</span><span>100K+</span></div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-top-flex">
+                <div class="slider-label">
+                  <span class="slider-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </span>
+                  Messages / Month
+                </div>
+                <div class="slider-val-box" id="val-messages">50,000</div>
+              </div>
+              <input type="range" class="custom-range-slider" id="slider-messages" min="1000" max="100000" step="1000"
+                value="50000" aria-label="Messages per Month">
+              <div class="slider-marks-row"><span>1K</span><span>25K</span><span>50K</span><span>100K+</span></div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-top-flex">
+                <div class="slider-label">
+                  <span class="slider-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </span>
+                  Team Members
+                </div>
+                <div class="slider-val-box" id="val-team">10</div>
+              </div>
+              <input type="range" class="custom-range-slider" id="slider-team" min="1" max="50" step="1" value="10" aria-label="Team Members">
+              <div class="slider-marks-row"><span>1</span><span>10</span><span>25</span><span>50+</span></div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-top-flex">
+                <div class="slider-label">
+                  <span class="slider-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                  </span>
+                  AI Interactions / Month
+                </div>
+                <div class="slider-val-box" id="val-ai">5,000</div>
+              </div>
+              <input type="range" class="custom-range-slider" id="slider-ai" min="1000" max="50000" step="1000"
+                value="5000" aria-label="AI Interactions per Month">
+              <div class="slider-marks-row"><span>1K</span><span>10K</span><span>25K</span><span>50K+</span></div>
+            </div>
+          </div>
+
+          <div class="cost-summary-card">
+            <div class="cost-card-top">
+              <div class="est-label">Estimated Monthly Cost</div>
+              <span class="gst-tag">18% GST extra</span>
+            </div>
+            <div class="est-total-num">
+              <span id="est-total-price">₹6,742</span><span class="per-mo">/month</span>
+            </div>
+            <div class="est-break-row">
+              <span>Platform Plan (<span id="rec-plan">Growth</span>)</span>
+              <strong id="cost-platform">₹3,999</strong>
+            </div>
+            <div class="est-break-row">
+              <span>Meta Charges (Estimated) ⓘ</span>
+              <strong id="cost-meta">₹1,980</strong>
+            </div>
+            <div class="est-break-row">
+              <span>AI & Voice Usage (Estimated)</span>
+              <strong id="cost-ai">₹763</strong>
+            </div>
+            <div class="est-total-final">
+              <span>Total (Before GST)</span>
+              <span style="color:#00b853;" id="cost-final-sum">₹6,742</span>
+            </div>
+            <div class="cost-card-footer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>You only pay for what you use. No hidden charges, ever.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="annual-banner-bar">
+          <div class="annual-left">
+            <span class="annual-tag" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </span>
+            <div>
+              <strong style="color:#00b853;">Annual billing saves you up to 20%</strong>
+              <div style="font-size:13px; color:#64748b;">All plans are billed annually. Cancel anytime.</div>
+            </div>
+          </div>
+          <a href="#pricing-cards-section" class="btn-primary-sy">View All Plans →</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Why Samyoj -->
+    <section class="why-section">
+      <div class="wr">
+        <div class="section-center-head">
+          <div class="custom-badge-pill">WHY SAMYOJ?</div>
+          <h2 class="section-title-large">Everything you need. <span class="highlight-green">Nothing you don't.</span>
+          </h2>
+          <p class="section-desc">Powerful features, official WhatsApp API, and unmatched support.</p>
+        </div>
+
+        <div class="why-grid-5">
+          <div class="why-card">
+            <img class="why-icon-img" src="images/why-icon-whatsapp.png" alt="" width="72" height="72" loading="lazy" />
+            <h3 class="why-card-title">Official WhatsApp API</h3>
+            <p class="why-card-desc">100% compliant with Meta policies. Safe, secure & reliable.</p>
+          </div>
+          <div class="why-card">
+            <img class="why-icon-img" src="images/why-icon-pricing.png" alt="" width="72" height="72" loading="lazy" />
+            <h3 class="why-card-title">Transparent Pricing</h3>
+            <p class="why-card-desc">Separate platform, Meta & AI charges. No hidden fees.</p>
+          </div>
+          <div class="why-card">
+            <img class="why-icon-img" src="images/why-icon-security.png" alt="" width="72" height="72" loading="lazy" />
+            <h3 class="why-card-title">Enterprise Security</h3>
+            <p class="why-card-desc">End-to-end encryption, role based access & data privacy.</p>
+          </div>
+          <div class="why-card">
+            <img class="why-icon-img" src="images/why-icon-support.png" alt="" width="72" height="72" loading="lazy" />
+            <h3 class="why-card-title">24/7 Expert Support</h3>
+            <p class="why-card-desc">Real humans, real support. Whenever you need us.</p>
+          </div>
+          <div class="why-card">
+            <img class="why-icon-img" src="images/why-icon-scale.png" alt="" width="72" height="72" loading="lazy" />
+            <h3 class="why-card-title">Built to Scale</h3>
+            <p class="why-card-desc">From startups to enterprises, Samyoj grows with you.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <a href="features.html" class="why-explore-link">Explore all features →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Customer Stories -->
+    <section class="testimonials-section">
+      <div class="wr">
+        <div class="section-center-head">
+          <div class="custom-badge-pill">CUSTOMER STORIES</div>
+          <h2 class="section-title-large">Loved by businesses across <span class="highlight-green">India</span></h2>
+          <p class="section-desc">Real businesses. Real results with Samyoj.</p>
+        </div>
+
+        <div class="testimonials-grid-4">
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="testimonial-text">Samyoj helped us automate customer support and follow-ups. Our response time
+                dropped by 70% and sales increased significantly.</p>
+              <div class="metric-badge-pill">
+                <div class="metric-val"><svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> 70% faster response time</div>
+                <div class="metric-sub">Support automation</div>
+              </div>
+            </div>
+            <div class="author-info-flex">
+              <div>
+                <div class="author-name">Aniruddh Verma</div>
+                <div class="author-title">Head of Operations, GoSTOPS</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="testimonial-text">The campaign & flow features are fantastic. We run targeted campaigns at
+                scale and track everything in real-time.</p>
+              <div class="metric-badge-pill">
+                <div class="metric-val"><svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 3x more engagement</div>
+                <div class="metric-sub">Campaign performance</div>
+              </div>
+            </div>
+            <div class="author-info-flex">
+              <div>
+                <div class="author-name">Krishna Reddy</div>
+                <div class="author-title">Marketing Head, Repose Home</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="testimonial-text">Using Samyoj's AI Agent, we handle thousands of customer queries
+                automatically. It feels like having an extra team 24/7.</p>
+              <div class="metric-badge-pill">
+                <div class="metric-val"><svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 80% queries resolved</div>
+                <div class="metric-sub">By AI Agent</div>
+              </div>
+            </div>
+            <div class="author-info-flex">
+              <div>
+                <div class="author-name">Vishal Gondal</div>
+                <div class="author-title">VP - Customer Experience, MyGate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="testimonial-text">Transparent pricing and official WhatsApp API integration makes Samyoj a
+                platform we can truly trust and scale with.</p>
+              <div class="metric-badge-pill">
+                <div class="metric-val"><svg viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 100% compliance</div>
+                <div class="metric-sub">Official WhatsApp API</div>
+              </div>
+            </div>
+            <div class="author-info-flex">
+              <div>
+                <div class="author-name">Manish Agarwal</div>
+                <div class="author-title">Co-founder, IndiaShoppe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: FAQ Accordion -->
+    <section id="custom-faq-section" class="custom-faq-section" data-reveal itemscope itemtype="https://schema.org/FAQPage">
+      <div class="wr">
+        <div class="section-center-head">
+          <div class="custom-badge-pill">FAQ</div>
+          <h2 class="section-title-large">Frequently asked <span class="highlight-green">questions</span></h2>
+        </div>
+
+        <div class="custom-faq-list">
+          <details class="custom-faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                Is Meta WhatsApp charge included in the plans?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">No. Meta WhatsApp conversation charges are billed separately at actuals with zero markup from Samyoj. You only pay Meta’s official rates for templates you send.</p>
+            </div>
+          </details>
+
+          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                Do you offer onboarding and support?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. All plans include dedicated support and guided onboarding to help you connect WhatsApp Business API, verify your number, and launch your first campaign.</p>
+            </div>
+          </details>
+
+          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                Can I change or upgrade my plan later?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Absolutely. You can upgrade, downgrade, or switch between monthly and annual billing anytime from your dashboard. Changes apply from your next billing cycle.</p>
+            </div>
+          </details>
+
+          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                How does the AI & Voice billing work?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">AI and voice are billed on a pay-as-you-go metered model based on actual token and minute usage. There are no hidden bundles — you only pay for what you consume.</p>
+            </div>
+          </details>
+
+          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                Is there a setup or procurement fee?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">No. Samyoj does not charge any WhatsApp Business API setup or procurement fee. You only pay the plan subscription plus Meta and AI usage at actuals.</p>
+            </div>
+          </details>
+
+          <details class="custom-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="custom-faq-q">
+              <h3 itemprop="name" style="display: inline; font-size: inherit; font-weight: inherit; margin: 0;">
+                How does annual billing save money?
+              </h3>
+              <span class="custom-faq-icon">+</span>
+            </summary>
+            <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Choosing annual billing gives you about 20% off the monthly plan price. You still get the same features — just lower platform cost billed yearly.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Still Questions CTA Bar -->
+    <section class="cta-questions-bar">
+      <div class="wr">
+        <div class="cta-questions-inner">
+          <div>
+            <div style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">Still have questions?
+            </div>
+            <div style="font-size: 14px; color: #64748b;">Our team is here to help you get started.</div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="contact.html" class="btn-outline-sy">Talk to Sales →</a>
+            <a href="https://app.samyoj.com" class="btn-primary-sy">Book a Demo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Floating WhatsApp Button -->
+  <a href="https://wa.me/919999999999?text=Hi%20Samyoj%20Team,%20I%20have%20a%20question%20about%20pricing"
+    class="floating-wa-btn-global" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+    </svg>
+  </a>
+  </a>
+
+  <!-- Footer Component (Matches index.html) -->
+  <footer class="sy-footer" aria-label="Site footer">
+    <div class="sy-footer-inner">
+      <div class="sy-footer-grid">
+        <div class="sy-footer-brand">
+          <a class="sy-footer-logo" href="index.html" aria-label="Samyoj home">
+            <img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56"
+              loading="lazy" decoding="async" />
+          </a>
+          <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale,
+            backed by reliability.</p>
+          <div class="sy-footer-partner">
+            <img src="images/download.png" alt="Meta Tech Provider" width="160" height="89" loading="lazy"
+              decoding="async" />
+          </div>
+          <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#e11d48"
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg> in India</p>
+          <div class="sy-footer-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/company/samyoj/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.14 107.3 0 83.1 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.3-24.1 53.5-53.74 53.5zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+              </svg></a>
+            <a href="https://www.instagram.com/samyoj_/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 2.2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.27 1.3.62 1.8 1.18.57.56.92 1.15 1.19 1.84.25.66.42 1.4.47 2.5.05 1.07.06 1.38.06 4.08s-.01 3.01-.06 4.08c-.05 1.1-.22 1.84-.47 2.5a4.9 4.9 0 0 1-1.19 1.84 4.9 4.9 0 0 1-1.84 1.19c-.66.25-1.4.42-2.5.47-1.07.05-1.38.06-4.08.06s-3.01-.01-4.08-.06c-1.1-.05-1.84-.22-2.5-.47a4.9 4.9 0 0 1-1.84-1.19 4.9 4.9 0 0 1-1.19-1.84c-.25-.66-.42-1.4-.47-2.5C2.21 15.01 2.2 14.7 2.2 12s.01-3.01.06-4.08c.05-1.1.22-1.84.47-2.5.27-.69.62-1.28 1.19-1.84A4.9 4.9 0 0 1 5.76 2.73c.66-.25 1.4-.42 2.5-.47C9.33 2.21 9.64 2.2 12 2.2M12 0C9.28 0 8.94 0 7.86.05 6.77.1 6.02.28 5.37.53A7.08 7.08 0 0 0 2.8 2.8 7.08 7.08 0 0 0 .53 5.37C.28 6.02.1 6.77.05 7.86 0 8.94 0 9.28 0 12s0 3.06.05 4.14c.05 1.09.23 1.84.48 2.49a7.08 7.08 0 0 0 2.27 2.57 7.08 7.08 0 0 0 2.57 2.27c.65.25 1.4.43 2.49.48C8.94 24 9.28 24 12 24s3.06 0 4.14-.05c1.09-.05 1.84-.23 2.49-.48a7.08 7.08 0 0 0 2.57-2.27 7.08 7.08 0 0 0 2.27-2.57c.25-.65.43-1.4.48-2.49C24 15.06 24 14.72 24 12s0-3.06-.05-4.14c-.05-1.09-.23-1.84-.48-2.49a7.08 7.08 0 0 0-2.27-2.57A7.08 7.08 0 0 0 18.63.53C17.98.28 17.23.1 16.14.05 15.06 0 14.72 0 12 0z" />
+              </svg></a>
+            <a href="https://www.youtube.com/@samyoj_official" target="_blank" rel="noopener noreferrer"
+              aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23.5 6.2A3 3 0 0 0 21.4 4.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7L16 12l-6.2 3.5z" />
+              </svg></a>
+          </div>
+        </div>
+
+        <nav class="sy-footer-col" aria-label="Platform">
+          <h4>Platform</h4>
+          <ul class="sy-footer-links">
+            <li><a href="features.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path d="M12 3l2.2 5.4L20 10l-4.5 3.5L16.8 20 12 16.8 7.2 20l1.3-6.5L4 10l5.8-1.6L12 3z" />
+                </svg>Features</a></li>
+            <li><a href="pricing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>Pricing</a></li>
+            <li><a href="industries.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6" />
+                </svg>Industries</a></li>
+            <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  aria-hidden="true">
+                  <path
+                    d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                  <path d="M9 14v-2a3 3 0 0 1 6 0v2" />
+                </svg>Contact Us</a></li>
+            <li><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <nav class="sy-footer-col" aria-label="Company">
+          <h4>Company</h4>
+          <ul class="sy-footer-links">
+            <li><a href="legal/privacy-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                  <path d="M14 3v5h5M9 13h6M9 17h6" />
+                </svg>Privacy Policy</a></li>
+            <li><a href="legal/refund-cancellation-policy.html"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M3 7h18M3 12h18M3 17h18" />
+                  <circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="12" r="1.2" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="17" r="1.2" fill="currentColor" stroke="none" />
+                </svg>Refund Policy</a></li>
+            <li><a href="legal/terms-and-conditions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                  <path d="M14 3v5h5M9 12h6M9 16h4" />
+                </svg>Terms &amp; Conditions</a></li>
+            <li><a href="legal/acceptable-use-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 3l8 4v6c0 4.4-3.4 7.7-8 8-4.6-.3-8-3.6-8-8V7l8-4z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>Acceptable Use Policy</a></li>
+            <li><a href="legal/cookie-policy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 8v4l2.5 1.5" />
+                </svg>Cookie Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="sy-footer-col" aria-label="Contact Us">
+          <h4>Contact Us</h4>
+          <ul class="sy-footer-contact">
+            <li><a href="tel:+918839888531"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.3 9 9 0 0 0 2.8.5 1.4 1.4 0 0 1 1.4 1.4V20a1.4 1.4 0 0 1-1.4 1.4A17.4 17.4 0 0 1 2.6 4.4 1.4 1.4 0 0 1 4 3h3.2A1.4 1.4 0 0 1 8.6 4.4a9 9 0 0 0 .5 2.8 1.4 1.4 0 0 1-.3 1.4L6.6 10.8z" />
+                  </svg></span>Sales: +91 8839888531</a></li>
+            <li><a href="tel:+918305369467"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                    <path d="M9 14v-2a3 3 0 0 1 6 0v2" />
+                  </svg></span>Support: +91 8305369467</a></li>
+            <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m4 7 8 6 8-6" />
+                  </svg></span>hello@samyoj.com</a></li>
+            <li><span class="sy-footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg></span><span>Samyoj<br>Indore, Madhya Pradesh, India</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sy-footer-bottom">
+        <p class="sy-footer-copy">&copy; 2026 Samyoj. All rights reserved.</p>
+        <div class="sy-footer-legal">
+          <a href="legal/privacy-policy.html">Privacy Policy</a><span aria-hidden="true"></span>
+          <a href="legal/refund-cancellation-policy.html">Refund Policy</a><span aria-hidden="true"></span>
+          <a href="legal/terms-and-conditions.html">Terms &amp; Conditions</a><span aria-hidden="true"></span>
+          <a href="legal/cookie-policy.html">Cookie Policy</a><span aria-hidden="true"></span>
+          <a href="legal/acceptable-use-policy.html">Acceptable Use Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // 1. Monthly / Annual Billing Toggle Script
+    const toggleBtn = document.getElementById('billing-toggle');
+    const monthlyText = document.getElementById('monthly-text');
+    const annualText = document.getElementById('annual-text');
+    const priceVals = document.querySelectorAll('.price-val');
+
+    let isAnnual = false;
+
+    toggleBtn.addEventListener('click', () => {
+      isAnnual = !isAnnual;
+      toggleBtn.classList.toggle('active', isAnnual);
+      monthlyText.classList.toggle('active', !isAnnual);
+      annualText.classList.toggle('active', isAnnual);
+
+      priceVals.forEach(el => {
+        const annualPrice = el.getAttribute('data-annual');
+        const monthlyPrice = el.getAttribute('data-monthly');
+        if (annualPrice && monthlyPrice) {
+          el.textContent = isAnnual ? annualPrice : monthlyPrice;
+        }
+      });
+    });
+
+    // 2. Cost Estimator Live Calculation Script
+    const sContacts = document.getElementById('slider-contacts');
+    const sMessages = document.getElementById('slider-messages');
+    const sTeam = document.getElementById('slider-team');
+    const sAi = document.getElementById('slider-ai');
+
+    const vContacts = document.getElementById('val-contacts');
+    const vMessages = document.getElementById('val-messages');
+    const vTeam = document.getElementById('val-team');
+    const vAi = document.getElementById('val-ai');
+
+    const estTotalPrice = document.getElementById('est-total-price');
+    const costFinalSum = document.getElementById('cost-final-sum');
+    const costPlatform = document.getElementById('cost-platform');
+    const costMeta = document.getElementById('cost-meta');
+    const costAi = document.getElementById('cost-ai');
+    const recPlan = document.getElementById('rec-plan');
+
+    function updateEstimator() {
+      const contacts = parseInt(sContacts.value);
+      const messages = parseInt(sMessages.value);
+      const team = parseInt(sTeam.value);
+      const ai = parseInt(sAi.value);
+
+      vContacts.textContent = contacts.toLocaleString('en-IN');
+      vMessages.textContent = messages.toLocaleString('en-IN');
+      vTeam.textContent = team;
+      vAi.textContent = ai.toLocaleString('en-IN');
+
+      // Green fill progress on each slider (mockup style)
+      function setPct(el) {
+        const min = parseFloat(el.min) || 0;
+        const max = parseFloat(el.max) || 100;
+        const val = parseFloat(el.value) || 0;
+        const pct = ((val - min) / (max - min)) * 100;
+        el.style.setProperty('--pct', pct + '%');
+      }
+      [sContacts, sMessages, sTeam, sAi].forEach(setPct);
+
+      // Calculation rules
+      let platformCost = 1499;
+      let planName = "Launch";
+      if (contacts > 5000 || messages > 25000 || team > 2) {
+        platformCost = 3999;
+        planName = "Growth";
+      }
+      if (contacts > 25000 || messages > 100000 || team > 10) {
+        platformCost = 8999;
+        planName = "Scale";
+      }
+
+      const metaCost = Math.round(messages * 0.0396);
+      const aiCost = Math.round(ai * 0.1526);
+      const total = platformCost + metaCost + aiCost;
+
+      recPlan.textContent = planName;
+      costPlatform.textContent = '₹' + platformCost.toLocaleString('en-IN');
+      costMeta.textContent = '₹' + metaCost.toLocaleString('en-IN');
+      costAi.textContent = '₹' + aiCost.toLocaleString('en-IN');
+
+      const formattedTotal = '₹' + total.toLocaleString('en-IN');
+      estTotalPrice.textContent = formattedTotal;
+      costFinalSum.textContent = formattedTotal;
+    }
+
+    [sContacts, sMessages, sTeam, sAi].forEach(s => s.addEventListener('input', updateEstimator));
+    updateEstimator();
+  </script>
+
+</body>
+
+</html>
+

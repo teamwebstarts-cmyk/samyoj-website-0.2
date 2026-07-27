@@ -1,0 +1,2321 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-192x192.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shopify WhatsApp CRM Guide 2026: Abandoned Cart, COD Verification & Webhooks | Samyoj Blog</title>
+  <meta name="description"
+    content="Master Shopify & E-commerce WhatsApp Automation in 2026. Discover how Samyoj WhatsApp CRM automates 3-stage abandoned cart recovery, cuts COD RTO by 50%, tracks shipments, and connects via Shopify webhooks.">
+  <meta name="keywords"
+    content="Shopify WhatsApp CRM, WhatsApp abandoned cart recovery, WhatsApp COD verification, RTO reduction, Shopify WhatsApp webhooks, Samyoj e-commerce automation">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation" />
+  <meta property="og:title" content="Shopify WhatsApp CRM Guide 2026: Abandoned Cart, COD Verification & Webhooks" />
+  <meta property="og:description"
+    content="Master Shopify & E-commerce WhatsApp Automation in 2026. Discover how Samyoj WhatsApp CRM automates 3-stage abandoned cart recovery, cuts COD RTO by 50%, tracks shipments, and connects via Shopify webhooks." />
+  <meta property="og:image" content="https://samyoj.com/images/blog_integrations_3d.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopify WhatsApp CRM Guide 2026: Abandoned Cart, COD Verification & Webhooks" />
+  <meta name="twitter:description"
+    content="Master Shopify & E-commerce WhatsApp Automation in 2026. Discover how Samyoj WhatsApp CRM automates 3-stage abandoned cart recovery, cuts COD RTO by 50%, tracks shipments, and connects via Shopify webhooks." />
+  <meta name="twitter:image" content="https://samyoj.com/images/blog_integrations_3d.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../mobile-buttons.css">
+  <link rel="stylesheet" href="../samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="../samyoj-mobile-drawer.css?v=1">
+  <link rel="stylesheet" href="../samyoj-mobile-drawer.css">
+
+  <style id="shared-site-chrome">
+    body {
+      margin: 0;
+      padding: 0;
+      --wr-max: 1530px;
+      position: relative;
+      word-wrap: anywhere;
+      word-break: break-word;
+      line-height: 1.5;
+      --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
+      overflow-wrap: anywhere;
+      text-rendering: optimizeLegibility;
+      background-color: #fff;
+      --color-3cg413bfwq: rgb(3, 207, 101);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a, .link { color: inherit; text-decoration: none; }
+    strong { font-weight: 700; }
+    .wr { width: 100%; margin: 0 auto; padding: 0 30px; position: relative; max-width: var(--wr-max); box-sizing: border-box; }
+    @media (max-width: 700px) { .wr { padding: 0 15px; } }
+
+    .um-nav-wrapper { color: #0f172a; display: flex; flex-grow: 1; align-items: center; }
+    .um-nav-wrapper.um-links-centered .um-nav-links { flex: 1; margin: 0 auto; justify-content: center; }
+    .um-nav-wrapper.um-links-centered .um-nav-children { flex: 1; margin-right: 20px; }
+    .um-nav-wrapper.um-links-centered .um-nav-buttons { flex: 1; display: flex; justify-content: flex-end; }
+    .um-nav-links { margin: 0; display: flex; padding: 0; font-size: 15px; list-style: none; align-items: center; white-space: nowrap; gap: 24px; }
+    .um-nav-links>li>a { color: #334155; font-weight: 600; padding: 8px 4px; transition: color 0.18s; }
+    .um-nav-links>li>a:hover { color: #03cf65; }
+    .um-nav-buttons { gap: 12px; display: flex; align-items: center; white-space: nowrap; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14.5px; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
+    .btn.primary { background: #03cf65; color: #fff !important; border: none; box-shadow: 0 2px 10px rgba(3, 207, 101, 0.2); }
+    .btn.primary:hover { background: #00b853; transform: translateY(-1px); }
+
+    .um-nav-drawerTrigger { display: none; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; position: relative; }
+    .um-nav-drawerTrigger:after { top: 12px; left: 7px; width: 26px; height: 3px; content: ''; position: absolute; background: #0f172a; box-shadow: 0 8px 0 #0f172a, 0 16px 0 #0f172a; border-radius: 2px; }
+
+    @media (min-width: 961px) {
+      .um-nav-wrapper.um-hidden .um-nav-links, .um-nav-wrapper.um-hidden .um-nav-buttons { display: flex !important; }
+      .um-nav-drawerTrigger { display: none !important; }
+    }
+    @media (max-width: 960px) {
+      .um-nav-wrapper .um-nav-links, .um-nav-wrapper .um-nav-buttons { display: none !important; }
+      .um-nav-drawerTrigger { display: block !important; }
+    }
+
+    ._58ce83d8 { top: 0; left: 0; right: 0; height: 70px; display: flex; z-index: 99; position: fixed; background: #fff; border-bottom: 1px solid #e2e8f0; }
+    ._58ce83d8+main { padding-top: calc(var(--um-header-height, 65px) + 16px); }
+    ._37ad9200 { top: var(--um-banner-height, 0px); left: 0; right: 0; height: 65px; display: flex; z-index: 99; position: absolute; }
+    ._f4c879d8 { height: 100%; display: flex; padding: 0 20px; z-index: 90; width: 100%; align-items: center; }
+    ._592c9c5c { height: 100%; display: flex; flex-grow: 1; align-items: center; }
+    ._730f12a7 { display: flex; align-items: center; }
+  </style>
+
+  <style id="samyoj-blog-post-styles">
+    :root {
+      --sy-green: #03cf65;
+      --sy-green-hover: #00b853;
+      --sy-green-deep: #087a47;
+      --sy-green-light: #eafbf0;
+      --sy-green-border: #bbf7d0;
+      --sy-dark: #0f172a;
+      --sy-body: #475569;
+      --sy-line: #f1f5f9;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--sy-dark);
+      background-color: #fff;
+    }
+
+    /* ─── BLOG POST CONTAINER ─── */
+    .blog-post-page {
+      padding: 32px 0 80px;
+    }
+
+    .blog-post-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Breadcrumbs */
+    .blog-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .blog-breadcrumbs a {
+      color: #64748b;
+      transition: color 0.18s ease;
+    }
+
+    .blog-breadcrumbs a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    .blog-breadcrumbs span.sep {
+      color: #cbd5e1;
+    }
+
+    .blog-breadcrumbs span.current {
+      color: #0f172a;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 380px;
+    }
+
+    /* Main Grid Layout */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 992px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* ─── ARTICLE HEADER ─── */
+    .blog-category-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background-color: var(--sy-green-light);
+      border: 1px solid var(--sy-green-border);
+      border-radius: 9999px;
+      color: #00b853;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .blog-article-title {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: clamp(30px, 3.8vw, 42px);
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--sy-dark);
+      letter-spacing: -0.025em;
+      margin: 0 0 16px;
+    }
+
+    .blog-article-subtitle {
+      font-size: 17.5px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--sy-body);
+      margin: 0 0 24px;
+    }
+
+    /* Author & Share Row */
+    .blog-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--sy-line);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .blog-author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .blog-author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .blog-author-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .blog-author-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+    }
+
+    .blog-author-name svg {
+      width: 15px;
+      height: 15px;
+      color: var(--sy-green);
+    }
+
+    .blog-author-date {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .blog-share-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .blog-share-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .blog-share-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .blog-share-btn:hover {
+      background: var(--sy-green-light);
+      color: #00b853;
+      transform: translateY(-2px);
+    }
+
+    .blog-share-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ─── FEATURED MEDIA ─── */
+    .blog-hero-media {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f8fafc;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 36px;
+    }
+
+    .blog-hero-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ─── TABLE OF CONTENTS BOX ─── */
+    .blog-toc-box {
+      background: #f4fbf7;
+      border: 1px solid #dcfce7;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .blog-toc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #dcfce7;
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .blog-toc-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .blog-toc-content {
+      flex: 1;
+    }
+
+    .blog-toc-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin-bottom: 12px;
+    }
+
+    .blog-toc-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .blog-toc-list {
+        grid-template-columns: 1fr;
+      }
+      .blog-toc-box {
+        flex-direction: column;
+      }
+    }
+
+    .blog-toc-list li {
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .blog-toc-list li::before {
+      content: "•";
+      color: var(--sy-green);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .blog-toc-list a {
+      color: #334155;
+      transition: color 0.18s;
+    }
+
+    .blog-toc-list a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    /* ─── PROSE BODY CONTENT ─── */
+    .blog-prose h2 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 44px 0 18px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .blog-prose h3 {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 32px 0 14px;
+      line-height: 1.35;
+    }
+
+    .blog-prose p {
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: var(--sy-body);
+      margin-bottom: 24px;
+    }
+
+    .blog-prose ul, .blog-prose ol {
+      margin: 0 0 28px 20px;
+      padding: 0;
+      color: var(--sy-body);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .blog-prose li {
+      margin-bottom: 10px;
+    }
+
+    /* Enhanced Elements for Master Guide */
+    .blog-prose code {
+      font-family: 'Fira Code', monospace;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .blog-prose pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 22px;
+      border-radius: 14px;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 13.5px;
+      line-height: 1.6;
+      margin: 24px 0 32px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .blog-prose pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+    .blog-table-wrapper {
+      overflow-x: auto;
+      margin: 28px 0 36px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      text-align: left;
+    }
+
+    .blog-table th, .blog-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .blog-table th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .blog-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .blog-table tr:hover {
+      background: #f8fafc;
+    }
+
+    .blog-callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--sy-green);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .blog-callout.tip {
+      background: #f0fdf4;
+      border-left-color: #16a34a;
+    }
+
+    .blog-callout.warning {
+      background: #fffbeb;
+      border-left-color: #f59e0b;
+    }
+
+    .blog-callout-title {
+      font-weight: 800;
+      font-size: 15px;
+      color: #0f172a;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+
+    .blog-stat-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .blog-stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--sy-green);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .blog-stat-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .blog-workflow-step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+      background: #ffffff;
+      border: 1px solid #f1f5f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .blog-workflow-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--sy-green);
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(3, 207, 101, 0.25);
+    }
+
+    .blog-workflow-content h4 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px;
+    }
+
+    .blog-workflow-content p {
+      margin: 0;
+      font-size: 14.5px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* Feature Icon Cards Grid */
+    .blog-feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+
+    .blog-feature-card {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color 0.18s ease;
+    }
+
+    .blog-feature-card:hover {
+      border-color: var(--sy-green-border);
+    }
+
+    .blog-feature-ico {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--sy-green-light);
+      color: #00b853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .blog-feature-ico svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .blog-feature-text h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 4px;
+    }
+
+    .blog-feature-text p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: #64748b;
+      margin: 0;
+    }
+
+    /* In-Article Banner CTA */
+    .blog-cta-banner {
+      background: linear-gradient(135deg, #eafbf0 0%, #f4fbf7 100%);
+      border: 1px solid var(--sy-green-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .blog-cta-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .blog-cta-banner img {
+        margin: 0 auto;
+      }
+    }
+
+    .blog-cta-banner h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 8px;
+    }
+
+    .blog-cta-banner p {
+      font-size: 14.5px;
+      color: #475569;
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+
+    .blog-cta-banner img {
+      width: 100%;
+      height: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+
+    /* Article Bottom Pagination */
+    .blog-post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--sy-line);
+      gap: 20px;
+    }
+
+    .blog-nav-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-decoration: none;
+      max-width: 48%;
+    }
+
+    .blog-nav-link.next {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .blog-nav-dir {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blog-nav-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+      line-height: 1.4;
+      transition: color 0.18s;
+    }
+
+    .blog-nav-link:hover .blog-nav-title {
+      color: var(--sy-green-hover);
+    }
+
+    /* ─── SIDEBAR WIDGETS ─── */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: sticky;
+      top: 95px;
+      max-height: calc(100vh - 115px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      align-self: start;
+    }
+
+    .sidebar-widget {
+      background: #ffffff;
+      border: 1px solid #f1f5f9;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .sidebar-widget-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      margin: 0 0 20px;
+    }
+
+    /* Search Widget */
+    .sidebar-search-form {
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .sidebar-search-input {
+      width: 100%;
+      padding: 12px 14px 12px 42px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.18s;
+    }
+
+    .sidebar-search-input:focus {
+      border-color: var(--sy-green);
+    }
+
+    .sidebar-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    /* Author Widget */
+    .widget-author {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .widget-author-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .widget-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .widget-author-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sy-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .widget-author-bio {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .btn-outline-sm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+
+    .btn-outline-sm:hover {
+      border-color: var(--sy-green);
+      color: var(--sy-green-hover);
+    }
+
+    /* Related Articles List */
+    .related-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .related-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-decoration: none;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f8fafc;
+    }
+
+    .related-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .related-thumb {
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #f1f5f9;
+    }
+
+    .related-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .related-cat {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #00b853;
+    }
+
+    .related-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--sy-dark);
+      line-height: 1.35;
+      transition: color 0.18s;
+    }
+
+    .related-item:hover .related-title {
+      color: var(--sy-green-hover);
+    }
+
+    .related-meta {
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+
+    /* Categories Widget */
+    .cat-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cat-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      text-decoration: none;
+      padding: 6px 0;
+      transition: color 0.18s;
+    }
+
+    .cat-item a:hover {
+      color: var(--sy-green-hover);
+    }
+
+    .cat-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cat-left svg {
+      width: 16px;
+      height: 16px;
+      color: #64748b;
+    }
+
+    .cat-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    /* Newsletter Widget */
+    .widget-newsletter {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--sy-green);
+    }
+
+    .btn-full-green {
+      width: 100%;
+      padding: 12px;
+      background: #03cf65;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+
+    .btn-full-green:hover {
+      background: #00b853;
+    }
+
+    .newsletter-note {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="../samyoj-nav.css">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Shopify WhatsApp CRM Guide 2026: Abandoned Cart, COD Verification & Webhooks",
+    "description": "Master Shopify & E-commerce WhatsApp Automation in 2026. Discover how Samyoj WhatsApp CRM automates 3-stage abandoned cart recovery, cuts COD RTO by 50%, tracks shipments, and connects via Shopify webhooks.",
+    "image": "https://samyoj.com/images/blog_integrations_3d.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Samyoj Team",
+      "url": "https://samyoj.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Samyoj",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://samyoj.com/images/logoSamyoj.jpeg"
+      }
+    },
+    "datePublished": "2026-07-27",
+    "dateModified": "2026-07-27",
+    "mainEntityOfPage": "https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Shopify WhatsApp CRM and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Shopify WhatsApp CRM connects your Shopify store directly to Meta's official WhatsApp Business API using webhooks or a native app. It allows you to trigger automated WhatsApp messages based on customer actions like checkout abandonment, order placement, shipment tracking, and review requests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does WhatsApp Abandoned Cart Recovery differ from Email Recovery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email recovery messages average an open rate of 15-20% and often land in spam or promotions folders. WhatsApp recovery messages achieve a 98% open rate and a 45-60% conversion rate because customers receive instant, direct notifications on their primary messaging app with one-click checkout links."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does COD Phone Verification cut RTO (Return-to-Origin) rates by 50%?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When a Cash-on-Delivery order is placed, Samyoj automatically sends an interactive WhatsApp message asking the customer to confirm or cancel the order. It also offers an instant 5% discount if they convert to a prepaid payment. Unconfirmed or fake orders are filtered out before dispatch, preventing costly return shipping fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the optimal timing sequence for WhatsApp Abandoned Cart recovery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 2026 industry standard sequence consists of 3 stages: Stage 1 at 15 minutes (a gentle reminder with cart contents), Stage 2 at 4 hours (adding social proof and a 10% discount code), and Stage 3 at 24 hours (a final call with inventory scarcity and prepaid conversion incentive)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need coding knowledge to set up Shopify Webhooks with Samyoj?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Samyoj provides a 1-click Shopify App as well as standard webhook URLs that you can paste directly into Shopify Admin under Settings > Notifications > Webhooks. No complex backend coding is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are WhatsApp messages sent through Samyoj compliant with Meta policies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Samyoj is a Meta-approved Tech Provider. All outgoing broadcast and transactional notifications use Meta-approved template messages with clear opt-in management and unsubscribe options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can multiple customer support agents manage Shopify chats on one WhatsApp number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Samyoj provides a centralized Shared Team Inbox where your entire team can log in, view live Shopify order data alongside chat windows, assign conversations, and collaborate using internal notes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to integrate Samyoj WhatsApp CRM with a Shopify store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basic setup takes less than 10 minutes. Once your WhatsApp Business API profile is verified, you can activate pre-built workflows for cart recovery, COD verification, and shipment alerts immediately."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="noScript">
+  <!-- Top Announcement Bar Script -->
+  <script>
+    (function () {
+      function init() {
+        if (document.getElementById('aisensy-magic-bar')) return;
+        var html =
+          '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+          '<div class="mb-inner">' +
+          '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+          '<span class="mb-divider" aria-hidden="true"></span>' +
+          '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+          '<span class="mb-divider" aria-hidden="true"></span>' +
+          '<a class="mb-cta" href="../features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+          '</div>' +
+          '</div>';
+        document.body.insertAdjacentHTML('afterbegin', html);
+        var bar = document.getElementById('aisensy-magic-bar');
+
+        function sync() {
+          var h = bar ? bar.offsetHeight : 0;
+          document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+          document.body.style.setProperty('--um-banner-height', h + 'px');
+        }
+        sync();
+        if ('ResizeObserver' in window && bar) { new ResizeObserver(sync).observe(bar); }
+        window.addEventListener('resize', sync);
+        window.addEventListener('load', sync);
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+    })();
+  </script>
+  <script>document.body.classList.remove('noScript');</script>
+
+  <!-- Site Header Component -->
+  <header class="_58ce83d8">
+    <style>
+      body {
+        --um-header-height: calc(65px + var(--um-banner-height, 0px))
+      }
+    </style>
+    <div class="umso-header _37ad9200 header-hdr_lbofppypi0 buttons-btn_nob6m8rpy4">
+      <div id="um-header-banner"
+        style="background:var(--gradient-odxm5pezs4);color:var(--color-4jixmvwln5);top:0;left:0;right:0;z-index:89;transform:none;position:fixed">
+        <div class="wr"
+          style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
+          <span class="_071afc96 um-text">
+            <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
+              <strong>Explore</strong></p>
+            <style>
+              #aisensy-magic-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%);
+                border-bottom: 1px solid rgba(31, 165, 72, .12);
+                box-shadow: none;
+                padding: 0;
+                pointer-events: none;
+              }
+
+              #aisensy-magic-bar.mb-menu-open {
+                display: none !important;
+              }
+
+              #um-header-banner {
+                background: linear-gradient(90deg, #d8f0d4 0%, #eef6cf 40%, #f2f7d8 55%, #e4f2cc 75%, #d8f0d4 100%) !important;
+                border-bottom: none !important;
+              }
+
+              #um-header-banner .wr {
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+
+              #aisensy-magic-bar .mb-inner {
+                pointer-events: auto;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+              }
+
+              #aisensy-magic-bar .mb-seg {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+              }
+
+              #aisensy-magic-bar .mb-divider {
+                width: 1px;
+                height: 22px;
+                background: rgba(15, 46, 32, .14);
+                flex: 0 0 1px;
+              }
+
+              #aisensy-magic-bar .mb-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #146b3a;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+              }
+
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
+                display: block;
+                flex: 0 0 auto;
+              }
+
+              #aisensy-magic-bar .mb-icon {
+                width: 22px;
+                height: 22px;
+                color: #1fa548;
+                flex: 0 0 auto;
+                display: block;
+              }
+
+              #aisensy-magic-bar .mb-title {
+                color: #24362d;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: -.01em;
+                line-height: 1.3;
+                white-space: nowrap;
+              }
+
+              #aisensy-magic-bar .mb-title strong {
+                color: #1fa548;
+                font-weight: 800;
+              }
+
+              #aisensy-magic-bar .mb-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 800;
+                color: #1fa548;
+                white-space: nowrap;
+                padding-right: 4px;
+              }
+
+              #aisensy-magic-bar .mb-cta svg {
+                width: 16px;
+                height: 16px;
+                color: #1fa548;
+                transition: transform .18s ease;
+              }
+
+              #aisensy-magic-bar .mb-cta:hover svg {
+                transform: translateX(3px);
+              }
+
+              #aisensy-magic-bar .mb-title-short {
+                display: none;
+              }
+
+              @media (max-width:720px) {
+                #aisensy-magic-bar {
+                  padding: 0;
+                }
+
+                #aisensy-magic-bar .mb-inner {
+                  max-width: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 9px 12px;
+                  gap: 8px;
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+                  align-items: center;
+                  border-radius: 0;
+                  border: none;
+                  box-shadow: none;
+                  background: transparent;
+                }
+
+                #aisensy-magic-bar .mb-divider {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-icon {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-seg-mid {
+                  flex: 1 1 auto;
+                  min-width: 0;
+                  gap: 0;
+                }
+
+                #aisensy-magic-bar .mb-title {
+                  font-size: 12.5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left;
+                  line-height: 1.25;
+                }
+
+                #aisensy-magic-bar .mb-title-full {
+                  display: none;
+                }
+
+                #aisensy-magic-bar .mb-title-short {
+                  display: inline;
+                }
+
+                #aisensy-magic-bar .mb-pill {
+                  font-size: 9.5px;
+                  padding: 4px 8px;
+                  gap: 4px;
+                  flex: 0 0 auto;
+                  background: #146b3a;
+                  color: #fff;
+                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  border-radius: 999px;
+                }
+
+                #aisensy-magic-bar .mb-spark {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                #aisensy-magic-bar .mb-cta {
+                  font-size: 12.5px;
+                  padding-right: 0;
+                  flex: 0 0 auto;
+                  margin-left: auto;
+                }
+
+                #aisensy-magic-bar .mb-cta svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              @media (max-width:380px) {
+                #aisensy-magic-bar .mb-title {
+                  font-size: 11.5px;
+                }
+
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
+                  display: none;
+                }
+              }
+            </style>
+            <script>
+              (function () {
+                function init() {
+                  if (document.getElementById('aisensy-magic-bar')) return;
+                  var html =
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div class="mb-inner">' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
+                    '<span class="mb-divider" aria-hidden="true"></span>' +
+                    '<a class="mb-cta" href="../features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '</div>' +
+                    '</div>';
+                  document.body.insertAdjacentHTML('afterbegin', html);
+                  var bar = document.getElementById('aisensy-magic-bar');
+
+                  function sync() {
+                    var h = bar.offsetHeight;
+                    document.documentElement.style.setProperty('--um-banner-height', h + 'px');
+                    document.body.style.setProperty('--um-banner-height', h + 'px');
+                  }
+                  sync();
+                  if ('ResizeObserver' in window) { new ResizeObserver(sync).observe(bar); }
+                  window.addEventListener('resize', sync);
+                  window.addEventListener('load', sync);
+                  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sync); }
+
+                  function watchDrawer() {
+                    var drawer = document.querySelector('.um-nav-drawer');
+                    if (!drawer) { return; }
+                    function update() {
+                      var open = !drawer.classList.contains('um-hidden');
+                      bar.classList.toggle('mb-menu-open', open);
+                    }
+                    update();
+                    new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+                  }
+                  watchDrawer();
+                }
+                if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+              })();
+            </script>
+          </span>
+        </div>
+        <script>
+          (function () {
+            const banner = document.getElementById('um-header-banner')
+            const body = document.querySelector('body')
+            if (!banner) return;
+            const height = banner.clientHeight
+            body.style.setProperty('--um-banner-height', height + 'px')
+            const observer = new ResizeObserver(entries => {
+              for (let entry of entries) {
+                const cr = entry.contentRect
+                body.style.setProperty('--um-banner-height', cr.height + 'px')
+              }
+            })
+            observer.observe(banner)
+          })()
+        </script>
+      </div>
+      <div class="umso-animated umso-animating"
+        style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
+        <div class="_f4c879d8">
+          <div class="_592c9c5c wr">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
+              <div class="um-nav-children">
+                <div class="_730f12a7"><a href="../index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="../images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43" /></a></div>
+              </div>
+              <ul class="um-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../features.html">Features</a></li>
+                <li><a href="../pricing.html">Pricing</a></li>
+                <li><a href="../industries.html">Industries</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+              </ul>
+              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
+                  class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <script>(function () {
+              document.getElementById('btn_7z9u86l3cj').addEventListener('click', function (e) {
+                (function redirectWithParams() {
+                  const query = window.location.search;
+                  const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
+                  if (query) {
+                    window.location.href = targetUrl + query;
+                  } else {
+                    window.location.href = targetUrl;
+                  }
+                })();
+              })
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+                    <path
+                      d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                      fill="currentColor"></path>
+                  </svg></a>
+              </div>
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+              <header class="sy-drawer-head">
+                <a class="sy-drawer-brand" href="../index.html"><img src="../images/logo.webp" alt="Samyoj" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+              </header>
+              <ul class="um-drawer-links sy-drawer-links">
+                <li><a class="sy-drawer-link" href="../index.html"><span class="sy-drawer-label">Home</span></a></li>
+                <li><a class="sy-drawer-link" href="../features.html"><span class="sy-drawer-label">Features</span></a></li>
+                <li><a class="sy-drawer-link" href="../pricing.html"><span class="sy-drawer-label">Pricing</span></a></li>
+                <li><a class="sy-drawer-link" href="../industries.html"><span class="sy-drawer-label">Industries</span></a></li>
+                <li><a class="sy-drawer-link" href="../blog.html" aria-current="page"><span class="sy-drawer-label">Blog</span></a></li>
+                <li><a class="sy-drawer-link" href="../contact.html"><span class="sy-drawer-label">Contact</span></a></li>
+              </ul>
+            </div>
+            <script>!function () { const e = document.getElementById('985hzqm8a3'); if (!e) return; const t = document.querySelector('.umso-header'); t && t.appendChild(document.getElementById('985hzqm8a3-drawer')); const n = document.getElementById('985hzqm8a3-drawerTrigger'), d = document.getElementById('985hzqm8a3-drawer'); document.addEventListener('click', function (e) { if (d.contains(e.target) || n.contains(e.target) || e.target === n) return; d.classList.add('um-hidden') }); const i = d.querySelector('.um-nav-drawerClose'); n.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); d.classList.remove('um-hidden') }); i.addEventListener('click', function () { d.classList.add('um-hidden') }); const BP = 960; function f() { if (window.innerWidth <= BP) { e.classList.add('um-hidden'); n.classList.remove('um-hidden'); } else { e.classList.remove('um-hidden'); n.classList.add('um-hidden'); d.classList.add('um-hidden'); } } window.addEventListener('resize', f); f(); }();</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Blog Content -->
+  <main class="blog-post-page">
+    <div class="blog-post-container">
+
+      <!-- Breadcrumb Navigation -->
+      <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <a href="../blog.html">Blog</a>
+        <span class="sep">›</span>
+        <span class="current">Shopify WhatsApp CRM Guide 2026</span>
+      </nav>
+
+      <!-- Main 2-Column Grid -->
+      <div class="blog-grid">
+
+        <!-- Left Main Content Column (~68%) -->
+        <article class="blog-main-content">
+
+          <!-- Category Badge -->
+          <div class="blog-category-badge">SHOPIFY &amp; E-COMMERCE</div>
+
+          <!-- Article H1 Title -->
+          <h1 class="blog-article-title">WhatsApp CRM for Shopify &amp; E-commerce Automation in 2026: The Definitive Master Guide</h1>
+
+          <!-- Subtitle Excerpt -->
+          <p class="blog-article-subtitle">
+            Discover how leading D2C brands use Samyoj WhatsApp CRM to automate 3-stage abandoned checkout recovery sequences, cut Cash-on-Delivery (COD) Return-To-Origin (RTO) rates by 50%, automate order dispatch alerts, collect 5-star review UGC, and connect real-time Shopify webhooks.
+          </p>
+
+          <!-- Author & Share Row -->
+          <div class="blog-meta-bar">
+            <div class="blog-author-info">
+              <div class="blog-author-avatar">S</div>
+              <div class="blog-author-details">
+                <div class="blog-author-name">
+                  Samyoj D2C Growth Team
+                  <svg viewBox="0 0 20 20" fill="currentColor" title="Verified Author">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="blog-author-date">July 27, 2026 · 18 min read</div>
+              </div>
+            </div>
+
+            <div class="blog-share-group">
+              <span class="blog-share-label">Share:</span>
+              <a href="https://api.whatsapp.com/send?text=Shopify%20WhatsApp%20CRM%20Master%20Guide%202026%20https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation" target="_blank" class="blog-share-btn" title="Share on WhatsApp">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation" target="_blank" class="blog-share-btn" title="Share on LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=Shopify%20WhatsApp%20CRM%20Master%20Guide%202026&url=https://samyoj.com/blog/whatsapp-crm-for-shopify-ecommerce-automation" target="_blank" class="blog-share-btn" title="Share on X">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="blog-share-btn" title="Copy Link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured Hero Image -->
+          <div class="blog-hero-media">
+            <img src="../images/blog_integrations_3d.jpg" alt="Shopify WhatsApp CRM Integration Graphic 2026" />
+          </div>
+
+          <!-- "In this article" (Table of Contents Box) -->
+          <div class="blog-toc-box">
+            <div class="blog-toc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="blog-toc-content">
+              <div class="blog-toc-title">In this article</div>
+              <ul class="blog-toc-list">
+                <li><a href="#ecommerce-leak-2026">1. The E-Commerce Challenge in 2026</a></li>
+                <li><a href="#abandoned-cart-sequence">2. 3-Stage Abandoned Cart Sequence</a></li>
+                <li><a href="#cod-verification-rto">3. COD Verification: Cutting RTO by 50%</a></li>
+                <li><a href="#fulfillment-tracking-reviews">4. Fulfillment, Tracking &amp; Review Loops</a></li>
+                <li><a href="#shopify-integration-webhooks">5. Shopify Webhook Integration Guide</a></li>
+                <li><a href="#advanced-d2c-tactics">6. Advanced D2C Growth Automations</a></li>
+                <li><a href="#roi-benchmarks-matrix">7. E-Commerce Metrics &amp; ROI Matrix</a></li>
+                <li><a href="#faq">8. Frequently Asked Questions</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Prose Body Content -->
+          <div class="blog-prose">
+            
+            <h2 id="ecommerce-leak-2026">1. The E-Commerce Revenue Leak in 2026: Why Traditional Channels Fail</h2>
+            <p>
+              In 2026, direct-to-consumer (D2C) brands face a dual squeeze: rising Customer Acquisition Costs (CAC) across paid social channels and diminishing returns from legacy communication stack tools. E-commerce merchants lose up to <strong>70% of potential revenue</strong> at the final checkout step, while Cash-on-Delivery (COD) orders suffer from staggering Return-To-Origin (RTO) failure rates as high as 25-35% in high-volume markets across Asia, LatAm, and the Middle East.
+            </p>
+            <p>
+              Traditional email marketing campaigns now average an open rate of <strong>under 18%</strong>, with click-through rates hovering near 1.5%. SMS broadcasts, once a reliable alternative, are increasingly blocked by carrier spam filters, strict regulatory compliance regulations (like TRAI DLT, GDPR, and TCPA), and consumer fatigue.
+            </p>
+
+            <!-- Stat Grid Component -->
+            <div class="blog-stat-grid">
+              <div class="blog-stat-card">
+                <div class="blog-stat-num">98%</div>
+                <div class="blog-stat-label">WhatsApp Open Rate</div>
+              </div>
+              <div class="blog-stat-card">
+                <div class="blog-stat-num">45-60%</div>
+                <div class="blog-stat-label">Conversion Rate</div>
+              </div>
+              <div class="blog-stat-card">
+                <div class="blog-stat-num">50%</div>
+                <div class="blog-stat-label">RTO Reduction</div>
+              </div>
+              <div class="blog-stat-card">
+                <div class="blog-stat-num">&lt; 2 Min</div>
+                <div class="blog-stat-label">Average Response Time</div>
+              </div>
+            </div>
+
+            <p>
+              Connecting your Shopify store directly to a <strong>WhatsApp CRM like Samyoj</strong> transforms instant messaging into a predictable, automated revenue engine. By utilizing Meta's official WhatsApp Business API, online retailers interact with buyers on the app they open dozens of times a day.
+            </p>
+
+            <div class="blog-table-wrapper">
+              <table class="blog-table">
+                <thead>
+                  <tr>
+                    <th>Channel</th>
+                    <th>Average Open Rate</th>
+                    <th>Click-Through Rate (CTR)</th>
+                    <th>Cart Recovery Rate</th>
+                    <th>RTO Impact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Email Marketing</strong></td>
+                    <td>15.2% – 18.5%</td>
+                    <td>1.2% – 2.1%</td>
+                    <td>3% – 5%</td>
+                    <td>Zero Impact</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SMS Text Messages</strong></td>
+                    <td>35.0% – 45.0%</td>
+                    <td>3.5% – 5.0%</td>
+                    <td>6% – 9%</td>
+                    <td>Low (Static text only)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Samyoj WhatsApp CRM</strong></td>
+                    <td><strong>98.2%</strong></td>
+                    <td><strong>35.0% – 48.0%</strong></td>
+                    <td><strong>25% – 38%</strong></td>
+                    <td><strong>Up to 50% RTO Cut</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="abandoned-cart-sequence">2. The 3-Stage Abandoned Cart Recovery Automation Sequence</h2>
+            <p>
+              Cart abandonment is rarely caused by a lack of interest. Modern consumers drop off due to sudden distractions, unanswered delivery queries, unexpected shipping fees at checkout, or temporary payment gateway glitches. Sending a single generic message 24 hours later misses the window of highest intent.
+            </p>
+            <p>
+              Top-performing Shopify brands on Samyoj use a high-converting <strong>3-stage automated WhatsApp recovery cadence</strong> tailored across specific timing intervals:
+            </p>
+
+            <!-- Workflow Step 1 -->
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">1</div>
+              <div class="blog-workflow-content">
+                <h4>Stage 1: 15-Minute Gentle Nudge (High-Intent Window)</h4>
+                <p>
+                  Triggered exactly 15 minutes after a user creates a Shopify checkout without completing payment. This initial message focuses on helpfulness rather than sales pressure. It displays the exact product thumbnail, item count, and a 1-click <code>Pre-filled Checkout URL</code> that bypasses login forms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Workflow Step 2 -->
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">2</div>
+              <div class="blog-workflow-content">
+                <h4>Stage 2: 4-Hour Incentive &amp; Social Proof (Friction Eraser)</h4>
+                <p>
+                  If the buyer has not completed the purchase after 4 hours, Samyoj fires a second automated template featuring a 10% discount code (e.g., <code>SAVE10</code>) or free shipping trigger alongside authentic star ratings and customer reviews. Quick reply buttons allow buyers to complete order or ask a question directly to live support.
+                </p>
+              </div>
+            </div>
+
+            <!-- Workflow Step 3 -->
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">3</div>
+              <div class="blog-workflow-content">
+                <h4>Stage 3: 24-Hour Scarcity &amp; Prepaid Upgrade (Final Call)</h4>
+                <p>
+                  Sent 24 hours after abandonment. This message leverages inventory scarcity ("Your cart items are reserved for 2 more hours") and offers an additional 5% prepaid discount if the user switches from COD to UPI/Credit Card via WhatsApp Pay or Shopify Checkout.
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-callout tip">
+              <div class="blog-callout-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Pro Tip: Dynamic Checkout Deep Links
+              </div>
+              Always configure your Samyoj webhook mapping to pass Shopify's <code>abandoned_checkout_url</code> token. This URL automatically restores cart items, applies applied discount codes, and pre-populates shipping details so the customer can complete their transaction in under 10 seconds.
+            </div>
+
+            <h2 id="cod-verification-rto">3. COD Phone Verification: Cutting Return-To-Origin Rates by 50%</h2>
+            <p>
+              Cash-on-Delivery remains a primary payment option in major e-commerce markets, accounting for 60%+ of total orders for many apparel, footwear, and beauty brands. However, COD carries a severe penalty: high RTO rates. When orders are returned due to impulse cancellation, incorrect addresses, or buyer unavailability, merchants pay forward and return logistics charges, repackaging fees, and product depreciation.
+            </p>
+            <p>
+              Samyoj solves this multi-billion dollar D2C issue with <strong>Automated WhatsApp COD Verification &amp; Address Validation</strong>:
+            </p>
+
+            <div class="blog-feature-grid">
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke-width="2.5"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>1. Instant Order Confirmation Buttons</h3>
+                  <p>The second a COD order is placed on Shopify, Samyoj fires an automated message with interactive buttons: <code>[ ✅ Confirm Order ]</code>, <code>[ ❌ Cancel Order ]</code>, and <code>[ 💳 Pay Prepaid (Get 5% Off) ]</code>.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>2. Automated Address Auto-Correction Bot</h3>
+                  <p>If Shopify detects incomplete addresses (e.g., missing landmark, house number, or invalid pincode), Samyoj's AI agent requests exact street details or GPS location pins directly inside the chat window.</p>
+                </div>
+              </div>
+
+              <div class="blog-feature-card">
+                <div class="blog-feature-ico">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2"/></svg>
+                </div>
+                <div class="blog-feature-text">
+                  <h3>3. Automatic Shopify Tagging &amp; Cancellation</h3>
+                  <p>Confirmed orders receive the <code>COD-Verified</code> tag in Shopify and proceed to fulfillment immediately. Unconfirmed or cancelled orders get tagged as <code>COD-Cancelled</code> and are auto-restocked, saving shipping costs.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- In-Article Banner CTA #1 -->
+            <div class="blog-cta-banner">
+              <div>
+                <h3>Stop losing revenue to RTO &amp; abandoned carts</h3>
+                <p>Connect your Shopify store to Samyoj in under 5 minutes and automate your sales funnel on WhatsApp today.</p>
+                <a href="https://app.samyoj.com" class="btn primary">Start Free Shopify Trial →</a>
+              </div>
+              <img src="../images/blog_hero_dashboard_3d.jpg" alt="Samyoj WhatsApp CRM Dashboard" />
+            </div>
+
+            <h2 id="fulfillment-tracking-reviews">4. Post-Purchase Automation: Fulfillment, Tracking &amp; Review Collection</h2>
+            <p>
+              The customer journey does not end when payment is processed. Post-purchase anxiety is the primary cause of customer support ticket overload (Where Is My Order / WISMO queries). Samyoj turns post-purchase communication into a brand-building experience:
+            </p>
+
+            <h3>Real-Time Order &amp; Shipping Dispatch Notifications</h3>
+            <p>
+              By connecting logistics aggregators (like Shiprocket, Delhivery, FedEx, DHL, EasyPost, or Bluedart) with Samyoj webhooks, customers receive instant WhatsApp updates at every stage of shipment:
+            </p>
+            <ul>
+              <li><strong>Order Confirmed &amp; Invoice Sent:</strong> Instant PDF receipt delivered directly to WhatsApp.</li>
+              <li><strong>Package Dispatched (AWB Generated):</strong> Live tracking link with courier partner details.</li>
+              <li><strong>Out for Delivery Notice:</strong> Morning alert with delivery agent contact details.</li>
+              <li><strong>Delivery Completed:</strong> Instant delivery confirmation timestamp.</li>
+            </ul>
+
+            <h3>Automated 5-Star Review &amp; UGC Collection (Day 3 &amp; Day 7)</h3>
+            <p>
+              Timing review requests when the customer is happiest yields a 4x increase in response rates compared to email surveys. Samyoj schedules an automated check-in message 3 to 7 days after order delivery:
+            </p>
+
+            <pre><code>Hi {{first_name}}! 🎁 We hope you're loving your new {{product_name}} from BrandName!
+
+How would you rate your experience?
+[ ⭐⭐⭐⭐⭐ (Loved it!) ]
+[ ⭐⭐⭐ (Okay) ]
+[ ⭐ (Need Help) ]</code></pre>
+
+            <p>
+              When a customer taps 5 stars, Samyoj redirects them to leave a photo review on Shopify (Judge.me, Loox, Yotpo, or Stamped) or Google Reviews. If a customer selects 1 to 3 stars, Samyoj instantly routes the conversation to a live support agent in the <strong>Shared Team Inbox</strong> to resolve their issue before a public negative review is posted.
+            </p>
+
+            <h2 id="shopify-integration-webhooks">5. Step-by-Step Shopify Integration Guide with Samyoj Webhooks</h2>
+            <p>
+              Integrating Samyoj WhatsApp CRM with Shopify requires no complex custom coding. You can set up direct webhooks in Shopify Admin in under 10 minutes by following these steps:
+            </p>
+
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">A</div>
+              <div class="blog-workflow-content">
+                <h4>Step 1: Obtain Your Samyoj Webhook Endpoint</h4>
+                <p>Log in to your <a href="https://app.samyoj.com" target="_blank" style="color:var(--sy-green); font-weight:700;">Samyoj Dashboard</a>, navigate to <strong>Integrations &gt; Shopify &gt; Webhooks</strong>, and copy your unique Webhook URL and Secret Token.</p>
+              </div>
+            </div>
+
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">B</div>
+              <div class="blog-workflow-content">
+                <h4>Step 2: Create Webhook Subscription in Shopify Admin</h4>
+                <p>Go to your Shopify Admin panel &gt; <strong>Settings &gt; Notifications &gt; Webhooks</strong>. Click <strong>Create Webhook</strong>.</p>
+              </div>
+            </div>
+
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">C</div>
+              <div class="blog-workflow-content">
+                <h4>Step 3: Configure Event Topics</h4>
+                <p>Select the relevant topics: <code>Checkouts creation</code>, <code>Checkouts update</code>, <code>Orders creation</code>, and <code>Fulfillments creation</code>. Set Format to <code>JSON</code> and paste your Samyoj Webhook URL.</p>
+              </div>
+            </div>
+
+            <div class="blog-workflow-step">
+              <div class="blog-workflow-badge">D</div>
+              <div class="blog-workflow-content">
+                <h4>Step 4: Map Variables &amp; Activate Workflow</h4>
+                <p>In Samyoj Workflow Builder, map incoming JSON fields to your Meta WhatsApp template parameters (e.g., <code>{{1}} = {{customer.first_name}}</code>, <code>{{2}} = {{line_items[0].title}}</code>, <code>{{3}} = {{abandoned_checkout_url}}</code>).</p>
+              </div>
+            </div>
+
+            <h3>Sample Shopify Webhook Payload (Checkouts Update)</h3>
+            <p>Here is an example of the standard JSON payload structure sent from Shopify to Samyoj when a checkout is abandoned:</p>
+
+            <pre><code>{
+  "id": 293847102938,
+  "token": "c1a2b3c4d5e6f7a8b9c0",
+  "cart_token": "9876543210fedcba",
+  "email": "customer@example.com",
+  "created_at": "2026-07-27T14:30:00+05:30",
+  "updated_at": "2026-07-27T14:45:00+05:30",
+  "abandoned_checkout_url": "https://yourstore.myshopify.com/6829103/checkouts/c1a2b3c4d5e6f7a8b9c0/recover?key=xyz",
+  "subtotal_price": "2499.00",
+  "total_price": "2499.00",
+  "currency": "INR",
+  "shipping_address": {
+    "first_name": "Rahul",
+    "last_name": "Sharma",
+    "phone": "+919876543210",
+    "city": "Mumbai",
+    "country": "India"
+  },
+  "line_items": [
+    {
+      "title": "Premium Wireless Noise-Cancelling Headphones",
+      "quantity": 1,
+      "price": "2499.00",
+      "sku": "HEADPHONE-BLK-01"
+    }
+  ]
+}</code></pre>
+
+            <h3>Sample Samyoj API Request (Sending Meta WhatsApp Template)</h3>
+            <p>Once received, Samyoj converts the payload into a Meta Business API call:</p>
+
+            <pre><code>POST /v1/messages/send-template HTTP/1.1
+Host: api.samyoj.com
+Authorization: Bearer YOUR_SAMYOJ_API_KEY
+Content-Type: application/json
+
+{
+  "to": "+919876543210",
+  "template_name": "shopify_abandoned_cart_v1",
+  "language": "en",
+  "components": [
+    {
+      "type": "body",
+      "parameters": [
+        { "type": "text", "text": "Rahul" },
+        { "type": "text", "text": "Premium Wireless Noise-Cancelling Headphones" },
+        { "type": "text", "text": "₹2,499.00" }
+      ]
+    },
+    {
+      "type": "button",
+      "sub_type": "url",
+      "index": 0,
+      "parameters": [
+        { "type": "text", "text": "c1a2b3c4d5e6f7a8b9c0/recover?key=xyz" }
+      ]
+    }
+  ]
+}</code></pre>
+
+            <h2 id="advanced-d2c-tactics">6. Advanced D2C Growth Automations with Samyoj WhatsApp CRM</h2>
+            <p>
+              Beyond cart recovery and order tracking, fast-growing Shopify stores leverage Samyoj for sophisticated full-funnel marketing strategies:
+            </p>
+
+            <h3>A. Automated Back-in-Stock &amp; Restock Alerts</h3>
+            <p>
+              When a popular item sells out on Shopify, customers tap a <strong>"Notify me on WhatsApp"</strong> widget on the product page. When inventory is replenished, Samyoj sends instant WhatsApp notifications. Restock alerts achieve an average <strong>78% conversion rate</strong> because buyer intent is already established.
+            </p>
+
+            <h3>B. Click-to-WhatsApp Ads (CTWA) Lead Machine</h3>
+            <p>
+              Drive Meta ads (Facebook &amp; Instagram) directly into a WhatsApp conversation instead of a landing page. Skip forms completely: Samyoj's AI agent captures customer details, recommends personalized Shopify products based on chat responses, and generates direct payment links within WhatsApp.
+            </p>
+
+            <h3>C. Post-Purchase Upsell &amp; Cross-Sell Campaigns</h3>
+            <p>
+              Trigger automated recommendations 14 days after purchase. For instance, if a buyer ordered a coffee maker, send a personalized offer for gourmet coffee beans with a 1-click WhatsApp purchase button.
+            </p>
+
+            <h2 id="roi-benchmarks-matrix">7. E-Commerce Metrics &amp; ROI Benchmark Matrix</h2>
+            <p>
+              Here is what merchants achieve within 30 to 90 days of implementing Samyoj WhatsApp CRM on their Shopify store:
+            </p>
+
+            <div class="blog-table-wrapper">
+              <table class="blog-table">
+                <thead>
+                  <tr>
+                    <th>Store Size (Monthly Orders)</th>
+                    <th>Average Monthly Recovered Sales</th>
+                    <th>RTO Cost Reduction</th>
+                    <th>WISMO Support Ticket Savings</th>
+                    <th>Estimated Monthly ROI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>500 – 1,500 Orders</strong></td>
+                    <td>₹1,80,000 – ₹3,50,000</td>
+                    <td>₹45,000 – ₹90,000</td>
+                    <td>35 Hours Saved</td>
+                    <td><strong>14x Monthly Plan Cost</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>1,500 – 5,000 Orders</strong></td>
+                    <td>₹5,50,000 – ₹12,000,000</td>
+                    <td>₹1,80,000 – ₹3,50,000</td>
+                    <td>110 Hours Saved</td>
+                    <td><strong>22x Monthly Plan Cost</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>5,000+ Orders (Enterprise D2C)</strong></td>
+                    <td>₹25,00,000+</td>
+                    <td>₹8,00,000+</td>
+                    <td>350+ Hours Saved</td>
+                    <td><strong>35x Monthly Plan Cost</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- In-Article Banner CTA #2 -->
+            <div class="blog-cta-banner">
+              <div>
+                <h3>Scale your Shopify store revenue on WhatsApp</h3>
+                <p>Join hundreds of high-growth D2C brands automating abandoned carts, COD verifications, and customer support with Samyoj.</p>
+                <a href="https://app.samyoj.com" class="btn primary">Start your 14-Day Free Trial →</a>
+              </div>
+              <img src="../images/blog_integrations_3d.jpg" alt="Samyoj WhatsApp Integration Visual" />
+            </div>
+
+            <h2 id="faq">8. Frequently Asked Questions (FAQ)</h2>
+
+            <div itemscope itemtype="https://schema.org/FAQPage">
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">What is a Shopify WhatsApp CRM and how does it work?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    A Shopify WhatsApp CRM connects your online store directly to Meta's official WhatsApp Business API using webhooks or a native app. It allows you to trigger automated WhatsApp messages based on customer actions like checkout abandonment, order placement, shipment tracking, and review requests.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">How does WhatsApp Abandoned Cart Recovery differ from Email Recovery?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Email recovery messages average an open rate of 15-20% and often land in spam or promotions folders. WhatsApp recovery messages achieve a 98% open rate and a 45-60% conversion rate because customers receive instant, direct notifications on their primary messaging app with one-click checkout links.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">How does COD Phone Verification cut RTO (Return-to-Origin) rates by 50%?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    When a Cash-on-Delivery order is placed, Samyoj automatically sends an interactive WhatsApp message asking the customer to confirm or cancel the order. It also offers an instant 5% discount if they convert to a prepaid payment. Unconfirmed or fake orders are filtered out before dispatch, preventing costly return shipping fees.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">What is the optimal timing sequence for WhatsApp Abandoned Cart recovery?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    The 2026 industry standard sequence consists of 3 stages: Stage 1 at 15 minutes (a gentle reminder with cart contents), Stage 2 at 4 hours (adding social proof and a 10% discount code), and Stage 3 at 24 hours (a final call with inventory scarcity and prepaid conversion incentive).
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">Do I need coding knowledge to set up Shopify Webhooks with Samyoj?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    No. Samyoj provides a 1-click Shopify App as well as standard webhook URLs that you can paste directly into Shopify Admin under Settings &gt; Notifications &gt; Webhooks. No complex backend coding is required.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">Are WhatsApp messages sent through Samyoj compliant with Meta policies?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Yes. Samyoj is a Meta-approved Tech Provider. All outgoing broadcast and transactional notifications use Meta-approved template messages with clear opt-in management and unsubscribe options.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">Can multiple customer support agents manage Shopify chats on one WhatsApp number?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Yes. Samyoj provides a centralized Shared Team Inbox where your entire team can log in, view live Shopify order data alongside chat windows, assign conversations, and collaborate using internal notes.
+                  </p>
+                </div>
+              </div>
+
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 24px;">
+                <h3 itemprop="name">How long does it take to integrate Samyoj WhatsApp CRM with a Shopify store?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text">
+                    Basic setup takes less than 10 minutes. Once your WhatsApp Business API profile is verified, you can activate pre-built workflows for cart recovery, COD verification, and shipment alerts immediately.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Pagination Links -->
+          <div class="blog-post-nav">
+            <a href="what-is-whatsapp-crm.html" class="blog-nav-link">
+              <span class="blog-nav-dir">← Previous Article</span>
+              <span class="blog-nav-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</span>
+            </a>
+            <a href="#" class="blog-nav-link next">
+              <span class="blog-nav-dir">Next Article →</span>
+              <span class="blog-nav-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Right Sidebar Column (~32%) -->
+        <aside class="blog-sidebar">
+
+          <!-- Widget 0: Search Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Search Articles</h3>
+            <form class="sidebar-search-form" onsubmit="event.preventDefault(); window.location.href='../blog.html';">
+              <svg class="sidebar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" placeholder="Search blog posts..." class="sidebar-search-input" />
+            </form>
+          </div>
+
+          <!-- Widget 1: About the Author -->
+          <div class="sidebar-widget">
+            <div class="widget-author">
+              <div class="widget-author-head">
+                <div class="widget-author-avatar">S</div>
+                <div>
+                  <div class="widget-author-name">
+                    Samyoj Team
+                    <svg viewBox="0 0 20 20" fill="#03cf65" width="16" height="16">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="widget-author-bio">
+                We're a team of WhatsApp marketing experts and engineers passionate about helping D2C brands automate conversations, improve engagement, and scale e-commerce revenue.
+              </p>
+              <a href="../blog.html" class="btn-outline-sm">View all posts →</a>
+            </div>
+          </div>
+
+          <!-- Widget 2: Popular / Related Articles -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Popular Articles</h3>
+            <div class="related-list">
+
+              <a href="what-is-whatsapp-crm.html" class="related-item">
+                <img src="../images/blog_what_is_whatsapp_crm.jpg" alt="WhatsApp CRM Guide Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">CRM</span>
+                  <span class="related-title">What is a WhatsApp CRM? The Ultimate Guide for 2026</span>
+                  <span class="related-meta">July 27, 2026 · 10 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_automation_robot_3d.jpg" alt="Automation Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">AUTOMATION</span>
+                  <span class="related-title">7 WhatsApp Automation Workflows That Save Time and Boost Sales</span>
+                  <span class="related-meta">July 15, 2026 · 6 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_ai_agent_3d.jpg" alt="AI Agent Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">AI &amp; CHATBOTS</span>
+                  <span class="related-title">How AI Agents Can Improve Customer Support on WhatsApp</span>
+                  <span class="related-meta">July 11, 2026 · 7 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_gift_box_3d.jpg" alt="Product Roundup Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">PRODUCT UPDATES</span>
+                  <span class="related-title">What's New in Samyoj: June 2026 Product Roundup</span>
+                  <span class="related-meta">July 8, 2026 · 5 min read</span>
+                </div>
+              </a>
+
+              <a href="#" class="related-item">
+                <img src="../images/blog_leads_3d.jpg" alt="Leads Thumbnail" class="related-thumb" />
+                <div class="related-info">
+                  <span class="related-cat">WHATSAPP MARKETING</span>
+                  <span class="related-title">5 Proven Ways to Generate More Leads on WhatsApp</span>
+                  <span class="related-meta">July 2, 2026 · 6 min read</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Widget 3: Categories -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Categories</h3>
+            <ul class="cat-list">
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    WhatsApp Marketing
+                  </span>
+                  <span class="cat-count">18</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    Automation
+                  </span>
+                  <span class="cat-count">14</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
+                    AI &amp; Chatbots
+                  </span>
+                  <span class="cat-count">12</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    Product Updates
+                  </span>
+                  <span class="cat-count">10</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    CRM
+                  </span>
+                  <span class="cat-count">08</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    Growth Tips
+                  </span>
+                  <span class="cat-count">09</span>
+                </a>
+              </li>
+              <li class="cat-item">
+                <a href="../blog.html">
+                  <span class="cat-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+                    Integrations
+                  </span>
+                  <span class="cat-count">07</span>
+                </a>
+              </li>
+            </ul>
+            <a href="../blog.html" style="font-size:13.5px; font-weight:700; color:#03cf65; text-decoration:none;">View all categories →</a>
+          </div>
+
+          <!-- Widget 4: Newsletter Box -->
+          <div class="sidebar-widget widget-newsletter">
+            <h3 class="sidebar-widget-title">Stay updated</h3>
+            <p style="font-size:13.5px; color:#475569; line-height:1.55; margin:0 0 16px;">
+              Get the latest WhatsApp marketing tips, product updates, and growth strategies straight to your inbox.
+            </p>
+            <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Samyoj updates!');">
+              <input type="email" placeholder="Enter your email" required class="newsletter-input" />
+              <button type="submit" class="btn-full-green">Subscribe →</button>
+            </form>
+            <div class="newsletter-note">No spam. Unsubscribe anytime.</div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer Component -->
+  <footer class="sy-footer" aria-label="Site footer">
+    <div class="sy-footer-inner">
+      <div class="sy-footer-grid">
+        <div class="sy-footer-brand">
+          <a class="sy-footer-logo" href="../index.html" aria-label="Samyoj home">
+            <img src="../images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="210" height="56" />
+          </a>
+          <p class="sy-footer-desc">Samyoj helps businesses automate, engage and grow with WhatsApp. Built for scale, backed by reliability.</p>
+          <div class="sy-footer-partner">
+            <img src="../images/download.png" alt="Meta Tech Provider" width="160" height="89" />
+          </div>
+          <p class="sy-footer-made">Made with <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e11d48" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg> in India</p>
+        </div>
+
+        <nav class="sy-footer-col" aria-label="Platform">
+          <h4>Platform</h4>
+          <ul class="sy-footer-links">
+            <li><a href="../features.html">Features</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../industries.html">Industries</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <nav class="sy-footer-col" aria-label="Company">
+          <h4>Company</h4>
+          <ul class="sy-footer-links">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../legal/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="../legal/cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="sy-footer-col" aria-label="Contact Us">
+          <h4>Contact Us</h4>
+          <ul class="sy-footer-contact">
+            <li><a href="tel:+918839888531">Sales: +91 8839888531</a></li>
+            <li><a href="tel:+918305369467">Support: +91 8305369467</a></li>
+            <li><a href="mailto:hello@samyoj.com">hello@samyoj.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sy-footer-bottom">
+        <p class="sy-footer-copy">&copy; 2026 Samyoj. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+
+
+

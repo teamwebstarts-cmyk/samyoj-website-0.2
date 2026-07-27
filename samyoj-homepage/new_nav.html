@@ -1,0 +1,46 @@
+<nav class="sy-nav" aria-label="Site navigation">
+  <div class="sy-nav-inner">
+    <a href="index.html" class="sy-nav-brand">
+      <img src="images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150" height="43">
+    </a>
+    <ul class="sy-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="blog.html" aria-current="page">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="sy-nav-actions">
+      <a href="https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton" target="_blank" class="sy-nav-btn sy-nav-btn-primary">Start for FREE</a>
+      <a href="https://app.samyoj.com/" target="_blank" class="sy-nav-btn sy-nav-btn-secondary">Login</a>
+    </div>
+    <button class="sy-nav-toggle" aria-label="Open mobile menu" id="sy-mobile-toggle">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div id="sy-nav-drawer" class="sy-nav-drawer">
+    <ul class="sy-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="blog.html" aria-current="page">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="sy-nav-actions">
+      <a href="https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton" target="_blank" class="sy-nav-btn sy-nav-btn-primary" style="width: 100%;">Start for FREE</a>
+      <a href="https://app.samyoj.com/" target="_blank" class="sy-nav-btn sy-nav-btn-secondary" style="width: 100%;">Login</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.getElementById('sy-mobile-toggle');
+    var drawer = document.getElementById('sy-nav-drawer');
+    if (toggle && drawer) {
+      toggle.addEventListener('click', function() {
+        drawer.classList.toggle('is-open');
+      });
+    }
+  });
+</script>

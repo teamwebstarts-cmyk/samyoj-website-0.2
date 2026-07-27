@@ -267,7 +267,8 @@
       --header-fontSize-secondary: 16;
     }
 
-    body:not(.noScript) .umso-animated {
+    body:not(.noScript) main .umso-animated,
+    body:not(.noScript) section .umso-animated {
       opacity: 0;
     }
 
@@ -1182,6 +1183,7 @@
     }
 
     @media (max-width: 960px) {
+
       .um-nav-wrapper .um-nav-links,
       .um-nav-wrapper .um-nav-buttons {
         display: none !important;
@@ -1429,18 +1431,7 @@
       height: 100%;
     }
 
-    ._37ad9200 {
-      top: var(--um-banner-height, 0px);
-      left: 0;
-      right: 0;
-      height: 65px;
-      display: flex;
-      z-index: 99;
-      --wr-max: 1600px;
-      position: absolute;
-      background: transparent;
-      box-sizing: content-box;
-    }
+    /* Header bar: samyoj-nav.css */
 
     ._37ad9200>.wr {
       height: 100%;
@@ -1532,7 +1523,7 @@
       flex-direction: column;
     }
 
-._ecbee37c {
+    ._ecbee37c {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -1871,7 +1862,7 @@
       padding-bottom: 0px;
     }
 
-._8cfaaed6 {
+    ._8cfaaed6 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -2257,7 +2248,7 @@
       padding-bottom: 0;
     }
 
-._db78ab11 {
+    ._db78ab11 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -2327,7 +2318,7 @@
       padding-bottom: 50px;
     }
 
-._65ef41dc {
+    ._65ef41dc {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -3575,7 +3566,7 @@
       flex-direction: column;
     }
 
-._e769e945 {
+    ._e769e945 {
       gap: 10px;
       display: flex;
       text-align: center;
@@ -3736,7 +3727,7 @@
       }
     }
 
-._22e950e2 {
+    ._22e950e2 {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -3794,7 +3785,7 @@
       padding-bottom: 50px;
     }
 
-._e7e6584f {
+    ._e7e6584f {
       gap: 10px;
       display: flex;
       text-align: left;
@@ -4422,9 +4413,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="samyoj-footer.css?v=6">
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
+  <link rel="stylesheet" href="samyoj-nav.css?v=11">
 </head>
 
 <body class="noScript">
+
   <script>document.body.classList.remove('noScript');</script>
   <header class="_58ce83d8">
     <style>
@@ -4439,12 +4432,13 @@
           style="display:flex;justify-content:center;align-items:center;padding-top:0.6em;padding-bottom:0.6em;text-align:center;font-size:14px">
           <span class="_071afc96 um-text">
             <p><strong>NEW</strong> · Smarter conversations start with <strong>AI Agents</strong> ·
-              <strong>Explore</strong></p>
+              <strong>Explore</strong>
+            </p>
             <!-- -->
             <style>
-              /* Manrope already loaded via <link> — skip duplicate @import */
+              /* Manrope already loaded via <link> in head */
 
-              #samyoj-magic-bar {
+              #aisensy-magic-bar {
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -4458,7 +4452,7 @@
                 pointer-events: none;
               }
 
-              #samyoj-magic-bar.mb-menu-open {
+              #aisensy-magic-bar.mb-menu-open {
                 display: none !important;
               }
 
@@ -4473,7 +4467,7 @@
                 pointer-events: none !important;
               }
 
-              #samyoj-magic-bar .mb-inner {
+              #aisensy-magic-bar .mb-inner {
                 pointer-events: auto;
                 max-width: 1100px;
                 margin: 0 auto;
@@ -4491,21 +4485,21 @@
                 box-shadow: none;
               }
 
-              #samyoj-magic-bar .mb-seg {
+              #aisensy-magic-bar .mb-seg {
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
                 min-width: 0;
               }
 
-              #samyoj-magic-bar .mb-divider {
+              #aisensy-magic-bar .mb-divider {
                 width: 1px;
-                height: 26px;
+                height: 22px;
                 background: rgba(15, 46, 32, .14);
                 flex: 0 0 1px;
               }
 
-              #samyoj-magic-bar .mb-pill {
+              #aisensy-magic-bar .mb-pill {
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
@@ -4521,14 +4515,14 @@
                 box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
               }
 
-              #samyoj-magic-bar .mb-spark {
-                width: 12px;
-                height: 12px;
+              #aisensy-magic-bar .mb-spark {
+                width: 18px;
+                height: 18px;
                 display: block;
                 flex: 0 0 auto;
               }
 
-              #samyoj-magic-bar .mb-icon {
+              #aisensy-magic-bar .mb-icon {
                 width: 22px;
                 height: 22px;
                 color: #1fa548;
@@ -4536,7 +4530,7 @@
                 display: block;
               }
 
-              #samyoj-magic-bar .mb-title {
+              #aisensy-magic-bar .mb-title {
                 color: #24362d;
                 font-size: 15px;
                 font-weight: 600;
@@ -4545,12 +4539,12 @@
                 white-space: nowrap;
               }
 
-              #samyoj-magic-bar .mb-title strong {
+              #aisensy-magic-bar .mb-title strong {
                 color: #1fa548;
                 font-weight: 800;
               }
 
-              #samyoj-magic-bar .mb-cta {
+              #aisensy-magic-bar .mb-cta {
                 display: inline-flex;
                 align-items: center;
                 gap: 5px;
@@ -4562,27 +4556,27 @@
                 padding-right: 4px;
               }
 
-              #samyoj-magic-bar .mb-cta svg {
+              #aisensy-magic-bar .mb-cta svg {
                 width: 16px;
                 height: 16px;
                 color: #1fa548;
                 transition: transform .18s ease;
               }
 
-              #samyoj-magic-bar .mb-cta:hover svg {
+              #aisensy-magic-bar .mb-cta:hover svg {
                 transform: translateX(3px);
               }
 
-              #samyoj-magic-bar .mb-title-short {
+              #aisensy-magic-bar .mb-title-short {
                 display: none;
               }
 
               @media (max-width:720px) {
-                #samyoj-magic-bar {
+                #aisensy-magic-bar {
                   padding: 0;
                 }
 
-                #samyoj-magic-bar .mb-inner {
+                #aisensy-magic-bar .mb-inner {
                   max-width: none;
                   width: 100%;
                   margin: 0;
@@ -4597,21 +4591,21 @@
                   background: transparent;
                 }
 
-                #samyoj-magic-bar .mb-divider {
+                #aisensy-magic-bar .mb-divider {
                   display: none;
                 }
 
-                #samyoj-magic-bar .mb-icon {
+                #aisensy-magic-bar .mb-icon {
                   display: none;
                 }
 
-                #samyoj-magic-bar .mb-seg-mid {
+                #aisensy-magic-bar .mb-seg-mid {
                   flex: 1 1 auto;
                   min-width: 0;
                   gap: 0;
                 }
 
-                #samyoj-magic-bar .mb-title {
+                #aisensy-magic-bar .mb-title {
                   font-size: 12.5px;
                   white-space: nowrap;
                   overflow: hidden;
@@ -4620,15 +4614,15 @@
                   line-height: 1.25;
                 }
 
-                #samyoj-magic-bar .mb-title-full {
+                #aisensy-magic-bar .mb-title-full {
                   display: none;
                 }
 
-                #samyoj-magic-bar .mb-title-short {
+                #aisensy-magic-bar .mb-title-short {
                   display: inline;
                 }
 
-                #samyoj-magic-bar .mb-pill {
+                #aisensy-magic-bar .mb-pill {
                   font-size: 9.5px;
                   padding: 4px 8px;
                   gap: 4px;
@@ -4639,30 +4633,30 @@
                   border-radius: 999px;
                 }
 
-                #samyoj-magic-bar .mb-spark {
+                #aisensy-magic-bar .mb-spark {
                   width: 10px;
                   height: 10px;
                 }
 
-                #samyoj-magic-bar .mb-cta {
+                #aisensy-magic-bar .mb-cta {
                   font-size: 12.5px;
                   padding-right: 0;
                   flex: 0 0 auto;
                   margin-left: auto;
                 }
 
-                #samyoj-magic-bar .mb-cta svg {
+                #aisensy-magic-bar .mb-cta svg {
                   width: 14px;
                   height: 14px;
                 }
               }
 
               @media (max-width:380px) {
-                #samyoj-magic-bar .mb-title {
+                #aisensy-magic-bar .mb-title {
                   font-size: 11.5px;
                 }
 
-                #samyoj-magic-bar .mb-cta .mb-cta-text {
+                #aisensy-magic-bar .mb-cta .mb-cta-text {
                   display: none;
                 }
               }
@@ -4670,11 +4664,11 @@
             <script>
               (function () {
                 function init() {
-                  if (document.getElementById('samyoj-magic-bar')) return;
+                  if (document.getElementById('aisensy-magic-bar')) return;
                   var html =
-                    '<div id="samyoj-magic-bar" role="region" aria-label="Announcement">' +
+                    '<div id="aisensy-magic-bar" role="region" aria-label="Announcement">' +
                     '<div class="mb-inner">' +
-                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2l1.1 5.2L18 8.2l-4.2 2.8L15 16.4 12 13.7 9 16.4l1.2-5.4L6 8.2l4.9-.8L12 2.2z"/></svg>NEW</span></div>' +
+                    '<div class="mb-seg mb-seg-left"><span class="mb-pill"><svg class="mb-spark" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 64C52 61 61 52 64 40C67 52 76 61 88 64C76 67 67 76 64 88C61 76 52 67 40 64Z" fill="currentColor"/><path d="M76 24C82 22 86 18 88 12C90 18 94 22 100 24C94 26 90 30 88 36C86 30 82 26 76 24Z" fill="currentColor"/><path d="M84 92C90 90 94 86 96 80C98 86 102 90 108 92C102 94 98 98 96 104C94 98 90 94 84 92Z" fill="currentColor"/></svg>NEW</span></div>' +
                     '<span class="mb-divider" aria-hidden="true"></span>' +
                     '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
                     '<span class="mb-divider" aria-hidden="true"></span>' +
@@ -4682,7 +4676,7 @@
                     '</div>' +
                     '</div>';
                   document.body.insertAdjacentHTML('afterbegin', html);
-                  var bar = document.getElementById('samyoj-magic-bar');
+                  var bar = document.getElementById('aisensy-magic-bar');
 
                   // Feed our real height into Umso's native banner variable so the navbar + content shift down.
                   function sync() {
@@ -4745,18 +4739,21 @@
         style="--animationName:toBottom;--animationDuration:500;--animationDelay:0;--animationStagger:0;--animationSlideDistance:14px;--animationFromScale:0.95;width:100%">
         <div class="_f4c879d8">
           <div class="_592c9c5c wr">
-            <nav id="yspyhjboie" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
+            <nav id="985hzqm8a3" class="_cd1263f2 um-nav-wrapper um-links-centered um-hidden" style="position:relative">
               <div class="um-nav-children">
-                <div class="_730f12a7"><a href="index.html" style="gap:10px"><img src="images/logo.webp"
-                      alt="Logo_Samyoj.png" style="width:150px"  width="150" height="43" /></a></div>
+                <div class="_730f12a7"><a href="index.html" style="display: inline-flex; gap: 10px;"><img
+                      src="./images/logoSamyoj.jpeg" alt="Samyoj AI-powered WhatsApp CRM logo" width="150"
+                      height="43" /></a></div>
               </div>
               <ul class="um-nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="industries.html">Industries</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_k9krbal3oo"
+              <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
                   class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
                     viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
                     <path
@@ -4764,7 +4761,7 @@
                       fill="currentColor"></path>
                   </svg></button>
                 <script>(function () {
-              document.getElementById('btn_k9krbal3oo').addEventListener('click', function (e) {
+              document.getElementById('btn_7z9u86l3cj').addEventListener('click', function (e) {
                 (function redirectWithParams() {
                   const query = window.location.search;
                   const targetUrl = "https://app.samyoj.com/?utm_source=organic&amp;utm_term=homepagesignupbutton";
@@ -4775,29 +4772,75 @@
                   }
                 })();
               })
-            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_dosrxyyz2l"
-                  class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
-                    xmlns="http://www.w3.org/2000/svg" class="um-arrow">
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_a5nqj6swnc" class="_4b6ab900 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></a>
               </div>
-            </nav><button id="yspyhjboie-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
-            <div id="yspyhjboie-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
+            </nav><button id="985hzqm8a3-drawerTrigger" class="um-nav-drawerTrigger" title="Open Mobile Menu"></button>
+            <div id="985hzqm8a3-drawer" class="_cd1263f2 um-nav-drawer sy-drawer um-hidden">
               <header class="sy-drawer-head">
-                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp" alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
-                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+                <a class="sy-drawer-brand" href="index.html"><img src="./images/logo.webp"
+                    alt="samyoj — WhatsApp Automation &amp; CRM" width="132" height="36" /></a>
+                <button type="button" class="um-nav-drawerClose" aria-label="Close menu"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M18 6l-12 12"></path>
+                    <path d="M6 6l12 12"></path>
+                  </svg></button>
               </header>
               <ul class="um-drawer-links sy-drawer-links">
-                <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z"/></svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
-                <li><a class="sy-drawer-link" href="features.html" aria-current="page"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z"/><path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/><path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z"/></svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
-                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l7-4 2 1.2V5h7v15"/><path d="M4 20h16"/><path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1"/></svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
-                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/><path d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z"/></svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-ico" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z" />
+                      </svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg></span></a></li>
+                <li><a class="sy-drawer-link" href="features.html" aria-current="page"><span class="sy-drawer-ico"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z" />
+                        <path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z" />
+                        <path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z" />
+                      </svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg></span></a></li>
+                <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 20V9l7-4 2 1.2V5h7v15" />
+                        <path d="M4 20h16" />
+                        <path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1" />
+                      </svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg></span></a></li>
+                <li><a class="sy-drawer-link" href="contact.html"><span class="sy-drawer-ico" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" />
+                        <path
+                          d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z" />
+                      </svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg></span></a></li>
               </ul>
-<div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_yuh8ig11er"
-                  class="_e70f123e btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
-                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+              <div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank"
+                  rel="noopener noreferrer" id="btn_yuh8ig11er" class="_e70f123e btn primary um-dragging"><span>Start
+                    for FREE</span><svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg"
+                    class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
@@ -4814,20 +4857,27 @@
                   }
                 })();
               })
-            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" id="btn_x7ccd1lcf9"
-                  class="_b90406f0 btn um-dragging"><span>Login</span><svg width="1em" viewBox="0 0 15 12"
-                    xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
+            })()</script><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer"
+                  id="btn_x7ccd1lcf9" class="_b90406f0 btn um-dragging"><span>Login</span><svg width="1em"
+                    viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow" aria-hidden="true">
                     <path
                       d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
                       fill="currentColor"></path>
                   </svg></a>
               </div>
-            
+
               <div class="sy-drawer-foot">
-                <span class="sy-drawer-wa" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.75 13.94c-.24.68-1.4 1.24-1.93 1.32-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.78-4.18-4.93-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1.01-2.41.26-.28.58-.35.77-.35h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.3.02.49-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.32.07.12.07.68-.17 1.36z"/></svg></span>
+                <span class="sy-drawer-wa" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="#25D366">
+                    <path
+                      d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.75 13.94c-.24.68-1.4 1.24-1.93 1.32-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.78-4.18-4.93-4.37-.14-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1.01-2.41.26-.28.58-.35.77-.35h.56c.18 0 .42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.3.02.49-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.32.07.12.07.68-.17 1.36z" />
+                  </svg></span>
                 <div class="sy-drawer-foot-copy">
                   <p class="sy-drawer-foot-title">Built for WhatsApp Business</p>
-                  <p class="sy-drawer-foot-sub"><span class="sy-drawer-bolt" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 10-14h-7l0-6z"/></svg></span> AI Powered CRM</p>
+                  <p class="sy-drawer-foot-sub"><span class="sy-drawer-bolt" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13 2 4 14h7l-1 8 10-14h-7l0-6z" />
+                      </svg></span> AI Powered CRM</p>
                 </div>
               </div>
             </div>
@@ -4898,7 +4948,8 @@
         </div>
         <div class="_10af011a"><img draggable="false" src="images/feat-illu-01.png" class="_ba1fa94a"
             alt="SAMYOJ WhatsApp workspace"
-            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)"  width="1343" height="1171" loading="lazy" decoding="async" /></div>
+            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)" width="1343"
+            height="1171" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -5002,7 +5053,8 @@
 
         <div class="pf-center">
           <div class="pf-dash">
-            <img draggable="false" src="images/feat-illu-02.png" class="pf-dash-img" alt="SAMYOJ platform dashboard"  width="1448" height="1086" loading="lazy" decoding="async" />
+            <img draggable="false" src="images/feat-illu-02.png" class="pf-dash-img" alt="SAMYOJ platform dashboard"
+              width="1448" height="1086" loading="lazy" decoding="async" />
           </div>
           <div class="pf-trust">
             <div class="pf-trust-item">
@@ -5226,7 +5278,8 @@
           <div class="demo-motion" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="demo-video-frame" id="demo-video-frame" role="button" tabindex="0"
             aria-label="Play Samyoj product demo video">
-            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" width="1448" height="1086" loading="lazy" decoding="async" />
+            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" width="1448"
+              height="1086" loading="lazy" decoding="async" />
             <div class="demo-video-overlay">
               <button type="button" class="demo-play-btn" id="demo-play-btn" aria-label="Play video">
                 <svg viewBox="0 0 24 24">
@@ -5614,7 +5667,8 @@
             <a href="#" class="feat-cta-btn" onclick="return false;">Start Your Free Trial →</a>
           </div>
           <img src="images/rocket-image.png" alt="rocket image" class="feat-cta-rocket" aria-hidden="true"
-            loading="lazy" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'" width="1536" height="1024">
+            loading="lazy" onerror="this.src='https://cdn3d.iconscout.com/3d/premium/thumb/rocket-4993437-4161117.png'"
+            width="1536" height="1024">
         </div>
 
       </div>
@@ -5698,8 +5752,8 @@
         <div class="ai-visual-col">
           <div class="ai-visual">
             <img draggable="false" src="images/feat-illu-03.png"
-              alt="AI Assistant chat interface with knowledge base, query resolution, and agent handoff"
-              width="1448" height="1086" loading="lazy" decoding="async" />
+              alt="AI Assistant chat interface with knowledge base, query resolution, and agent handoff" width="1448"
+              height="1086" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -5934,6 +5988,7 @@
       </div>
     </div>
   </section>
+
   <footer class="sy-footer" aria-label="Site footer">
     <div class="sy-footer-inner">
       <div class="sy-footer-grid">
