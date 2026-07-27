@@ -36,6 +36,14 @@
   <link rel="alternate" hrefLang="en" href="https://samyoj.com/industries" />
   <link rel="alternate" hrefLang="x-default" href="https://samyoj.com/industries" />
   <style>
+  /* Active link styles */
+  .um-nav-links li a.active {
+      color: #00c853 !important; /* Green color */
+      border-bottom: 3px solid #00c853; /* Green underline */
+      font-weight: 600;
+  }
+</style>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -4440,5 +4448,22 @@
     })();
   </script>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let currentPath = window.location.pathname.split("/").pop();
 
+      if (currentPath === "" || currentPath === "/") {
+          currentPath = "index.html";
+      }
+
+      const navLinks = document.querySelectorAll('.um-nav-links a');
+
+      navLinks.forEach(link => {
+          const linkHref = link.getAttribute('href');
+          if (linkHref === currentPath) {
+              link.classList.add('active');
+          }
+      });
+  });
+</script>
 </html>

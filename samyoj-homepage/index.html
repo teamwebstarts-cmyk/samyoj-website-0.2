@@ -13,6 +13,14 @@
   <meta name="author" content="Samyoj" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://samyoj.com/" />
+  <style>
+  /* Active link styles */
+  .um-nav-links li a.active {
+      color: #00c853 !important; /* Green color */
+      border-bottom: 3px solid #00c853; /* Green underline */
+      font-weight: 600;
+  }
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -8982,6 +8990,24 @@
       }
     })();
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let currentPath = window.location.pathname.split("/").pop();
+
+      if (currentPath === "" || currentPath === "/") {
+          currentPath = "index.html";
+      }
+
+      const navLinks = document.querySelectorAll('.um-nav-links a');
+
+      navLinks.forEach(link => {
+          const linkHref = link.getAttribute('href');
+          if (linkHref === currentPath) {
+              link.classList.add('active');
+          }
+      });
+  });
+</script>
 </body>
 
 </html>

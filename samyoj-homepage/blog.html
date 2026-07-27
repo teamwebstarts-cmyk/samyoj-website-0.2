@@ -27,6 +27,14 @@
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
   <link rel="stylesheet" href="samyoj-footer.css?v=6">
   <link rel="stylesheet" href="mobile-buttons.css">
+  <style>
+  /* Active link styles */
+  .um-nav-links li a.active {
+      color: #00c853 !important; /* Green color */
+      border-bottom: 3px solid #00c853; /* Green underline */
+      font-weight: 600;
+  }
+</style>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -2081,6 +2089,23 @@
   }
 })();
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let currentPath = window.location.pathname.split("/").pop();
 
+      if (currentPath === "" || currentPath === "/") {
+          currentPath = "index.html";
+      }
+
+      const navLinks = document.querySelectorAll('.um-nav-links a');
+
+      navLinks.forEach(link => {
+          const linkHref = link.getAttribute('href');
+          if (linkHref === currentPath) {
+              link.classList.add('active');
+          }
+      });
+  });
+</script>
 </body>
 </html>
