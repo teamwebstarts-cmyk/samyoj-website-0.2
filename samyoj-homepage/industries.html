@@ -36,6 +36,57 @@
   <link rel="alternate" hrefLang="en" href="https://samyoj.com/industries" />
   <link rel="alternate" hrefLang="x-default" href="https://samyoj.com/industries" />
   <style>
+  /* Active link styles */
+.um-nav-links {
+    list-style: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Normal Link Styles */
+.um-nav-links li a {
+    text-decoration: none !important;
+    color: #333333 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 6px 14px !important;
+    margin: 0 2px !important;
+    border-radius: 999px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border: 1px solid transparent !important;
+}
+
+/* Hover Effect */
+.um-nav-links li a:hover {
+    color: #10b981 !important;
+}
+
+/* ACTIVE PILL HIGHLIGHT STATE */
+.um-nav-links li a.active,
+.um-nav-links li a[aria-current="page"] {
+    background-color: #f0fdf4 !important;
+    color: #059669 !important;
+    border: 1px solid #bbf7d0 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15) !important;
+    padding: 8px 18px !important;
+}
+
+/* Sparkle Star Icon */
+.um-nav-links li a.active::before,
+.um-nav-links li a[aria-current="page"]::before {
+    content: "✦" !important;
+    font-size: 13px !important;
+    color: #059669 !important;
+}
+</style>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -4439,6 +4490,30 @@
       }
     })();
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Current URL detection
+    var currentPath = window.location.pathname.split('/').pop();
+    
+    // Default to index.html if path is empty/root
+    if (currentPath === '' || currentPath === '/') {
+      currentPath = 'index.html';
+    }
+
+    // Target all links inside .um-nav-links
+    var navLinks = document.querySelectorAll('.um-nav-links a');
+
+    navLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+
+      if (href === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
