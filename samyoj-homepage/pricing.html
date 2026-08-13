@@ -278,9 +278,37 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 0;
       font-family: inherit;
       white-space: nowrap;
+    }
+
+    .billing-segment-inner {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      white-space: nowrap;
+      line-height: 1.2;
+      border-radius: 8px;
+      transition: background 180ms ease, border-color 180ms ease, padding 180ms ease;
+    }
+
+    .billing-segment-btn:not(.active) .billing-segment-inner {
+      padding: 5px 10px;
+      background: #eef2f6;
+      border: 1px solid #e2e8f0;
+    }
+
+    .billing-segment-btn.active .billing-segment-inner {
+      padding: 2px 4px;
+      background: transparent;
+      border: 1px solid transparent;
+      gap: 5px;
+    }
+
+    .billing-segment-btn:hover:not(.active) .billing-segment-inner {
+      background: #e8edf3;
+      border-color: #d7dee8;
     }
 
     .billing-segment-btn:hover {
@@ -298,15 +326,40 @@
 
     .billing-segment-btn .save-pill {
       font-size: 10px;
-      font-weight: 800;
+      font-weight: 700;
       color: #00b853;
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+      line-height: 1.2;
+      transition: all 180ms ease;
+    }
+
+    .billing-segment-btn:not(.active) .save-pill {
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin-left: 0;
+    }
+
+    .billing-segment-btn:not(.active) .save-pill::before {
+      content: "·";
+      margin: 0 5px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .billing-segment-btn.active .save-pill {
+      font-size: 9px;
+      font-weight: 800;
       background: #eafbf0;
       border: 1px solid var(--sy-green-border);
       border-radius: 999px;
-      padding: 3px 8px;
-      margin-left: 6px;
-      letter-spacing: 0.02em;
-      flex-shrink: 0;
+      padding: 2px 6px;
+      margin-left: 0;
+    }
+
+    .billing-segment-btn.active .save-pill::before {
+      content: none;
     }
 
     .hero-pricing-title {
@@ -407,55 +460,117 @@
       outline-offset: 2px;
     }
 
-    /* Sticky billing bar above pricing cards */
-    .billing-sticky-bar {
-      position: sticky;
-      top: calc(var(--um-header-height, 65px) + 4px);
-      z-index: 45;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #f1f5f9;
-      padding: 12px 16px;
-      margin-bottom: 8px;
-    }
-
-    .billing-sticky-bar .wr {
+    /* Billing selector (inline, not sticky) */
+    .billing-bar {
       display: flex;
       justify-content: center;
-      padding-left: 16px;
-      padding-right: 16px;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+
+    .billing-bar--compare {
+      margin-bottom: 20px;
+    }
+
+    .billing-bar--estimator {
+      margin: 0 0 28px;
     }
 
     @media (max-width: 768px) {
-      .billing-segmented-control {
-        width: min(calc(100% - 24px), 400px);
-        min-height: 50px;
+      .billing-bar {
+        display: flex;
+        margin-bottom: 16px;
+        padding: 0;
       }
-      .billing-segment-btn {
-        flex: 1;
-        justify-content: center;
-        padding: 9px 6px;
-        font-size: 12px;
-      }
-      .billing-segment-btn .save-pill {
+
+      .billing-bar--compare,
+      .billing-bar--estimator {
         display: none;
       }
-      .billing-sticky-bar {
-        top: calc(var(--um-header-height, 65px));
-        padding: 10px 0;
-      }
-    }
 
-    @media (max-width: 400px) {
+      .billing-segmented-control {
+        width: 100%;
+        max-width: 100%;
+        min-height: 58px;
+        --billing-pad-x: 4px;
+        --billing-gap: 3px;
+        border-radius: 12px;
+        padding: 4px var(--billing-pad-x);
+      }
+
+      .billing-segmented-control::before {
+        top: 4px;
+        bottom: 4px;
+        border-radius: 8px;
+      }
+
       .billing-segment-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
         font-size: 11px;
-        padding: 9px 4px;
+        font-weight: 700;
+        padding: 6px 2px;
+        white-space: normal;
+        line-height: 1.15;
+        gap: 2px;
+      }
+
+      .billing-segment-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 100%;
+        min-width: 0;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        white-space: normal;
+        text-align: center;
+      }
+
+      .billing-segment-btn:hover:not(.active) .billing-segment-inner {
+        background: transparent !important;
+        border: none !important;
+      }
+
+      .billing-segment-btn .save-pill {
+        font-size: 8px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: #00b853;
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .billing-segment-btn:not(.active) .save-pill::before {
+        content: none;
+      }
+
+      .billing-segment-btn.active {
+        font-weight: 800;
+      }
+
+      .billing-segment-btn.active .save-pill {
+        font-size: 8px;
+        background: #eafbf0;
+        border: 1px solid #bbf7d0;
+        border-radius: 999px;
+        padding: 1px 6px;
+        margin-top: 1px;
       }
     }
 
     /* Section: Pricing Cards */
     .pricing-cards-section {
-      padding: 0 0 56px;
+      padding: 32px 0 56px;
       background: #ffffff;
     }
 
@@ -991,9 +1106,297 @@
       font-weight: 600;
     }
 
+    /* Mobile-only compare UI */
+    .compare-mobile {
+      display: none;
+    }
+
+    .compare-mobile-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding: 4px 2px 14px;
+      margin: 0 -2px;
+      scrollbar-width: none;
+    }
+
+    .compare-mobile-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .compare-mobile-tab {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .compare-mobile-tab.active {
+      background: #eafbf0;
+      border-color: #bbf7d0;
+      color: #00b853;
+      box-shadow: 0 2px 10px rgba(3, 207, 101, 0.12);
+    }
+
+    .compare-mobile-tab.tab-popular.active {
+      background: #03cf65;
+      border-color: #03cf65;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(3, 207, 101, 0.28);
+    }
+
+    .compare-mobile-tab .tab-badge {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .compare-mobile-tab:not(.active) .tab-badge {
+      background: #eafbf0;
+      color: #00b853;
+    }
+
+    .compare-mobile-tab.active:not(.tab-popular) .tab-badge {
+      background: #ffffff;
+      color: #00b853;
+      border: 1px solid #bbf7d0;
+    }
+
+    .compare-mobile-panel {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .compare-mobile-panel.active {
+      display: block;
+    }
+
+    .compare-mobile-panel.panel-popular {
+      border-color: #03cf65;
+      box-shadow: 0 12px 32px rgba(3, 207, 101, 0.12);
+    }
+
+    .compare-mobile-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 16px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .compare-mobile-panel-head h3 {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .compare-mobile-panel-head .panel-badge {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #00b853;
+      background: #eafbf0;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 3px 8px;
+      vertical-align: middle;
+    }
+
+    .compare-mobile-panel-head .panel-badge-custom {
+      color: #0f172a;
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+
+    .compare-mobile-price {
+      font-size: 22px;
+      font-weight: 800;
+      color: #00b853;
+      letter-spacing: -0.02em;
+    }
+
+    .compare-mobile-price.is-custom {
+      font-size: 18px;
+      color: #0f172a;
+    }
+
+    .compare-mobile-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .compare-mobile-features li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 13px;
+    }
+
+    .compare-mobile-features li:last-child {
+      border-bottom: none;
+    }
+
+    .cm-feat-name {
+      color: #64748b;
+      font-weight: 600;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cm-feat-val {
+      color: #0f172a;
+      font-weight: 700;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .compare-mobile-features .val-unlimited,
+    .compare-mobile-features .val-highlight {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: #00b853;
+      background: #eafbf0;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .compare-mobile-features .val-custom {
+      color: #0f172a;
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+
+    .compare-mobile-features .val-dash {
+      color: #94a3b8;
+      font-weight: 700;
+    }
+
+    .compare-mobile-extra {
+      display: none;
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    .compare-mobile.expanded .compare-mobile-extra {
+      display: block;
+    }
+
+    .compare-mobile-cta {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    .compare-mobile-expand {
+      display: block;
+      width: 100%;
+      margin-top: 14px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #0f172a;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .compare-mobile-expand:hover {
+      border-color: #b7efc5;
+      color: #00b853;
+    }
+
     @media (max-width: 768px) {
-      .compare-scroll-hint {
+      .compare-scroll-hint,
+      .compare-table-wrapper,
+      .compare-expand-wrap {
+        display: none !important;
+      }
+
+      .compare-mobile {
         display: block;
+      }
+
+      .compare-section .section-center-head {
+        margin-bottom: 24px;
+      }
+
+      .compare-mobile-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        overflow: visible;
+        scroll-snap-type: none;
+        padding: 0 0 16px;
+        margin: 0;
+      }
+
+      .compare-mobile-tab {
+        flex: 1 1 calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        justify-content: center;
+        padding: 12px 10px;
+        font-size: 13px;
+        border-radius: 12px;
+        scroll-snap-align: unset;
+        text-align: center;
+        line-height: 1.25;
+        box-sizing: border-box;
+      }
+
+      .compare-mobile-tab.tab-popular {
+        flex: 1 1 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+        gap: 6px;
+      }
+
+      .compare-mobile-tab .tab-badge {
+        font-size: 8px;
+        padding: 2px 5px;
+        flex-shrink: 0;
       }
     }
 
@@ -3998,7 +4401,7 @@
           "name": "Launch - 14-Day Free Trial",
           "price": "0",
           "priceCurrency": "INR",
-          "description": "14-day free trial with 1 WhatsApp number, 1 team member and up to 1,000 contacts",
+          "description": "14-day free trial with 1 WhatsApp number, 1 team member and up to 100 contacts",
           "url": "https://app.samyoj.com"
         },
         {
@@ -4173,22 +4576,18 @@
       </div>
     </section>
 
-    <!-- Sticky billing selector -->
-    <div class="billing-sticky-bar">
-      <div class="wr">
-        <div class="billing-segmented-control" id="billing-segmented-control" role="group" aria-label="Billing period">
-          <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
-          <button type="button" class="billing-segment-btn" data-billing="quarterly">Quarterly <span
-              class="save-pill">Save 5%</span></button>
-          <button type="button" class="billing-segment-btn active" data-billing="annual">Annual <span
-              class="save-pill">Save 20%</span></button>
-        </div>
-      </div>
-    </div>
-
     <!-- Section 2: Pricing Cards -->
     <section class="pricing-cards-section" id="pricing-cards-section">
       <div class="wr">
+        <div class="billing-bar">
+          <div class="billing-segmented-control" role="group" aria-label="Billing period">
+            <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
+            <button type="button" class="billing-segment-btn" data-billing="quarterly"><span class="billing-segment-inner">Quarterly<span
+                class="save-pill">Save 5%</span></span></button>
+            <button type="button" class="billing-segment-btn active" data-billing="annual"><span class="billing-segment-inner">Annual<span
+                class="save-pill">Save 20%</span></span></button>
+          </div>
+        </div>
         <div class="cards-grid-4" id="pricing-cards-grid">
           <!-- Launch Card -->
           <div class="pricing-card" data-plan="launch" tabindex="0" role="button" aria-label="Launch plan">
@@ -4209,7 +4608,7 @@
               <ul class="plan-limits-list">
                 <li>1 WhatsApp number</li>
                 <li>1 team member</li>
-                <li>1,000 contacts</li>
+                <li>100 contacts</li>
                 <li>Shared inbox &amp; CRM</li>
               </ul>
             </div>
@@ -4400,7 +4799,145 @@
           <p class="section-desc">Compare plans at a glance. All plans include core WhatsApp CRM features. <a href="features.html" style="color:#00b853;font-weight:700;text-decoration:none;">Explore all features →</a></p>
         </div>
 
+        <div class="billing-bar billing-bar--compare">
+          <div class="billing-segmented-control" role="group" aria-label="Billing period">
+            <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
+            <button type="button" class="billing-segment-btn" data-billing="quarterly"><span class="billing-segment-inner">Quarterly<span
+                class="save-pill">Save 5%</span></span></button>
+            <button type="button" class="billing-segment-btn active" data-billing="annual"><span class="billing-segment-inner">Annual<span
+                class="save-pill">Save 20%</span></span></button>
+          </div>
+        </div>
+
         <p class="compare-scroll-hint">Swipe horizontally to compare all plans →</p>
+
+        <div class="compare-mobile" id="compare-mobile">
+          <div class="compare-mobile-tabs" role="tablist" aria-label="Select plan to compare">
+            <button type="button" class="compare-mobile-tab" role="tab" data-plan="launch" aria-selected="false">Launch</button>
+            <button type="button" class="compare-mobile-tab" role="tab" data-plan="starter" aria-selected="false">Starter</button>
+            <button type="button" class="compare-mobile-tab tab-popular active" role="tab" data-plan="growth" aria-selected="true">Growth <span class="tab-badge">Popular</span></button>
+            <button type="button" class="compare-mobile-tab" role="tab" data-plan="pro" aria-selected="false">Pro</button>
+            <button type="button" class="compare-mobile-tab" role="tab" data-plan="enterprise" aria-selected="false">Enterprise</button>
+          </div>
+
+          <article class="compare-mobile-panel" data-plan="launch" role="tabpanel" aria-label="Launch plan features">
+            <header class="compare-mobile-panel-head">
+              <div>
+                <h3>Launch</h3>
+                <div class="compare-mobile-price compare-price" data-plan="launch">₹0</div>
+              </div>
+            </header>
+            <ul class="compare-mobile-features">
+              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">1</span></li>
+              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">1</span></li>
+              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">100</span></li>
+              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val">Core</span></li>
+              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val">1 workflow</span></li>
+              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-dash">—</span></span></li>
+              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val">Basic</span></li>
+            </ul>
+            <ul class="compare-mobile-features compare-mobile-extra">
+              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val">Community</span></li>
+              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val">Basic</span></li>
+            </ul>
+            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
+          </article>
+
+          <article class="compare-mobile-panel" data-plan="starter" role="tabpanel" aria-label="Starter plan features">
+            <header class="compare-mobile-panel-head">
+              <div>
+                <h3>Starter</h3>
+                <div class="compare-mobile-price compare-price" data-plan="starter">₹800/mo</div>
+              </div>
+            </header>
+            <ul class="compare-mobile-features">
+              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">1</span></li>
+              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">3</span></li>
+              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">5,000</span></li>
+              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val">Included</span></li>
+              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val">5 workflows</span></li>
+              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-dash">—</span></span></li>
+              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val">Basic</span></li>
+            </ul>
+            <ul class="compare-mobile-features compare-mobile-extra">
+              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val">Email</span></li>
+              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val">Standard</span></li>
+            </ul>
+            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
+          </article>
+
+          <article class="compare-mobile-panel panel-popular active" data-plan="growth" role="tabpanel" aria-label="Growth plan features">
+            <header class="compare-mobile-panel-head">
+              <div>
+                <h3>Growth <span class="panel-badge">Popular</span></h3>
+                <div class="compare-mobile-price compare-price" data-plan="growth">₹2,000/mo</div>
+              </div>
+            </header>
+            <ul class="compare-mobile-features">
+              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">2</span></li>
+              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">10</span></li>
+              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">25,000</span></li>
+              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
+              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Included</span></span></li>
+              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+            </ul>
+            <ul class="compare-mobile-features compare-mobile-extra">
+              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Priority</span></span></li>
+              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+            </ul>
+            <a href="https://app.samyoj.com" class="btn-primary-sy compare-mobile-cta">Start trial</a>
+          </article>
+
+          <article class="compare-mobile-panel" data-plan="pro" role="tabpanel" aria-label="Pro plan features">
+            <header class="compare-mobile-panel-head">
+              <div>
+                <h3>Pro</h3>
+                <div class="compare-mobile-price compare-price" data-plan="pro">₹4,000/mo</div>
+              </div>
+            </header>
+            <ul class="compare-mobile-features">
+              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">5</span></li>
+              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">25</span></li>
+              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">100,000</span></li>
+              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
+              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+            </ul>
+            <ul class="compare-mobile-features compare-mobile-extra">
+              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Priority</span></span></li>
+              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+            </ul>
+            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
+          </article>
+
+          <article class="compare-mobile-panel" data-plan="enterprise" role="tabpanel" aria-label="Enterprise plan features">
+            <header class="compare-mobile-panel-head">
+              <div>
+                <h3>Enterprise <span class="panel-badge panel-badge-custom">Custom</span></h3>
+                <div class="compare-mobile-price is-custom compare-price" data-plan="enterprise">Custom</div>
+              </div>
+            </header>
+            <ul class="compare-mobile-features">
+              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
+              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
+              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
+              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
+              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
+              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Dedicated</span></span></li>
+              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
+            </ul>
+            <ul class="compare-mobile-features compare-mobile-extra">
+              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Dedicated</span></span></li>
+              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
+            </ul>
+            <a href="contact.html" class="btn-outline-sy compare-mobile-cta">Talk to sales</a>
+          </article>
+
+          <button type="button" class="compare-mobile-expand" id="compare-mobile-expand" aria-expanded="false">View all features</button>
+        </div>
+
         <div class="compare-table-wrapper">
           <table class="compare-table" id="compare-table">
             <thead>
@@ -4447,7 +4984,7 @@
               </tr>
               <tr>
                 <td>Contacts</td>
-                <td>1,000</td>
+                <td>100</td>
                 <td>5,000</td>
                 <td>25,000</td>
                 <td>100,000</td>
@@ -4525,6 +5062,15 @@
     <section class="estimator-section" id="estimator-section">
       <div class="wr">
         <div class="estimator-shell">
+        <div class="billing-bar billing-bar--estimator">
+          <div class="billing-segmented-control" role="group" aria-label="Billing period">
+            <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
+            <button type="button" class="billing-segment-btn" data-billing="quarterly"><span class="billing-segment-inner">Quarterly<span
+                class="save-pill">Save 5%</span></span></button>
+            <button type="button" class="billing-segment-btn active" data-billing="annual"><span class="billing-segment-inner">Annual<span
+                class="save-pill">Save 20%</span></span></button>
+          </div>
+        </div>
         <div class="estimator-grid">
           <div class="estimator-left">
             <div class="custom-badge-pill">COST ESTIMATOR</div>
@@ -5097,7 +5643,7 @@
       var aiEstimateEnabled = false;
 
       var billingBtns = document.querySelectorAll('.billing-segment-btn');
-      var billingControl = document.getElementById('billing-segmented-control');
+      var billingControls = document.querySelectorAll('.billing-segmented-control');
       var priceVals = document.querySelectorAll('.pricing-card .price-val[data-monthly]');
       var comparePrices = document.querySelectorAll('.compare-price');
       var pricingCards = document.querySelectorAll('.pricing-card[data-plan]');
@@ -5107,6 +5653,10 @@
       var mobileStickyBtn = document.getElementById('mobile-sticky-cta-btn');
       var compareTable = document.getElementById('compare-table');
       var compareExpandBtn = document.getElementById('compare-expand-btn');
+      var compareMobile = document.getElementById('compare-mobile');
+      var compareMobileTabs = document.querySelectorAll('.compare-mobile-tab');
+      var compareMobilePanels = document.querySelectorAll('.compare-mobile-panel');
+      var compareMobileExpand = document.getElementById('compare-mobile-expand');
       var estToggleAi = document.getElementById('est-toggle-ai-btn');
       var aiSliderGroup = document.getElementById('ai-slider-group');
 
@@ -5127,10 +5677,24 @@
         return 'Start ' + planLabel + billingLabel;
       }
 
-      function moveBillingIndicator(button) {
-        if (!billingControl || !button) return;
-        var index = Array.prototype.indexOf.call(billingBtns, button);
-        billingControl.style.setProperty('--billing-index', index);
+      function syncBillingControls(period) {
+        billingPeriod = period;
+        billingControls.forEach(function (control) {
+          var controlBtns = control.querySelectorAll('.billing-segment-btn');
+          controlBtns.forEach(function (b) {
+            var isActive = b.getAttribute('data-billing') === period;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          });
+          var activeBtn = control.querySelector('.billing-segment-btn[data-billing="' + period + '"]');
+          if (activeBtn) {
+            var index = Array.prototype.indexOf.call(controlBtns, activeBtn);
+            control.style.setProperty('--billing-index', index);
+          }
+        });
+        updateCardPrices();
+        updateEstimator();
+        updateCtas();
       }
 
       function updateCtas() {
@@ -5204,27 +5768,50 @@
         pricingCards.forEach(function (card) {
           card.classList.toggle('selected', card.getAttribute('data-plan') === plan);
         });
+        syncMobileCompareTab(plan);
         updateCtas();
         updateEstimator();
       }
 
+      function syncMobileCompareTab(plan) {
+        if (!compareMobileTabs.length) return;
+        var activeTab = null;
+        compareMobileTabs.forEach(function (tab) {
+          var active = tab.getAttribute('data-plan') === plan;
+          tab.classList.toggle('active', active);
+          tab.setAttribute('aria-selected', active ? 'true' : 'false');
+          if (active) activeTab = tab;
+        });
+        compareMobilePanels.forEach(function (panel) {
+          panel.classList.toggle('active', panel.getAttribute('data-plan') === plan);
+        });
+        if (activeTab && window.matchMedia('(max-width: 768px)').matches) {
+          activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      }
+
+      compareMobileTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          syncMobileCompareTab(tab.getAttribute('data-plan'));
+        });
+      });
+
+      if (compareMobileExpand && compareMobile) {
+        compareMobileExpand.addEventListener('click', function () {
+          var expanded = compareMobile.classList.toggle('expanded');
+          compareMobileExpand.textContent = expanded ? 'Show fewer features' : 'View all features';
+          compareMobileExpand.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        });
+      }
+
       billingBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          billingPeriod = btn.getAttribute('data-billing');
-          billingBtns.forEach(function (b) {
-            var isActive = b === btn;
-            b.classList.toggle('active', isActive);
-            b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-          });
-          moveBillingIndicator(btn);
-          updateCardPrices();
-          updateEstimator();
-          updateCtas();
+          syncBillingControls(btn.getAttribute('data-billing'));
         });
         btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
       });
 
-      moveBillingIndicator(document.querySelector('.billing-segment-btn.active'));
+      syncBillingControls('annual');
 
       pricingCards.forEach(function (card) {
         card.addEventListener('click', function (e) {

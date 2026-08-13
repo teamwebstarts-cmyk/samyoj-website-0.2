@@ -31,7 +31,7 @@ Samyoj provides businesses with a WhatsApp marketing software they can use to Br
 
 ## Pricing
 
-- **Launch (14-Day Free Trial)**: ₹0 for 14 days — 1 WhatsApp number, 1 team member, up to 1,000 contacts
+- **Launch (14-Day Free Trial)**: ₹0 for 14 days — 1 WhatsApp number, 1 team member, up to 100 contacts
 - **Starter**: ₹999/month (₹800/mo when billed annually) — 1 number, 3 team members, 5,000 contacts
 - **Growth**: ₹2,499/month (₹2,000/mo when billed annually) — 2 numbers, 10 members, AI assistant included
 - **Pro**: ₹4,999/month (₹4,000/mo when billed annually) — 5 numbers, 25 members, advanced AI & analytics
