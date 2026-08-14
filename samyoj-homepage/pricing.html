@@ -378,13 +378,14 @@
     }
 
     .hero-pricing-sub {
-      font-size: 16px;
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 28px;
-      max-width: 640px;
+      font-size: 17px;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 580px;
       margin-left: 0;
       margin-right: auto;
+      letter-spacing: 0.01em;
     }
 
     .hero-pricing-actions {
@@ -757,7 +758,7 @@
       display: block;
       font-size: 12px;
       font-weight: 600;
-      color: #64748b;
+      color: #059669;
       margin-top: 4px;
       min-height: 16px;
     }
@@ -768,33 +769,67 @@
       margin: 12px 0 0;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
     }
 
     .plan-limits-list li {
       font-size: 12px;
-      color: #64748b;
+      color: #475569;
       font-weight: 500;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 6px;
+      padding: 3px 0;
     }
 
     .plan-limits-list li::before {
       content: "✓";
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
       background: #eafbf0;
       border: 1px solid #bbf7d0;
       color: #00b853;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 800;
       line-height: 1;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      order: 0;
+    }
+
+    .feat-label {
+      flex: 1;
+      order: 1;
+    }
+
+    .feat-val {
+      order: 2;
+      font-weight: 600;
+      color: #0f172a;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .feat-highlight {
+      color: #059669;
+    }
+
+    .feat-na {
+      color: #ef4444;
+      font-weight: 400;
+    }
+
+    .plan-limits-list li:has(.feat-na)::before {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #ef4444;
+      content: "✕";
+      font-size: 10px;
+      font-weight: 700;
     }
 
     .pricing-card .card-cta {
@@ -4532,7 +4567,7 @@
           Plans that scale with you
         </div>
         <h1 class="hero-pricing-title">
-          Simple pricing for WhatsApp <span class="highlight-green">sales, support &amp; automation</span>
+          Simple pricing for WhatsApp <span class="highlight-green">Sales, Support &amp; Automation</span>
         </h1>
         <p class="hero-pricing-sub">
           Start with a 14-day free trial. Upgrade when your team is ready. WhatsApp/Meta usage and AI/voice usage are
@@ -4606,10 +4641,15 @@
                 <span class="price-billed-note">Then choose a paid plan</span>
               </div>
               <ul class="plan-limits-list">
-                <li>1 WhatsApp number</li>
-                <li>1 team member</li>
-                <li>100 contacts</li>
-                <li>Shared inbox &amp; CRM</li>
+                <li><span class="feat-label">WhatsApp numbers</span> <span class="feat-val">1</span></li>
+                <li><span class="feat-label">Team members</span> <span class="feat-val">1</span></li>
+                <li><span class="feat-label">Contacts</span> <span class="feat-val">100</span></li>
+                <li><span class="feat-label">Shared inbox &amp; CRM</span> <span class="feat-val">Core</span></li>
+                <li><span class="feat-label">Automation</span> <span class="feat-val">1 workflow</span></li>
+                <li><span class="feat-label">Analytics</span> <span class="feat-val">Basic</span></li>
+                <li><span class="feat-label">Support</span> <span class="feat-val">Community</span></li>
+                <li><span class="feat-label">Integrations</span> <span class="feat-val">Basic</span></li>
+                <li><span class="feat-label">AI Assistant</span> <span class="feat-val feat-na">Not included</span></li>
               </ul>
             </div>
             <a href="https://app.samyoj.com" class="btn-primary-sy card-cta">Start free trial</a>
@@ -4633,10 +4673,15 @@
                 <span class="price-billed-note" id="billed-note-starter">Billed ₹9,600 yearly</span>
               </div>
               <ul class="plan-limits-list">
-                <li>1 WhatsApp number</li>
-                <li>3 team members</li>
-                <li>5,000 contacts</li>
-                <li>5 automation workflows</li>
+                <li><span class="feat-label">WhatsApp numbers</span> <span class="feat-val">1</span></li>
+                <li><span class="feat-label">Team members</span> <span class="feat-val">3</span></li>
+                <li><span class="feat-label">Contacts</span> <span class="feat-val">5,000</span></li>
+                <li><span class="feat-label">Shared inbox &amp; CRM</span> <span class="feat-val">Included</span></li>
+                <li><span class="feat-label">Automation</span> <span class="feat-val">5 workflows</span></li>
+                <li><span class="feat-label">Analytics</span> <span class="feat-val">Basic</span></li>
+                <li><span class="feat-label">Support</span> <span class="feat-val">Email</span></li>
+                <li><span class="feat-label">Integrations</span> <span class="feat-val">Standard</span></li>
+                <li><span class="feat-label">AI Assistant</span> <span class="feat-val feat-na">Not included</span></li>
               </ul>
             </div>
             <a href="https://app.samyoj.com" class="btn-primary-sy card-cta plan-cta">Start free trial</a>
@@ -4662,10 +4707,15 @@
                 <span class="price-billed-note" id="billed-note-growth">Billed ₹24,000 yearly</span>
               </div>
               <ul class="plan-limits-list">
-                <li>2 WhatsApp numbers</li>
-                <li>10 team members</li>
-                <li>25,000 contacts</li>
-                <li>AI Assistant included</li>
+                <li><span class="feat-label">WhatsApp numbers</span> <span class="feat-val">2</span></li>
+                <li><span class="feat-label">Team members</span> <span class="feat-val">10</span></li>
+                <li><span class="feat-label">Contacts</span> <span class="feat-val">25,000</span></li>
+                <li><span class="feat-label">Shared inbox &amp; CRM</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Automation</span> <span class="feat-val feat-highlight">Unlimited</span></li>
+                <li><span class="feat-label">AI Assistant</span> <span class="feat-val feat-highlight">Included</span></li>
+                <li><span class="feat-label">Analytics</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Support</span> <span class="feat-val feat-highlight">Priority</span></li>
+                <li><span class="feat-label">Integrations</span> <span class="feat-val feat-highlight">Advanced</span></li>
               </ul>
             </div>
             <a href="https://app.samyoj.com" class="btn-primary-sy card-cta plan-cta">Start free trial</a>
@@ -4689,10 +4739,15 @@
                 <span class="price-billed-note" id="billed-note-pro">Billed ₹48,000 yearly</span>
               </div>
               <ul class="plan-limits-list">
-                <li>5 WhatsApp numbers</li>
-                <li>25 team members</li>
-                <li>100,000 contacts</li>
-                <li>Advanced AI Assistant</li>
+                <li><span class="feat-label">WhatsApp numbers</span> <span class="feat-val">5</span></li>
+                <li><span class="feat-label">Team members</span> <span class="feat-val">25</span></li>
+                <li><span class="feat-label">Contacts</span> <span class="feat-val">100,000</span></li>
+                <li><span class="feat-label">Shared inbox &amp; CRM</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Automation</span> <span class="feat-val feat-highlight">Unlimited</span></li>
+                <li><span class="feat-label">AI Assistant</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Analytics</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Support</span> <span class="feat-val feat-highlight">Priority</span></li>
+                <li><span class="feat-label">Integrations</span> <span class="feat-val feat-highlight">Advanced</span></li>
               </ul>
             </div>
             <a href="https://app.samyoj.com" class="btn-primary-sy card-cta plan-cta">Start free trial</a>
@@ -4712,349 +4767,25 @@
               <div class="price-main">
                 <span class="price-val">Custom</span>
                 <span class="price-period">pricing</span>
-                <span class="price-billed-note">Talk to sales for a quote</span>
+                <span class="price-billed-note">Talk to Experts for a quote</span>
               </div>
               <ul class="plan-limits-list">
-                <li>Unlimited WhatsApp numbers</li>
-                <li>Custom team size</li>
-                <li>Unlimited contacts</li>
-                <li>Dedicated AI setup</li>
+                <li><span class="feat-label">WhatsApp numbers</span> <span class="feat-val feat-highlight">Unlimited</span></li>
+                <li><span class="feat-label">Team members</span> <span class="feat-val feat-highlight">Custom</span></li>
+                <li><span class="feat-label">Contacts</span> <span class="feat-val feat-highlight">Unlimited</span></li>
+                <li><span class="feat-label">Shared inbox &amp; CRM</span> <span class="feat-val feat-highlight">Advanced</span></li>
+                <li><span class="feat-label">Automation</span> <span class="feat-val feat-highlight">Unlimited</span></li>
+                <li><span class="feat-label">AI Assistant</span> <span class="feat-val feat-highlight">Dedicated</span></li>
+                <li><span class="feat-label">Analytics</span> <span class="feat-val feat-highlight">Custom</span></li>
+                <li><span class="feat-label">Support</span> <span class="feat-val feat-highlight">Dedicated</span></li>
+                <li><span class="feat-label">Integrations</span> <span class="feat-val feat-highlight">Custom</span></li>
               </ul>
             </div>
-            <a href="contact.html" class="btn-outline-sy card-cta">Talk to sales</a>
+            <a href="contact.html" class="btn-outline-sy card-cta">Talk to Experts</a>
           </div>
         </div>
         <p class="pricing-disclosure-bar">Platform subscription covers the Samyoj product. WhatsApp/Meta message charges
           and AI/voice usage are billed based on actual usage.</p>
-      </div>
-    </section>
-
-    <!-- Section 3: 3-Part Bill Explainer -->
-    <section class="transparent-section">
-      <div class="wr transparent-grid">
-        <div>
-          <h2 class="section-title-large">
-            No hidden charges. <span class="highlight-green">Just clear,</span> honest pricing.
-          </h2>
-          <p class="section-desc" style="margin-bottom: 24px;">
-            Your bill has three parts. We keep each one simple so you always know what you're paying for.
-          </p>
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pay only for what you use
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Separate platform &amp; usage charges
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No surprises, ever
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="breakdown-cards-row">
-            <div class="breakdown-card">
-              <div class="breakdown-icon-circle">
-                <img src="images/breakdown-icon-platform.png" alt="" width="56" height="56" loading="lazy" />
-              </div>
-              <div class="breakdown-title">1. Samyoj Plan</div>
-              <div class="breakdown-sub">Inbox, CRM, automation, team features &amp; plan-level AI capabilities</div>
-              <div class="breakdown-val">Subscription</div>
-            </div>
-            <div class="breakdown-card">
-              <div class="breakdown-icon-circle">
-                <img src="images/breakdown-icon-meta.png" alt="" width="56" height="56" loading="lazy" />
-              </div>
-              <div class="breakdown-title">2. WhatsApp / Meta Usage</div>
-              <div class="breakdown-sub">Meta charges separately for applicable template messages by category &amp; market</div>
-              <div class="breakdown-val green">Pass-through</div>
-            </div>
-            <div class="breakdown-card">
-              <div class="breakdown-icon-circle">
-                <img src="images/breakdown-icon-ai.png" alt="" width="56" height="56" loading="lazy" />
-              </div>
-              <div class="breakdown-title">3. AI / Voice Usage</div>
-              <div class="breakdown-sub">Metered by usage — track estimates in your dashboard</div>
-              <div class="breakdown-val green">Metered</div>
-            </div>
-          </div>
-
-          <div class="meta-note-bar">
-            <span>ⓘ Meta charges are at actuals. We do not markup your WhatsApp usage.</span>
-            <span style="display:flex; gap:16px; flex-wrap:wrap;">
-              <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta rate guide →</a>
-              <a href="#faq-ai">AI usage details →</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Core Feature Comparison -->
-    <section class="compare-section" id="compare-section">
-      <div class="wr">
-        <div class="section-center-head">
-          <h2 class="section-title-large">Everything you need to <span class="highlight-green">grow</span></h2>
-          <p class="section-desc">Compare plans at a glance. All plans include core WhatsApp CRM features. <a href="features.html" style="color:#00b853;font-weight:700;text-decoration:none;">Explore all features →</a></p>
-        </div>
-
-        <div class="billing-bar billing-bar--compare">
-          <div class="billing-segmented-control" role="group" aria-label="Billing period">
-            <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
-            <button type="button" class="billing-segment-btn" data-billing="quarterly"><span class="billing-segment-inner">Quarterly<span
-                class="save-pill">Save 5%</span></span></button>
-            <button type="button" class="billing-segment-btn active" data-billing="annual"><span class="billing-segment-inner">Annual<span
-                class="save-pill">Save 20%</span></span></button>
-          </div>
-        </div>
-
-        <p class="compare-scroll-hint">Swipe horizontally to compare all plans →</p>
-
-        <div class="compare-mobile" id="compare-mobile">
-          <div class="compare-mobile-tabs" role="tablist" aria-label="Select plan to compare">
-            <button type="button" class="compare-mobile-tab" role="tab" data-plan="launch" aria-selected="false">Launch</button>
-            <button type="button" class="compare-mobile-tab" role="tab" data-plan="starter" aria-selected="false">Starter</button>
-            <button type="button" class="compare-mobile-tab tab-popular active" role="tab" data-plan="growth" aria-selected="true">Growth <span class="tab-badge">Popular</span></button>
-            <button type="button" class="compare-mobile-tab" role="tab" data-plan="pro" aria-selected="false">Pro</button>
-            <button type="button" class="compare-mobile-tab" role="tab" data-plan="enterprise" aria-selected="false">Enterprise</button>
-          </div>
-
-          <article class="compare-mobile-panel" data-plan="launch" role="tabpanel" aria-label="Launch plan features">
-            <header class="compare-mobile-panel-head">
-              <div>
-                <h3>Launch</h3>
-                <div class="compare-mobile-price compare-price" data-plan="launch">₹0</div>
-              </div>
-            </header>
-            <ul class="compare-mobile-features">
-              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">1</span></li>
-              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">1</span></li>
-              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">100</span></li>
-              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val">Core</span></li>
-              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val">1 workflow</span></li>
-              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-dash">—</span></span></li>
-              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val">Basic</span></li>
-            </ul>
-            <ul class="compare-mobile-features compare-mobile-extra">
-              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val">Community</span></li>
-              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val">Basic</span></li>
-            </ul>
-            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
-          </article>
-
-          <article class="compare-mobile-panel" data-plan="starter" role="tabpanel" aria-label="Starter plan features">
-            <header class="compare-mobile-panel-head">
-              <div>
-                <h3>Starter</h3>
-                <div class="compare-mobile-price compare-price" data-plan="starter">₹800/mo</div>
-              </div>
-            </header>
-            <ul class="compare-mobile-features">
-              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">1</span></li>
-              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">3</span></li>
-              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">5,000</span></li>
-              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val">Included</span></li>
-              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val">5 workflows</span></li>
-              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-dash">—</span></span></li>
-              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val">Basic</span></li>
-            </ul>
-            <ul class="compare-mobile-features compare-mobile-extra">
-              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val">Email</span></li>
-              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val">Standard</span></li>
-            </ul>
-            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
-          </article>
-
-          <article class="compare-mobile-panel panel-popular active" data-plan="growth" role="tabpanel" aria-label="Growth plan features">
-            <header class="compare-mobile-panel-head">
-              <div>
-                <h3>Growth <span class="panel-badge">Popular</span></h3>
-                <div class="compare-mobile-price compare-price" data-plan="growth">₹2,000/mo</div>
-              </div>
-            </header>
-            <ul class="compare-mobile-features">
-              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">2</span></li>
-              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">10</span></li>
-              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">25,000</span></li>
-              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
-              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Included</span></span></li>
-              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-            </ul>
-            <ul class="compare-mobile-features compare-mobile-extra">
-              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Priority</span></span></li>
-              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-            </ul>
-            <a href="https://app.samyoj.com" class="btn-primary-sy compare-mobile-cta">Start trial</a>
-          </article>
-
-          <article class="compare-mobile-panel" data-plan="pro" role="tabpanel" aria-label="Pro plan features">
-            <header class="compare-mobile-panel-head">
-              <div>
-                <h3>Pro</h3>
-                <div class="compare-mobile-price compare-price" data-plan="pro">₹4,000/mo</div>
-              </div>
-            </header>
-            <ul class="compare-mobile-features">
-              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val">5</span></li>
-              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val">25</span></li>
-              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val">100,000</span></li>
-              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
-              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-            </ul>
-            <ul class="compare-mobile-features compare-mobile-extra">
-              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Priority</span></span></li>
-              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-            </ul>
-            <a href="https://app.samyoj.com" class="btn-outline-sy compare-mobile-cta">Start trial</a>
-          </article>
-
-          <article class="compare-mobile-panel" data-plan="enterprise" role="tabpanel" aria-label="Enterprise plan features">
-            <header class="compare-mobile-panel-head">
-              <div>
-                <h3>Enterprise <span class="panel-badge panel-badge-custom">Custom</span></h3>
-                <div class="compare-mobile-price is-custom compare-price" data-plan="enterprise">Custom</div>
-              </div>
-            </header>
-            <ul class="compare-mobile-features">
-              <li><span class="cm-feat-name">WhatsApp numbers</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
-              <li><span class="cm-feat-name">Team members</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
-              <li><span class="cm-feat-name">Contacts</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
-              <li><span class="cm-feat-name">Shared inbox &amp; CRM</span><span class="cm-feat-val"><span class="val-highlight">Advanced</span></span></li>
-              <li><span class="cm-feat-name">Automation</span><span class="cm-feat-val"><span class="val-unlimited">Unlimited</span></span></li>
-              <li><span class="cm-feat-name">AI Assistant</span><span class="cm-feat-val"><span class="val-highlight">Dedicated</span></span></li>
-              <li><span class="cm-feat-name">Analytics</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
-            </ul>
-            <ul class="compare-mobile-features compare-mobile-extra">
-              <li><span class="cm-feat-name">Support</span><span class="cm-feat-val"><span class="val-highlight">Dedicated</span></span></li>
-              <li><span class="cm-feat-name">Connect your tools</span><span class="cm-feat-val"><span class="val-highlight val-custom">Custom</span></span></li>
-            </ul>
-            <a href="contact.html" class="btn-outline-sy compare-mobile-cta">Talk to sales</a>
-          </article>
-
-          <button type="button" class="compare-mobile-expand" id="compare-mobile-expand" aria-expanded="false">View all features</button>
-        </div>
-
-        <div class="compare-table-wrapper">
-          <table class="compare-table" id="compare-table">
-            <thead>
-              <tr>
-                <th>Features</th>
-                <th>
-                  <span class="plan-th-name">Launch</span>
-                  <span class="plan-th-price compare-price" data-plan="launch">₹0</span>
-                </th>
-                <th>
-                  <span class="plan-th-name">Starter</span>
-                  <span class="plan-th-price compare-price" data-plan="starter">₹800/mo</span>
-                </th>
-                <th>
-                  <span class="plan-th-name">Growth <span class="plan-th-popular">POPULAR</span></span>
-                  <span class="plan-th-price compare-price" data-plan="growth">₹2,000/mo</span>
-                </th>
-                <th>
-                  <span class="plan-th-name">Pro</span>
-                  <span class="plan-th-price compare-price" data-plan="pro">₹4,000/mo</span>
-                </th>
-                <th>
-                  <span class="plan-th-name">Enterprise <span class="plan-th-custom">CUSTOM</span></span>
-                  <span class="plan-th-price compare-price" data-plan="enterprise">Custom</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>WhatsApp numbers</td>
-                <td>1</td>
-                <td>1</td>
-                <td>2</td>
-                <td>5</td>
-                <td><span class="val-unlimited">Unlimited</span></td>
-              </tr>
-              <tr>
-                <td>Team members</td>
-                <td>1</td>
-                <td>3</td>
-                <td>10</td>
-                <td>25</td>
-                <td><span class="val-highlight val-custom">Custom</span></td>
-              </tr>
-              <tr>
-                <td>Contacts</td>
-                <td>100</td>
-                <td>5,000</td>
-                <td>25,000</td>
-                <td>100,000</td>
-                <td><span class="val-unlimited">Unlimited</span></td>
-              </tr>
-              <tr>
-                <td>Shared inbox &amp; CRM</td>
-                <td>Core</td>
-                <td>Included</td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight">Advanced</span></td>
-              </tr>
-              <tr>
-                <td>Automation</td>
-                <td>1 workflow</td>
-                <td>5 workflows</td>
-                <td><span class="val-unlimited">Unlimited</span></td>
-                <td><span class="val-unlimited">Unlimited</span></td>
-                <td><span class="val-unlimited">Unlimited</span></td>
-              </tr>
-              <tr>
-                <td>AI Assistant</td>
-                <td><span class="val-dash">—</span></td>
-                <td><span class="val-dash">—</span></td>
-                <td><span class="val-highlight">Included</span></td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight">Dedicated</span></td>
-              </tr>
-              <tr>
-                <td>Analytics</td>
-                <td>Basic</td>
-                <td>Basic</td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight val-custom">Custom</span></td>
-              </tr>
-              <tr class="compare-row-secondary">
-                <td>Support</td>
-                <td>Community</td>
-                <td>Email</td>
-                <td><span class="val-highlight">Priority</span></td>
-                <td><span class="val-highlight">Priority</span></td>
-                <td><span class="val-highlight">Dedicated</span></td>
-              </tr>
-              <tr class="compare-row-secondary">
-                <td>Connect your tools</td>
-                <td>Basic</td>
-                <td>Standard</td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight">Advanced</span></td>
-                <td><span class="val-highlight val-custom">Custom</span></td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td></td>
-                <td><a href="https://app.samyoj.com" class="btn-outline-sy">Start trial</a></td>
-                <td><a href="https://app.samyoj.com" class="btn-outline-sy">Start trial</a></td>
-                <td><a href="https://app.samyoj.com" class="btn-primary-sy">Start trial</a></td>
-                <td><a href="https://app.samyoj.com" class="btn-outline-sy">Start trial</a></td>
-                <td><a href="contact.html" class="btn-outline-sy">Talk to sales</a></td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <div class="compare-expand-wrap">
-          <button type="button" class="compare-expand-btn" id="compare-expand-btn" aria-expanded="false">View all
-            features</button>
-        </div>
       </div>
     </section>
 
@@ -5202,14 +4933,77 @@
       </div>
     </section>
 
-    <!-- Section 7: Why Samyoj -->
+    
+    <!-- Section 3: 3-Part Bill Explainer -->
+    <section class="transparent-section">
+      <div class="wr transparent-grid">
+        <div>
+          <h2 class="section-title-large">
+            No hidden charges. <span class="highlight-green">Just Clear, Honest</span> pricing.
+          </h2>
+          <p class="section-desc" style="margin-bottom: 24px;">
+            Your bill has three parts. We keep each one simple so you always know what you're paying for.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pay only for what you use
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Separate platform &amp; usage charges
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#00b853"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No surprises, ever
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="breakdown-cards-row">
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-platform.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">1. Samyoj Plan</div>
+              <div class="breakdown-sub">Inbox, CRM, automation, team features &amp; plan-level AI capabilities</div>
+              <div class="breakdown-val">Subscription</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-meta.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">2. WhatsApp / Meta Usage</div>
+              <div class="breakdown-sub">Meta charges separately for applicable template messages by category &amp; market</div>
+              <div class="breakdown-val green">Pass-through</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-icon-circle">
+                <img src="images/breakdown-icon-ai.png" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="breakdown-title">3. AI / Voice Usage</div>
+              <div class="breakdown-sub">Metered by usage — track estimates in your dashboard</div>
+              <div class="breakdown-val green">Metered</div>
+            </div>
+          </div>
+
+          <div class="meta-note-bar">
+            <span>ⓘ Meta charges are at actuals. We do not markup your WhatsApp usage.</span>
+            <span style="display:flex; gap:16px; flex-wrap:wrap;">
+              <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta rate guide →</a>
+              <a href="#faq-ai">AI usage details →</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Section 7: Why Samyoj -->
     <section class="why-section">
       <div class="wr">
         <div class="section-center-head">
           <div class="custom-badge-pill">WHY SAMYOJ?</div>
-          <h2 class="section-title-large">Built for WhatsApp teams that <span class="highlight-green">need to grow</span>
+          <h2 class="section-title-large">Your Complete WhatsApp Growth Toolkit
           </h2>
-          <p class="section-desc">Outcome-focused capabilities — not pricing mechanics.</p>
+          <p class="section-desc">More than a plan — it's an investment in your business growth.</p>
         </div>
 
         <div class="why-grid-5">
@@ -5456,7 +5250,7 @@
             <div style="font-size: 14px; color: #64748b;">No commitment. Upgrade when your team is ready.</div>
           </div>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="contact.html" class="btn-outline-sy">Talk to Sales →</a>
+            <a href="contact.html" class="btn-outline-sy">Talk to Experts →</a>
             <a href="https://app.samyoj.com" class="btn-primary-sy" id="final-cta-btn">Start free trial</a>
           </div>
         </div>
@@ -5640,6 +5434,7 @@
 
       var billingPeriod = 'annual';
       var selectedPlan = 'growth';
+      var planClicked = false;
       var aiEstimateEnabled = false;
 
       var billingBtns = document.querySelectorAll('.billing-segment-btn');
@@ -5651,12 +5446,6 @@
       var finalCta = document.getElementById('final-cta-btn');
       var mobileStickyCta = document.getElementById('mobile-sticky-cta');
       var mobileStickyBtn = document.getElementById('mobile-sticky-cta-btn');
-      var compareTable = document.getElementById('compare-table');
-      var compareExpandBtn = document.getElementById('compare-expand-btn');
-      var compareMobile = document.getElementById('compare-mobile');
-      var compareMobileTabs = document.querySelectorAll('.compare-mobile-tab');
-      var compareMobilePanels = document.querySelectorAll('.compare-mobile-panel');
-      var compareMobileExpand = document.getElementById('compare-mobile-expand');
       var estToggleAi = document.getElementById('est-toggle-ai-btn');
       var aiSliderGroup = document.getElementById('ai-slider-group');
 
@@ -5665,16 +5454,8 @@
       }
 
       function getCtaLabel() {
-        if (selectedPlan === 'launch') {
-          return 'Start free trial';
-        }
-        if (selectedPlan === 'enterprise') {
-          return 'Talk to sales';
-        }
-        var planLabel = PLAN_LABELS[selectedPlan] || 'Growth';
-        var billingLabel = billingPeriod === 'monthly' ? '' :
-          billingPeriod === 'quarterly' ? ' - Quarterly' : ' - Annual';
-        return 'Start ' + planLabel + billingLabel;
+        if (planClicked) return 'START AUTOMATING';
+        return 'UNLOCK GROWTH';
       }
 
       function syncBillingControls(period) {
@@ -5702,7 +5483,7 @@
         if (heroCta) heroCta.textContent = label;
         if (finalCta) finalCta.textContent = label;
         if (mobileStickyBtn) {
-          mobileStickyBtn.textContent = selectedPlan === 'launch' ? 'Start 14-day trial' : (selectedPlan === 'enterprise' ? 'Talk to sales' : label);
+          mobileStickyBtn.textContent = selectedPlan === 'launch' ? 'Start 14-day trial' : (selectedPlan === 'enterprise' ? 'Talk to Experts' : label);
           if (selectedPlan === 'enterprise') {
             mobileStickyBtn.setAttribute('href', 'contact.html');
           } else {
@@ -5764,44 +5545,13 @@
       }
 
       function selectPlan(plan) {
+        planClicked = true;
         selectedPlan = plan;
         pricingCards.forEach(function (card) {
           card.classList.toggle('selected', card.getAttribute('data-plan') === plan);
         });
-        syncMobileCompareTab(plan);
         updateCtas();
         updateEstimator();
-      }
-
-      function syncMobileCompareTab(plan) {
-        if (!compareMobileTabs.length) return;
-        var activeTab = null;
-        compareMobileTabs.forEach(function (tab) {
-          var active = tab.getAttribute('data-plan') === plan;
-          tab.classList.toggle('active', active);
-          tab.setAttribute('aria-selected', active ? 'true' : 'false');
-          if (active) activeTab = tab;
-        });
-        compareMobilePanels.forEach(function (panel) {
-          panel.classList.toggle('active', panel.getAttribute('data-plan') === plan);
-        });
-        if (activeTab && window.matchMedia('(max-width: 768px)').matches) {
-          activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      }
-
-      compareMobileTabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-          syncMobileCompareTab(tab.getAttribute('data-plan'));
-        });
-      });
-
-      if (compareMobileExpand && compareMobile) {
-        compareMobileExpand.addEventListener('click', function () {
-          var expanded = compareMobile.classList.toggle('expanded');
-          compareMobileExpand.textContent = expanded ? 'Show fewer features' : 'View all features';
-          compareMobileExpand.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-        });
       }
 
       billingBtns.forEach(function (btn) {
@@ -5825,14 +5575,6 @@
           }
         });
       });
-
-      if (compareExpandBtn && compareTable) {
-        compareExpandBtn.addEventListener('click', function () {
-          var expanded = compareTable.classList.toggle('expanded');
-          compareExpandBtn.setAttribute('aria-expanded', expanded);
-          compareExpandBtn.textContent = expanded ? 'Show fewer features' : 'View all features';
-        });
-      }
 
       if (estToggleAi && aiSliderGroup) {
         estToggleAi.addEventListener('click', function () {
