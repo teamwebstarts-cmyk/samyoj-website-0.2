@@ -10,6 +10,7 @@ Samyoj provides businesses with a WhatsApp marketing software they can use to Br
 
 - [Home](https://samyoj.com/) - Main landing page
 - [Features](https://samyoj.com/features) - Platform features
+- [Pricing](https://samyoj.com/pricing) - Plans, billing and cost estimator
 - [Industries](https://samyoj.com/industries) - Industry use cases
 - [Contact](https://samyoj.com/contact) - Talk to experts / sales
 - [Privacy Policy](https://samyoj.com/legal/privacy-policy) - Privacy policy
@@ -30,10 +31,15 @@ Samyoj provides businesses with a WhatsApp marketing software they can use to Br
 
 ## Pricing
 
-- **Free Forever Plan**: Zero upfront costs, perfect for SMBs
-- **Paid Plans**: Starting from competitive pricing (plans from ₹1500/month)
-- **No Setup Fee**: WhatsApp Business API procurement is completely free through Samyoj
-- **Pay-per-Message**: WhatsApp charges ₹1.09/message for marketing, ₹0.145 for utility/auth messages
+- **Launch (14-Day Free Trial)**: ₹0 for 14 days — 1 WhatsApp number, 1 team member, up to 100 contacts
+- **Starter**: ₹999/month (₹800/mo when billed annually) — 1 number, 3 team members, 5,000 contacts
+- **Growth**: ₹2,499/month (₹2,000/mo when billed annually) — 2 numbers, 10 members, AI assistant included
+- **Pro**: ₹4,999/month (₹4,000/mo when billed annually) — 5 numbers, 25 members, advanced AI & analytics
+- **Enterprise**: Custom pricing — dedicated support, talk to sales at https://samyoj.com/contact
+- **Billing cycles**: Monthly, quarterly (5% off), or annual (20% off)
+- **WhatsApp/Meta usage**: Billed separately at actuals with zero markup from Samyoj
+- **AI/Voice usage**: Metered separately based on consumption; not unlimited
+- **Pricing page**: https://samyoj.com/pricing
 
 ## Customer Success Stories
 
