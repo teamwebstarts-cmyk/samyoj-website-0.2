@@ -683,3 +683,188 @@ body:not(.noScript) .umso-header .umso-animated.umso-animating {
     gap: 10px !important;
   }
 }
+
+/* ==========================================
+   Samyoj Modern Header Navigation (.sy-nav)
+   ========================================== */
+.sy-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.sy-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sy-nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.sy-nav-brand img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.sy-nav-links {
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sy-nav-links li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sy-nav-links li a {
+  text-decoration: none !important;
+  color: #10231e !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.sy-nav-links li a:hover {
+  color: #03b85d !important;
+  background-color: #f0faf4 !important;
+}
+
+.sy-nav-links li a.active,
+.sy-nav-links li a[aria-current="page"] {
+  background-color: #e8f9f0 !important;
+  color: #00b859 !important;
+}
+
+.sy-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sy-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1.5px solid transparent;
+  line-height: 1.2;
+}
+
+.sy-nav-btn-primary {
+  background-color: #03cf65;
+  color: #ffffff;
+  border-color: #03cf65;
+}
+
+.sy-nav-btn-primary:hover {
+  background-color: #00b859;
+  border-color: #00b859;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sy-nav-btn-secondary {
+  background-color: transparent;
+  color: #10231e;
+  border-color: #dce8e2;
+}
+
+.sy-nav-btn-secondary:hover {
+  background-color: #f4f6f5;
+  border-color: #10231e;
+  text-decoration: none;
+}
+
+.sy-nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #dce8e2;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: #10231e;
+}
+
+.sy-nav-drawer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sy-nav-inner nav[aria-label="Primary"],
+  .sy-nav-inner .sy-nav-actions {
+    display: none;
+  }
+
+  .sy-nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sy-nav-drawer.is-open {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    gap: 16px;
+  }
+
+  .sy-nav-drawer .sy-nav-links {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    gap: 4px !important;
+  }
+
+  .sy-nav-drawer .sy-nav-links li {
+    width: 100%;
+  }
+
+  .sy-nav-drawer .sy-nav-links li a {
+    width: 100%;
+    padding: 10px 14px !important;
+  }
+
+  .sy-nav-drawer .sy-nav-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .sy-nav-drawer .sy-nav-btn {
+    width: 100%;
+  }
+}
+
