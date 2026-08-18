@@ -5329,7 +5329,7 @@
           <div class="demo-motion" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="demo-video-frame" id="demo-video-frame" role="button" tabindex="0"
             aria-label="Play Samyoj product demo video">
-            <img class="demo-video-thumb" src="images/feat-illu-02.png" alt="Samyoj dashboard preview" width="1448"
+            <img class="demo-video-thumb" src="images/samyouijrjob.png" alt="Samyoj dashboard preview" width="1448"
               height="1086" loading="lazy" decoding="async" />
             <div class="demo-video-overlay">
               <button type="button" class="demo-play-btn" id="demo-play-btn" aria-label="Play video">
@@ -5353,12 +5353,58 @@
 
       function playDemo() {
         if (frame.classList.contains('is-playing')) return;
+        
+        var wrapper = document.createElement('div');
+        wrapper.style.position = 'absolute';
+        wrapper.style.top = '0';
+        wrapper.style.left = '0';
+        wrapper.style.width = '100%';
+        wrapper.style.height = '100%';
+        wrapper.style.borderRadius = '12px';
+        wrapper.style.overflow = 'hidden';
+        wrapper.style.zIndex = '20';
+        wrapper.style.pointerEvents = 'auto';
+        wrapper.style.background = '#000';
+
         var iframe = document.createElement('iframe');
         iframe.src = 'https://www.youtube.com/embed/' + YT_ID + '?autoplay=1&rel=0';
         iframe.title = 'Samyoj product demo';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
-        frame.appendChild(iframe);
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        wrapper.appendChild(iframe);
+
+        var closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '16px';
+        closeBtn.style.right = '16px';
+        closeBtn.style.zIndex = '30';
+        closeBtn.style.background = 'rgba(15, 23, 42, 0.6)';
+        closeBtn.style.border = 'none';
+        closeBtn.style.color = 'white';
+        closeBtn.style.borderRadius = '50%';
+        closeBtn.style.width = '40px';
+        closeBtn.style.height = '40px';
+        closeBtn.style.display = 'flex';
+        closeBtn.style.alignItems = 'center';
+        closeBtn.style.justifyContent = 'center';
+        closeBtn.style.cursor = 'pointer';
+        closeBtn.style.transition = 'background 0.2s';
+        closeBtn.style.pointerEvents = 'auto'; // allow clicks
+        closeBtn.onmouseover = function() { closeBtn.style.background = 'rgba(15, 23, 42, 0.9)'; };
+        closeBtn.onmouseout = function() { closeBtn.style.background = 'rgba(15, 23, 42, 0.6)'; };
+        closeBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          wrapper.remove();
+          frame.classList.remove('is-playing');
+        };
+        wrapper.appendChild(closeBtn);
+        
+        frame.appendChild(wrapper);
         frame.classList.add('is-playing');
       }
 
