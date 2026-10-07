@@ -730,8 +730,8 @@ body:not(.noScript) .umso-header .umso-animated.umso-animating {
 
 .sy-nav-brand img {
   display: block;
-  height: 40px;
-  width: auto;
+  width: min(160px, 100%);
+  height: auto;
 }
 
 .sy-nav-links {
