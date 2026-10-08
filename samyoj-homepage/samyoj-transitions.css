@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Samyoj Smooth Page Transition System
+   - Lightweight, ultra-fast, zero-dependency page transitions
+   - Exit: 200ms ease-out (opacity 1 -> 0, translateY 0 -> -4px)
+   - Enter: 260ms ease-out (opacity 0 -> 1, translateY 4px -> 0)
+   - Target perceived time: ~300-450ms
+   - Full accessibility: prefers-reduced-motion supported
+   ========================================================================== */
+
+/* Prevent white or background flash between document transitions */
+html {
+  background-color: #ffffff;
+}
+
+body {
+  /* Smooth page reveal upon initial load & navigation */
+  animation: syPageEnter 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Page exit state triggered immediately upon clicking internal links */
+body.sy-page-exiting {
+  opacity: 0 !important;
+  transform: translateY(-4px) !important;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), transform 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  pointer-events: none !important;
+}
+
+/* Page enter keyframe: subtle vertical slide & clean fade */
+@keyframes syPageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none !important;
+  }
+  body.sy-page-exiting {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    pointer-events: auto !important;
+  }
+}
