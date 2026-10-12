@@ -62,17 +62,18 @@
 
 /* Hover Effect */
 .um-nav-links li a:hover {
-    color: #10b981 !important;
+    color: #4B2EEB !important;
+    background-color: rgba(75, 46, 235, 0.06) !important;
 }
 
 /* ACTIVE PILL HIGHLIGHT STATE */
 .um-nav-links li a.active,
 .um-nav-links li a[aria-current="page"] {
-    background-color: #f0fdf4 !important;
-    color: #059669 !important;
-    border: 1px solid #bbf7d0 !important;
-    font-weight: 600 !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15) !important;
+    background-color: rgba(75, 46, 235, 0.08) !important;
+    color: #4B2EEB !important;
+    border: 1px solid rgba(75, 46, 235, 0.22) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
     padding: 8px 18px !important;
 }
 
@@ -81,7 +82,7 @@
 .um-nav-links li a[aria-current="page"]::before {
     content: "✦" !important;
     font-size: 13px !important;
-    color: #059669 !important;
+    color: #7A3BFF !important;
 }
 </style>
   <!-- Shared site header/nav (matches home/features/industries) -->
@@ -1540,12 +1541,7 @@
       padding-top: calc(var(--um-header-height, 65px) + 12px);
     }
 
-    /* Active nav link */
-    .um-nav-links a[aria-current="page"],
-    .um-drawer-links a[aria-current="page"] {
-      color: #087a47 !important;
-      font-weight: 600;
-    }
+    /* Active nav link handled in shared head */
   </style>
 
   <style>
@@ -1560,7 +1556,7 @@
       --pale: #f2fff8;
     }
 
-    * {
+    *:not(header, header *, #aisensy-magic-bar, #aisensy-magic-bar *) {
       box-sizing: border-box;
     }
 
@@ -1596,8 +1592,8 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(ellipse 42% 48% at 8% 92%, rgba(3, 207, 101, 0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 38% 42% at 92% 12%, rgba(3, 207, 101, 0.07) 0%, transparent 68%),
+        radial-gradient(ellipse 42% 48% at 8% 92%, rgba(75, 46, 235, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 38% 42% at 92% 12%, rgba(122, 59, 255, 0.05) 0%, transparent 68%),
         #ffffff;
       padding: 28px 0 48px;
     }
@@ -1651,7 +1647,10 @@
     }
 
     .ch-title .accent {
-      color: var(--green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .ch-sub {
@@ -1693,14 +1692,15 @@
     }
 
     .ch-btn-primary {
-      background: #108548;
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
       color: #fff !important;
-      box-shadow: none;
+      box-shadow: 0 4px 14px rgba(75, 46, 235, 0.25);
     }
 
     .ch-btn-primary:hover {
-      background: #0d6e3b;
+      background: linear-gradient(135deg, #3f25c7 0%, #6830d9 100%);
       transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(75, 46, 235, 0.35);
     }
 
     .ch-btn-secondary {
@@ -1755,6 +1755,7 @@
       width: 100%;
       max-width: 860px;
       height: auto;
+      object-fit: contain;
       user-select: none;
       -webkit-user-drag: none;
     }
@@ -1822,9 +1823,9 @@
       gap: 8px;
       padding: 7px 14px;
       border-radius: 999px;
-      background: #eafbf0;
-      border: 1px solid #c8f0d6;
-      color: #0a9f52;
+      background: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      color: #4B2EEB;
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 16px;
@@ -1834,6 +1835,7 @@
     .cr-pill svg {
       width: 15px;
       height: 15px;
+      color: #4B2EEB;
     }
 
     .cr-title {
@@ -1859,7 +1861,7 @@
       height: 3px;
       margin: 0 auto;
       border-radius: 4px;
-      background: var(--cr-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
     }
 
     .cr-grid {
@@ -2155,9 +2157,9 @@
       gap: 8px;
       padding: 8px 16px;
       border-radius: 999px;
-      background: #eafbf0;
-      border: 1px solid #c9f2d6;
-      color: #0a9f52;
+      background: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      color: #4B2EEB;
       font-size: 13.5px;
       font-weight: 700;
       line-height: 1;
@@ -2167,6 +2169,7 @@
       width: 16px;
       height: 16px;
       flex: 0 0 auto;
+      color: #4B2EEB;
     }
 
     .cw-title {
@@ -2179,7 +2182,10 @@
     }
 
     .cw-title .accent {
-      color: var(--cw-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .cw-sub {
@@ -2339,8 +2345,8 @@
     .cw-section input:focus,
     .cw-section select:focus,
     .cw-section textarea:focus {
-      border-color: #86efac;
-      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+      border-color: #7A3BFF;
+      box-shadow: 0 0 0 3px rgba(75, 46, 235, 0.15);
     }
 
     .cw-input>svg:first-child+input,
@@ -2400,17 +2406,18 @@
       min-height: 52px;
       border: 0;
       border-radius: 14px;
-      background: var(--cw-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
       color: #fff;
       font: 700 15.5px Inter, system-ui, sans-serif;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.32);
-      transition: background 0.18s ease, transform 0.18s ease;
+      box-shadow: 0 10px 24px rgba(75, 46, 235, 0.3);
+      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .cw-submit:hover {
-      background: var(--cw-green-deep);
+      background: linear-gradient(135deg, #3f25c7 0%, #6830d9 100%);
       transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(75, 46, 235, 0.4);
     }
 
     .cw-submit svg {
@@ -2573,9 +2580,9 @@
       gap: 8px;
       padding: 7px 14px;
       border-radius: 999px;
-      background: #eafbf0;
-      border: 1px solid #c8f0d6;
-      color: var(--wy-green-deep);
+      background: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      color: #4B2EEB;
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 16px;
@@ -2585,7 +2592,7 @@
     .wy-pill svg {
       width: 15px;
       height: 15px;
-      color: var(--wy-green);
+      color: #4B2EEB;
     }
 
     .wy-title {
@@ -2598,7 +2605,10 @@
     }
 
     .wy-title .accent {
-      color: var(--wy-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .wy-sub {
@@ -2615,7 +2625,7 @@
       height: 3px;
       margin: 0 auto;
       border-radius: 4px;
-      background: var(--wy-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
     }
 
     .wy-grid {
@@ -3499,7 +3509,7 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="industries.html">Industries</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
               </ul>
               <div class="um-nav-buttons"><button target="_blank" rel="noopener noreferrer" id="btn_7z9u86l3cj"
                   class="_af9d7b85 btn primary um-dragging"><span>Start for FREE</span><svg width="1em"
@@ -3537,7 +3547,9 @@
               <ul class="um-drawer-links sy-drawer-links">
                 <li><a class="sy-drawer-link" href="index.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2.2a1 1 0 0 0-1.2 0l-8 6.2A1 1 0 0 0 3 9.1V20a1 1 0 0 0 1 1h5.5a.5.5 0 0 0 .5-.5V15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5.5a.5.5 0 0 0 .5.5H20a1 1 0 0 0 1-1V9.1a1 1 0 0 0-.4-.8l-8-6.1z"/></svg></span><span class="sy-drawer-label">Home</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
                 <li><a class="sy-drawer-link" href="features.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.2 3.6L17 8l-3.8 1.4L12 13l-1.2-3.6L7 8l3.8-1.4L12 3z"/><path d="M18.5 13l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1-2.1-.7 2.1-.7.7-2.1z"/><path d="M6.5 14l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8z"/></svg></span><span class="sy-drawer-label">Features</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="pricing.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="sy-drawer-label">Pricing</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
                 <li><a class="sy-drawer-link" href="industries.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l7-4 2 1.2V5h7v15"/><path d="M4 20h16"/><path d="M9 12h1M9 16h1M14 9h1M14 12h1M14 16h1"/></svg></span><span class="sy-drawer-label">Industries</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
+                <li><a class="sy-drawer-link" href="blog.html"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span><span class="sy-drawer-label">Blog</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
                 <li><a class="sy-drawer-link" href="contact.html" aria-current="page"><span class="sy-drawer-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/><path d="M4.5 18.5V7.8A2.8 2.8 0 0 1 7.3 5h9.4A2.8 2.8 0 0 1 19.5 7.8v6.2a2.8 2.8 0 0 1-2.8 2.8H9.2L4.5 18.5z"/></svg></span><span class="sy-drawer-label">Contact</span><span class="sy-drawer-chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span></a></li>
               </ul>
               <div class="um-drawer-buttons sy-drawer-btns"><button type="button" target="_blank" rel="noopener noreferrer" id="btn_dhptvraq2o"
@@ -3653,9 +3665,9 @@
         </div>
 
         <div class="ch-visual">
-          <img src="images/contact-hero-visual.webp"
-            alt="Samyoj support specialist helping customers over WhatsApp with AI, analytics and CRM tools" width="900"
-            height="900" decoding="async" fetchpriority="high">
+          <img src="New images/contact new images/Samyoj CRM Omnichannel Dashboard Illustration.png"
+            alt="Samyoj CRM Omnichannel Dashboard Illustration" width="1536"
+            height="1024" decoding="async" fetchpriority="high">
         </div>
       </div>
     </section>

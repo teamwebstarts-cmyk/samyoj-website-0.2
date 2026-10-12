@@ -1541,176 +1541,120 @@
     }
   </style>
   <style data-version="2" data-content="section">
+    /* ── Features Opening Hero Section — Matched to Homepage Dimensions, Sizing & Typography ── */
     ._5de7520e {
       position: relative;
-      padding-top: 48px;
-      --paddingTop: 48px;
-      padding-bottom: 36px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      padding-top: calc(var(--um-header-height) + 30px);
+      --paddingTop: 30px;
+      padding-bottom: 48px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow: hidden;
     }
 
-    @media (max-width: 760px) {
-      ._5de7520e {
-        padding-top: 20px;
-        --paddingTop: 20px;
-        padding-bottom: 28px;
-      }
+    /* Hero container matching .custom-hero-container */
+    ._5de7520e > .wr {
+      width: 100%;
+      max-width: var(--wr-max);
+      margin: 0 auto;
+      padding: 0 30px;
+      box-sizing: border-box;
     }
 
+    /* Two-column layout matching .custom-hero-container */
     ._299cb117 {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      gap: 0;
     }
 
-    @media (max-width: 750px) {
-      ._299cb117 {
-        flex-direction: column;
-      }
-    }
-
+    /* Left column matching .custom-hero-left */
     ._6ae479cf {
+      flex: 1.1;
+      max-width: 640px;
+      padding-right: 30px;
+      box-sizing: border-box;
+      text-align: left;
       display: flex;
-      flex-grow: 1;
-      flex-basis: 0;
-      align-items: flex-start;
       flex-direction: column;
+      align-items: flex-start;
+      flex-basis: auto;
+      flex-grow: 0;
     }
 
     ._ecbee37c {
-      gap: 10px;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       text-align: left;
-      align-items: flex-start;
-      margin-bottom: 30px;
-      flex-direction: column;
-    }
-
-    ._df3c8e20 {
-      color: var(--color-accent-primary);
       margin: 0;
-    }
-
-    ._23da6a61 {
-      font: var(--font-title);
-      color: var(--color-text-primary);
-      margin: 0;
-      font-size: var(--fontSize-title);
-      max-width: min(100%, undefinedpx);
-      line-height: var(--lineHeight-title);
-    }
-
-    ._da94c09a {
-      font: var(--font-subheading);
-      margin: 0;
-      font-size: var(--fontSize-subheading);
-      max-width: min(100%, undefinedpx);
-      line-height: var(--lineHeight-subheading);
-    }
-
-    ._8e4bacfb {
-      margin: 0 0 1em;
       padding: 0;
-      font-size: 0.9em;
-      list-style: none;
-    }
-
-    ._8e4bacfb>*:nth-child(1) {
-      --listItem-index: 0;
-    }
-
-    ._8e4bacfb>*:nth-child(2) {
-      --listItem-index: 1;
-    }
-
-    ._8e4bacfb>*:nth-child(3) {
-      --listItem-index: 2;
-    }
-
-    ._775a2ca2 {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2em;
-    }
-
-    ._aaae50c1 {
-      position: relative;
-      flex-shrink: 0;
-      margin-right: 1em;
-    }
-
-    ._a6c98665 {
-      display: flex;
-      flex-direction: column;
-    }
-
-    ._a9479629 {
-      font: var(--font-subtitle);
-      color: var(--color-text-primary);
-      font-size: var(--fontSize-subtitle);
-      font-weight: var(--fontWeight-subtitle, var(--fontWeight-text-medium));
-      line-height: var(--lineHeight-subtitle);
-    }
-
-    ._10af011a {
-      width: calc(58% - 4em);
-      margin-left: 3em;
-    }
-
-    @media (max-width: 750px) {
-      ._10af011a {
-        width: 100%;
-        margin: 3em 0 0 0;
-      }
-    }
-
-    ._ba1fa94a {
-      display: block;
+      gap: 0;
       width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      object-fit: contain;
-      border-radius: calc(var(--card-borderRadius)/2);
     }
 
-    /* Only cap height on mobile so the tall illustration doesn't dominate */
-    @media (max-width: 750px) {
-      ._ba1fa94a {
-        max-height: min(420px, 55vh);
-      }
-    }
-
-    /* ── Hero redesign: checklist, CTAs, stats ── */
-
+    /* Heading matching .custom-hero-title */
     ._23da6a61 {
-      font-size: clamp(34px, 3.4vw, 52px);
-      line-height: 1.04;
-      margin-bottom: 18px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 58px;
+      font-weight: 800;
+      color: #0f172a !important;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 0 0 24px 0;
+      max-width: 100%;
     }
 
     ._23da6a61 p {
       margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
     }
 
+    /* Subtitle matching .custom-hero-subtitle */
     ._da94c09a {
-      font-size: 17px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 19px;
+      color: #4b5563;
       line-height: 1.55;
-      max-width: 520px;
-      margin-bottom: 12px;
+      margin: 0 0 28px 0;
+      max-width: 640px;
+      letter-spacing: normal;
     }
 
+    ._da94c09a span {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+
+    /* Checklist */
     .hero-checklist {
       list-style: none;
-      margin: 0 0 26px;
+      margin: 0 0 28px 0;
       padding: 0;
+      width: 100%;
     }
 
     .hero-checklist li {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 15.5px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
       color: #374151;
       padding: 6px 0;
       font-weight: 500;
+      line-height: 1.4;
     }
 
     .hero-check {
@@ -1724,176 +1668,206 @@
       flex-shrink: 0;
     }
 
+    /* CTA buttons matching homepage spacing and scale */
     .hero-cta-row {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 16px;
+      gap: 16px;
+      margin-bottom: 24px;
+      width: 100%;
     }
 
     ._bb883e3c.btn.primary {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: #108548;
-      color: #fff;
-      font-weight: 600;
-      font-size: 16px;
-      padding: 13px 24px;
+      color: #fff !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 26px;
+      min-height: 48px;
       border-radius: 10px;
       border: none;
-      text-decoration: none;
+      white-space: nowrap;
+      box-sizing: border-box;
+      text-decoration: none !important;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 14px rgba(16, 133, 72, 0.28);
+      cursor: pointer;
     }
 
     ._bb883e3c.btn.primary:hover {
       background: #0c6e3b;
-      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 133, 72, 0.38);
+      text-decoration: none !important;
     }
 
     .hero-btn-secondary {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: #fff;
-      color: #111;
-      font-weight: 600;
-      font-size: 16px;
-      padding: 13px 24px;
+      color: #0f172a !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 26px;
+      min-height: 48px;
       border-radius: 10px;
-      border: 1px solid #d1d5db;
-      text-decoration: none;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border: 1.5px solid #E2E8F0;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
       cursor: pointer;
     }
 
     .hero-btn-secondary:hover {
-      border-color: #9ca3af;
-      text-decoration: none;
+      background-color: #F8FAFF;
+      border-color: #4B2EEB;
+      color: #4B2EEB !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(75, 46, 235, 0.08);
+      text-decoration: none !important;
     }
 
+    /* Supporting trust line */
     .hero-trust-line {
       display: flex;
       align-items: center;
-      gap: 7px;
-      font-size: 13.5px;
-      color: #6b7280;
+      gap: 8px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      color: #4b5563;
+      font-weight: 500;
     }
 
-    /* stats bar */
-    .hero-stat-bar {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 0;
-      margin-top: 28px;
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.06);
+    .hero-trust-line svg {
+      flex-shrink: 0;
     }
 
-    .hero-stat {
+    /* Right column (Illustration) matching .custom-hero-right */
+    ._10af011a {
+      flex: 1.2;
       display: flex;
-      flex-direction: column;
+      justify-content: flex-end;
       align-items: center;
-      text-align: center;
-      gap: 6px;
-      padding: 22px 12px;
-      border-right: 1px solid #eef0f2;
+      box-sizing: border-box;
+      max-width: 720px;
+      width: 100%;
+      margin: 0;
+      position: relative;
     }
 
-    .hero-stat:last-child {
-      border-right: none;
+    ._ba1fa94a {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 12px;
     }
 
-    .hero-stat-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-stat-green {
-      background: #E8F8EE;
-      color: #108548;
-    }
-
-    .hero-stat-val {
-      font-size: 22px;
-      font-weight: 700;
-      color: #111;
-      line-height: 1.1;
-    }
-
-    .hero-stat-lbl {
-      font-size: 13px;
-      color: #6b7280;
-    }
-
-    /* responsive — keep stats in compact pairs on mobile, not a tall stack */
-    @media (max-width: 980px) {
-      .hero-stat-bar {
-        grid-template-columns: repeat(3, 1fr);
+    /* Responsive Styles matching Homepage */
+    @media (max-width: 1024px) {
+      ._5de7520e {
+        padding-top: calc(var(--um-header-height) + 20px);
+        --paddingTop: 20px;
+        padding-bottom: 32px;
       }
 
-      .hero-stat:nth-child(3) {
-        border-right: none;
+      ._5de7520e > .wr {
+        padding: 0 24px;
+      }
+
+      ._299cb117 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        text-align: left;
+      }
+
+      ._6ae479cf {
+        flex: none;
+        max-width: 100%;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      ._23da6a61 {
+        font-size: clamp(38px, 4.5vw, 48px);
+        line-height: 1.14;
+        margin-bottom: 20px;
+      }
+
+      ._da94c09a {
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
+
+      ._10af011a {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+      }
+
+      ._ba1fa94a {
+        max-width: 680px;
+        margin: 0 auto;
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 640px) {
+      ._5de7520e > .wr {
+        padding: 0 15px;
+      }
+
+      ._299cb117 {
+        gap: 24px;
+      }
+
+      ._23da6a61 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin: 0 0 16px 0;
+      }
+
+      ._da94c09a {
+        font-size: 16px;
+        margin: 0 0 24px 0;
+      }
+
+      .hero-checklist {
+        margin: 0 0 24px 0;
+      }
+
+      .hero-checklist li {
+        font-size: 14px;
+      }
+
       .hero-cta-row {
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
+        margin-bottom: 20px;
       }
 
-      .hero-cta-row>* {
+      ._bb883e3c.btn.primary,
+      .hero-btn-secondary {
         width: 100%;
         justify-content: center;
         box-sizing: border-box;
       }
 
-      .hero-stat-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-stat {
-        padding: 18px 10px;
-      }
-
-      .hero-stat:nth-child(2n) {
-        border-right: none;
-      }
-
-      .hero-stat:nth-child(odd) {
-        border-right: 1px solid #eef0f2;
-      }
-
-      /* every 2nd row gets a top divider so pairs read as rows */
-      .hero-stat:nth-child(n+3) {
-        border-top: 1px solid #eef0f2;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .hero-stat-bar {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-stat {
-        border-right: none;
-        border-top: 1px solid #eef0f2;
-        padding: 16px 12px;
-      }
-
-      .hero-stat:first-child {
-        border-top: none;
-      }
-
-      .hero-stat-val {
-        font-size: 20px;
+      ._ba1fa94a {
+        max-width: 100%;
       }
     }
   </style>
@@ -2090,6 +2064,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+      justify-content: center;
     }
 
     .pf-dash {
@@ -2104,6 +2079,7 @@
       display: block;
       width: 100%;
       height: auto;
+      object-fit: contain;
       border-radius: 32px;
     }
 
@@ -4956,11 +4932,10 @@
       <div class="_299cb117">
         <div class="_6ae479cf">
           <header class="_ecbee37c" style="position:relative">
-            <h1 class="_23da6a61 um-text">
-              <p>Turn Every Customer Inquiry into<br /><span style="color:var(--color-accent-primary)">A
-                  Closed Deal Across Channels.</span></p>
+            <h1 class="_23da6a61 um-text" style="color: #0f172a;">
+              <p>Every Customer Conversation.<br /><span class="highlight-green feat-accent">One Smarter Platform.</span></p>
             </h1>
-            <div class="_da94c09a um-text"><span style="color:rgb(61, 61, 61)">SAMYOJ connects WhatsApp, Instagram DMs, and Facebook Messenger with smart CRM workflows &mdash; auto-qualifying leads in seconds, automating follow-ups, and closing more deals.</span>
+            <div class="_da94c09a um-text"><span style="color: #4b5563;">Bring your connected messaging channels and customer interactions into a more organized workflow. Use Samyoj to manage conversations, work with contacts, explore automation, and understand your communication activity from one platform.</span>
             </div>
           </header>
           <ul class="hero-checklist" style="position:relative">
@@ -4969,25 +4944,25 @@
                   <path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-              </span>Omnichannel inbox for WhatsApp, Instagram &amp; Facebook</li>
+              </span>Connected communication channels.</li>
             <li><span class="hero-check" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-              </span>Visual automations &amp; drip follow-ups that work 24/7</li>
+              </span>Customer conversations and contact management.</li>
             <li><span class="hero-check" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-              </span>24/7 AI Lead Qualification in &lt; 5 seconds</li>
+              </span>Available automation and AI tools.</li>
             <li><span class="hero-check" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-              </span>Real-time CRM sync and pipeline analytics</li>
+              </span>Campaign activity and reporting.</li>
           </ul>
           <div class="hero-cta-row">
             <a href="https://app.samyoj.com/" id="btn_connect_wa" class="_bb883e3c btn primary"><span>Start Free Trial</span>
@@ -5007,22 +4982,21 @@
             <span>Official Meta Cloud APIs for WhatsApp, Instagram &amp; Facebook.</span>
           </div>
         </div>
-        <div class="_10af011a"><img draggable="false" src="images/feat-illu-01.webp" class="_ba1fa94a"
-            alt="SAMYOJ Omnichannel customer communication workspace"
-            style="display:block;max-width:100%;border-radius:calc(var(--card-borderRadius)/2)" width="1343"
-            height="1171" loading="lazy" decoding="async" /></div>
+        <div class="_10af011a"><img draggable="false" src="New images/features new image/One Smarter Customer Conversation Hub.png" class="_ba1fa94a"
+            alt="One Smarter Customer Conversation Hub — Samyoj omnichannel communication platform" width="1536" height="1024" decoding="async"
+            fetchpriority="high" style="object-fit: contain;"></div>
       </div>
     </div>
   </section>
   <section class="_517b7731 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4" data-reveal>
     <div class="wr">
       <header class="_8cfaaed6" style="position:relative">
-        <div class="pf-eyebrow">ONE PLATFORM. COMPLETE OMNICHANNEL AUTOMATION.</div>
-        <h2 class="_cfd6e506 um-text">
-          <p>Everything you need to convert leads across <span style="color:var(--color-accent-primary)">Every Channel</span></p>
+        <div class="pf-eyebrow">ONE PLATFORM. CONNECTED WORKFLOWS.</div>
+        <h2 class="_cfd6e506 um-text" style="color: #0f172a;">
+          <p>The Tools Behind Better <span class="highlight-green feat-accent">Customer Conversations</span></p>
         </h2>
         <div class="_341acb15 um-text">
-          <p>Every tool your team needs &mdash; omnichannel inbox, AI qualification, automated follow-ups, campaigns, CRM and analytics &mdash; living in one unified workspace.</p>
+          <p style="color: #4b5563;">Explore the tools that help your team manage communication, organize contacts, and work more efficiently with Samyoj.</p>
         </div>
       </header>
 
@@ -5037,8 +5011,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Omnichannel Team Inbox</div>
-              <div class="pf-desc">Manage WhatsApp, Instagram DMs, and Facebook Messenger conversations in one place. Assign, collaborate, and add notes &mdash; with full customer context always in view.</div>
+              <div class="pf-title">Communication Channels</div>
+              <div class="pf-desc">Manage WhatsApp, Instagram DMs, and Facebook Messenger conversations in one shared workspace with full customer context and team assignment.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5056,9 +5030,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Automations &amp; Flows</div>
-              <div class="pf-desc">Build visual workflows for welcome messages, FAQs, and lead capture. Route intent
-                automatically and hand off when a human is needed.</div>
+              <div class="pf-title">Automation &amp; Flows</div>
+              <div class="pf-desc">Build visual workflows for greetings, FAQs, and lead routing to respond promptly and reduce repetitive manual tasks.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5079,9 +5052,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">AI Customer Support</div>
-              <div class="pf-desc">Answer instantly with AI trained on your data. Handle repeat questions and escalate
-                to your team with full context.</div>
+              <div class="pf-title">AI Bots &amp; AI Studio</div>
+              <div class="pf-desc">Deploy smart chatbots trained on your business FAQs to handle customer inquiries 24/7 with smooth handoff to live agents.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5098,9 +5070,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Broadcast Campaigns</div>
-              <div class="pf-desc">Send template campaigns to opted-in audiences and track delivery and reads. Turn
-                replies into journeys or live conversations.</div>
+              <div class="pf-title">Campaigns &amp; Templates</div>
+              <div class="pf-desc">Send approved template announcements to opted-in customer lists and monitor delivery and read status in real time.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5112,8 +5083,8 @@
 
         <div class="pf-center">
           <div class="pf-dash">
-            <img draggable="false" src="images/feat-illu-02.webp" class="pf-dash-img" alt="SAMYOJ platform dashboard"
-              width="1448" height="1086" loading="lazy" decoding="async" />
+            <img draggable="false" src="New%20images/features%20new%20image/Samyoj%20SaaS%20Dashboard%20Overview%20(1).png" class="pf-dash-img" alt="SAMYOJ SaaS platform dashboard overview"
+              width="1470" height="906" loading="lazy" decoding="async" />
           </div>
           <div class="pf-trust">
             <div class="pf-trust-item">
@@ -5159,9 +5130,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Contacts &amp; CRM</div>
-              <div class="pf-desc">Centralize contacts, tags, lead stages, and history in one CRM. Every chat becomes
-                usable customer context.</div>
+              <div class="pf-title">Contacts &amp; Customer Management</div>
+              <div class="pf-desc">Centralize contact profiles, custom tags, and conversation history so your team has complete customer context for every interaction.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5181,9 +5151,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Tickets &amp; SLA</div>
-              <div class="pf-desc">Turn conversations into tickets with priorities and SLAs. Resolve faster without
-                losing the original chat context.</div>
+              <div class="pf-title">Tickets &amp; Support</div>
+              <div class="pf-desc">Turn customer conversations into structured support tickets with assigned priorities and statuses to track resolutions effectively.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5202,9 +5171,8 @@
               </svg>
             </div>
             <div class="pf-text">
-              <div class="pf-title">Analytics &amp; Reports</div>
-              <div class="pf-desc">Track campaigns, team productivity, and engagement in real time. See what's
-                delivered, read, and waiting.</div>
+              <div class="pf-title">Analytics &amp; Reporting</div>
+              <div class="pf-desc">Track message volumes, delivery performance, and team response activity to understand communication trends and improve service.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5223,8 +5191,7 @@
             </div>
             <div class="pf-text">
               <div class="pf-title">Integrations &amp; API</div>
-              <div class="pf-desc">Connect tools via webhooks and API. Send customer events to the systems your team
-                already uses.</div>
+              <div class="pf-desc">Connect your everyday tools and systems using webhooks and APIs to share customer communication events across your workflow.</div>
             </div>
             <span class="pf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -5278,10 +5245,9 @@
             See It In Action
           </div>
 
-          <h2 class="demo-title">Let&#x27;s take you through a<br /><span class="demo-accent">Power Packed Demo</span>
-          </h2>
+          <h2 class="demo-title">See How <span class="highlight-green feat-accent">Samyoj Works</span></h2>
 
-          <p class="demo-sub">See how Samyoj can help you qualify inquiries, automate follow-ups and convert more leads across WhatsApp, Instagram &amp; Facebook &mdash; all in one platform.</p>
+          <p class="demo-sub">Explore the platform interface and discover how its available communication, automation, and customer-management tools fit into your workflow.</p>
 
           <div class="demo-features">
             <div class="demo-feature">
@@ -5303,8 +5269,8 @@
                 </svg>
               </div>
               <div>
-                <p class="demo-feature-title">In Just 5 Minutes</p>
-                <p class="demo-feature-desc">Understand the full power</p>
+                <p class="demo-feature-title">Platform Walkthrough</p>
+                <p class="demo-feature-desc">Explore tools and workspace navigation</p>
               </div>
             </div>
             <div class="demo-feature">
@@ -5315,8 +5281,8 @@
                 </svg>
               </div>
               <div>
-                <p class="demo-feature-title">Real Use Cases</p>
-                <p class="demo-feature-desc">From leads to loyal customers</p>
+                <p class="demo-feature-title">Real Workflows</p>
+                <p class="demo-feature-desc">From initial inquiry to team follow-up</p>
               </div>
             </div>
           </div>
@@ -5434,10 +5400,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.8 5.7 21l2.3-7-6-4.6h7.6z" />
             </svg>
-            Everything You Need to Grow Across Channels
+            Key Platform Benefits
           </div>
-          <h2 class="feat-hero-title">Everything your <span class="feat-accent">customer communication</span> runs on</h2>
-          <p class="feat-hero-sub">Powerful AI tools to capture inquiries, qualify buyers, and automate follow-ups across WhatsApp, Instagram &amp; Facebook.</p>
+          <h2 class="feat-hero-title">Built to Support Your <span class="feat-accent">Team's Workflow</span></h2>
+          <p class="feat-hero-sub">Practical tools and clear visibility designed to help your team manage conversations smoothly across channels.</p>
         </div>
       </div>
 
@@ -5450,8 +5416,8 @@
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
             </svg>
           </div>
-          <p class="feat-value-title">AI-Powered</p>
-          <p class="feat-value-desc">Smarter conversations and automation</p>
+          <p class="feat-value-title">Organized Communication</p>
+          <p class="feat-value-desc">Work with the messaging channels connected to your account.</p>
         </div>
         <div class="feat-value-item">
           <div class="feat-value-icon">
@@ -5460,8 +5426,8 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
-          <p class="feat-value-title">Secure &amp; Reliable</p>
-          <p class="feat-value-desc">Enterprise-grade security</p>
+          <p class="feat-value-title">Simpler Workflows</p>
+          <p class="feat-value-desc">Explore the automation capabilities available in Samyoj.</p>
         </div>
         <div class="feat-value-item">
           <div class="feat-value-icon">
@@ -5473,8 +5439,8 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
           </div>
-          <p class="feat-value-title">Easy to Use</p>
-          <p class="feat-value-desc">No tech skills required to get started</p>
+          <p class="feat-value-title">Customer Context</p>
+          <p class="feat-value-desc">Use available contact information to support customer interactions.</p>
         </div>
         <div class="feat-value-item">
           <div class="feat-value-icon">
@@ -5485,8 +5451,8 @@
               <line x1="6" y1="20" x2="6" y2="14" />
             </svg>
           </div>
-          <p class="feat-value-title">Scalable</p>
-          <p class="feat-value-desc">Built to grow with your business</p>
+          <p class="feat-value-title">Activity Visibility</p>
+          <p class="feat-value-desc">Review the messaging and campaign metrics provided by the dashboard.</p>
         </div>
         <div class="feat-value-item">
           <div class="feat-value-icon">
@@ -5497,16 +5463,15 @@
                 d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
             </svg>
           </div>
-          <p class="feat-value-title">24/7 Support</p>
-          <p class="feat-value-desc">We&#x27;re here when you need us</p>
+          <p class="feat-value-title">Room to Grow</p>
+          <p class="feat-value-desc">Choose the available features and plan that suit your business.</p>
         </div>
       </div>
 
       <!-- Layer 3: Feature grid -->
       <div class="feat-grid-header">
-        <h2 class="feat-grid-title">Explore <span class="feat-accent">Powerful Features</span></h2>
-        <p class="feat-grid-sub">Discover the tools that help teams capture, qualify, and follow up at scale across WhatsApp, Instagram &amp; Facebook.
-        </p>
+        <h2 class="feat-grid-title" style="color: #0f172a;">Explore <span class="feat-accent">Samyoj Features</span></h2>
+        <p class="feat-grid-sub" style="color: #4b5563;">Find the tools that fit your team's communication and customer-management workflow.</p>
         <div class="feat-grid-divider"></div>
       </div>
 
@@ -5520,7 +5485,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">Omnichannel Team Inbox</h3>
-          <p class="feat-card-desc">Messages from WhatsApp, Instagram DMs, and Facebook Messenger stay in one place with customer details, labels, internal notes, and ownership.</p>
+          <p class="feat-card-desc">Consolidate WhatsApp, Instagram DMs, and Facebook Messenger into one shared inbox with labels, notes, and agent assignment. Your team stays aligned and responds faster without jumping between separate apps.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5534,7 +5499,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">Visual Workflow Automations</h3>
-          <p class="feat-card-desc">Turn common customer journeys into automated conversation flows that collect information, qualify intent, and assign CRM leads automatically.</p>
+          <p class="feat-card-desc">Design custom conversation trees for welcome messages, FAQ responses, and lead routing with a visual builder. Automating routine steps keeps first response times fast while freeing staff for complex queries.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5549,8 +5514,8 @@
               <line x1="16" y1="16" x2="16" y2="16" />
             </svg>
           </div>
-          <h3 class="feat-card-title">24/7 AI Lead Qualification</h3>
-          <p class="feat-card-desc">AI responds in under 5 seconds, asks qualifying questions, captures requirements, and routes high-intent buyers to your sales reps.</p>
+          <h3 class="feat-card-title">AI Lead Assistant</h3>
+          <p class="feat-card-desc">Engage inbound prospects around the clock with an intelligent assistant that answers initial questions and collects key details. Sales reps can review the context and step in whenever high-intent buyers are ready.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5562,8 +5527,8 @@
               <path d="M22 2l-7 20-4-9-9-4 20-7z" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Multi-Channel Campaigns</h3>
-          <p class="feat-card-desc">Send targeted promotions and announcements across WhatsApp, Instagram, and Facebook, then trigger automated re-engagement drips.</p>
+          <h3 class="feat-card-title">Broadcast Campaigns</h3>
+          <p class="feat-card-desc">Send targeted marketing announcements, updates, and newsletters to opted-in audiences using Meta-approved templates. Delivery and read tracking help your team measure audience interest and follow up effectively.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5577,8 +5542,8 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Smart CRM &amp; Pipeline Sync</h3>
-          <p class="feat-card-desc">Every conversation across WhatsApp and Instagram becomes structured customer context with tags, stages, and lead history.</p>
+          <h3 class="feat-card-title">Contact &amp; Customer CRM</h3>
+          <p class="feat-card-desc">Organize customer profiles, contact details, custom tags, and full conversation records in one searchable database. Giving agents instant access to relationship history helps deliver personalized customer service.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5592,9 +5557,8 @@
               <line x1="16" y1="17" x2="8" y2="17" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Tickets &amp; Support</h3>
-          <p class="feat-card-desc">Convert a conversation into accountable support work without copying customer
-            details into another system.</p>
+          <h3 class="feat-card-title">Tickets &amp; Support Workflows</h3>
+          <p class="feat-card-desc">Convert messaging threads directly into actionable support tickets with assigned owners, priorities, and statuses. Your team resolves customer issues methodically without losing original chat context.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5607,8 +5571,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">Interactive Message Templates</h3>
-          <p class="feat-card-desc">Pair approved templates with buttons and menus that guide customers to the right
-            next action.</p>
+          <p class="feat-card-desc">Build approved message templates equipped with quick-reply buttons, URL links, and interactive menus. Structured buttons simplify customer responses and guide conversations toward clear next steps.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5621,8 +5584,8 @@
               <line x1="9" y1="21" x2="9" y2="9" />
             </svg>
           </div>
-          <h3 class="feat-card-title">In-Chat Lead Forms</h3>
-          <p class="feat-card-desc">Gather the information your team needs while keeping customers directly in their preferred messaging channel.</p>
+          <h3 class="feat-card-title">In-Chat Information Forms</h3>
+          <p class="feat-card-desc">Capture customer requirements, feedback, and intake information directly within messaging conversations. Gathering details within chat reduces form drop-offs and keeps customer interactions effortless.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5635,7 +5598,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">Voice &amp; Agent Handoff</h3>
-          <p class="feat-card-desc">Route, answer, and review calls alongside the unified chat history your team already uses.</p>
+          <p class="feat-card-desc">Handle customer calls alongside chat conversations and escalate automated interactions to human agents when needed. Customers experience seamless transitions without having to repeat their inquiries.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5648,9 +5611,8 @@
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Commerce &amp; Orders</h3>
-          <p class="feat-card-desc">Give customers accurate answers because sales, support, and order details live
-            together.</p>
+          <h3 class="feat-card-title">Catalogs &amp; Order Inquiries</h3>
+          <p class="feat-card-desc">Showcase products through messaging catalogs and manage related buyer inquiries directly within customer threads. Centralizing order discussions helps sales teams answer buyer questions promptly.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5664,8 +5626,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">Analytics &amp; Reports</h3>
-          <p class="feat-card-desc">Know what is delivered, read, waiting, resolved, automated, and ready for
-            improvement.</p>
+          <p class="feat-card-desc">Track message delivery rates, read confirmations, and team response activity in real time. Operational visibility helps managers evaluate performance and optimize support workflows.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5679,9 +5640,8 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Team &amp; Roles</h3>
-          <p class="feat-card-desc">Route work to the right people, limit sensitive controls, and keep a record of
-            important workspace changes.</p>
+          <h3 class="feat-card-title">Team Roles &amp; Permissions</h3>
+          <p class="feat-card-desc">Assign specific access privileges and roles to team members across your workspace. Role-based controls protect customer data while enabling smooth collaboration across departments.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5693,9 +5653,8 @@
               <polyline points="8 6 2 12 8 18" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Integrations &amp; API</h3>
-          <p class="feat-card-desc">Send the right event or customer context to the tools your teams already depend on.
-          </p>
+          <h3 class="feat-card-title">Integrations &amp; Webhook API</h3>
+          <p class="feat-card-desc">Connect external applications, databases, and CRMs using webhooks and developer APIs. Event-driven syncing keeps customer records updated across your existing business systems.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5706,9 +5665,8 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Security &amp; Compliance</h3>
-          <p class="feat-card-desc">Manage consent, message volume, customer data, and team availability from the same
-            platform that sends the message.</p>
+          <h3 class="feat-card-title">Security &amp; Meta Compliance</h3>
+          <p class="feat-card-desc">Operate on official Meta Cloud APIs designed for policy compliance, data integrity, and delivery reliability. Centralized consent and opt-in tools help protect customer privacy responsibly.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5721,8 +5679,7 @@
             </svg>
           </div>
           <h3 class="feat-card-title">AI Content Studio</h3>
-          <p class="feat-card-desc">Give your team a governed starting point for campaigns, templates, FAQs, and
-            customer replies.</p>
+          <p class="feat-card-desc">Draft marketing copy, message templates, and customer response suggestions with AI writing support. Content assistance accelerates drafting while preserving professional brand standards.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5734,9 +5691,8 @@
               <polyline points="12 6 12 12 16 14" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Business Hours</h3>
-          <p class="feat-card-desc">Configure business hours, working days, and time zone so automations send the right
-            message at the right time.</p>
+          <h3 class="feat-card-title">Business Hours &amp; Away Messaging</h3>
+          <p class="feat-card-desc">Set operational schedules, working days, and automated off-hours away messages. Clear response timing sets customer expectations and protects team boundaries.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5749,9 +5705,8 @@
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
           </div>
-          <h3 class="feat-card-title">Multi Language</h3>
-          <p class="feat-card-desc">Build different paths by customer language in visual automation flows to reach
-            customers in their language.</p>
+          <h3 class="feat-card-title">Multi-Language Support</h3>
+          <p class="feat-card-desc">Create localized message paths and templates to communicate with customers in their preferred languages. Addressing customers natively improves clarity and builds lasting trust.</p>
           <a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer" class="feat-card-link">Explore in App →</a>
         </div>
 
@@ -5776,10 +5731,9 @@
     <div class="wr">
       <div class="ai-top">
         <div class="ai-copy">
-          <div class="ai-badge">✨ AI POWERED SUPPORT</div>
-          <h2 class="ai-title"><span>AI Chatbot</span><br />Understands, Answers &amp; Converts.</h2>
-          <p class="ai-sub">Deliver instant, accurate answers 24/7 with AI. Capture leads, solve queries, and hand off
-            to your team when it matters most.</p>
+          <div class="ai-badge">✨ AI ASSISTANCE</div>
+          <h2 class="ai-title" style="color: #0f172a;">AI Assistance for Better <span class="highlight-green feat-accent">Customer Conversations</span></h2>
+          <p class="ai-sub" style="color: #4b5563;">Use Samyoj's available AI tools to support customer interactions and help your team handle common inquiries more efficiently.</p>
           <div class="ai-features">
             <div class="ai-feature">
               <div class="ai-feature-icon ai-fi-green">
@@ -5794,23 +5748,8 @@
                 </svg>
               </div>
               <div>
-                <p class="ai-feature-title">Instant Responses</p>
-                <p class="ai-feature-desc">Answer FAQs and customer queries instantly with AI.</p>
-              </div>
-            </div>
-            <div class="ai-feature">
-              <div class="ai-feature-icon ai-fi-purple">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <div>
-                <p class="ai-feature-title">Smart Handoff</p>
-                <p class="ai-feature-desc">Seamlessly transfer to your team when human support is needed.</p>
+                <p class="ai-feature-title">AI-Powered Responses</p>
+                <p class="ai-feature-desc">Provide automated replies to common inquiries and FAQs to help customers get timely answers across active communication channels.</p>
               </div>
             </div>
             <div class="ai-feature">
@@ -5825,8 +5764,23 @@
                 </svg>
               </div>
               <div>
-                <p class="ai-feature-title">Knowledge Driven</p>
-                <p class="ai-feature-desc">Train AI with your docs, FAQs, and business data.</p>
+                <p class="ai-feature-title">Knowledge-Based Assistance</p>
+                <p class="ai-feature-desc">Configure your AI assistant with your business information and FAQs so responses remain grounded in your verified documentation.</p>
+              </div>
+            </div>
+            <div class="ai-feature">
+              <div class="ai-feature-icon ai-fi-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <p class="ai-feature-title">Human Handoff</p>
+                <p class="ai-feature-desc">Transfer complex conversations or sensitive customer inquiries smoothly to your team members with complete chat context preserved.</p>
               </div>
             </div>
             <div class="ai-feature">
@@ -5838,8 +5792,8 @@
                 </svg>
               </div>
               <div>
-                <p class="ai-feature-title">Always Learning</p>
-                <p class="ai-feature-desc">Continuous learning to deliver better, smarter answers.</p>
+                <p class="ai-feature-title">AI-Assisted Customer Communication</p>
+                <p class="ai-feature-desc">Support your agents with prompt drafting assistance and structured messaging templates to keep responses consistent and efficient.</p>
               </div>
             </div>
           </div>

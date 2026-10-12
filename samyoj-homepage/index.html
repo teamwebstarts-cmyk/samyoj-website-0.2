@@ -65,7 +65,33 @@
       font-size: 13px !important;
       color: #7A3BFF !important;
     }
-  </style>
+  
+    /* Mobile breakpoint: stack 2 cards vertically */
+    @media (max-width: 860px) {
+      .meta-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+
+      .meta-feature-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 32px 24px !important;
+        gap: 28px !important;
+        min-height: auto !important;
+      }
+
+      .card-left-col,
+      .card-right-col {
+        width: 100% !important;
+      }
+
+      .card-right-col img {
+        max-height: 280px !important;
+        max-width: 100% !important;
+      }
+    }
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -4650,9 +4676,7 @@
       <!-- Right Column: Graphic -->
       <div class="custom-hero-right">
         <div class="graphic-container">
-          <img class="hero-right-img" src="./images/hero-section-image.webp"
-            alt="Samyoj WhatsApp Marketing Platform Graphic" width="1394" height="1128" decoding="async"
-            fetchpriority="high" draggable="false">
+          <img class="hero-right-img" src="New%20images/first%20image.png" alt="Samyoj Omnichannel Sales and CRM Platform Graphic" width="1351" height="1164" decoding="async" fetchpriority="high" draggable="false" style="object-fit: contain;">
         </div>
       </div>
 
@@ -5915,22 +5939,23 @@
         align-items: center;
       }
 
+      /* Tablet adjustments: retain 2 columns */
       .meta-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
 
       .meta-feature-card {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 32px;
-        gap: 32px;
-        min-height: auto;
+        padding: 32px 24px;
+        gap: 16px;
       }
 
-      .card-left-col,
-      .card-right-col {
-        width: 100%;
+      .card-headline {
+        font-size: 20px;
+      }
+
+      .card-description {
+        font-size: 13.5px;
       }
     }
 
@@ -8035,8 +8060,7 @@
         <div class="setup-right-col">
           <div class="setup-backdrop-blob"></div>
           <div class="setup-graphic-wrapper">
-            <img src="images/samyouijrjob.webp" alt="Samyoj AI Customer Communication & Automation dashboard interface"
-              class="setup-dashboard-img" width="1536" height="1024" draggable="false" loading="lazy" decoding="async">
+            <img src="New%20images/second%20image.png" alt="Samyoj AI Customer Communication & Automation Dashboard" class="setup-dashboard-img" width="1672" height="941" draggable="false" loading="lazy" decoding="async" style="object-fit: contain;">
 
             <!-- Compact Trust Badges Card &mdash; below the mockup image -->
             <div class="setup-trust-card">
@@ -8195,8 +8219,7 @@
 
         <!-- Middle: Flow Graphic -->
         <div class="meta-graphic-col">
-          <img src="images/new-image-of-it.webp" alt="Facebook Ad to WhatsApp Brochure Flow" width="1637" height="960"
-            draggable="false" loading="lazy" decoding="async">
+          <img src="New%20images/Mint%20Social%20Media%20Marketing%20UI%20Mockup%20(1).png" alt="Instagram and WhatsApp Ad to Lead Conversation Mockup" width="1076" height="753" draggable="false" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain;">
         </div>
 
         <!-- Right: List -->
@@ -8241,10 +8264,55 @@
 
       </div>
 
-      <!-- Part B: 2-Card Grid -->
-      <div class="meta-cards-grid" style="grid-template-columns: 1fr; max-width: 1000px; margin: 32px auto 0 auto;">
+            <!-- Part B: 2-Card Grid -->
+      <div class="meta-cards-grid">
 
-        <!-- Card 2: Click to WhatsApp Ads -->
+        <!-- Card 1: Payments (Left) -->
+        <div class="meta-feature-card">
+          <div class="card-left-col">
+            <span class="card-category-badge">Payments</span>
+            <h3 class="card-headline">Collect Payments in Chat</h3>
+            <p class="card-description">Collect payments directly within customer conversations across channels
+              seamlessly with UPI, Cards, and Net Banking modes.</p>
+            <ul class="card-checklist">
+              <li class="card-checklist-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Accept payments inside chat</span>
+              </li>
+              <li class="card-checklist-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Automated payment receipts &amp; links</span>
+              </li>
+              <li class="card-checklist-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Higher checkout conversion rate</span>
+              </li>
+            </ul>
+            <a href="features.html" class="card-footer-link">
+              Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+          <div class="card-right-col">
+            <img src="images/collect-payments-cropped.webp"
+              alt="Collect payments in customer conversations using Samyoj" width="1052" height="941" draggable="false"
+              loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <!-- Card 2: Meta Ads to Conversation (Right) -->
         <div class="meta-feature-card">
           <div class="card-left-col">
             <span class="card-category-badge">Meta Ads to Chat</span>
@@ -8264,7 +8332,7 @@
                   stroke-linejoin="round" aria-hidden="true">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span>Turn ad interactions into conversations</span>
+                <span>3X higher engagement vs landing pages</span>
               </li>
               <li class="card-checklist-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
@@ -8387,8 +8455,7 @@
 
         <!-- Right Column: Graphic -->
         <div class="broadcast-right-col">
-          <img src="images/broadcast-image.webp" alt="WhatsApp Broadcast with WhatsApp Business API" width="1382"
-            height="1138" draggable="false" loading="lazy" decoding="async">
+          <img src="New%20images/fourth%20image.png" alt="WhatsApp, Instagram and Facebook Broadcast Campaigns" width="1254" height="1254" draggable="false" loading="lazy" decoding="async" style="object-fit: contain;">
         </div>
 
       </div>
@@ -8482,61 +8549,6 @@
           <h3 class="crm-card-title">CRM Pipeline Sync</h3>
           <p class="crm-card-desc">Keep your sales stack unified by synchronizing conversation outcomes, customer attributes, and lead statuses in real time.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. PAYMENTS SECTION -->
-  <!-- 8. PAYMENTS SECTION -->
-  <section id="custom-payments-section" class="custom-payments-section" data-reveal style="background-color: #ffffff; padding: 70px 0; border-top: 1px solid #e2e8f0;">
-    <div class="wr">
-      <div style="max-width: 1000px; margin: 0 auto;">
-<!-- Card 1: Payments -->
-        <div class="meta-feature-card">
-          <div class="card-left-col">
-            <span class="card-category-badge">Payments</span>
-            <h3 class="card-headline">Collect Payments in Chat</h3>
-            <p class="card-description">Collect payments directly within customer conversations across channels
-              seamlessly with UPI, Cards, and Net Banking modes.</p>
-            <ul class="card-checklist">
-              <li class="card-checklist-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Accept payments inside chat</span>
-              </li>
-              <li class="card-checklist-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Automated payment receipts &amp; links</span>
-              </li>
-              <li class="card-checklist-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Higher checkout conversion rate</span>
-              </li>
-            </ul>
-            <a href="features.html" class="card-footer-link">
-              Explore
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
-          </div>
-          <div class="card-right-col">
-            <img src="images/collect-payments-cropped.webp"
-              alt="Collect payments in customer conversations using Samyoj" width="1052" height="941" draggable="false"
-              loading="lazy" decoding="async">
-          </div>
-        </div>
-
-        
       </div>
     </div>
   </section>
