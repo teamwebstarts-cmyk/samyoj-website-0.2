@@ -4454,6 +4454,8 @@
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
   <link rel="stylesheet" href="samyoj-transitions.css">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
+  <link rel="stylesheet" href="samyoj-feature-showcase.css?v=4">
+  <script src="samyoj-feature-showcase.js?v=1" defer></script>
 </head>
 
 <body class="noScript">
@@ -5390,7 +5392,274 @@
       if (watchBtn) watchBtn.addEventListener('click', playDemo);
     })();
   </script>
-  <section class="_0594aa41 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4" data-reveal>
+  <section class="sf-showcase" id="feat-grid" aria-labelledby="sf-showcase-title" data-reveal>
+    <div class="sf-wrap">
+      <header class="sf-intro">
+        <p class="sf-eyebrow"><span aria-hidden="true"></span> THE SAMYOJ WORKSPACE</p>
+        <h2 id="sf-showcase-title">A clearer view of <span>every channel.</span></h2>
+        <p>Choose a channel to explore its inbox, automation and tools. These are real Samyoj product screens captured with fictional demo data.</p>
+        <div class="sf-intro-note"><strong>See what is available today.</strong><span>Each channel keeps its own inbox and messaging rules.</span></div>
+      </header>
+
+      <div class="sf-filter-wrap">
+        <div class="sf-filter" role="group" aria-label="Filter features by channel">
+          <button class="sf-filter-tab is-active" type="button" data-feature-filter="all" aria-pressed="true">All features <span data-filter-count="all"></span></button>
+          <button class="sf-filter-tab" type="button" data-feature-filter="whatsapp" aria-pressed="false">WhatsApp <span data-filter-count="whatsapp"></span></button>
+          <button class="sf-filter-tab" type="button" data-feature-filter="facebook" aria-pressed="false">Facebook <span data-filter-count="facebook"></span></button>
+          <button class="sf-filter-tab" type="button" data-feature-filter="instagram" aria-pressed="false">Instagram <span data-filter-count="instagram"></span></button>
+          <button class="sf-filter-tab" type="button" data-feature-filter="email" aria-pressed="false">Email <span data-filter-count="email"></span></button>
+          <button class="sf-filter-tab" type="button" data-feature-filter="automation-ai" aria-pressed="false">Automation &amp; AI <span data-filter-count="automation-ai"></span></button>
+        </div>
+        <p class="sf-filter-status" data-filter-status aria-live="polite">Showing all feature areas.</p>
+      </div>
+
+      <div class="sf-feature-list sf-feature-list-verified" id="sf-feature-list">
+        <article class="sf-feature-row" data-channels="whatsapp">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">01 <span>WHATSAPP INBOX</span></p>
+            <h3>Keep WhatsApp conversations ready for a reply.</h3>
+            <p>Connect a business number and keep its inbox, contacts and campaigns in their own workspace. Assign chats, leave notes, search conversations and use ready replies. Its saved history stays if you disconnect the number.</p>
+            <ul><li>Share images, documents, audio and video in a chat</li><li>Send free-form replies within 24 hours; use an approved template after that</li><li>See when a conversation started from an ad click</li><li>Create templates, submit them to Meta for review, and use buttons, lists or a call-permission card</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp inbox · demo workspace</span></div><img src="images/features-showcase/wa-inbox.png" alt="WhatsApp inbox in Samyoj showing a fictional sample conversation and reply controls." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="whatsapp instagram automation-ai">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">02 <span>AUTOMATION &amp; FORMS</span></p>
+            <h3>Build a simple path from message to next step.</h3>
+            <p>Set WhatsApp welcome, keyword, away and business-hours replies. Use the visual flow builder for messages, buttons, delays and handoff, then test the flow or jump to a step from the inbox.</p>
+            <ul><li>Collect details with WhatsApp Forms inside a chat</li><li>Use a separate keyword rule for Instagram comments</li><li>After someone replies to an Instagram comment message, continue in the Instagram inbox</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Automation builder · demo workspace</span></div><img src="images/features-showcase/automations.png" alt="Samyoj visual automation builder with a populated sample conversation flow." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="whatsapp">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">03 <span>WHATSAPP CAMPAIGNS</span></p>
+            <h3>Plan WhatsApp campaigns with consent checks.</h3>
+            <p>Choose an approved template and an audience from contacts, tags, a typed list or opted-in contacts. Fill in the template, then schedule or repeat a send.</p>
+            <ul><li>Sending is blocked unless opt-in has a source and time, and the contact has not opted out</li><li>Retry failed sends and set a follow-up for people who do not reply</li><li>Review sent, delivered and read counts; pause, resume, reschedule or duplicate a campaign</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp campaign · demo workspace</span></div><img src="images/features-showcase/wa-campaign.png" alt="WhatsApp campaign setup in Samyoj with a sample audience and message template." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="whatsapp automation-ai">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">04 <span>AI CHAT ASSISTANT</span></p>
+            <h3>Teach the chat assistant your business, then try it.</h3>
+            <p>Set its personality and business details, add answers and FAQs, and test it before turning it on. The assistant can reply in the language a customer uses, including Hinglish.</p>
+            <ul><li>Turn AI off for one conversation and reply yourself</li><li>Choose AI or human-only handling for a contact</li><li>Chat and calling assistants are configured separately</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>AI-assisted WhatsApp conversation · demo workspace</span></div><img src="images/features-showcase/wa-inbox.png" alt="Sample WhatsApp conversation in Samyoj with the AI assistant controls visible." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="whatsapp automation-ai">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">05 <span>WHATSAPP CALLING AI</span></p>
+            <h3>Review the call, then pick up the conversation.</h3>
+            <p>The separate calling assistant can answer WhatsApp calls. Choose a voice and preview it, set whether AI or a person handles a contact, then review the call summary in the chat.</p>
+            <ul><li>Business-level off setting takes priority over contact settings</li><li>Call recents and summaries stay with the conversation</li><li>Live transfer from the AI call to a human is not available yet</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp call summary · demo workspace</span></div><img src="images/features-showcase/wa-call-summary.png" alt="Sample Samyoj WhatsApp conversation with an internal AI call summary." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="instagram">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">06 <span>INSTAGRAM DMS</span></p>
+            <h3>Keep Instagram DMs in their own inbox.</h3>
+            <p>Connect a professional Instagram account linked to a Facebook Page. Read and reply to direct conversations from the Instagram inbox, within Instagram’s 24-hour reply window.</p>
+            <ul><li>Instagram conversations remain separate from WhatsApp</li><li>When someone replies to a comment message, continue the conversation in DMs</li><li>Instagram requires a connected professional account and the linked Page</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Instagram inbox · demo workspace</span></div><img src="images/features-showcase/ig-inbox.png" alt="Samyoj Instagram Direct inbox with a fictional sample customer conversation." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="instagram automation-ai">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">07 <span>INSTAGRAM COMMENTS</span></p>
+            <h3>Handle comment replies with the right limits built in.</h3>
+            <p>Review comments, hide or unhide them, and send one private reply per comment within Instagram’s seven-day window. A keyword rule can start that reply from a comment.</p>
+            <ul><li>Comment keyword automation runs on Instagram comments only</li><li>After the person replies, continue in the Instagram inbox</li><li>Samyoj removes comment rows after two days; the original Instagram post and comment are unchanged</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Instagram comments · demo workspace</span></div><img src="images/features-showcase/ig-comments.png" alt="Samyoj Instagram comments panel with a sample private reply and moderation controls." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="instagram">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">08 <span>INSTAGRAM PUBLISHING</span></p>
+            <h3>Draft, schedule and publish Instagram posts.</h3>
+            <p>Prepare image, Reel or carousel posts in Samyoj. Save a draft, publish now, schedule it, cancel a scheduled post, and review scheduled or published posts.</p>
+            <ul><li>Keep planned content and published posts in view</li><li>Stories editing is not included in the current publishing tools</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Instagram publishing · demo workspace</span></div><img src="images/features-showcase/ig-posts.png" alt="Samyoj Instagram content planner showing a fictional scheduled post." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="facebook">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">09 <span>FACEBOOK MESSENGER</span></p>
+            <h3>Manage Page messages with Messenger’s reply rules.</h3>
+            <p>Connect a Facebook Page to use its separate Messenger inbox. Assign or close a conversation and send text replies within Messenger’s 24-hour window.</p>
+            <ul><li>Messenger stays separate from the WhatsApp inbox</li><li>Page posts and WhatsApp templates on Messenger are not included</li><li>Page access depends on the required Meta permissions and approval</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Facebook Messenger · demo workspace</span></div><img src="images/features-showcase/fb-inbox.png" alt="Samyoj Facebook Messenger inbox with a fictional conversation and reply-window indicator." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="whatsapp facebook">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">10 <span>CONTACTS &amp; LEAD CAPTURE</span></p>
+            <h3>Keep contact details and incoming leads useful.</h3>
+            <p>Search and filter contacts, organise them with tags, and keep WhatsApp campaign consent tied to its source and time. Facebook Instant Form submissions can be saved as leads.</p>
+            <ul><li>Build WhatsApp campaign audiences from contacts, tags or opted-in people</li><li>Keep each connected WhatsApp number’s contacts in its own workspace</li><li>Save Facebook form submissions in the Samyoj lead list</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Contacts and leads · demo workspace</span></div><img src="images/features-showcase/contacts.png" alt="Samyoj contacts screen with fictional sample customer records." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="facebook">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">11 <span>META ADS INSIGHTS</span></p>
+            <h3>Review ad results in Samyoj. Edit them in Ads Manager.</h3>
+            <p>Choose a connected ad account and review the last seven days: spend, impressions, clicks, leads and cost per lead, with the 7-day click / 1-day view attribution label.</p>
+            <ul><li>Open Meta Ads Manager for campaign changes</li><li>Samyoj does not create, edit, pause or change ad budgets</li><li>Meta account access depends on required permissions and app approval</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Meta ads insights · demo workspace</span></div><img src="images/features-showcase/fb-ads.png" alt="Samyoj Meta ads performance screen with fictional last-seven-day sample metrics." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+
+        <article class="sf-feature-row" data-channels="email">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">12 <span>EMAIL · GMAIL</span></p>
+            <h3>Send a one-to-one email from connected Gmail.</h3>
+            <p>Compose an email to a contact from a connected Gmail or Google Workspace mailbox, reuse a saved template, and review recent sends.</p>
+            <ul><li>This is send-only—not an email inbox or a bulk campaign tool</li><li>Samyoj does not read your Gmail inbox</li><li>“Accepted by Gmail” does not confirm delivery, opens or replies</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual"><div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Sent email · demo workspace</span></div><img src="images/features-showcase/email-sent.png" alt="Samyoj sent-email view with a fictional sample email marked accepted by Gmail, not delivered." loading="lazy" decoding="async" width="2560" height="1600"></div><figcaption>Samyoj product screen · fictional demo data</figcaption></figure>
+        </article>
+      </div>
+
+      <div class="sf-feature-list sf-feature-list-legacy" aria-hidden="true">
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">01 <span>MESSAGING</span></p>
+            <h3>Keep every channel in context.</h3>
+            <p>WhatsApp, Instagram DMs and Messenger each have a dedicated inbox in Samyoj. Assign conversations, add notes, search chats and reply with the right channel context.</p>
+            <ul><li>Separate inboxes for connected channels</li><li>Assign chats, add notes and find conversations</li><li>Reply within each channel’s messaging rules</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp inbox · sample workspace</span></div><img src="images/features-showcase/wa-inbox.png" alt="Samyoj WhatsApp inbox with a sample customer conversation." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Samyoj</b><small>Sample workspace</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-search">⌕ &nbsp; Search conversations</div><div class="sf-phone-card"><span class="sf-phone-tag">WHATSAPP</span><b>Priya S.</b><p>Thanks! I’d like to know more.</p><span class="sf-phone-status">Assigned · Demo data</span></div><div class="sf-phone-bottom"><span>Inbox</span><span>Contacts</span><span>Settings</span></div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">02 <span>AUTOMATION</span></p>
+            <h3>Let simple rules take care of repeat steps.</h3>
+            <p>Set up WhatsApp welcome, away and keyword replies, or build a visual flow with messages, buttons, delays and a team handoff. Instagram comment keywords can start a separate reply flow.</p>
+            <ul><li>Build and test WhatsApp conversation flows</li><li>Set business hours and away messages</li><li>Use keyword triggers for WhatsApp or Instagram comments</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Conversation automation · sample workspace</span></div><img src="images/features-showcase/automations.png" alt="Samyoj visual conversation automation builder with sample flow data." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Automation</b><small>Sample workspace</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-flow"><span>New message</span><i></i><span>Send a reply</span><i></i><span>Next step</span></div><div class="sf-phone-hint">Test your flow before turning it on.</div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">03 <span>AI ASSISTANTS</span></p>
+            <h3>Set up AI, test it, and stay in control.</h3>
+            <p>Configure chat and calling assistants separately with your business details and FAQs. Test answers before going live, switch AI off for an individual chat, and review a call summary in the conversation.</p>
+            <ul><li>Choose what your chat assistant knows</li><li>Test responses before enabling the assistant</li><li>AI can answer WhatsApp calls; summaries stay in chat</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp call summary · sample workspace</span></div><img src="images/features-showcase/wa-call-summary.png" alt="Sample WhatsApp conversation showing an AI call summary marked as internal." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Call summary</b><small>Sample conversation</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-summary"><span class="sf-phone-summary-icon">✦</span><b>Summary</b><p>Customer asked about product availability and next steps.</p><small>Internal note · Demo data</small></div><div class="sf-phone-hint">Review the summary in the chat.</div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">04 <span>WHATSAPP CAMPAIGNS</span></p>
+            <h3>Send campaigns with consent in the flow.</h3>
+            <p>Choose an approved WhatsApp template and an audience of opted-in contacts. Schedule a send, follow delivery status, and retry failed messages—all with opt-out checks in place.</p>
+            <ul><li>Use approved templates and saved contact groups</li><li>Sending is blocked for contacts without recorded opt-in</li><li>Review sent, delivered and read counts</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WhatsApp campaigns · sample workspace</span></div><img src="images/features-showcase/wa-campaign.png" alt="Samyoj WhatsApp campaign setup with sample audience and template information." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Campaign</b><small>WhatsApp · sample</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-campaign"><span class="sf-phone-tag">APPROVED TEMPLATE</span><b>Seasonal update</b><p>Audience checked for consent before sending.</p><span class="sf-phone-progress"><i></i></span><small>Delivery status</small></div><div class="sf-phone-hint">Only opted-in contacts can receive a campaign.</div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">05 <span>CONTACTS &amp; LEADS</span></p>
+            <h3>Keep customer details easy to find.</h3>
+            <p>Search and filter contacts, use tags, and keep consent details with the record. Facebook Instant Form submissions can be saved as leads in your workspace.</p>
+            <ul><li>Search contacts and organise them with tags</li><li>Keep opt-in source and time with contact details</li><li>View Facebook form submissions as leads</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Contacts · sample workspace</span></div><img src="images/features-showcase/contacts.png" alt="Samyoj contacts workspace with fictional sample contact records." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Contacts</b><small>Sample workspace</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-search">⌕ &nbsp; Find a contact</div><div class="sf-phone-contact"><span class="sf-phone-avatar">PS</span><span><b>Priya S.</b><small>WhatsApp · Demo data</small></span><span class="sf-phone-chevron">›</span></div><div class="sf-phone-contact"><span class="sf-phone-avatar sf-avatar-lilac">MK</span><span><b>Meera K.</b><small>Facebook lead · Demo</small></span><span class="sf-phone-chevron">›</span></div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">06 <span>INSTAGRAM</span></p>
+            <h3>Plan Instagram content from the same workspace.</h3>
+            <p>Prepare image, Reel and carousel posts as drafts, schedule or publish them, and cancel scheduled content when plans change. Instagram comments and DMs remain in their own channel workflows.</p>
+            <ul><li>Draft, schedule, publish or cancel posts</li><li>Manage image, Reel and carousel formats</li><li>Handle eligible comment replies in Instagram’s allowed window</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Instagram publishing · sample workspace</span></div><img src="images/features-showcase/ig-posts.png" alt="Samyoj Instagram publishing workspace with a sample scheduled post." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Instagram posts</b><small>Sample workspace</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-post"><span class="sf-phone-post-image">S</span><span class="sf-phone-tag">DRAFT · CAROUSEL</span><b>New season, new ideas</b><small>Preview post · Demo data</small></div><div class="sf-phone-hint">Edit or schedule when your content is ready.</div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+
+        <article class="sf-feature-row">
+          <div class="sf-feature-copy">
+            <p class="sf-kicker">07 <span>META ADS INSIGHTS</span></p>
+            <h3>See the numbers. Make changes in Ads Manager.</h3>
+            <p>Connect an ad account to review the last seven days of spend, impressions, clicks, leads and cost per lead, with the attribution window shown alongside the results.</p>
+            <ul><li>Choose a connected ad account</li><li>Review recent performance and attribution</li><li>Open Meta Ads Manager for campaign changes</li></ul>
+            <a class="sf-link" href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="sf-visual">
+            <div class="sf-desktop-window"><div class="sf-windowbar"><span class="sf-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Meta ads insights · sample workspace</span></div><img src="images/features-showcase/fb-ads.png" alt="Samyoj Meta ads dashboard showing sample read-only campaign metrics." loading="lazy" decoding="async" width="2560" height="1600"></div>
+            <div class="sf-phone-preview" aria-label="Illustrative mobile preview using sample data, not a screenshot of the Samyoj mobile app"><span class="sf-phone-label">Illustrative mobile preview</span><div class="sf-phone-screen"><div class="sf-phone-apphead"><span class="sf-phone-mark">S</span><span><b>Ad insights</b><small>Last 7 days · sample</small></span><span class="sf-phone-menu">•••</span></div><div class="sf-phone-metrics"><span><small>Spend</small><b>Sample</b></span><span><small>Leads</small><b>Sample</b></span></div><div class="sf-phone-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sf-phone-hint">View and edit campaigns in Ads Manager.</div></div></div>
+            <figcaption>Desktop product capture uses demo data. The phone card is an illustrative preview—not a mobile-app screenshot.</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <aside class="sf-disclaimer"><span class="sf-disclaimer-icon" aria-hidden="true">i</span><p><strong>Channel limits matter:</strong> Facebook, Instagram and ad-account features need the required Meta permissions and app approval. WhatsApp campaigns use approved templates and send only to contacts with recorded opt-in. Email is one-to-one Gmail sending; Gmail acceptance does not confirm delivery, opens or replies.</p></aside>
+      <div class="sf-bottom-cta"><div><p class="sf-kicker">SEE HOW IT FITS YOUR WORK</p><h3>Make the next conversation easier.</h3></div><a href="https://app.samyoj.com/" target="_blank" rel="noopener noreferrer">Explore Samyoj <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="_0594aa41 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4 legacy-feature-section" data-reveal>
     <div class="wr">
 
       <!-- Layer 1: Hero band -->
