@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - samyoj-new-features
+      - samyoj-new-features-CRM
 
 permissions:
   contents: read

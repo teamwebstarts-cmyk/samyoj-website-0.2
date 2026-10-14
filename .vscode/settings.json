@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/aisensy.com/industries.html"
+  "livePreview.defaultPreviewPath": "/index.html",
+  "liveServer.settings.root": "/samyoj-homepage"
 }

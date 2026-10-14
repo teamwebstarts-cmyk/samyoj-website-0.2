@@ -1,0 +1,16 @@
+{
+  "name": "samyoj-website",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Samyoj marketing website (static HTML, samyoj-new-features-CRM)",
+  "scripts": {
+    "dev": "serve samyoj-homepage -p 3000 --no-port-switching",
+    "start": "serve samyoj-homepage -p 3000 --no-port-switching"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
