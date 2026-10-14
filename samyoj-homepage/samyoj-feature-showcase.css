@@ -204,6 +204,13 @@
   box-shadow: 0 8px 24px rgba(75, 46, 235, 0.44);
 }
 
+.sf-link svg,
+.sf-bottom-cta a svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .sf-link span,
 .sf-bottom-cta a span {
   transition: transform .2s ease;
@@ -436,7 +443,7 @@
   display: flex;
   align-items: flex-start;
   gap: 13px;
-  max-width: 920px;
+  max-width: none;
   margin: 56px auto 0;
   padding: 18px 21px;
   border: 1px solid var(--sy-primary-border, rgba(75, 46, 235, .22));
