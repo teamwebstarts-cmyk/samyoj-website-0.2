@@ -202,18 +202,19 @@
 }
 
 .sy-footer-links svg {
-  width: 12px;
-  height: 12px;
-  min-width: 12px;
-  max-width: 12px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
   padding: 6px;
-  box-sizing: content-box;
+  box-sizing: border-box !important;
   border-radius: 50%;
   background: var(--sy-icon-bg);
   color: var(--sy-green);
   flex: 0 0 auto;
   display: block;
   align-self: center;
+  overflow: visible;
 }
 
 .sy-footer-contact {
@@ -435,12 +436,12 @@
   }
 
   .sy-footer-links svg {
-    width: 12px;
-    height: 12px;
-    min-width: 12px;
-    max-width: 12px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    max-width: 24px;
     padding: 6px;
-    box-sizing: content-box;
+    box-sizing: border-box !important;
     border-radius: 50%;
     background: var(--sy-icon-bg);
     color: var(--sy-green);
