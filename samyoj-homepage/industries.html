@@ -64,17 +64,17 @@
 
 /* Hover Effect */
 .um-nav-links li a:hover {
-    color: #10b981 !important;
+    color: #4B2EEB !important;
 }
 
 /* ACTIVE PILL HIGHLIGHT STATE */
 .um-nav-links li a.active,
 .um-nav-links li a[aria-current="page"] {
-    background-color: #f0fdf4 !important;
-    color: #059669 !important;
-    border: 1px solid #bbf7d0 !important;
+    background-color: #EEF2FF !important;
+    color: #4B2EEB !important;
+    border: 1px solid #C7D2FE !important;
     font-weight: 600 !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15) !important;
+    box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
     padding: 8px 18px !important;
 }
 
@@ -83,14 +83,14 @@
 .um-nav-links li a[aria-current="page"]::before {
     content: "✦" !important;
     font-size: 13px !important;
-    color: #059669 !important;
+    color: #4B2EEB !important;
 }
 </style>
   <style>
     body {
       margin: 0;
       padding: 0;
-      --wr-max: 1530px;
+      --wr-max: 1420px;
       position: relative;
       word-wrap: anywhere;
       word-break: break-word;
@@ -862,7 +862,7 @@
 
     .btn--success {
       color: #fff !important;
-      background: #2f9e44 !important;
+      background: #4B2EEB !important;
     }
 
     .btn--success:after {
@@ -878,7 +878,7 @@
       bottom: 0;
       content: '';
       position: absolute;
-      box-shadow: 0 0 0 0 #2f9e443b;
+      box-shadow: 0 0 0 0 #4B2EEB3b;
       border-radius: inherit;
       animation-name: keyframes-buttonSuccess;
       pointer-events: none;
@@ -1572,12 +1572,12 @@
     }
 
     .ind-hero-title .ind-accent {
-      color: #03CF65;
+      color: #4B2EEB;
     }
 
     .ind-hero-sub {
       font: var(--font-subheading);
-      font-size: 16.5px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.6;
       color: #6b7280;
       margin: 0 0 24px;
@@ -1591,35 +1591,55 @@
       margin-bottom: 22px;
     }
 
+    .ind-hero-ctas svg,
+    .ind-cta-actions svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .ind-hero-ctas .btn.primary,
+    .ind-cta-actions .btn.primary {
+      max-width: none !important;
+    }
+
     .ind-hero-ctas .btn.primary {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      background: #108548;
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
       color: #fff;
-      font-weight: 600;
-      font-size: 15.5px;
+      font-weight: 700;
+      font-size: 15px;
       border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
+      border-radius: 10px;
+      padding: 13px 26px;
+      min-height: 48px;
+      box-sizing: border-box;
+      line-height: 1.25;
       text-decoration: none;
     }
 
     .ind-hero-ctas .btn.primary:hover {
-      background: #0d6e3b;
+      background: #3B22C7;
     }
 
     .ind-hero-secondary {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: #fff;
       color: #111827;
-      font-weight: 600;
-      font-size: 15.5px;
-      border: 1.5px solid #d1d5db;
-      border-radius: 8px;
-      padding: 11px 18px;
+      font-weight: 700;
+      font-size: 15px;
+      border: 1.5px solid #111827;
+      border-radius: 10px;
+      padding: 13px 26px;
+      min-height: 48px;
+      box-sizing: border-box;
+      line-height: 1.25;
       text-decoration: none;
     }
 
@@ -1657,15 +1677,15 @@
     }
 
     .ind-chip:hover {
-      border-color: #86efac;
-      background: #f8fdf9;
+      border-color: #C7D2FE;
+      background: #F8FAFF;
       transform: translateY(-1px);
     }
 
     .ind-chip svg {
       width: 15px;
       height: 15px;
-      color: #108548;
+      color: #3B22C7;
       flex-shrink: 0;
     }
 
@@ -1673,8 +1693,8 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      background: linear-gradient(180deg, #f4fbf7 0%, #eaf8ef 100%);
-      border: 1px solid #d1fae5;
+      background: linear-gradient(180deg, #F8FAFF 0%, #EEF2FF 100%);
+      border: 1px solid #C7D2FE;
       border-radius: 12px;
       padding: 12px 14px;
       max-width: 560px;
@@ -1683,7 +1703,7 @@
     .ind-hero-note svg {
       width: 18px;
       height: 18px;
-      color: #108548;
+      color: #3B22C7;
       flex-shrink: 0;
       margin-top: 2px;
     }
@@ -1696,7 +1716,7 @@
     }
 
     .ind-hero-note strong {
-      color: #108548;
+      color: #3B22C7;
       font-weight: 700;
     }
 
@@ -1746,6 +1766,7 @@
 
       .ind-hero-ctas>* {
         width: 100%;
+        max-width: none !important;
         justify-content: center;
         box-sizing: border-box;
       }
@@ -1758,6 +1779,7 @@
 
       .ind-cta-actions>* {
         width: 100%;
+        max-width: none !important;
         justify-content: center;
         box-sizing: border-box;
       }
@@ -1783,7 +1805,7 @@
     /* ── Industries directory grid (ref: image copy 6) ── */
     #industries-grid.ind-dir {
       background: #fff;
-      padding: 56px 0 48px;
+      padding: 64px 0;
       position: relative;
       overflow: visible;
     }
@@ -1800,7 +1822,7 @@
 
     .ind-dir-title {
       font: var(--font-hero);
-      font-size: clamp(28px, 3.2vw, 42px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 700;
       line-height: 1.2;
       color: #0f172a;
@@ -1808,7 +1830,7 @@
     }
 
     .ind-dir-title .ind-accent {
-      color: #03CF65;
+      color: #4B2EEB;
       position: relative;
       display: inline-block;
     }
@@ -1820,7 +1842,7 @@
       right: 0;
       bottom: 2px;
       height: 3px;
-      background: #03CF65;
+      background: #4B2EEB;
       border-radius: 2px;
     }
 
@@ -1848,8 +1870,8 @@
     }
 
     .ind-dir-card:hover {
-      border-color: #86efac;
-      box-shadow: 0 12px 32px rgba(16, 133, 72, 0.12);
+      border-color: #C7D2FE;
+      box-shadow: 0 12px 32px rgba(75, 46, 235, 0.12);
       transform: translateY(-3px);
     }
 
@@ -1874,7 +1896,7 @@
 
     .ind-dir-icon.green {
       background: #e8f8ef;
-      color: #108548;
+      color: #3B22C7;
     }
 
     .ind-dir-icon.purple {
@@ -1893,8 +1915,8 @@
     }
 
     .ind-dir-icon.teal {
-      background: #e6f7f5;
-      color: #0d9488;
+      background: #EEF2FF;
+      color: #4B2EEB;
     }
 
     .ind-dir-icon.rose {
@@ -1936,9 +1958,9 @@
     .ind-dir-meta span {
       font-size: 11px;
       font-weight: 600;
-      color: #108548;
-      background: #eefbf3;
-      border: 1px solid #d1fae5;
+      color: #3B22C7;
+      background: #F8FAFF;
+      border: 1px solid #C7D2FE;
       border-radius: 999px;
       padding: 3px 8px;
       line-height: 1.3;
@@ -1951,7 +1973,7 @@
       border-radius: 999px;
       display: grid;
       place-items: center;
-      color: #03CF65;
+      color: #4B2EEB;
       margin-top: 4px;
       transition: background .25s ease, transform .25s ease;
     }
@@ -1974,8 +1996,8 @@
     /* CTA band */
     .ind-cta-band {
       margin-top: 48px;
-      background: linear-gradient(180deg, #eefbf3 0%, #e4f7eb 100%);
-      border: 1px solid #d1fae5;
+      background: linear-gradient(180deg, #F8FAFF 0%, #EEF2FF 100%);
+      border: 1px solid #C7D2FE;
       border-radius: 20px;
       padding: 22px 28px;
       display: flex;
@@ -2060,7 +2082,7 @@
     }
 
     .ind-cta-copy h2 .ind-accent {
-      color: #03CF65;
+      color: #4B2EEB;
     }
 
     .ind-cta-copy .ind-cta-sub {
@@ -2080,7 +2102,7 @@
     }
 
     .ind-cta-powered strong {
-      color: #108548;
+      color: #3B22C7;
       font-weight: 700;
     }
 
@@ -2102,7 +2124,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: #108548;
+      background: #3B22C7;
       color: #fff;
       font-weight: 700;
       font-size: 15px;
@@ -2116,7 +2138,7 @@
     }
 
     .ind-cta-actions .btn.primary:hover {
-      background: #0d6e3b;
+      background: #3B22C7;
     }
 
     .ind-cta-secondary {
@@ -2194,7 +2216,7 @@
     /* ── Why Choose Samyoj (ref: image copy 7) — pixel match ── */
     #ind-advantage.ind-adv {
       background: #fff;
-      padding: 72px 0 60px;
+      padding: 64px 0;
       position: relative;
       overflow: hidden;
     }
@@ -2241,7 +2263,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #108548;
+      background: #3B22C7;
       color: #fff;
       font-size: 10.5px;
       font-weight: 700;
@@ -2261,7 +2283,7 @@
 
     .ind-adv-title {
       font: var(--font-hero);
-      font-size: clamp(30px, 3.4vw, 44px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 700;
       line-height: 1.12;
       color: #0f172a;
@@ -2270,11 +2292,11 @@
     }
 
     .ind-adv-title .ind-accent {
-      color: #03CF65;
+      color: #4B2EEB;
     }
 
     .ind-adv-sub {
-      font-size: 15px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.65;
       color: #64748b;
       margin: 0 0 26px;
@@ -2304,13 +2326,13 @@
       bottom: 10px;
       width: 26px;
       height: 2.5px;
-      background: #03CF65;
+      background: #4B2EEB;
       border-radius: 2px;
     }
 
     .ind-adv-card:hover {
-      border-color: #86efac;
-      box-shadow: 0 8px 20px rgba(16, 133, 72, 0.08);
+      border-color: #C7D2FE;
+      box-shadow: 0 8px 20px rgba(75, 46, 235, 0.08);
       transform: translateY(-1px);
     }
 
@@ -2319,7 +2341,7 @@
       height: 36px;
       border-radius: 10px;
       background: #e8f8ef;
-      color: #108548;
+      color: #3B22C7;
       display: grid;
       place-items: center;
       margin-bottom: 10px;
@@ -2430,7 +2452,7 @@
       height: 28px;
       border-radius: 8px;
       background: #e8f8ef;
-      color: #108548;
+      color: #3B22C7;
       display: grid;
       place-items: center;
       flex-shrink: 0;
@@ -2464,8 +2486,8 @@
 
     .ind-adv-banner {
       margin-top: 40px;
-      background: #f4fbf7;
-      border: 1px solid #dcfce7;
+      background: #F8FAFF;
+      border: 1px solid #C7D2FE;
       border-radius: 14px;
       padding: 16px 22px;
       display: flex;
@@ -2485,12 +2507,12 @@
       width: 42px;
       height: 42px;
       border-radius: 999px;
-      background: #108548;
+      background: #3B22C7;
       color: #fff;
       display: grid;
       place-items: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(16, 133, 72, 0.25);
+      box-shadow: 0 4px 10px rgba(75, 46, 235, 0.25);
     }
 
     .ind-adv-banner-badge svg {
@@ -2509,7 +2531,7 @@
     }
 
     .ind-adv-banner-copy strong .ind-accent {
-      color: #03CF65;
+      color: #4B2EEB;
     }
 
     .ind-adv-banner-copy p {
@@ -2523,7 +2545,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      color: #108548;
+      color: #3B22C7;
       flex-shrink: 0;
       position: relative;
       padding: 8px 4px 0;
@@ -2536,7 +2558,7 @@
       left: 10px;
       right: 10px;
       height: 18px;
-      border: 1.5px dashed #86efac;
+      border: 1.5px dashed #C7D2FE;
       border-bottom: none;
       border-radius: 40px 40px 0 0;
       pointer-events: none;
@@ -2629,12 +2651,12 @@
     }
 
     .custom-section-title .highlight-green {
-      color: #00b853;
+      color: #4B2EEB;
     }
 
     .custom-faq-section {
       background-color: #ffffff;
-      padding: 80px 0;
+      padding: 64px 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -2656,8 +2678,8 @@
     }
 
     .custom-faq-item[open] {
-      border-color: #c9f2d6;
-      box-shadow: 0 4px 16px rgba(0, 184, 83, 0.08);
+      border-color: #C7D2FE;
+      box-shadow: 0 4px 16px rgba(75, 46, 235, 0.08);
     }
 
     .custom-faq-q {
@@ -2679,7 +2701,7 @@
     }
 
     .custom-faq-icon {
-      color: #00b853;
+      color: #4B2EEB;
       font-size: 22px;
       font-weight: 700;
       line-height: 1;
@@ -2705,14 +2727,14 @@
 
     @media (prefers-reduced-motion: no-preference) {
       .custom-faq-item:hover {
-        border-color: #c9f2d6;
-        box-shadow: 0 6px 20px rgba(0, 184, 83, 0.07);
+        border-color: #C7D2FE;
+        box-shadow: 0 6px 20px rgba(75, 46, 235, 0.07);
       }
     }
 
     @media (max-width: 768px) {
       .custom-faq-section {
-        padding: 56px 0;
+        padding: 64px 0;
       }
 
       .custom-faq-q {
@@ -3353,7 +3375,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                background: #146b3a;
+                background: #3B22C7;
                 color: #fff;
                 font-size: 11px;
                 font-weight: 800;
@@ -3362,7 +3384,7 @@
                 padding: 6px 12px;
                 border-radius: 999px;
                 white-space: nowrap;
-                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
               }
 
               #aisensy-magic-bar .mb-spark {
@@ -3477,9 +3499,9 @@
                   padding: 4px 8px;
                   gap: 4px;
                   flex: 0 0 auto;
-                  background: #146b3a;
+                  background: #3B22C7;
                   color: #fff;
-                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
                   border-radius: 999px;
                 }
 
@@ -3753,18 +3775,10 @@
 
           <div class="ind-hero-ctas">
             <a href="#industries-grid" class="btn primary"><span>Explore your industry</span>
-              <svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
-                <path
-                  d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
-                  fill="currentColor"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
             <a href="features.html" class="ind-hero-secondary"><span>See all features</span>
-              <svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
-                  fill="currentColor"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
 
@@ -4082,18 +4096,10 @@
           </div>
           <div class="ind-cta-actions">
             <a href="https://app.samyoj.com" class="btn primary"><span>Start for FREE</span>
-              <svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
-                <path
-                  d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
-                  fill="currentColor"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
             <a href="https://calendly.com/teamsamyoj/30min" target="_blank" rel="noopener noreferrer" class="ind-cta-secondary"><span>Book a Demo</span>
-              <svg width="1em" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg" class="um-arrow">
-                <path
-                  d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
-                  fill="currentColor"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
