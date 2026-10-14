@@ -4650,13 +4650,6 @@
           </a>
         </div>
 
-        <!-- Microcopy -->
-        <div class="custom-hero-microcopy">
-          <span>No credit card required</span>
-          <span class="microcopy-dot">•</span>
-          <span>Set up in minutes</span>
-        </div>
-
         <!-- Trust checkmarks -->
         <div class="custom-hero-trust">
           <div class="trust-item">
@@ -5692,53 +5685,62 @@
     .meta-main-box {
       background: linear-gradient(135deg, rgba(75, 46, 235, 0.04) 0%, rgba(122, 59, 255, 0.07) 100%);
       border-radius: 32px;
-      padding: 24px 48px;
+      padding: 32px 40px;
       box-sizing: border-box;
-      display: flex;
-      gap: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 1.35fr) minmax(0, 0.95fr);
+      gap: 28px;
       align-items: center;
       margin-bottom: 40px;
       position: relative;
+      overflow: hidden;
+      min-height: 340px;
     }
 
     .meta-info-col {
-      flex: 1 1 33%;
       min-width: 0;
+      max-width: 560px;
       text-align: left;
     }
 
     .meta-graphic-col {
-      flex: 1 1 45%;
+      position: relative;
+      width: 100%;
+      height: 320px;
       min-width: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      pointer-events: none;
     }
 
     .meta-graphic-col img {
+      display: block;
+      width: 100%;
+      height: 100%;
       max-width: 100%;
-      max-height: 330px;
-      width: auto;
-      height: auto;
+      max-height: none;
       object-fit: contain;
-      margin-top: -30px;
-      margin-bottom: -30px;
-      filter: drop-shadow(0 12px 28px rgba(15, 23, 42, 0.06));
+      object-position: center;
+      margin: 0;
+      filter: none;
     }
 
     .meta-features-col {
-      flex: 1 1 22%;
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
       text-align: left;
+      justify-self: stretch;
+      max-width: 350px;
+      width: 100%;
     }
 
     .meta-feature-item {
       display: flex;
-      align-items: center;
-      gap: 16px;
+      align-items: flex-start;
+      gap: 12px;
     }
 
     .meta-feature-icon {
@@ -5759,10 +5761,45 @@
       height: 14px;
     }
 
-    .meta-feature-text {
-      font-size: 14px;
-      font-weight: 700;
+    .meta-feature-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 1px;
+    }
+
+    .meta-feature-title {
+      font-size: 13px;
+      font-weight: 750;
       color: #0f172a;
+    }
+
+    .meta-feature-desc {
+      max-width: 260px;
+      margin: 0;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .meta-explore-button {
+      min-height: 38px;
+      padding: 9px 15px;
+      gap: 7px;
+      border-radius: 9px;
+      font-size: 13px;
+      align-self: flex-start;
+    }
+
+    .meta-explore-button svg {
+      width: 15px;
+      height: 15px;
+      flex: 0 0 auto;
+    }
+
+    .meta-explore-button svg:last-child {
+      width: 14px;
+      height: 14px;
     }
 
     /* 2-Card Grid for Meta Features */
@@ -5876,6 +5913,24 @@
       align-self: flex-start;
     }
 
+    @media (max-width: 1180px) {
+      .meta-main-box {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        min-height: 0;
+      }
+
+      .meta-info-col,
+      .meta-features-col {
+        width: 100%;
+        max-width: 620px;
+      }
+
+      .meta-graphic-col {
+        height: clamp(230px, 40vw, 360px);
+      }
+    }
+
     @media (max-width: 1024px) {
       .custom-broadcast-container {
         flex-direction: column;
@@ -5893,32 +5948,38 @@
       }
 
       .meta-main-box {
-        flex-direction: column;
+        grid-template-columns: minmax(0, 1fr);
         padding: 30px;
-        gap: 32px;
-        text-align: center;
+        gap: 26px;
+        text-align: left;
+        min-height: 0;
       }
 
       .meta-info-col,
-      .meta-graphic-col,
       .meta-features-col {
         width: 100%;
+        max-width: 620px;
+        justify-self: start;
+      }
+
+      .meta-graphic-col {
+        width: 100%;
+        height: clamp(230px, 40vw, 360px);
       }
 
       .meta-graphic-col img {
-        margin-top: 0;
-        margin-bottom: 0;
-        max-height: 250px;
+        max-height: none;
       }
 
       .meta-info-col {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
 
       .meta-features-col {
-        align-items: center;
+        align-items: flex-start;
+        gap: 14px;
       }
 
       /* Tablet adjustments: retain 2 columns */
@@ -5938,6 +5999,28 @@
 
       .card-description {
         font-size: 13.5px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .meta-main-box {
+        padding: 24px 20px;
+        gap: 22px;
+        border-radius: 24px;
+      }
+
+      .meta-graphic-col {
+        width: 100%;
+        height: 230px;
+      }
+
+      .meta-feature-item {
+        gap: 10px;
+      }
+
+      .meta-feature-icon {
+        width: 29px;
+        height: 29px;
       }
     }
 
@@ -7437,36 +7520,6 @@
       margin: 0;
     }
 
-    /* Meta Ads Flow Strip */
-    .meta-flow-container {
-      margin: 28px 0 32px 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-    }
-    .meta-flow-step {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
-      border-radius: 999px;
-      font-size: 13.5px;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .meta-flow-step.highlight {
-      background: #EEF2FF;
-      border-color: #C7D2FE;
-      color: #00873d;
-    }
-    .meta-flow-arrow {
-      color: #94a3b8;
-      font-weight: 800;
-      font-size: 16px;
-    }
-
     /* 7. CRM Section */
     .custom-crm-section {
       background-color: #f8faff;
@@ -8180,29 +8233,16 @@
           <h2 class="broadcast-title">Turn Ad Interactions Into
             <span class="highlight-green">Conversations</span>
           </h2>
-          <div class="meta-flow-container">
-            <span class="meta-flow-step highlight">Meta Ads</span>
-            <span class="meta-flow-arrow">&rarr;</span>
-            <span class="meta-flow-step">Lead</span>
-            <span class="meta-flow-arrow">&rarr;</span>
-            <span class="meta-flow-step highlight">Conversation</span>
-            <span class="meta-flow-arrow">&rarr;</span>
-            <span class="meta-flow-step">Qualification</span>
-            <span class="meta-flow-arrow">&rarr;</span>
-            <span class="meta-flow-step highlight">CRM</span>
-            <span class="meta-flow-arrow">&rarr;</span>
-            <span class="meta-flow-step">Follow-up</span>
-          </div>
           <p class="broadcast-subtitle">
-            Convert story replies, post comments, and Instagram DM ads into instant AI conversations. Qualify leads
-            24/7, share catalogues, and close deals automatically without manual waiting time.
+            Turn story replies, post comments, and Instagram ad clicks into useful conversations. Let AI help qualify
+            intent and keep each lead ready for a timely team follow-up.
           </p>
-          <a href="features.html" class="custom-btn-primary">
+          <a href="features.html" class="custom-btn-primary meta-explore-button">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
             </svg>
-            Explore Instagram &amp; Ads Automation
+            Explore Instagram Ads
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
@@ -8211,8 +8251,8 @@
         </div>
 
         <!-- Middle: Flow Graphic -->
-        <div class="meta-graphic-col">
-          <img src="New%20images/Mint%20Social%20Media%20Marketing%20UI%20Mockup%20(1).png" alt="Instagram and WhatsApp Ad to Lead Conversation Mockup" width="1076" height="753" draggable="false" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain;">
+        <div class="meta-graphic-col" aria-hidden="true">
+          <img src="New%20images/Mint%20Social%20Media%20Marketing%20UI%20Mockup-transparent.png" alt="" width="1076" height="753" draggable="false" loading="lazy" decoding="async">
         </div>
 
         <!-- Right: List -->
@@ -8227,7 +8267,10 @@
                 <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
               </svg>
             </div>
-            <span class="meta-feature-text">Click-to-Instagram & Story Ads</span>
+            <div class="meta-feature-copy">
+              <span class="meta-feature-title">Capture high-intent replies</span>
+              <p class="meta-feature-desc">Bring story replies, comments, and Instagram ad responses into one lead flow.</p>
+            </div>
           </div>
 
           <div class="meta-feature-item">
@@ -8238,7 +8281,10 @@
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
             </div>
-            <span class="meta-feature-text">Instant AI Response</span>
+            <div class="meta-feature-copy">
+              <span class="meta-feature-title">Respond while interest is fresh</span>
+              <p class="meta-feature-desc">Use AI-assisted replies to keep new conversations moving.</p>
+            </div>
           </div>
 
           <div class="meta-feature-item">
@@ -8250,7 +8296,10 @@
                 <polyline points="16 7 22 7 22 13" />
               </svg>
             </div>
-            <span class="meta-feature-text">Auto-Reply to Comments & DMs</span>
+            <div class="meta-feature-copy">
+              <span class="meta-feature-title">Keep the next step clear</span>
+              <p class="meta-feature-desc">Qualify leads in your CRM and make timely follow-ups easier.</p>
+            </div>
           </div>
 
         </div>
