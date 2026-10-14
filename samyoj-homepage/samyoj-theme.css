@@ -622,18 +622,9 @@ a.text-link:hover {
   color: var(--sy-support-success) !important;
 }
 
-.card-footer-link {
-  color: var(--sy-brand-indigo) !important;
-}
-
-.card-footer-link:hover {
-  color: var(--sy-primary-hover) !important;
-}
-
 /* -------------------------------------------------------------------------
    MULTI-COLOR BRAND DISTRIBUTION (Indigo, Purple, Pink, Orange)
    ------------------------------------------------------------------------- */
-
 /* Section 2: 4 Feature Cards (Each gets a dedicated brand color) */
 .custom-features-column .feature-card-item:nth-of-type(1) .feature-card-icon-wrapper {
   background-color: rgba(75, 46, 235, 0.1) !important;
