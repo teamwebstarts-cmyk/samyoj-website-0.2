@@ -37,13 +37,12 @@
   <link rel="stylesheet" href="../mobile-buttons.css">
   <link rel="stylesheet" href="../samyoj-footer.css?v=7">
   <link rel="stylesheet" href="../samyoj-mobile-drawer.css?v=1">
-  <link rel="stylesheet" href="../samyoj-mobile-drawer.css">
 
   <style id="shared-site-chrome">
     body {
       margin: 0;
       padding: 0;
-      --wr-max: 1530px;
+      --wr-max: 1420px;
       position: relative;
       word-wrap: anywhere;
       word-break: break-word;
@@ -68,12 +67,12 @@
     .um-nav-wrapper.um-links-centered .um-nav-buttons { flex: 1; display: flex; justify-content: flex-end; }
     .um-nav-links { margin: 0; display: flex; padding: 0; font-size: 15px; list-style: none; align-items: center; white-space: nowrap; gap: 24px; }
     .um-nav-links>li>a { color: #334155; font-weight: 600; padding: 8px 4px; transition: color 0.18s; }
-    .um-nav-links>li>a:hover { color: #03cf65; }
+    .um-nav-links>li>a:hover { color: #4B2EEB; }
     .um-nav-buttons { gap: 12px; display: flex; align-items: center; white-space: nowrap; }
 
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14.5px; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
-    .btn.primary { background: #03cf65; color: #fff !important; border: none; box-shadow: 0 2px 10px rgba(3, 207, 101, 0.2); }
-    .btn.primary:hover { background: #00b853; transform: translateY(-1px); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 10px; min-height: 48px; box-sizing: border-box; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
+    .btn.primary { background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%); color: #fff !important; border: none; box-shadow: 0 4px 14px rgba(75, 46, 235, 0.25); }
+    .btn.primary:hover { background: linear-gradient(135deg, #3B22C7 0%, #6830d9 100%); transform: translateY(-1px); }
 
     .um-nav-drawerTrigger { display: none; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; position: relative; }
     .um-nav-drawerTrigger:after { top: 12px; left: 7px; width: 26px; height: 3px; content: ''; position: absolute; background: #0f172a; box-shadow: 0 8px 0 #0f172a, 0 16px 0 #0f172a; border-radius: 2px; }
@@ -97,11 +96,11 @@
 
   <style id="samyoj-blog-post-styles">
     :root {
-      --sy-green: #03cf65;
-      --sy-green-hover: #00b853;
-      --sy-green-deep: #087a47;
-      --sy-green-light: #eafbf0;
-      --sy-green-border: #bbf7d0;
+      --sy-green: #4B2EEB;
+      --sy-green-hover: #3B22C7;
+      --sy-green-deep: #3B22C7;
+      --sy-green-light: #EEF2FF;
+      --sy-green-border: #C7D2FE;
       --sy-dark: #0f172a;
       --sy-body: #475569;
       --sy-line: #f1f5f9;
@@ -198,7 +197,7 @@
       background-color: var(--sy-green-light);
       border: 1px solid var(--sy-green-border);
       border-radius: 9999px;
-      color: #00b853;
+      color: #4B2EEB;
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.06em;
@@ -208,7 +207,7 @@
 
     .blog-article-title {
       font-family: 'Manrope', 'Inter', sans-serif;
-      font-size: clamp(30px, 3.8vw, 42px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 800;
       line-height: 1.18;
       color: var(--sy-dark);
@@ -217,7 +216,7 @@
     }
 
     .blog-article-subtitle {
-      font-size: 17px;
+      font-size: clamp(16px, 1.4vw, 18px);
       font-weight: 500;
       line-height: 1.6;
       color: var(--sy-body);
@@ -312,7 +311,7 @@
 
     .blog-share-btn:hover {
       background: var(--sy-green-light);
-      color: #00b853;
+      color: #4B2EEB;
       transform: translateY(-2px);
     }
 
@@ -342,7 +341,7 @@
     /* ─── TABLE OF CONTENTS BOX ─── */
     .blog-toc-box {
       background: #f4fbf7;
-      border: 1px solid #dcfce7;
+      border: 1px solid #C7D2FE;
       border-radius: 16px;
       padding: 24px;
       margin-bottom: 40px;
@@ -355,8 +354,8 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: #dcfce7;
-      color: #00b853;
+      background: #C7D2FE;
+      color: #4B2EEB;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -478,7 +477,7 @@
       height: 40px;
       border-radius: 10px;
       background: var(--sy-green-light);
-      color: #00b853;
+      color: #4B2EEB;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -507,7 +506,7 @@
 
     /* In-Article Banner CTA */
     .blog-cta-banner {
-      background: linear-gradient(135deg, #eafbf0 0%, #f4fbf7 100%);
+      background: linear-gradient(135deg, #EEF2FF 0%, #f4fbf7 100%);
       border: 1px solid var(--sy-green-border);
       border-radius: 20px;
       padding: 32px;
@@ -627,8 +626,8 @@
       transition: border-color .2s ease, box-shadow .2s ease;
     }
     .blog-search input:focus {
-      border-color: #03cf65;
-      box-shadow: 0 0 0 3.5px rgba(3, 207, 101, .14);
+      border-color: #4B2EEB;
+      box-shadow: 0 0 0 3.5px rgba(75, 46, 235, .14);
       background: #fff;
     }
     .blog-search input::placeholder { color: #94a3b8; }
@@ -676,8 +675,8 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: #eafbf0;
-      color: #087a47;
+      background: #EEF2FF;
+      color: #3B22C7;
       font-size: 12px;
       font-weight: 800;
       display: flex;
@@ -694,7 +693,7 @@
       text-decoration: none;
       transition: color .18s;
     }
-    .blog-popular-title:hover { color: #00b853; }
+    .blog-popular-title:hover { color: #4B2EEB; }
     .blog-popular-date {
       font-size: 12px;
       color: #94a3b8;
@@ -729,8 +728,8 @@
       width: 28px;
       height: 28px;
       border-radius: 8px;
-      background: #eafbf0;
-      color: #00b853;
+      background: #EEF2FF;
+      color: #4B2EEB;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -895,7 +894,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: #00b853;
+      color: #4B2EEB;
     }
 
     .related-title {
@@ -983,7 +982,7 @@
     .btn-full-green {
       width: 100%;
       padding: 12px;
-      background: #03cf65;
+      background: #4B2EEB;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -994,7 +993,7 @@
     }
 
     .btn-full-green:hover {
-      background: #00b853;
+      background: #4B2EEB;
     }
 
     .newsletter-note {
@@ -1005,7 +1004,7 @@
     }
   </style>
   
-  <link rel="stylesheet" href="../samyoj-nav.css?v=12">
+  <link rel="stylesheet" href="../samyoj-nav.css?v=15">
 
   <!-- JSON-LD Structured Data Schema (GEO & SEO Optimized) -->
   <script type="application/ld+json">
@@ -1214,7 +1213,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                background: #146b3a;
+                background: #3B22C7;
                 color: #fff;
                 font-size: 11px;
                 font-weight: 800;
@@ -1223,7 +1222,7 @@
                 padding: 6px 12px;
                 border-radius: 999px;
                 white-space: nowrap;
-                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
               }
 
               #aisensy-magic-bar .mb-spark {
@@ -1338,9 +1337,9 @@
                   padding: 4px 8px;
                   gap: 4px;
                   flex: 0 0 auto;
-                  background: #146b3a;
+                  background: #3B22C7;
                   color: #fff;
-                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
                   border-radius: 999px;
                 }
 
@@ -1702,7 +1701,7 @@
               <div>
                 <h3 id="getting-started">Ready to grow your business with WhatsApp?</h3>
                 <p>Start automating conversations, qualifying leads, and scaling sales campaigns with Samyoj today.</p>
-                <a href="https://app.samyoj.com" class="btn primary">Start for FREE →</a>
+                <a href="https://app.samyoj.com" class="btn primary">Start for FREE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
               </div>
               <img src="../images/blog_hero_dashboard_3d.webp" alt="Samyoj Dashboard 3D Graphic" decoding="async" />
             </div>
@@ -1721,7 +1720,7 @@
           <!-- Brand Connection & Trust Section (SEO/GEO Optimized) -->
           <div class="samyoj-brand-callout" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; margin: 40px 0; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); font-family: 'Inter', sans-serif;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="background: #eafbf0; color: #00b853; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid #b7efc5;">Official Meta Partner</span>
+              <span style="background: #EEF2FF; color: #4B2EEB; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid #C7D2FE;">Official Meta Partner</span>
             </div>
             <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 0 0 12px 0; line-height: 1.3; font-family: 'Manrope', sans-serif;">Scale Your WhatsApp Marketing with Samyoj</h3>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0 0 24px 0;">
@@ -1729,28 +1728,28 @@
             </p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 28px;">
               <div style="display: flex; gap: 10px; align-items: flex-start;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B2EEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
                   <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Zero Message Markups</strong>
                   <span style="font-size: 12px; color: #64748b;">Pay Meta's official charges directly with absolute transparency.</span>
                 </div>
               </div>
               <div style="display: flex; gap: 10px; align-items: flex-start;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B2EEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
                   <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Flat ₹1,499/mo Plan</strong>
                   <span style="font-size: 12px; color: #64748b;">Get unlimited agent seats, shared team inbox, and advanced flows.</span>
                 </div>
               </div>
               <div style="display: flex; gap: 10px; align-items: flex-start;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B2EEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
                   <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Built-in AI Agents</strong>
                   <span style="font-size: 12px; color: #64748b;">Automate up to 80% of customer queries instantly, 24/7.</span>
                 </div>
               </div>
               <div style="display: flex; gap: 10px; align-items: flex-start;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B2EEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
                   <strong style="font-size: 13.5px; color: #0f172a; display: block; margin-bottom: 2px;">Guided Onboarding</strong>
                   <span style="font-size: 12px; color: #64748b;">Free green tick verification and dedicated support to get you live.</span>
@@ -1758,12 +1757,12 @@
               </div>
             </div>
             <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-              <a href="https://app.samyoj.com" class="btn primary" style="padding: 12px 24px; font-size: 14.5px; font-weight: 700; border-radius: 8px; background: #00b853; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(0, 184, 83, 0.25); transition: all 0.2s;">
+              <a href="https://app.samyoj.com" class="btn primary" style="padding: 13px 26px; font-size: 15px; font-weight: 700; border-radius: 10px; background: #4B2EEB; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(75, 46, 235, 0.25); transition: all 0.2s;">
                 Start Free Trial
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href="../contact.html" style="font-size: 14px; font-weight: 700; color: #475569; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 12px 16px; transition: color 0.2s;" onmouseover="this.style.color='#00b853'" onmouseout="this.style.color='#475569'">
-                Talk to an Expert →
+              <a href="../contact.html" style="font-size: 14px; font-weight: 700; color: #475569; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 12px 16px; transition: color 0.2s;" onmouseover="this.style.color='#4B2EEB'" onmouseout="this.style.color='#475569'">
+                Talk to an Expert <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
           </div>
@@ -1774,7 +1773,7 @@
               <span class="blog-nav-title">How to Collect Payments Directly on WhatsApp</span>
             </a>
             <a href="whatsapp-automation-examples.html" class="blog-nav-link next">
-              <span class="blog-nav-dir">Next Article →</span>
+              <span class="blog-nav-dir">Next Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
               <span class="blog-nav-title">5 WhatsApp Automation Examples That Boost Sales by 300%</span>
             </a>
           </div>

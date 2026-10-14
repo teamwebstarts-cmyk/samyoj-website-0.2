@@ -35,10 +35,9 @@
   <link rel="stylesheet" href="../mobile-buttons.css">
   <link rel="stylesheet" href="../samyoj-footer.css?v=7">
   <link rel="stylesheet" href="../samyoj-mobile-drawer.css?v=1">
-  <link rel="stylesheet" href="../samyoj-mobile-drawer.css">
 
   <style id="shared-site-chrome">
-    body { margin: 0; padding: 0; --wr-max: 1530px; position: relative; word-wrap: anywhere; word-break: break-word; line-height: 1.5; --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif; overflow-wrap: anywhere; text-rendering: optimizeLegibility; background-color: #fff; --color-3cg413bfwq: rgb(3, 207, 101); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { margin: 0; padding: 0; --wr-max: 1420px; position: relative; word-wrap: anywhere; word-break: break-word; line-height: 1.5; --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif; overflow-wrap: anywhere; text-rendering: optimizeLegibility; background-color: #fff; --color-3cg413bfwq: rgb(3, 207, 101); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     a, .link { color: inherit; text-decoration: none; }
     strong { font-weight: 700; }
     .wr { width: 100%; margin: 0 auto; padding: 0 30px; position: relative; max-width: var(--wr-max); box-sizing: border-box; }
@@ -49,11 +48,11 @@
     .um-nav-wrapper.um-links-centered .um-nav-buttons { flex: 1; display: flex; justify-content: flex-end; }
     .um-nav-links { margin: 0; display: flex; padding: 0; font-size: 15px; list-style: none; align-items: center; white-space: nowrap; gap: 24px; }
     .um-nav-links>li>a { color: #334155; font-weight: 600; padding: 8px 4px; transition: color 0.18s; }
-    .um-nav-links>li>a:hover { color: #03cf65; }
+    .um-nav-links>li>a:hover { color: #4B2EEB; }
     .um-nav-buttons { gap: 12px; display: flex; align-items: center; white-space: nowrap; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14.5px; padding: 10px 20px; border-radius: 8px; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
-    .btn.primary { background: #03cf65; color: #fff !important; border: none; box-shadow: 0 2px 10px rgba(3, 207, 101, 0.2); }
-    .btn.primary:hover { background: #00b853; transform: translateY(-1px); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 10px; min-height: 48px; box-sizing: border-box; transition: all 0.2s ease; cursor: pointer; text-decoration: none; }
+    .btn.primary { background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%); color: #fff !important; border: none; box-shadow: 0 4px 14px rgba(75, 46, 235, 0.25); }
+    .btn.primary:hover { background: linear-gradient(135deg, #3B22C7 0%, #6830d9 100%); transform: translateY(-1px); }
     .um-nav-drawerTrigger { display: none; width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; position: relative; }
     .um-nav-drawerTrigger:after { top: 12px; left: 7px; width: 26px; height: 3px; content: ''; position: absolute; background: #0f172a; box-shadow: 0 8px 0 #0f172a, 0 16px 0 #0f172a; border-radius: 2px; }
     @media (min-width: 961px) { .um-nav-wrapper.um-hidden .um-nav-links, .um-nav-wrapper.um-hidden .um-nav-buttons { display: flex !important; } .um-nav-drawerTrigger { display: none !important; } }
@@ -67,7 +66,7 @@
   </style>
 
   <style id="samyoj-blog-post-styles">
-    :root { --sy-green: #03cf65; --sy-green-hover: #00b853; --sy-green-deep: #087a47; --sy-green-light: #eafbf0; --sy-green-border: #bbf7d0; --sy-dark: #0f172a; --sy-body: #475569; --sy-line: #f1f5f9; }
+    :root { --sy-green: #4B2EEB; --sy-green-hover: #3B22C7; --sy-green-deep: #3B22C7; --sy-green-light: #EEF2FF; --sy-green-border: #C7D2FE; --sy-dark: #0f172a; --sy-body: #475569; --sy-line: #f1f5f9; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--sy-dark); background-color: #fff; }
     .blog-post-page { padding: 32px 0 80px; }
     .blog-post-container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
@@ -78,9 +77,9 @@
     .blog-breadcrumbs span.current { color: #0f172a; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 320px; }
     .blog-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; align-items: start; }
     @media (max-width: 992px) { .blog-grid { grid-template-columns: 1fr; gap: 40px; } }
-    .blog-category-badge { display: inline-flex; align-items: center; padding: 6px 14px; background-color: var(--sy-green-light); border: 1px solid var(--sy-green-border); border-radius: 9999px; color: #00b853; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
-    .blog-article-title { font-family: 'Manrope', 'Inter', sans-serif; font-size: clamp(30px, 3.8vw, 42px); font-weight: 800; line-height: 1.18; color: var(--sy-dark); letter-spacing: -0.025em; margin: 0 0 16px; }
-    .blog-article-subtitle { font-size: 17px; font-weight: 500; line-height: 1.6; color: var(--sy-body); margin: 0 0 24px; }
+    .blog-category-badge { display: inline-flex; align-items: center; padding: 6px 14px; background-color: var(--sy-green-light); border: 1px solid var(--sy-green-border); border-radius: 9999px; color: #4B2EEB; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+    .blog-article-title { font-family: 'Manrope', 'Inter', sans-serif; font-size: clamp(28px, 2.4vw + 10px, 42px); font-weight: 800; line-height: 1.18; color: var(--sy-dark); letter-spacing: -0.025em; margin: 0 0 16px; }
+    .blog-article-subtitle { font-size: clamp(16px, 1.4vw, 18px); font-weight: 500; line-height: 1.6; color: var(--sy-body); margin: 0 0 24px; }
     .blog-meta-bar { display: flex; align-items: center; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid var(--sy-line); margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
     .blog-author-info { display: flex; align-items: center; gap: 12px; }
     .blog-author-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #0f172a; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 14px; }
@@ -91,12 +90,12 @@
     .blog-share-group { display: flex; align-items: center; gap: 10px; }
     .blog-share-label { font-size: 13px; font-weight: 600; color: #64748b; }
     .blog-share-btn { width: 34px; height: 34px; border-radius: 50%; background: #f1f5f9; display: inline-flex; align-items: center; justify-content: center; color: #475569; transition: all 0.18s ease; text-decoration: none; border: none; cursor: pointer; }
-    .blog-share-btn:hover { background: var(--sy-green-light); color: #00b853; transform: translateY(-2px); }
+    .blog-share-btn:hover { background: var(--sy-green-light); color: #4B2EEB; transform: translateY(-2px); }
     .blog-share-btn svg { width: 16px; height: 16px; fill: currentColor; }
     .blog-hero-media { width: 100%; border-radius: 16px; overflow: hidden; background: #f8fafc; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); margin-bottom: 36px; }
     .blog-hero-media img { width: 100%; height: auto; display: block; object-fit: cover; }
-    .blog-toc-box { background: #f4fbf7; border: 1px solid #dcfce7; border-radius: 16px; padding: 24px; margin-bottom: 40px; display: flex; gap: 20px; align-items: flex-start; }
-    .blog-toc-icon { width: 44px; height: 44px; border-radius: 12px; background: #dcfce7; color: #00b853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .blog-toc-box { background: #f4fbf7; border: 1px solid #C7D2FE; border-radius: 16px; padding: 24px; margin-bottom: 40px; display: flex; gap: 20px; align-items: flex-start; }
+    .blog-toc-icon { width: 44px; height: 44px; border-radius: 12px; background: #C7D2FE; color: #4B2EEB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .blog-toc-icon svg { width: 22px; height: 22px; stroke: currentColor; }
     .blog-toc-content { flex: 1; }
     .blog-toc-title { font-size: 15px; font-weight: 800; color: var(--sy-dark); margin-bottom: 12px; }
@@ -111,11 +110,11 @@
     .blog-feature-grid { display: flex; flex-direction: column; gap: 16px; margin: 28px 0 36px; }
     .blog-feature-card { background: #f8fafc; border: 1px solid #f1f5f9; border-radius: 12px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; transition: border-color 0.18s ease; }
     .blog-feature-card:hover { border-color: var(--sy-green-border); }
-    .blog-feature-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--sy-green-light); color: #00b853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .blog-feature-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--sy-green-light); color: #4B2EEB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .blog-feature-ico svg { width: 20px; height: 20px; stroke: currentColor; }
     .blog-feature-text h3 { font-size: 16px; font-weight: 800; color: var(--sy-dark); margin: 0 0 4px; }
     .blog-feature-text p { font-size: 14.5px; line-height: 1.55; color: #64748b; margin: 0; }
-    .blog-cta-banner { background: linear-gradient(135deg, #eafbf0 0%, #f4fbf7 100%); border: 1px solid var(--sy-green-border); border-radius: 20px; padding: 32px; margin: 40px 0; display: grid; grid-template-columns: 1fr 180px; gap: 24px; align-items: center; }
+    .blog-cta-banner { background: linear-gradient(135deg, #EEF2FF 0%, #f4fbf7 100%); border: 1px solid var(--sy-green-border); border-radius: 20px; padding: 32px; margin: 40px 0; display: grid; grid-template-columns: 1fr 180px; gap: 24px; align-items: center; }
     @media (max-width: 640px) { .blog-cta-banner { grid-template-columns: 1fr; text-align: center; } .blog-cta-banner img { margin: 0 auto; } }
     .blog-cta-banner h3 { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 800; color: var(--sy-dark); margin: 0 0 8px; }
     .blog-cta-banner p { font-size: 14.5px; color: #475569; margin: 0 0 20px; line-height: 1.5; }
@@ -152,7 +151,7 @@
     .related-item:last-child { border-bottom: none; padding-bottom: 0; }
     .related-thumb { width: 68px; height: 68px; border-radius: 10px; object-fit: cover; flex-shrink: 0; background: #f1f5f9; }
     .related-info { display: flex; flex-direction: column; gap: 4px; }
-    .related-cat { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #00b853; }
+    .related-cat { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #4B2EEB; }
     .related-title { font-size: 13.5px; font-weight: 700; color: var(--sy-dark); line-height: 1.35; transition: color 0.18s; }
     .related-item:hover .related-title { color: var(--sy-green-hover); }
     .related-meta { font-size: 11.5px; color: #94a3b8; }
@@ -165,8 +164,8 @@
     .widget-newsletter { background: #f8fafc; border: 1px solid #f1f5f9; }
     .newsletter-input { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; margin-bottom: 12px; box-sizing: border-box; }
     .newsletter-input:focus { border-color: var(--sy-green); }
-    .btn-full-green { width: 100%; padding: 12px; background: #03cf65; color: #fff; border: none; border-radius: 8px; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: background 0.18s; }
-    .btn-full-green:hover { background: #00b853; }
+    .btn-full-green { width: 100%; padding: 12px; background: #4B2EEB; color: #fff; border: none; border-radius: 8px; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: background 0.18s; }
+    .btn-full-green:hover { background: #4B2EEB; }
     .newsletter-note { font-size: 11.5px; color: #94a3b8; margin-top: 10px; text-align: center; }
   </style>
   <link rel="stylesheet" href="../samyoj-nav.css">
@@ -336,7 +335,7 @@
               <div>
                 <h3>Ready to grow your business with WhatsApp?</h3>
                 <p>Start automating conversations, broadcasts, and sales campaigns with Samyoj today.</p>
-                <a href="https://app.samyoj.com" class="btn primary">Start for FREE →</a>
+                <a href="https://app.samyoj.com" class="btn primary">Start for FREE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
               </div>
               <img src="../images/blog_hero_dashboard_3d.webp" alt="Samyoj Dashboard Graphic" decoding="async" />
             </div>
@@ -349,7 +348,7 @@
               <span class="blog-nav-title">{{PREV_ARTICLE_TITLE}}</span>
             </a>
             <a href="{{NEXT_ARTICLE_URL}}" class="blog-nav-link next">
-              <span class="blog-nav-dir">Next Article →</span>
+              <span class="blog-nav-dir">Next Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
               <span class="blog-nav-title">{{NEXT_ARTICLE_TITLE}}</span>
             </a>
           </div>
@@ -364,11 +363,11 @@
                 <div class="widget-author-avatar">{{AUTHOR_INITIAL}}</div>
                 <div class="widget-author-name">
                   {{AUTHOR_NAME}}
-                  <svg viewBox="0 0 20 20" fill="#03cf65" width="16" height="16"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <svg viewBox="0 0 20 20" fill="#4B2EEB" width="16" height="16"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                 </div>
               </div>
               <p class="widget-author-bio">{{AUTHOR_BIO}}</p>
-              <a href="../blog.html" class="btn-outline-sm">View all posts →</a>
+              <a href="../blog.html" class="btn-outline-sm">View all posts <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             </div>
           </div>
 
