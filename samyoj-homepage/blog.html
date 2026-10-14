@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
-  <link rel="stylesheet" href="samyoj-footer.css?v=6">
+  <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <link rel="stylesheet" href="mobile-buttons.css">
   <style>
   /* Active link styles */
@@ -92,14 +92,14 @@
       background: #ffffff;
       color: #0F172A;
       -webkit-font-smoothing: antialiased;
-      --wr-max: 1530px;
-      --green: #03cf65;
-      --green-deep: #087a47;
-      --green-dark: #00b859;
+      --wr-max: 1420px;
+      --green: #4B2EEB;
+      --green-deep: #3B22C7;
+      --green-dark: #3B22C7;
       --ink: #0F172A;
       --muted: #64748B;
       --light-bg: #F8FAFF;
-      --green-tint: #F0FDF4;
+      --green-tint: #EEF2FF;
       --card-border: #E2E8F0;
       --font-head: 'Manrope', system-ui, sans-serif;
     }
@@ -189,7 +189,7 @@
     }
 
     .blog-hero-subtitle {
-      font-size: 16.5px;
+      font-size: clamp(16px, 1.4vw, 18px);
       color: var(--muted);
       line-height: 1.6;
       margin: 0 0 32px;
@@ -267,6 +267,14 @@
       box-shadow: 0 4px 12px rgba(75, 46, 235, 0.25);
     }
 
+    .blog-subscribe-btn,
+    .blog-newsletter-btn,
+    .blog-footer-demo-btn {
+      border-radius: 10px;
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+
     /* ─── SECTION HEADER ─── */
     .blog-section-header {
       display: flex;
@@ -277,7 +285,7 @@
 
     .blog-section-title {
       font-family: var(--font-head);
-      font-size: 24px;
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 800;
       color: var(--ink);
       margin: 0;
@@ -357,8 +365,8 @@
 
     /* Main Featured Card — text LEFT + image RIGHT (matching mockup) */
     .blog-featured-main {
-      background: #f4faf6;
-      border: 1px solid #e1f0e7;
+      background: #F8FAFF;
+      border: 1px solid #C7D2FE;
       border-radius: 20px;
       padding: 28px 32px;
       display: flex;
@@ -374,7 +382,7 @@
       box-sizing: border-box;
     }
     .blog-featured-main:hover {
-      box-shadow: 0 16px 40px rgba(3,207,101,.14);
+      box-shadow: 0 16px 40px rgba(75, 46, 235, .14);
       transform: translateY(-3px);
     }
 
@@ -737,7 +745,7 @@
       width: 100%;
       aspect-ratio: 4/3;
       overflow: hidden;
-      background: #f4faf6;
+      background: #F8FAFF;
     }
     .blog-card-thumb img {
       width: 100%;
@@ -971,6 +979,7 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1200px) {
+      .blog-latest-left-grid { grid-template-columns: repeat(2, 1fr); }
       .blog-featured-left-grid { grid-template-columns: minmax(0, 1fr) 220px; }
       .blog-featured-img-box { width: 240px; height: 180px; flex-basis: 240px; }
     }
@@ -1006,7 +1015,7 @@
       .blog-newsletter { grid-template-columns: 1fr; padding: 24px 20px; }
       .blog-newsletter-img { display: none; }
       .blog-newsletter-row { flex-direction: column; border-radius: 8px; }
-      .blog-newsletter-input { width: 100%; border-right: 1px solid #cce5d7; border-bottom: none; border-radius: 8px 8px 0 0; }
+      .blog-newsletter-input { width: 100%; border-right: 1px solid #C7D2FE; border-bottom: none; border-radius: 8px 8px 0 0; }
       .blog-newsletter-btn { border-radius: 0 0 8px 8px; justify-content: center; }
       .blog-explore-chips { gap: 8px; }
     }
@@ -1024,7 +1033,7 @@
     /* ─── Site header chrome (required for umso nav) ─── */
     .wr {
       width: 100%;
-      max-width: var(--wr-max, 1530px);
+      max-width: var(--wr-max, 1420px);
       margin: 0 auto;
       padding: 0 30px;
       position: relative;
@@ -1063,7 +1072,7 @@
       height: 65px;
       display: flex;
       z-index: 99;
-      --wr-max: 1530px;
+      --wr-max: 1420px;
       position: fixed;
       width: 100%;
       background: #ffffff;
@@ -1319,7 +1328,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                background: #146b3a;
+                background: #3B22C7;
                 color: #fff;
                 font-size: 11px;
                 font-weight: 800;
@@ -1328,7 +1337,7 @@
                 padding: 6px 12px;
                 border-radius: 999px;
                 white-space: nowrap;
-                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
               }
 
               #aisensy-magic-bar .mb-spark {
@@ -1443,9 +1452,9 @@
                   padding: 4px 8px;
                   gap: 4px;
                   flex: 0 0 auto;
-                  background: #146b3a;
+                  background: #3B22C7;
                   color: #fff;
-                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
                   border-radius: 999px;
                 }
 
@@ -1687,7 +1696,7 @@
             <h2 class="blog-section-title">Featured Articles</h2>
             <a class="blog-view-all" href="#">
               View all articles
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
 
@@ -1758,7 +1767,7 @@
             <h2 class="blog-section-title">Latest Articles</h2>
             <a class="blog-view-all" href="#">
               View all articles
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
 
@@ -1943,7 +1952,7 @@
           <input class="blog-newsletter-input" type="email" id="newsletter-email" placeholder="Enter your email" autocomplete="email">
           <button class="blog-newsletter-btn" type="button" id="newsletter-subscribe-btn" aria-label="Subscribe to newsletter">
             Subscribe
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </button>
         </div>
         <p class="blog-newsletter-fine">No spam. Unsubscribe anytime.</p>
@@ -2047,7 +2056,7 @@
           <p>See Samyoj in action and discover how we can help you grow.</p>
           <a class="blog-footer-demo-btn" href="https://calendly.com/teamsamyoj/30min" target="_blank" rel="noopener noreferrer" aria-label="Book a free demo">
             Book a Free Demo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
       </div>
@@ -2175,7 +2184,7 @@
       var emailInput = document.getElementById("newsletter-email");
       if (emailInput && emailInput.value) {
         newsletterBtn.textContent = "✓ Subscribed!";
-        newsletterBtn.style.background = "#087a47";
+        newsletterBtn.style.background = "#3B22C7";
         newsletterBtn.disabled = true;
         emailInput.value = "";
       } else {
