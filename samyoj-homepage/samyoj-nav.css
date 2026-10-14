@@ -301,7 +301,7 @@
       flex: 0 0 auto;
     }
 
-    @media (min-width: 961px) {
+    @media (min-width: 1200px) {
       .um-nav-wrapper.um-hidden .um-nav-links {
         display: flex !important;
       }
@@ -316,9 +316,11 @@
       }
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1199px) {
       .um-nav-wrapper .um-nav-links,
-      .um-nav-wrapper .um-nav-buttons {
+      .um-nav-wrapper .um-nav-buttons,
+      .um-nav-wrapper.um-hidden .um-nav-links,
+      .um-nav-wrapper.um-hidden .um-nav-buttons {
         display: none !important;
       }
 
@@ -670,7 +672,7 @@ body:not(.noScript) .umso-header .umso-animated.umso-animating {
   overflow: visible !important;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1200px) {
   .um-nav-wrapper,
   .um-nav-wrapper.um-hidden {
     display: flex !important;
