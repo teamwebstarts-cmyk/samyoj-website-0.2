@@ -5969,6 +5969,11 @@
       background-color: #ffffff;
       padding: 50px 0 30px 0;
       font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    #custom-get-started-section .wr {
+      max-width: 1420px;
     }
 
     .setup-container {
@@ -5985,7 +5990,7 @@
     }
 
     .setup-title {
-      font-size: 40px;
+      font-size: clamp(28px, 5.2vw, 40px);
       font-weight: 800;
       color: #0f172a;
       line-height: 1.25;
@@ -5997,7 +6002,7 @@
     }
 
     .setup-subtitle {
-      font-size: 16px;
+      font-size: clamp(15px, 1.4vw, 16px);
       color: #64748b;
       line-height: 1.6;
       margin-bottom: 40px;
@@ -6103,8 +6108,9 @@
     /* Stepper CTA */
     .setup-cta-block {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
       margin-top: 40px;
     }
 
@@ -6199,47 +6205,36 @@
 
     /* Compact Trust Card &mdash; sits below the mockup image inside the right column */
     .setup-trust-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #ffffff;
-      border: 1px solid #e2e8f0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 20px;
+      background-color: #F8FAFF;
+      border: 1px solid #E2E8F0;
       border-radius: 16px;
-      padding: 12px 16px;
+      padding: clamp(18px, 2.2vw, 24px) clamp(16px, 3vw, 30px);
       margin-top: 16px;
       width: 100%;
       max-width: 740px;
-      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+      box-sizing: border-box;
     }
 
     .setup-trust-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 16px;
       text-align: left;
-      flex: 1;
-      justify-content: center;
-      transition: all 0.25s ease;
-    }
-
-    .setup-trust-item:hover {
-      transform: translateY(-2px);
     }
 
     .setup-trust-divider {
-      width: 1px;
-      height: 24px;
-      background-color: #e2e8f0;
-      margin: 0 8px;
-      flex-shrink: 0;
+      display: none;
     }
 
     .setup-trust-icon {
-      width: 32px;
-      height: 32px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      background-color: #f4f9f6;
-      color: #00b853;
+      background-color: rgba(75, 46, 235, 0.08);
+      color: #4B2EEB;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -6247,8 +6242,8 @@
     }
 
     .setup-trust-icon svg {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
     }
 
     .setup-trust-text h5 {
@@ -6259,13 +6254,17 @@
     }
 
     .setup-trust-title {
-      font-size: 18px;
-      font-weight: 600;
+      font-size: clamp(15px, 1.4vw, 17px);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin: 0 0 2px 0;
     }
 
     .setup-trust-text p {
-      font-size: 11px;
-      color: #64748b;
+      font-size: clamp(12px, 1.1vw, 13px);
+      font-weight: 600;
+      color: #6b7280;
       margin: 0;
     }
 
@@ -6379,49 +6378,54 @@
       color: #00b853;
     }
 
+    /* Hero-style fluid CTA sizing */
+    .setup-cta-btn,
+    .promo-cta-btn {
+      padding-left: clamp(18px, 2.4vw, 26px) !important;
+      padding-right: clamp(18px, 2.4vw, 26px) !important;
+    }
+
     /* Desktop Only Helper */
     .desktop-only {
       display: block;
     }
 
     /* Responsive details */
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
+      .setup-dashboard-img,
+      .setup-backdrop-blob {
+        display: none;
+      }
+
       .setup-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 40px;
       }
 
       .setup-left-col {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         max-width: 100%;
       }
 
       .setup-subtitle {
-        text-align: center;
+        text-align: left;
       }
 
       .setup-stepper {
         text-align: left;
-        max-width: 480px;
+        max-width: 100%;
       }
 
       .setup-trust-card {
-        flex-direction: column;
-        gap: 24px;
-        padding: 32px 24px;
-      }
-
-      .setup-trust-divider {
-        display: none;
+        padding: 20px;
       }
 
       .setup-trust-item {
         justify-content: flex-start;
         width: 100%;
-        padding-left: 20px;
       }
 
       .setup-promo-banner {
@@ -6443,24 +6447,22 @@
     }
 
     @media (max-width: 640px) {
-      .setup-title {
-        font-size: 32px;
+      .setup-trust-card {
+        grid-template-columns: 1fr;
       }
 
       .setup-cta-block {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 16px;
         width: 100%;
       }
 
       .setup-cta-btn,
       .promo-cta-btn {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         justify-content: center;
-        padding: 16px 20px;
-        font-size: 15px;
         box-sizing: border-box;
       }
 
@@ -8172,6 +8174,8 @@
     
   
 
+  </section>
+
   <!-- 5. META ADS SECTION -->
 <section id="custom-meta-features-section" data-reveal>
     <div class="wr">
@@ -9202,10 +9206,6 @@
       </div>
     </section>
 
-    </div>
-    </div>
-    </div>
-  </section>
   <section class="_f595e375 theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4">
     <div class="wr">
       <div class="_8664e682">
