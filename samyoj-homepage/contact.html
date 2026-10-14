@@ -90,7 +90,7 @@
     body {
       margin: 0;
       padding: 0;
-      --wr-max: 1530px;
+      --wr-max: 1420px;
       position: relative;
       word-wrap: anywhere;
       word-break: break-word;
@@ -862,7 +862,7 @@
 
     .btn--success {
       color: #fff !important;
-      background: #2f9e44 !important;
+      background: #4B2EEB !important;
     }
 
     .btn--success:after {
@@ -878,7 +878,7 @@
       bottom: 0;
       content: '';
       position: absolute;
-      box-shadow: 0 0 0 0 #2f9e443b;
+      box-shadow: 0 0 0 0 #4B2EEB3b;
       border-radius: inherit;
       animation-name: keyframes-buttonSuccess;
       pointer-events: none;
@@ -1546,14 +1546,14 @@
 
   <style>
     :root {
-      --green: #03cf65;
-      --green-deep: #00b859;
-      --green-text: #0a9f52;
+      --green: #4B2EEB;
+      --green-deep: #3B22C7;
+      --green-text: #4B2EEB;
       --ink: #1a2332;
       --muted: #6b7280;
-      --line: #dce9e2;
+      --line: #E2E8F0;
       --deep: #0a3e42;
-      --pale: #f2fff8;
+      --pale: #F8FAFF;
     }
 
     *:not(header, header *, #aisensy-magic-bar, #aisensy-magic-bar *) {
@@ -1576,7 +1576,7 @@
       width: 100%;
       margin: 0 auto;
       padding: 0 30px;
-      max-width: var(--wr-max, 1530px);
+      max-width: var(--wr-max, 1420px);
       box-sizing: border-box;
       position: relative;
     }
@@ -1657,7 +1657,7 @@
       margin: 0 0 24px;
       max-width: 540px;
       color: #6b7280;
-      font-size: 16.5px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.6;
       font-weight: 500;
     }
@@ -1675,10 +1675,12 @@
       justify-content: center;
       gap: 10px;
       min-height: 48px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 15.5px;
-      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.25;
+      box-sizing: border-box;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
       cursor: pointer;
       border: none;
@@ -1762,20 +1764,20 @@
 
     /* ========== Reach / Ways to connect ========== */
     .cr-section {
-      --cr-green: #22c55e;
-      --cr-green-deep: #16a34a;
-      --cr-green-soft: #e9f9ef;
-      --cr-green-btn: #e7f8ee;
+      --cr-green: #4B2EEB;
+      --cr-green-deep: #3B22C7;
+      --cr-green-soft: #EEF2FF;
+      --cr-green-btn: #EEF2FF;
       --cr-purple: #8b5cf6;
       --cr-purple-soft: #f3eefc;
       --cr-purple-btn: #efe8ff;
       position: relative;
       overflow: hidden;
-      padding: 64px 0 72px;
+      padding: 64px 0;
       background:
-        radial-gradient(ellipse 28% 34% at 8% 18%, rgba(34, 197, 94, 0.11) 0%, transparent 70%),
-        radial-gradient(ellipse 26% 30% at 92% 14%, rgba(34, 197, 94, 0.10) 0%, transparent 68%),
-        radial-gradient(ellipse 22% 26% at 50% 92%, rgba(34, 197, 94, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 28% 34% at 8% 18%, rgba(75, 46, 235, 0.11) 0%, transparent 70%),
+        radial-gradient(ellipse 26% 30% at 92% 14%, rgba(75, 46, 235, 0.10) 0%, transparent 68%),
+        radial-gradient(ellipse 22% 26% at 50% 92%, rgba(75, 46, 235, 0.05) 0%, transparent 70%),
         #ffffff;
     }
 
@@ -1840,7 +1842,7 @@
 
     .cr-title {
       margin: 0 0 12px;
-      font-size: clamp(30px, 3.4vw, 40px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 800;
       letter-spacing: -0.03em;
       color: #111827;
@@ -1850,7 +1852,7 @@
     .cr-sub {
       margin: 0 auto 14px;
       color: #6b7280;
-      font-size: 15.5px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.55;
       font-weight: 500;
       max-width: 480px;
@@ -1909,7 +1911,7 @@
       object-fit: contain;
       user-select: none;
       -webkit-user-drag: none;
-      filter: drop-shadow(0 10px 18px rgba(34, 197, 94, 0.2));
+      filter: drop-shadow(0 10px 18px rgba(75, 46, 235, 0.2));
     }
 
     .cr-card.email .cr-card-illu {
@@ -1978,7 +1980,7 @@
     .cr-check.green {
       background: var(--cr-green);
       color: #fff;
-      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.28);
+      box-shadow: 0 4px 10px rgba(75, 46, 235, 0.28);
     }
 
     .cr-check.purple {
@@ -1998,9 +2000,10 @@
       justify-content: center;
       gap: 8px;
       width: 100%;
-      min-height: 44px;
+      min-height: 48px;
       padding: 0 14px;
       border-radius: 999px;
+      box-sizing: border-box;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: -0.01em;
@@ -2014,13 +2017,13 @@
 
     .cr-card-btn.green {
       background: var(--cr-green-btn);
-      color: #0a9f52 !important;
+      color: #4B2EEB !important;
     }
 
     .cr-card-btn.green:hover {
-      background: #d7f3e3;
+      background: #EEF2FF;
       transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(34, 197, 94, 0.16);
+      box-shadow: 0 6px 14px rgba(75, 46, 235, 0.16);
     }
 
     .cr-card-btn.purple {
@@ -2070,7 +2073,7 @@
       display: grid;
       place-items: center;
       flex: 0 0 46px;
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.12);
+      box-shadow: 0 4px 12px rgba(75, 46, 235, 0.12);
     }
 
     .cr-info-icon svg {
@@ -2101,18 +2104,18 @@
 
     /* ========== Get in touch (form + WhatsApp preview) ========== */
     .cw-section {
-      --cw-green: #25d366;
-      --cw-green-deep: #1ebe57;
-      --cw-green-soft: #e8f8ee;
-      --cw-green-panel: #eef8f1;
+      --cw-green: #4B2EEB;
+      --cw-green-deep: #3B22C7;
+      --cw-green-soft: #EEF2FF;
+      --cw-green-panel: #EEF2FF;
       position: relative;
       overflow: hidden;
-      padding: 72px 0 88px;
+      padding: 64px 0;
       background:
-        radial-gradient(ellipse 36% 42% at 6% 18%, rgba(37, 211, 102, 0.1) 0%, transparent 70%),
-        radial-gradient(ellipse 32% 38% at 94% 82%, rgba(37, 211, 102, 0.09) 0%, transparent 68%),
-        #f9fbf9;
-      border-top: 1px solid #edf3ef;
+        radial-gradient(ellipse 36% 42% at 6% 18%, rgba(75, 46, 235, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 32% 38% at 94% 82%, rgba(75, 46, 235, 0.09) 0%, transparent 68%),
+        #F8FAFF;
+      border-top: 1px solid #E2E8F0;
     }
 
     .cw-section::before,
@@ -2174,7 +2177,7 @@
 
     .cw-title {
       margin: 18px 0 12px;
-      font-size: clamp(28px, 3.4vw, 40px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       line-height: 1.18;
       letter-spacing: -0.03em;
       font-weight: 800;
@@ -2207,7 +2210,7 @@
       background: #fff;
       border: 1px solid #e8eee9;
       border-radius: 22px;
-      box-shadow: 0 16px 40px rgba(20, 78, 50, 0.08);
+      box-shadow: 0 16px 40px rgba(75, 46, 235, 0.08);
       padding: 28px 28px 24px;
       animation: cw-rise 0.55s ease both;
     }
@@ -2229,12 +2232,12 @@
       0%,
       100% {
         transform: scale(1);
-        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.22), 0 2px 8px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 10px 28px rgba(75, 46, 235, 0.22), 0 2px 8px rgba(0, 0, 0, 0.06);
       }
 
       50% {
         transform: scale(1.05);
-        box-shadow: 0 14px 32px rgba(37, 211, 102, 0.32), 0 2px 8px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 14px 32px rgba(75, 46, 235, 0.32), 0 2px 8px rgba(0, 0, 0, 0.06);
       }
     }
 
@@ -2254,7 +2257,7 @@
       display: grid;
       place-items: center;
       flex: 0 0 auto;
-      box-shadow: 0 8px 18px rgba(37, 211, 102, 0.28);
+      box-shadow: 0 8px 18px rgba(75, 46, 235, 0.28);
     }
 
     .cw-form-icon svg {
@@ -2429,8 +2432,8 @@
       display: none;
       margin-top: 12px;
       padding: 10px 12px;
-      background: #e6fbed;
-      color: #08763e;
+      background: #EEF2FF;
+      color: #3B22C7;
       border-radius: 10px;
       font-size: 13.5px;
       font-weight: 600;
@@ -2465,7 +2468,7 @@
     /* Preview panel */
     .cw-preview {
       background: var(--cw-green-panel);
-      border: 1px solid #d8efe2;
+      border: 1px solid #C7D2FE;
       border-radius: 24px;
       padding: 22px 20px 20px;
       display: flex;
@@ -2477,7 +2480,7 @@
 
     .cw-preview-label {
       margin: 0 0 14px;
-      color: #0a9f52;
+      color: #4B2EEB;
       font-size: 13.5px;
       font-weight: 700;
       text-align: center;
@@ -2502,7 +2505,7 @@
       border-radius: 999px;
       background: #fff;
       border: 1px solid #e2ebe6;
-      box-shadow: 0 6px 16px rgba(20, 78, 50, 0.08);
+      box-shadow: 0 6px 16px rgba(75, 46, 235, 0.08);
       color: #374151;
       font-size: 13px;
       font-weight: 600;
@@ -2522,17 +2525,17 @@
 
     /* ========== Why businesses love Samyoj ========== */
     .wy-section {
-      --wy-green: #22c55e;
-      --wy-green-deep: #0a9f52;
+      --wy-green: #4B2EEB;
+      --wy-green-deep: #3B22C7;
       --wy-purple: #7c5cfc;
       --wy-orange: #f59e0b;
       position: relative;
       overflow: hidden;
-      padding: 72px 0 80px;
+      padding: 64px 0;
       background:
-        radial-gradient(ellipse 26% 32% at 8% 12%, rgba(34, 197, 94, 0.1) 0%, transparent 70%),
-        radial-gradient(ellipse 24% 28% at 94% 10%, rgba(34, 197, 94, 0.09) 0%, transparent 68%),
-        radial-gradient(circle at 92% 8%, rgba(34, 197, 94, 0.18) 0 18px, transparent 42px),
+        radial-gradient(ellipse 26% 32% at 8% 12%, rgba(75, 46, 235, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 24% 28% at 94% 10%, rgba(75, 46, 235, 0.09) 0%, transparent 68%),
+        radial-gradient(circle at 92% 8%, rgba(75, 46, 235, 0.18) 0 18px, transparent 42px),
         #ffffff;
     }
 
@@ -2597,7 +2600,7 @@
 
     .wy-title {
       margin: 0 0 12px;
-      font-size: clamp(28px, 3.2vw, 38px);
+      font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 800;
       letter-spacing: -0.03em;
       color: #111827;
@@ -2614,7 +2617,7 @@
     .wy-sub {
       margin: 0 auto 14px;
       color: #6b7280;
-      font-size: 15.5px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.55;
       font-weight: 500;
       max-width: 520px;
@@ -2724,7 +2727,7 @@
       display: grid;
       place-items: center;
       flex: 0 0 18px;
-      box-shadow: 0 3px 8px rgba(34, 197, 94, 0.25);
+      box-shadow: 0 3px 8px rgba(75, 46, 235, 0.25);
     }
 
     .wy-check svg {
@@ -3262,7 +3265,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                background: #146b3a;
+                background: #3B22C7;
                 color: #fff;
                 font-size: 11px;
                 font-weight: 800;
@@ -3271,7 +3274,7 @@
                 padding: 6px 12px;
                 border-radius: 999px;
                 white-space: nowrap;
-                box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
               }
 
               #aisensy-magic-bar .mb-spark {
@@ -3386,9 +3389,9 @@
                   padding: 4px 8px;
                   gap: 4px;
                   flex: 0 0 auto;
-                  background: #146b3a;
+                  background: #3B22C7;
                   color: #fff;
-                  box-shadow: 0 2px 8px rgba(20, 107, 58, .28);
+                  box-shadow: 0 2px 8px rgba(75, 46, 235, .28);
                   border-radius: 999px;
                 }
 
@@ -3431,7 +3434,7 @@
                     '<span class="mb-divider" aria-hidden="true"></span>' +
                     '<div class="mb-seg mb-seg-mid"><svg class="mb-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 18.2 4.2 20.5V7.2A2.7 2.7 0 0 1 6.9 4.5h10.2A2.7 2.7 0 0 1 19.8 7.2v8.3a2.7 2.7 0 0 1-2.7 2.7H7.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.2" cy="11.2" r="1.05" fill="currentColor"/><circle cx="12" cy="11.2" r="1.05" fill="currentColor"/><circle cx="14.8" cy="11.2" r="1.05" fill="currentColor"/></svg><span class="mb-title"><span class="mb-title-full">Smarter conversations start with <strong>AI Agents</strong></span><span class="mb-title-short">Smarter chats with <strong>AI Agents</strong></span></span></div>' +
                     '<span class="mb-divider" aria-hidden="true"></span>' +
-                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+                    '<a class="mb-cta" href="features.html"><span class="mb-cta-text">Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" ></line><polyline points="12 5 19 12 12 19" ></polyline></svg></a>' +
                     '</div>' +
                     '</div>';
                   document.body.insertAdjacentHTML('afterbegin', html);
@@ -3624,8 +3627,7 @@
               </svg>
               Talk to a Sales Specialist
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
-                  stroke-linejoin="round" />
+                <line x1="5" y1="12" x2="19" y2="12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></line><polyline points="12 5 19 12 12 19" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></polyline>
               </svg>
             </a>
             <a class="ch-btn ch-btn-secondary" href="#contact-form">
@@ -3646,17 +3648,17 @@
             </span>
             <span class="ch-chip">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="8.5" stroke="#03cf65" stroke-width="1.8" />
+                <circle cx="12" cy="12" r="8.5" stroke="#4B2EEB" stroke-width="1.8" />
                 <path
                   d="M3.5 12h17M12 3.5c2.4 2.6 3.6 5.5 3.6 8.5s-1.2 5.9-3.6 8.5c-2.4-2.6-3.6-5.5-3.6-8.5s1.2-5.9 3.6-8.5z"
-                  stroke="#03cf65" stroke-width="1.8" />
+                  stroke="#4B2EEB" stroke-width="1.8" />
               </svg>
               Global Support Across 15+ Timezones
             </span>
             <span class="ch-chip">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="9" fill="#e8faf0" />
-                <path d="m8 12.2 2.6 2.6L16.4 9" stroke="#03cf65" stroke-width="2.2" stroke-linecap="round"
+                <circle cx="12" cy="12" r="9" fill="#EEF2FF" />
+                <path d="m8 12.2 2.6 2.6L16.4 9" stroke="#4B2EEB" stroke-width="2.2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
               Official Meta & WhatsApp Business Partner
@@ -3681,7 +3683,7 @@
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
                   d="M20.5 12.2a8.2 8.2 0 0 1-8.4 8.1 8.1 8.1 0 0 1-3.7-.9L4 20.8l1.8-5.4A8.1 8.1 0 0 1 4.2 12.2 8.2 8.2 0 0 1 12.5 4a8.1 8.1 0 0 1 8 8.2z"
-                  fill="#22c55e" />
+                  fill="#4B2EEB" />
                 <path d="M9.2 11.2h6.2M9.2 13.6h4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" />
               </svg>
                Multiple Ways to Connect
@@ -3716,8 +3718,7 @@
               </ul>
               <a class="cr-card-btn green" href="#contact-form">Book a Meeting <svg viewBox="0 0 24 24" fill="none"
                   aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></line><polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
                 </svg></a>
             </article>
 
@@ -3745,8 +3746,7 @@
               </ul>
               <a class="cr-card-btn green" href="https://wa.me/918839888531" target="_blank"
                 rel="noopener noreferrer">Open WhatsApp <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></line><polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
                 </svg></a>
             </article>
 
@@ -3774,8 +3774,7 @@
               </ul>
               <a class="cr-card-btn purple" href="mailto:support@samyoj.com">Send Email <svg viewBox="0 0 24 24"
                   fill="none" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></line><polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
                 </svg></a>
             </article>
 
@@ -3804,8 +3803,7 @@
               <a class="cr-card-btn green" href="https://maps.google.com/?q=Samyoj+Indore+Madhya+Pradesh+India"
                 target="_blank" rel="noopener noreferrer">View on Maps <svg viewBox="0 0 24 24" fill="none"
                   aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></line><polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
                 </svg></a>
             </article>
           </div>
@@ -4339,13 +4337,13 @@
             <div class="wy-trust-copy">
               <div class="wy-trophy" aria-hidden="true">
                 <svg viewBox="0 0 72 72" fill="none">
-                  <circle cx="36" cy="36" r="34" fill="#e8faf0" />
-                  <path d="M24 18h24v8c0 8.5-5.2 14-12 14s-12-5.5-12-14v-8z" fill="#22c55e" />
-                  <path d="M24 20h-5c0 7 3.2 11 7 12M48 20h5c0 7-3.2 11-7 12" stroke="#16a34a" stroke-width="3"
+                  <circle cx="36" cy="36" r="34" fill="#EEF2FF" />
+                  <path d="M24 18h24v8c0 8.5-5.2 14-12 14s-12-5.5-12-14v-8z" fill="#4B2EEB" />
+                  <path d="M24 20h-5c0 7 3.2 11 7 12M48 20h5c0 7-3.2 11-7 12" stroke="#3B22C7" stroke-width="3"
                     stroke-linecap="round" />
-                  <path d="M36 40v6" stroke="#16a34a" stroke-width="3" stroke-linecap="round" />
-                  <rect x="28" y="46" width="16" height="5" rx="2" fill="#16a34a" />
-                  <rect x="25" y="51" width="22" height="5" rx="2.5" fill="#15803d" />
+                  <path d="M36 40v6" stroke="#3B22C7" stroke-width="3" stroke-linecap="round" />
+                  <rect x="28" y="46" width="16" height="5" rx="2" fill="#3B22C7" />
+                  <rect x="25" y="51" width="22" height="5" rx="2.5" fill="#3B22C7" />
                   <circle cx="36" cy="26" r="4" fill="#fff" opacity=".9" />
                 </svg>
               </div>
