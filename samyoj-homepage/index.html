@@ -4214,7 +4214,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: var(--wr-max);
+      max-width: var(--wr-max, 1600px);
       margin: 0 auto;
       padding: 0 30px;
       box-sizing: border-box;
@@ -4272,7 +4272,7 @@
 
     /* Headline */
     .custom-hero-title {
-      font-size: 58px;
+      font-size: clamp(28px, 5.6vw, 58px);
       font-weight: 800;
       color: #0f172a;
       line-height: 1.12;
@@ -4301,7 +4301,7 @@
 
     /* Subheading */
     .custom-hero-subtitle {
-      font-size: 19px;
+      font-size: clamp(16px, 1.8vw, 19px);
       color: #4b5563;
       line-height: 1.55;
       margin: 0 0 36px 0;
@@ -4313,6 +4313,12 @@
       gap: 16px;
       margin-bottom: 36px;
       flex-wrap: wrap;
+    }
+
+    .custom-hero-ctas .custom-btn-primary,
+    .custom-hero-ctas .custom-btn-secondary {
+      padding-left: clamp(18px, 2.4vw, 26px) !important;
+      padding-right: clamp(18px, 2.4vw, 26px) !important;
     }
 
     .custom-btn-primary {
@@ -4384,8 +4390,9 @@
     /* Trust checkmarks */
     .custom-hero-trust {
       display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
     }
 
     .trust-item {
@@ -4406,11 +4413,12 @@
     /* Custom Stats Banner */
     .custom-stats-banner {
       max-width: 1400px;
+      width: min(1400px, calc(100% - clamp(30px, 5vw, 60px)));
       margin: 10px auto 60px auto;
       background-color: #F8FAFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
-      padding: 24px 30px;
+      padding: clamp(18px, 2.2vw, 24px) clamp(16px, 3vw, 30px);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       box-sizing: border-box;
     }
@@ -4435,8 +4443,8 @@
     }
 
     .stat-icon-wrapper {
-      width: 44px;
-      height: 44px;
+      width: 38px;
+      height: 38px;
       background-color: rgba(75, 46, 235, 0.08);
       border-radius: 50%;
       display: flex;
@@ -4447,8 +4455,8 @@
     }
 
     .stat-icon-wrapper svg {
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
     }
 
     .stat-text-wrapper {
@@ -4457,21 +4465,21 @@
     }
 
     .stat-val {
-      font-size: 24px;
+      font-size: clamp(17px, 1.5vw, 20px);
       font-weight: 850;
       color: #0f172a;
       line-height: 1.2;
     }
 
     .stat-lbl {
-      font-size: 14px;
+      font-size: clamp(12px, 1.1vw, 13px);
       font-weight: 600;
       color: #6b7280;
       margin-top: 1px;
     }
 
     /* Responsive Styles */
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
       #custom-hero-section {
         min-height: auto;
         justify-content: flex-start;
@@ -4494,9 +4502,7 @@
       }
 
       .custom-hero-right {
-        width: 100%;
-        justify-content: flex-start;
-        max-width: 100%;
+        display: none;
       }
 
       .custom-hero-ctas {
@@ -4504,14 +4510,11 @@
       }
 
       .custom-hero-trust {
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        align-items: flex-start;
       }
 
       .custom-stats-banner {
-        margin-left: 24px;
-        margin-right: 24px;
-        padding: 24px;
+        padding: 20px;
       }
 
       .stats-grid {
@@ -4534,6 +4537,13 @@
       }
     }
 
+    @media (min-width: 641px) {
+      .custom-hero-ctas {
+        flex-direction: row !important;
+        align-items: center !important;
+      }
+    }
+
     @media (max-width: 640px) {
       .custom-hero-container {
         padding: 0 15px;
@@ -4541,13 +4551,11 @@
       }
 
       .custom-hero-title {
-        font-size: 32px;
         line-height: 1.15;
         margin: 0 0 16px 0;
       }
 
       .custom-hero-subtitle {
-        font-size: 16px;
         margin: 0 0 24px 0;
       }
 
@@ -4558,9 +4566,10 @@
         margin-bottom: 24px;
       }
 
-      .custom-btn-primary,
-      .custom-btn-secondary {
-        width: 100%;
+      .custom-hero-ctas .custom-btn-primary,
+      .custom-hero-ctas .custom-btn-secondary {
+        width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box;
       }
 
@@ -4730,7 +4739,7 @@
           </svg>
         </div>
         <div class="stat-text-wrapper">
-          <span class="stat-val" style="font-size: 20px;">Automated</span>
+          <span class="stat-val" style="font-size: clamp(15px, 1.4vw, 18px);">Automated</span>
           <span class="stat-lbl">Follow-Ups &amp; Drip Sequences</span>
         </div>
       </div>
@@ -4745,7 +4754,7 @@
           </svg>
         </div>
         <div class="stat-text-wrapper">
-          <span class="stat-val" style="font-size: 20px;">Lead Pipeline</span>
+          <span class="stat-val" style="font-size: clamp(15px, 1.4vw, 18px);">Lead Pipeline</span>
           <span class="stat-lbl">Turn Inquiries Into Conversions</span>
         </div>
       </div>
@@ -7385,7 +7394,7 @@
       font-size: 13.5px;
       font-weight: 600;
       color: #64748b;
-      margin-top: -20px;
+      margin-top: 4px;
       margin-bottom: 28px;
     }
     .custom-hero-microcopy .microcopy-dot {
