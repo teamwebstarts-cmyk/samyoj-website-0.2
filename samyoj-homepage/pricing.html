@@ -1015,114 +1015,225 @@
 
     .transparent-grid {
       display: grid;
-      grid-template-columns: 1fr 1.8fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .transparent-section .section-title-large {
+      line-height: 1.22;
+      margin-bottom: 12px;
+    }
+
+    .transparent-copy .section-desc {
+      margin-bottom: 24px;
+    }
+
+    .transparent-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .transparent-benefits li {
+      display: flex;
       align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #0f172a;
+      line-height: 1.4;
+    }
+
+    .transparent-benefits svg {
+      flex-shrink: 0;
     }
 
     @media (max-width: 991px) {
       .transparent-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
       }
     }
 
     .breakdown-cards-row {
       display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
     }
 
     .breakdown-card {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) auto;
+      grid-template-rows: auto auto;
+      column-gap: 16px;
+      row-gap: 4px;
+      align-items: center;
       background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 26px 18px;
-      flex: 1;
-      min-width: 180px;
-      max-width: 240px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e8eef2;
+      border-radius: 16px;
+      padding: 18px 20px;
+      width: 100%;
+      min-height: 88px;
+      text-align: left;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
 
     .breakdown-icon-circle {
-      width: 68px;
-      height: 68px;
+      grid-row: 1 / span 2;
+      width: 56px;
+      height: 56px;
       background: transparent;
       border-radius: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: #4B2EEB;
-      margin-bottom: 14px;
+      margin: 0;
       border: none;
       overflow: visible;
+      flex-shrink: 0;
     }
 
     .breakdown-icon-circle img {
-      width: 68px;
-      height: 68px;
+      width: 56px;
+      height: 56px;
       object-fit: contain;
       display: block;
     }
 
     .breakdown-title {
-      font-size: 13px;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 4px;
-    }
-
-    .breakdown-sub {
-      font-size: 11px;
-      color: #64748b;
-      margin-bottom: 12px;
-      min-height: 28px;
-    }
-
-    .breakdown-val {
+      grid-column: 2;
+      grid-row: 1;
       font-size: 14px;
       font-weight: 800;
       color: #0f172a;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .breakdown-sub {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 12px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.45;
+      min-height: 0;
+    }
+
+    .breakdown-val {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      align-self: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      white-space: nowrap;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
     }
 
     .breakdown-val.green {
       color: #4B2EEB;
+      background: #EEF2FF;
+      border-color: #c7d2fe;
     }
 
     .meta-note-bar {
-      margin-top: 20px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 12px 18px;
+      margin-top: 16px;
       display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #EEF2FF;
+      border: 1px solid #c7d2fe;
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 14px rgba(75, 46, 235, 0.06);
+    }
+
+    .meta-note-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #4B2EEB;
+      border: 1px solid #c7d2fe;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .meta-note-icon svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+
+    .meta-note-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .meta-note-text {
+      margin: 0 0 10px 0;
       font-size: 13px;
+      font-weight: 600;
+      line-height: 1.5;
       color: #475569;
+    }
+
+    .meta-note-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
     }
 
     @media (max-width: 640px) {
       .meta-note-bar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-        text-align: left;
       }
       .breakdown-card {
-        max-width: 100%;
-        min-width: 0;
-        flex: 1 1 100%;
+        grid-template-columns: 48px minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        min-height: 0;
+      }
+      .breakdown-icon-circle {
+        grid-row: 1 / span 2;
+        width: 48px;
+        height: 48px;
+      }
+      .breakdown-icon-circle img {
+        width: 48px;
+        height: 48px;
+      }
+      .breakdown-val {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: start;
+        margin-top: 4px;
       }
     }
 
-    .meta-note-bar a {
+    .meta-note-links a {
       color: #4B2EEB;
       text-decoration: none;
+      font-size: 13px;
       font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .meta-note-links a:hover {
+      color: #3b22c9;
+      text-decoration: underline;
     }
 
     /* Section 5: Compare Plans Table */
@@ -4802,27 +4913,31 @@
     <!-- Section 3: 3-Part Bill Explainer -->
     <section class="transparent-section">
       <div class="wr transparent-grid">
-        <div>
+        <div class="transparent-copy">
+          <div class="custom-badge-pill">TRANSPARENT PRICING</div>
           <h2 class="section-title-large">
             No hidden charges. <span class="highlight-green">Just Clear, Honest</span> pricing.
           </h2>
-          <p class="section-desc" style="margin-bottom: 24px;">
+          <p class="section-desc">
             Your bill has three parts. We keep each one simple so you always know what you're paying for.
           </p>
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pay only for what you use
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Separate platform &amp; usage charges
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> No surprises, ever
-            </div>
-          </div>
+          <ul class="transparent-benefits">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Pay only for what you use
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Separate platform &amp; usage charges
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#4B2EEB"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              No surprises, ever
+            </li>
+          </ul>
         </div>
 
-        <div>
+        <div class="transparent-breakdown">
           <div class="breakdown-cards-row">
             <div class="breakdown-card">
               <div class="breakdown-icon-circle">
@@ -4830,7 +4945,7 @@
               </div>
               <div class="breakdown-title">1. Samyoj Plan</div>
               <div class="breakdown-sub">Inbox, CRM, automation, team features &amp; plan-level AI capabilities</div>
-              <div class="breakdown-val">Subscription</div>
+              <div class="breakdown-val green">Subscription</div>
             </div>
             <div class="breakdown-card">
               <div class="breakdown-icon-circle">
@@ -4850,12 +4965,17 @@
             </div>
           </div>
 
-          <div class="meta-note-bar">
-            <span>ⓘ Meta charges are at actuals. We do not markup your WhatsApp usage.</span>
-            <span style="display:flex; gap:16px; flex-wrap:wrap;">
-              <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta rate guide →</a>
-              <a href="#faq-ai">AI usage details →</a>
+          <div class="meta-note-bar" role="note" aria-label="Important billing information">
+            <span class="meta-note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             </span>
+            <div class="meta-note-body">
+              <p class="meta-note-text">Meta charges are at actuals. We do not markup your WhatsApp usage.</p>
+              <div class="meta-note-links">
+                <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta rate guide →</a>
+                <a href="#faq-ai">AI usage details →</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
