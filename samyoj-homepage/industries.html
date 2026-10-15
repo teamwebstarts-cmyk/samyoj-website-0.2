@@ -3629,7 +3629,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="industries.html">Industries</a></li>
+                <li><a href="industries.html" class="active" aria-current="page">Industries</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
@@ -4511,24 +4511,21 @@
   </script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Current URL detection
-    var currentPath = window.location.pathname.split('/').pop();
-    
-    // Default to index.html if path is empty/root
-    if (currentPath === '' || currentPath === '/') {
-      currentPath = 'index.html';
+    function navPageKey(pathOrHref) {
+      var segment = (pathOrHref || '').split('?')[0].split('#')[0].split('/').pop();
+      if (!segment) return 'index';
+      return segment.replace(/\.html$/i, '').toLowerCase();
     }
 
-    // Target all links inside .um-nav-links
-    var navLinks = document.querySelectorAll('.um-nav-links a');
+    var currentKey = navPageKey(window.location.pathname);
 
-    navLinks.forEach(function(link) {
-      var href = link.getAttribute('href');
-
-      if (href === currentPath) {
-        link.classList.add('active');
+    document.querySelectorAll('.um-nav-links a').forEach(function(link) {
+      var isActive = navPageKey(link.getAttribute('href')) === currentKey;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'page');
       } else {
-        link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     });
   });
