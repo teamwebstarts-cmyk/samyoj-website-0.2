@@ -6273,8 +6273,8 @@
     /* Compact Trust Card &mdash; sits below the mockup image inside the right column */
     .setup-trust-card {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 20px) clamp(16px, 2.5vw, 24px);
       background-color: #F8FAFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
@@ -6287,9 +6287,15 @@
 
     .setup-trust-item {
       display: flex;
-      align-items: center;
-      gap: 16px;
+      align-items: flex-start;
+      gap: clamp(10px, 1.5vw, 16px);
       text-align: left;
+      min-width: 0;
+    }
+
+    .setup-trust-text {
+      min-width: 0;
+      flex: 1;
     }
 
     .setup-trust-divider {
@@ -6524,6 +6530,10 @@
     }
 
     @media (max-width: 640px) {
+      .setup-trust-card {
+        grid-template-columns: 1fr;
+      }
+
       .setup-cta-block {
         flex-direction: column;
         align-items: flex-start;
@@ -8077,7 +8087,7 @@
           </div>
 
           <!-- CTA Block -->
-          <!--<div class="setup-cta-block">
+          <div class="setup-cta-block">
             <a href="https://app.samyoj.com/" class="custom-btn-primary">
               Start 14-Day Free Trial
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
@@ -8093,10 +8103,10 @@
               </svg>
               <span>No Credit Card Required</span>
               <span
-                style="display:inline-block;width:4px;height:4px;border-radius:50%;background-color:#4B2EEB;margin:04px;"></span>
+                style="display:inline-block;width:4px;height:4px;border-radius:50%;background-color:#4B2EEB;margin:0 4px;"></span>
               <span>Instant Setup</span>
             </div>
-          </div>-->
+          </div>
         </div>
 
         <!-- Right Column: Dashboard Mockup -->
@@ -8117,7 +8127,7 @@
                   </svg>
                 </div>
                 <div class="setup-trust-text">
-                  <div class="setup-trust-title">Keep Every Conversation Organized</div>
+                  <div class="setup-trust-title">Organized Inbox</div>
                   <p>&lt; 5s instant AI replies</p>
                 </div>
               </div>
