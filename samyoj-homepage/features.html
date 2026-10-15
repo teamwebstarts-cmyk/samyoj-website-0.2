@@ -1431,10 +1431,12 @@
       left: 50%;
       color: black;
       display: block;
-      padding: 40px;
+      padding: clamp(20px, 5vw, 40px);
       z-index: 10001;
       position: fixed;
-      min-width: 500px;
+      min-width: min(500px, calc(100vw - 32px));
+      max-width: calc(100vw - 32px);
+      box-sizing: border-box;
       transform: translate(-50%, -50%);
       background: white;
       box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
@@ -1546,8 +1548,8 @@
       position: relative;
       background-color: #ffffff;
       box-sizing: border-box;
-      padding: calc(var(--um-header-height) + 64px) 0 64px 0;
-      --paddingTop: 64px;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 64px)) 0 var(--sy-hero-pad-bottom, clamp(40px, 8vw, 64px)) 0;
+      --paddingTop: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
     }
@@ -1557,7 +1559,7 @@
       width: 100%;
       max-width: var(--wr-max);
       margin: 0 auto;
-      padding: 0 30px;
+      padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
       box-sizing: border-box;
     }
 
@@ -1575,7 +1577,7 @@
     ._6ae479cf {
       flex: 1.1;
       max-width: 640px;
-      padding-right: 30px;
+      padding-right: clamp(0px, 3vw, 30px);
       box-sizing: border-box;
       text-align: left;
       display: flex;
@@ -1599,7 +1601,7 @@
     /* Heading matching .custom-hero-title */
     ._23da6a61 {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 58px;
+      font-size: clamp(28px, 5.6vw, 58px);
       font-weight: 800;
       color: #0f172a !important;
       line-height: 1.12;
@@ -1621,7 +1623,7 @@
     /* Subtitle matching .custom-hero-subtitle */
     ._da94c09a {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 19px;
+      font-size: clamp(16px, 1.8vw, 19px);
       color: #4b5563;
       line-height: 1.55;
       margin: 0 0 28px 0;
@@ -1775,15 +1777,6 @@
 
     /* Responsive Styles matching Homepage */
     @media (max-width: 1024px) {
-      ._5de7520e {
-        padding: calc(var(--um-header-height) + 64px) 0 64px 0;
-        --paddingTop: 64px;
-      }
-
-      ._5de7520e > .wr {
-        padding: 0 24px;
-      }
-
       ._299cb117 {
         flex-direction: column;
         align-items: flex-start;
@@ -1823,8 +1816,9 @@
     }
 
     @media (max-width: 640px) {
-      ._5de7520e > .wr {
-        padding: 0 15px;
+      ._5de7520e {
+        --sy-hero-clearance: 48px;
+        --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
       }
 
       ._299cb117 {
@@ -2548,7 +2542,12 @@
       position: relative;
       padding-top: 0;
       --paddingTop: 0;
-      padding-bottom: 60px;
+      padding-bottom: clamp(40px, 8vw, 60px);
+    }
+
+    ._0594aa41 > .wr {
+      padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
+      box-sizing: border-box;
     }
 
     /* ── Layer 1: Decorative hero band ── */
@@ -2559,7 +2558,7 @@
       flex-direction: column;
       align-items: center;
       box-sizing: border-box;
-      padding: 40px 24px 36px;
+      padding: clamp(32px, 6vw, 40px) 0 clamp(28px, 5vw, 36px);
       overflow: hidden;
     }
 
@@ -3070,7 +3069,7 @@
     /* ── AI Chatbot section ── */
     .ai-section {
       position: relative;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       background: #fff;
       overflow: hidden;
       font: var(--font-text);
@@ -4452,6 +4451,7 @@
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
   <link rel="stylesheet" href="samyoj-transitions.css">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
+  <link rel="stylesheet" href="samyoj-features-responsive.css?v=1">
   <link rel="stylesheet" href="samyoj-feature-showcase.css?v=9">
   <script src="samyoj-feature-showcase.js?v=1" defer></script>
 </head>
@@ -6456,8 +6456,12 @@
               io.unobserve(en.target);
             }
           });
-        }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
         els.forEach(function (e) { io.observe(e); });
+        var hashTarget = location.hash && document.querySelector(location.hash);
+        if (hashTarget && hashTarget.hasAttribute('data-reveal')) {
+          hashTarget.classList.add('is-visible');
+        }
       } catch (err) {
         document.querySelectorAll('[data-reveal]').forEach(function (e) { e.classList.add('is-visible'); });
       }

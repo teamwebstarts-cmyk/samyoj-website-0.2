@@ -1,0 +1,80 @@
+/**
+ * Features page (features.html) responsive primitives and overrides.
+ */
+:root {
+  --sy-bp-sm: 640px;
+  --sy-bp-md: 768px;
+  --sy-bp-lg: 1024px;
+  --sy-page-inline: clamp(16px, 4vw, 30px);
+  --sy-section-pad-y: clamp(40px, 8vw, 64px);
+  --sy-hero-clearance: 64px;
+  --sy-hero-pad-bottom: clamp(40px, 8vw, 64px);
+}
+
+html {
+  overflow-x: clip;
+}
+
+/* Opening hero (first section after header) */
+section._5de7520e {
+  --paddingTop: 0;
+  padding: calc(var(--um-header-height) + var(--sy-hero-clearance)) 0 var(--sy-hero-pad-bottom) 0;
+}
+
+section._5de7520e > .wr {
+  padding-inline: var(--sy-page-inline);
+  box-sizing: border-box;
+}
+
+/* Legacy feature grid section */
+section._0594aa41 > .wr {
+  padding-inline: var(--sy-page-inline);
+  box-sizing: border-box;
+}
+
+.feat-hero-band {
+  padding-inline: 0;
+}
+
+.feat-value-bar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-section-center,
+.demo-inner,
+.ai-section > .wr {
+  padding-inline: var(--sy-page-inline);
+  box-sizing: border-box;
+}
+
+.custom-section-title {
+  font-size: clamp(28px, 4.5vw, 42px);
+}
+
+/* Modals */
+.umsoModal {
+  min-width: min(500px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: clamp(20px, 5vw, 40px);
+}
+
+@media (max-width: 640px) {
+  section._5de7520e {
+    --sy-hero-clearance: 48px;
+    --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
+  }
+
+  ._23da6a61 {
+    font-size: clamp(28px, 7.5vw, 32px) !important;
+  }
+
+  .hero-btn-secondary,
+  ._bb883e3c.btn.primary,
+  .feat-cta-btn,
+  .demo-cta-btn,
+  .feat-badge {
+    white-space: normal;
+  }
+}
