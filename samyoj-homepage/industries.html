@@ -1559,6 +1559,30 @@
       box-sizing: border-box;
     }
 
+    .ind-hero-copy .custom-badge-pill,
+    .ind-dir-header .custom-badge-pill,
+    .ind-adv-copy .custom-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background-color: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      border-radius: 9999px;
+      color: #4B2EEB;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .ind-dir-header .custom-badge-pill {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .ind-hero-title {
       font: var(--font-hero);
       font-size: 58px;
@@ -3553,9 +3577,10 @@
     <div class="wr">
       <div class="ind-hero">
         <div class="ind-hero-copy">
+          <div class="custom-badge-pill">INDUSTRIES</div>
           <h1 class="ind-hero-title">Turn Inquiries into Revenue with <span class="ind-accent">AI-Powered Workflows</span></h1>
 
-          <p class="ind-hero-sub">Samyoj unifies WhatsApp, Instagram, and Facebook inquiries into automated industry journeys. Capture leads 24/7, qualify buyer intent with AI, assign reps, and trigger automated follow-ups tailored to your sector.</p>
+          <p class="ind-hero-sub">Capture leads 24/7, qualify buyer intent with AI, assign reps, and trigger automated follow-ups tailored to your sector.</p>
 
           <div class="ind-hero-ctas">
             <a href="#industries-grid" class="btn primary"><span>Explore your industry</span>
@@ -3664,6 +3689,7 @@
   <section id="industries-grid" class="ind-dir theme-sub_wf76sy1ski cards-card_6lmqy9qaws buttons-btn_nob6m8rpy4">
     <div class="wr">
       <header class="ind-dir-header" data-reveal>
+        <div class="custom-badge-pill">BY INDUSTRY</div>
         <h2 class="ind-dir-title">Explore <span class="ind-accent">Industry-wise</span> AI Communication Workflows</h2>
       </header>
       <div class="ind-dir-grid">
@@ -3896,6 +3922,7 @@
     <div class="wr">
       <div class="ind-adv-layout">
         <div class="ind-adv-copy">
+          <div class="custom-badge-pill" data-reveal>WHY SAMYOJ</div>
           <h2 class="ind-adv-title" data-reveal> Why Fast-Growing Businesses Choose <span class="ind-accent">Samyoj</span></h2>
           <p class="ind-adv-sub" data-reveal>Everything you need to capture leads, automate customer conversations, and close deals—all in one unified workspace for WhatsApp, Instagram, and Facebook.
 </p>

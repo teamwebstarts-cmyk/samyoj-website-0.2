@@ -150,6 +150,23 @@
       max-width: 540px;
     }
 
+    .blog-hero-left .custom-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background-color: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      border-radius: 9999px;
+      color: #4B2EEB;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: var(--font-head);
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
     .blog-hero-right {
       width: 100%;
       display: flex;
@@ -312,12 +329,25 @@
       gap: 48px; /* Increased gap for better spacing */
       align-items: start;
       margin-bottom: 60px;
+      color: var(--ink);
+    }
+
+    .blog-main-layout .blog-section-title,
+    .blog-main-layout .blog-popular-title,
+    .blog-main-layout .blog-cat-name {
+      color: #0f172a;
+    }
+
+    .blog-main-layout .blog-popular-date,
+    .blog-main-layout .blog-cat-count,
+    .blog-main-layout .blog-featured-main-desc {
+      color: #64748b;
     }
 
     .blog-content-area {
       min-width: 0;
       padding-right: 24px;
-      border-right: 1px solid #edf3f0; /* Subtle vertical divider line */
+      border-right: 1px solid #e2e8f0;
     }
 
     .blog-sidebar {
@@ -577,7 +607,7 @@
       box-shadow: 0 0 0 3.5px rgba(75, 46, 235, 0.14);
       background: #fff;
     }
-    .blog-search input::placeholder { color: #9bb0a7; }
+    .blog-search input::placeholder { color: #94a3b8; }
     .blog-search-icon {
       position: absolute;
       right: 14px;
@@ -627,8 +657,9 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: #e8f7ee;
-      color: var(--green-deep);
+      background: #EEF2FF;
+      color: #4B2EEB;
+      border: 1px solid #c7d2fe;
       font-size: 12px;
       font-weight: 800;
       font-family: var(--font-head);
@@ -669,12 +700,12 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px 0;
-      border-bottom: 1px solid #edf3f0;
+      border-bottom: 1px solid #e2e8f0;
       cursor: pointer;
       transition: color .18s;
     }
     .blog-cat-item:last-child { border-bottom: none; }
-    .blog-cat-item:hover .blog-cat-name { color: var(--green-deep); }
+    .blog-cat-item:hover .blog-cat-name { color: #4B2EEB; }
 
     .blog-cat-left {
       display: flex;
@@ -693,8 +724,9 @@
       width: 28px;
       height: 28px;
       border-radius: 8px;
-      background: #e8f7ee;
-      color: var(--green-deep);
+      background: #EEF2FF;
+      color: #4B2EEB;
+      border: 1px solid #c7d2fe;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1422,6 +1454,7 @@
     <section class="blog-hero" aria-label="Blog hero">
       <div class="blog-hero-inner">
         <div class="blog-hero-left">
+          <div class="custom-badge-pill">SAMYOJ BLOG</div>
           <h1>
             Insights to help you<br>
             <span class="green-word">connect</span>, engage<br>

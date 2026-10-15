@@ -1598,6 +1598,23 @@
       width: 100%;
     }
 
+    ._ecbee37c .custom-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background-color: rgba(75, 46, 235, 0.08);
+      border: 1px solid rgba(75, 46, 235, 0.22);
+      border-radius: 9999px;
+      color: #4B2EEB;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
     /* Heading matching .custom-hero-title */
     ._23da6a61 {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -3085,7 +3102,8 @@
     /* ── AI Chatbot section ── */
     .ai-section {
       position: relative;
-      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
+      padding: 64px 0;
+      --paddingTop: 0;
       background: #fff;
       overflow: hidden;
       font: var(--font-text);
@@ -3389,7 +3407,7 @@
 
     @media (max-width: 700px) {
       .ai-section {
-        padding: 40px 0 36px;
+        padding: 56px 0;
       }
 
       .ai-stats {
@@ -4469,7 +4487,7 @@
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
   <link rel="stylesheet" href="samyoj-features-responsive.css?v=1">
-  <link rel="stylesheet" href="samyoj-feature-showcase.css?v=9">
+  <link rel="stylesheet" href="samyoj-feature-showcase.css?v=10">
   <script src="samyoj-feature-showcase.js?v=1" defer></script>
 </head>
 
@@ -4724,6 +4742,7 @@
       <div class="_299cb117">
         <div class="_6ae479cf">
           <header class="_ecbee37c" style="position:relative">
+            <div class="custom-badge-pill">PLATFORM FEATURES</div>
             <h1 class="_23da6a61 um-text" style="color: #0f172a;">
               <p>Every Customer Conversation.<br /><span class="highlight-green feat-accent">One Smarter Platform.</span></p>
             </h1>
