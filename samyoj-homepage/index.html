@@ -1496,10 +1496,12 @@
       left: 50%;
       color: black;
       display: block;
-      padding: 40px;
+      padding: clamp(20px, 5vw, 40px);
       z-index: 10001;
       position: fixed;
-      min-width: 500px;
+      min-width: min(500px, calc(100vw - 32px));
+      max-width: calc(100vw - 32px);
+      box-sizing: border-box;
       transform: translate(-50%, -50%);
       background: white;
       box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
@@ -3702,6 +3704,7 @@
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=1">
+  <link rel="stylesheet" href="samyoj-homepage-responsive.css?v=1">
 </head>
 
 <body class="noScript">
@@ -4204,7 +4207,7 @@
       flex-direction: column;
       justify-content: center;
       box-sizing: border-box;
-      padding: calc(var(--um-header-height) + 64px) 0 64px 0;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 64px)) 0 var(--sy-hero-pad-bottom, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
     }
@@ -4215,14 +4218,14 @@
       align-items: center;
       max-width: var(--wr-max, 1600px);
       margin: 0 auto;
-      padding: 0 30px;
+      padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
       box-sizing: border-box;
     }
 
     .custom-hero-left {
       flex: 1.1;
       max-width: 640px;
-      padding-right: 30px;
+      padding-right: clamp(0px, 3vw, 30px);
       box-sizing: border-box;
       text-align: left;
     }
@@ -4412,8 +4415,8 @@
     /* Custom Stats Banner */
     .custom-stats-banner {
       max-width: 1400px;
-      width: min(1400px, calc(100% - clamp(30px, 5vw, 60px)));
-      margin: 10px auto 60px auto;
+      width: min(1400px, calc(100% - 2 * var(--sy-page-inline, clamp(16px, 4vw, 30px))));
+      margin: clamp(8px, 2vw, 16px) auto clamp(40px, 8vw, 60px) auto;
       background-color: #F8FAFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
@@ -4478,17 +4481,15 @@
     }
 
     /* Responsive Styles */
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       #custom-hero-section {
         justify-content: flex-start;
-        padding: calc(var(--um-header-height) + 64px) 0 64px 0;
       }
 
       .custom-hero-container {
         flex-direction: column;
         text-align: left;
         gap: 32px;
-        padding: 0 24px;
       }
 
       .custom-hero-left {
@@ -4543,8 +4544,12 @@
     }
 
     @media (max-width: 640px) {
+      #custom-hero-section {
+        --sy-hero-clearance: 48px;
+        --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
+      }
+
       .custom-hero-container {
-        padding: 0 15px;
         gap: 24px;
       }
 
@@ -4772,7 +4777,7 @@
         Customer conversations are happening across multiple chat apps, but without a centralized system, warm inquiries slip away and sales teams struggle to keep up.
       </p>
 
-      <div class="problem-grid" data-reveal data-reveal-stagger>
+      <div class="problem-grid sy-grid-3-2-1" data-reveal data-reveal-stagger>
         <div class="problem-card">
           <div class="problem-card-icon wa">
             <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
@@ -4845,14 +4850,14 @@
     /* Brand Logos & Video Section Styles */
     #custom-brand-video-section {
       background-color: #ffffff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .custom-section-center {
       max-width: 1420px;
       margin: 0 auto;
-      padding: 0 30px;
+      padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
       box-sizing: border-box;
       text-align: center;
     }
@@ -5419,10 +5424,6 @@
 
     /* Responsive Rules for Brand logos and video section */
     @media (max-width: 1024px) {
-      .custom-section-center {
-        padding: 0 24px;
-      }
-
       .custom-section-title {
         margin-bottom: 24px;
       }
@@ -5469,10 +5470,6 @@
     }
 
     @media (max-width: 640px) {
-      .custom-section-center {
-        padding: 0 15px;
-      }
-
       .custom-grey-box {
         padding: 20px;
         border-radius: 18px;
@@ -6025,7 +6022,7 @@
     /* Redesigned 10-Minute WABA Setup Section */
     #custom-get-started-section {
       background-color: #ffffff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', sans-serif;
       overflow: hidden;
     }
@@ -6264,8 +6261,8 @@
     /* Compact Trust Card &mdash; sits below the mockup image inside the right column */
     .setup-trust-card {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px 20px;
+      grid-template-columns: 1fr;
+      gap: 18px;
       background-color: #F8FAFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
@@ -6449,7 +6446,7 @@
     }
 
     /* Responsive details */
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       .setup-dashboard-img,
       .setup-backdrop-blob {
         display: none;
@@ -6477,8 +6474,18 @@
         max-width: 100%;
       }
 
+      .setup-right-col {
+        width: 100%;
+      }
+
+      .setup-graphic-wrapper {
+        align-items: stretch;
+      }
+
       .setup-trust-card {
         padding: 20px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .setup-trust-item {
@@ -6505,10 +6512,6 @@
     }
 
     @media (max-width: 640px) {
-      .setup-trust-card {
-        grid-template-columns: 1fr;
-      }
-
       .setup-cta-block {
         flex-direction: column;
         align-items: flex-start;
@@ -6537,7 +6540,7 @@
 
     /* --- Social Proof & Onboarding Section --- */
     .sps-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       background-color: #ffffff;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: #1d1d1f;
@@ -6871,7 +6874,7 @@
     }
 
     .sps-gs-left h3 {
-      font-size: 28px;
+      font-size: clamp(22px, 4vw, 28px);
       font-weight: 800;
       color: #0f172a;
       margin: 0 0 12px 0;
@@ -7455,7 +7458,7 @@
     /* 2. Problem Section */
     .custom-problem-section {
       background-color: #ffffff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       border-top: 1px solid #f1f5f9;
     }
@@ -7467,9 +7470,6 @@
       line-height: 1.6;
     }
     .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: left;
@@ -7506,7 +7506,7 @@
     .problem-card-icon.warn { background: #fff7ed; color: #f97316; }
     .problem-card-icon.tabs { background: #f5f3ff; color: #7c3aed; }
     .problem-card-title {
-      font-size: 18px;
+      font-size: clamp(16px, 2.2vw, 18px);
       font-weight: 700;
       color: #0f172a;
       margin: 0 0 10px 0;
@@ -7521,14 +7521,11 @@
     /* 7. CRM Section */
     .custom-crm-section {
       background-color: #f8faff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       border-top: 1px solid #e2e8f0;
     }
     .crm-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: left;
@@ -7773,19 +7770,11 @@
     }
 
     @media (max-width: 900px) {
-      .problem-grid,
-      .crm-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
       .comparison-container {
         grid-template-columns: 1fr;
       }
     }
     @media (max-width: 640px) {
-      .problem-grid,
-      .crm-grid {
-        grid-template-columns: 1fr;
-      }
       .custom-final-cta-actions {
         flex-direction: column;
         width: 100%;
@@ -8085,7 +8074,7 @@
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
-            <div class="setup-cta-info" style="white-space: nowrap; flex-shrink:0;">
+            <div class="setup-cta-info">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
                 stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12" />
@@ -8521,7 +8510,7 @@
         Every message across WhatsApp, Instagram, and Facebook becomes structured customer context with stages, tags, ownership, and pipeline tracking.
       </p>
 
-      <div class="crm-grid" data-reveal data-reveal-stagger>
+      <div class="crm-grid sy-grid-3-2-1" data-reveal data-reveal-stagger>
         <div class="crm-card">
           <div class="crm-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
