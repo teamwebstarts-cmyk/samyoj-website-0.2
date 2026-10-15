@@ -3975,14 +3975,18 @@
   <style>
     /* Custom Hero Section Styles */
     #custom-hero-section {
+      --sy-hero-clearance: clamp(16px, 3vh, 36px);
+      --sy-hero-pad-bottom: clamp(20px, 3vh, 36px);
       background-color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       box-sizing: border-box;
-      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 64px)) 0 var(--sy-hero-pad-bottom, clamp(40px, 8vw, 64px)) 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      padding: calc(var(--um-header-height, 115px) + var(--sy-hero-clearance)) 0 var(--sy-hero-pad-bottom);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .custom-hero-container {
@@ -3990,6 +3994,7 @@
       justify-content: space-between;
       align-items: center;
       max-width: var(--wr-max, 1600px);
+      width: 100%;
       margin: 0 auto;
       padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
       box-sizing: border-box;
@@ -4004,23 +4009,29 @@
     }
 
     .custom-hero-right {
-      flex: 1.2;
+      flex: 1.3;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       box-sizing: border-box;
-      max-width: 720px;
+      max-width: 840px;
     }
 
     .graphic-container {
       position: relative;
       width: 100%;
+      filter: none;
+      box-shadow: none;
     }
 
     .hero-right-img {
       width: 100%;
       height: auto;
+      max-height: calc(100svh - var(--um-header-height, 115px) - 32px);
       display: block;
+      object-fit: contain;
+      filter: none;
+      box-shadow: none;
     }
 
     /* Award Pill Badge */
@@ -4249,6 +4260,8 @@
     .stat-text-wrapper {
       display: flex;
       flex-direction: column;
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     .stat-val {
@@ -4263,6 +4276,10 @@
       font-weight: 600;
       color: #6b7280;
       margin-top: 1px;
+      line-height: 1.35;
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
 
     /* Responsive Styles */
@@ -4274,7 +4291,7 @@
       .custom-hero-container {
         flex-direction: column;
         text-align: left;
-        gap: 32px;
+        gap: clamp(16px, 3vh, 28px);
       }
 
       .custom-hero-left {
@@ -4286,7 +4303,22 @@
       }
 
       .custom-hero-right {
-        display: none;
+        display: flex;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: min(100%, 760px);
+        margin-inline: auto;
+        justify-content: center;
+      }
+
+      .graphic-container {
+        width: 100%;
+      }
+
+      .hero-right-img {
+        width: 100%;
+        max-height: min(48svh, 520px);
+        margin-inline: auto;
       }
 
       .custom-hero-ctas {
@@ -4330,12 +4362,13 @@
 
     @media (max-width: 640px) {
       #custom-hero-section {
-        --sy-hero-clearance: 48px;
-        --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
+        --sy-hero-clearance: clamp(14px, 2.5vh, 24px);
+        --sy-hero-pad-bottom: clamp(18px, 3vh, 28px);
+        justify-content: flex-start;
       }
 
       .custom-hero-container {
-        gap: 24px;
+        gap: clamp(14px, 2.5vh, 20px);
       }
 
       .custom-hero-title {
@@ -4345,6 +4378,14 @@
 
       .custom-hero-subtitle {
         margin: 0 0 24px 0;
+      }
+
+      .custom-hero-right {
+        max-width: 100%;
+      }
+
+      .hero-right-img {
+        max-height: min(42svh, 360px);
       }
 
       .custom-hero-ctas {
@@ -4371,6 +4412,27 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
         justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .stat-icon-wrapper {
+        width: 36px;
+        height: 36px;
+      }
+
+      .stat-text-wrapper {
+        flex: 1 1 0;
+      }
+
+      .stat-val {
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .stat-lbl {
+        font-size: 12px;
+        line-height: 1.4;
       }
     }
   </style>
@@ -4467,7 +4529,7 @@
       <!-- Right Column: Graphic -->
       <div class="custom-hero-right">
         <div class="graphic-container">
-          <img class="hero-right-img" src="New%20images/first%20image.png" alt="Samyoj Omnichannel Sales and CRM Platform Graphic" width="1351" height="1164" decoding="async" fetchpriority="high" draggable="false" style="object-fit: contain;">
+          <img class="hero-right-img" src="New%20images/homepage-hero-crm-v2.png" alt="Samyoj CRM showing connected channels, conversations, and qualified leads" width="1536" height="1024" decoding="async" fetchpriority="high" draggable="false" style="object-fit: contain;">
         </div>
       </div>
 
@@ -4543,92 +4605,15 @@
     </div>
   </div>
 
-  <!-- 2. PROBLEM SECTION -->
-  <section id="custom-problem-section" class="custom-problem-section" data-reveal>
-    <div class="custom-section-center">
-      <div class="custom-trust-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <line x1="12" y1="8" x2="12" y2="12" stroke-width="2" stroke-linecap="round" />
-          <line x1="12" y1="16" x2="12.01" y2="16" stroke-width="2" stroke-linecap="round" />
-        </svg>
-        <span>The Multi-Channel Challenge</span>
-      </div>
-
-      <h2 class="custom-section-title">
-        Your customers are everywhere.<br><span class="highlight-green">Your team shouldn't be.</span>
-      </h2>
-      <p class="custom-section-subtitle">
-        Customer conversations are happening across multiple chat apps, but without a centralized system, warm inquiries slip away and sales teams struggle to keep up.
-      </p>
-
-      <div class="problem-grid sy-grid-3-2-1" data-reveal data-reveal-stagger>
-        <div class="problem-card">
-          <div class="problem-card-icon wa">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-              <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2z" />
-            </svg>
-          </div>
-          <h3 class="problem-card-title">WhatsApp Conversations</h3>
-          <p class="problem-card-desc">High-intent inquiries arrive constantly on WhatsApp, but get trapped in personal phones without shared visibility or team ownership.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon ig">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
-            </svg>
-          </div>
-          <h3 class="problem-card-title">Instagram DMs &amp; Comments</h3>
-          <p class="problem-card-desc">Story replies, post comments, and DMs get lost in notifications. Potential buyers move on to competitors before anyone responds.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon fb">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </div>
-          <h3 class="problem-card-title">Facebook Messages</h3>
-          <p class="problem-card-desc">Messenger inquiries sit unattended because sales reps only check their primary email or CRM, missing valuable buyer signals.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon ads">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-            </svg>
-          </div>
-          <h3 class="problem-card-title">Leads From Meta Ads</h3>
-          <p class="problem-card-desc">Paid Meta and Click-to-Chat ads generate clicks, but without automated qualification, ad spend is wasted on manual response delays.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon warn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
-          </div>
-          <h3 class="problem-card-title">Manual Follow-Ups</h3>
-          <p class="problem-card-desc">Sales reps jot down reminders in spreadsheets. Follow-ups happen late or get forgotten completely, causing warm deals to go cold.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon tabs">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9"/>
-            </svg>
-          </div>
-          <h3 class="problem-card-title">Scattered Tools &amp; Tabs</h3>
-          <p class="problem-card-desc">Customer data is scattered across separate windows. Reps lack conversation history, leading to repetitive questions and missed inquiries.</p>
-        </div>
-      </div>
-    </div>
+  <!-- 2. SHARED INBOX SECTION -->
+  <section id="custom-problem-section" class="custom-problem-section" aria-label="Samyoj shared inbox and team follow-through">
+    <iframe
+      class="samyoj-shared-inbox-frame"
+      src="samyoj-hero.html?v=7"
+      title="Samyoj shared inbox: connected channels, conversations, and AI-assisted follow-through"
+      loading="lazy"
+      scrolling="no"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </section>
 
   <style>
@@ -7252,10 +7237,26 @@
 
     /* 2. Problem Section */
     .custom-problem-section {
-      background-color: #ffffff;
-      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      border-top: 1px solid #f1f5f9;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      background: #fafaff;
+      border-top: 0;
+      scroll-margin-top: var(--um-header-height, 115px);
+    }
+    .samyoj-shared-inbox-frame {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1672 / 941;
+      border: 0;
+      background: #fafaff;
+    }
+    @media (max-width: 640px) {
+      .samyoj-shared-inbox-frame {
+        height: min(1600px, 372.1vw);
+        aspect-ratio: auto;
+      }
     }
     .custom-section-subtitle {
       font-size: clamp(16px, 1.4vw, 18px);
