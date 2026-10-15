@@ -19,12 +19,12 @@
     --card-shadow:0 8px 28px rgba(76,56,160,.08),0 1px 3px rgba(76,56,160,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;background:#fafaff;overflow:hidden}
+  html,body{height:100%;background:#ffffff;overflow:hidden}
   body{font-family:'Inter',system-ui,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
 
   /* ===== fixed 1672x941 stage, scaled by JS to fit any viewport ===== */
   #stage{position:absolute;left:0;top:0;width:1672px;height:941px;transform-origin:0 0;overflow:hidden;
-    background:linear-gradient(180deg,#ffffff 0%,#fbfaff 100%)}
+    background:#ffffff}
   .abs{position:absolute}
 
   /* ---------- background blobs ---------- */
@@ -36,16 +36,6 @@
   .b5{left:1300px;top:700px;width:500px;height:400px;background:radial-gradient(closest-side,#f3f0ff,transparent);opacity:.7}
 
   .dots{position:absolute;background-image:radial-gradient(circle,#d3ccee 1.5px,transparent 1.7px)}
-
-  /* ---------- badge / headline ---------- */
-  .badge{left:137px;top:33px;width:365px;height:46px;border-radius:23px;background:#efeafd;
-    display:flex;align-items:center;gap:11px;padding-left:24px;font-size:15px;font-weight:500;color:#4f36cf;white-space:nowrap}
-  .badge svg{width:18px;height:18px;animation:spin 6s linear infinite}
-  h1{left:137px;top:98px;font-family:'Plus Jakarta Sans','Inter',sans-serif;font-weight:800;font-size:82px;line-height:78px;letter-spacing:-3px;color:var(--ink);white-space:nowrap}
-  h1 .grad{background:linear-gradient(90deg,#5b2fe0 0%,#7a3ff4 60%,#8b52ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;display:inline-block}
-  h1 .u{position:absolute;left:414px;top:66px;width:200px;height:18px;overflow:visible}
-  h1 .u path{stroke-dasharray:240;stroke-dashoffset:240;animation:draw 1s .9s ease forwards}
-  .sub{left:137px;top:267px;font-size:25.2px;line-height:33px;color:#5f6680;width:900px;font-weight:400;letter-spacing:-.1px}
 
   /* ---------- decorations ---------- */
   .dash{position:absolute;z-index:5;height:3px;border-radius:3px;background:#6d3df0;transform-origin:0 50%}
@@ -158,21 +148,17 @@
 
   /* ---------- narrow mobile layout ---------- */
   .mobile-connector{display:none}
-  #stage.mobile{width:430px;height:1600px;overflow:hidden}
+  #stage.mobile{width:430px;height:1380px;overflow:hidden}
   #stage.mobile .blob,#stage.mobile .dots,#stage.mobile .plane,#stage.mobile svg.flow{display:none}
-  #stage.mobile .badge{left:24px;top:24px;width:382px;height:42px;padding-left:16px;font-size:13px}
-  #stage.mobile h1{left:24px;top:84px;width:382px;white-space:normal;font-size:42px;line-height:44px;letter-spacing:-1.7px}
-  #stage.mobile h1 .u{left:0;top:auto;bottom:-9px;width:180px;height:14px}
-  #stage.mobile .sub{left:24px;top:185px;width:382px;font-size:17px;line-height:24px;letter-spacing:0}
   #stage.mobile .src{left:24px!important;width:382px;height:82px;border-radius:18px}
-  #stage.mobile .src-wa{top:280px!important}
-  #stage.mobile .src-ig{top:376px!important}
-  #stage.mobile .src-fb{top:472px!important}
+  #stage.mobile .src-wa{top:60px!important}
+  #stage.mobile .src-ig{top:156px!important}
+  #stage.mobile .src-fb{top:252px!important}
   #stage.mobile .src .ic{left:16px;top:13px;width:54px;height:54px}
   #stage.mobile .src b{left:84px;top:16px;font-size:15px}
   #stage.mobile .src p{left:84px;top:39px;font-size:12px;line-height:17px}
   #stage.mobile .src i{right:15px;top:19px}
-  #stage.mobile .win{left:24px;top:574px;width:382px;height:320px;transform:none;border-radius:18px;box-shadow:0 10px 28px rgba(76,56,160,.09)}
+  #stage.mobile .win{left:24px;top:354px;width:382px;height:320px;transform:none;border-radius:18px;box-shadow:0 10px 28px rgba(76,56,160,.09)}
   #stage.mobile .side{display:none}
   #stage.mobile .main{left:0;width:100%}
   #stage.mobile .search{left:12px;top:12px;width:245px;height:32px;padding-left:31px;font-size:10px}
@@ -201,19 +187,19 @@
   #stage.mobile .asg{right:8px;top:39px;width:22px;height:22px;padding:0;justify-content:center}
   #stage.mobile .asg .a{width:20px;height:20px}
   #stage.mobile .asg .own,#stage.mobile .asg svg.c{display:none}
-  #stage.mobile .mobile-connector{display:block;left:197px;top:899px;width:36px;height:28px;text-align:center;color:var(--purple);font-size:24px;line-height:28px}
-  #stage.mobile .panel{left:24px;top:936px;width:382px;height:420px;border-radius:20px}
+  #stage.mobile .mobile-connector{display:block;left:197px;top:679px;width:36px;height:28px;text-align:center;color:var(--purple);font-size:24px;line-height:28px}
+  #stage.mobile .panel{left:24px;top:716px;width:382px;height:420px;border-radius:20px}
   #stage.mobile .panel h3{left:23px;top:16px;font-size:18px}
   #stage.mobile .panel .ps{left:23px;top:43px;font-size:12px}
   #stage.mobile .st{left:20px;width:340px}
   #stage.mobile .st b{left:98px;font-size:14px}
   #stage.mobile .st p{left:98px;font-size:12px;line-height:18px}
   #stage.mobile .st .ci{left:18px;width:54px;height:54px;margin-top:-27px}
-  #stage.mobile .also{left:24px;top:1380px;width:382px}
+  #stage.mobile .also{left:24px;top:1160px;width:382px}
   #stage.mobile .also::before,#stage.mobile .also::after{display:none}
   #stage.mobile .con{left:24px!important;width:382px!important;height:76px;transform:none;border-radius:16px}
-  #stage.mobile .meta-con{top:1415px!important}
-  #stage.mobile .gmail-con{top:1503px!important}
+  #stage.mobile .meta-con{top:1195px!important}
+  #stage.mobile .gmail-con{top:1283px!important}
   #stage.mobile .con .ic{left:17px;top:14px;width:46px;height:46px}
   #stage.mobile .con b{left:77px;top:17px;font-size:14px}
   #stage.mobile .con p{left:77px;top:43px;font-size:11px}
@@ -248,14 +234,6 @@
   <div class="dash" style="left:1596px;top:343px;width:19px;transform:rotate(25deg)"></div>
   <svg class="flow" style="z-index:0"><path d="M1506 327 C1512 292 1550 270 1590 268" fill="none" stroke="#8a63f5" stroke-width="1.6" stroke-dasharray="4 5" stroke-linecap="round" class="d" style="animation-duration:1.6s"/></svg>
   <svg class="plane abs" viewBox="0 0 34 34" fill="none"><path d="M3 15 31 3 22 31 16 19z" fill="#6a35ee"/><path d="M16 19 31 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M16 19v8l4-5" fill="#4f23c9"/></svg>
-
-  <!-- badge + headline -->
-  <div class="abs badge in" style="--i:0">
-    <svg viewBox="0 0 24 24"><path d="M12 1.5c.6 5.4 3.9 8.9 10.5 10.5-6.6 1.6-9.9 5.1-10.5 10.5C11.4 17.1 8.1 13.6 1.5 12 8.1 10.4 11.4 6.9 12 1.5z" fill="#6a35ee"/></svg>
-    Samyoj — Every Conversation. One CRM.
-  </div>
-  <h1 class="abs in" style="--i:1">One shared inbox.<br><span class="grad">Clear next steps.<svg class="u" viewBox="0 0 205 20"><path d="M2 12 C 40 4, 80 18, 120 9 S 185 6, 203 8" fill="none" stroke="#7a4cf3" stroke-width="2.6" stroke-linecap="round" opacity=".75"/></svg></span></h1>
-  <p class="abs sub in" style="--i:2">Bring WhatsApp, Instagram DMs and Facebook Messenger together,<br>then keep every lead moving.</p>
 
   <!-- connectors -->
   <svg class="flow">
@@ -347,6 +325,11 @@
 <script>
 /* ============ 1. scale stage to viewport ============ */
 const stage = document.getElementById('stage');
+
+/** Headline lives on index.html; crop empty top band of the 1672×941 stage. */
+const STAGE_CROP_TOP = 320;
+const STAGE_VIEW_HEIGHT = 941 - STAGE_CROP_TOP;
+
 function fit(){
   const viewport = window.visualViewport;
   const width = viewport ? viewport.width : innerWidth;
@@ -358,8 +341,8 @@ function fit(){
     return;
   }
   stage.classList.remove('mobile');
-  const s = Math.min(width/1672, height/941);
-  stage.style.transform = `translate(${(width-1672*s)/2}px,${(height-941*s)/2}px) scale(${s})`;
+  const s = Math.min(width/1672, height/STAGE_VIEW_HEIGHT);
+  stage.style.transform = `translate(${(width-1672*s)/2}px,${-(STAGE_CROP_TOP*s) + (height-STAGE_VIEW_HEIGHT*s)/2}px) scale(${s})`;
 }
 addEventListener('resize', fit); fit();
 if (window.visualViewport) visualViewport.addEventListener('resize', fit);

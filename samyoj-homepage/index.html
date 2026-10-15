@@ -3975,16 +3975,15 @@
   <style>
     /* Custom Hero Section Styles */
     #custom-hero-section {
-      --sy-hero-clearance: clamp(16px, 3vh, 36px);
       --sy-hero-pad-bottom: clamp(20px, 3vh, 36px);
+      --paddingTop: 0;
       background-color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       box-sizing: border-box;
-      min-height: 100vh;
-      min-height: 100svh;
-      padding: calc(var(--um-header-height, 115px) + var(--sy-hero-clearance)) 0 var(--sy-hero-pad-bottom);
+      padding-block: calc(var(--um-header-height) + var(--sy-hero-clearance)) var(--sy-hero-pad-bottom);
+      padding-inline: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: visible;
     }
@@ -3996,8 +3995,14 @@
       max-width: var(--wr-max, 1600px);
       width: 100%;
       margin: 0 auto;
-      padding-inline: var(--sy-page-inline, clamp(16px, 4vw, 30px));
+      padding-inline: var(--sy-page-inline);
       box-sizing: border-box;
+    }
+
+    @media (min-width: 1280px) {
+      .custom-hero-container {
+        padding-inline: clamp(36px, 3.2vw, 48px);
+      }
     }
 
     .custom-hero-left {
@@ -4362,7 +4367,6 @@
 
     @media (max-width: 640px) {
       #custom-hero-section {
-        --sy-hero-clearance: clamp(14px, 2.5vh, 24px);
         --sy-hero-pad-bottom: clamp(18px, 3vh, 28px);
         justify-content: flex-start;
       }
@@ -4606,10 +4610,18 @@
   </div>
 
   <!-- 2. SHARED INBOX SECTION -->
+  <div id="custom-shared-inbox-intro" class="custom-section-center">
+    <h2 class="custom-section-title">
+      One Shared Inbox. <span class="highlight-green">Clear Next Steps</span>
+    </h2>
+    <p class="custom-section-subtitle">
+      Bring WhatsApp, Instagram DMs and Facebook Messenger together—then keep every lead moving.
+    </p>
+  </div>
   <section id="custom-problem-section" class="custom-problem-section" aria-label="Samyoj shared inbox and team follow-through">
     <iframe
       class="samyoj-shared-inbox-frame"
-      src="samyoj-hero.html?v=7"
+      src="samyoj-hero.html?v=11"
       title="Samyoj shared inbox: connected channels, conversations, and AI-assisted follow-through"
       loading="lazy"
       scrolling="no"
@@ -4663,6 +4675,7 @@
 
     /* Heading */
     .custom-section-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: clamp(28px, 2.4vw + 10px, 42px);
       font-weight: 800;
       color: #0f172a;
@@ -5318,6 +5331,10 @@
       max-width: 100%;
       height: auto;
       border-radius: 0;
+    }
+
+    #custom-broadcast-section .broadcast-right-col .hero-right-img {
+      max-height: none;
     }
 
     .custom-badge-pill {
@@ -5994,18 +6011,6 @@
       align-items: flex-start;
     }
 
-    .setup-backdrop-blob {
-      position: absolute;
-      width: 110%;
-      height: 110%;
-      max-width: 760px;
-      max-height: 680px;
-      background: radial-gradient(circle, rgba(244, 249, 246, 1) 0%, rgba(220, 245, 230, 0.5) 100%);
-      border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
-      z-index: 1;
-      filter: blur(20px);
-    }
-
     .setup-graphic-wrapper {
       position: relative;
       z-index: 2;
@@ -6223,8 +6228,7 @@
 
     /* Responsive details */
     @media (max-width: 1024px) {
-      .setup-dashboard-img,
-      .setup-backdrop-blob {
+      .setup-dashboard-img {
         display: none;
       }
 
@@ -7236,11 +7240,28 @@
     }
 
     /* 2. Problem Section */
+    #custom-shared-inbox-intro {
+      padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0 0;
+      text-align: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    #custom-shared-inbox-intro .custom-section-title {
+      font-size: clamp(26px, 2.1vw + 10px, 40px);
+      margin-bottom: 24px;
+    }
+    @media (min-width: 768px) {
+      #custom-shared-inbox-intro .custom-section-title {
+        white-space: nowrap;
+      }
+    }
+    #custom-shared-inbox-intro .custom-section-subtitle {
+      margin-bottom: clamp(24px, 4vw, 40px);
+    }
     .custom-problem-section {
       width: 100%;
       padding: 0;
       overflow: hidden;
-      background: #fafaff;
+      background: transparent;
       border-top: 0;
       scroll-margin-top: var(--um-header-height, 115px);
     }
@@ -7248,17 +7269,18 @@
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 1672 / 941;
+      aspect-ratio: 1672 / 621;
       border: 0;
-      background: #fafaff;
+      background: transparent;
     }
     @media (max-width: 640px) {
       .samyoj-shared-inbox-frame {
-        height: min(1600px, 372.1vw);
+        height: min(1380px, 320.9vw);
         aspect-ratio: auto;
       }
     }
     .custom-section-subtitle {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: clamp(16px, 1.4vw, 18px);
       color: #64748b;
       max-width: 760px;
@@ -7414,7 +7436,7 @@
     }
     .comparison-card.samyoj-way .comparison-badge {
       background: #EEF2FF;
-      color: #00873d;
+      color: #4B2EEB;
     }
     .comparison-card-title {
       font-size: 24px;
@@ -7885,9 +7907,8 @@
 
         <!-- Right Column: Dashboard Mockup -->
         <div class="setup-right-col">
-          <div class="setup-backdrop-blob"></div>
           <div class="setup-graphic-wrapper">
-            <img src="New%20images/second%20image.png" alt="Samyoj AI Customer Communication & Automation Dashboard" class="setup-dashboard-img" width="1672" height="941" draggable="false" loading="lazy" decoding="async" style="object-fit: contain;">
+            <img src="New%20images/Indigo_SaaS_Dashboard_Hero_Illustration-removebg-preview.png" alt="Indigo SaaS Dashboard Hero Illustration" class="setup-dashboard-img" width="666" height="375" draggable="false" loading="lazy" decoding="async" style="object-fit: contain;">
 
             <!-- Compact Trust Badges Card &mdash; below the mockup image -->
             <div class="setup-trust-card">
@@ -8280,7 +8301,7 @@
 
         <!-- Right Column: Graphic -->
         <div class="broadcast-right-col">
-          <img src="New%20images/fourth%20image.png" alt="WhatsApp, Instagram and Facebook Broadcast Campaigns" width="1254" height="1254" draggable="false" loading="lazy" decoding="async" style="object-fit: contain;">
+          <img class="hero-right-img" src="New%20images/homepage-hero-crm-v2.png" alt="Samyoj CRM showing connected channels, conversations, and qualified leads" width="1536" height="1024" decoding="async" draggable="false" loading="lazy" style="object-fit: contain;">
         </div>
 
       </div>

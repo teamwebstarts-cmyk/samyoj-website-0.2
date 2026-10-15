@@ -1772,24 +1772,31 @@
 
     /* Right column (Illustration) matching .custom-hero-right */
     ._10af011a {
-      flex: 1.24;
+      flex: 1.3;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       box-sizing: border-box;
-      max-width: 760px;
-      width: 100%;
+      max-width: 840px;
       margin: 0;
       position: relative;
     }
 
-    ._ba1fa94a {
-      display: block;
+    ._10af011a .graphic-container {
+      position: relative;
+      width: 100%;
+      filter: none;
+      box-shadow: none;
+    }
+
+    ._10af011a .hero-right-img {
       width: 100%;
       height: auto;
-      max-width: 100%;
+      max-height: calc(100svh - var(--um-header-height, 115px) - 32px);
+      display: block;
       object-fit: contain;
-      border-radius: 12px;
+      filter: none;
+      box-shadow: none;
     }
 
     /* Responsive Styles matching Homepage */
@@ -1820,15 +1827,22 @@
       }
 
       ._10af011a {
-        flex: none;
+        display: flex;
+        flex: 0 0 auto;
         width: 100%;
-        max-width: 100%;
+        max-width: min(100%, 760px);
+        margin-inline: auto;
         justify-content: center;
       }
 
-      ._ba1fa94a {
-        max-width: 700px;
-        margin: 0 auto;
+      ._10af011a .graphic-container {
+        width: 100%;
+      }
+
+      ._10af011a .hero-right-img {
+        width: 100%;
+        max-height: min(48svh, 520px);
+        margin-inline: auto;
       }
     }
 
@@ -1875,8 +1889,12 @@
         box-sizing: border-box;
       }
 
-      ._ba1fa94a {
+      ._10af011a {
         max-width: 100%;
+      }
+
+      ._10af011a .hero-right-img {
+        max-height: min(42svh, 360px);
       }
     }
   </style>
@@ -4793,9 +4811,13 @@
             <span>Official Meta Cloud APIs for WhatsApp, Instagram &amp; Facebook.</span>
           </div>
         </div>
-        <div class="_10af011a"><img draggable="false" src="New images/features new image/One Smarter Customer Conversation Hub.png" class="_ba1fa94a"
-            alt="One Smarter Customer Conversation Hub — Samyoj omnichannel communication platform" width="1536" height="1024" decoding="async"
-            fetchpriority="high" style="object-fit: contain;"></div>
+        <div class="_10af011a">
+          <div class="graphic-container">
+            <img class="hero-right-img" src="New images/AI-Powered Messaging Dashboard.png"
+              alt="AI-Powered Messaging Dashboard — Samyoj omnichannel communication platform" width="1536" height="1024"
+              decoding="async" fetchpriority="high" draggable="false" style="object-fit: contain;">
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -5879,9 +5901,9 @@
         </div>
         <div class="ai-visual-col">
           <div class="ai-visual">
-            <img draggable="false" src="images/feat-illu-03.webp"
-              alt="AI Assistant chat interface with knowledge base, query resolution, and agent handoff" width="1448"
-              height="1086" loading="lazy" decoding="async" />
+            <img draggable="false" src="New images/AI-Powered Customer Support Experience.png"
+              alt="AI-Powered Customer Support Experience — Samyoj AI assistant with knowledge base and agent handoff" width="1448"
+              height="1086" loading="lazy" decoding="async" style="object-fit: contain;" />
           </div>
         </div>
       </div>

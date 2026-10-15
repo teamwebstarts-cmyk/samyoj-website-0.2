@@ -35,10 +35,8 @@ html {
   }
 }
 
-.custom-hero-container,
 .custom-section-center {
-  padding-left: var(--sy-page-inline);
-  padding-right: var(--sy-page-inline);
+  padding-inline: var(--sy-page-inline);
 }
 
 #custom-get-started-section .setup-container {
