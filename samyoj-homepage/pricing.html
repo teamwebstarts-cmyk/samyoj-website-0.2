@@ -2027,7 +2027,7 @@
 
     .why-section .section-center-head {
       text-align: center;
-      max-width: 680px;
+      max-width: 960px;
       margin: 0 auto 40px auto;
     }
 
@@ -2038,6 +2038,12 @@
 
     .why-section .section-title-large {
       line-height: 1.2;
+    }
+
+    @media (min-width: 992px) {
+      .why-section .section-title-large {
+        white-space: nowrap;
+      }
     }
 
     .why-grid-5 {
@@ -2118,10 +2124,21 @@
       background: #f8fafc;
     }
 
+    .testimonials-section .section-center-head {
+      max-width: 960px;
+    }
+
+    @media (min-width: 992px) {
+      .testimonials-section .section-title-large {
+        white-space: nowrap;
+      }
+    }
+
     .testimonials-grid-4 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+      align-items: stretch;
     }
 
     @media (max-width: 1024px) {
@@ -2144,14 +2161,23 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 20px;
+      min-height: 100%;
       box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .testimonial-card:hover {
       transform: translateY(-4px);
-      border-color: #c9f2d6;
-      box-shadow: 0 10px 30px rgba(75, 46, 235, 0.06);
+      border-color: #c7d2fe;
+      box-shadow: 0 10px 30px rgba(75, 46, 235, 0.1);
+    }
+
+    .testimonial-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      min-height: 0;
     }
 
     .quote-icon {
@@ -2159,6 +2185,8 @@
       color: #4B2EEB;
       font-weight: 800;
       line-height: 1;
+      flex: 0 0 auto;
+      height: 32px;
       margin-bottom: 12px;
     }
 
@@ -2166,7 +2194,9 @@
       font-size: 13.5px;
       color: #334155;
       line-height: 1.65;
-      margin-bottom: 20px;
+      flex: 1 1 auto;
+      min-height: 5.25em;
+      margin: 0 0 16px;
     }
 
     .metric-badge-pill {
@@ -2174,10 +2204,15 @@
       border: 1px solid #c7d2fe;
       border-radius: 20px;
       padding: 10px 14px;
-      margin-bottom: 20px;
+      margin: 0;
+      margin-top: auto;
+      min-height: 61px;
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: center;
       gap: 4px;
     }
 
@@ -2188,6 +2223,9 @@
       display: flex;
       align-items: center;
       gap: 6px;
+      width: 100%;
+      min-width: 0;
+      line-height: 1.3;
     }
 
     .metric-val svg {
@@ -2200,7 +2238,10 @@
       font-size: 11px;
       font-weight: 600;
       color: #475569;
-      padding-left: 22px; /* aligns with text after svg */
+      padding-left: 22px;
+      line-height: 1.35;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .author-info-flex {
@@ -4790,8 +4831,7 @@
       <div class="wr">
         <div class="section-center-head">
           <div class="custom-badge-pill">WHY SAMYOJ?</div>
-          <h2 class="section-title-large">Your Complete Business Growth Toolkit
-          </h2>
+          <h2 class="section-title-large">Your Complete Business <span class="highlight-green">Growth Toolkit</span></h2>
           <p class="section-desc">More than a software - Its a an investment to grow.</p>
         </div>
 
@@ -4836,7 +4876,7 @@
 
         <div class="testimonials-grid-4">
           <div class="testimonial-card">
-            <div>
+            <div class="testimonial-card-body">
               <div class="quote-icon">“</div>
               <p class="testimonial-text">Samyoj helped us automate customer support and follow-ups. Our response time
                 dropped by 70% and sales increased significantly.</p>
@@ -4854,7 +4894,7 @@
           </div>
 
           <div class="testimonial-card">
-            <div>
+            <div class="testimonial-card-body">
               <div class="quote-icon">“</div>
               <p class="testimonial-text">The campaign & flow features are fantastic. We run targeted campaigns at
                 scale and track everything in real-time.</p>
@@ -4872,7 +4912,7 @@
           </div>
 
           <div class="testimonial-card">
-            <div>
+            <div class="testimonial-card-body">
               <div class="quote-icon">“</div>
               <p class="testimonial-text">Using Samyoj's AI Agent, we handle thousands of customer queries
                 automatically. It feels like having an extra team 24/7.</p>
@@ -4890,7 +4930,7 @@
           </div>
 
           <div class="testimonial-card">
-            <div>
+            <div class="testimonial-card-body">
               <div class="quote-icon">“</div>
               <p class="testimonial-text">Transparent pricing and official WhatsApp API integration makes Samyoj a
                 platform we can truly trust and scale with.</p>
