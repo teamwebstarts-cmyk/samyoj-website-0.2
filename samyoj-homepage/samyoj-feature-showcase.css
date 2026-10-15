@@ -67,7 +67,7 @@
   max-width: 800px;
   margin: 23px auto 16px;
   color: var(--sf-ink);
-  font-size: clamp(38px, 5vw, 62px);
+  font-size: 42px;
   font-weight: 760;
   letter-spacing: -.045em;
   line-height: 1.04;
@@ -75,6 +75,11 @@
 
 .sf-intro h2 span {
   color: var(--sf-purple);
+}
+
+.sf-intro h2 p {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .sf-intro > p:not(.sf-eyebrow) {
@@ -526,6 +531,7 @@
 .sf-filter-status { min-height: 18px; margin: 10px 2px 0; color: #64748b; text-align: center; font-size: 12px; }
 .sf-feature-list-legacy { display: none !important; }
 .sf-feature-row[hidden] { display: none !important; }
+.sf-feature-list-verified { border-top: none; }
 .sf-feature-list-verified .sf-feature-row { scroll-margin-top: 28px; }
 .sf-feature-list-verified .sf-visual { padding: 0; }
 .sf-feature-list-verified .sf-visual figcaption { padding-right: 0; }
@@ -557,7 +563,7 @@
   .sf-showcase { padding: 68px 0 54px; }
   .sf-wrap { padding: 0 15px; }
   .sf-intro { margin-bottom: 23px; }
-  .sf-intro h2 { margin-top: 18px; font-size: clamp(35px, 9vw, 46px); }
+  .sf-intro h2 { margin-top: 18px; font-size: 42px; }
   .sf-intro > p:not(.sf-eyebrow) { font-size: 15px; line-height: 1.7; }
   .sf-intro-note { display: grid; gap: 2px; font-size: 12px; }
   .sf-feature-row,

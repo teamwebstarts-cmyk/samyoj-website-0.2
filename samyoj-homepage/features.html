@@ -2056,10 +2056,21 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      justify-content: center;
+      justify-content: stretch;
+      align-self: stretch;
+      width: 100%;
+      min-width: 0;
+      min-height: 0;
+      height: 100%;
     }
 
     .pf-dash {
+      flex: 1 1 0;
+      min-height: 0;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 32px;
       overflow: hidden;
       box-shadow: 0 28px 60px -24px rgba(15, 23, 42, 0.28);
@@ -2070,29 +2081,39 @@
     .pf-dash-img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
+      object-position: center;
       border-radius: 32px;
     }
 
     .pf-trust {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      flex: 0 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 168px), 1fr));
+      gap: 10px 14px;
+      width: 100%;
+      min-width: 0;
     }
 
     .pf-trust-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
-      flex: 1;
-      min-width: 220px;
-      max-width: calc(50% - 7px);
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
       background: linear-gradient(180deg, #F8FAFF 0%, #EEF2FF 100%);
       border: 1px solid #C7D2FE;
       border-radius: 12px;
-      padding: 12px 16px;
+      padding: 12px 14px;
+    }
+
+    .pf-trust-item > div:not(.pf-trust-icon) {
+      min-width: 0;
+      flex: 1;
     }
 
     .pf-trust-icon {
@@ -2226,12 +2247,7 @@
         padding: 14px 14px 12px;
       }
 
-      .pf-trust {
-        flex-direction: column;
-      }
-
       .pf-trust-item {
-        max-width: 100%;
         min-width: 0;
       }
 
@@ -5231,6 +5247,7 @@
     </div>
     </div>
   </section>
+  <!-- custom-demo-section: commented out for now; remove this wrapper to restore
   <section id="custom-demo-section" class="demo-section" data-reveal>
     <div class="demo-inner">
       <div class="demo-grid">
@@ -5287,14 +5304,14 @@
             </div>
           </div>
 
-          <!--<div class="demo-cta-wrap">
+          <div class="demo-cta-wrap">
             <button type="button" class="demo-cta-btn" id="demo-watch-btn" aria-label="Watch demo video">
               <span class="demo-cta-play" aria-hidden="true"><svg viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg></span>
               Watch Demo
             </button>
-          </div>-->
+          </div>
         </div>
 
         <div class="demo-video-col">
@@ -5366,7 +5383,7 @@
         closeBtn.style.justifyContent = 'center';
         closeBtn.style.cursor = 'pointer';
         closeBtn.style.transition = 'background 0.2s';
-        closeBtn.style.pointerEvents = 'auto'; // allow clicks
+        closeBtn.style.pointerEvents = 'auto';
         closeBtn.onmouseover = function() { closeBtn.style.background = 'rgba(15, 23, 42, 0.9)'; };
         closeBtn.onmouseout = function() { closeBtn.style.background = 'rgba(15, 23, 42, 0.6)'; };
         closeBtn.onclick = function(e) {
@@ -5390,6 +5407,7 @@
       if (watchBtn) watchBtn.addEventListener('click', playDemo);
     })();
   </script>
+  end custom-demo-section -->
   <section class="sf-showcase" id="feat-grid" aria-labelledby="sf-showcase-title" data-reveal>
     <div class="sf-wrap">
       <header class="sf-intro">
@@ -5399,7 +5417,6 @@
                   <p>A clearer view of <span class="highlight-green feat-accent">every channel.</span></p>
                 </h2>
         <p>Choose a channel to explore its inbox, automation and tools. These are real Samyoj product screens captured with fictional demo data.</p>
-        <div class="sf-intro-note"><strong>See what is available today.</strong><span>Each channel keeps its own inbox and messaging rules.</span></div>
       </header>
 
       <div class="sf-filter-wrap">
@@ -5411,7 +5428,6 @@
           <button class="sf-filter-tab" type="button" data-feature-filter="email" aria-pressed="false">Email <span data-filter-count="email"></span></button>
           <button class="sf-filter-tab" type="button" data-feature-filter="automation-ai" aria-pressed="false">Automation &amp; AI <span data-filter-count="automation-ai"></span></button>
         </div>
-        <p class="sf-filter-status" data-filter-status aria-live="polite">Showing all feature areas.</p>
       </div>
 
       <div class="sf-feature-list sf-feature-list-verified" id="sf-feature-list">
