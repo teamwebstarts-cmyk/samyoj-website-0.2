@@ -1,0 +1,100 @@
+/**
+ * Homepage (index.html) responsive primitives and shared overrides.
+ * Breakpoint tokens are for documentation; media queries use literal px values.
+ */
+:root {
+  --sy-bp-sm: 640px;
+  --sy-bp-md: 768px;
+  --sy-bp-lg: 1024px;
+  --sy-page-inline: clamp(16px, 4vw, 30px);
+  --sy-section-pad-y: clamp(40px, 8vw, 64px);
+  --sy-hero-clearance: 64px;
+  --sy-hero-pad-bottom: clamp(40px, 8vw, 64px);
+}
+
+html {
+  overflow-x: clip;
+}
+
+/* 3 → 2 → 1 column grids (problem, CRM, etc.) */
+.sy-grid-3-2-1 {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .sy-grid-3-2-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .sy-grid-3-2-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.custom-hero-container,
+.custom-section-center {
+  padding-left: var(--sy-page-inline);
+  padding-right: var(--sy-page-inline);
+}
+
+#custom-get-started-section .setup-container {
+  padding-left: var(--sy-page-inline);
+  padding-right: var(--sy-page-inline);
+  box-sizing: border-box;
+}
+
+/* Legacy Umso card rows */
+@media (max-width: 768px) {
+  ._aa1867ce {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  ._aa1867ce > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0.75em 0;
+  }
+
+  ._d005acfa,
+  ._e828f624,
+  ._de38c458,
+  ._51496229 {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Modals */
+.umsoModal {
+  min-width: min(500px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: clamp(20px, 5vw, 40px);
+}
+
+/* Allow long labels to wrap on small screens */
+@media (max-width: 640px) {
+  .custom-award-badge,
+  .scribble-wrapper,
+  .banner-btn-primary,
+  .setup-cta-info,
+  .promo-cta-info,
+  .setup-cta-btn,
+  .custom-btn-primary,
+  .custom-btn-secondary {
+    white-space: normal;
+  }
+
+  .custom-hero-microcopy {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+}
