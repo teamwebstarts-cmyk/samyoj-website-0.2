@@ -660,8 +660,11 @@ a.text-link:hover {
   color: var(--sy-brand-purple) !important;
 }
 .broadcast-list-item:nth-child(3) .broadcast-list-icon {
-  background-color: rgba(255, 61, 142, 0.1) !important;
-  color: var(--sy-brand-pink) !important;
+  background-color: rgba(75, 46, 235, 0.1) !important;
+  color: var(--sy-brand-indigo) !important;
+}
+.broadcast-list-item:nth-child(3) .broadcast-list-icon svg {
+  color: var(--sy-brand-indigo) !important;
 }
 
 /* Section 5: Stepper 4-Step Color Timeline */
