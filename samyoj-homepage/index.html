@@ -4001,7 +4001,8 @@
 
     @media (min-width: 1280px) {
       .custom-hero-container {
-        padding-inline: clamp(36px, 3.2vw, 48px);
+        max-width: 1420px;
+        padding-inline: var(--sy-page-inline);
       }
     }
 
@@ -4629,12 +4630,14 @@
   </section>
 
   <style>
-    /* Brand Logos & Video Section Styles */
+    /* Brand Logos & Video Section Styles (section HTML disabled) */
+    /*
     #custom-brand-video-section {
       background-color: #ffffff;
       padding: var(--sy-section-pad-y, clamp(40px, 8vw, 64px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+    */
 
     .custom-section-center {
       max-width: 1420px;
@@ -7610,10 +7613,10 @@
 
   </style>
 
+  <!-- custom-brand-video-section (disabled)
   <section id="custom-brand-video-section" data-reveal>
     <div class="custom-section-center">
 
-      <!-- Top Pill Badge -->
       <div class="custom-trust-pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -7622,7 +7625,6 @@
         <span>Unified Team Workspace</span>
       </div>
 
-      <!-- Headline: Unified Inbox -->
       <h2 class="custom-section-title">
         One Inbox for Every<br><span class="highlight-green">Customer Conversation</span>
       </h2>
@@ -7630,10 +7632,8 @@
         Bring WhatsApp, Instagram, and Facebook Messenger into one shared workspace. Give your sales and support teams complete customer context with zero tab switching.
       </p>
 
-      <!-- Main Gray Box -->
       <div class="custom-grey-box">
 
-        <!-- Left Column: Video player - Styled with fallback samyouijrjob.png -->
         <div class="custom-video-column" id="custom-video-trigger">
           <img class="video-thumb" src="./images/samyouijrjob.webp"
             alt="Samyoj Omnichannel CRM product demo video preview" draggable="false" loading="lazy" decoding="async">
@@ -7647,7 +7647,6 @@
             </div>
           </div>
 
-          <!-- Controls Bar -->
           <div class="video-controls-bar">
             <div class="controls-play-btn">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -7682,7 +7681,6 @@
           </div>
         </div>
 
-        <!-- Right Column: Features Stack -->
         <div class="custom-features-column">
 
           <div class="features-header-badge-wrapper">
@@ -7694,7 +7692,6 @@
             </div>
           </div>
 
-          <!-- Feature 1: Shared Inbox -->
           <div class="feature-card-item">
             <div class="feature-card-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -7711,7 +7708,6 @@
             </div>
           </div>
 
-          <!-- Feature 2: Customer Details & History -->
           <div class="feature-card-item">
             <div class="feature-card-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -7729,7 +7725,6 @@
             </div>
           </div>
 
-          <!-- Feature 3: Labels & Tags -->
           <div class="feature-card-item">
             <div class="feature-card-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -7746,7 +7741,6 @@
             </div>
           </div>
 
-          <!-- Feature 4: Internal Notes & Ownership -->
           <div class="feature-card-item">
             <div class="feature-card-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -7766,31 +7760,9 @@
 
       </div>
 
-      <!-- Bottom CTA Banner -->
-      <!--<div class="custom-bottom-banner" data-reveal>
-        <div class="banner-left-content">
-          <div class="banner-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-          </div>
-          <div class="banner-text-wrapper">
-            <h3 style="margin:0 0 4px 0; font-size:18px;">Stop Juggling Chat Apps. Automate Your Entire Sales Flow.</h3>
-            <span class="banner-text">Samyoj connects your social channels into one smart engine:<br> <strong>First
-                Contact → Lead Qualification → Follow-Up → Closed Deal.</strong>.</span>
-          </div>
-        </div>
-        <a href="https://app.samyoj.com/" class="custom-btn-primary">
-          Start Your Free Trial
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
-        </a>
-      </div>-->
-
     </div>
   </section>
+  -->
 
   <!-- 4. AI & AUTOMATION SECTION -->
 <section id="custom-get-started-section" data-reveal>
