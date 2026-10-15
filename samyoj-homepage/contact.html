@@ -1535,9 +1535,9 @@
       text-decoration: none;
     }
 
-    /* Contact: main follows fixed header (other pages use section sibling) */
+    /* Contact: neutralize samyoj-nav.css main offset so hero clearance matches other pages */
     ._58ce83d8+main {
-      padding-top: calc(var(--um-header-height, 65px) + 12px);
+      padding-top: 0 !important;
     }
 
     /* Active nav link handled in shared head */
@@ -1594,7 +1594,7 @@
         radial-gradient(ellipse 42% 48% at 8% 92%, rgba(75, 46, 235, 0.05) 0%, transparent 70%),
         radial-gradient(ellipse 38% 42% at 92% 12%, rgba(122, 59, 255, 0.05) 0%, transparent 68%),
         #ffffff;
-      padding: 28px 0 48px;
+      padding: calc(var(--um-header-height) + 64px) 0 48px;
     }
 
     .ch-hero::before,
@@ -1628,7 +1628,7 @@
       display: grid;
       grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
       gap: clamp(20px, 3vw, 40px);
-      align-items: center;
+      align-items: start;
     }
 
     .ch-copy {
@@ -1637,7 +1637,7 @@
 
     .ch-title {
       margin: 0 0 16px;
-      font-size: clamp(34px, 3.8vw, 48px);
+      font-size: 58px;
       line-height: 1.12;
       letter-spacing: -0.03em;
       font-weight: 700;
@@ -1748,6 +1748,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      align-self: start;
       min-width: 0;
     }
 
@@ -2922,11 +2923,11 @@
 
     @media (max-width: 760px) {
       ._58ce83d8+main {
-        padding-top: calc(var(--um-header-height, 65px) + 20px);
+        padding-top: 0 !important;
       }
 
       .ch-hero {
-        padding: 0 0 28px;
+        padding: calc(var(--um-header-height) + 64px) 0 28px;
       }
 
       .ch-inner {

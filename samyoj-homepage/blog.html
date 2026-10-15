@@ -135,7 +135,7 @@
 
     .blog-hero {
       background-color: #ffffff;
-      padding: 40px 0 60px;
+      padding: calc(var(--um-header-height) + 64px) 0 60px;
     }
 
     .blog-hero-inner {
@@ -1233,7 +1233,10 @@
       }
     }
 
-    /* main offset: samyoj-nav.css */
+    /* Neutralize samyoj-nav.css main offset so hero clearance matches other pages */
+    ._58ce83d8 + main {
+      padding-top: 0 !important;
+    }
 
     .um-nav-links a[aria-current="page"] {
       color: #4B2EEB !important;
@@ -1963,7 +1966,7 @@
     <!-- ═══════════════════════════════════════════════════════
          EXPLORE TOPICS BANNER
     ════════════════════════════════════════════════════════ -->
-    <section class="blog-explore-section blog-animate" aria-label="Explore topics">
+    <!--<section class="blog-explore-section blog-animate" aria-label="Explore topics">
       <h2>Explore topics that matter</h2>
       <div class="blog-explore-chips" role="list">
         <div class="blog-explore-chip" role="listitem" tabindex="0">
@@ -1995,7 +1998,7 @@
           Business Growth
         </div>
       </div>
-    </section>
+    </section>-->
 
   </div>
 </main>
