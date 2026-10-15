@@ -4254,22 +4254,34 @@
     .custom-award-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
+      align-self: flex-start;
+      width: fit-content;
+      max-width: 100%;
+      flex-wrap: wrap;
+      gap: clamp(6px, 1.5vw, 8px);
+      box-sizing: border-box;
+      padding: clamp(5px, 1.2vw, 6px) clamp(10px, 2.8vw, 14px);
       background-color: rgba(75, 46, 235, 0.08);
       border: 1px solid rgba(75, 46, 235, 0.22);
       border-radius: 9999px;
       color: #4B2EEB;
-      font-size: 13px;
+      font-size: clamp(11px, 2.6vw, 13px);
       font-weight: 700;
-      margin-bottom: 24px;
+      line-height: 1.35;
+      white-space: normal;
+      margin-bottom: clamp(16px, 3vw, 24px);
       font-family: 'Inter', sans-serif;
     }
 
     .custom-award-badge svg.trophy-icon {
-      width: 16px;
-      height: 16px;
+      width: clamp(14px, 3.5vw, 16px);
+      height: clamp(14px, 3.5vw, 16px);
       flex-shrink: 0;
+    }
+
+    .custom-award-badge > span {
+      min-width: 0;
+      flex: 0 1 auto;
     }
 
     /* Headline */
