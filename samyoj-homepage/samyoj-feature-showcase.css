@@ -11,6 +11,7 @@
   --sf-line: #e5e7eb;
   position: relative;
   overflow: hidden;
+  scroll-margin-top: calc(var(--um-header-height, 72px) + 16px);
   padding: 104px 0 88px;
   color: var(--sf-ink);
   background: #fff;
