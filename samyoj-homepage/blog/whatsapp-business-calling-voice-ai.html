@@ -43,7 +43,8 @@
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14.5px; padding: 10px 20px; border-radius: 8px; cursor: pointer; text-decoration: none; }
     .btn.primary { background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%); color: #fff !important; border: none; box-shadow: 0 4px 14px rgba(75, 46, 235, 0.25); }
     ._58ce83d8 { top: 0; left: 0; right: 0; height: 70px; display: flex; z-index: 99; position: fixed; background: #fff; border-bottom: 1px solid #e2e8f0; }
-    ._58ce83d8+main { padding-top: calc(var(--um-header-height, 65px) + 16px); }
+    /* Neutralize samyoj-nav.css main offset; clearance on breadcrumbs */
+    ._58ce83d8+main { padding-top: 0 !important; }
     ._37ad9200 { top: var(--um-banner-height, 0px); left: 0; right: 0; height: 65px; display: flex; z-index: 99; position: absolute; }
     ._f4c879d8 { height: 100%; display: flex; padding: 0 20px; z-index: 90; width: 100%; align-items: center; }
     ._592c9c5c { height: 100%; display: flex; flex-grow: 1; align-items: center; }
@@ -51,9 +52,11 @@
 
   <style id="samyoj-blog-post-styles">
     :root { --sy-green: #4B2EEB; --sy-green-hover: #3B22C7; --sy-green-light: #EEF2FF; --sy-green-border: #C7D2FE; --sy-dark: #0f172a; --sy-body: #475569; }
-    .blog-post-page { padding: 32px 0 80px; }
+    .blog-post-page { padding: 0 0 80px; }
     .blog-post-container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-    .blog-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: #64748b; margin-bottom: 28px; }
+    .blog-breadcrumbs {
+      padding-top: calc(var(--um-header-height) + 64px);
+      display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: #64748b; margin-bottom: 28px; }
     .blog-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 64px; }
     .blog-main-content { padding-right: 16px; border-right: 1px solid #f1f5f9; }
     @media (max-width: 1024px) {
