@@ -529,10 +529,6 @@
       margin-bottom: 20px;
     }
 
-    .billing-bar--estimator {
-      margin: 0 0 28px;
-    }
-
     @media (max-width: 768px) {
       .billing-bar {
         display: flex;
@@ -540,8 +536,7 @@
         padding: 0;
       }
 
-      .billing-bar--compare,
-      .billing-bar--estimator {
+      .billing-bar--compare {
         display: none;
       }
 
@@ -633,6 +628,12 @@
 
     .pricing-cards-section .section-center-head {
       max-width: 960px;
+    }
+
+    .pricing-cards-section .section-center-head .custom-badge-pill,
+    .estimator-section .section-center-head .custom-badge-pill {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .pricing-disclosure-bar {
@@ -962,40 +963,11 @@
       font-weight: 700;
     }
 
-    #cost-ai-row {
-      display: none;
-    }
-
-    #cost-ai-row.visible {
-      display: flex;
-    }
-
     .estimator-disclaimer {
       font-size: 12px;
       color: #64748b;
       margin-top: 8px;
       font-style: italic;
-    }
-
-    .slider-group.ai-slider-group {
-      display: none;
-    }
-
-    .slider-group.ai-slider-group.visible {
-      display: block;
-    }
-
-    .est-toggle-ai-btn {
-      border: none;
-      background: transparent;
-      color: #4B2EEB;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      padding: 0;
-      margin-bottom: 12px;
-      font-family: inherit;
-      text-decoration: underline;
     }
 
     .mobile-sticky-cta {
@@ -1705,42 +1677,97 @@
       font-weight: 700;
     }
 
-    /* Section 6: Cost Estimator — match mockup */
-    /* Section 6: Cost Estimator — match mockup */
+    /* Section 6: Cost Estimator */
     .estimator-section {
       padding: 64px 0;
       background: #ffffff;
     }
 
-    .estimator-shell {
-      border: 1px solid #e2e8f0;
-      border-radius: 24px;
-      background: #ffffff;
-      padding: 40px 40px 32px;
-      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.04);
+    .estimator-section .section-center-head {
+      max-width: 960px;
+    }
+
+    .estimator-section .info-how-box {
+      max-width: 720px;
+      margin: 0 auto 32px;
     }
 
     .estimator-grid {
       display: grid;
-      grid-template-columns: 1fr 1.25fr 1.05fr;
-      gap: 36px;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
       align-items: start;
+      max-width: 1530px;
+      margin: 0 auto;
+    }
+
+    .estimator-sliders-panel {
+      background: #ffffff;
+      border: 1px solid #e8eef2;
+      border-radius: 18px;
+      padding: 26px 26px 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .estimator-sliders-panel .slider-group {
+      margin-bottom: 24px;
+    }
+
+    .estimator-sliders-panel .slider-top-flex {
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .estimator-sliders-panel .slider-label {
+      font-size: 16px;
+      gap: 10px;
+    }
+
+    .estimator-sliders-panel .slider-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    .estimator-sliders-panel .slider-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .estimator-sliders-panel .slider-val-box {
+      padding: 6px 14px;
+      font-size: 15px;
+      min-width: 76px;
+      border-radius: 9px;
+    }
+
+    .estimator-sliders-panel .custom-range-slider {
+      height: 7px;
+    }
+
+    .estimator-sliders-panel .custom-range-slider::-webkit-slider-thumb {
+      width: 20px;
+      height: 20px;
+    }
+
+    .estimator-sliders-panel .custom-range-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+    }
+
+    .estimator-sliders-panel .custom-range-slider::-moz-range-track {
+      height: 7px;
+    }
+
+    .estimator-sliders-panel .slider-marks-row {
+      font-size: 12px;
+      margin-top: 8px;
     }
 
     @media (max-width: 1024px) {
       .estimator-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 16px;
       }
-      .estimator-shell {
-        padding: 24px 20px;
-      }
-    }
-
-    .estimator-left .section-title-large {
-      line-height: 1.2;
-      margin-top: 8px;
-      margin-bottom: 10px;
     }
 
     .info-how-box {
@@ -1903,10 +1930,10 @@
 
     .cost-summary-card {
       background: #ffffff;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #e8eef2;
       border-radius: 18px;
       padding: 24px 24px 0;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
       overflow: hidden;
     }
 
@@ -2000,11 +2027,12 @@
     }
 
     .annual-banner-bar {
-      margin-top: 18px;
+      margin: 28px auto 0;
+      max-width: 1530px;
       background: #EEF2FF;
       border: 1px solid #c7d2fe;
-      border-radius: 12px;
-      padding: 12px 18px;
+      border-radius: 18px;
+      padding: 16px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -4457,6 +4485,7 @@
     <section class="pricing-cards-section" id="pricing-cards-section">
       <div class="wr">
         <div class="section-center-head">
+          <div class="custom-badge-pill">COMPARE PLANS</div>
           <h2 class="section-title-large">Plans for every stage of <span class="highlight-green">growth</span></h2>
           <p class="section-desc">Start with a 14-day free trial, then pick Starter, Growth, or Pro. Toggle billing to see monthly, quarterly, or annual pricing.</p>
         </div>
@@ -4638,8 +4667,12 @@
     <!-- Section 6: Cost Estimator -->
     <section class="estimator-section" id="estimator-section">
       <div class="wr">
-        <div class="estimator-shell">
-        <div class="billing-bar billing-bar--estimator">
+        <div class="section-center-head">
+          <div class="custom-badge-pill">COST ESTIMATOR</div>
+          <h2 class="section-title-large">Estimate your monthly cost <span class="highlight-green">in just a few clicks</span></h2>
+          <p class="section-desc">First choose the plan that fits you. Then adjust usage to see a realistic estimate — not an exact bill.</p>
+        </div>
+        <div class="billing-bar">
           <div class="billing-segmented-control" role="group" aria-label="Billing period">
             <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
             <button type="button" class="billing-segment-btn" data-billing="quarterly"><span class="billing-segment-inner">Quarterly<span
@@ -4648,26 +4681,17 @@
                 class="save-pill">Save 20%</span></span></button>
           </div>
         </div>
-        <div class="estimator-grid">
-          <div class="estimator-left">
-            <div class="custom-badge-pill">COST ESTIMATOR</div>
-            <h2 class="section-title-large">Estimate your monthly cost <span class="highlight-green">in just a few
-                clicks</span></h2>
-            <p class="section-desc">First choose the plan that fits you. Then adjust usage to see a realistic estimate —
-              not an exact bill.</p>
-            <div class="info-how-box">
-              <span class="how-bulb" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
-              </span>
-              <div>
-                <div class="how-title">How it works?</div>
-                <p class="how-desc">Move the sliders based on your expected monthly usage. We'll recommend a plan and
-                  show an estimated total based on our transparent pricing.</p>
-              </div>
-            </div>
-          </div>
-
+        <!-- <div class="info-how-box">
+          <span class="how-bulb" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+          </span>
           <div>
+            <div class="how-title">How it works?</div>
+            <p class="how-desc">Move the sliders based on your expected monthly usage. We'll recommend a plan and show an estimated total based on our transparent pricing.</p>
+          </div>
+        </div> -->
+        <div class="estimator-grid">
+          <div class="estimator-sliders-panel">
             <div class="slider-group">
               <div class="slider-top-flex">
                 <div class="slider-label">
@@ -4712,9 +4736,7 @@
               <div class="slider-marks-row"><span>1</span><span>10</span><span>25</span><span>50+</span></div>
             </div>
 
-            <button type="button" class="est-toggle-ai-btn" id="est-toggle-ai-btn">+ Add AI usage estimate</button>
-
-            <div class="slider-group ai-slider-group" id="ai-slider-group">
+            <div class="slider-group" id="ai-slider-group">
               <div class="slider-top-flex">
                 <div class="slider-label">
                   <span class="slider-icon" aria-hidden="true">
@@ -4738,8 +4760,6 @@
             <div class="est-total-num">
               <span id="est-total-price">₹2,198</span><span class="per-mo">/month</span>
             </div>
-            <p class="estimator-disclaimer">This is an estimate, not an exact bill. Actual Meta and AI charges depend on
-              usage.</p>
             <div class="est-break-row">
               <span>Estimated Samyoj plan (<span id="rec-plan">Growth</span>)</span>
               <strong id="cost-platform">₹2,000</strong>
@@ -4774,7 +4794,6 @@
             </div>
           </div>
           <a href="#pricing-cards-section" class="btn-primary-sy">View All Plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-        </div>
         </div>
       </div>
     </section>
@@ -5280,7 +5299,7 @@
       var billingPeriod = 'annual';
       var selectedPlan = 'growth';
       var planClicked = false;
-      var aiEstimateEnabled = false;
+      var aiEstimateEnabled = true;
 
       var billingBtns = document.querySelectorAll('.billing-segment-btn');
       var billingControls = document.querySelectorAll('.billing-segmented-control');
@@ -5291,9 +5310,6 @@
       var finalCta = document.getElementById('final-cta-btn');
       var mobileStickyCta = document.getElementById('mobile-sticky-cta');
       var mobileStickyBtn = document.getElementById('mobile-sticky-cta-btn');
-      var estToggleAi = document.getElementById('est-toggle-ai-btn');
-      var aiSliderGroup = document.getElementById('ai-slider-group');
-
       function formatInr(n) {
         return '₹' + n.toLocaleString('en-IN');
       }
@@ -5422,15 +5438,6 @@
         });
       });
 
-      if (estToggleAi && aiSliderGroup) {
-        estToggleAi.addEventListener('click', function () {
-          aiEstimateEnabled = !aiEstimateEnabled;
-          aiSliderGroup.classList.toggle('visible', aiEstimateEnabled);
-          estToggleAi.textContent = aiEstimateEnabled ? '− Hide AI usage estimate' : '+ Add AI usage estimate';
-          updateEstimator();
-        });
-      }
-
       var sContacts = document.getElementById('slider-contacts');
       var sMessages = document.getElementById('slider-messages');
       var sTeam = document.getElementById('slider-team');
@@ -5444,7 +5451,6 @@
       var costPlatform = document.getElementById('cost-platform');
       var costMeta = document.getElementById('cost-meta');
       var costAi = document.getElementById('cost-ai');
-      var costAiRow = document.getElementById('cost-ai-row');
       var recPlan = document.getElementById('rec-plan');
 
       function recommendPlan(contacts, team) {
@@ -5486,10 +5492,6 @@
         costPlatform.textContent = formatInr(platformCost);
         costMeta.textContent = formatInr(metaCost);
         costAi.textContent = formatInr(aiCost);
-        if (costAiRow) {
-          costAiRow.classList.toggle('visible', aiEstimateEnabled);
-        }
-
         var formattedTotal = formatInr(total);
         estTotalPrice.textContent = formattedTotal;
         costFinalSum.textContent = formattedTotal;
