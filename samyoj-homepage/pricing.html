@@ -337,20 +337,19 @@
 
     .billing-segment-btn:not(.active) .billing-segment-inner {
       padding: 5px 10px;
-      background: #eef2f6;
-      border: 1px solid #e2e8f0;
+      background: transparent;
+      border: none;
     }
 
     .billing-segment-btn.active .billing-segment-inner {
       padding: 2px 4px;
       background: transparent;
-      border: 1px solid transparent;
+      border: none;
       gap: 5px;
     }
 
     .billing-segment-btn:hover:not(.active) .billing-segment-inner {
-      background: #e8edf3;
-      border-color: #d7dee8;
+      background: transparent;
     }
 
     .billing-segment-btn:hover {
@@ -630,6 +629,19 @@
     .pricing-cards-section {
       padding: 64px 0;
       background: #ffffff;
+    }
+
+    .pricing-cards-section .section-center-head {
+      max-width: 960px;
+    }
+
+    .pricing-disclosure-bar {
+      margin: 28px auto 0;
+      max-width: 720px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #64748b;
     }
 
     .cards-grid-4 {
@@ -4444,6 +4456,10 @@
     <!-- Section 2: Pricing Cards -->
     <section class="pricing-cards-section" id="pricing-cards-section">
       <div class="wr">
+        <div class="section-center-head">
+          <h2 class="section-title-large">Plans for every stage of <span class="highlight-green">growth</span></h2>
+          <p class="section-desc">Start with a 14-day free trial, then pick Starter, Growth, or Pro. Toggle billing to see monthly, quarterly, or annual pricing.</p>
+        </div>
         <div class="billing-bar">
           <div class="billing-segmented-control" role="group" aria-label="Billing period">
             <button type="button" class="billing-segment-btn" data-billing="monthly">Monthly</button>
