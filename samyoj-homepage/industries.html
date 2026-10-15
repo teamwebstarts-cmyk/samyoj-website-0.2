@@ -1556,13 +1556,12 @@
       grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1.15fr);
       gap: 28px 40px;
       align-items: center;
-      min-height: calc(100vh - 80px);
       box-sizing: border-box;
     }
 
     .ind-hero-title {
       font: var(--font-hero);
-      font-size: clamp(32px, 3.6vw, 50px);
+      font-size: 58px;
       font-weight: 700;
       line-height: 1.08;
       color: #0f172a;
@@ -1629,22 +1628,27 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: #fff;
-      color: #111827;
-      font-weight: 700;
+      background-color: #ffffff;
+      color: #0f172a !important;
       font-size: 15px;
-      border: 1.5px solid #111827;
-      border-radius: 10px;
+      font-weight: 700;
       padding: 13px 26px;
       min-height: 48px;
+      border-radius: 10px;
+      white-space: nowrap;
       box-sizing: border-box;
-      line-height: 1.25;
-      text-decoration: none;
+      text-decoration: none !important;
+      border: 1.5px solid #E2E8F0;
+      transition: all 0.2s ease;
+      cursor: pointer;
     }
 
     .ind-hero-secondary:hover {
-      border-color: #9ca3af;
-      background: #f9fafb;
+      background-color: #F8FAFF;
+      border-color: #4B2EEB;
+      color: #4B2EEB !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(75, 46, 235, 0.08);
     }
 
     .ind-hero-chips {
@@ -1738,7 +1742,6 @@
       .ind-hero {
         grid-template-columns: 1fr;
         gap: 20px;
-        min-height: auto;
         align-items: start;
       }
 
@@ -2345,7 +2348,7 @@
       width: 36px;
       height: 36px;
       border-radius: 10px;
-      background: #e8f8ef;
+      background: rgba(75, 46, 235, 0.08);
       color: #3B22C7;
       display: grid;
       place-items: center;
@@ -3817,6 +3820,14 @@
             <span class="ind-chip">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                <rect width="20" height="14" x="2" y="6" rx="2" />
+              </svg>
+              Professional Services
+            </span>
+            <span class="ind-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
                 <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
                 <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
@@ -3853,17 +3864,9 @@
               </svg>
               SaaS
             </span>
-            <span class="ind-chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                <rect width="20" height="14" x="2" y="6" rx="2" />
-              </svg>
-              Professional Services
-            </span>
           </div>
 
-          <div class="ind-hero-note">
+          <!--<div class="ind-hero-note">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10" />
@@ -3871,7 +3874,7 @@
             </svg>
             <p>From a first enquiry to a qualified lead, follow-up, and resolution — <strong>Samyoj</strong> keeps the
               customer and the next action connected.</p>
-          </div>
+          </div>-->
         </div>
 
         <div class="ind-hero-visual">
@@ -4099,14 +4102,14 @@
               <strong>Official WhatsApp Business API</strong>
             </p>
           </div>
-          <div class="ind-cta-actions">
+          <!--<div class="ind-cta-actions">
             <a href="https://app.samyoj.com" class="btn primary"><span>Start for FREE</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
             <a href="https://calendly.com/teamsamyoj/30min" target="_blank" rel="noopener noreferrer" class="ind-cta-secondary"><span>Book a Demo</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-          </div>
+          </div>-->
         </div>
         <img class="ind-cta-deco right" src="images/rocket-image.webp" alt="rocket image" aria-hidden="true"
           draggable="false" width="1536" height="1024" loading="lazy" decoding="async" />
