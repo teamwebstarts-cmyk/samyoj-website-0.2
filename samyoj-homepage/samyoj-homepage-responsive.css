@@ -7,9 +7,10 @@
   --sy-bp-md: 768px;
   --sy-bp-lg: 1024px;
   --sy-page-inline: clamp(16px, 4vw, 30px);
-  --sy-section-pad-y: clamp(40px, 8vw, 64px);
-  --sy-hero-clearance: 64px;
-  --sy-hero-pad-bottom: clamp(40px, 8vw, 64px);
+  --sy-section-pad-y: clamp(20px, 4vw, 32px);
+  /* Hero: half clearance + half bottom pad (was 64px / clamp(40px, 8vw, 64px)) */
+  --sy-hero-clearance: 32px;
+  --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
 }
 
 html {
