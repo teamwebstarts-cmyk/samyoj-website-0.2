@@ -3700,7 +3700,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
-  <link rel="stylesheet" href="samyoj-transitions.css">
+  <link rel="stylesheet" href="samyoj-transitions.css?v=2">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
@@ -4184,7 +4184,7 @@
     .custom-stats-banner {
       max-width: 1400px;
       width: min(1400px, calc(100% - 2 * var(--sy-page-inline, clamp(16px, 4vw, 30px))));
-      margin: clamp(8px, 2vw, 16px) auto clamp(40px, 8vw, 60px) auto;
+      margin: clamp(8px, 2vw, 16px) auto clamp(20px, 4vw, 30px) auto;
       background-color: #F8FAFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
@@ -4415,7 +4415,7 @@
       <!-- Left Column: Content -->
       <div class="custom-hero-left">
         <!-- Headline: Outcome-Led -->
-        <h1 class="custom-hero-title">
+        <h1 class="custom-hero-title sy-hero-anim" style="--sy-hero-i:0">
           Turn Every Customer Conversation Into a
           <span class="scribble-wrapper">
             <span class="highlight-green">Sales Opportunity</span>
@@ -4427,12 +4427,12 @@
         </h1>
 
         <!-- Subheading -->
-        <p class="custom-hero-subtitle">
+        <p class="custom-hero-subtitle sy-hero-anim" style="--sy-hero-i:1">
           Connect WhatsApp, Instagram, Facebook, Email and Meta Ads in one CRM. Capture leads, automate conversations, follow up automatically, and give your sales team one place to manage every customer.
         </p>
 
         <!-- Channel Badges -->
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;">
+        <div class="sy-hero-anim" style="--sy-hero-i:2;display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
           <span class="sy-channel-badge wa"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 2.08.62 4.02 1.7 5.64L2 22l4.7-1.53a9.86 9.86 0 0 0 5.34 1.55h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2z" />
@@ -4452,7 +4452,7 @@
         </div>
 
         <!-- Buttons -->
-        <div class="custom-hero-ctas">
+        <div class="custom-hero-ctas sy-hero-anim" style="--sy-hero-i:3">
           <a href="https://app.samyoj.com/?utm_source=pages&amp;utm_medium=website+pages&amp;utm_campaign=homepage_button2"
             class="custom-btn-primary">
             Start Free Trial <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -7216,7 +7216,7 @@
       }
     }
     #custom-shared-inbox-intro .custom-section-subtitle {
-      margin-bottom: clamp(24px, 4vw, 40px);
+      margin-bottom: clamp(16px, 2.5vw, 24px);
     }
     .custom-problem-section {
       width: 100%;
@@ -9575,7 +9575,7 @@
     });
   </script>
 
-  <script src="samyoj-transitions.js"></script>
+  <script src="samyoj-transitions.js?v=2"></script>
 </body>
 
 </html>

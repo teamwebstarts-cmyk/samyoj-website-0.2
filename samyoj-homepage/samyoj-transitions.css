@@ -7,6 +7,35 @@
    - Full accessibility: prefers-reduced-motion supported
    ========================================================================== */
 
+/* ==========================================================================
+   Speculation Rules + cross-document View Transitions (progressive)
+   - Chromium: internal pages prerender on hover and swap with a native
+     animated cross-fade (no white flash, near-instant navigation)
+   - Other browsers: unchanged (the JS exit/enter fade below still applies)
+   ========================================================================== */
+
+@view-transition {
+  navigation: auto;
+}
+
+/* When the browser handles prerender + View Transitions (html.sy-vt is set by
+   samyoj-transitions.js), skip the JS-driven body enter animation to avoid
+   double-fading on activation. */
+html.sy-vt body {
+  animation: none !important;
+}
+
+/* Accessibility: make the native cross-fade effectively instant for
+   reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Prevent white or background flash between document transitions */
 html {
   background-color: #ffffff;
@@ -32,6 +61,27 @@ body.sy-page-exiting {
     transform: translateY(4px);
   }
   100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Hero entrance animation (shared across all pages)
+   - Elements below the nav fade + rise in on page load (staggered)
+   - Opt-in per element: add class "sy-hero-anim" (auto-staggered by order)
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .sy-hero-anim {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: syHeroRise 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation-delay: calc(120ms + var(--sy-hero-i, 0) * 90ms);
+  }
+}
+
+@keyframes syHeroRise {
+  to {
     opacity: 1;
     transform: none;
   }

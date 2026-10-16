@@ -2,6 +2,7 @@
 <html lang="en-IN">
 
 <head>
+  <script>document.documentElement.classList.add('js-reveal');</script>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
@@ -4153,9 +4154,23 @@
 
   </style>
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
-  <link rel="stylesheet" href="samyoj-transitions.css">
+  <link rel="stylesheet" href="samyoj-transitions.css?v=2">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      html.js-reveal [data-reveal] {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+      }
+
+      html.js-reveal [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="noScript">
@@ -4541,14 +4556,14 @@
     <section class="hero-pricing-section">
       <div class="wr hero-pricing-grid">
         <div class="hero-pricing-copy">
-        <h1 class="hero-pricing-title">
+        <h1 class="hero-pricing-title sy-hero-anim" style="--sy-hero-i:0">
           Simple Pricing for Smart<br class="hero-title-br" />
           <span class="highlight-green feat-accent">Communication &amp;<br class="hero-title-br" />Automation</span>
         </h1>
-        <p class="hero-pricing-sub">
+        <p class="hero-pricing-sub sy-hero-anim" style="--sy-hero-i:1">
           Start with a 14-day free trial. Capture, qualify, and automate leads across WhatsApp, Instagram &amp; Facebook. Upgrade when your team is ready.
         </p>
-        <div class="hero-pricing-actions">
+        <div class="hero-pricing-actions sy-hero-anim" style="--sy-hero-i:2">
           <a href="https://app.samyoj.com" class="btn-primary-sy" id="hero-primary-cta">Start free trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           <a href="#pricing-cards-section" class="btn-outline-sy">Compare plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
         </div>
@@ -4595,7 +4610,7 @@
     </section>
 
     <!-- Section 2: Pricing Cards -->
-    <section class="pricing-cards-section" id="pricing-cards-section">
+    <section class="pricing-cards-section" id="pricing-cards-section" data-reveal>
       <div class="wr">
         <div class="section-center-head">
           <div class="custom-badge-pill">COMPARE PLANS</div>
@@ -5667,7 +5682,28 @@
     });
   });
 </script>
-  <script src="samyoj-transitions.js"></script>
+  <script><!-- reveal engine v5.0.8 --></script>
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var els = document.querySelectorAll('[data-reveal]');
+        if (reduce || !('IntersectionObserver' in window) || !els.length) {
+          els.forEach(function (e) { e.classList.add('is-visible'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+        els.forEach(function (e) { io.observe(e); });
+      } catch (err) {
+        document.querySelectorAll('[data-reveal]').forEach(function (e) { e.classList.add('is-visible'); });
+      }
+    })();
+  </script>
+  <script src="samyoj-transitions.js?v=2"></script>
 </body>
 
 </html>

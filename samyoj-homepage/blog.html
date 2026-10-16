@@ -1283,7 +1283,7 @@
     }
   </style>
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
-  <link rel="stylesheet" href="samyoj-transitions.css">
+  <link rel="stylesheet" href="samyoj-transitions.css?v=2">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
 </head>
@@ -1461,15 +1461,15 @@
     <section class="blog-hero" aria-label="Blog hero">
       <div class="blog-hero-inner">
         <div class="blog-hero-left">
-          <h1>
+          <h1 class="sy-hero-anim" style="--sy-hero-i:0">
             Insights to help you<br>
             <span class="green-word">connect</span>, engage<br>
             and grow with Samyoj
           </h1>
-          <p class="blog-hero-subtitle">
+          <p class="blog-hero-subtitle sy-hero-anim" style="--sy-hero-i:1">
             Discover practical guides, product updates, and advanced WhatsApp marketing strategies. Master AI-powered automation and elevate your brand's conversational CRM to the next level.
           </p>
-          <button class="blog-subscribe-btn" type="button" id="hero-subscribe-btn" aria-label="Subscribe to blog updates">
+          <button class="blog-subscribe-btn sy-hero-anim" style="--sy-hero-i:2" type="button" id="hero-subscribe-btn" aria-label="Subscribe to blog updates">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C8.64 5.36 7 7.92 7 11v5l-2 2v1h14v-1l-2-2z"/>
             </svg>
@@ -1478,7 +1478,7 @@
         </div>
 
         <!-- Hero 3D Graphic Image -->
-        <div class="blog-hero-right">
+        <div class="blog-hero-right sy-hero-anim" style="--sy-hero-i:3">
             <div class="blog-hero-img-wrap">
               <img src="New images/Indigo CRM Dashboard Marketing Scene.png" alt="Indigo CRM Dashboard Marketing Scene" width="1671" height="941" decoding="async" />
             </div>
@@ -2069,6 +2069,6 @@
     });
   });
 </script>
-  <script src="samyoj-transitions.js"></script>
+  <script src="samyoj-transitions.js?v=2"></script>
 </body>
 </html>
