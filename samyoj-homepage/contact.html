@@ -2,6 +2,7 @@
 <html lang="en-IN">
 
 <head>
+  <script>document.documentElement.classList.add('js-reveal');</script>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
@@ -3206,6 +3207,20 @@
   <link rel="stylesheet" href="samyoj-transitions.css?v=2">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      html.js-reveal [data-reveal] {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+      }
+
+      html.js-reveal [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="noScript">
@@ -3479,7 +3494,7 @@
     </section>
 
     <!-- Ways to reach us -->
-    <section class="cr-section" aria-label="Multiple ways to reach us">
+    <section class="cr-section" aria-label="Multiple ways to reach us" data-reveal>
       <div class="wrap">
         <div class="cr-inner">
           <header class="cr-header">
@@ -3646,7 +3661,7 @@
       </div>
     </section>
 
-    <section class="cw-section" id="contact-form" aria-labelledby="cw-title">
+    <section class="cw-section" id="contact-form" aria-labelledby="cw-title" data-reveal>
       <div class="wrap cw-inner">
         <header class="cw-header">
           <span class="cw-badge">
@@ -4026,7 +4041,7 @@
       </div>
     </section>
 
-    <section class="wy-section" id="why-samyoj" aria-labelledby="wy-title">
+    <section class="wy-section" id="why-samyoj" aria-labelledby="wy-title" data-reveal>
       <div class="wrap">
         <div class="wy-inner">
           <header class="wy-header">
@@ -4411,6 +4426,27 @@
     });
   });
 </script>
+  <script><!-- reveal engine v5.0.8 --></script>
+  <script>
+    (function () {
+      try {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var els = document.querySelectorAll('[data-reveal]');
+        if (reduce || !('IntersectionObserver' in window) || !els.length) {
+          els.forEach(function (e) { e.classList.add('is-visible'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+        els.forEach(function (e) { io.observe(e); });
+      } catch (err) {
+        document.querySelectorAll('[data-reveal]').forEach(function (e) { e.classList.add('is-visible'); });
+      }
+    })();
+  </script>
   <script src="samyoj-transitions.js?v=2"></script>
 </body>
 
