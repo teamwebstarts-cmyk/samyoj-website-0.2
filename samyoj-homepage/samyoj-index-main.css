@@ -1,86 +1,5 @@
-/* index.html — page-specific styles extracted from inline <style> blocks.
-   See doc/SEO-GEO-MASTER-PLAN.md §4.4. Blocks concatenated in original order. */
-
-/* ===== original inline block #1 (2.2 KB) ===== */
-/* Base Navigation List */
-    /* Base Navigation List */
-    .um-nav-links {
-      list-style: none !important;
-      display: flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
-    /* Normal Link Styles */
-    .um-nav-links li a {
-      text-decoration: none !important;
-      color: #333333 !important;
-      font-size: 15px !important;
-      font-weight: 500 !important;
-      padding: 6px 14px !important;
-      margin: 0 2px !important;
-      border-radius: 999px !important;
-      transition: all 0.3s ease !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      border: 1px solid transparent !important;
-    }
-
-    /* Hover Effect */
-    .um-nav-links li a:hover {
-      color: #4B2EEB !important;
-      background-color: rgba(75, 46, 235, 0.06) !important;
-    }
-
-    /* ACTIVE PILL HIGHLIGHT STATE */
-    .um-nav-links li a.active,
-    .um-nav-links li a[aria-current="page"] {
-      background-color: rgba(75, 46, 235, 0.08) !important;
-      color: #4B2EEB !important;
-      border: 1px solid rgba(75, 46, 235, 0.22) !important;
-      font-weight: 700 !important;
-      box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
-      padding: 8px 18px !important;
-    }
-
-    /* Sparkle Star Icon */
-    .um-nav-links li a.active::before,
-    .um-nav-links li a[aria-current="page"]::before {
-      content: "✦" !important;
-      font-size: 13px !important;
-      color: #7A3BFF !important;
-    }
-  
-    /* Mobile breakpoint: stack 2 cards vertically */
-    @media (max-width: 860px) {
-      .meta-cards-grid {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
-      }
-
-      .meta-feature-card {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        padding: 32px 24px !important;
-        gap: 28px !important;
-        min-height: auto !important;
-      }
-
-      .card-left-col,
-      .card-right-col {
-        width: 100% !important;
-      }
-
-      .card-right-col img {
-        max-height: 280px !important;
-        max-width: 100% !important;
-      }
-    }
-
-/* ===== original inline block #2 (2.0 KB) ===== */
+/* index.html — page styles that originally came AFTER the shared chrome block (order-critical). */
+/* original block #3 (1.9 KB) */
 ._58ce83d8 {
       top: 0;
       left: 0;
@@ -176,7 +95,7 @@
       text-decoration: none;
     }
 
-/* ===== original inline block #3 (2.2 KB) ===== */
+/* original block #4 (2.1 KB) */
 ._4220988a {
       --wr-max: 1600px;
       position: relative;
@@ -284,7 +203,7 @@
       object-fit: contain;
     }
 
-/* ===== original inline block #4 (2.5 KB) ===== */
+/* original block #5 (2.4 KB) */
 ._5a2e1116 {
       --wr-max: 1600px;
       position: relative;
@@ -410,7 +329,7 @@
       object-fit: contain;
     }
 
-/* ===== original inline block #5 (0.9 KB) ===== */
+/* original block #6 (0.9 KB) */
 ._69d6c402 {
       position: relative;
       padding-top: 0;
@@ -449,7 +368,7 @@
       line-height: var(--lineHeight-subheading);
     }
 
-/* ===== original inline block #6 (4.0 KB) ===== */
+/* original block #7 (3.8 KB) */
 ._65c6996a {
       --wr-max: 1200px;
       position: relative;
@@ -636,7 +555,7 @@
       display: none;
     }
 
-/* ===== original inline block #7 (2.4 KB) ===== */
+/* original block #8 (2.3 KB) */
 ._ad3fe7b8 {
       --wr-max: 1410px;
       position: relative;
@@ -756,7 +675,7 @@
       border-radius: calc(var(--card-borderRadius)/2);
     }
 
-/* ===== original inline block #8 (2.8 KB) ===== */
+/* original block #9 (2.6 KB) */
 ._8cddd18e {
       position: relative;
       padding-top: 50px;
@@ -893,7 +812,7 @@
       width: 100%;
     }
 
-/* ===== original inline block #9 (2.8 KB) ===== */
+/* original block #10 (2.6 KB) */
 ._dbf1af4b {
       position: relative;
       padding-top: 50px;
@@ -1020,7 +939,7 @@
       font-size: 1em;
     }
 
-/* ===== original inline block #10 (8.1 KB) ===== */
+/* original block #11 (7.7 KB) */
 ._48b611cf {
       position: relative;
       padding-top: 50px;
@@ -1368,7 +1287,7 @@
       max-width: 100%;
     }
 
-/* ===== original inline block #11 (2.3 KB) ===== */
+/* original block #12 (2.2 KB) */
 ._f42916f9 {
       position: relative;
       padding-top: 50px;
@@ -1480,7 +1399,7 @@
       white-space: nowrap;
     }
 
-/* ===== original inline block #12 (1.1 KB) ===== */
+/* original block #13 (1.1 KB) */
 ._5e677c8e {
       position: relative;
       padding-top: 0px;
@@ -1531,7 +1450,7 @@
       line-height: var(--lineHeight-subheading);
     }
 
-/* ===== original inline block #13 (3.7 KB) ===== */
+/* original block #14 (3.5 KB) */
 ._624645b7 {
       --wr-max: 1200px;
       position: relative;
@@ -1697,7 +1616,7 @@
       display: block;
     }
 
-/* ===== original inline block #14 (0.3 KB) ===== */
+/* original block #15 (0.3 KB) */
 ._fbc022e8 {
       position: relative;
       padding-top: 0px;
@@ -1711,7 +1630,7 @@
       }
     }
 
-/* ===== original inline block #15 (3.6 KB) ===== */
+/* original block #16 (3.4 KB) */
 ._a5d4bee7 {
       position: relative;
       padding-top: 50px;
@@ -1884,7 +1803,7 @@
       border-radius: calc(var(--card-borderRadius)/2);
     }
 
-/* ===== original inline block #16 (0.2 KB) ===== */
+/* original block #17 (0.2 KB) */
 ._f595e375 {
       position: relative;
       padding-top: 0px;
@@ -1892,7 +1811,7 @@
       padding-bottom: 0px;
     }
 
-/* ===== original inline block #17 (3.0 KB) ===== */
+/* original block #18 (2.8 KB) */
 ._83203361 {
       position: relative;
       padding-top: 50px;
@@ -2029,7 +1948,7 @@
       margin-top: -1.2em;
     }
 
-/* ===== original inline block #18 (0.2 KB) ===== */
+/* original block #19 (0.2 KB) */
 ._468ecac0 {
       position: relative;
       padding-top: 0px;
@@ -2037,7 +1956,7 @@
       padding-bottom: 0px;
     }
 
-/* ===== original inline block #19 (2.5 KB) ===== */
+/* original block #20 (2.4 KB) */
 ._c4b89fde {
       display: flex;
       padding: 30px 0 60px 0;
@@ -2181,15 +2100,15 @@
       padding: 10px 0;
     }
 
-/* ===== original inline block #20 (0.0 KB) ===== */
+/* original block #21 (0.0 KB) */
 
 
-/* ===== original inline block #21 (0.1 KB) ===== */
+/* original block #22 (0.1 KB) */
 body {
         --um-header-height: calc(65px + var(--um-banner-height, 0px))
       }
 
-/* ===== original inline block #22 (9.9 KB) ===== */
+/* original block #23 (9.4 KB) */
 /* Custom Hero Section Styles */
     #custom-hero-section {
       --sy-hero-pad-bottom: clamp(10px, 1.5vh, 18px);
@@ -2624,7 +2543,7 @@ body {
       }
     }
 
-/* ===== original inline block #23 (65.7 KB) ===== */
+/* original block #24 (62.7 KB) */
 /* Brand Logos & Video Section Styles (section HTML disabled) */
     /*
     #custom-brand-video-section {

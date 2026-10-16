@@ -1,66 +1,5 @@
-/* contact.html — page-specific styles extracted from inline <style> blocks.
-   See doc/SEO-GEO-MASTER-PLAN.md §4.4. Blocks concatenated in original order. */
-
-/* ===== original inline block #1 (1.7 KB) ===== */
-/* Shared half section rhythm (matches features / index / pricing / industries / blog) */
-  :root {
-    --sy-section-pad-y: clamp(20px, 4vw, 32px);
-    --sy-hero-clearance: 32px;
-    --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
-  }
-
-  /* Active link styles */
- .um-nav-links {
-    list-style: none !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* Normal Link Styles */
-.um-nav-links li a {
-    text-decoration: none !important;
-    color: #333333 !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    padding: 6px 14px !important;
-    margin: 0 2px !important;
-    border-radius: 999px !important;
-    transition: all 0.3s ease !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    border: 1px solid transparent !important;
-}
-
-/* Hover Effect */
-.um-nav-links li a:hover {
-    color: #4B2EEB !important;
-    background-color: rgba(75, 46, 235, 0.06) !important;
-}
-
-/* ACTIVE PILL HIGHLIGHT STATE */
-.um-nav-links li a.active,
-.um-nav-links li a[aria-current="page"] {
-    background-color: rgba(75, 46, 235, 0.08) !important;
-    color: #4B2EEB !important;
-    border: 1px solid rgba(75, 46, 235, 0.22) !important;
-    font-weight: 700 !important;
-    box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
-    padding: 8px 18px !important;
-}
-
-/* Sparkle Star Icon */
-.um-nav-links li a.active::before,
-.um-nav-links li a[aria-current="page"]::before {
-    content: "✦" !important;
-    font-size: 13px !important;
-    color: #7A3BFF !important;
-}
-
-/* ===== original inline block #2 (34.8 KB) ===== */
+/* contact.html — page styles that originally came AFTER the shared chrome block (order-critical). */
+/* original block #3 (33.2 KB) */
 :root {
       --green: #4B2EEB;
       --green-deep: #3B22C7;
@@ -1689,7 +1628,7 @@
       }
     }
 
-/* ===== original inline block #3 (0.4 KB) ===== */
+/* original block #4 (0.4 KB) */
 @media (prefers-reduced-motion: no-preference) {
       html.js-reveal [data-reveal] {
         opacity: 0;
@@ -1703,12 +1642,12 @@
       }
     }
 
-/* ===== original inline block #4 (0.1 KB) ===== */
+/* original block #5 (0.1 KB) */
 body {
         --um-header-height: calc(65px + var(--um-banner-height, 0px))
       }
 
-/* ===== original inline block #5 (1.8 KB) ===== */
+/* original block #6 (1.7 KB) */
 @keyframes flowTop {
                     from {
                       stroke-dashoffset: 10;
@@ -1773,7 +1712,7 @@ body {
                     animation: badgeFloat 2.2s ease-in-out infinite;
                   }
 
-/* ===== original inline block #6 (1.8 KB) ===== */
+/* original block #7 (1.8 KB) */
 @keyframes flowLeftM {
                     from {
                       stroke-dashoffset: 10;

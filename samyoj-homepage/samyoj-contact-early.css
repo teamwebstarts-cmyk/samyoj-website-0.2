@@ -1,0 +1,59 @@
+/* contact.html — styles that originally preceded the shared chrome block (order-critical). */
+/* original block #1 */
+/* Shared half section rhythm (matches features / index / pricing / industries / blog) */
+  :root {
+    --sy-section-pad-y: clamp(20px, 4vw, 32px);
+    --sy-hero-clearance: 32px;
+    --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+  }
+
+  /* Active link styles */
+ .um-nav-links {
+    list-style: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Normal Link Styles */
+.um-nav-links li a {
+    text-decoration: none !important;
+    color: #333333 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 6px 14px !important;
+    margin: 0 2px !important;
+    border-radius: 999px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border: 1px solid transparent !important;
+}
+
+/* Hover Effect */
+.um-nav-links li a:hover {
+    color: #4B2EEB !important;
+    background-color: rgba(75, 46, 235, 0.06) !important;
+}
+
+/* ACTIVE PILL HIGHLIGHT STATE */
+.um-nav-links li a.active,
+.um-nav-links li a[aria-current="page"] {
+    background-color: rgba(75, 46, 235, 0.08) !important;
+    color: #4B2EEB !important;
+    border: 1px solid rgba(75, 46, 235, 0.22) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
+    padding: 8px 18px !important;
+}
+
+/* Sparkle Star Icon */
+.um-nav-links li a.active::before,
+.um-nav-links li a[aria-current="page"]::before {
+    content: "✦" !important;
+    font-size: 13px !important;
+    color: #7A3BFF !important;
+}

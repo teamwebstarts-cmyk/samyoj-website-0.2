@@ -1,0 +1,79 @@
+/* index.html — styles that originally preceded the shared chrome block (order-critical). */
+/* original block #1 */
+/* Base Navigation List */
+    /* Base Navigation List */
+    .um-nav-links {
+      list-style: none !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    /* Normal Link Styles */
+    .um-nav-links li a {
+      text-decoration: none !important;
+      color: #333333 !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      padding: 6px 14px !important;
+      margin: 0 2px !important;
+      border-radius: 999px !important;
+      transition: all 0.3s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      border: 1px solid transparent !important;
+    }
+
+    /* Hover Effect */
+    .um-nav-links li a:hover {
+      color: #4B2EEB !important;
+      background-color: rgba(75, 46, 235, 0.06) !important;
+    }
+
+    /* ACTIVE PILL HIGHLIGHT STATE */
+    .um-nav-links li a.active,
+    .um-nav-links li a[aria-current="page"] {
+      background-color: rgba(75, 46, 235, 0.08) !important;
+      color: #4B2EEB !important;
+      border: 1px solid rgba(75, 46, 235, 0.22) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
+      padding: 8px 18px !important;
+    }
+
+    /* Sparkle Star Icon */
+    .um-nav-links li a.active::before,
+    .um-nav-links li a[aria-current="page"]::before {
+      content: "✦" !important;
+      font-size: 13px !important;
+      color: #7A3BFF !important;
+    }
+  
+    /* Mobile breakpoint: stack 2 cards vertically */
+    @media (max-width: 860px) {
+      .meta-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+
+      .meta-feature-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 32px 24px !important;
+        gap: 28px !important;
+        min-height: auto !important;
+      }
+
+      .card-left-col,
+      .card-right-col {
+        width: 100% !important;
+      }
+
+      .card-right-col img {
+        max-height: 280px !important;
+        max-width: 100% !important;
+      }
+    }

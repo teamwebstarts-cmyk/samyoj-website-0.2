@@ -1,0 +1,51 @@
+/* features.html — styles that originally preceded the shared chrome block (order-critical). */
+/* original block #1 */
+/* Active link styles */
+.um-nav-links {
+    list-style: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Normal Link Styles */
+.um-nav-links li a {
+    text-decoration: none !important;
+    color: #333333 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 6px 14px !important;
+    margin: 0 2px !important;
+    border-radius: 999px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border: 1px solid transparent !important;
+}
+
+/* Hover Effect */
+.um-nav-links li a:hover {
+    color: #4B2EEB !important;
+}
+
+/* ACTIVE PILL HIGHLIGHT STATE */
+.um-nav-links li a.active,
+.um-nav-links li a[aria-current="page"] {
+    background-color: #EEF2FF !important;
+    color: #4B2EEB !important;
+    border: 1px solid #C7D2FE !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(75, 46, 235, 0.15) !important;
+    padding: 8px 18px !important;
+}
+
+/* Sparkle Star Icon */
+.um-nav-links li a.active::before,
+.um-nav-links li a[aria-current="page"]::before {
+    content: "✦" !important;
+    font-size: 13px !important;
+    color: #4B2EEB !important;
+}
