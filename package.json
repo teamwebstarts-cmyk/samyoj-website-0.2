@@ -9,7 +9,8 @@
     "seo:audit": "node scripts/seo-audit.mjs"
   },
   "devDependencies": {
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "sharp": "^0.35.5"
   },
   "engines": {
     "node": ">=18"

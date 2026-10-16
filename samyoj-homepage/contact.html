@@ -12,14 +12,19 @@
   <title>Contact Samyoj | AI Customer Communication &amp; Automation Experts</title>
 
   <link rel="canonical" href="https://samyoj.com/contact" />
-  <meta name="keywords" content="omnichannel customer communication, AI lead qualification, WhatsApp CRM, Instagram automation, Facebook Messenger, Samyoj contact">
-  <meta property="og:type" content="website" />
+  <link rel="alternate" hreflang="en" href="https://samyoj.com/contact" />
+  <link rel="alternate" hreflang="x-default" href="https://samyoj.com/contact" />
+
   <meta property="og:url" content="https://samyoj.com/contact" />
   <meta property="og:title" content="Contact Samyoj | AI Customer Communication &amp; Automation Experts" />
   <meta property="og:description"
     content="Speak with the Samyoj team about automating customer communication across WhatsApp, Instagram, and Facebook with AI lead qualification and CRM workflows." />
-  <meta property="og:image" content="https://samyoj.com/images/samyoj-logo-new.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://samyoj.com/images/og/contact-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Talk to the Samyoj team — sales and support in India" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://samyoj.com/images/og/contact-og.png" />
   <meta name="twitter:title" content="Contact Samyoj | AI Customer Communication &amp; Automation Experts" />
   <meta name="twitter:description"
     content="Speak with the Samyoj team about automating customer communication across WhatsApp, Instagram, and Facebook with AI lead qualification and CRM workflows." />
@@ -3185,22 +3190,67 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Samyoj",
-    "url": "https://samyoj.com/",
-    "logo": "https://samyoj.com/images/samyoj-logo-new.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/samyoj/",
-      "https://www.instagram.com/samyoj_/",
-      "https://www.youtube.com/@samyoj_official"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-8839888531",
-      "contactType": "sales",
-      "areaServed": "IN"
-    }],
-    "email": "hello@samyoj.com"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://samyoj.com/#organization",
+        "name": "Samyoj",
+        "url": "https://samyoj.com/",
+        "logo": "https://samyoj.com/images/og/index-og.png",
+        "sameAs": [
+          "https://www.linkedin.com/company/samyoj/",
+          "https://www.instagram.com/samyoj_/",
+          "https://www.youtube.com/@samyoj_official"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Indore",
+          "addressRegion": "Madhya Pradesh",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-8305369467",
+            "contactType": "sales",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "hi"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9009785315",
+            "contactType": "customer support",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "hi"]
+          }
+        ],
+        "email": "hello@samyoj.com"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://samyoj.com/contact#webpage",
+        "url": "https://samyoj.com/contact",
+        "name": "Contact Samyoj | AI Customer Communication &amp; Automation Experts",
+        "description": "Speak with the Samyoj team about automating customer communication across WhatsApp, Instagram, and Facebook with AI lead qualification and CRM workflows.",
+        "inLanguage": "en-IN",
+        "isPartOf": { "@id": "https://samyoj.com/#organization" },
+        "about": { "@id": "https://samyoj.com/#organization" }
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://samyoj.com/contact#contactpage",
+        "url": "https://samyoj.com/contact",
+        "name": "Contact Samyoj"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://samyoj.com/contact#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://samyoj.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://samyoj.com/contact" }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="stylesheet" href="samyoj-theme.css?v=2">

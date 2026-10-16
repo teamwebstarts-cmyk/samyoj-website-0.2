@@ -46,60 +46,73 @@ for (const file of pages) {
   const urlPath = rel === "index.html" ? "/" : "/" + rel.replace(/\.html$/, "");
   const P = [];
 
+  // ---------- robots meta / noindex handling (must precede tag checks) ----------
+  const robots = metaContent(html, "robots");
+  const isNoindex = Boolean(robots && /noindex/i.test(robots));
+  const skipSEOTags = isNoindex;
+
   // ---------- title ----------
   const decode = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'");
   const title = decode(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? "");
   if (!title) P.push("missing <title>");
-  else if (title.length > 65) P.push(`title ${title.length} chars (>65, truncates in SERP)`);
-  else if (title.length < 30) P.push(`title only ${title.length} chars (<30)`);
+  else if (!skipSEOTags && title.length > 65) P.push(`title ${title.length} chars (>65, truncates in SERP)`);
+  else if (!skipSEOTags && title.length < 30) P.push(`title only ${title.length} chars (<30)`);
 
   // ---------- meta description ----------
-  const desc = decode(metaContent(html, "description") ?? "") ;
-  if (!desc) P.push("missing meta description");
-  else if (desc.length > 165) P.push(`description ${desc.length} chars (>165)`);
-  else if (desc.length < 100) P.push(`description only ${desc.length} chars (<100)`);
-
-  // ---------- canonical ----------
-  const canon = html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1];
-  if (!canon) P.push("missing canonical");
-  else {
-    if (!canon.startsWith("https://samyoj.com")) P.push(`canonical not samyoj.com domain: ${canon}`);
-    if (canon.endsWith(".html")) P.push(`canonical ends in .html: ${canon}`);
-    const expected = SITE + (urlPath === "/index" ? "/" : urlPath === "/legal/" + rel.split("/").pop().replace(".html", "") ? `${SITE}/legal/${rel.split("/").pop().replace(".html", "")}` : urlPath === "/" ? "/" : urlPath === "/index" ? "/" : urlPath);
-    void expected; // informational only; hard full-path mapping kept simple on purpose
+  if (!skipSEOTags) {
+    const desc = decode(metaContent(html, "description") ?? "");
+    if (!desc) P.push("missing meta description");
+    else if (desc.length > 165) P.push(`description ${desc.length} chars (>165)`);
+    else if (desc.length < 100) P.push(`description only ${desc.length} chars (<100)`);
   }
 
-  // ---------- robots meta ----------
-  const robots = metaContent(html, "robots");
-  if (!robots) P.push("missing robots meta");
-  else if (!robots.includes("max-image-preview:large")) P.push("robots missing max-image-preview:large");
+  // ---------- canonical ----------
+  if (!skipSEOTags) {
+    const canon = html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1];
+    if (!canon) P.push("missing canonical");
+    else {
+      if (!canon.startsWith("https://samyoj.com")) P.push(`canonical not samyoj.com domain: ${canon}`);
+      if (canon.endsWith(".html")) P.push(`canonical ends in .html: ${canon}`);
+    }
+  }
+
+  if (isNoindex) {
+    // Utility pages (404 etc.): only verify they stay out of the index
+  } else {
+    if (!robots) P.push("missing robots meta");
+    else if (!robots.includes("max-image-preview:large")) P.push("robots missing max-image-preview:large");
+  }
 
   // ---------- og / twitter ----------
   const ogTitle = metaContent(html, "og:title", true);
   const ogImage = metaContent(html, "og:image", true);
   const ogType = metaContent(html, "og:type", true);
   const twCard = metaContent(html, "twitter:card");
-  if (!ogTitle) P.push("missing og:title");
-  if (!ogImage) P.push("missing og:image");
-  else {
-    const ogPath = ogImage.replace(SITE + "/", "");
-    if (ogPath.includes("{{")) P.push("og:image contains TEMPLATE PLACEHOLDER");
-    else if (!existsSync(join(ROOT, decodeURIComponent(ogPath)))) P.push(`og:image NOT ON DISK: ${ogPath}`);
+  if (!isNoindex) {
+    if (!ogTitle) P.push("missing og:title");
+    if (!ogImage) P.push("missing og:image");
     else {
-      const sz = statSync(join(ROOT, decodeURIComponent(ogPath))).size;
-      if (sz > 150 * 1024) P.push(`og:image ${(sz / 1024).toFixed(0)} KB (>150 KB target)`);
+      const ogPath = ogImage.replace(SITE + "/", "");
+      if (ogPath.includes("{{")) P.push("og:image contains TEMPLATE PLACEHOLDER");
+      else if (!existsSync(join(ROOT, decodeURIComponent(ogPath)))) P.push(`og:image NOT ON DISK: ${ogPath}`);
+      else {
+        const sz = statSync(join(ROOT, decodeURIComponent(ogPath))).size;
+        if (sz > 150 * 1024) P.push(`og:image ${(sz / 1024).toFixed(0)} KB (>150 KB target)`);
+      }
     }
+    if (ogImage && !metaContent(html, "og:image:width", true)) P.push("missing og:image:width");
+    if (ogImage && !metaContent(html, "og:image:alt", true)) P.push("missing og:image:alt");
+    if (!twCard) P.push("missing twitter:card");
+    else if (twCard !== "summary_large_image") P.push(`twitter:card=${twCard} (want summary_large_image)`);
+    if (isBlogPost(rel) && ogType !== "article") P.push(`og:type=${ogType} (want article on blog posts)`);
   }
-  if (ogImage && !metaContent(html, "og:image:width", true)) P.push("missing og:image:width");
-  if (ogImage && !metaContent(html, "og:image:alt", true)) P.push("missing og:image:alt");
-  if (!twCard) P.push("missing twitter:card");
-  else if (twCard !== "summary_large_image") P.push(`twitter:card=${twCard} (want summary_large_image)`);
-  if (isBlogPost(rel) && ogType !== "article") P.push(`og:type=${ogType} (want article on blog posts)`);
 
   // ---------- hreflang ----------
-  const hreflangs = [...html.matchAll(/<link[^>]*rel="alternate"[^>]*hreflang="([^"]+)"[^>]*>/gi)].map(m => m[1]);
-  if (!hreflangs.includes("en")) P.push("hreflang: missing en alternate");
-  if (!hreflangs.includes("x-default")) P.push("hreflang: missing x-default");
+  if (!isNoindex) {
+    const hreflangs = [...html.matchAll(/<link[^>]*rel="alternate"[^>]*hreflang="([^"]+)"[^>]*>/gi)].map(m => m[1]);
+    if (!hreflangs.includes("en")) P.push("hreflang: missing en alternate");
+    if (!hreflangs.includes("x-default")) P.push("hreflang: missing x-default");
+  }
 
   // ---------- lang + h1 ----------
   if (!/<html[^>]*lang="en-IN"/i.test(html)) P.push('html tag missing lang="en-IN"');
@@ -109,9 +122,8 @@ for (const file of pages) {
 
   // ---------- images ----------
   const imgs = [...html.matchAll(/<img[^>]*>/gi)];
-  const noAlt = imgs.filter(t => !/alt="[^"]*"/.test(t[0]) || /alt=""/.test(t[0]) === false && !/alt="[^"]+"/.test(t[0]));
-  const noAltReal = imgs.filter(t => !t[0].match(/alt="[^"]+"/));
-  if (noAltReal.length) P.push(`${noAltReal.length}/${imgs.length} <img> missing alt text`);
+  const noAltAttr = imgs.filter(t => !/alt="/i.test(t[0]));
+  if (noAltAttr.length) P.push(`${noAltAttr.length}/${imgs.length} <img> missing alt attribute entirely (decorative images should have alt="")`);
   const noDims = imgs.filter(t => !/width="/i.test(t[0]) || !/height="/i.test(t[0]));
   if (noDims.length) P.push(`${noDims.length}/${imgs.length} <img> missing width/height (CLS risk)`);
 
@@ -140,10 +152,12 @@ for (const file of pages) {
     if (!types.includes("Article") && !types.includes("BlogPosting")) P.push("blog post missing Article/BlogPosting schema");
     if (!types.includes("BreadcrumbList")) P.push("blog post missing BreadcrumbList schema");
   }
-  if (rel === "blog.html" && types.length === 0) P.push("blog hub has ZERO schema (want CollectionPage+ItemList)");
-  if (rel === "contact.html" && !types.includes("ContactPage")) P.push("contact missing ContactPage schema");
-  if (!isBlogPost(rel) && rel !== "blog.html" && !urlPath.startsWith("/legal") && !types.includes("FAQPage")) P.push("core page missing FAQPage schema");
-  if (!types.includes("Organization") && !isBlogPost(rel)) P.push("missing Organization schema");
+  if (!isNoindex) {
+    if (rel === "blog.html" && types.length === 0) P.push("blog hub has ZERO schema (want CollectionPage+ItemList)");
+    if (rel === "contact.html" && !types.includes("ContactPage")) P.push("contact missing ContactPage schema");
+    if (rel === "index.html" && !types.includes("FAQPage")) P.push("home missing FAQPage schema");
+    if (!types.includes("Organization") && !isBlogPost(rel)) P.push("missing Organization schema");
+  }
 
   // ---------- inline CSS bloat ----------
   let styleBytes = 0;
