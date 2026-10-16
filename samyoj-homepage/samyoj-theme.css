@@ -528,13 +528,6 @@ a.text-link:hover {
   stroke: var(--sy-brand-purple) !important;
 }
 
-/* Trust Pill Badges & Award Tags */
-.custom-award-badge {
-  background: linear-gradient(135deg, rgba(75, 46, 235, 0.08) 0%, rgba(122, 59, 255, 0.08) 100%) !important;
-  border-color: rgba(122, 59, 255, 0.25) !important;
-  color: var(--sy-brand-purple) !important;
-}
-
 /* FAQ Accordion Styling */
 .custom-faq-item[open] {
   border-color: var(--sy-primary-border) !important;

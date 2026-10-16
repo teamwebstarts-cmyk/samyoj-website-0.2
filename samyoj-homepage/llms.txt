@@ -1,61 +1,61 @@
-# Samyoj - AI-Powered WhatsApp CRM
+# Samyoj — AI-Powered WhatsApp CRM
 
-> Samyoj is an Official WhatsApp Business Solution Partner (BSP) that helps businesses automate WhatsApp conversations, send broadcasts, collect payments, and grow with AI automation.
+> Samyoj (samyoj.com) is an AI-powered customer communication CRM and Official WhatsApp Business Solution Provider. Businesses use Samyoj to qualify leads, automate follow-ups, and sell across WhatsApp, Instagram, and Facebook Messenger — replacing slow manual follow-ups with automated, trackable sales journeys.
 
-## About Samyoj
+## What Samyoj Does
 
-Samyoj provides businesses with a WhatsApp marketing software they can use to Broadcast & automate messages, run Click to WhatsApp Ads, build Chatbots, showcase catalogues, provide multi-agent Live chat support, collect payments within WhatsApp and much more.
+- **Unified omnichannel inbox**: WhatsApp, Instagram DMs and Facebook Messenger in one shared team inbox.
+- **AI lead qualification**: AI agents respond and qualify leads 24/7, scoring and routing them in the CRM pipeline.
+- **Automated follow-up sequences**: Timed, behavior-triggered follow-ups across channels.
+- **Official WhatsApp Business API**: Verified business profile, green tick eligibility, broadcast messaging, catalogs, and Click-to-WhatsApp Ads integration.
+- **CRM & pipeline**: Track every deal from first message to payment, with notes, reminders, and team assignment.
 
 ## Pages
 
-- [Home](https://samyoj.com/) - Main landing page
-- [Features](https://samyoj.com/features) - Platform features
-- [Pricing](https://samyoj.com/pricing) - Plans, billing and cost estimator
-- [Industries](https://samyoj.com/industries) - Industry use cases
-- [Contact](https://samyoj.com/contact) - Talk to experts / sales
-- [Privacy Policy](https://samyoj.com/legal/privacy-policy) - Privacy policy
-- [Terms & Conditions](https://samyoj.com/legal/terms-and-conditions) - Terms
-- [Cookie Policy](https://samyoj.com/legal/cookie-policy) - Cookies
-- [Refund Policy](https://samyoj.com/legal/refund-cancellation-policy) - Refunds
-- [Acceptable Use](https://samyoj.com/legal/acceptable-use-policy) - Acceptable use
+- [Home](https://samyoj.com/) — product overview and customer results
+- [Features](https://samyoj.com/features) — platform capabilities in detail
+- [Pricing](https://samyoj.com/pricing) — plans, billing cycles, and cost estimator
+- [Industries](https://samyoj.com/industries) — real estate, education, healthcare, e-commerce workflows
+- [Blog](https://samyoj.com/blog) — guides on WhatsApp CRM, automation, and growth
+- [Contact](https://samyoj.com/contact) — talk to the sales/expert team
+- [Privacy Policy](https://samyoj.com/legal/privacy-policy)
+- [Terms &amp; Conditions](https://samyoj.com/legal/terms-and-conditions)
+- [Cookie Policy](https://samyoj.com/legal/cookie-policy)
+- [Refund Policy](https://samyoj.com/legal/refund-cancellation-policy)
+- [Acceptable Use Policy](https://samyoj.com/legal/acceptable-use-policy)
 
-## Key Features
+## Pricing (INR billing)
 
-- **Broadcast Messages**: Start with 2000 messages/day, scale to unlimited
-- **AI Chatbots**: Build no-code chatbots for 24/7 automation
-- **WhatsApp Payments**: Collect payments directly within WhatsApp
-- **Live Chat**: Multi-agent support with team collaboration
-- **Click to WhatsApp Ads**: Run targeted advertising campaigns
-- **Catalogs**: Showcase products directly in WhatsApp
-- **API Access**: Full WhatsApp Business API integration
+- **Launch (14-day free trial)**: ₹0 — 1 WhatsApp number, 1 team member, up to 100 contacts
+- **Starter**: ₹999/month (₹800/mo billed annually) — 1 number, 3 members, 5,000 contacts
+- **Growth**: ₹2,499/month (₹2,000/mo billed annually) — 2 numbers, 10 members, AI assistant included
+- **Pro**: ₹4,999/month (₹4,000/mo billed annually) — 5 numbers, 25 members, advanced AI &amp; analytics
+- **Enterprise**: custom — [talk to sales](https://samyoj.com/contact)
+- Billing cycles: monthly, quarterly (5% off), annual (20% off)
+- **Meta/WhatsApp usage charges**: billed at actuals with zero markup from Samyoj
+- **AI/voice usage**: metered separately by consumption — not unlimited
+- Details: [samyoj.com/pricing](https://samyoj.com/pricing)
 
-## Pricing
+## Key Facts
 
-- **Launch (14-Day Free Trial)**: ₹0 for 14 days — 1 WhatsApp number, 1 team member, up to 100 contacts
-- **Starter**: ₹999/month (₹800/mo when billed annually) — 1 number, 3 team members, 5,000 contacts
-- **Growth**: ₹2,499/month (₹2,000/mo when billed annually) — 2 numbers, 10 members, AI assistant included
-- **Pro**: ₹4,999/month (₹4,000/mo when billed annually) — 5 numbers, 25 members, advanced AI & analytics
-- **Enterprise**: Custom pricing — dedicated support, talk to sales at https://samyoj.com/contact
-- **Billing cycles**: Monthly, quarterly (5% off), or annual (20% off)
-- **WhatsApp/Meta usage**: Billed separately at actuals with zero markup from Samyoj
-- **AI/Voice usage**: Metered separately based on consumption; not unlimited
-- **Pricing page**: https://samyoj.com/pricing
+- Founded/work: AI-powered WhatsApp-first CRM built in India (Indore, Madhya Pradesh)
+- Official Meta WhatsApp Business Solution Provider
+- Setup: under 10 minutes to connect WhatsApp Business API
+- Customer-reported results: 3× conversions (EdTechLab), 35%→90% engagement (Cosco), 150% higher response rates (HealthKart)
+- Channels: WhatsApp, Instagram, Facebook Messenger
+- Languages: English and Hindi support
 
-## Customer Success Stories
+## Customer Results (quoted)
 
-- **MBA Fundas**: "Samyoj has completely changed the way we engage with our customers. Broadcasts, automations and API - everything just works seamlessly!"
-- **MomsCo**: "The best WhatsApp marketing tool we've used. Easy to set up, powerful features and outstanding support."
-- **EdTechLab**: "With Samyoj, we increased our conversions by 3X. The automation flows and campaign insights are simply amazing."
-- **Cosco**: "Samyoj helped us increase our customer engagement from 35% to 90% with their Smart Retargeting feature."
-- **AevyTV**: "Samyoj has been pivotal for us. The personalised interactions and instant responses greatly improved our sales!"
-- **PhysicsWallah**: "Samyoj team has shown exceptional professionalism, reliability and a true commitment to customer satisfaction."
-- **D2C Brands**: "Setting up our WhatsApp shop took less than 10 minutes. Our order volume doubled in weeks!"
-- **HealthKart**: "The Webviews and custom forms have transformed our customer onboarding. User response rates are up by 150%."
+- "Samyoj has completely changed the way we engage with our customers. Broadcasts, automations and API — everything just works seamlessly!" — MBA Fundas
+- "With Samyoj, we increased our conversions by 3X. The automation flows and campaign insights are simply amazing." — EdTechLab
+- "Samyoj helped us increase our customer engagement from 35% to 90% with their Smart Retargeting feature." — Cosco
+- "The Webviews and custom forms have transformed our customer onboarding. User response rates are up by 150%." — HealthKart
 
-## Contact Information
+## Contact
 
-- **Sales**: +91 8839888531
-- **Support**: +91 8305369467
+- **Sales**: +91 83053 69467
+- **Support**: +91 90097 85315
 - **Email**: hello@samyoj.com
 - **Location**: Indore, Madhya Pradesh, India
 - **App**: https://app.samyoj.com/

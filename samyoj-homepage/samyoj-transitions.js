@@ -91,6 +91,35 @@
     }
   }, { passive: true, capture: true });
 
+  // --- Progressive enhancement: Speculation Rules + cross-document View Transitions ---
+  // On Chromium (Chrome/Edge ~78% of traffic) the destination page is prerendered
+  // on hover and the document swap is animated natively by View Transitions.
+  // We navigate immediately (no 200ms JS exit delay) for an instant, professional feel.
+  var supportsSpeculationRules = !!(
+    window.HTMLScriptElement &&
+    HTMLScriptElement.supports &&
+    HTMLScriptElement.supports('speculationrules')
+  );
+
+  if (supportsSpeculationRules) {
+    // Native View Transitions now own the enter/exit animation
+    document.documentElement.classList.add('sy-vt');
+
+    // Prerender same-origin pages on hover (moderate eagerness).
+    // Relative patterns only match same-origin links; Chromium keeps a small
+    // FIFO budget and activates the prerendered page instantly on click.
+    try {
+      var sr = document.createElement('script');
+      sr.type = 'speculationrules';
+      sr.textContent = JSON.stringify({
+        prerender: [
+          { source: 'document', where: { href_matches: '/**' }, eagerness: 'moderate' }
+        ]
+      });
+      document.head.appendChild(sr);
+    } catch (e) {}
+  }
+
   // Navigation interceptor
   var isNavigating = false;
 
@@ -109,6 +138,13 @@
 
     // If reduced motion is requested, navigate immediately without animation
     if (prefersReducedMotion()) {
+      window.location.href = targetUrl;
+      return;
+    }
+
+    // With Speculation Rules the destination is already prerendered on hover:
+    // activate it instantly and let native View Transitions animate the swap.
+    if (supportsSpeculationRules) {
       window.location.href = targetUrl;
       return;
     }

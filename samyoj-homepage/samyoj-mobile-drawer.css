@@ -102,7 +102,8 @@
 
 .um-nav-drawer.sy-drawer header .um-nav-drawerClose:hover,
 .sy-drawer-head .um-nav-drawerClose:hover {
-  background: #f3f5f4;
+  background: rgba(75, 46, 235, 0.08);
+  color: var(--sy-d-green);
 }
 
 .um-nav-drawer.sy-drawer header .um-nav-drawerClose svg {
@@ -185,7 +186,8 @@
 
 .um-nav-drawer.sy-drawer .um-drawer-links > li > a:hover,
 .um-nav-drawer.sy-drawer .sy-drawer-link:hover {
-  background: #f6faf7 !important;
+  background: rgba(75, 46, 235, 0.06) !important;
+  color: var(--sy-d-green) !important;
 }
 
 .um-nav-drawer.sy-drawer .um-drawer-links > li > a[aria-current="page"],

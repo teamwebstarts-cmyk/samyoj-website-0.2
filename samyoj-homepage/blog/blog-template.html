@@ -173,6 +173,7 @@
   </style>
   <link rel="stylesheet" href="../samyoj-nav.css">
   <link rel="stylesheet" href="../samyoj-magic-bar.css?v=1">
+  <link rel="stylesheet" href="../samyoj-transitions.css?v=2">
 </head>
 
 <body class="noScript">
@@ -284,9 +285,9 @@
 
           <div class="blog-category-badge">{{CATEGORY_NAME}}</div>
 
-          <h1 class="blog-article-title">{{ARTICLE_TITLE}}</h1>
+          <h1 class="blog-article-title sy-hero-anim" style="--sy-hero-i:0">{{ARTICLE_TITLE}}</h1>
 
-          <p class="blog-article-subtitle">{{ARTICLE_EXCERPT}}</p>
+          <p class="blog-article-subtitle sy-hero-anim" style="--sy-hero-i:1">{{ARTICLE_EXCERPT}}</p>
 
           <div class="blog-meta-bar">
             <div class="blog-author-info">
@@ -441,6 +442,7 @@
       </div>
     </div>
   </footer>
+  <script src="../samyoj-transitions.js?v=2"></script>
 </body>
 
 </html>

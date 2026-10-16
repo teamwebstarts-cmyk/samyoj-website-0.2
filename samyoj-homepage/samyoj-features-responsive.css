@@ -6,9 +6,10 @@
   --sy-bp-md: 768px;
   --sy-bp-lg: 1024px;
   --sy-page-inline: clamp(16px, 4vw, 30px);
-  --sy-section-pad-y: clamp(40px, 8vw, 64px);
-  --sy-hero-clearance: 64px;
-  --sy-hero-pad-bottom: clamp(40px, 8vw, 64px);
+  --sy-section-pad-y: clamp(20px, 4vw, 32px);
+  /* Hero: half clearance + half bottom pad (was 64px / clamp(40px, 8vw, 64px)) */
+  --sy-hero-clearance: 32px;
+  --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
 }
 
 html {
@@ -62,8 +63,8 @@ section._0594aa41 > .wr {
 
 @media (max-width: 640px) {
   section._5de7520e {
-    --sy-hero-clearance: 48px;
-    --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
+    --sy-hero-clearance: 24px;
+    --sy-hero-pad-bottom: clamp(16px, 4vw, 24px);
   }
 
   ._23da6a61 {
