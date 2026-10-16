@@ -33,6 +33,13 @@
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <style>
+  /* Shared half section rhythm (matches features / index / pricing / industries / blog) */
+  :root {
+    --sy-section-pad-y: clamp(20px, 4vw, 32px);
+    --sy-hero-clearance: 32px;
+    --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+  }
+
   /* Active link styles */
  .um-nav-links {
     list-style: none !important;
@@ -1594,7 +1601,7 @@
         radial-gradient(ellipse 42% 48% at 8% 92%, rgba(75, 46, 235, 0.05) 0%, transparent 70%),
         radial-gradient(ellipse 38% 42% at 92% 12%, rgba(122, 59, 255, 0.05) 0%, transparent 68%),
         #ffffff;
-      padding: calc(var(--um-header-height) + 64px) 0 48px;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px));
     }
 
     .ch-hero::before,
@@ -1790,7 +1797,7 @@
       --cr-purple-btn: #EEF2FF;
       position: relative;
       overflow: hidden;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background:
         radial-gradient(ellipse 28% 34% at 8% 18%, rgba(75, 46, 235, 0.11) 0%, transparent 70%),
         radial-gradient(ellipse 26% 30% at 92% 14%, rgba(75, 46, 235, 0.10) 0%, transparent 68%),
@@ -2130,7 +2137,7 @@
       --cw-green-panel: #EEF2FF;
       position: relative;
       overflow: hidden;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background:
         radial-gradient(ellipse 36% 42% at 6% 18%, rgba(75, 46, 235, 0.1) 0%, transparent 70%),
         radial-gradient(ellipse 32% 38% at 94% 82%, rgba(75, 46, 235, 0.09) 0%, transparent 68%),
@@ -2551,7 +2558,7 @@
       --wy-orange: #f59e0b;
       position: relative;
       overflow: hidden;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background:
         radial-gradient(ellipse 26% 32% at 8% 12%, rgba(75, 46, 235, 0.1) 0%, transparent 70%),
         radial-gradient(ellipse 24% 28% at 94% 10%, rgba(75, 46, 235, 0.09) 0%, transparent 68%),
@@ -2947,7 +2954,7 @@
       }
 
       .ch-hero {
-        padding: calc(var(--um-header-height) + 64px) 0 28px;
+        padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px));
       }
 
       .ch-inner {
@@ -2998,7 +3005,7 @@
       }
 
       .cr-section {
-        padding: 48px 0 56px;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .cr-header {
@@ -3033,7 +3040,7 @@
       }
 
       .cw-section {
-        padding: 48px 0 64px;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .cw-layout {
@@ -3058,7 +3065,7 @@
       }
 
       .wy-section {
-        padding: 48px 0 56px;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .wy-grid {
