@@ -41,6 +41,13 @@
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=2">
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <style>
+    /* Shared half section rhythm (matches features.html / index.html) */
+    :root {
+      --sy-section-pad-y: clamp(20px, 4vw, 32px);
+      --sy-hero-clearance: 32px;
+      --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+    }
+
     /* Base Navigation List */
     .um-nav-links {
       list-style: none !important;
@@ -236,7 +243,7 @@
 
     /* Hero Section matching Features and Homepage layout, spacing, and dimensions */
     .hero-pricing-section {
-      padding: calc(var(--um-header-height) + 64px) 0 64px 0;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px)) 0;
       background: #ffffff;
       box-sizing: border-box;
       overflow: hidden;
@@ -623,7 +630,7 @@
 
     /* Section: Pricing Cards */
     .pricing-cards-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #ffffff;
     }
 
@@ -672,7 +679,7 @@
         grid-template-columns: 1fr;
       }
       .pricing-cards-section {
-        padding-bottom: 40px;
+        padding-bottom: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
       }
       .pricing-card {
         padding: 18px 16px 16px;
@@ -1010,7 +1017,7 @@
 
     /* Section 4: Transparent Pricing Breakdown */
     .transparent-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     }
 
@@ -1239,7 +1246,7 @@
 
     /* Section 5: Compare Plans Table */
     .compare-section {
-      padding: 80px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #f8fafc; /* Soft background to separate sections */
     }
 
@@ -1267,7 +1274,7 @@
       .why-section,
       .testimonials-section,
       .custom-faq-section {
-        padding: 56px 0;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
     }
 
@@ -1791,7 +1798,7 @@
 
     /* Section 6: Cost Estimator */
     .estimator-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #ffffff;
     }
 
@@ -2173,7 +2180,7 @@
 
     /* Section 7: Why Samyoj — match mockup */
     .why-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #ffffff;
     }
 
@@ -2272,7 +2279,7 @@
 
     /* Section 8: Customer Stories */
     .testimonials-section {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #f8fafc;
     }
 
@@ -2417,7 +2424,7 @@
     /* FAQ Section (matches index.html) */
     .custom-faq-section {
       background-color: #ffffff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
     }
 
     .custom-faq-list {
@@ -2502,7 +2509,7 @@
 
     /* Section 10: Still Questions CTA Bar */
     .cta-questions-bar {
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       background: #f8fafc;
       border-top: 1px solid #e2e8f0;
     }
@@ -2545,7 +2552,7 @@
     /* ─── GLOBAL MOBILE RESPONSIVE ENHANCEMENTS ─── */
     @media (max-width: 1024px) {
       .hero-pricing-section {
-        padding: calc(var(--um-header-height) + 64px) 0 64px 0;
+        padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px)) 0;
       }
       .hero-pricing-grid {
         flex-direction: column;
