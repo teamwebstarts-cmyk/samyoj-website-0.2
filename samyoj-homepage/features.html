@@ -1548,7 +1548,7 @@
       position: relative;
       background-color: #ffffff;
       box-sizing: border-box;
-      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 64px)) 0 var(--sy-hero-pad-bottom, clamp(40px, 8vw, 64px)) 0;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px)) 0;
       --paddingTop: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
@@ -1848,8 +1848,8 @@
 
     @media (max-width: 640px) {
       ._5de7520e {
-        --sy-hero-clearance: 48px;
-        --sy-hero-pad-bottom: clamp(32px, 8vw, 48px);
+        --sy-hero-clearance: 24px;
+        --sy-hero-pad-bottom: clamp(16px, 4vw, 24px);
       }
 
       ._299cb117 {
@@ -1909,9 +1909,8 @@
   <style data-version="2" data-content="section">
     ._517b7731 {
       position: relative;
-      padding-top: 0px;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       --paddingTop: 0px;
-      padding-bottom: 0px;
     }
 
     ._8cfaaed6 {
@@ -1947,9 +1946,7 @@
 
     /* ── Platform showcase (._517b7731 redesign) ── */
     ._517b7731 {
-      padding-top: 36px;
-      --paddingTop: 36px;
-      padding-bottom: 50px;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
     }
 
     ._8cfaaed6 {
@@ -2309,7 +2306,7 @@
       }
 
       ._517b7731 {
-        padding-top: 28px;
+        padding-top: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
       }
 
       ._cfd6e506 {
@@ -2591,9 +2588,8 @@
       --feat-muted: #6B7280;
       --feat-border: #E5E7EB;
       position: relative;
-      padding-top: 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       --paddingTop: 0;
-      padding-bottom: clamp(40px, 8vw, 60px);
     }
 
     ._0594aa41 > .wr {
@@ -3120,7 +3116,7 @@
     /* ── AI Chatbot section ── */
     .ai-section {
       position: relative;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       --paddingTop: 0;
       background: #fff;
       overflow: hidden;
@@ -3425,7 +3421,7 @@
 
     @media (max-width: 700px) {
       .ai-section {
-        padding: 56px 0;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .ai-stats {
@@ -3479,7 +3475,7 @@
 
     .custom-faq-section {
       background-color: #ffffff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -3605,7 +3601,7 @@
 
     @media (max-width: 768px) {
       .custom-faq-section {
-        padding: 56px 0;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .custom-faq-q {
@@ -4163,7 +4159,7 @@
     .demo-section {
       position: relative;
       background: #fff;
-      padding: 64px 0;
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
     }
@@ -4478,7 +4474,7 @@
 
     @media (max-width: 640px) {
       .demo-section {
-        padding: 48px 0 56px;
+        padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
       }
 
       .demo-inner {
@@ -4504,8 +4500,8 @@
   <link rel="stylesheet" href="samyoj-transitions.css">
   <link rel="stylesheet" href="samyoj-nav.css?v=15">
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
-  <link rel="stylesheet" href="samyoj-features-responsive.css?v=1">
-  <link rel="stylesheet" href="samyoj-feature-showcase.css?v=10">
+  <link rel="stylesheet" href="samyoj-features-responsive.css?v=2">
+  <link rel="stylesheet" href="samyoj-feature-showcase.css?v=11">
   <script src="samyoj-feature-showcase.js?v=1" defer></script>
 </head>
 
