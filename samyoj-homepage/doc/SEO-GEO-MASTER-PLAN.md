@@ -443,6 +443,19 @@ From DEEP-RESEARCH money-keyword plan, still unmet: `/compare/interakt-alternati
 
 Total core work (0–4): **~12–15 focused hours**. Every phase independently shippable and revertible.
 
+### 8.1 Execution status (updated Oct 16, 2026 — end of day)
+
+| Phase | Status | Notes |
+|---|---|---|
+| 1 — P0 batch | ✅ Done | 23 og cards generated ≤35 KB; blog hub schema (CollectionPage+ItemList); vercel.json cleanUrls+headers; 404 page; llms.txt v2; sitemap lastmod |
+| 2 — Core pages | ✅ Done | titles/descs normalized; hreflang en+x-default; keywords meta removed; org/contact schema updated; pricing H1 entity bug fixed; dead JS canonical switcher removed |
+| 3 — Blog posts ×17 | ✅ Done | visible `<time>` + byline + read-time; canonicals/robots/og repaired; titles/descs shortened; image dimensions; placeholder links fixed |
+| 4 — CSS externalization | ✅ Done | `samyoj-shared-chrome.css` (34.5 KB × 6 pages) + `samyoj-index/features/contact.css`; order preserved; pages pixel-verified in browser; safe 24h css/js cache added |
+| Bonus — contact data | ✅ Done | stale phone numbers unified across 14 blog posts + 5 legal pages + contact tel: CTA (Sales +91 8305369467 / Support +91 9009785315) |
+| 5 — New money pages | ⏳ Deferred | needs keyword map review with owner (out of SEO-hygiene scope) |
+
+**Audit: 24/24 pages clean, 0 issues, exit 0** (was 0/24 clean at baseline). Browser-verified: `/`, `/features`, `/pricing`, `/industries`, `/contact`, `/blog`, one blog post, `/404`, one legal page.
+
 ## 9. Verification protocol
 
 **Automated static audit (guaranteed repeatable):**
