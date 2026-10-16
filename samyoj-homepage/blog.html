@@ -29,6 +29,13 @@
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <link rel="stylesheet" href="mobile-buttons.css">
   <style>
+  /* Shared half section rhythm (matches features / index / pricing / industries) */
+  :root {
+    --sy-section-pad-y: clamp(20px, 4vw, 32px);
+    --sy-hero-clearance: 32px;
+    --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+  }
+
   /* Active link styles */
   /* Base Navigation List */
 .um-nav-links {
@@ -135,7 +142,7 @@
 
     .blog-hero {
       background-color: #ffffff;
-      padding: calc(var(--um-header-height) + 64px) 0 60px;
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px));
     }
 
     .blog-hero-inner {
@@ -242,7 +249,7 @@
     .blog-tabs-section {
       border-bottom: 1px solid var(--card-border);
       padding-bottom: 0;
-      margin-bottom: 48px;
+      margin-bottom: 24px;
     }
 
     .blog-tabs {
@@ -328,7 +335,7 @@
       grid-template-columns: 1fr 300px;
       gap: 48px; /* Increased gap for better spacing */
       align-items: start;
-      margin-bottom: 60px;
+      margin-bottom: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
       color: var(--ink);
     }
 
@@ -383,7 +390,7 @@
 
     /* ─── FEATURED ARTICLES SECTION ─── */
     .blog-featured-section {
-      margin-bottom: 36px;
+      margin-bottom: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
     }
 
     /* Featured: left col = main card + right col = 3 stack cards */
@@ -825,7 +832,7 @@
       grid-template-columns: 84px 1fr auto;
       gap: 28px;
       align-items: center;
-      margin-bottom: 60px;
+      margin-bottom: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
       position: relative;
       overflow: hidden;
     }
@@ -907,7 +914,7 @@
 
     /* ─── TOPIC EXPLORE ─── */
     .blog-explore-section {
-      margin-bottom: 60px;
+      margin-bottom: var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
       text-align: center;
     }
 
