@@ -80,7 +80,6 @@ html {
 
 /* Allow long labels to wrap on small screens */
 @media (max-width: 640px) {
-  .custom-award-badge,
   .scribble-wrapper,
   .banner-btn-primary,
   .setup-cta-info,
