@@ -1512,11 +1512,19 @@
 
 /* ===== original block #4 (25.5 KB) ===== */
     /* ── Industries hero redesign ── */
+    /* Match homepage hero: Umso's header+section rule beats ._aee52cca padding shorthand
+       and adds --paddingTop; keep clearance at --sy-hero-clearance, not 64px legacy. */
+    ._58ce83d8 + section._aee52cca {
+      padding-top: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px));
+    }
+
     ._aee52cca {
       overflow: hidden;
       position: relative;
-      padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px)) 0;
-      --paddingTop: 64px;
+      --paddingTop: 0;
+      --sy-hero-clearance: 32px;
+      --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+      padding: calc(var(--um-header-height) + var(--sy-hero-clearance)) 0 var(--sy-hero-pad-bottom) 0;
       background: #fff;
     }
 
@@ -1758,7 +1766,7 @@
 
       ._aee52cca {
         padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px)) 0;
-        --paddingTop: 64px;
+        --paddingTop: 0;
       }
     }
 
