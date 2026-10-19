@@ -383,8 +383,8 @@
 
     @media (max-width: 640px) {
       ._5de7520e {
-        --sy-hero-clearance: 24px;
-        --sy-hero-pad-bottom: clamp(16px, 4vw, 24px);
+        --sy-hero-clearance: 20px;
+        --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
       }
 
       ._299cb117 {
