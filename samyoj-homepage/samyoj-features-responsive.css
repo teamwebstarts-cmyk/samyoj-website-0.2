@@ -60,7 +60,7 @@ section._0594aa41 > .wr {
 }
 
 .custom-section-title {
-  font-size: clamp(28px, 4.5vw, 42px);
+  font-size: clamp(26px, 3.2vw + 8px, 42px);
 }
 
 /* Modals */

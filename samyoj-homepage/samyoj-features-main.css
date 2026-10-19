@@ -351,7 +351,7 @@
       }
 
       ._23da6a61 {
-        font-size: clamp(38px, 4.5vw, 48px);
+        font-size: clamp(28px, 5.6vw, 58px);
         line-height: 1.14;
         margin-bottom: 20px;
       }
@@ -392,13 +392,13 @@
       }
 
       ._23da6a61 {
-        font-size: 32px;
+        font-size: clamp(28px, 7.6vw, 36px);
         line-height: 1.15;
         margin: 0 0 16px 0;
       }
 
       ._da94c09a {
-        font-size: 16px;
+        font-size: clamp(15px, 4vw, 16px);
         margin: 0 0 24px 0;
       }
 
@@ -503,7 +503,8 @@
     }
 
     ._cfd6e506 {
-      font-size: 42px;
+      font: var(--font-title);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       line-height: 1.12;
       margin-bottom: 14px;
     }
@@ -512,7 +513,7 @@
       max-width: 640px;
       margin: 0 auto;
       color: #6b7280;
-      font-size: 17px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.55;
     }
 
@@ -847,6 +848,10 @@
       ._cfd6e506 {
         font-size: clamp(28px, 7vw, 40px);
       }
+
+      ._341acb15 {
+        font-size: clamp(15px, 3.6vw, 16px);
+      }
     }
 
 /* original block #7 (0.9 KB) */
@@ -1180,7 +1185,7 @@
 
     .feat-hero-title {
       font: var(--font-title);
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       line-height: 1.15;
       color: var(--feat-text);
       margin: 0 0 14px;
@@ -1192,7 +1197,7 @@
     }
 
     .feat-hero-sub {
-      font-size: clamp(15px, 2vw, 17px);
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.55;
       color: var(--feat-muted);
       margin: 0;
@@ -1266,7 +1271,7 @@
     }
 
     .feat-grid-title {
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 700;
       color: var(--feat-text);
       margin: 0 0 10px;
@@ -1277,7 +1282,7 @@
     }
 
     .feat-grid-sub {
-      font-size: 16px;
+      font-size: clamp(16px, 1.4vw, 18px);
       color: var(--feat-muted);
       margin: 0 0 16px;
     }
@@ -1725,9 +1730,9 @@
 
     .ai-title {
       font: var(--font-title);
-      font-size: 42px;
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 700;
-      line-height: 1.08;
+      line-height: 1.12;
       color: var(--color-text-primary);
       margin: 0 0 14px;
       max-width: 580px;
@@ -1739,7 +1744,7 @@
 
     .ai-sub {
       font: var(--font-subheading);
-      font-size: 17px;
+      font-size: clamp(16px, 1.4vw, 18px);
       line-height: 1.55;
       color: #6b7280;
       margin: 0 0 28px;
