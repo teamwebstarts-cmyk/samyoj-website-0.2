@@ -4,10 +4,20 @@
 /* ===== original block #1 (1.6 KB) ===== */
   /* Shared half section rhythm (matches features / index / pricing / industries) */
   :root {
-    --sy-section-pad-y: clamp(20px, 4vw, 32px);
+    --sy-section-pad-y: clamp(24px, 5vw, 32px);
     --sy-hero-clearance: 32px;
     --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
   }
+
+/* Tighter vertical rhythm on small screens: every section that uses the
+   tokens gets a compact top/bottom pad on phones. */
+@media (max-width: 640px) {
+  :root {
+    --sy-section-pad-y: clamp(16px, 4.5vw, 22px);
+    --sy-hero-clearance: 20px;
+    --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
+  }
+}
 
   /* Active link styles */
   /* Base Navigation List */
@@ -171,7 +181,7 @@
 
     .blog-hero-left h1 {
       font-family: var(--font-head);
-      font-size: clamp(38px, 4.8vw, 56px);
+      font-size: clamp(28px, 5.6vw, 58px);
       font-weight: 800;
       line-height: 1.15;
       color: var(--ink);
@@ -281,7 +291,7 @@
 
     .blog-section-title {
       font-family: var(--font-head);
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       color: var(--ink);
       margin: 0;
@@ -824,14 +834,14 @@
 
     .blog-newsletter-text h2 {
       font-family: var(--font-head);
-      font-size: 22px;
+      font-size: clamp(19px, 2vw, 24px);
       font-weight: 800;
       color: var(--ink);
       margin: 0 0 6px;
       letter-spacing: -0.02em;
     }
     .blog-newsletter-text p {
-      font-size: 14.5px;
+      font-size: clamp(14px, 1.4vw, 16px);
       color: var(--muted);
       margin: 0;
       line-height: 1.55;
