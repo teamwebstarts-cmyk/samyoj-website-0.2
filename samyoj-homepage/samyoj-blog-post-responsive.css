@@ -1,0 +1,213 @@
+/* ============================================================
+   Samyoj — Blog Post Pages Responsive Overlay (v1)
+   Applies the unified spacing tokens + fluid typography scale
+   to all blog/*.html article pages.
+   Linked LAST in <head> so cascade ties resolve to this sheet.
+   ============================================================ */
+
+:root {
+  --sy-bp-sm: 640px;
+  --sy-bp-md: 768px;
+  --sy-bp-lg: 1024px;
+  --sy-page-inline: clamp(16px, 4vw, 30px);
+  --sy-section-pad-y: clamp(24px, 5vw, 32px);
+  --sy-hero-clearance: 32px;
+  --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --sy-section-pad-y: clamp(16px, 4.5vw, 22px);
+    --sy-hero-clearance: 20px;
+    --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
+  }
+}
+
+/* ── Page shell ─────────────────────────────────────────── */
+.blog-post-page {
+  padding-bottom: clamp(48px, 7vw, 80px);
+}
+
+.blog-post-container {
+  padding-left: var(--sy-page-inline);
+  padding-right: var(--sy-page-inline);
+}
+
+/* ── Breadcrumbs / hero clearance ───────────────────────── */
+.blog-breadcrumbs {
+  padding-top: calc(var(--um-header-height, 65px) + var(--sy-hero-clearance));
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
+/* ── Article header typography (fluid) ──────────────────── */
+.blog-article-title {
+  font-size: clamp(28px, 2.4vw + 10px, 42px);
+  line-height: 1.18;
+}
+
+.blog-article-subtitle {
+  font-size: clamp(16px, 1.4vw, 18px);
+}
+
+/* ── Prose body typography (fluid) ──────────────────────── */
+.blog-prose h2 {
+  font-size: clamp(21px, 2.4vw + 8px, 26px);
+  margin: clamp(30px, 4vw, 40px) 0 16px;
+}
+
+.blog-prose h3 {
+  font-size: clamp(17.5px, 1.6vw + 6px, 20px);
+}
+
+.blog-prose p,
+.blog-prose ul,
+.blog-prose ol {
+  font-size: clamp(15.5px, 1.2vw, 16.5px);
+}
+
+/* ── Table of contents box ──────────────────────────────── */
+.blog-toc-box {
+  padding: clamp(18px, 3vw, 24px);
+  margin-bottom: clamp(26px, 4vw, 40px);
+}
+
+.blog-toc-list {
+  gap: 9px clamp(14px, 2.5vw, 24px);
+}
+
+/* ── Featured hero media ────────────────────────────────── */
+.blog-hero-media {
+  margin-bottom: clamp(24px, 4vw, 36px);
+}
+
+/* ── In-article CTA banner ──────────────────────────────── */
+.blog-cta-banner {
+  padding: clamp(20px, 3.5vw, 32px);
+  margin: clamp(28px, 5vw, 40px) 0;
+}
+
+/* ── Feature cards ──────────────────────────────────────── */
+.blog-feature-card {
+  padding: clamp(15px, 2.5vw, 20px);
+  gap: 13px;
+}
+
+/* ── Meta bar / author + share row ──────────────────────── */
+.blog-meta-bar {
+  padding-bottom: clamp(18px, 3vw, 24px);
+  margin-bottom: clamp(22px, 4vw, 32px);
+  gap: 12px;
+}
+
+/* ── Prev / next post navigation ────────────────────────── */
+.blog-post-nav {
+  margin-top: clamp(34px, 5vw, 48px);
+  padding-top: clamp(22px, 3.5vw, 32px);
+  gap: 18px;
+}
+
+/* ── Sidebar boxes ──────────────────────────────────────── */
+.blog-sidebar-box {
+  padding: 20px 18px 14px;
+}
+
+.sidebar-widget {
+  padding: 20px 18px;
+}
+
+/* ── Prose tables (scroll horizontally on small screens) ── */
+.pricing-table {
+  min-width: 560px;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 12px 14px;
+}
+
+/* ════════════════ MOBILE (≤ 640px) ════════════════ */
+@media (max-width: 640px) {
+  .blog-breadcrumbs {
+    font-size: 12.5px;
+  }
+
+  .blog-breadcrumbs span.current {
+    max-width: 180px;
+  }
+
+  .blog-grid {
+    gap: 34px;
+  }
+
+  .blog-article-title {
+    font-size: clamp(27px, 7.4vw, 32px);
+    margin-bottom: 12px;
+  }
+
+  .blog-article-subtitle {
+    font-size: 15.5px;
+    margin-bottom: 18px;
+  }
+
+  .blog-prose h2 {
+    margin-top: 30px;
+  }
+
+  .blog-prose p,
+  .blog-prose ul,
+  .blog-prose ol {
+    margin-bottom: 18px;
+  }
+
+  .blog-toc-list li {
+    font-size: 13.5px;
+  }
+
+  .blog-feature-text h3 {
+    font-size: 15px;
+  }
+
+  .blog-feature-text p {
+    font-size: 13.5px;
+  }
+
+  .blog-cta-banner h3 {
+    font-size: 19px;
+  }
+
+  .blog-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-share-group {
+    gap: 10px;
+  }
+
+  .blog-post-nav {
+    flex-direction: column;
+  }
+
+  .blog-nav-link {
+    max-width: 100%;
+  }
+
+  .blog-nav-link.next {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .pricing-table {
+    min-width: 520px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .badge-tag {
+    font-size: 10.5px;
+  }
+}
