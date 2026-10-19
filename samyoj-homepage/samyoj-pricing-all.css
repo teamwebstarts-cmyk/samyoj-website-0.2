@@ -4,10 +4,20 @@
 /* ===== original block #1 (1.7 KB) ===== */
     /* Shared half section rhythm (matches features.html / index.html) */
     :root {
-      --sy-section-pad-y: clamp(20px, 4vw, 32px);
+      --sy-section-pad-y: clamp(24px, 5vw, 32px);
       --sy-hero-clearance: 32px;
       --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
     }
+
+/* Tighter vertical rhythm on small screens: every section that uses the
+   tokens gets a compact top/bottom pad on phones. */
+@media (max-width: 640px) {
+  :root {
+    --sy-section-pad-y: clamp(16px, 4.5vw, 22px);
+    --sy-hero-clearance: 20px;
+    --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
+  }
+}
 
     /* Base Navigation List */
     .um-nav-links {
@@ -372,7 +382,7 @@
 
     .hero-pricing-title {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 58px;
+      font-size: clamp(28px, 5.6vw, 58px);
       font-weight: 800;
       line-height: 1.12;
       letter-spacing: -0.02em;
@@ -387,7 +397,7 @@
 
     .hero-pricing-sub {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 19px;
+      font-size: clamp(16px, 1.8vw, 19px);
       color: #4b5563;
       line-height: 1.55;
       margin: 0 0 28px 0;
@@ -1217,7 +1227,7 @@
     }
 
     .section-title-large {
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       color: #0f172a;
       margin: 0 0 12px 0;
@@ -1226,7 +1236,7 @@
 
     @media (max-width: 768px) {
       .section-title-large {
-        font-size: 28px;
+        font-size: clamp(26px, 3.2vw + 8px, 42px);
       }
       .transparent-section,
       .compare-section,
@@ -1239,7 +1249,7 @@
     }
 
     .section-desc {
-      font-size: 15px;
+      font-size: clamp(15px, 1.4vw, 17px);
       color: #64748b;
       margin: 0;
     }
@@ -1846,6 +1856,66 @@
       .estimator-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+      }
+    }
+
+    /* Compact estimator sliders on phones: smaller type/chips/touch targets,
+       tighter rhythm so 4 sliders don't dominate the screen. */
+    @media (max-width: 640px) {
+      .estimator-sliders-panel {
+        padding: 18px 16px 16px;
+      }
+
+      .estimator-sliders-panel .slider-group {
+        margin-bottom: 16px;
+      }
+
+      .estimator-sliders-panel .slider-top-flex {
+        margin-bottom: 7px;
+        gap: 8px;
+      }
+
+      .estimator-sliders-panel .slider-label {
+        font-size: 13.5px;
+        gap: 7px;
+      }
+
+      .estimator-sliders-panel .slider-icon {
+        width: 21px;
+        height: 21px;
+      }
+
+      .estimator-sliders-panel .slider-icon svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      .estimator-sliders-panel .slider-val-box {
+        padding: 4px 10px;
+        font-size: 13px;
+        min-width: 60px;
+        border-radius: 8px;
+      }
+
+      .estimator-sliders-panel .custom-range-slider {
+        height: 6px;
+      }
+
+      .estimator-sliders-panel .custom-range-slider::-webkit-slider-thumb {
+        width: 17px;
+        height: 17px;
+        border-width: 2.5px;
+      }
+
+      .estimator-sliders-panel .custom-range-slider::-moz-range-thumb {
+        width: 17px;
+        height: 17px;
+        border-width: 2.5px;
+      }
+
+      .estimator-sliders-panel .slider-marks-row {
+        font-size: 10px;
+        margin-top: 5px;
       }
     }
 
@@ -2533,7 +2603,7 @@
         text-align: left;
       }
       .hero-pricing-title {
-        font-size: clamp(32px, 4vw, 44px);
+        font-size: clamp(28px, 5.6vw, 58px);
         line-height: 1.14;
         margin-bottom: 20px;
       }
@@ -2568,12 +2638,12 @@
         display: none;
       }
       .hero-pricing-title {
-        font-size: 34px;
+        font-size: clamp(28px, 7.6vw, 36px);
         line-height: 1.15;
         margin: 0 0 16px 0;
       }
       .hero-pricing-sub {
-        font-size: 16px;
+        font-size: clamp(15px, 4vw, 16px);
         line-height: 1.5;
         margin-bottom: 24px;
       }
@@ -2617,7 +2687,7 @@
         gap: 24px;
       }
       .hero-pricing-title {
-        font-size: 30px;
+        font-size: clamp(28px, 7.6vw, 36px);
       }
       .hero-pricing-actions {
         flex-direction: column;
