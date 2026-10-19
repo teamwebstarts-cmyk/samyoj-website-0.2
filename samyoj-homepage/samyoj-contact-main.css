@@ -110,7 +110,7 @@
 
     .ch-title {
       margin: 0 0 16px;
-      font-size: 58px;
+      font-size: clamp(28px, 5.6vw, 58px);
       line-height: 1.12;
       letter-spacing: -0.03em;
       font-weight: 700;
@@ -315,7 +315,7 @@
 
     .cr-title {
       margin: 0 0 12px;
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       letter-spacing: -0.03em;
       color: #111827;
@@ -653,7 +653,7 @@
 
     .cw-title {
       margin: 18px 0 12px;
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       line-height: 1.18;
       letter-spacing: -0.03em;
       font-weight: 800;
@@ -670,7 +670,7 @@
     .cw-sub {
       margin: 0;
       color: #666;
-      font-size: 16px;
+      font-size: clamp(15px, 1.4vw, 17px);
       line-height: 1.6;
       font-weight: 500;
     }
@@ -1076,7 +1076,7 @@
 
     .wy-title {
       margin: 0 0 12px;
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       letter-spacing: -0.03em;
       color: #111827;
@@ -1427,11 +1427,11 @@
 
       .ch-title {
         margin: 0 0 14px;
-        font-size: clamp(28px, 7.5vw, 38px);
+        font-size: clamp(28px, 7.6vw, 36px);
       }
 
       .ch-sub {
-        font-size: 15.5px;
+        font-size: clamp(15px, 4vw, 16px);
         margin-bottom: 22px;
       }
 
@@ -1616,11 +1616,11 @@
 
     @media (max-width: 520px) {
       .cw-title {
-        font-size: clamp(24px, 7vw, 32px);
+        font-size: clamp(26px, 7vw, 32px);
       }
 
       .wy-title {
-        font-size: clamp(24px, 6.5vw, 32px);
+        font-size: clamp(26px, 6.5vw, 32px);
       }
 
       .cw-preview {
