@@ -4,10 +4,20 @@
 /* ===== original block #1 (1.5 KB) ===== */
   /* Shared half section rhythm (matches features.html / index.html / pricing.html) */
   :root {
-    --sy-section-pad-y: clamp(20px, 4vw, 32px);
+    --sy-section-pad-y: clamp(24px, 5vw, 32px);
     --sy-hero-clearance: 32px;
     --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
   }
+
+/* Tighter vertical rhythm on small screens: every section that uses the
+   tokens gets a compact top/bottom pad on phones. */
+@media (max-width: 640px) {
+  :root {
+    --sy-section-pad-y: clamp(16px, 4.5vw, 22px);
+    --sy-hero-clearance: 20px;
+    --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
+  }
+}
 
   /* Active link styles */
 .um-nav-links {
@@ -1566,9 +1576,9 @@
 
     .ind-hero-title {
       font: var(--font-hero);
-      font-size: 58px;
+      font-size: clamp(28px, 5.6vw, 58px);
       font-weight: 700;
-      line-height: 1.08;
+      line-height: 1.12;
       color: #0f172a;
       margin: 0 0 16px;
       max-width: 560px;
@@ -1835,7 +1845,7 @@
 
     .ind-dir-title {
       font: var(--font-hero);
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 700;
       line-height: 1.2;
       color: #0f172a;
@@ -2087,7 +2097,7 @@
 
     .ind-cta-copy h2 {
       font: var(--font-hero);
-      font-size: clamp(24px, 2.6vw, 34px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 700;
       color: #0f172a;
       margin: 0 0 8px;
@@ -2296,7 +2306,7 @@
 
     .ind-adv-title {
       font: var(--font-hero);
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 700;
       line-height: 1.12;
       color: #0f172a;
@@ -2642,7 +2652,7 @@
       }
 
       .ind-adv-title {
-        font-size: 28px;
+        font-size: clamp(26px, 7vw, 30px);
       }
     }
 
@@ -2656,7 +2666,7 @@
     }
 
     .custom-section-title {
-      font-size: 42px;
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       color: #0f172a;
       margin: 0 0 32px 0;
@@ -2759,7 +2769,7 @@
       }
 
       .custom-section-title {
-        font-size: 28px;
+        font-size: clamp(26px, 3.2vw + 8px, 42px);
         margin-bottom: 24px;
       }
 
