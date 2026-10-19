@@ -568,8 +568,8 @@
       display: flex;
     }
 
-    @media (max-width: 750px) {
-      ._391ef099 {
+    @media (max-width: 900px) {
+
         flex-direction: column;
       }
     }
@@ -662,8 +662,8 @@
       margin-left: 3em;
     }
 
-    @media (max-width: 750px) {
-      ._a005b98c {
+    @media (max-width: 900px) {
+
         width: 100%;
         margin: 3em 0 0 0;
       }
@@ -750,8 +750,8 @@
       flex-direction: row-reverse;
     }
 
-    @media (max-width: 750px) {
-      ._dfed4b96 {
+    @media (max-width: 900px) {
+
         gap: 40px;
         text-align: center;
         flex-direction: column !important;
@@ -785,8 +785,8 @@
       font-weight: 600 !important;
     }
 
-    @media (max-width: 750px) {
-      ._ebc26e33 {
+    @media (max-width: 900px) {
+
         font-size: 1.8em;
       }
 
@@ -984,8 +984,8 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 700px) {
-      ._aa1867ce {
+    @media (max-width: 900px) {
+
         flex-direction: column;
       }
 
@@ -1541,8 +1541,8 @@
       --listItem-index: 2;
     }
 
-    @media (max-width: 610px) {
-      ._b4bbe5d3 {
+    @media (max-width: 640px) {
+
         max-width: min(300px, 100%);
       }
     }
@@ -2470,7 +2470,7 @@ body {
 
     @media (max-width: 640px) {
       #custom-hero-section {
-        --sy-hero-pad-bottom: clamp(9px, 1.5vh, 14px);
+        --sy-hero-pad-bottom: clamp(14px, 3vh, 18px);
         justify-content: flex-start;
       }
 
@@ -2593,7 +2593,7 @@ body {
     /* Heading */
     .custom-section-title {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       color: #0f172a;
       margin: 0 0 32px 0;
@@ -2793,7 +2793,7 @@ body {
       background: rgba(255, 255, 255, 0.95);
       padding: 6px 12px;
       border-radius: 9999px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       color: #1e293b;
       display: flex;
@@ -3263,7 +3263,7 @@ body {
       border: none;
       border-radius: 9999px;
       color: #4B2EEB;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -3277,7 +3277,7 @@ body {
     }
 
     .broadcast-title {
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       color: #0f172a;
       line-height: 1.15;
@@ -3504,7 +3504,7 @@ body {
     /* 2-Card Grid for Meta Features */
     .meta-cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
       margin-bottom: 40px;
     }
@@ -3549,7 +3549,7 @@ body {
     }
 
     .card-right-col img {
-      max-width: 105%;
+      max-width: 100%;
       max-height: 335px;
       height: auto;
       object-fit: contain;
@@ -3557,7 +3557,7 @@ body {
 
     .card-category-badge {
       align-self: flex-start;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       color: #4B2EEB;
       background-color: #EEF2FF;
@@ -3683,13 +3683,14 @@ body {
 
       /* Tablet adjustments: retain 2 columns */
       .meta-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
       }
 
       .meta-feature-card {
         padding: 32px 24px;
         gap: 16px;
+        min-height: 0;
       }
 
       .card-headline {
@@ -3706,6 +3707,13 @@ body {
         padding: 24px 20px;
         gap: 22px;
         border-radius: 24px;
+      }
+
+      /* Stack the two feature cards on phones */
+      .meta-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 28px;
       }
 
       .meta-graphic-col {
@@ -4279,7 +4287,7 @@ body {
     }
 
     .sps-header h2 {
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 800;
       margin: 0 0 16px 0;
       color: #0f172a;
@@ -4848,7 +4856,7 @@ body {
     }
 
     .sps-int-icon span {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: #0f172a;
       text-align: center;
@@ -4998,7 +5006,7 @@ body {
       .sps-user-avatar {
         width: 32px;
         height: 32px;
-        font-size: 11px;
+        font-size: 12px;
       }
 
       .sps-testimonial-right {
@@ -5101,7 +5109,7 @@ body {
       }
 
       .sps-int-icon span {
-        font-size: 11px;
+        font-size: 12px;
       }
 
       .sps-rocket-img {
@@ -5117,7 +5125,8 @@ body {
       }
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: 640px) {
+
       .sps-revenue-actions {
         flex-direction: column;
         gap: 12px;
@@ -5356,7 +5365,7 @@ body {
       color: #4B2EEB;
     }
     .comparison-card-title {
-      font-size: 24px;
+      font-size: clamp(19px, 1.4vw + 12px, 24px);
       font-weight: 800;
       color: #0f172a;
       margin: 0 0 8px 0;
@@ -5419,7 +5428,7 @@ body {
       z-index: 2;
     }
     .custom-final-cta-title {
-      font-size: clamp(28px, 2.4vw + 10px, 42px);
+      font-size: clamp(26px, 3.2vw + 8px, 42px);
       font-weight: 850;
       color: #ffffff;
       margin: 0 0 20px 0;
