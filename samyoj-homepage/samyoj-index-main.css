@@ -4052,11 +4052,11 @@ body {
     }
 
     .promo-gift-img {
-      width: 340px;
-      height: 340px;
+      width: 280px;
+      height: 280px;
       object-fit: contain;
       flex-shrink: 0;
-      margin: -130px -50px;
+      margin: -100px -30px;
       animation: float-gift 4s ease-in-out infinite;
     }
 
