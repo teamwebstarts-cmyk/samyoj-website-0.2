@@ -3387,8 +3387,8 @@ body {
       padding: 32px 40px;
       box-sizing: border-box;
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 1.35fr) minmax(0, 0.95fr);
-      gap: 28px;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 1.35fr);
+      gap: 32px;
       align-items: center;
       margin-bottom: 40px;
       position: relative;
@@ -3400,12 +3400,26 @@ body {
       min-width: 0;
       max-width: 560px;
       text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    /* Feature items that were moved into the left info column */
+    .meta-info-col .meta-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      margin-top: 2px;
     }
 
     .meta-graphic-col {
       position: relative;
       width: 100%;
-      height: 320px;
+      height: 100%;
+      min-height: 380px;
       min-width: 0;
       display: flex;
       justify-content: center;
@@ -3468,17 +3482,17 @@ body {
     }
 
     .meta-feature-title {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 750;
       color: #0f172a;
     }
 
     .meta-feature-desc {
-      max-width: 260px;
+      max-width: 320px;
       margin: 0;
       color: #64748b;
-      font-size: 12px;
-      line-height: 1.45;
+      font-size: 13.5px;
+      line-height: 1.5;
     }
 
     .meta-explore-button {
@@ -3488,6 +3502,10 @@ body {
       border-radius: 9px;
       font-size: 13px;
       align-self: flex-start;
+    }
+
+    .meta-info-col .meta-explore-button {
+      margin-top: 10px;
     }
 
     .meta-explore-button svg {
