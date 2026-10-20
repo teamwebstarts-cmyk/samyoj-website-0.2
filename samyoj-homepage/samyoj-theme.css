@@ -708,14 +708,16 @@ a.text-link:hover {
 }
 
 /* Stepper Process Numbers */
+/* (All step numbers set to brand purple to match step 2 - to revert, restore the per-step colors below:
+   nth-child(1) var(--sy-brand-indigo), (3) var(--sy-brand-pink), (4) var(--sy-brand-orange)) */
 .sps-step-item:nth-child(1) .sps-step-num,
-.sps-step:nth-child(1) .sps-step-num { background-color: var(--sy-brand-indigo) !important; }
+.sps-step:nth-child(1) .sps-step-num,
 .sps-step-item:nth-child(2) .sps-step-num,
-.sps-step:nth-child(2) .sps-step-num { background-color: var(--sy-brand-purple) !important; }
+.sps-step:nth-child(2) .sps-step-num,
 .sps-step-item:nth-child(3) .sps-step-num,
-.sps-step:nth-child(3) .sps-step-num { background-color: var(--sy-brand-pink) !important; }
+.sps-step:nth-child(3) .sps-step-num,
 .sps-step-item:nth-child(4) .sps-step-num,
-.sps-step:nth-child(4) .sps-step-num { background-color: var(--sy-brand-orange) !important; }
+.sps-step:nth-child(4) .sps-step-num { background-color: var(--sy-brand-purple) !important; }
 
 /* Setup Headline Highlight & Stepper Connector */
 .setup-title span,
