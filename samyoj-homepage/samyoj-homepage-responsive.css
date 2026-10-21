@@ -106,3 +106,16 @@ html {
     row-gap: 6px;
   }
 }
+
+/* Center the automation illustration against the full height of its text column. */
+@media (min-width: 1025px) {
+  #custom-get-started-section .setup-right-col {
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  #custom-get-started-section .setup-graphic-wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+}

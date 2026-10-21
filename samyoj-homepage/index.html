@@ -119,7 +119,7 @@
   <link rel="stylesheet" href="mobile-buttons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="samyoj-theme.css?v=2">
   <link rel="stylesheet" href="samyoj-transitions.css?v=2">
@@ -127,7 +127,10 @@
   <link rel="stylesheet" href="samyoj-magic-bar.css?v=1">
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=2">
-  <link rel="stylesheet" href="samyoj-homepage-responsive.css?v=4">
+  <link rel="stylesheet" href="samyoj-homepage-responsive.css?v=5">
+  <link rel="stylesheet" href="samyoj-customer-journey.css?v=4">
+  <link rel="stylesheet" href="samyoj-comparison-redesign.css?v=2">
+  <script src="samyoj-customer-journey.js?v=3" defer></script>
 </head>
 
 <body class="noScript">
@@ -561,7 +564,7 @@
   <section id="custom-problem-section" class="custom-problem-section" aria-label="Samyoj shared inbox and team follow-through">
     <iframe
       class="samyoj-shared-inbox-frame"
-      src="samyoj-hero.html?v=11"
+      src="samyoj-hero.html?v=12"
       title="Samyoj shared inbox: connected channels, conversations, and AI-assisted follow-through"
       loading="lazy"
       scrolling="no"
@@ -1239,110 +1242,131 @@
     </div>
   </section>
 
-  <!-- 7. CRM SECTION -->
-<section id="custom-crm-section" class="custom-crm-section" data-reveal>
-    <div class="custom-section-center">
-      <div class="custom-trust-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2" />
-          <circle cx="9" cy="7" r="4" stroke-width="2" />
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2" />
-        </svg>
-        <span>Conversational Sales CRM</span>
-      </div>
+  <!-- 7. CUSTOMER JOURNEY: supplied design, with scoped CSS and interactions -->
+  <section id="custom-crm-section" class="sy-customer-journey" aria-labelledby="journey-title">
+<div id="syj-viewport">
+<div id="syj-stage">
 
-      <h2 class="custom-section-title">
-        Track the Entire <span class="highlight-green">Customer Journey</span>
-      </h2>
-      <p class="custom-section-subtitle">
-        Every message across WhatsApp, Instagram, and Facebook becomes structured customer context with stages, tags, ownership, and pipeline tracking.
-      </p>
+  <!-- ============ decorative background (desktop only) ============ -->
+  <div class="syj-bgs syj-only-d" style="display:none">
+    <i style="left:-300px;top:60px;width:560px;height:560px;background:radial-gradient(circle,rgba(226,221,255,.75),rgba(246,244,255,0) 68%)"></i>
+    <i style="left:1190px;top:20px;width:620px;height:520px;background:radial-gradient(circle,rgba(224,230,255,.8),rgba(246,244,255,0) 68%)"></i>
+    <i style="left:520px;top:360px;width:560px;height:460px;background:radial-gradient(circle,rgba(228,220,255,.8),rgba(246,244,255,0) 68%)"></i>
+    <i style="left:-120px;top:700px;width:420px;height:380px;background:radial-gradient(circle,rgba(228,222,255,.6),rgba(246,244,255,0) 68%)"></i>
+  </div>
 
-      <div class="crm-grid sy-grid-3-2-1" data-reveal data-reveal-stagger>
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-            </svg>
-          </div>
-          <h3 class="crm-card-title">Centralized Contacts</h3>
-          <p class="crm-card-desc">Consolidate leads and customer profiles from WhatsApp, Instagram, and Facebook into one clean, searchable contact directory.</p>
-        </div>
+  <!-- ============ header ============ -->
+  <div class="syj-badge syj-in" style="--i:0"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20c.4-3.6 2.8-5.6 6.2-5.6s5.800 2 6.200 5.600"/><circle cx="17.500" cy="9" r="2.600"/><path d="M17.800 14.200c2.300.2 3.700 1.800 4 4.600"/></svg>Conversational Sales CRM</div>
+  <h2 id="journey-title" class="syj-in" style="--i:1">Track the Entire <span class="syj-g">Customer Journey</span></h2>
+  <p class="syj-sub syj-in" style="--i:2">Every message across WhatsApp, Instagram, and Facebook becomes structured<br class="syj-dbr syj-only-m"> customer context with stages, tags, ownership, and pipeline tracking.</p>
 
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-              <line x1="7" y1="7" x2="7.01" y2="7"/>
-            </svg>
-          </div>
-          <h3 class="crm-card-title">Tags &amp; Segmentation</h3>
-          <p class="crm-card-desc">Tag customer interests, budget levels, and campaign origins to segment audiences for highly relevant follow-up communications.</p>
-        </div>
+  <!-- ============ decorative connectors (desktop only) ============ -->
+  <svg aria-hidden="true" class="syj-connectors syj-only-d" style="display:none;left:0;top:0;z-index:2;pointer-events:none" width="1536" height="920" viewBox="0 0 1536 920" fill="none" stroke="#7a4cf3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <defs><marker id="syj-connector-arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M3 2 9 6 3 10" stroke="#7a4cf3" stroke-width="2" fill="none"/></marker></defs>
+    <path d="M356 252 C405 239 448 282 474 328" stroke-dasharray="5 6" marker-end="url(#syj-connector-arrow)" style="animation:syj-march 1.4s linear infinite"/>
+    <path d="M326 410 C334 398 348 390 362 390" marker-end="url(#syj-connector-arrow)"/>
+    <path d="M924 518 C938 536 960 540 978 532" marker-end="url(#syj-connector-arrow)"/>
+    <path d="M1478 274 C1514 292 1514 328 1486 351" marker-end="url(#syj-connector-arrow)"/>
+  </svg>
+  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:608px;top:262px;width:56px;height:50px;animation:syj-float 4s ease-in-out infinite" viewBox="0 0 56 50" fill="none" stroke="#6a35ee" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 22 52 4 40 46 27 31z"/><path d="M27 31 52 4M27 31v14l8-8"/></svg>
+  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:914px;top:365px;width:40px;height:40px;z-index:3;animation:syj-spin 14s linear infinite" viewBox="0 0 40 40" fill="none" stroke="#d6caf8" stroke-width="2.2" stroke-linejoin="round"><path d="M20 3c1.500 9 6 14 17 17-11 3-15.500 8-17 17-1.500-9-6-14-17-17 11-3 15.500-8 17-17z"/></svg>
 
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-              <polyline points="2 17 12 22 22 17"/>
-              <polyline points="2 12 12 17 22 12"/>
-            </svg>
-          </div>
-          <h3 class="crm-card-title">Lead Stages &amp; Pipeline</h3>
-          <p class="crm-card-desc">Move prospects visually through deal stages from initial inquiry to qualified prospect, demo booked, and closed won.</p>
-        </div>
-
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3 class="crm-card-title">Conversation Context &amp; History</h3>
-          <p class="crm-card-desc">Access complete interaction transcripts, past purchases, notes, and activity logs alongside every chat message.</p>
-        </div>
-
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="8.5" cy="7" r="4"/>
-              <line x1="20" y1="8" x2="20" y2="14"/>
-              <line x1="17" y1="11" x2="23" y2="11"/>
-            </svg>
-          </div>
-          <h3 class="crm-card-title">Smart Agent Assignment</h3>
-          <p class="crm-card-desc">Automatically route qualified prospects to specific sales reps with round-robin distribution and availability tracking.</p>
-        </div>
-
-        <div class="crm-card">
-          <div class="crm-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            </svg>
-          </div>
-          <h3 class="crm-card-title">CRM Pipeline Sync</h3>
-          <p class="crm-card-desc">Keep your sales stack unified by synchronizing conversation outcomes, customer attributes, and lead statuses in real time.</p>
-        </div>
+  <!-- ============ all conversations ============ -->
+  <div class="syj-pos syj-p-conv">
+    <div class="syj-card syj-conv syj-fl syj-in" style="--i:3">
+      <div class="syj-chead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.800"/><path d="M4.800 20c.6-4 3.400-6.200 7.200-6.200s6.600 2.200 7.200 6.200"/></svg></div><h4>All Conversations<br>in One Place</h4></div>
+      <hr>
+      <div class="syj-chs">
+        <div class="syj-ch"><div class="syj-ic" data-icon="wa"></div>WhatsApp</div>
+        <div class="syj-ch"><div class="syj-ic" data-icon="ig"></div>Instagram</div>
+        <div class="syj-ch"><div class="syj-ic" data-icon="fb"></div>Facebook</div>
+        <div class="syj-ch"><div class="syj-ic" data-icon="meta"></div>Meta Ads</div>
       </div>
     </div>
+  </div>
+
+  <!-- ============ hero photo slot ============ -->
+  <div class="syj-hero-photo syj-in" style="--i:4" id="syj-hero">
+    <div class="syj-circle"></div>
+    <div class="syj-photo" id="syj-photo"><img src="images/journey/customer-phone.png" alt="Customer using Samyoj on her phone" width="1303" height="1207" loading="lazy" decoding="async" draggable="false"></div>
+  </div>
+
+  <!-- ============ chat ============ -->
+  <div class="syj-pos syj-p-chat">
+    <div class="syj-card syj-chat syj-fl syj-in" style="--i:5">
+      <div class="syj-ctop"><div class="syj-wi" data-icon="wa"></div><div class="syj-who"><b>Nirbhay</b><span class="syj-on"><i></i>Online</span></div><div class="syj-kb"></div></div>
+      <div class="syj-mrow syj-m1 syj-msg" id="syj-m1"><div class="syj-bub syj-in-b">Could you share the CRM details?</div><span class="syj-tm">10:24 AM</span></div>
+      <div class="syj-mrow syj-m2 syj-msg" id="syj-m2"><div class="syj-bub syj-out-b">Sure, Nirbhay! Chats, leads,<br class="syj-dbr">and follow-ups stay together<br class="syj-dbr">in one place.<small>10:25 AM <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m2 13 4 4L14 7"/><path d="m10 15 2 2L21 7"/></svg></small></div></div>
+      <div class="syj-info-card syj-msg" id="syj-m3">
+        <div class="syj-summary-art" id="syj-summary-icon" aria-hidden="true"></div>
+        <div class="syj-pinfo"><b>Shared inbox</b><div class="syj-pr">Chats &amp; follow-ups</div>
+          <button type="button" class="syj-btn" id="syj-details"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg><span>Open inbox</span></button></div>
+      </div>
+      <div class="syj-qr syj-msg" id="syj-m4"><button type="button" class="syj-qb">Chats</button><button type="button" class="syj-qb">Features</button><button type="button" class="syj-qb">Talk to us</button></div>
+      <div class="syj-toast" id="syj-toast"></div>
+    </div>
+  </div>
+
+  <!-- ============ contacts ============ -->
+  <div class="syj-pos syj-p-contacts">
+    <div class="syj-card syj-contacts syj-fl syj-in" style="--i:6">
+      <div class="syj-chead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.800"/><path d="M4.800 20c.6-4 3.400-6.200 7.200-6.200s6.600 2.200 7.200 6.200"/></svg></div><h4>Centralized Contacts</h4></div>
+      <hr>
+      <div id="syj-crows"></div>
+    </div>
+  </div>
+
+  <!-- ============ pipeline ============ -->
+  <div class="syj-pos syj-p-pipe">
+    <div class="syj-card syj-pipe syj-fl syj-in" style="--i:7">
+      <div class="syj-phead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14.500 4.200c3.400-.5 5.400.1 5.400.1s.6 2-.2 5.400c-.8 3.200-4.200 5.800-6.800 6.600l-3.300-3.300c.8-2.600 3.400-6 4.900-8.800z" fill="#e7e0fd"/><circle cx="15.400" cy="8.600" r="1.400"/><path d="M8.800 13.200 5.500 14 4 17.600l3.300-.6M10.800 15.200 10 18.500 6.400 20l.6-3.300"/></svg></div><h4>Lead Stages &amp; Pipeline</h4>
+        <div class="syj-vp">View Pipeline <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2a46d8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.500 8h11M9 3.500 13.500 8 9 12.500"/></svg></div></div>
+      <div class="syj-pcols" id="syj-pcols"></div>
+    </div>
+  </div>
+
+  <!-- ============ tags ============ -->
+  <div class="syj-card syj-tags syj-in" style="--i:8">
+    <div class="syj-chead syj-thead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.500 12.500V5a1.500 1.500 0 0 1 1.500-1.500h7.500L21 12l-8.500 8.500z"/><circle cx="8.200" cy="8.200" r="1.300"/></svg></div><h4>Tags &amp; Segmentation</h4></div>
+    <div class="syj-trow" id="syj-trow"></div>
+  </div>
+  <i class="syj-dsh syj-only-d" style="display:none;left:1441px;top:559px;width:20px;transform:rotate(76deg)"></i>
+  <i class="syj-dsh syj-only-d" style="display:none;left:1457px;top:581px;width:20px;transform:rotate(-60deg)"></i>
+  <i class="syj-dsh syj-only-d" style="display:none;left:1459px;top:595px;width:24px;transform:rotate(-14deg)"></i>
+
+  <!-- ============ bottom cards ============ -->
+  <div class="syj-card syj-bc syj-in" style="--l:40px;--w:472px;--i:9">
+    <div class="syj-bhead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M12 7v5l3.500 2"/></svg></div><h5>Conversation Context &amp; History</h5></div>
+    <p>Access complete interaction transcripts, <br class="syj-dbr">past purchases, notes, and activity logs <br class="syj-dbr">alongside every chat message.</p>
+    <div class="syj-brow">
+      <div class="syj-it" style="--l:28px"><span class="syj-ci"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3h11A2.500 2.500 0 0 1 20 5.500v8a2.500 2.500 0 0 1-2.500 2.500H11l-4.500 4v-4A2.500 2.500 0 0 1 4 13.500z"/><path d="M8.500 8.800h.01M12 8.800h.01M15.500 8.800h.01" stroke-width="2.400"/></svg></span>Chat history</div>
+      <div class="syj-it" style="--l:180px"><span class="syj-ci"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h8.500L19 7.500V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M8 12.500h7M8 16h7"/></svg></span>Notes</div>
+      <div class="syj-it" style="--l:295px"><span class="syj-ci"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h2.500l2.200 10.500h10.300L20 7.500H6.500"/><circle cx="9" cy="19" r="1.500"/><circle cx="17" cy="19" r="1.500"/></svg></span>Purchases</div>
+    </div>
+  </div>
+  <div class="syj-card syj-bc syj-b2 syj-in" style="--l:534px;--w:469px;--i:10">
+    <div class="syj-bhead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.800"/><path d="M3 20c.5-4 3.200-6.200 7-6.200 1.800 0 3.300.5 4.400 1.400"/><path d="M18 14v6M15 17h6"/></svg></div><h5>Smart Agent Assignment</h5></div>
+    <p>Automatically route qualified prospects to <br class="syj-dbr">specific sales reps with round-robin <br class="syj-dbr">distribution and availability tracking.</p>
+    <div class="syj-brow">
+      <div class="syj-agents" id="syj-agents"></div>
+      <div class="syj-apill"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m4 20 11-11" stroke="#8a3df0"/><path d="M14 4l1 2.500 2.500 1-2.500 1-1 2.500-1-2.500-2.500-1 2.500-1zM19 13l.6 1.400 1.400.6-1.400.6L19 17l-.6-1.400-1.400-.6 1.400-.6z" stroke="#e0409a"/></svg>Auto-assigning...</div>
+    </div>
+  </div>
+  <div class="syj-card syj-bc syj-b2 syj-bc-followups syj-in" style="--l:1025px;--w:478px;--i:11">
+    <div class="syj-bhead"><div class="syj-ib"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2M18.4 4.8l1.8-1.8M5.6 4.8 3.8 3"/></svg></div><h5>Follow-up Automation</h5></div>
+    <p>Schedule timely reminders and keep open <br class="syj-dbr">conversations moving with clear next steps.</p>
+    <div class="syj-stage-summary" aria-label="Follow-up tools">
+      <span>Timely reminders</span><span>Clear next steps</span>
+    </div>
+  </div>
+</div>
+</div>
   </section>
 
   <!-- 9. COMPARISON SECTION -->
-<section id="custom-comparison-section" class="custom-comparison-section" data-reveal>
+<section id="custom-comparison-section" class="custom-comparison-section" aria-labelledby="comparison-title" data-reveal>
     <div class="custom-section-center">
-      <div class="custom-trust-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <polyline points="16 3 21 3 21 8" stroke-width="2.5" />
-          <line x1="4" y1="20" x2="21" y2="3" stroke-width="2.5" />
-          <polyline points="21 16 21 21 16 21" stroke-width="2.5" />
-        </svg>
-        <span>The Clear Advantage</span>
-      </div>
-
-      <h2 class="custom-section-title">
+      <h2 id="comparison-title" class="custom-section-title">
         The Old Way vs. <span class="highlight-green">The Samyoj Way</span>
       </h2>
       <p class="custom-section-subtitle">
@@ -1355,36 +1379,31 @@
           <div class="comparison-badge">Without Samyoj</div>
           <h3 class="comparison-card-title">Disconnected Tools</h3>
           <p class="comparison-card-desc">Slow, manual outreach across scattered tabs and chaotic spreadsheets.</p>
+          <div class="comparison-art"><img src="images/comparison/old-way.png" alt="A busy workspace with disconnected channels, spreadsheets, and manual follow-ups" width="1660" height="947" loading="lazy" decoding="async"></div>
           <ul class="comparison-list">
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
               </svg>
-              <span>WhatsApp + Instagram + Email managed separately</span>
+              <span>Channels managed separately</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
               </svg>
-              <span>Manual replies that take hours while leads wait</span>
+              <span>Replies and follow-ups handled manually</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
               </svg>
-              <span>Follow-ups tracked in messy spreadsheets that get lost</span>
+              <span>Leads and chat history get scattered</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
               </svg>
-              <span>Leads and chat histories scattered across personal phones</span>
-            </li>
-            <li class="comparison-item">
-              <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
-              </svg>
-              <span>Ads generate leads but follow-up happens slowly and manually</span>
+              <span>Ads need manual follow-up</span>
             </li>
           </ul>
         </div>
@@ -1394,39 +1413,35 @@
           <div class="comparison-badge">The Samyoj Way</div>
           <h3 class="comparison-card-title">One Unified Sales Engine</h3>
           <p class="comparison-card-desc">Every conversation tracked, qualified, and followed up automatically.</p>
+          <div class="comparison-art"><img src="images/comparison/samyoj-way.png" alt="A shared inbox, lead stages, and follow-up automation in one workspace" width="1536" height="1024" loading="lazy" decoding="async"></div>
           <ul class="comparison-list">
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
-              <span>One shared inbox for WhatsApp, Instagram &amp; Facebook</span>
+              <span>One inbox for WhatsApp, Instagram and Facebook</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
-              <span>Automated responses and AI lead qualification in seconds</span>
+              <span>AI-assisted replies and lead qualification</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
-              <span>Automated workflows and drip reminders that never drop a lead</span>
+              <span>Shared contacts, tags and pipeline context</span>
             </li>
             <li class="comparison-item">
               <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
-              <span>Centralized CRM with pipeline stages and complete chat context</span>
-            </li>
-            <li class="comparison-item">
-              <svg class="comparison-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-              <span>Ads connected directly to automated sales conversations</span>
+              <span>Automated workflows and follow-ups</span>
             </li>
           </ul>
         </div>
+        <div class="comparison-flow" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 24h29M25 11l13 13-13 13" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
     </div>
   </section>
