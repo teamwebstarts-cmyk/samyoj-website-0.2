@@ -51,6 +51,11 @@
         radial-gradient(ellipse 38% 42% at 92% 12%, rgba(122, 59, 255, 0.05) 0%, transparent 68%),
         #ffffff;
       padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: safe center;
     }
 
     .ch-hero::before,
