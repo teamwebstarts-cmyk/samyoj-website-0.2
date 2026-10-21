@@ -1536,6 +1536,11 @@
       --sy-hero-pad-bottom: clamp(20px, 4vw, 32px);
       padding: calc(var(--um-header-height) + var(--sy-hero-clearance)) 0 var(--sy-hero-pad-bottom) 0;
       background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: safe center;
     }
 
     ._aee52cca>.wr {

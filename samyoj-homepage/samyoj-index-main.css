@@ -2110,12 +2110,6 @@ body {
 
 /* original block #23 (9.4 KB) */
 /* Custom Hero Section Styles */
-    /* Definite parent chain so the hero's min-height: 100% resolves */
-    html,
-    body {
-      height: 100%;
-    }
-
     #custom-hero-section {
       --sy-hero-pad-bottom: clamp(10px, 1.5vh, 18px);
       --paddingTop: 0;
@@ -2123,7 +2117,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 100%;
+      min-height: 100vh;
       box-sizing: border-box;
       padding-block: calc(var(--um-header-height) + var(--sy-hero-clearance)) var(--sy-hero-pad-bottom);
       padding-inline: 0;
