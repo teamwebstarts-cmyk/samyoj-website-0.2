@@ -5280,6 +5280,23 @@ body {
       border-top: 0;
       scroll-margin-top: var(--um-header-height, 115px);
     }
+
+    /* 7. Customer Journey intro (outside the scaled stage) */
+    #custom-crm-intro {
+      padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0 0;
+      text-align: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    #custom-crm-intro .custom-badge-pill {
+      margin-bottom: 14px;
+    }
+    #custom-crm-intro .custom-section-title {
+      font-size: clamp(26px, 2.1vw + 10px, 40px);
+      margin-bottom: 18px;
+    }
+    #custom-crm-intro .custom-section-subtitle {
+      margin-bottom: clamp(20px, 2.5vw, 28px);
+    }
     .samyoj-shared-inbox-frame {
       display: block;
       width: 100%;

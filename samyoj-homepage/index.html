@@ -128,8 +128,8 @@
   <link rel="stylesheet" href="samyoj-footer.css?v=7">
   <link rel="stylesheet" href="samyoj-mobile-drawer.css?v=2">
   <link rel="stylesheet" href="samyoj-homepage-responsive.css?v=5">
-  <link rel="stylesheet" href="samyoj-customer-journey.css?v=4">
-  <link rel="stylesheet" href="samyoj-comparison-redesign.css?v=2">
+  <link rel="stylesheet" href="samyoj-customer-journey.css?v=6">
+  <link rel="stylesheet" href="samyoj-comparison-redesign.css?v=5">
   <script src="samyoj-customer-journey.js?v=3" defer></script>
 </head>
 
@@ -1217,33 +1217,38 @@
   </section>
 
   <!-- 7. CUSTOMER JOURNEY: supplied design, with scoped CSS and interactions -->
+  <!-- Customer Journey intro (kept outside the scaled stage; same intro style as other sections) -->
+  <div id="custom-crm-intro" class="custom-section-center">
+    <div class="custom-badge-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+      <span>Conversational Sales CRM</span>
+    </div>
+    <h2 id="journey-title" class="custom-section-title">
+      Track the Entire <span class="highlight-green">Customer Journey</span>
+    </h2>
+    <p class="custom-section-subtitle">
+      Every message across WhatsApp, Instagram, and Facebook becomes structured customer context with stages, tags,
+      ownership, and pipeline tracking.
+    </p>
+  </div>
+
   <section id="custom-crm-section" class="sy-customer-journey" aria-labelledby="journey-title">
 <div id="syj-viewport">
 <div id="syj-stage">
 
-  <!-- ============ decorative background (desktop only) ============ -->
-  <div class="syj-bgs syj-only-d" style="display:none">
-    <i style="left:-300px;top:60px;width:560px;height:560px;background:radial-gradient(circle,rgba(226,221,255,.75),rgba(246,244,255,0) 68%)"></i>
-    <i style="left:1190px;top:20px;width:620px;height:520px;background:radial-gradient(circle,rgba(224,230,255,.8),rgba(246,244,255,0) 68%)"></i>
-    <i style="left:520px;top:360px;width:560px;height:460px;background:radial-gradient(circle,rgba(228,220,255,.8),rgba(246,244,255,0) 68%)"></i>
-    <i style="left:-120px;top:700px;width:420px;height:380px;background:radial-gradient(circle,rgba(228,222,255,.6),rgba(246,244,255,0) 68%)"></i>
-  </div>
-
-  <!-- ============ header ============ -->
-  <div class="syj-badge syj-in" style="--i:0"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20c.4-3.6 2.8-5.6 6.2-5.6s5.800 2 6.200 5.600"/><circle cx="17.500" cy="9" r="2.600"/><path d="M17.800 14.200c2.300.2 3.700 1.800 4 4.600"/></svg>Conversational Sales CRM</div>
-  <h2 id="journey-title" class="syj-in" style="--i:1">Track the Entire <span class="syj-g">Customer Journey</span></h2>
-  <p class="syj-sub syj-in" style="--i:2">Every message across WhatsApp, Instagram, and Facebook becomes structured<br class="syj-dbr syj-only-m"> customer context with stages, tags, ownership, and pipeline tracking.</p>
-
   <!-- ============ decorative connectors (desktop only) ============ -->
-  <svg aria-hidden="true" class="syj-connectors syj-only-d" style="display:none;left:0;top:0;z-index:2;pointer-events:none" width="1536" height="920" viewBox="0 0 1536 920" fill="none" stroke="#7a4cf3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <svg aria-hidden="true" class="syj-connectors syj-only-d" style="display:none;left:0;top:-152px;z-index:2;pointer-events:none" width="1536" height="920" viewBox="0 0 1536 920" fill="none" stroke="#7a4cf3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <defs><marker id="syj-connector-arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M3 2 9 6 3 10" stroke="#7a4cf3" stroke-width="2" fill="none"/></marker></defs>
     <path d="M356 252 C405 239 448 282 474 328" stroke-dasharray="5 6" marker-end="url(#syj-connector-arrow)" style="animation:syj-march 1.4s linear infinite"/>
     <path d="M326 410 C334 398 348 390 362 390" marker-end="url(#syj-connector-arrow)"/>
     <path d="M924 518 C938 536 960 540 978 532" marker-end="url(#syj-connector-arrow)"/>
     <path d="M1478 274 C1514 292 1514 328 1486 351" marker-end="url(#syj-connector-arrow)"/>
   </svg>
-  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:608px;top:262px;width:56px;height:50px;animation:syj-float 4s ease-in-out infinite" viewBox="0 0 56 50" fill="none" stroke="#6a35ee" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 22 52 4 40 46 27 31z"/><path d="M27 31 52 4M27 31v14l8-8"/></svg>
-  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:914px;top:365px;width:40px;height:40px;z-index:3;animation:syj-spin 14s linear infinite" viewBox="0 0 40 40" fill="none" stroke="#d6caf8" stroke-width="2.2" stroke-linejoin="round"><path d="M20 3c1.500 9 6 14 17 17-11 3-15.500 8-17 17-1.500-9-6-14-17-17 11-3 15.500-8 17-17z"/></svg>
+  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:608px;top:110px;width:56px;height:50px;animation:syj-float 4s ease-in-out infinite" viewBox="0 0 56 50" fill="none" stroke="#6a35ee" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 22 52 4 40 46 27 31z"/><path d="M27 31 52 4M27 31v14l8-8"/></svg>
+  <svg aria-hidden="true" class="syj-only-d" style="display:none;left:914px;top:213px;width:40px;height:40px;z-index:3;animation:syj-spin 14s linear infinite" viewBox="0 0 40 40" fill="none" stroke="#d6caf8" stroke-width="2.2" stroke-linejoin="round"><path d="M20 3c1.500 9 6 14 17 17-11 3-15.500 8-17 17-1.500-9-6-14-17-17 11-3 15.500-8 17-17z"/></svg>
 
   <!-- ============ all conversations ============ -->
   <div class="syj-pos syj-p-conv">
@@ -1261,7 +1266,6 @@
 
   <!-- ============ hero photo slot ============ -->
   <div class="syj-hero-photo syj-in" style="--i:4" id="syj-hero">
-    <div class="syj-circle"></div>
     <div class="syj-photo" id="syj-photo"><img src="images/journey/customer-phone.png" alt="Customer using Samyoj on her phone" width="1303" height="1207" loading="lazy" decoding="async" draggable="false"></div>
   </div>
 
@@ -1340,12 +1344,22 @@
   <!-- 9. COMPARISON SECTION -->
 <section id="custom-comparison-section" class="custom-comparison-section" aria-labelledby="comparison-title" data-reveal>
     <div class="custom-section-center">
-      <h2 id="comparison-title" class="custom-section-title">
-        The Old Way vs. <span class="highlight-green">The Samyoj Way</span>
-      </h2>
-      <p class="custom-section-subtitle">
-        See how unifying your customer communication and sales workflows transforms your daily operations.
-      </p>
+      <!-- Intro grouped inside the section; same style as other section intros -->
+      <div id="custom-comparison-intro">
+        <div class="custom-badge-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span>Manual vs Automated Workflows</span>
+        </div>
+        <h2 id="comparison-title" class="custom-section-title">
+          The Old Way vs. <span class="highlight-green">The Samyoj Way</span>
+        </h2>
+        <p class="custom-section-subtitle">
+          See how unifying your customer communication and sales workflows transforms your daily operations.
+        </p>
+      </div>
 
       <div class="comparison-container" data-reveal data-reveal-stagger>
         <!-- Without Samyoj -->

@@ -2,14 +2,11 @@
 #custom-comparison-section.custom-comparison-section {
   position: relative;
   overflow: hidden;
-  padding: 22px 0 56px;
+  padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0;
   border: 0;
   color: #111a38;
   font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  background:
-    radial-gradient(ellipse at 4% 4%, rgba(225, 216, 255, .58), transparent 25%),
-    radial-gradient(ellipse at 98% 6%, rgba(216, 227, 255, .60), transparent 24%),
-    linear-gradient(180deg, #fff 0%, #fbfaff 56%, #f7f8ff 100%);
+  background: #fff;
 }
 #custom-comparison-section .custom-section-center {
   width: min(100%, 1600px);
@@ -17,50 +14,18 @@
   margin: 0 auto;
   padding: 0 clamp(18px, 3.2vw, 50px);
 }
-#custom-comparison-section .custom-trust-pill {
-  width: fit-content;
-  min-height: 38px;
-  margin: 0 auto 12px;
-  padding: 8px 17px;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  border: 0;
-  border-radius: 999px;
-  color: #5a35ef;
-  background: #f0edff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0;
+/* Intro lives inside the section, same style as the other section intros */
+#custom-comparison-intro {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-#custom-comparison-section .custom-trust-pill svg { width: 17px; height: 17px; color: #693cff; }
-#custom-comparison-section .custom-section-title {
-  margin: 0 auto 8px;
-  color: #111a38;
-  font-family: inherit;
-  font-size: clamp(34px, 4.1vw, 54px);
-  font-weight: 800;
-  letter-spacing: -.045em;
-  line-height: 1.12;
-  text-align: center;
-  text-wrap: balance;
+#custom-comparison-intro .custom-badge-pill { margin-bottom: 14px; }
+#custom-comparison-intro .custom-section-title {
+  margin-bottom: 18px;
+  font-size: clamp(26px, 2.1vw + 10px, 40px);
+  letter-spacing: -0.02em;
 }
-#custom-comparison-section .custom-section-title .highlight-green {
-  color: #693bfa;
-  background: linear-gradient(90deg, #5137f5 0%, #8730ef 62%, #df28b4 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#custom-comparison-section .custom-section-subtitle {
-  max-width: 790px;
-  margin: 0 auto;
-  color: #647da5;
-  font-size: clamp(16px, 1.55vw, 21px);
-  font-weight: 500;
-  line-height: 1.45;
-  text-align: center;
-  text-wrap: balance;
+#custom-comparison-intro .custom-section-subtitle {
+  margin-bottom: clamp(20px, 2.5vw, 28px);
 }
 #custom-comparison-section .comparison-container {
   position: relative;
@@ -69,7 +34,7 @@
   align-items: stretch;
   gap: clamp(20px, 2.2vw, 34px);
   width: min(100%, 1440px);
-  margin: clamp(22px, 2.1vw, 32px) auto 0;
+  margin: clamp(28px, 3vw, 48px) auto 0;
   text-align: left;
 }
 #custom-comparison-section .comparison-card {
@@ -219,11 +184,10 @@
   #custom-comparison-section .comparison-flow { display: none; }
 }
 @media (max-width: 640px) {
-  #custom-comparison-section.custom-comparison-section { padding: 46px 0 44px; }
+  #custom-comparison-section.custom-comparison-section { padding: var(--sy-section-pad-y, clamp(20px, 4vw, 32px)) 0; }
   #custom-comparison-section .custom-section-center { padding-inline: 16px; }
-  #custom-comparison-section .custom-trust-pill { min-height: 34px; margin-bottom: 10px; padding: 7px 13px; font-size: 12px; }
-  #custom-comparison-section .custom-section-title { font-size: clamp(29px, 8.4vw, 38px); letter-spacing: -.04em; }
-  #custom-comparison-section .custom-section-subtitle { font-size: 15px; line-height: 1.5; }
+  #custom-comparison-intro .custom-section-title { font-size: clamp(29px, 8.4vw, 38px); letter-spacing: -.04em; }
+  #custom-comparison-intro .custom-section-subtitle { font-size: 15px; line-height: 1.5; }
   #custom-comparison-section .comparison-container { gap: 18px; margin-top: 22px; }
   #custom-comparison-section .comparison-card { min-height: 0; padding: 16px 16px 0; border-radius: 22px; }
   #custom-comparison-section .comparison-badge { min-height: 26px; margin-bottom: 9px; padding: 6px 10px; border-radius: 7px; font-size: 10.5px; }

@@ -11,7 +11,7 @@
 }
 #custom-crm-section, #custom-crm-section *{box-sizing:border-box;margin:0;padding:0}
 #custom-crm-section{-webkit-text-size-adjust:100%}
-#custom-crm-section{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;background:#f6f5ff;overflow-x:hidden}
+#custom-crm-section{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;background:#fff;overflow-x:hidden}
 #custom-crm-section button{font-family:inherit}
 
 /* =====================================================================
@@ -20,18 +20,13 @@
 #custom-crm-section #syj-viewport{position:relative;width:100%}
 #custom-crm-section #syj-stage{position:relative;width:100%;max-width:720px;margin:0 auto;padding:22px 16px 40px;display:flex;flex-direction:column;gap:18px;
   background:transparent}
-#custom-crm-section{background:linear-gradient(180deg,#faf9ff 0%,#f3f1ff 50%,#f8f7ff 100%)}
+#custom-crm-section{background:#fff}
 #custom-crm-section .syj-only-d{display:none!important}
 #custom-crm-section .syj-dbr{display:none}
 
 #custom-crm-section .syj-card{background:var(--card);border:1px solid rgba(255,255,255,.95);box-shadow:var(--shadow);border-radius:20px;position:relative}
 
-/* header */
-#custom-crm-section .syj-badge{align-self:center;display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 13px;border-radius:15px;background:#e9e6fb;font-size:12px;font-weight:500;color:#4a38d8;white-space:nowrap}
-#custom-crm-section .syj-badge svg{width:16px;height:16px;stroke:#4a38d8;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-#custom-crm-section h2{font-family:inherit;font-weight:800;font-size:clamp(31px,9vw,48px);line-height:1.12;letter-spacing:-1.2px;color:var(--ink);text-align:center;text-wrap:balance}
-#custom-crm-section h2 .syj-g{background:linear-gradient(90deg,#3d4cf2 0%,#7b3de8 45%,#f0409a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-#custom-crm-section .syj-sub{font-size:15.5px;line-height:1.55;color:var(--slate);text-align:center;max-width:560px;margin:-4px auto 6px}
+/* header (now lives outside #syj-stage, in .custom-section-center intro) */
 
 /* shared mini pieces */
 #custom-crm-section .syj-ib{width:42px;height:42px;border-radius:12px;background:var(--lav);display:flex;align-items:center;justify-content:center;flex:none}
@@ -50,7 +45,6 @@
 
 /* ---- hero photo ---- */
 #custom-crm-section .syj-hero-photo{position:relative;width:min(86%,380px);aspect-ratio:450/521;margin:0 auto}
-#custom-crm-section .syj-hero-photo .syj-circle{position:absolute;left:6.9%;top:15.5%;width:90%;height:84.5%;border-radius:50% 50% 0 0/42% 42% 0 0;background:radial-gradient(circle at 50% 35%,#d9cff8 0%,#cdc0f4 55%,#bfaef0 100%)}
 #custom-crm-section .syj-hero-photo .syj-photo{position:absolute;inset:0;transform-origin:51.5% 36.5%;transform:translate(4%,-4.6%) scale(.85)}
 #custom-crm-section .syj-hero-photo .syj-photo>svg, #custom-crm-section .syj-hero-photo .syj-photo>img{width:100%;height:100%;display:block;object-fit:contain;object-position:bottom}
 #custom-crm-section .syj-hero-photo.syj-has-img .syj-photo{transform:none}
@@ -189,7 +183,7 @@
 
 /* tablet widths still in flow layout */
 @media (min-width:640px){
-  #custom-crm-section #syj-stage{padding-top:34px;gap:22px}
+  #custom-crm-section #syj-stage{padding-top:18px;gap:22px}
   #custom-crm-section h2{letter-spacing:-1.6px}
   #custom-crm-section .syj-sub{font-size:17px}
   #custom-crm-section .syj-pcols{grid-template-columns:repeat(4,1fr)}
@@ -210,26 +204,20 @@
   #custom-crm-section .syj-only-d{display:block!important}
   #custom-crm-section svg.syj-only-d{display:block!important}
   #custom-crm-section #syj-viewport{overflow:hidden}
-  #custom-crm-section #syj-stage{position:absolute;left:0;top:0;width:1536px;max-width:none;height:920px;padding:0;margin:0;display:block;transform-origin:0 0;overflow:hidden}
+  #custom-crm-section #syj-stage{position:absolute;left:0;top:0;width:1536px;max-width:none;height:768px;padding:0;margin:0;display:block;transform-origin:0 0;overflow:hidden}
   #custom-crm-section #syj-stage>*{position:absolute}
   #custom-crm-section .syj-bgs{inset:0;pointer-events:none}
   #custom-crm-section .syj-bgs i{position:absolute;border-radius:50%;display:block}
-
-  #custom-crm-section .syj-badge{left:648px;top:30px;width:240px;height:32px;border-radius:16px;justify-content:center;gap:7px;font-size:13.5px}
-  #custom-crm-section .syj-badge svg{width:16px;height:16px}
-  #custom-crm-section h2{left:0;top:80px;width:1536px;font-size:55px;line-height:70px;letter-spacing:-1.8px;white-space:nowrap;text-wrap:initial}
-  #custom-crm-section .syj-sub{left:0;top:152px;width:1536px;max-width:none;margin:0;font-size:20.3px;line-height:28px}
-  #custom-crm-section .syj-dbr{display:inline}
 
   #custom-crm-section .syj-fl{animation:syj-inn .8s cubic-bezier(.2,.7,.2,1) forwards,syj-float 6s ease-in-out infinite;animation-delay:calc(var(--i,0)*100ms),calc(var(--i,0)*100ms + .8s)}
   #custom-crm-section .syj-in{animation-play-state:paused;animation-delay:calc(var(--i,0)*100ms)}
   #custom-crm-section .syj-fl.syj-in{animation-play-state:paused}
 
   #custom-crm-section .syj-pos{position:absolute}
-  #custom-crm-section .syj-p-conv{left:64px;top:238px}
-  #custom-crm-section .syj-p-chat{left:368px;top:345px;z-index:4}
-  #custom-crm-section .syj-p-contacts{left:40px;top:416px}
-  #custom-crm-section .syj-p-pipe{left:970px;top:232px}
+  #custom-crm-section .syj-p-conv{left:64px;top:86px}
+  #custom-crm-section .syj-p-chat{left:368px;top:193px;z-index:4}
+  #custom-crm-section .syj-p-contacts{left:40px;top:264px}
+  #custom-crm-section .syj-p-pipe{left:970px;top:80px}
 
   /* conv */
   #custom-crm-section .syj-conv{width:288px;height:145px;padding:16px 20px 0;border-radius:22px}
@@ -241,8 +229,7 @@
   #custom-crm-section .syj-ch .syj-ic{width:42px;height:42px}
 
   /* hero photo */
-  #custom-crm-section .syj-hero-photo{left:548px;top:224px;width:420px;height:486px;aspect-ratio:auto;margin:0}
-  #custom-crm-section .syj-hero-photo .syj-circle{left:29px;top:75px;width:378px;height:410px}
+  #custom-crm-section .syj-hero-photo{left:548px;top:72px;width:420px;height:486px;aspect-ratio:auto;margin:0}
 
   /* chat */
   #custom-crm-section .syj-chat{width:300px;height:378px;padding:0;display:block;border-radius:22px;box-shadow:0 12px 30px rgba(84,64,170,.11),0 1px 3px rgba(84,64,170,.04)}
@@ -288,7 +275,7 @@
   #custom-crm-section .syj-pcol{height:238px}
 
   /* tags */
-  #custom-crm-section .syj-tags{left:962px;top:545px;width:541px;height:166px;padding:0;border-radius:22px}
+  #custom-crm-section .syj-tags{left:962px;top:393px;width:541px;height:166px;padding:0;border-radius:22px}
   #custom-crm-section .syj-tags .syj-thead{position:absolute;left:22px;top:15px}
   #custom-crm-section .syj-tags .syj-ib{width:40px;height:40px}
   #custom-crm-section .syj-tags h4{font-size:15.3px}
@@ -297,7 +284,7 @@
   #custom-crm-section .syj-dsh{display:block;position:absolute;height:5px;border-radius:5px;background:#c7b6f7;transform-origin:0 50%;z-index:2}
 
   /* bottom cards */
-  #custom-crm-section .syj-bc{top:742px;left:var(--l);width:var(--w);height:170px;padding:0;border-radius:20px}
+  #custom-crm-section .syj-bc{top:590px;left:var(--l);width:var(--w);height:170px;padding:0;border-radius:20px}
   #custom-crm-section .syj-bc>*{position:absolute}
   #custom-crm-section .syj-bhead{display:contents}
   #custom-crm-section .syj-bc .syj-ib{position:absolute;left:24px;top:15px;width:50px;height:50px;border-radius:15px}
@@ -326,10 +313,10 @@
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 var(--sy-section-pad-y, clamp(20px, 4vw, 32px));
   overflow: clip;
   scroll-margin-top: 112px;
-  background: radial-gradient(ellipse at 48% 47%, #f0ebff 0%, #fafaff 54%, #fff 100%);
+  background: #fff;
 }
 #custom-crm-section button { font-family: inherit; }
 #custom-crm-section .syj-hero-photo { z-index: 1; }
@@ -390,7 +377,6 @@
   #custom-crm-section .syj-bgs,
   #custom-crm-section .syj-dsh { display: none !important; }
   #custom-crm-section .syj-hero-photo { order: 3; width: min(76vw, 300px); max-height: 300px; aspect-ratio: 1 / 1; }
-  #custom-crm-section .syj-hero-photo .syj-circle { display: none; }
   #custom-crm-section .syj-hero-photo .syj-photo { inset: 0; }
   #custom-crm-section .syj-hero-photo .syj-photo > img { object-fit: contain; }
   #custom-crm-section .syj-p-conv { order: 2; }

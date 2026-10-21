@@ -24,7 +24,7 @@ const CONFIG = {
 
 /* ===== 1. responsive scaling ===== */
 const stage = get('stage'), viewport = get('viewport');
-const DESIGN_WIDTH = 1536, DESIGN_HEIGHT = 920;
+const DESIGN_WIDTH = 1536, DESIGN_HEIGHT = 768;
 const mq = matchMedia('(min-width:1200px)');
 function fit(){
   if(mq.matches){
