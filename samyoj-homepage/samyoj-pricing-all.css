@@ -1130,61 +1130,7 @@
       border-color: #c7d2fe;
     }
 
-    .meta-note-bar {
-      margin-top: 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      background: #EEF2FF;
-      border: 1px solid #c7d2fe;
-      border-radius: 14px;
-      padding: 14px 16px;
-      box-shadow: 0 4px 14px rgba(75, 46, 235, 0.06);
-    }
-
-    .meta-note-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: #ffffff;
-      color: #4B2EEB;
-      border: 1px solid #c7d2fe;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .meta-note-icon svg {
-      display: block;
-      width: 18px;
-      height: 18px;
-    }
-
-    .meta-note-body {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .meta-note-text {
-      margin: 0 0 10px 0;
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 1.5;
-      color: #475569;
-    }
-
-    .meta-note-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 18px;
-    }
-
     @media (max-width: 640px) {
-      .meta-note-bar {
-        flex-direction: row;
-        align-items: flex-start;
-      }
       .breakdown-card {
         grid-template-columns: 48px minmax(0, 1fr);
         grid-template-rows: auto auto auto;
@@ -1205,19 +1151,6 @@
         justify-self: start;
         margin-top: 4px;
       }
-    }
-
-    .meta-note-links a {
-      color: #4B2EEB;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .meta-note-links a:hover {
-      color: #3b22c9;
-      text-decoration: underline;
     }
 
     /* Section 5: Compare Plans Table */
