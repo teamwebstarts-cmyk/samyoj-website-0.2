@@ -124,6 +124,11 @@
     .blog-hero {
       background-color: #ffffff;
       padding: calc(var(--um-header-height) + var(--sy-hero-clearance, 32px)) 0 var(--sy-hero-pad-bottom, clamp(20px, 4vw, 32px));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: safe center;
     }
 
     .blog-hero-inner {

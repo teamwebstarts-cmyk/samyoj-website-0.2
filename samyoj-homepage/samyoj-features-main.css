@@ -87,6 +87,11 @@
       --paddingTop: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: safe center;
     }
 
     /* Hero container matching .custom-hero-container */

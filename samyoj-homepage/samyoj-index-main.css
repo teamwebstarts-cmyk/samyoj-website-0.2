@@ -2117,6 +2117,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      min-height: 100vh;
       box-sizing: border-box;
       padding-block: calc(var(--um-header-height) + var(--sy-hero-clearance)) var(--sy-hero-pad-bottom);
       padding-inline: 0;
