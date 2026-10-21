@@ -77,20 +77,21 @@
 #custom-comparison-section .samyoj-way .comparison-badge { color: #6334f5; background: #eeeaff; }
 #custom-comparison-section .comparison-card-title {
   margin: 0 0 5px;
-  color: #111a38;
-  font-family: inherit;
-  font-size: clamp(25px, 2.45vw, 40px);
+  color: #0f172a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(24px, 1.7vw + 9px, 34px);
   font-weight: 800;
-  letter-spacing: -.045em;
+  letter-spacing: -.02em;
   line-height: 1.14;
 }
 #custom-comparison-section .comparison-card-desc {
   max-width: 96%;
   margin: 0 0 14px;
-  color: #63799e;
-  font-size: clamp(15px, 1.28vw, 20px);
-  font-weight: 500;
-  line-height: 1.42;
+  color: #64748b;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(16px, 1.4vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
 }
 #custom-comparison-section .comparison-art {
   position: relative;
@@ -106,10 +107,11 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 47%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }
-#custom-comparison-section .old-way .comparison-art img { object-position: center 50%; }
+#custom-comparison-section .old-way .comparison-art img { object-position: center; }
 #custom-comparison-section .comparison-list {
   position: absolute;
   z-index: 2;
@@ -143,21 +145,24 @@
 #custom-comparison-section .comparison-item:last-child { border-bottom: 0; }
 #custom-comparison-section .comparison-icon {
   display: block;
-  width: 29px;
-  height: 29px;
-  flex: 0 0 29px;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
   margin: 0;
-  padding: 6px;
+  padding: 5px;
   border-radius: 50%;
   stroke: #fff;
-  stroke-width: 2.7;
+  stroke-width: 2.9;
 }
 #custom-comparison-section .old-way .comparison-icon { background: #ff453d; }
 #custom-comparison-section .old-way .comparison-icon circle { fill: #ff453d; stroke: #ff453d; }
 #custom-comparison-section .old-way .comparison-icon line { stroke: #fff; }
 #custom-comparison-section .samyoj-way .comparison-icon { background: #6935f5; }
 #custom-comparison-section .samyoj-way .comparison-icon path { stroke: transparent; }
-#custom-comparison-section .samyoj-way .comparison-icon polyline { stroke: #fff; }
+#custom-comparison-section .samyoj-way .comparison-icon polyline {
+  stroke: #fff;
+  transform: translate(-3.5px, 3px);
+}
 #custom-comparison-section .comparison-flow {
   position: absolute;
   z-index: 4;
