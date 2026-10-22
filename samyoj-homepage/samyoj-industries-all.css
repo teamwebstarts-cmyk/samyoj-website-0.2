@@ -2047,10 +2047,10 @@
     }
 
     .ind-cta-deco.left {
-      left: -48px;
+      left: -38px;
       top: 50%;
-      width: 360px;
-      height: 360px;
+      width: 300px;
+      height: 300px;
       margin: 0;
       transform: translateY(-50%);
       transform-origin: center center;
@@ -2058,10 +2058,10 @@
     }
 
     .ind-cta-deco.right {
-      right: -35px;
-      bottom: -30px;
-      width: 320px;
-      height: 320px;
+      right: -28px;
+      bottom: -24px;
+      width: 265px;
+      height: 265px;
       margin: 0;
       transform: rotate(-4deg);
       transform-origin: center bottom;
