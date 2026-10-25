@@ -12,7 +12,7 @@
  * Included by every page: <script defer src="/analytics.js"></script>
  */
 (function () {
-  var MEASUREMENT_ID = "G-XXXXXXXXXX"; // TODO: replace with real GA4 ID
+  var MEASUREMENT_ID = "G-T8L8R0JP32";
   var PLACEHOLDER = /^G-XXXXXXXXXX$/.test(MEASUREMENT_ID);
   if (PLACEHOLDER) return; // not configured yet — do nothing
 
