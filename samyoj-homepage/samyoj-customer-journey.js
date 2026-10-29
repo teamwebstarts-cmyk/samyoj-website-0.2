@@ -13,7 +13,7 @@
                keys: wa ig fb meta
    ===================================================================== */
 const CONFIG = {
-  heroPhoto: 'images/journey/customer-phone.png',
+  heroPhoto: 'images/journey/customer-phone.webp',
   avatars: ['images/avatars/priyal.webp','images/avatars/rohit.webp','images/avatars/neha.webp','images/avatars/karan.webp','images/avatars/sameer.webp','images/avatars/akash.webp'],
   icons: {
     wa: 'New-images/social-icons/whatsapp.png',
