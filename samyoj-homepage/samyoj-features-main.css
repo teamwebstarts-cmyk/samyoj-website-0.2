@@ -1198,7 +1198,13 @@
     }
 
     .feat-hero-title .feat-accent {
-      color: var(--feat-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      display: inline !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .feat-hero-sub {
@@ -1283,7 +1289,13 @@
     }
 
     .feat-grid-title .feat-accent {
-      color: var(--feat-green);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      display: inline !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .feat-grid-sub {
@@ -2016,6 +2028,10 @@
 
     .custom-section-title .highlight-green {
       color: #4B2EEB;
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .custom-faq-section {

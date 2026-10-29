@@ -147,6 +147,13 @@
       box-decoration-break: clone;
     }
 
+    /* Match home page gradient sweep-per-line behavior for hero accent */
+    .hero-pricing-title .highlight-green {
+      display: inline !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
     .btn-primary-sy {
       display: inline-flex;
       align-items: center;

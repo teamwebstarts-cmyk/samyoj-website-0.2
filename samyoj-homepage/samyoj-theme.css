@@ -521,7 +521,9 @@ a.text-link:hover {
   background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  display: inline-block !important;
+  display: inline !important;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .scribble-underline path {

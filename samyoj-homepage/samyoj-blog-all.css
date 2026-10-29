@@ -194,9 +194,12 @@
       letter-spacing: -0.035em;
     }
     .blog-hero-left h1 .green-word {
-      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 100%);
+      background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: inline;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .blog-hero-subtitle {

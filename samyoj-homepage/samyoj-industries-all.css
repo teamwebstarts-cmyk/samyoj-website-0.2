@@ -1591,7 +1591,9 @@
     }
 
     .ind-hero-title .ind-accent {
-      color: #4B2EEB;
+      display: inline !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .ind-hero-sub {
@@ -2111,7 +2113,9 @@
     }
 
     .ind-cta-copy h2 .ind-accent {
-      color: #4B2EEB;
+      display: inline !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .ind-cta-copy .ind-cta-sub {
