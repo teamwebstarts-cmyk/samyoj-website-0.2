@@ -1123,9 +1123,10 @@
 
     .wy-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-      margin-bottom: 24px;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto 24px;
       align-items: stretch;
     }
 
@@ -1138,7 +1139,9 @@
         0 1px 2px rgba(15, 23, 42, 0.03),
         0 10px 24px rgba(15, 23, 42, 0.05);
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+      gap: 22px;
       min-height: 100%;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -1151,11 +1154,19 @@
     }
 
     .wy-illu-wrap {
-      height: 220px;
+      flex: 0 0 220px;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 0 14px;
+      margin: 0;
+    }
+
+    .wy-card-body {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
     }
 
     .wy-illu {
@@ -1536,6 +1547,23 @@
         gap: 14px;
       }
 
+      /* Cards return to a compact vertical layout on phones */
+      .wy-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .wy-illu-wrap {
+        flex: 0 0 auto;
+        height: 180px;
+        margin: 0 0 12px;
+      }
+
+      .wy-illu {
+        height: 170px;
+      }
+
       .wy-card-desc {
         min-height: 0;
       }
@@ -1568,9 +1596,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .wy-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      /* .wy-grid now stays 1 column at every width (cards listed 1 by 1) */
 
       .wy-trust {
         grid-template-columns: 1fr;
@@ -1609,9 +1635,29 @@
 
     @media (min-width: 901px) {
 
-      .cw-title,
+      .cw-title {
+        white-space: nowrap;
+      }
+
+      /* Long heading: keep it fluid until there is guaranteed room
+         for a single line (see the 1240px block below) */
+      .wy-title {
+        white-space: normal;
+        text-wrap: balance;
+      }
+    }
+
+    /* Very large screens: headline on one line, like the contact title.
+       Header widens to the full inner column so the line fits. */
+    @media (min-width: 1240px) {
+
+      .wy-header {
+        max-width: 1240px;
+      }
+
       .wy-title {
         white-space: nowrap;
+        font-size: clamp(32px, 2.4vw + 6px, 38px);
       }
     }
 
@@ -1620,6 +1666,7 @@
       .cw-title,
       .wy-title {
         white-space: normal;
+        text-wrap: balance;
       }
 
       .cw-header,

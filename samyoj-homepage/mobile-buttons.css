@@ -148,7 +148,8 @@ body:has(#samyoj-magic-bar) #um-header-banner {
   .promo-cta-btn,
   ._bb883e3c.btn.primary,
   .ind-hero-ctas .btn.primary,
-  .ind-cta-actions .btn.primary {
+  .ind-cta-actions .btn.primary,
+  .ind-cta-copy .btn.primary {
     width: 100%;
     justify-content: center;
     box-sizing: border-box;

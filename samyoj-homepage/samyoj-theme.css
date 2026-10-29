@@ -670,13 +670,13 @@ a.text-link:hover {
 }
 
 .setup-step-item:nth-child(2) .setup-step-icon {
-  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
-  color: #FFFFFF !important;
-  border: 1.5px solid transparent !important;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.38) !important;
+  background-color: rgba(168, 85, 247, 0.12) !important;
+  color: #9333EA !important;
+  border: 1.5px solid rgba(168, 85, 247, 0.3) !important;
+  box-shadow: none !important;
 }
 .setup-step-item:nth-child(2) .setup-step-icon svg {
-  color: #FFFFFF !important;
+  color: #9333EA !important;
 }
 
 .setup-step-item:nth-child(3) .setup-step-icon {

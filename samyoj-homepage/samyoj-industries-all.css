@@ -2152,7 +2152,8 @@
       justify-content: flex-end;
     }
 
-    .ind-cta-actions .btn.primary {
+    .ind-cta-actions .btn.primary,
+    .ind-cta-copy .btn.primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -2170,7 +2171,14 @@
       text-decoration: none;
     }
 
-    .ind-cta-actions .btn.primary:hover {
+    /* Button inside the copy block: sits below the sub-text, left-aligned */
+    .ind-cta-copy .btn.primary {
+      margin-top: 14px;
+      align-self: flex-start;
+    }
+
+    .ind-cta-actions .btn.primary:hover,
+    .ind-cta-copy .btn.primary:hover {
       background: #3B22C7;
     }
 
