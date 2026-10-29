@@ -691,6 +691,38 @@ a.text-link:hover {
   border: 1.5px solid rgba(255, 138, 61, 0.3) !important;
 }
 
+/* Consistent section-visual sizing — matches the homepage hero footprint.
+   Every marketing section image occupies the same ~700×466 box (3:2), so
+   the page rhythm stays steady while scrolling. object-fit: contain keeps
+   each image distortion-free inside the shared box. */
+.setup-dashboard-img,
+#custom-broadcast-section .broadcast-right-col .hero-right-img,
+._10af011a .hero-right-img,
+.ai-visual img,
+.hero-pricing-img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  max-height: 466px;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* Smaller shared box on tablet/phone — mirrors the hero's mobile cap */
+@media (max-width: 900px) {
+  .setup-dashboard-img,
+  #custom-broadcast-section .broadcast-right-col .hero-right-img,
+  ._10af011a .hero-right-img,
+  .ai-visual img,
+  .hero-pricing-img {
+    max-width: min(100%, 520px);
+    aspect-ratio: auto;
+    max-height: min(48svh, 360px);
+  }
+}
+
 /* Trust Stats 4-Pill Row: Dedicated Colors */
 .stats-grid .stat-item:nth-child(1) .stat-icon-wrapper {
   color: var(--sy-brand-indigo) !important;
