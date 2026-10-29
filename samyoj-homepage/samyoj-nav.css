@@ -728,11 +728,13 @@ body:not(.noScript) .umso-header .umso-animated.umso-animating {
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .sy-nav-brand img {
   display: block;
-  width: min(160px, 100%);
+  width: 160px;
+  max-width: 100%;
   height: auto;
 }
 
