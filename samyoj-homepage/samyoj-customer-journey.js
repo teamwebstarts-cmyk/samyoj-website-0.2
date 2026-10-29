@@ -13,12 +13,12 @@
                keys: wa ig fb meta
    ===================================================================== */
 const CONFIG = {
-  heroPhoto: 'images/journey/customer-phone.png',
+  heroPhoto: 'images/journey/customer-phone.webp',
   avatars: ['images/avatars/priyal.webp','images/avatars/rohit.webp','images/avatars/neha.webp','images/avatars/karan.webp','images/avatars/sameer.webp','images/avatars/akash.webp'],
   icons: {
-    wa: 'New%20images/social%20icons/whatsapp.png',
+    wa: 'New-images/social-icons/whatsapp.png',
     fb: '<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#1877f2"/><path d="M28 42V27h5l.8-6H28v-4c0-1.8.5-3 3.1-3H34V8.6c-.5-.1-2.3-.2-4.3-.2-4.3 0-7.3 2.6-7.3 7.5V21h-5v6h5v15z" fill="#fff"/></svg>',
-    meta: 'New%20images/social%20icons/meta.png'
+    meta: 'New-images/social-icons/meta.png'
   }
 };
 

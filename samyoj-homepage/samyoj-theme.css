@@ -455,7 +455,7 @@ a.text-link:hover {
 }
 
 /* Footer Accent Alignment */
-.sy-footer-col h4::after {
+.sy-footer-col h3::after {
   background: var(--sy-brand-indigo) !important;
 }
 

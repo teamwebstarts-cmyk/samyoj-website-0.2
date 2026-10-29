@@ -7,9 +7,11 @@
     "dev": "serve samyoj-homepage -p 3000 --no-port-switching",
     "start": "serve samyoj-homepage -p 3000 --no-port-switching",
     "seo:audit": "node scripts/seo-audit.mjs",
-    "seo:deep": "node scripts/seo-deep-audit.mjs"
+    "seo:deep": "node scripts/seo-deep-audit.mjs",
+    "build:css": "esbuild samyoj-homepage/samyoj-index-main.css samyoj-homepage/samyoj-features-main.css samyoj-homepage/samyoj-pricing-all.css samyoj-homepage/samyoj-industries-all.css samyoj-homepage/samyoj-contact-main.css --minify --allow-overwrite --outdir=samyoj-homepage"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "serve": "^14.2.4",
     "sharp": "^0.35.5"
   },

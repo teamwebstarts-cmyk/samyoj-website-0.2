@@ -222,7 +222,7 @@
   /* conv */
   #custom-crm-section .syj-conv{width:288px;height:145px;padding:16px 20px 0;border-radius:22px}
   #custom-crm-section .syj-conv .syj-ib{width:42px;height:42px}
-  #custom-crm-section .syj-conv h4{font-size:15.3px;line-height:20px}
+  #custom-crm-section .syj-conv h5{font-size:15.3px;line-height:20px}
   #custom-crm-section .syj-conv hr{margin:9px -4px 0 -4px}
   #custom-crm-section .syj-chs{justify-content:flex-start;margin:7px 0 0 -8px}
   #custom-crm-section .syj-ch{width:66px;margin-right:-2px;font-size:11.6px}
@@ -257,7 +257,7 @@
   #custom-crm-section .syj-contacts{width:327px;height:286px;padding:0;border-radius:22px}
   #custom-crm-section .syj-contacts .syj-chead{position:absolute;left:26px;top:18px;padding:0}
   #custom-crm-section .syj-contacts .syj-ib{width:38px;height:38px}
-  #custom-crm-section .syj-contacts h4{font-size:15.3px}
+  #custom-crm-section .syj-contacts h5{font-size:15.3px}
   #custom-crm-section .syj-contacts hr{position:absolute;left:24px;right:8px;top:61px;margin:0}
   #custom-crm-section #syj-crows{position:absolute;left:10px;right:6px;top:70px;gap:3px}
   #custom-crm-section .syj-crow{height:49px;padding:0 10px}
@@ -270,7 +270,7 @@
   #custom-crm-section .syj-pipe{width:500px;height:292px;padding:0;border-radius:22px}
   #custom-crm-section .syj-phead{position:absolute;left:24px;top:8px;right:20px;height:40px;padding:0}
   #custom-crm-section .syj-pipe .syj-ib{width:40px;height:40px}
-  #custom-crm-section .syj-pipe h4{font-size:15.2px}
+  #custom-crm-section .syj-pipe h5{font-size:15.2px}
   #custom-crm-section .syj-pcols{position:absolute;left:15px;top:58px;margin:0;display:grid;grid-template-columns:112px 110px 110px 110px;column-gap:11px}
   #custom-crm-section .syj-pcol{height:238px}
 
@@ -278,7 +278,7 @@
   #custom-crm-section .syj-tags{left:962px;top:393px;width:541px;height:166px;padding:0;border-radius:22px}
   #custom-crm-section .syj-tags .syj-thead{position:absolute;left:22px;top:15px}
   #custom-crm-section .syj-tags .syj-ib{width:40px;height:40px}
-  #custom-crm-section .syj-tags h4{font-size:15.3px}
+  #custom-crm-section .syj-tags h5{font-size:15.3px}
   #custom-crm-section .syj-trow{position:absolute;left:24px;top:65px;width:497px;margin:0;gap:10px;row-gap:9px}
   #custom-crm-section .syj-tag{font-size:12.6px;width:var(--w,auto)}
   #custom-crm-section .syj-dsh{display:block;position:absolute;height:5px;border-radius:5px;background:#c7b6f7;transform-origin:0 50%;z-index:2}

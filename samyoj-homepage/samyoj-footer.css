@@ -148,7 +148,7 @@
   background: var(--sy-line);
 }
 
-.sy-footer-col h4 {
+.sy-footer-col h3 {
   margin: 0 0 6px;
   color: var(--sy-heading);
   font-size: 14px;
@@ -157,7 +157,7 @@
   line-height: 1.2;
 }
 
-.sy-footer-col h4::after {
+.sy-footer-col h3::after {
   content: "";
   display: block;
   width: 20px;
@@ -414,12 +414,12 @@
     width: 100%;
   }
 
-  .sy-footer-col h4 {
+  .sy-footer-col h3 {
     margin: 0 0 6px;
     font-size: 14px;
   }
 
-  .sy-footer-col h4::after {
+  .sy-footer-col h3::after {
     margin-top: 4px;
   }
 

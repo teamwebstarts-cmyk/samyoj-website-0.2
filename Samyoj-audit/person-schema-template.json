@@ -1,0 +1,1 @@
+{"@context": "https://schema.org", "@type": "Person", "name": "FULL_NAME", "jobTitle": "ROLE", "description": "ONE_LINE_BIO", "image": "PHOTO_URL", "url": "https://samyoj.com/", "worksFor": {"@type": "Organization", "name": "Samyoj", "url": "https://samyoj.com/"}, "sameAs": ["https://www.linkedin.com/in/HANDLE/"]}

@@ -9,13 +9,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png" />
   <link rel="manifest" href="../favicon_io/site.webmanifest" />
   <link rel="canonical" href="https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" />
-  <link rel="alternate" hreflang="en" href="https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" />
-  <link rel="alternate" hreflang="x-default" href="https://samyoj.com/blog/whatsapp-flows-guide-in-chat-forms" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>WhatsApp Flows: In-Chat Forms Guide 2026 | Samyoj</title>
   <meta name="description"
-    content="Build WhatsApp Flows — interactive in-chat forms for bookings, lead capture and feedback — with 2026 best practices.">
+    content="Build WhatsApp Flows: interactive in-chat forms for bookings, lead capture and payments - with templates and step-by-step setup.">
 
 
   <meta property="og:type" content="article" />
@@ -40,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:ital,wght@0,400;0,500;0,600&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../mobile-buttons.css">
-  <link rel="stylesheet" href="../samyoj-footer.css?v=7">
+  <link rel="stylesheet" href="../samyoj-footer.css?v=8">
   <link rel="stylesheet" href="../samyoj-mobile-drawer.css?v=1">
 
   <style id="shared-site-chrome">
@@ -1232,7 +1230,8 @@
       "author": {
         "@type": "Organization",
         "name": "Samyoj Growth Team",
-        "url": "https://samyoj.com"
+        "url": "https://samyoj.com",
+        "logo": "https://samyoj.com/images/samyoj-logo-new.png"
       },
       "publisher": {
         "@type": "Organization",
@@ -1743,7 +1742,7 @@
               <p>Bind the footer button to a <code>complete</code> action payload or a <code>data_exchange</code> endpoint call to validate data prior to finishing.</p>
             </div>
 
-            <h4>Production Flow JSON Schema Example (Lead Capture Flow)</h4>
+            <h3>Production Flow JSON Schema Example (Lead Capture Flow)</h3>
             <p>
               Here is an exact, syntactically valid WhatsApp Flow JSON v6.0 template for capturing B2B lead requirements:
             </p>
@@ -1929,7 +1928,7 @@
               When an endpoint request hits your server, you must verify the signature header <code>X-Hub-Signature-256</code> to ensure the request originated from Meta and not a malicious third party.
             </p>
 
-            <h4>Node.js / Express Endpoint Verification &amp; Decryption Pattern</h4>
+            <h3>Node.js / Express Endpoint Verification &amp; Decryption Pattern</h3>
             <div class="blog-code-block">
               <div class="blog-code-header">
                 <span>Node.js Flow Endpoint Handler</span>
@@ -2250,7 +2249,7 @@ app.post(<span class="token-string">'/api/samyoj-flow-endpoint'</span>, express.
         </div>
 
         <nav class="sy-footer-col" aria-label="Platform">
-          <h4>Platform</h4>
+          <h3>Platform</h3>
           <ul class="sy-footer-links">
             <li><a href="../features.html">Features</a></li>
             <li><a href="../pricing.html">Pricing</a></li>
@@ -2260,7 +2259,7 @@ app.post(<span class="token-string">'/api/samyoj-flow-endpoint'</span>, express.
         </nav>
 
         <nav class="sy-footer-col" aria-label="Company">
-          <h4>Company</h4>
+          <h3>Company</h3>
           <ul class="sy-footer-links">
             <li><a href="../blog.html">Blog</a></li>
             <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
@@ -2270,7 +2269,7 @@ app.post(<span class="token-string">'/api/samyoj-flow-endpoint'</span>, express.
         </nav>
 
         <div class="sy-footer-col" aria-label="Contact Us">
-          <h4>Contact Us</h4>
+          <h3>Contact Us</h3>
           <ul class="sy-footer-contact">
             <li><a href="tel:+918305369467">Sales: +91 8305369467</a></li>
             <li><a href="tel:+918305369467">Support: +91 9009785315</a></li>
