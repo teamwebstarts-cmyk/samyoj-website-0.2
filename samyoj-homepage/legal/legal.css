@@ -1,1 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');:root{--green:#03b85d;--ink:#10231e;--muted:#66736e;--line:#dce8e2}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;color:var(--ink);font:16px/1.72 Inter,Arial,sans-serif;background:#fff;overflow-x:clip}a{color:#4b2eeb;text-decoration:none;overflow-wrap:break-word;word-break:break-word}a:hover{color:#3b22c7;text-decoration:underline}main{max-width:780px;margin:0 auto;padding:78px clamp(20px,3vw,40px)}.tag{text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.12em;color:#07874a;margin:0 0 10px}h1{font-size:clamp(38px,6vw,58px);letter-spacing:-.05em;line-height:1.04;margin:0 0 10px}h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}.updated{color:var(--muted);font-size:14px;margin:0 0 34px}p{margin:0 0 18px}p code{font-size:.92em;background:rgba(75,46,235,.07);border:1px solid rgba(75,46,235,.24);border-radius:6px;padding:1px 6px;color:#4226d6;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}::selection{background:rgba(75,46,235,.18)}@media(max-width:600px){main{padding:52px clamp(16px,5vw,20px)}h1{font-size:clamp(31px,9.5vw,40px)}h2{font-size:20.5px;margin:34px 0 8px}main p{font-size:15.5px}.updated{margin-bottom:26px}}
+
+/* ── umso header chrome (shared) ──
+   Button/link visuals come verbatim from samyoj-theme.css (loaded in <head>);
+   only the layout container and fixed-header offset are defined here. */
+._58ce83d8 .wr{width:100%;max-width:var(--wr-max,1420px);margin:0 auto;padding:0 30px;position:relative;box-sizing:border-box}
+@media (max-width:700px){._58ce83d8 .wr{padding:0 15px}}
+/* Umso header variables (same values as samyoj-shared-chrome.css) — without
+   these the hamburger lines (var(--color-text-secondary)) are transparent */
+.header-hdr_lbofppypi0{
+  font:normal normal 400 16px 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --font-text:normal normal 400 16px 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --header-bg:rgb(255,255,255);
+  --nav-menu-bg:rgb(255,255,255);
+  --nav-drawer-bg:rgb(255,255,255);
+  --nav-overlay-bg:rgb(255,255,255);
+  --nav-flyout-bg:rgb(255,255,255);
+  --color-text-primary:rgb(0,0,0);
+  --header-borderColor:rgb(229,229,229);
+  --header-borderWidth:1;
+  --header-borderRadius:10px;
+  --color-text-secondary:rgb(105,105,105);
+  --header-fontSize-primary:16;
+  --header-fontSize-secondary:16;
+}
+/* Fixed header offset + breathing room for the article column */
+body ._58ce83d8+main{padding-top:calc(var(--um-header-height,115px) + 40px)}
