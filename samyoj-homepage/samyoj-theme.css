@@ -455,7 +455,7 @@ a.text-link:hover {
 }
 
 /* Footer Accent Alignment */
-.sy-footer-col h4::after {
+.sy-footer-col h3::after {
   background: var(--sy-brand-indigo) !important;
 }
 
@@ -521,7 +521,9 @@ a.text-link:hover {
   background: linear-gradient(135deg, #4B2EEB 0%, #7A3BFF 50%, #EC4899 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  display: inline-block !important;
+  display: inline !important;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .scribble-underline path {
@@ -668,13 +670,13 @@ a.text-link:hover {
 }
 
 .setup-step-item:nth-child(2) .setup-step-icon {
-  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
-  color: #FFFFFF !important;
-  border: 1.5px solid transparent !important;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.38) !important;
+  background-color: rgba(168, 85, 247, 0.12) !important;
+  color: #9333EA !important;
+  border: 1.5px solid rgba(168, 85, 247, 0.3) !important;
+  box-shadow: none !important;
 }
 .setup-step-item:nth-child(2) .setup-step-icon svg {
-  color: #FFFFFF !important;
+  color: #9333EA !important;
 }
 
 .setup-step-item:nth-child(3) .setup-step-icon {
@@ -687,6 +689,38 @@ a.text-link:hover {
   background-color: rgba(255, 138, 61, 0.12) !important;
   color: var(--sy-brand-orange) !important;
   border: 1.5px solid rgba(255, 138, 61, 0.3) !important;
+}
+
+/* Consistent section-visual sizing — matches the homepage hero footprint.
+   Every marketing section image occupies the same ~700×466 box (3:2), so
+   the page rhythm stays steady while scrolling. object-fit: contain keeps
+   each image distortion-free inside the shared box. */
+.setup-dashboard-img,
+#custom-broadcast-section .broadcast-right-col .hero-right-img,
+._10af011a .hero-right-img,
+.ai-visual img,
+.hero-pricing-img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  max-height: 466px;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* Smaller shared box on tablet/phone — mirrors the hero's mobile cap */
+@media (max-width: 900px) {
+  .setup-dashboard-img,
+  #custom-broadcast-section .broadcast-right-col .hero-right-img,
+  ._10af011a .hero-right-img,
+  .ai-visual img,
+  .hero-pricing-img {
+    max-width: min(100%, 520px);
+    aspect-ratio: auto;
+    max-height: min(48svh, 360px);
+  }
 }
 
 /* Trust Stats 4-Pill Row: Dedicated Colors */
