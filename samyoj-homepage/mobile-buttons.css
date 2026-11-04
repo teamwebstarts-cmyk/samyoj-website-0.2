@@ -181,3 +181,36 @@ body:has(#samyoj-magic-bar) #um-header-banner {
     min-height: 48px;
   }
 }
+
+/* Unify hero CTA rows across pages — same responsive behavior as the
+   contact page hero (.ch-ctas): full-width stacked buttons on tablets
+   & phones, side-by-side row on desktop. Selector specificity (div class
+   chains) intentionally exceeds samyoj-theme.css's width:auto !important
+   so the stack actually goes full-width. */
+@media (max-width: 768px) {
+  .hero-pricing-actions,
+  .ch-ctas {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-pricing-actions>a.btn-primary-sy,
+  .hero-pricing-actions>a.btn-outline-sy,
+  .hero-cta-row>a.btn.primary,
+  .hero-cta-row>a.hero-btn-secondary,
+  .custom-hero-ctas>a.custom-btn-primary,
+  .custom-hero-ctas>a.custom-btn-secondary,
+  .custom-hero-ctas>a.btn-outline,
+  .ch-ctas>a.ch-btn,
+  .ch-ctas>a.ch-btn-secondary,
+  .blog-subscribe-btn.blog-subscribe-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

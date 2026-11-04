@@ -184,6 +184,37 @@
     document.body.classList.remove('sy-page-exiting');
   });
 
+  // --- Magic bar ↔ mobile drawer guard (all pages) ---
+  // Hides the #aisensy-magic-bar announcement whenever the mobile nav drawer
+  // is open. Watches the whole body subtree for class changes so it keeps
+  // working even when Umso replaces the header/drawer nodes on viewport
+  // resize (which silently breaks the per-page, node-bound watchers).
+  function armMagicBarGuard() {
+    var bar = document.getElementById('aisensy-magic-bar');
+    var drawer = document.querySelector('.um-nav-drawer');
+    if (!bar || !drawer) return false;
+    var update = function () {
+      drawer = document.querySelector('.um-nav-drawer') || drawer;
+      bar.classList.toggle('mb-menu-open', !drawer.classList.contains('um-hidden'));
+    };
+    update();
+    new MutationObserver(update).observe(document.body, {
+      attributes: true,
+      subtree: true,
+      attributeFilter: ['class']
+    });
+    return true;
+  }
+  function armMagicBarGuardWithRetry(attemptsLeft) {
+    if (armMagicBarGuard() || attemptsLeft <= 0) return;
+    setTimeout(function () { armMagicBarGuardWithRetry(attemptsLeft - 1); }, 120);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { armMagicBarGuardWithRetry(15); });
+  } else {
+    armMagicBarGuardWithRetry(15);
+  }
+
   // Also clean up on pagehide so cached state is always clean
   window.addEventListener('pagehide', function () {
     isNavigating = false;

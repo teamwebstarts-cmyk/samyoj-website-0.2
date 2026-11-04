@@ -21,6 +21,13 @@
   display: none !important;
 }
 
+/* CSS-native safety net: hide the announcement bar whenever the mobile nav
+   drawer is open, on every page, regardless of per-page JS wiring.
+   :has() re-evaluates live when Umso toggles 'um-hidden' on the drawer. */
+body:has(.um-nav-drawer:not(.um-hidden)) #aisensy-magic-bar {
+  display: none !important;
+}
+
 #um-header-banner {
   background: linear-gradient(90deg, #D4E2FF 0%, #E2D4FE 28%, #FCD0EC 50%, #E2D4FE 72%, #D4E2FF 100%) !important;
   border-bottom: none !important;
