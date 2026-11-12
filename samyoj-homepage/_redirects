@@ -5,6 +5,16 @@
 /contact     /contact.html    200
 /blog        /blog.html       200!
 /blog/       /blog.html       200!
+/blog/missed-leads-across-social-inboxes /blog/missed-leads-across-social-inboxes.html 200
+/blog/meta-lead-forms-not-syncing-crm /blog/meta-lead-forms-not-syncing-crm.html 200
+/blog/instagram-comment-to-dm-automation-limits /blog/instagram-comment-to-dm-automation-limits.html 200
+/blog/meta-messaging-window-response-workflow /blog/meta-messaging-window-response-workflow.html 200
+/blog/customer-messaging-consent-india-multichannel /blog/customer-messaging-consent-india-multichannel.html 200
+/blog/deduplicate-customer-records-multiple-channels /blog/deduplicate-customer-records-multiple-channels.html 200
+/blog/gmail-crm-integration-send-only /blog/gmail-crm-integration-send-only.html 200
+/blog/multichannel-customer-support-routing /blog/multichannel-customer-support-routing.html 200
+/blog/measure-lead-response-time-crm /blog/measure-lead-response-time-crm.html 200
+/blog/track-multichannel-campaign-attribution /blog/track-multichannel-campaign-attribution.html 200
 /blog/*      /blog/:splat     200
 
 /legal/privacy-policy /legal/privacy-policy.html  200

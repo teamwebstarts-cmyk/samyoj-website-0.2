@@ -49,29 +49,40 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.samyoj.com" }],
+      "destination": "https://samyoj.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path(.*)\\.html",
+      "destination": "/:path",
+      "permanent": true
+    },
+    {
       "source": "/privacy-policy",
       "destination": "/legal/privacy-policy",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/terms-and-conditions",
       "destination": "/legal/terms-and-conditions",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/cookie-policy",
       "destination": "/legal/cookie-policy",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/refund-cancellation-policy",
       "destination": "/legal/refund-cancellation-policy",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/acceptable-use-policy",
       "destination": "/legal/acceptable-use-policy",
-      "statusCode": 301
+      "permanent": true
     }
   ],
   "headers": [

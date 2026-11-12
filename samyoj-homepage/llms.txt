@@ -1,14 +1,20 @@
 # Samyoj — AI-Powered WhatsApp CRM
 
-> Samyoj (samyoj.com) is an AI-powered customer communication CRM and Official WhatsApp Business Solution Provider. Businesses use Samyoj to qualify leads, automate follow-ups, and sell across WhatsApp, Instagram, and Facebook Messenger — replacing slow manual follow-ups with automated, trackable sales journeys.
+> Samyoj (samyoj.com) is an AI-powered customer communication CRM and Meta Tech Provider for the WhatsApp Business Platform. Businesses use Samyoj to qualify leads, automate follow-ups, and sell across WhatsApp, Instagram, and Facebook Messenger — on official Meta Cloud APIs, with direct Meta billing for message charges and no markup on Meta rates (see pricing page).
 
 ## What Samyoj Does
 
 - **Unified omnichannel inbox**: WhatsApp, Instagram DMs and Facebook Messenger in one shared team inbox.
 - **AI lead qualification**: AI agents respond and qualify leads 24/7, scoring and routing them in the CRM pipeline.
 - **Automated follow-up sequences**: Timed, behavior-triggered follow-ups across channels.
-- **Official WhatsApp Business API**: Verified business profile, green tick eligibility, broadcast messaging, catalogs, and Click-to-WhatsApp Ads integration.
+- **Official WhatsApp Business API access**: Verified business profile, template messaging, broadcasts, catalogs, and Click-to-WhatsApp Ads integration — delivered via Meta Cloud API as a Tech Provider.
 - **CRM & pipeline**: Track every deal from first message to payment, with notes, reminders, and team assignment.
+
+## Meta partner status (accurate wording)
+
+- Samyoj is a **Meta Tech Provider** (technology partner) in Meta's partner program for WhatsApp Business Platform.
+- Meta also has a separate **Business Solution Provider (BSP)** track. Samyoj is in the **Tech Provider** phase today; do not describe Samyoj as an official BSP unless that status changes on Meta's partner directory.
+- Platform trust line used on the site: **Official Meta Cloud API — Direct Meta Billing, Zero Markups** ([pricing](https://samyoj.com/pricing)).
 
 ## Pages
 
@@ -26,31 +32,25 @@
 
 ## Pricing (INR billing)
 
-- **Launch (14-day free trial)**: ₹0 — 1 WhatsApp number, 1 team member, up to 100 contacts
-- **Starter**: ₹999/month (₹800/mo billed annually) — 1 number, 3 members, 5,000 contacts
-- **Growth**: ₹2,499/month (₹2,000/mo billed annually) — 2 numbers, 10 members, AI assistant included
-- **Pro**: ₹4,999/month (₹4,000/mo billed annually) — 5 numbers, 25 members, advanced AI &amp; analytics
-- **Enterprise**: custom — [talk to sales](https://samyoj.com/contact)
-- Billing cycles: monthly, quarterly (5% off), annual (20% off)
-- **Meta/WhatsApp usage charges**: billed at actuals with zero markup from Samyoj
-- **AI/voice usage**: metered separately by consumption — not unlimited
+Copied from the pricing page. Do not quote older Starter / Growth / Pro figures.
+
+- **Launch (14-day trial)**: ₹0 — 1 number, 1 teammate, 100 contacts; then pick a paid plan
+- **WhatsApp**: ₹899/month — 1 number, 5 team members, inbox, CRM, broadcasts, and automation. Meta send charges at actuals. Paid plans include 200 AI credits/month (per pricing page).
+- **Multi-channel**: ₹1,499/month — WhatsApp plus Instagram and Facebook, 1 number, 5 team members
+- Quarterly billing is 5% off and annual billing is 20% off those monthly prices
 - Details: [samyoj.com/pricing](https://samyoj.com/pricing)
 
 ## Key Facts
 
-- Founded/work: AI-powered WhatsApp-first CRM built in India (Indore, Madhya Pradesh)
-- Official Meta WhatsApp Business Solution Provider
-- Setup: under 10 minutes to connect WhatsApp Business API
-- Customer-reported results: 3× conversions (EdTechLab), 35%→90% engagement (Cosco), 150% higher response rates (HealthKart)
+- Built in India (Indore, Madhya Pradesh)
+- Meta Tech Provider for WhatsApp Business Platform (via Meta Cloud API)
+- Setup: product pages describe a no-code connect flow for WhatsApp Business API
 - Channels: WhatsApp, Instagram, Facebook Messenger
 - Languages: English and Hindi support
 
-## Customer Results (quoted)
+## Customer results
 
-- "Samyoj has completely changed the way we engage with our customers. Broadcasts, automations and API — everything just works seamlessly!" — MBA Fundas
-- "With Samyoj, we increased our conversions by 3X. The automation flows and campaign insights are simply amazing." — EdTechLab
-- "Samyoj helped us increase our customer engagement from 35% to 90% with their Smart Retargeting feature." — Cosco
-- "The Webviews and custom forms have transformed our customer onboarding. User response rates are up by 150%." — HealthKart
+Do not cite named customer metrics, EdTechLab, or percentage lifts. Samyoj has not published a verified case study for those claims. Describe the product (inbox, AI qualification, follow-ups, pricing) instead.
 
 ## Contact
 

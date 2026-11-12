@@ -28,4 +28,23 @@
 
   // Basic page tracking; SPA/hashes not used on this static site.
   gtag("config", MEASUREMENT_ID, { anonymize_ip: true });
+
+  document.addEventListener("click", function (event) {
+    var el = event.target && event.target.closest ? event.target.closest("a[href], button") : null;
+    if (!el) return;
+    var href = el.tagName === "A" ? (el.getAttribute("href") || "") : "";
+    var label = (el.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+    var name = "";
+    if (/calendly\.com/i.test(href)) name = "cta_book_demo";
+    else if (/app\.samyoj\.com/i.test(href)) name = "cta_start_trial";
+    else if (/(?:^|\/)pricing(?:\.html)?(?:$|[?#])/i.test(href)) name = "cta_pricing";
+    else if (/(?:^|\/)contact(?:\.html)?(?:$|[?#])/i.test(href)) name = "cta_contact";
+    else if (el.tagName === "BUTTON" && /start for free|start free|free trial|start 14-day/.test(label)) name = "cta_start_trial";
+    if (!name) return;
+    gtag("event", name, {
+      link_url: el.tagName === "A" ? el.href : "https://app.samyoj.com/",
+      page_path: location.pathname,
+      link_text: label.slice(0, 80)
+    });
+  }, true);
 })();

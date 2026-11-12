@@ -101,9 +101,24 @@
 
 /* ── Prev / next post navigation ────────────────────────── */
 .blog-post-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: clamp(34px, 5vw, 48px);
   padding-top: clamp(22px, 3.5vw, 32px);
   gap: 18px;
+  clear: both;
+}
+
+.blog-nav-link {
+  min-width: 0;
+  flex: 1 1 220px;
+  max-width: 48%;
+}
+
+.blog-nav-title {
+  overflow-wrap: anywhere;
 }
 
 /* ── Sidebar boxes ──────────────────────────────────────── */

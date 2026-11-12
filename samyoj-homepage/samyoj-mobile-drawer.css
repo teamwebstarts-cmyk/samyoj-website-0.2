@@ -12,9 +12,7 @@
   bottom: 0 !important;
   width: min(300px, 88vw) !important;
   max-width: 300px !important;
-  /* Above the #aisensy-magic-bar (z-index:1000) so the open menu is never
-     covered by the announcement bar, even if its hide-on-open JS fails. */
-  z-index: 1001 !important;
+  z-index: 999 !important;
   position: fixed !important;
   display: none;
   flex-direction: column !important;

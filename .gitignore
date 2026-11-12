@@ -5,3 +5,5 @@ Thumbs.db
 *.log
 .env
 .env.*
+.secrets/*
+!.secrets/SETUP.md

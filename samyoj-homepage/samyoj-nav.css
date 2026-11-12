@@ -575,12 +575,6 @@
   display: none !important;
 }
 
-/* CSS-native safety net: hide the bar whenever the mobile nav drawer is open
-   (works on every page even where the per-page watcher JS is missing/fragile). */
-body:has(.um-nav-drawer:not(.um-hidden)) #aisensy-magic-bar {
-  display: none !important;
-}
-
 #aisensy-magic-bar .mb-inner {
   pointer-events: auto;
   max-width: 1100px;
