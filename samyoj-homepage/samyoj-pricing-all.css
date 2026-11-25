@@ -15,8 +15,9 @@
 .sy-meta-rates-strip{margin:28px auto 0;max-width:920px;padding:20px 22px;border-radius:16px;border:1px solid #e2e8f0;background:linear-gradient(180deg,#fafbff 0%,#fff 100%)}
 .sy-meta-rates-head{text-align:center;margin-bottom:16px}
 .sy-meta-rates-title{margin:10px 0 0;font-size:14px;line-height:1.45;color:#475569;font-weight:500}
-.sy-meta-rates-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-@media(max-width:640px){.sy-meta-rates-grid{grid-template-columns:1fr}}
+.sy-meta-rates-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media(max-width:900px){.sy-meta-rates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.sy-meta-rates-grid{grid-template-columns:1fr}}
 .sy-meta-rate-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 10px;border-radius:12px;background:#fff;border:1px solid #e8ecf4}
 .sy-meta-rate-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#64748b}
 .sy-meta-rate-val{font-size:22px;font-weight:800;color:#4B2EEB;margin-top:6px;line-height:1.2}
@@ -70,3 +71,8 @@
 .plan-limits-list li.plan-group:before{content:none;display:none}
 .plan-limits-list li.plan-group:first-child{margin-top:4px;border-top:none;padding-top:2px}
 .slider-hint{margin:8px 0 0;font-size:12px;line-height:1.45;color:#64748b}
+
+.meta-category-field{display:flex;flex-direction:column;gap:6px;margin:12px 0 8px;font-size:13px;font-weight:700;color:#475569}
+.meta-category-select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #dbe3ef;border-radius:10px;background:#fff;color:#0f172a;font:inherit;cursor:pointer}
+.meta-category-select:focus-visible{outline:2px solid #4B2EEB;outline-offset:2px}
+#meta-estimate-note{margin:0 0 12px;font-size:12px;line-height:1.45;color:#64748b}
