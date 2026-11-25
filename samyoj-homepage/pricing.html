@@ -769,8 +769,9 @@
               </span>
               <strong id="cost-meta">₹575.00</strong>
             </div>
+            <p class="meta-estimate-note" id="meta-estimate-note">Estimate uses the selected India message-category rate before GST.</p>
             <div class="est-info-tooltip est-info-tooltip-summary" id="est-meta-info-panel-summary" role="region" hidden aria-label="Meta message pricing">
-              <p id="meta-estimate-note">Estimate uses the selected India message-category rate before GST. Meta bills delivered business-to-user messages only.</p>
+              <p>Meta bills delivered business-to-user messages only. Amounts here exclude GST, provider fees, free-entry windows and high-volume utility/authentication discounts.</p>
             </div>
             <div class="est-total-final">
               <span>Estimated total</span>
@@ -1497,9 +1498,10 @@
         costFinalSum.textContent = formattedTotal;
       }
 
-      [sContacts, sMessages, sCategory].forEach(function (s) {
+      [sContacts, sMessages].forEach(function (s) {
         if (s) s.addEventListener('input', updateEstimator);
       });
+      if (sCategory) sCategory.addEventListener('change', updateEstimator);
 
       function closeAllEstInfoPanels() {
         document.querySelectorAll('.est-info-tooltip').forEach(function (panel) {
