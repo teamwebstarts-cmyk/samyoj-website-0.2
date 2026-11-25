@@ -297,8 +297,7 @@
           "telephone": "+91-9009785315",
           "contactType": "customer support",
           "areaServed": "IN",
-          "availableLanguage": ["en", "hi"]        }      ],
-      "email": "hello@samyoj.com"
+          "availableLanguage": ["en", "hi"]        }      ],      "email": "hello@samyoj.com"
     }
     </script>
     <script type="application/ld+json">
@@ -381,7 +380,7 @@
           "name": "Are WhatsApp charges included in my plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Meta/WhatsApp template message charges are billed separately at actuals with zero markup from Samyoj. Rates depend on message category and recipient market."
+            "text": "No. Meta bills separately per delivered business-to-user message. For Indian (+91) recipients, current standard list rates before GST are Marketing ₹0.8631, Utility ₹0.1150 and Authentication ₹0.1150 per delivered template. Non-template Service replies cost ₹0.1150 after the first 1,000 delivered service messages per business phone number each month. Eligible Click-to-WhatsApp free-entry windows can make qualifying messages free for up to 7 days. Utility templates are chargeable even inside the 24-hour customer service window from 1 October 2026. An authentication-international rate of ₹2.4971 may apply to eligible businesses under Meta rules. Samyoj adds no markup to Meta message charges. Rates depend on recipient market; see Meta official pricing documentation."
           }
         },
         {
@@ -597,8 +596,7 @@
                   alt="" width="72" height="72" loading="lazy" decoding="async" />
               </div>              <div class="price-main">
                 <span class="price-val" data-monthly="₹1,499" data-quarterly="₹1,424" data-annual="₹1,199"                  data-billed-quarterly="Billed ₹4,272 every 3 months" data-billed-annual="Billed ₹14,388 yearly">₹1,499</span>
-                <span class="price-period">/month</span>
-                <span class="price-billed-note" id="billed-note-multichannel">Billed monthly</span>
+                <span class="price-period">/month</span>                <span class="price-billed-note" id="billed-note-multichannel">Billed monthly</span>
               </div>
               <ul class="plan-limits-list">
                 <li><span class="feat-label">Channels</span> <span class="feat-val plan-channel-icons" aria-label="WhatsApp, Instagram and Facebook"><img src="New-images/social-icons/whatsapp.png" width="18" height="18" alt="" loading="lazy" decoding="async" /><img src="New-images/social-icons/instagram.png" width="18" height="18" alt="" loading="lazy" decoding="async" /><img src="New-images/social-icons/facebook-removebg-preview-(3).png" width="18" height="18" alt="" loading="lazy" decoding="async" /></span></li>
@@ -619,29 +617,39 @@
           </div>
         </div>
 
-        <div class="sy-meta-rates-strip" id="meta-rates-strip" aria-label="India reference Meta WhatsApp message rates">
+        <div class="sy-meta-rates-strip" id="meta-rates-strip" aria-label="Current Meta WhatsApp message rates for India">
           <div class="sy-meta-rates-head">
             <span class="custom-badge-pill">META MESSAGE CHARGES</span>
-            <p class="sy-meta-rates-title">India reference rates (billed by Meta at actuals — Samyoj adds no markup)</p>
+            <p class="sy-meta-rates-title">India (+91) reference rates · Meta bills at actuals · Samyoj adds no markup</p>
           </div>
           <div class="sy-meta-rates-grid">
             <div class="sy-meta-rate-card">
               <span class="sy-meta-rate-label">Marketing</span>
-              <span class="sy-meta-rate-val">~₹0.78–0.83</span>
-              <span class="sy-meta-rate-unit">/ template</span>
+              <span class="sy-meta-rate-val">₹0.8631</span>
+              <span class="sy-meta-rate-unit">/ delivered template</span>
             </div>
             <div class="sy-meta-rate-card">
               <span class="sy-meta-rate-label">Utility</span>
-              <span class="sy-meta-rate-val">~₹0.145</span>
-              <span class="sy-meta-rate-unit">/ template</span>
+              <span class="sy-meta-rate-val">₹0.1150</span>
+              <span class="sy-meta-rate-unit">/ delivered template</span>
             </div>
             <div class="sy-meta-rate-card">
-              <span class="sy-meta-rate-label">Service</span>
+              <span class="sy-meta-rate-label">Authentication (OTP)</span>
+              <span class="sy-meta-rate-val">₹0.1150</span>
+              <span class="sy-meta-rate-unit">/ delivered template</span>
+            </div>
+            <div class="sy-meta-rate-card">
+              <span class="sy-meta-rate-label">Service replies</span>
               <span class="sy-meta-rate-val">1,000 free/mo</span>
-              <span class="sy-meta-rate-unit">then ~₹0.145</span>
+              <span class="sy-meta-rate-unit">per number, then ₹0.1150</span>
             </div>
           </div>
-          <p class="sy-meta-rates-foot">Rates vary by country and template category. Use the <a href="#estimator-section">cost estimator</a> below or read our <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta pricing guide</a>.</p>
+          <p class="sy-meta-rates-foot">
+            INR list rates per delivered business message, before GST · Effective 1 Oct 2026 · Last verified 25 Nov 2026.
+            The service allowance is per business phone number. Eligible Click-to-WhatsApp free-entry windows can also make qualifying messages free.
+            <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Meta's official pricing documentation</a>.
+            <a href="https://business.whatsapp.com/products/platform-pricing#rates" target="_blank" rel="noopener noreferrer">View the WhatsApp rate card</a>.
+          </p>
         </div>
 
         <p class="pricing-disclosure-bar"><strong>Team inbox</strong> = one shared place for all customer chats. <strong>Contact CRM</strong> = profiles, tags, owners and follow-ups. Plan fee covers Samyoj; Meta template sends and extra AI credits are usage-based.</p>
@@ -667,7 +675,7 @@
         <div class="section-center-head">
           <div class="custom-badge-pill">COST ESTIMATOR</div>
           <h2 class="section-title-large">Estimate your monthly cost <span class="highlight-green">in just a few clicks</span></h2>
-          <p class="section-desc">Set contacts and monthly WhatsApp sends — we estimate your <strong>Samyoj plan + Meta message cost</strong>. Teammates (5 included) and AI credits (200/mo) are on the plan cards above.</p>
+          <p class="section-desc">Set contacts, message category and monthly delivered WhatsApp messages. The estimate combines your <strong>Samyoj plan + Meta India list-rate usage</strong> before GST. Teammates (5 included) and AI credits (200/mo) are on the plan cards above.</p>
         </div>
         <div class="billing-bar">
           <div class="billing-segmented-control" role="group" aria-label="Billing period">
@@ -711,22 +719,31 @@
                   <span class="slider-icon" aria-hidden="true">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   </span>
-                  <span class="slider-label-text">WhatsApp template messages / month</span>
+                  <span class="slider-label-text">Delivered WhatsApp messages / month</span>
                   <button type="button" class="est-info-icon-btn" aria-label="How Meta WhatsApp pricing works" aria-expanded="false" aria-controls="est-meta-info-panel" id="est-meta-info-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                   </button>
                 </div>
                 <div class="slider-val-box" id="val-messages">5,000</div>
               </div>
+              <label class="meta-category-field" for="meta-message-category">
+                <span class="meta-category-label">Message category</span>
+                <select id="meta-message-category" class="meta-category-select">
+                  <option value="utility" selected>Utility template</option>
+                  <option value="marketing">Marketing template</option>
+                  <option value="authentication">Authentication (OTP)</option>
+                  <option value="service">Service reply (non-template)</option>
+                </select>
+              </label>
               <div class="est-info-tooltip" id="est-meta-info-panel" role="region" aria-label="Meta message pricing" hidden>
-                <p><strong>Not a Samyoj charge.</strong> Meta bills your business separately for template messages (Samyoj passes through at actuals, no markup).</p>
-                <p>India reference: order updates, OTPs and alerts ~₹0.15 each; promotional templates can be higher (~₹0.78–0.83). This calculator uses ~₹0.145 per message as a <strong>base estimate</strong> — your real Meta bill depends on message type.</p>
-                <p><a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Read Meta pricing guide →</a></p>
+                <p><strong>Meta usage is billed separately from your Samyoj plan.</strong> India (+91) rates before GST: Marketing ₹0.8631, Utility ₹0.1150 and Authentication ₹0.1150 per delivered template. Service replies are ₹0.1150 after the first 1,000 delivered service messages per business phone number each month.</p>
+                <p>Service means a non-template reply inside the 24-hour customer service window. Eligible Click-to-WhatsApp free-entry windows can make Marketing, Utility, Authentication and Service messages free for up to 7 days. Utility templates are chargeable even inside the 24-hour window from 1 Oct 2026.</p>
+                <p>Estimates exclude GST, provider fees, free-entry windows and high-volume utility/authentication discounts. <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Read Meta's official pricing documentation</a>.</p>
               </div>
               <input type="range" class="custom-range-slider" id="slider-messages" min="1000" max="100000" step="1000"
-                value="5000" aria-label="WhatsApp template messages sent per month">
+                value="5000" aria-label="Delivered WhatsApp messages per month">
               <div class="slider-marks-row"><span>1K</span><span>25K</span><span>50K</span><span>100K+</span></div>
-              <p class="slider-hint">Outbound templates you expect to send (updates, reminders, broadcasts). <button type="button" class="est-info-link-btn" data-info-trigger="est-meta-info-btn">How Meta billing works</button></p>
+              <p class="slider-hint">Enter delivered messages for the selected category. Meta charges by recipient country and message category. <button type="button" class="est-info-link-btn" data-info-trigger="est-meta-info-btn">How Meta billing works</button></p>
             </div>
 
           </div>
@@ -737,7 +754,7 @@
               <span class="gst-tag">Estimate only</span>
             </div>
             <div class="est-total-num">
-              <span id="est-total-price">₹1,624</span><span class="per-mo">/month</span>
+              <span id="est-total-price">₹1,374.00</span><span class="per-mo">/month</span>
             </div>
             <p class="est-plan-fit" id="est-plan-fit">Plan check: contacts within 10,000 included on paid plans.</p>
             <div class="est-break-row">
@@ -745,19 +762,19 @@
               <strong id="cost-platform">₹799</strong>
             </div>
             <div class="est-break-row">
-              <span class="est-break-label-with-info">Meta WhatsApp usage (estimate)
+              <span class="est-break-label-with-info">Meta WhatsApp usage — <span id="meta-category-summary">Utility</span>
                 <button type="button" class="est-info-icon-btn est-info-icon-btn-inline" aria-label="How Meta WhatsApp pricing works" aria-expanded="false" aria-controls="est-meta-info-panel-summary" data-info-sync="est-meta-info-btn">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                 </button>
               </span>
-              <strong id="cost-meta">₹725</strong>
+              <strong id="cost-meta">₹575.00</strong>
             </div>
             <div class="est-info-tooltip est-info-tooltip-summary" id="est-meta-info-panel-summary" role="region" hidden aria-label="Meta message pricing">
-              <p>Meta charges per delivered template. Samyoj does not add markup. Heavier promotional sending may increase this line vs our base ~₹0.145/msg estimate.</p>
+              <p id="meta-estimate-note">Estimate uses the selected India message-category rate before GST. Meta bills delivered business-to-user messages only.</p>
             </div>
             <div class="est-total-final">
               <span>Estimated total</span>
-              <span style="color:#4B2EEB;" id="cost-final-sum">₹1,624</span>
+              <span style="color:#4B2EEB;" id="cost-final-sum">₹1,374.00</span>
             </div>
             <p class="est-plan-fit est-plan-fit-muted">Excludes extra AI credits beyond 200/mo. See add-ons above if you need more AI.</p>
             <div class="cost-card-footer">
@@ -897,8 +914,7 @@
           <div class="testimonial-card">
             <div class="testimonial-card-body">              <div class="quote-icon">“</div>
               <p class="testimonial-text">Using Samyoj's AI Agent, we handle thousands of customer queries
-                automatically. It feels like having an extra team 24/7.</p>
-              <div class="metric-badge-pill">
+                automatically. It feels like having an extra team 24/7.</p>              <div class="metric-badge-pill">
                 <div class="metric-val"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B2EEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> AI on approved paths</div>
                 <div class="metric-sub">Escalate edge cases</div>
               </div>
@@ -960,7 +976,7 @@
               <span class="custom-faq-icon">+</span>
             </summary>
             <div class="custom-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">No. Meta/WhatsApp template message charges are billed separately at actuals with zero markup from Samyoj. Rates depend on message category and recipient market. See our <a href="blog/meta-whatsapp-api-pricing-2026-guide.html">Meta WhatsApp API pricing guide</a> for details.</p>
+              <p itemprop="text">No. Meta bills separately per delivered business-to-user message. For Indian (+91) recipients, the current standard list rates before GST are <strong>₹0.8631 Marketing</strong>, <strong>₹0.1150 Utility</strong> and <strong>₹0.1150 Authentication</strong> per delivered template. Non-template Service replies cost <strong>₹0.1150</strong> after the first 1,000 delivered service messages per business phone number each month. Eligible Click-to-WhatsApp free-entry windows can make qualifying messages free for up to 7 days. Utility templates are chargeable even inside the 24-hour customer service window from 1 October 2026. An authentication-international rate of ₹2.4971 may apply to eligible businesses under Meta rules. Samyoj adds no markup. Rates depend on recipient market; see <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">Meta's official pricing documentation</a>.</p>
             </div>
           </details>
 
@@ -1197,8 +1213,7 @@
                     <path                      d="M4 14v3a3 3 0 0 0 3 3h1v-4H4zm16 0h-4v4h1a3 3 0 0 0 3-3v-1zM4 10V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
                     <path d="M9 14v-2a3 3 0 0 1 6 0v2" />
                   </svg></span>Support: +91 9009785315</a></li>
-            <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <li><a href="mailto:hello@samyoj.com"><span class="sy-footer-contact-icon" aria-hidden="true"><svg                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <rect x="3" y="5" width="18" height="14" rx="2" />
                     <path d="m4 7 8 6 8-6" />
                   </svg></span>hello@samyoj.com</a></li>
@@ -1232,7 +1247,23 @@
         whatsapp: { monthly: 799, quarterly: 759, annual: 639 },
         multichannel: { monthly: 1499, quarterly: 1424, annual: 1199 }
       };
-      var META_ESTIMATE_RATE = 0.145;
+      var META_MESSAGE_RATES = {
+        marketing: 0.8631,
+        utility: 0.1150,
+        authentication: 0.1150,
+        service: 0.1150
+      };
+      var META_MESSAGE_LABELS = {
+        marketing: 'Marketing',
+        utility: 'Utility',
+        authentication: 'Authentication (OTP)',
+        service: 'Service replies'
+      };
+      var PLAN_WHATSAPP_NUMBERS = {
+        launch: 1,
+        whatsapp: 1,
+        multichannel: 3
+      };
       var PLAN_CONTACT_LIMIT = 10000;
       var LAUNCH_CONTACT_LIMIT = 100;
 
@@ -1256,6 +1287,13 @@
       var mobileStickyBtn = document.getElementById('mobile-sticky-cta-btn');
       function formatInr(n) {
         return '₹' + n.toLocaleString('en-IN');
+      }
+
+      function formatInrEstimate(n) {
+        return '₹' + n.toLocaleString('en-IN', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
       }
 
       function getCtaLabel() {
@@ -1388,6 +1426,7 @@
 
       var sContacts = document.getElementById('slider-contacts');
       var sMessages = document.getElementById('slider-messages');
+      var sCategory = document.getElementById('meta-message-category');
       var vContacts = document.getElementById('val-contacts');
       var vMessages = document.getElementById('val-messages');
       var hintContacts = document.getElementById('hint-contacts');
@@ -1397,6 +1436,8 @@
       var costPlatform = document.getElementById('cost-platform');
       var costMeta = document.getElementById('cost-meta');
       var recPlan = document.getElementById('rec-plan');
+      var metaCategorySummary = document.getElementById('meta-category-summary');
+      var metaEstimateNote = document.getElementById('meta-estimate-note');
 
       function updateEstimator() {
         if (!sMessages) return;
@@ -1418,7 +1459,12 @@
         var planKey = PLAN_PRICES[selectedPlan] ? selectedPlan : 'whatsapp';
         var planName = PLAN_LABELS[planKey];
         var platformCost = PLAN_PRICES[planKey][billingPeriod] || PLAN_PRICES[planKey].monthly;
-        var metaCost = Math.round(totalMsgs * META_ESTIMATE_RATE);
+        var category = sCategory && META_MESSAGE_RATES[sCategory.value] ? sCategory.value : 'utility';
+        var rate = META_MESSAGE_RATES[category];
+        var categoryLabel = META_MESSAGE_LABELS[category];
+        var serviceFreeAllowance = category === 'service' ? (PLAN_WHATSAPP_NUMBERS[planKey] || 1) * 1000 : 0;
+        var billableMessages = Math.max(0, totalMsgs - serviceFreeAllowance);
+        var metaCost = billableMessages * rate;
         var total = platformCost + metaCost;
 
         var contactLimit = planKey === 'launch' ? LAUNCH_CONTACT_LIMIT : PLAN_CONTACT_LIMIT;
@@ -1437,13 +1483,21 @@
 
         recPlan.textContent = planName;
         costPlatform.textContent = formatInr(platformCost);
-        if (costMeta) costMeta.textContent = formatInr(metaCost);
-        var formattedTotal = formatInr(total);
+        if (metaCategorySummary) metaCategorySummary.textContent = categoryLabel;
+        if (costMeta) costMeta.textContent = formatInrEstimate(metaCost);
+        if (metaEstimateNote) {
+          if (category === 'service') {
+            metaEstimateNote.textContent = 'Assumes all ' + (PLAN_WHATSAPP_NUMBERS[planKey] || 1) + ' WhatsApp number(s) included in this plan are connected: ' + serviceFreeAllowance.toLocaleString('en-IN') + ' service replies are free each month, then ₹0.1150 per delivered reply. Before GST.';
+          } else {
+            metaEstimateNote.textContent = totalMsgs.toLocaleString('en-IN') + ' delivered ' + categoryLabel.toLowerCase() + ' message(s) estimated at ₹' + rate.toFixed(4) + ' each. Before GST; actual billing depends on recipient market and Meta eligibility.';
+          }
+        }
+        var formattedTotal = formatInrEstimate(total);
         estTotalPrice.textContent = formattedTotal;
         costFinalSum.textContent = formattedTotal;
       }
 
-      [sContacts, sMessages].forEach(function (s) {
+      [sContacts, sMessages, sCategory].forEach(function (s) {
         if (s) s.addEventListener('input', updateEstimator);
       });
 
@@ -1497,8 +1551,7 @@
               document.body.classList.toggle('has-mobile-cta', show);
             });
           }, { threshold: 0, rootMargin: '0px' });
-          observer.observe(cardsSection);
-        }
+          observer.observe(cardsSection);        }
       }
 
       updateCardPrices();
