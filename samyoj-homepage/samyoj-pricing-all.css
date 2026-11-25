@@ -98,3 +98,10 @@
 @media(max-width:420px){
   .sy-meta-rates-grid{grid-template-columns:1fr!important}
 }
+
+/* Four Meta rate cards stay on one desktop row */
+@media(min-width:701px){
+  .sy-meta-rates-strip{max-width:100%;width:100%}
+  .sy-meta-rates-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px}
+  .sy-meta-rate-card{min-width:0;padding:9px 6px}
+}
