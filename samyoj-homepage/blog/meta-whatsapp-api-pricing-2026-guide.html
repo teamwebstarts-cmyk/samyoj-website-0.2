@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Meta WhatsApp API Pricing 2026 (India) | Samyoj</title>
   <meta name="description"
-    content="Meta WhatsApp API pricing for 2026, including India marketing and utility rates, and what Samyoj bills separately from Meta.">
+    content="Meta WhatsApp Business Platform India rates verified 25 November 2026: Marketing ₹0.8631, Utility ₹0.1150, Authentication ₹0.1150 and Service ₹0.1150 after 1,000 free service messages per number/month. Understand Meta billing and Samyoj subscription costs.">
 
 
   <meta property="og:type" content="article" />
@@ -1539,7 +1539,7 @@
                 <li><a href="#executive-summary">1. Executive Overview: The 2026 Billing Shift</a></li>
                 <li><a href="#core-billing-rules">2. Per-Delivered-Message Billing Mechanics</a></li>
                 <li><a href="#four-categories">3. Deep-Dive: Meta's 4 Message Categories</a></li>
-                <li><a href="#session-windows">4. 24-Hour Windows &amp; 72-Hour Free CTWA Rules</a></li>
+                <li><a href="#session-windows">4. 24-Hour Customer Service Window &amp; Up-to-7-Day Free CTWA Rules</a></li>
                 <li><a href="#country-rate-cards">5. Country-by-Country 2026 Rate Cards</a></li>
                 <li><a href="#bsp-comparison-table">6. 5 Major BSP Price &amp; Markup Matrix</a></li>
                 <li><a href="#samyoj-cost-optimization">7. How Samyoj Cuts Messaging Costs by 35%</a></li>
@@ -1558,12 +1558,12 @@
               Managing communication costs on the Meta WhatsApp Business API requires a clear understanding of Meta's pricing updates. Following the major structural transition on <strong>July 1, 2025</strong>, Meta completely eliminated the older 24-hour conversation flat-rate model in favor of a <strong>per-delivered-message billing framework</strong>.
             </p>
             <p>
-              In 2026, every outbound business message delivered to a WhatsApp contact is billed individually based on two factors: the Meta-assigned <strong>message template category</strong> and the <strong>recipient's country calling code</strong>. Understanding this distinction is vital. Whether your business sends 10,000 promotional broadcasts or 500,000 order updates every month, failing to audit template categories or middleman markup fees can inflate your monthly invoice by up to 40%.
+              In 2026, a delivered business-to-user message may be billable based on its <strong>message category</strong> and the <strong>recipient's country calling code</strong>. Meta does not charge for messages from users to businesses, and two free-message mechanisms apply: eligible free-entry point windows and the first 1,000 monthly Service messages per business phone number. Understanding these distinctions is vital. Whether your business sends 10,000 promotional broadcasts or 500,000 order updates every month, failing to audit template categories or middleman markup fees can inflate your monthly invoice by up to 40%.
             </p>
 
             <div class="callout-box">
               <p>
-                <strong>2026 Policy Note:</strong> Effective <strong>October 1, 2026</strong>, Meta is introducing updated pricing rules for Meta Business Agent interactions, service replies, and utility messages sent within customer service windows. Keeping template classifications lean and automated is now the primary lever for controlling ROI.
+                <strong>Policy update (verified 25 November 2026):</strong> Meta's October 1, 2026 pricing rules are now in effect. For Indian (+91) recipients, standard list rates before GST are Marketing ₹0.8631, Utility ₹0.1150, Authentication ₹0.1150 and Service ₹0.1150 per delivered message. The first 1,000 delivered Service messages are free each month per business phone number. Utility templates are chargeable even inside the 24-hour customer service window. Eligible Click-to-WhatsApp free-entry windows can make qualifying messages free for up to 7 days. <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener noreferrer">See Meta's official pricing rules and rate cards</a>.
               </p>
             </div>
 
@@ -1623,7 +1623,7 @@
             </p>
             <ul>
               <li><strong>Common Use Cases:</strong> Flash sale alerts, seasonal discount broadcasts, product launch announcements, back-in-stock alerts, and abandoned cart reminders containing promotional discount offers.</li>
-              <li><strong>Pricing Dynamics:</strong> Marketing templates carry the highest rate card across all geographic regions. In India, for instance, a marketing message costs ~₹0.78 to ₹0.88, whereas in Germany it can reach ~$0.136 per delivery.</li>
+              <li><strong>Pricing Dynamics:</strong> Marketing templates carry the highest rate card across all geographic regions. For Indian (+91) recipients, the current standard Marketing list rate is <strong>₹0.8631 per delivered template</strong> before GST. Other markets use their own rate-card values.</li>
               <li><strong>Opt-Out Requirements:</strong> Meta guidelines mandate that marketing messages include clear opt-out buttons (e.g., "STOP" or "Unsubscribe") to protect user experience and maintain high account quality scores.</li>
             </ul>
 
@@ -1633,13 +1633,13 @@
             </p>
             <ul>
               <li><strong>Common Use Cases:</strong> Order confirmations, payment receipts, shipping tracking updates, appointment reminders, flight booking confirmations, and account state change notifications.</li>
-              <li><strong>Pricing Dynamics:</strong> Utility templates are priced roughly <strong>60% to 75% cheaper</strong> than marketing templates. In India, a utility template costs only ~₹0.13 per delivery.</li>
+              <li><strong>Pricing Dynamics:</strong> For Indian (+91) recipients, the standard Utility list rate is <strong>₹0.1150 per delivered template</strong> before GST. Utility volume tiers may reduce the effective rate at eligible business-portfolio volumes.</li>
               <li><strong>Strict Content Boundaries:</strong> Including promotional copy like "Enjoy 10% off your next order!" inside an order confirmation template will cause Meta to reclassify the entire message as Marketing, multiplying your delivery cost instantly.</li>
             </ul>
 
             <h3>3. Authentication Templates (Security Rate Tier)</h3>
             <p>
-              Authentication templates deliver One-Time Passwords (OTPs), multi-factor authentication (2FA) codes, and account recovery keys.
+              Authentication templates deliver One-Time Passwords (OTPs), multi-factor authentication (2FA) codes, and account recovery keys. The standard India rate is <strong>₹0.1150 per delivered template</strong> before GST. Eligible businesses may be subject to the separate Authentication-International rate (<strong>₹2.4971</strong> in the India rate card), and volume tiers may apply.
             </p>
             <ul>
               <li><strong>Common Use Cases:</strong> Login verification codes, transaction approval OTPs, password reset links, and device verification steps.</li>
@@ -1652,11 +1652,11 @@
               Service conversations represent customer-initiated support exchanges. When a user sends a message to your business, a 24-hour customer service window opens automatically.
             </p>
             <ul>
-              <li><strong>Message Mechanics:</strong> Within an open 24-hour service window, your business can send free-form text, voice notes, PDFs, images, and quick reply buttons without using pre-approved templates.</li>
-              <li><strong>Cost Structure:</strong> Under current 2026 rules, non-template responses sent inside this active 24-hour window are free of Meta delivery fees. However, starting October 1, 2026, Meta will begin implementing updated service tier pricing for certain automated agent interactions.</li>
+              <li><strong>Message Mechanics:</strong> Within an open 24-hour customer service window, your business can send non-template replies such as text, voice notes, PDFs and images without pre-approved templates. These replies are classified as Service messages: the first 1,000 delivered Service messages per business phone number each month are free; from the 1,001st, the standard Service rate applies unless the message is in an eligible free-entry point window.</li>
+              <li><strong>Cost Structure:</strong> From October 1, 2026, Service messages are chargeable after the monthly free tier of 1,000 delivered Service messages per business phone number. For India, the standard Service list rate is ₹0.1150 per delivered message before GST. Utility templates are chargeable even when the 24-hour customer service window is open.</li>
             </ul>
 
-            <h2 id="session-windows">4. 24-Hour Windows &amp; 72-Hour Free CTWA Rules</h2>
+            <h2 id="session-windows">4. 24-Hour Customer Service Window &amp; Up-to-7-Day Free CTWA Rules</h2>
             <p>
               Understanding conversation window timers is essential for maximizing ROI and preventing unnecessary template costs.
             </p>
@@ -1666,18 +1666,18 @@
               The 24-hour timer starts the moment a customer sends a message to your WhatsApp number. During this period:
             </p>
             <ul>
-              <li>Your customer service agents or automated AI agents can send unlimited free-form messages.</li>
+              <li>Your customer service agents or automated AI agents can send non-template Service messages. Meta provides the first 1,000 delivered Service messages free per business phone number each month; delivered Service messages after that are charged at the market rate unless covered by a free-entry point window.</li>
               <li>No pre-approved Meta templates are required.</li>
-              <li>Once 24 hours elapse without a new message from the customer, the service window closes. Any subsequent outbound message requires an approved template and incurs standard category delivery charges.</li>
+              <li>Utility templates are chargeable even while this 24-hour window is open. Once 24 hours elapse without a new user message, the service window closes and businesses need an approved template for subsequent outbound messages.</li>
             </ul>
 
-            <h3>The 72-Hour Free Entry Point (Click-to-WhatsApp Ads)</h3>
+            <h3>The Up-to-7-Day Free Entry Point (Click-to-WhatsApp Ads)</h3>
             <p>
-              One of the most cost-effective growth hacks in Meta's ecosystem is the <strong>72-Hour Free Entry Point</strong>. When a user lands in your WhatsApp chat by clicking a <strong>Click-to-WhatsApp (CTWA) Ad</strong> on Facebook or Instagram, or by clicking a call-to-action button on your official Facebook Page:
+              One of the most useful Meta pricing benefits is the <strong>Free Entry Point (FEP) window</strong>. When a user messages your business from a <strong>Click-to-WhatsApp (CTWA) ad</strong> using the WhatsApp Android or iOS app, you must respond while the 24-hour customer service window is open:
             </p>
             <ul>
-              <li>Meta opens a <strong>72-hour extended conversation window</strong>.</li>
-              <li><strong>Zero Meta delivery charges apply</strong> to any messages delivered during these 72 hours—including outbound Marketing and Utility templates.</li>
+              <li>Your first qualifying response with a Marketing, Utility, Authentication or Service message opens an FEP window that may remain open for <strong>up to 7 days</strong> from the time of that response.</li>
+              <li>While the FEP window is open, delivered Marketing, Utility, Authentication and Service messages are not charged by Meta. Meta Business Agent messages remain chargeable.</li>
               <li>Businesses running high-volume lead generation campaigns can broadcast follow-up offers, product catalogs, and qualification surveys during this window at zero Meta message cost.</li>
             </ul>
 
@@ -1713,10 +1713,10 @@
                   <tr>
                     <td><strong>India</strong> (Billed in INR)</td>
                     <td>+91</td>
-                    <td><span class="badge-tag orange">₹0.78 - ₹0.88</span></td>
-                    <td><span class="badge-tag green">₹0.13</span></td>
-                    <td><span class="badge-tag blue">₹0.13</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag orange">₹0.8631</span></td>
+                    <td><span class="badge-tag green">₹0.1150</span></td>
+                    <td><span class="badge-tag blue">₹0.1150</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; then ₹0.1150; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>United States &amp; Canada</strong></td>
@@ -1724,7 +1724,7 @@
                     <td><span class="badge-tag orange">$0.0250</span></td>
                     <td><span class="badge-tag green">$0.0150</span></td>
                     <td><span class="badge-tag blue">$0.0135</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>United Kingdom</strong></td>
@@ -1732,7 +1732,7 @@
                     <td><span class="badge-tag orange">$0.0520</span></td>
                     <td><span class="badge-tag green">$0.0330</span></td>
                     <td><span class="badge-tag blue">$0.0310</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Germany &amp; France</strong></td>
@@ -1740,7 +1740,7 @@
                     <td><span class="badge-tag orange">$0.1360 - $0.1420</span></td>
                     <td><span class="badge-tag green">$0.0750</span></td>
                     <td><span class="badge-tag blue">$0.0680</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Spain &amp; Italy</strong></td>
@@ -1748,7 +1748,7 @@
                     <td><span class="badge-tag orange">$0.0610</span></td>
                     <td><span class="badge-tag green">$0.0360</span></td>
                     <td><span class="badge-tag blue">$0.0320</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Brazil</strong></td>
@@ -1756,7 +1756,7 @@
                     <td><span class="badge-tag orange">$0.0625</span></td>
                     <td><span class="badge-tag green">$0.0350</span></td>
                     <td><span class="badge-tag blue">$0.0315</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Mexico</strong></td>
@@ -1764,7 +1764,7 @@
                     <td><span class="badge-tag orange">$0.0430</span></td>
                     <td><span class="badge-tag green">$0.0220</span></td>
                     <td><span class="badge-tag blue">$0.0195</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>United Arab Emirates</strong></td>
@@ -1772,7 +1772,7 @@
                     <td><span class="badge-tag orange">$0.0380</span></td>
                     <td><span class="badge-tag green">$0.0210</span></td>
                     <td><span class="badge-tag blue">$0.0180</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Saudi Arabia</strong></td>
@@ -1780,7 +1780,7 @@
                     <td><span class="badge-tag orange">$0.0410</span></td>
                     <td><span class="badge-tag green">$0.0230</span></td>
                     <td><span class="badge-tag blue">$0.0190</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Indonesia</strong></td>
@@ -1788,7 +1788,7 @@
                     <td><span class="badge-tag orange">$0.0370</span></td>
                     <td><span class="badge-tag green">$0.0200</span></td>
                     <td><span class="badge-tag blue">$0.0175</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                   <tr>
                     <td><strong>Singapore</strong></td>
@@ -1796,7 +1796,7 @@
                     <td><span class="badge-tag orange">$0.0490</span></td>
                     <td><span class="badge-tag green">$0.0270</span></td>
                     <td><span class="badge-tag blue">$0.0240</span></td>
-                    <td><span class="badge-tag purple">Free (24h)</span></td>
+                    <td><span class="badge-tag purple">1,000 Service free/number/month; FEP up to 7 days</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -1901,7 +1901,7 @@
                 </div>
                 <div class="blog-feature-text">
                   <h3>3. Dynamic 24-Hour Session Window Routing</h3>
-                  <p>Samyoj checks whether an active 24-hour customer service session is already open before sending a template message. If open, the system routes the message as a zero-cost free-form reply instead of incurring a template fee.</p>
+                  <p>Samyoj can check whether a 24-hour customer service window is open before choosing a message type. Non-template Service replies use the first 1,000 free delivered Service messages per business phone number each month; after that, the India list rate is ₹0.1150 before GST. Utility templates remain chargeable inside the 24-hour window. Eligible CTWA free-entry windows can make qualifying messages free for up to 7 days.</p>
                 </div>
               </div>
 
